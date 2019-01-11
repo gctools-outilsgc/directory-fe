@@ -1,26 +1,23 @@
-/*
-This doesn't work
-
 import React from 'react';
-import { render } from 'react-testing-library'
+import { render, cleanup, waitForElement } from 'react-testing-library';
 
-import MockedProvider from 'react-apollo/test-utils';
+import {MockedProvider} from 'react-apollo/test-utils';
 
-import { profileInfoQuery, GQLProfileCard } from './GQLProfileCard'
+import GQLProfileCard , { PROFILE_INFO_QUERY } from './GQLProfileCard';
 
-const mocks = [
+const mock = [
     {
         request: {
-            query: profileInfoQuery,
+            query: PROFILE_INFO_QUERY,
             variables: {
-                gcID: '1',
+                gcID: (String(1)),
             },
         },
         result: {
             data: {
-                profiles: {
+                profiles: [{
                     gcID: '1',
-                    name: 'Test',
+                    name: 'Test Name',
                     email: 'test@test.test',
                     avatar: '',
                     mobilePhone: '',
@@ -35,21 +32,31 @@ const mocks = [
                     },
                     titleEn: '',
                     titleFr: '',
-                },
+                }],
             },
       },
     },
   ];
 
+afterEach(cleanup)
+
 describe('GQLProfileCard', () => {
-    it('renders GQLProfileCard without crashing', () => {
+    it('renders GQLProfileCard loading state without crashing', () => {
         const { queryByText } = render(
-            <MockedProvider mocks={mocks} addTypename={false}>
-                <GQLProfileCard id={"1"} />
+            <MockedProvider mocks={[]}>
+                <GQLProfileCard />
             </MockedProvider>
         );
-        const welcomeText = queryByText('Profile');
-        expect(welcomeText.innerHTML).toBe('Profile');
+        const loadingText = queryByText('Loading ...');
+        expect(loadingText.innerHTML).toBe('Loading ...');
+    });
+
+    it('should render a profile card with data', async () => {
+          const { queryByText } = render(
+            <MockedProvider mocks={mock} addTypename={false}>
+                <GQLProfileCard id="1" />
+            </MockedProvider>
+        );
+        await waitForElement(() => queryByText('Test Name'))
     });
 });
-*/

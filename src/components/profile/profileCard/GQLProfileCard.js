@@ -3,11 +3,12 @@ import React, { Component } from 'react';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 
-import { Card, CardBody, CardTitle, CardFooter, Button } from 'reactstrap';
+import { Card, CardBody, CardTitle, CardFooter } from 'reactstrap';
 
 import ProfileCardDisplay from './ProfileCardDisplay';
+import EditProfile from './EditProfile';
 
-const profileInfoQuery = gql`
+export const PROFILE_INFO_QUERY = gql`
 query profileInfoQuery($gcID: String!) {
   profiles(gcID: $gcID) {
     gcID
@@ -39,11 +40,11 @@ class GQLProfileCard extends Component {
     render() {
         return (
             <Query
-                query={profileInfoQuery}
+                query={PROFILE_INFO_QUERY}
                 variables={{ gcID: (String(this.props.id)) }}
             >
                 {({ loading, error, data }) => {
-                    if (loading) return 'Loading (Replace me with a component)...';
+                    if (loading) return 'Loading ...';
                     if (error) return `Error!: ${error}`;
                     const userInfo = data.profiles[0];
                     return (
@@ -57,9 +58,7 @@ class GQLProfileCard extends Component {
                                 />
                             </CardBody>
                             <CardFooter>
-                                <Button>
-                                    Edit Component?
-                                </Button>
+                                <EditProfile profile={userInfo} />
                             </CardFooter>
                         </Card>
                     )
