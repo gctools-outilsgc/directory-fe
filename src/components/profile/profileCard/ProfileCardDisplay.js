@@ -11,7 +11,7 @@ class ProfileCardDisplay extends Component {
                 </Col>
                 <Col xs="10">
                     <div>
-                        {this.props.user.name}
+                        {this.props.user.name || ''}
                     </div>
                     <div>
                         {this.props.user.titleEn || ''}
