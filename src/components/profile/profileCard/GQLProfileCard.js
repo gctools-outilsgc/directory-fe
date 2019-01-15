@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
+import { connect } from 'react-redux';
 
 import { Card, CardBody, CardTitle, CardFooter } from 'reactstrap';
 
@@ -30,18 +31,36 @@ query profileInfoQuery($gcID: String!) {
   }
 }`;
 
+const mapStateToProps = ({ user }) => {
+    const props = {};
+    if (user) {
+      props.accessToken = user.access_token;
+      props.myGcID = user.profile.sub;
+      props.modifyProfile = user.profile.modify_profile === 'True';
+    }
+    return props;
+  };
+
 const style = {
     card: {
         width: '100%',
     },
 };
 
-class GQLProfileCard extends Component {
+export class GQLProfileCard extends Component {
     render() {
+        const {
+            id,
+            accessToken,
+            myGcID,
+            modifyProfile,
+        } = this.props
+
+        const canEdit = (accessToken !== '') && modifyProfile && (id === myGcID);
         return (
             <Query
                 query={PROFILE_INFO_QUERY}
-                variables={{ gcID: (String(this.props.id)) }}
+                variables={{ gcID: (String(id)) }}
             >
                 {({ loading, error, data }) => {
                     if (loading) return 'Loading ...';
@@ -58,7 +77,10 @@ class GQLProfileCard extends Component {
                                 />
                             </CardBody>
                             <CardFooter>
-                                <EditProfile profile={userInfo} />
+                                {canEdit ? 
+                                    <EditProfile profile={userInfo} token={accessToken} /> : 
+                                    'You cannot'
+                                }
                             </CardFooter>
                         </Card>
                     )
@@ -69,4 +91,4 @@ class GQLProfileCard extends Component {
     }
 }
 
-export default GQLProfileCard;
+export default connect(mapStateToProps)(GQLProfileCard);

@@ -10,12 +10,37 @@ import {
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
+import { connect } from 'react-redux';
+import Login from '@gctools-components/gc-login';
+import { loginAction, logoutAction, clearErrorAction } from '../store';
+
+import oidcConfig from '../oidcConfig.dev';
+
 import Profile from './Profile';
 import Home from './Home';
 import Onboard from './Onboard';
 
-class App extends Component {
+export class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { name: false, id: false };
+  }
+
   render() {
+    const {
+      onLogin,
+      onLogout,
+    } = this.props;
+
+    const doLogin = (user) => {
+      this.setState({ name: user.profile.name, id: user.profile.sub });
+      onLogin(user);
+    };
+
+    const doLogout = () => {
+      this.setState({ name: false, id: false });
+      onLogout();
+    };
     return (
       <BrowserRouter>
         <div>
@@ -26,9 +51,26 @@ class App extends Component {
               </NavbarBrand>
               <Nav className="ml-auto">
                 <NavItem>
-                  <Button>
-                    Login
-                  </Button>
+                  <Login
+                    oidcConfig={oidcConfig}
+                    onUserLoaded={doLogin}
+                    onUserFetched={doLogin}
+                    onLogoutClick={(e, oidc) => {
+                      oidc.logout();
+                      doLogout();
+                    }}
+                  >
+                    {({ onClick }) => (
+                      <Button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          onClick(e);
+                        }}
+                      >
+                        {this.state.name || "Login"}
+                      </Button>
+                    )}
+                  </Login>
                 </NavItem>
                 <NavItem>
                   <Button>
@@ -57,4 +99,12 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStToProps = ({ showError }) => ({ showError: showError || [] });
+
+const mapDispToProps = dispatch => ({
+  onLogin: profile => dispatch(loginAction(profile)),
+  onLogout: () => dispatch(logoutAction()),
+  onErrorClose: () => dispatch(clearErrorAction()),
+});
+
+export default connect(mapStToProps, mapDispToProps)(App);

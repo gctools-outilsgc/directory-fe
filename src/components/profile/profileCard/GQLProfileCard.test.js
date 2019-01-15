@@ -3,7 +3,7 @@ import { render, cleanup, waitForElement } from 'react-testing-library';
 
 import {MockedProvider} from 'react-apollo/test-utils';
 
-import GQLProfileCard , { PROFILE_INFO_QUERY } from './GQLProfileCard';
+import {GQLProfileCard, PROFILE_INFO_QUERY } from './GQLProfileCard';
 
 const mock = [
     {
