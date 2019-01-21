@@ -10,9 +10,9 @@ import OnboardNav from './OnboardNav';
 import OnboardStep1 from './OnboardStep1';
 import OnboardStep2 from './OnboardStep2';
 import OnboardStep3 from './OnboardStep3';
-//import OnboardStep4 from './OnboardStep4';
-//import OnboardStep5 from './OnboardStep5';
-//import OnboardStep6 from './OnboardStep6';
+import OnboardStep4 from './OnboardStep4';
+import OnboardStep5 from './OnboardStep5';
+import OnboardStep6 from './OnboardStep6';
 
 const PROFILE_INFO_QUERY = gql`
 query profileInfoQuery($gcID: String!) {
@@ -97,6 +97,14 @@ class OnboardMod extends Component {
                                 <OnboardStep3
                                     userObject={userInfo}
                                     token={accessToken}
+                                />
+                                <OnboardStep4 />
+                                <OnboardStep5
+                                    userObject={userInfo}
+                                    token={accessToken}
+                                />
+                                <OnboardStep6
+                                    forwardID={userInfo.gcID}
                                 />
                             </StepWizard>
                         </div>

@@ -20,6 +20,8 @@ import Profile from './Profile';
 import Home from './Home';
 import Onboard from './Onboard';
 
+import ProfileSearch from '../components/core/ProfileSearch';
+
 export class App extends Component {
   constructor(props) {
     super(props);
@@ -50,6 +52,11 @@ export class App extends Component {
                 <span>Directory</span>
               </NavbarBrand>
               <Nav className="ml-auto">
+                <NavItem>
+                  <ProfileSearch
+                    defaultValue="22"
+                  />
+                </NavItem>
                 <NavItem>
                   <Login
                     oidcConfig={oidcConfig}

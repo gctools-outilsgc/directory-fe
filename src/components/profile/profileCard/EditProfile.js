@@ -89,7 +89,7 @@ class EditProfile extends Component {
                                             },
                                         });
                                         //Do this nicer / on result return / hot load maybe?
-                                        window.location.reload(false); 
+                                        //window.location.reload(false); 
                                     }}
                                 >
                                     <div>

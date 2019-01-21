@@ -57,6 +57,6 @@ describe('GQLProfileCard', () => {
                 <GQLProfileCard id="1" />
             </MockedProvider>
         );
-        await waitForElement(() => queryByText('Test Name'))
+        await waitForElement(() => queryByText('test@test.test'))
     });
 });
