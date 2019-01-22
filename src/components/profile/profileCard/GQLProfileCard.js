@@ -79,7 +79,7 @@ export class GQLProfileCard extends Component {
                             <CardFooter>
                                 {canEdit ? 
                                     <EditProfile profile={userInfo} token={accessToken} /> : 
-                                    'You cannot'
+                                    'You cannot edit this'
                                 }
                             </CardFooter>
                         </Card>

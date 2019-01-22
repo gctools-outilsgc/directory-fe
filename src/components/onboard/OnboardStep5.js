@@ -7,7 +7,7 @@ import { Query, Mutation } from 'react-apollo';
 import { Button, Row, Col } from 'reactstrap';
 
 import TeamPicker from '../core/TeamPicker';
-//import ProfileSearch from '../core/ProfileSearch';
+import SupervisorPicker from '../core/SupervisorPicker';
 
 const orgTeamQuery = gql`
 query orgTeamQuery($gcID: String!) {
@@ -92,7 +92,61 @@ class OnboardStep5 extends Component {
               </Row>
               <Row>
                 <Col md="6" className="mt-2">
-                  Supervisor
+                  {(() => {
+                    if (this.state.supEdit) {
+                      return (
+                        <Mutation
+                          mutation={modifyProfileMutation}
+                          refetchQueries={[{
+                            query: orgTeamQuery,
+                            variables: { gcID: String(userObject.gcID) },
+                          }]}
+                          context={{
+                            headers: {
+                              Authorization:
+                                `Bearer ${token}`,
+                            },
+                          }
+                          }
+                        >
+                          {modifyProfile => (
+                            <div className="onboard-profile">
+                              Supervisor
+                              <SupervisorPicker 
+                              onResultSelect={(s) => {
+                                modifyProfile({
+                                  variables: {
+                                    gcID: String(userObject.gcID),
+                                    profileInfo: {
+                                      supervisor: {
+                                        gcId: s,
+                                      },
+                                    },
+                                  },
+                                });
+                                this.editSup(this.state.supEdit);
+                              }}
+                              />
+                            </div>
+                          )}
+                        </Mutation>
+                      );
+                    }
+                    return (
+                      <div className="d-flex">
+                        <div>
+                          {supTest ? supTest.name : ''}
+                        </div>
+                        <div className="ml-auto">
+                          <Button
+                            onClick={this.editSup}
+                          >
+                            Chng
+                      </Button>
+                        </div>
+                      </div>
+                    );
+                  })()}
                 </Col>
                 <Col md="6" className="mt-2">
                   {(() => {

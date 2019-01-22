@@ -4,9 +4,10 @@ import { connect } from 'react-redux';
 import gql from 'graphql-tag';
 import { Query, Mutation } from 'react-apollo';
 
-import { Card, CardBody, CardTitle, CardFooter, Button } from 'reactstrap';
+import { Card, CardBody, CardTitle, CardFooter, Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
 
 import SupervisorPicker from '../../core/SupervisorPicker';
+import TeamPicker from '../../core/TeamPicker';
 
 const TEAM_INFO_QUERY = gql`
 query organizationTierQuery($gcID: String!) {
@@ -73,6 +74,20 @@ const style = {
 };
 
 class GQLTeamCard extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            modal: false
+        };
+        this.toggle = this.toggle.bind(this);
+    }
+
+    toggle() {
+        this.setState({
+            modal: !this.state.modal
+        });
+    }
+
     render() {
         const {
             id,
@@ -103,13 +118,6 @@ class GQLTeamCard extends React.Component {
                                 </div>
                                     {supTest ? supTest.name : 'None'}
                                     {supTest ? supTest.titleEn : ''}
-                                    <div>
-                                        <SupervisorPicker
-                                            onResultSelect={(s) => {
-                                                console.log('I have ' + s);
-                                            }}
-                                        />
-                                    </div>
                                 </div>
                                 <div>
                                     <div className="font-weight-bold">
@@ -120,8 +128,90 @@ class GQLTeamCard extends React.Component {
                             </CardBody>
                             <CardFooter>
                                 {canEdit ?
-                                    <Button>Edit</Button> :
-                                    'You cannot'
+                                    <div>
+                                        <Button color="primary" onClick={this.toggle}>Edit</Button>
+                                        <Modal isOpen={this.state.modal} toggle={this.toggle}>
+                                            <ModalHeader toggle={this.toggle}>Edit Team</ModalHeader>
+                                            <ModalBody>
+                                                <Mutation
+                                                    mutation={modifyProfileMutation}
+                                                    refetchQueries={[{
+                                                        query: TEAM_INFO_QUERY,
+                                                        variables: { gcID: String(id) },
+                                                    }]}
+                                                    context={{
+                                                        headers: {
+                                                            Authorization:
+                                                                `Bearer ${accessToken}`,
+                                                        },
+                                                    }
+                                                    }
+                                                >
+                                                    {modifyProfile => (
+
+                                                        <div>
+                                                            {supTest ? supTest.name : 'None'}
+                                                            <SupervisorPicker
+                                                                onResultSelect={(s) => {
+                                                                    modifyProfile({
+                                                                        variables: {
+                                                                            gcID: String(id),
+                                                                            profileInfo: {
+                                                                                supervisor: {
+                                                                                    gcId: s,
+                                                                                },
+                                                                            },
+                                                                        },
+                                                                    });
+                                                                }}
+                                                            />
+                                                        </div>
+
+                                                    )}
+                                                </Mutation>
+                                                <br />
+                                                <Mutation
+                                                    mutation={modifyProfileMutation}
+                                                    refetchQueries={[{
+                                                        query: TEAM_INFO_QUERY,
+                                                        variables: { gcID: String(id) },
+                                                    }]}
+                                                    context={{
+                                                        headers: {
+                                                            Authorization:
+                                                                `Bearer ${accessToken}`,
+                                                        },
+                                                    }
+                                                    }
+                                                >
+                                                {modifyProfile => (
+                                                    <TeamPicker
+                                                        id="idTest"
+                                                        editMode
+                                                        selectedOrgTier={teamTest}
+                                                        supervisor={supTest}
+                                                        gcID={id}
+                                                        onTeamChange={(t) => {
+                                                            modifyProfile({
+                                                                variables: {
+                                                                    gcID: String(id),
+                                                                    profileInfo: {
+                                                                        org: {
+                                                                            orgTierId: t,
+                                                                        },
+                                                                    },
+                                                                },
+                                                            });
+                                                        }}
+                                                    />
+                                                )}
+                                                </Mutation>
+                                                <Button color="primary" onClick={this.toggle}>Close this</Button>{' '}
+                                            </ModalBody>
+
+                                        </Modal>
+                                    </div> :
+                                    'You cannot edit this'
                                 }
                             </CardFooter>
                         </Card>
