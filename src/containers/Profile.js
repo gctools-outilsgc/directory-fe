@@ -4,6 +4,7 @@ import { Container, Row } from 'reactstrap';
 import GQLProfileCard from '../components/profile/profileCard/GQLProfileCard';
 import GQLTeamCard from '../components/profile/team/GQLTeamCard';
 
+
 const Profile = ({ match }) => (
     <Container>
       <Row>

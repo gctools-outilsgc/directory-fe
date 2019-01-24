@@ -5,9 +5,6 @@ import { Input } from 'reactstrap';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 
-const capitalize = function capitalize(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
-};
 
 class TeamPicker extends React.Component {
   constructor(props) {
@@ -29,8 +26,6 @@ class TeamPicker extends React.Component {
   render() {
     const {
       supervisor,
-      selectedOrgTier,
-      editMode,
     } = this.props;
     return (
       <Query

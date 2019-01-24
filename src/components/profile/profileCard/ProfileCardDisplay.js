@@ -4,6 +4,10 @@ import { Row, Col } from 'reactstrap';
 
 class ProfileCardDisplay extends Component {
     render() {
+        const {
+            user,
+        } = this.props
+        const userAddress = user.address;
         return (
             <Row>
                 <Col xs="2">
@@ -11,17 +15,17 @@ class ProfileCardDisplay extends Component {
                 </Col>
                 <Col xs="10">
                     <div>
-                        {this.props.user.name || ''}
+                        {user.name ? user.name : ''}
                     </div>
                     <div>
-                        {this.props.user.titleEn || ''}
+                        {user.titleEn ? user.titleEn : 'No Title'}
                     </div>
                     <ul className="list-unstyled mt-3">
                         <li className="mb-2">
                             <div>
                                 <div className="font-weight-bold">Email </div>
                                 <span className="list-desc-ph">
-                                    {this.props.user.email || ''}
+                                    {user.email ? user.email : 'No Email'}
                                 </span>
                             </div>
                         </li>
@@ -29,7 +33,7 @@ class ProfileCardDisplay extends Component {
                             <div>
                                 <div className="font-weight-bold">Work</div>
                                 <span className="list-desc-ph">
-                                    {this.props.user.officePhone || ''}
+                                    {user.officePhone ? user.officePhone : 'No Offce Phone'}
                                 </span>
                             </div>
                         </li>
@@ -37,7 +41,7 @@ class ProfileCardDisplay extends Component {
                             <div>
                                 <div className="font-weight-bold">Mobile</div>
                                 <span className="list-desc-ph">
-                                    {this.props.user.mobilePhone || ''}
+                                    {user.mobilePhone ? user.mobilePhone : 'No Mobile Phone'}
                                 </span>
                             </div>
                         </li>
@@ -46,19 +50,19 @@ class ProfileCardDisplay extends Component {
                                 <div className="font-weight-bold">Address</div>
                                 <span className="list-desc-ph">
                                     <span className="mr-1">
-                                        {this.props.user.address.streetAddress || ''}
+                                        {userAddress ? user.address.streetAddress : ''}
                                     </span>
                                     <span className="mr-1">
-                                        {this.props.user.address.city || ''}
+                                        {userAddress ? user.address.city: ''}
                                     </span>
                                     <span className="mr-1">
-                                        {this.props.user.address.province || ''}
+                                        {userAddress ? user.address.province: ''}
                                     </span>
                                     <span className="mr-1">
-                                        {this.props.user.address.postalCode || ''}
+                                        {userAddress ? user.address.postalCode : ''}
                                     </span>
                                     <span className="mr-1">
-                                        {this.props.user.address.country || ''}
+                                        {userAddress ? user.address.country: ''}
                                     </span>
                                 </span>
                             </div>

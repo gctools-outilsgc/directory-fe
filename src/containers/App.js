@@ -87,7 +87,7 @@ export class App extends Component {
               </Nav>
             </Container>
           </Navbar>
-          <Container>
+          <Container className="mt-3">
             <Switch>
               <Fragment>
                 <Route

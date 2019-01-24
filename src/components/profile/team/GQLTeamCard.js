@@ -8,8 +8,9 @@ import { Card, CardBody, CardTitle, CardFooter, Button, Modal, ModalHeader, Moda
 
 import SupervisorPicker from '../../core/SupervisorPicker';
 import TeamPicker from '../../core/TeamPicker';
+import Loading from './Loading';
 
-const TEAM_INFO_QUERY = gql`
+export const TEAM_INFO_QUERY = gql`
 query organizationTierQuery($gcID: String!) {
   profiles(gcID: $gcID) {
     name
@@ -73,7 +74,7 @@ const style = {
     },
 };
 
-class GQLTeamCard extends React.Component {
+export class GQLTeamCard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -102,7 +103,7 @@ class GQLTeamCard extends React.Component {
                 variables={{ gcID: (String(id)) }}
             >
                 {({ loading, error, data }) => {
-                    if (loading) return 'Loading ...';
+                    if (loading) return <Loading />;
                     if (error) return `Error!: ${error}`;
                     const supTest = data.profiles[0].supervisor;
                     const teamTest = data.profiles[0].org;

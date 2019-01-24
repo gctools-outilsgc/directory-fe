@@ -12,3 +12,40 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/*Loading*/
+
+.loading-state {
+  background: linear-gradient(271deg, #dbdbdb, #e8e8e8);
+  background-size: 400% 400%;
+-webkit-animation: LoadingText 2s ease infinite;
+-moz-animation: LoadingText 2s ease infinite;
+animation: LoadingText 2s ease infinite;
+}
+
+@-webkit-keyframes LoadingText {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes LoadingText {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+@keyframes LoadingText { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 51%}
+    100%{background-position:0% 50%}
+}
+
+.fake-head {
+  height: 22px;
+  width: 100px;
+}
+
+.fake-body {
+  height: 16px;
+  width: 350px;
+  margin-bottom: 5px;
+}

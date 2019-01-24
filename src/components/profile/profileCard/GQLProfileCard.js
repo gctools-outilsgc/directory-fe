@@ -8,6 +8,7 @@ import { Card, CardBody, CardTitle, CardFooter } from 'reactstrap';
 
 import ProfileCardDisplay from './ProfileCardDisplay';
 import EditProfile from './EditProfile';
+import Loading from './Loading';
 
 export const PROFILE_INFO_QUERY = gql`
 query profileInfoQuery($gcID: String!) {
@@ -63,7 +64,7 @@ export class GQLProfileCard extends Component {
                 variables={{ gcID: (String(id)) }}
             >
                 {({ loading, error, data }) => {
-                    if (loading) return 'Loading ...';
+                    if (loading) return <Loading />;
                     if (error) return `Error!: ${error}`;
                     const userInfo = data.profiles[0];
                     return (
