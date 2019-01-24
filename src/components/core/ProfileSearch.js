@@ -59,6 +59,7 @@ class ProfileSearch extends React.Component {
 
             </li>
           ) : [];
+          const styleClasses = (!data) ?  'search-results-none' : "list-unstyled search-results";
           return (
             <div className="search-form search-form-round">
               <label>
@@ -70,7 +71,7 @@ class ProfileSearch extends React.Component {
                     placeholder="Search Profiles"
                   />
               </label>
-              <ul>{results}</ul>
+              <ul className={styleClasses}>{results}</ul>
             </div>
           );
         }}

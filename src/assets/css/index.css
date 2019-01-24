@@ -49,3 +49,18 @@ animation: LoadingText 2s ease infinite;
   width: 350px;
   margin-bottom: 5px;
 }
+
+.search-results {
+  border: 1px solid #c7c7c7;
+  box-shadow: 0 0 5px rgba(0,0,0,.15);
+    position: absolute;
+    background-color: white;
+    z-index: 999;
+    padding: 8px;
+    border-radius: 5px;
+    width: 230px;
+}
+
+.search-results-none {
+  display:none;
+}

@@ -63,6 +63,9 @@ class EditProfile extends Component {
                                 },
                             }
                             }
+                            onCompleted={() => {
+                                window.location.reload(false); 
+                            }}
                         >
                             {modifyProfile => (
                                 <Form

@@ -212,7 +212,7 @@ export class GQLTeamCard extends React.Component {
 
                                         </Modal>
                                     </div> :
-                                    'You cannot edit this'
+                                    ''
                                 }
                             </CardFooter>
                         </Card>
