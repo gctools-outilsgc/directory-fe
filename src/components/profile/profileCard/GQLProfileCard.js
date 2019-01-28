@@ -45,6 +45,7 @@ const mapStateToProps = ({ user }) => {
 const style = {
     card: {
         width: '100%',
+        padding: '0 15px 10px 15px',
     },
 };
 
@@ -70,8 +71,10 @@ export class GQLProfileCard extends Component {
                     return (
                         <Card style={style.card}>
                             <CardBody>
-                                <CardTitle>
-                                    Profile
+                                <CardTitle className="profile-card-title">
+                                    <div>
+                                        Profile
+                                    </div>
                                 </CardTitle>
                                 <ProfileCardDisplay
                                     user={userInfo}

@@ -64,3 +64,54 @@ animation: LoadingText 2s ease infinite;
 .search-results-none {
   display:none;
 }
+
+/* Profile Card */
+
+.profile-card-title {
+  font-size: 1.5rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.profile-name {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.profile-title {
+  font-family: "Rubik", sans-serif;
+  font-weight: 200;
+  font-size: 1.2rem;
+}
+
+.profile-card-footer {
+  border-top: 1px solid black;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Edit Profile Modal */
+
+.edit-profile-modal .modal-content {
+  border-radius: 6px;
+}
+
+.edit-profile-modal label {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.edit-profile-modal label .font-weight-bold {
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.edit-profile-modal-section {
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
+  padding-top: 15px;
+}

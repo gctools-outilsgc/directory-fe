@@ -14,10 +14,10 @@ class ProfileCardDisplay extends Component {
                     Avatar
                 </Col>
                 <Col xs="10">
-                    <div>
+                    <div className="profile-name">
                         {user.name ? user.name : ''}
                     </div>
-                    <div>
+                    <div className="profile-title">
                         {user.titleEn ? user.titleEn : 'No Title'}
                     </div>
                     <ul className="list-unstyled mt-3">

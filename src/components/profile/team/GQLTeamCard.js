@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import gql from 'graphql-tag';
 import { Query, Mutation } from 'react-apollo';
 
-import { Card, CardBody, CardTitle, CardFooter, Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
+import { Card, CardBody, CardTitle, CardFooter, Button, Modal, ModalHeader, ModalBody, Row, Col } from 'reactstrap';
 
 import SupervisorPicker from '../../core/SupervisorPicker';
 import TeamPicker from '../../core/TeamPicker';
@@ -71,6 +71,7 @@ const mapStateToProps = ({ user }) => {
 const style = {
     card: {
         width: '100%',
+        padding: '0 15px 10px 15px',
     },
 };
 
@@ -110,27 +111,29 @@ export class GQLTeamCard extends React.Component {
                     return (
                         <Card style={style.card}>
                             <CardBody>
-                                <CardTitle>
+                                <CardTitle className="profile-card-title">
                                     Teams
                             </CardTitle>
-                                <div>
-                                    <div className="font-weight-bold">
-                                        Supervisor
+                                <Row>
+                                    <Col>
+                                        <div className="font-weight-bold">
+                                            Supervisor
                                 </div>
-                                    {supTest ? supTest.name : 'None'}
-                                    {supTest ? supTest.titleEn : ''}
-                                </div>
-                                <div>
-                                    <div className="font-weight-bold">
-                                        Team
+                                        {supTest ? supTest.name : 'None'}
+                                        {supTest ? supTest.titleEn : ''}
+                                    </Col>
+                                    <Col>
+                                        <div className="font-weight-bold">
+                                            Team
                               </div>
-                                    {teamTest ? teamTest.nameEn : 'None'}
-                                </div>
+                                        {teamTest ? teamTest.nameEn : 'None'}
+                                    </Col>
+                                </Row>
                             </CardBody>
                             <CardFooter>
                                 {canEdit ?
-                                    <div>
-                                        <Button color="primary" onClick={this.toggle}>Edit</Button>
+                                    <div className="profile-card-footer">
+                                        <Button className="float-right" size="sm" color="primary" onClick={this.toggle}>Edit</Button>
                                         <Modal isOpen={this.state.modal} toggle={this.toggle}>
                                             <ModalHeader toggle={this.toggle}>Edit Team</ModalHeader>
                                             <ModalBody>
@@ -185,27 +188,27 @@ export class GQLTeamCard extends React.Component {
                                                     }
                                                     }
                                                 >
-                                                {modifyProfile => (
-                                                    <TeamPicker
-                                                        id="idTest"
-                                                        editMode
-                                                        selectedOrgTier={teamTest}
-                                                        supervisor={supTest}
-                                                        gcID={id}
-                                                        onTeamChange={(t) => {
-                                                            modifyProfile({
-                                                                variables: {
-                                                                    gcID: String(id),
-                                                                    profileInfo: {
-                                                                        org: {
-                                                                            orgTierId: t,
+                                                    {modifyProfile => (
+                                                        <TeamPicker
+                                                            id="idTest"
+                                                            editMode
+                                                            selectedOrgTier={teamTest}
+                                                            supervisor={supTest}
+                                                            gcID={id}
+                                                            onTeamChange={(t) => {
+                                                                modifyProfile({
+                                                                    variables: {
+                                                                        gcID: String(id),
+                                                                        profileInfo: {
+                                                                            org: {
+                                                                                orgTierId: t,
+                                                                            },
                                                                         },
                                                                     },
-                                                                },
-                                                            });
-                                                        }}
-                                                    />
-                                                )}
+                                                                });
+                                                            }}
+                                                        />
+                                                    )}
                                                 </Mutation>
                                                 <Button color="primary" onClick={this.toggle}>Close this</Button>{' '}
                                             </ModalBody>

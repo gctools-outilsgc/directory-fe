@@ -29,7 +29,7 @@ describe('EditProfile', () => {
         const { queryByText } = render(
             <EditProfile profile={mockProps} />
         );
-        const editText = queryByText('Edit');
-        expect(editText.innerHTML).toBe('Edit');
+        const editText = queryByText('Edit Profile');
+        expect(editText.innerHTML).toBe('Edit Profile');
     });
 });

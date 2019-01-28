@@ -4,7 +4,7 @@ import gql from 'graphql-tag';
 import { Mutation } from 'react-apollo';
 
 //import { PROFILE_INFO_QUERY } from './GQLProfileCard';
-import { Button, Modal, ModalBody, ModalHeader, Form } from 'reactstrap';
+import { Button, Modal, ModalBody, ModalHeader, Form, Row, Col } from 'reactstrap';
 
 const MODIFY_PROFILE_MUTATION = gql`
 mutation modifyPr($gcID: String!, $profileInfo: ModifyProfileInput!) {
@@ -47,11 +47,11 @@ class EditProfile extends Component {
             token,
         } = this.props;
         return (
-            <div>
-                <Button color="primary" onClick={this.toggle}>
-                    Edit
+            <div className="profile-card-footer">
+                <Button className="float-right" size="sm" color="primary" onClick={this.toggle}>
+                    Edit Profile
                 </Button>
-                <Modal isOpen={this.state.modal} toggle={this.toggle}>
+                <Modal isOpen={this.state.modal} toggle={this.toggle} className="modal-lg edit-profile-modal">
                     <ModalHeader toggle={this.toggle}>Edit Profile</ModalHeader>
                     <ModalBody>
                         <Mutation
@@ -64,7 +64,7 @@ class EditProfile extends Component {
                             }
                             }
                             onCompleted={() => {
-                                window.location.reload(false); 
+                                window.location.reload(false);
                             }}
                         >
                             {modifyProfile => (
@@ -95,194 +95,209 @@ class EditProfile extends Component {
                                         //window.location.reload(false); 
                                     }}
                                 >
-                                    <div>
-                                        <label htmlFor="nameTest">
-                                            Full Name
+                                    <Row>
+                                        <Col sm="12">
+                                            <label htmlFor="nameTest">
+                                                <span className="font-weight-bold">Full Name</span>
                                 <input
-                                                required
-                                                type="text"
-                                                id="nameTest"
-                                                className="form-control"
-                                                value={this.state.name || ''}
-                                                onChange={(e) => {
-                                                    this.setState({
-                                                        name: e.target.value,
-                                                    });
-                                                }}
-                                            />
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <label htmlFor="emailTest">
-                                            Work Email
+                                                    required
+                                                    type="text"
+                                                    id="nameTest"
+                                                    className="form-control"
+                                                    value={this.state.name || ''}
+                                                    onChange={(e) => {
+                                                        this.setState({
+                                                            name: e.target.value,
+                                                        });
+                                                    }}
+                                                />
+                                            </label>
+                                        </Col>
+                                        <Col sm="12">
+                                            <label htmlFor="emailTest">
+                                            <span className="font-weight-bold">Work Email</span>
                                     <input
-                                                id="emailTest"
-                                                type="email"
-                                                required
-                                                className="form-control"
-                                                value={this.state.email || ''}
-                                                onChange={(e) => {
-                                                    this.setState({
-                                                        email: e.target.value,
-                                                    });
-                                                }}
-                                            />
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <label htmlFor="titleEn">
-                                            English Title
+                                                    id="emailTest"
+                                                    type="email"
+                                                    required
+                                                    className="form-control"
+                                                    value={this.state.email || ''}
+                                                    onChange={(e) => {
+                                                        this.setState({
+                                                            email: e.target.value,
+                                                        });
+                                                    }}
+                                                />
+                                            </label>
+                                        </Col>
+                                    </Row>
+                                    <hr />
+                                    <Row>
+                                        <Col>
+                                            <label htmlFor="titleEn">
+                                            <span className="font-weight-bold">English Title</span>
                                     <input
-                                                id="titleEn"
-                                                type="text"
-                                                className="form-control"
-                                                value={this.state.titleEn || ''}
-                                                onChange={(e) => {
-                                                    this.setState({
-                                                        titleEn: e.target.value,
-                                                    });
-                                                }}
-                                            />
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <label htmlFor="titleFr">
-                                            French Title
+                                                    id="titleEn"
+                                                    type="text"
+                                                    className="form-control"
+                                                    value={this.state.titleEn || ''}
+                                                    onChange={(e) => {
+                                                        this.setState({
+                                                            titleEn: e.target.value,
+                                                        });
+                                                    }}
+                                                />
+                                            </label>
+                                        </Col>
+                                        <Col>
+                                            <label htmlFor="titleFr">
+                                            <span className="font-weight-bold">French Title</span>
                                     <input
-                                                id="titleFr"
-                                                type="text"
-                                                className="form-control"
-                                                value={this.state.titleFr || ''}
-                                                onChange={(e) => {
-                                                    this.setState({
-                                                        titleFr: e.target.value,
-                                                    });
-                                                }}
-                                            />
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <label htmlFor="officePhone">
-                                            Office Phone
+                                                    id="titleFr"
+                                                    type="text"
+                                                    className="form-control"
+                                                    value={this.state.titleFr || ''}
+                                                    onChange={(e) => {
+                                                        this.setState({
+                                                            titleFr: e.target.value,
+                                                        });
+                                                    }}
+                                                />
+                                            </label>
+                                        </Col>
+                                    </Row>
+                                    <hr />
+                                    <Row>
+                                        <Col sm="6">
+                                            <label htmlFor="streetAddress">
+                                            <span className="font-weight-bold">Address</span>
+                                    <input
+                                                    id="streetAddress"
+                                                    type="text"
+                                                    className="form-control"
+                                                    value={this.state.streetAddress || ''}
+                                                    onChange={(e) => {
+                                                        this.setState({
+                                                            streetAddress: e.target.value,
+                                                        });
+                                                    }}
+                                                />
+                                            </label>
+                                        </Col>
+                                        <Col sm="6">
+                                            <label htmlFor="city">
+                                            <span className="font-weight-bold">City</span>
+                                    <input
+                                                    id="city"
+                                                    type="text"
+                                                    className="form-control"
+                                                    value={this.state.city || ''}
+                                                    onChange={(e) => {
+                                                        this.setState({
+                                                            city: e.target.value,
+                                                        });
+                                                    }}
+                                                />
+                                            </label>
+                                        </Col>
+                                        <Col sm="4">
+                                            <label htmlFor="province">
+                                            <span className="font-weight-bold">Province</span>
+                                    <input
+                                                    id="province"
+                                                    type="text"
+                                                    className="form-control"
+                                                    value={this.state.province || ''}
+                                                    onChange={(e) => {
+                                                        this.setState({
+                                                            province: e.target.value,
+                                                        });
+                                                    }}
+                                                />
+                                            </label>
+                                        </Col>
+                                        <Col sm="2">
+                                            <label htmlFor="postalCode">
+                                            <span className="font-weight-bold">Postal Code</span>
+                                    <input
+                                                    id="postalCode"
+                                                    type="text"
+                                                    className="form-control"
+                                                    value={this.state.postalCode || ''}
+                                                    onChange={(e) => {
+                                                        this.setState({
+                                                            postalCode: e.target.value,
+                                                        });
+                                                    }}
+                                                />
+                                            </label>
+                                        </Col>
+                                        <Col sm="6">
+                                            <label htmlFor="country">
+                                            <span className="font-weight-bold">Country</span>
+                                    <input
+                                                    id="country"
+                                                    type="text"
+                                                    className="form-control"
+                                                    value={this.state.country || ''}
+                                                    onChange={(e) => {
+                                                        this.setState({
+                                                            country: e.target.value,
+                                                        });
+                                                    }}
+                                                />
+                                            </label>
+                                        </Col>
+                                    </Row>
+                                    <hr />
+                                    <Row>
+                                        <Col sm="3">
+                                            <label htmlFor="officePhone">
+                                                <span className="font-weight-bold">Office Phone</span>
                                     <small className="text-muted ml-2">
-                                                1234567890
+                                                    1234567890
                                     </small>
-                                            <input
-                                                id="officePhone"
-                                                type="tel"
-                                                className="form-control"
-                                                value={this.state.officePhone || ''}
-                                                pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$"
-                                                onChange={(e) => {
-                                                    this.setState({
-                                                        officePhone: e.target.value
-                                                    });
-                                                }}
-                                            />
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <label htmlFor="mobilePhone">
-                                            Mobile Phone
+                                                <input
+                                                    id="officePhone"
+                                                    type="tel"
+                                                    className="form-control"
+                                                    value={this.state.officePhone || ''}
+                                                    pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$"
+                                                    onChange={(e) => {
+                                                        this.setState({
+                                                            officePhone: e.target.value
+                                                        });
+                                                    }}
+                                                />
+                                            </label>
+                                        </Col>
+                                        <Col sm="3">
+                                            <label htmlFor="mobilePhone">
+                                            <span className="font-weight-bold">Mobile Phone</span>
                                     <small className="text-muted ml-2">
-                                                1234567890
+                                                    1234567890
                                     </small>
-                                            <input
-                                                id="mobilePhone"
-                                                type="tel"
-                                                className="form-control"
-                                                value={this.state.mobilePhone || ''}
-                                                pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$"
-                                                onChange={(e) => {
-                                                    this.setState({
-                                                        mobilePhone: e.target.value
-                                                    });
-                                                }}
-                                            />
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <label htmlFor="streetAddress">
-                                            Address
-                                    <input
-                                                id="streetAddress"
-                                                type="text"
-                                                className="form-control"
-                                                value={this.state.streetAddress || ''}
-                                                onChange={(e) => {
-                                                    this.setState({
-                                                        streetAddress: e.target.value,
-                                                    });
-                                                }}
-                                            />
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <label htmlFor="city">
-                                            City
-                                    <input
-                                                id="city"
-                                                type="text"
-                                                className="form-control"
-                                                value={this.state.city || ''}
-                                                onChange={(e) => {
-                                                    this.setState({
-                                                        city: e.target.value,
-                                                    });
-                                                }}
-                                            />
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <label htmlFor="province">
-                                            Province
-                                    <input
-                                                id="province"
-                                                type="text"
-                                                className="form-control"
-                                                value={this.state.province || ''}
-                                                onChange={(e) => {
-                                                    this.setState({
-                                                        province: e.target.value,
-                                                    });
-                                                }}
-                                            />
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <label htmlFor="postalCode">
-                                            Postal Code
-                                    <input
-                                                id="postalCode"
-                                                type="text"
-                                                className="form-control"
-                                                value={this.state.postalCode || ''}
-                                                onChange={(e) => {
-                                                    this.setState({
-                                                        postalCode: e.target.value,
-                                                    });
-                                                }}
-                                            />
-                                        </label>
-                                    </div>
-                                    <div>
-                                        <label htmlFor="country">
-                                            Country
-                                    <input
-                                                id="country"
-                                                type="text"
-                                                className="form-control"
-                                                value={this.state.country || ''}
-                                                onChange={(e) => {
-                                                    this.setState({
-                                                        country: e.target.value,
-                                                    });
-                                                }}
-                                            />
-                                        </label>
-                                    </div>
-                                    <div>
+                                                <input
+                                                    id="mobilePhone"
+                                                    type="tel"
+                                                    className="form-control"
+                                                    value={this.state.mobilePhone || ''}
+                                                    pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$"
+                                                    onChange={(e) => {
+                                                        this.setState({
+                                                            mobilePhone: e.target.value
+                                                        });
+                                                    }}
+                                                />
+                                            </label>
+                                        </Col>
+                                    </Row>
+
+
+                                    <div className="profile-card-footer">
                                         <Button
+                                            size="sm"
+                                            className="float-right"
                                             type="submit"
                                             color="primary"
                                         >
