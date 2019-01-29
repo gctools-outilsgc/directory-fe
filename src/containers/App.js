@@ -22,6 +22,8 @@ import Onboard from './Onboard';
 
 import ProfileSearch from '../components/core/ProfileSearch';
 
+import enFip from '../assets/imgs/sig-en-w.png';
+
 export class App extends Component {
   constructor(props) {
     super(props);
@@ -47,45 +49,46 @@ export class App extends Component {
       <BrowserRouter>
         <div>
           <Navbar color="white" className="shadow-sm">
-            <Container>
-              <NavbarBrand href="/">
-                <span>Directory</span>
-              </NavbarBrand>
-              <Nav className="ml-auto">
-                <NavItem>
-                  <ProfileSearch
-                    defaultValue="22"
-                  />
-                </NavItem>
-                <NavItem>
-                  <Login
-                    oidcConfig={oidcConfig}
-                    onUserLoaded={doLogin}
-                    onUserFetched={doLogin}
-                    onLogoutClick={(e, oidc) => {
-                      oidc.logout();
-                      doLogout();
-                    }}
-                  >
-                    {({ onClick }) => (
-                      <Button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          onClick(e);
-                        }}
-                      >
-                        {this.state.name || "Login"}
-                      </Button>
-                    )}
-                  </Login>
-                </NavItem>
-                <NavItem>
-                  <Button>
-                    Language
+            <div className="h-100 directory-fip">
+              <img src={enFip} alt="Government of Canada" />
+              </div>
+            <NavbarBrand href="/" className="directory-brand">
+              <span>Directory</span>
+            </NavbarBrand>
+            <Nav className="ml-auto">
+              <NavItem className="mr-2">
+                <ProfileSearch
+                  defaultValue="22"
+                />
+              </NavItem>
+              <NavItem className="mr-2">
+                <Login
+                  oidcConfig={oidcConfig}
+                  onUserLoaded={doLogin}
+                  onUserFetched={doLogin}
+                  onLogoutClick={(e, oidc) => {
+                    oidc.logout();
+                    doLogout();
+                  }}
+                >
+                  {({ onClick }) => (
+                    <Button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        onClick(e);
+                      }}
+                    >
+                      {this.state.name || "Login"}
+                    </Button>
+                  )}
+                </Login>
+              </NavItem>
+              <NavItem>
+                <Button>
+                  Language
                   </Button>
-                </NavItem>
-              </Nav>
-            </Container>
+              </NavItem>
+            </Nav>
           </Navbar>
           <Container className="mt-3">
             <Switch>

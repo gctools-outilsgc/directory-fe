@@ -118,14 +118,18 @@ export class GQLTeamCard extends React.Component {
                                     <Col>
                                         <div className="font-weight-bold">
                                             Supervisor
-                                </div>
-                                        {supTest ? supTest.name : 'None'}
-                                        {supTest ? supTest.titleEn : ''}
+                                        </div>
+                                        <div>
+                                            {supTest ? supTest.name : 'None'}  
+                                        </div>
+                                        <small className="text-muted">
+                                            {supTest ? supTest.titleEn : ''} 
+                                        </small>
                                     </Col>
                                     <Col>
                                         <div className="font-weight-bold">
                                             Team
-                              </div>
+                                        </div>
                                         {teamTest ? teamTest.nameEn : 'None'}
                                     </Col>
                                 </Row>

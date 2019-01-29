@@ -77,7 +77,7 @@ class OnboardStep2 extends Component {
                                 </Col>
                                 <Col md="6">
                                     <label htmlFor="nameTest">
-                                        Full name
+                                    <span className="font-weight-bold">Full name</span>
                                         <input
                                             required
                                             type="text"
@@ -94,7 +94,7 @@ class OnboardStep2 extends Component {
                                 </Col>
                                 <Col md="6">
                                     <label htmlFor="emailTest">
-                                        Work email
+                                    <span className="font-weight-bold">Work email</span>
                                         <input
                                             id="emailTest"
                                             type="email"
@@ -113,7 +113,7 @@ class OnboardStep2 extends Component {
                             <Row>
                                 <Col md="6">
                                     <label htmlFor="titleEn">
-                                        English Title
+                                    <span className="font-weight-bold">English Title</span>
                                     <input
                                             id="titleEn"
                                             type="text"
@@ -129,7 +129,7 @@ class OnboardStep2 extends Component {
                                 </Col>
                                 <Col md="6">
                                     <label htmlFor="titleFr">
-                                        French Title
+                                    <span className="font-weight-bold">French Title</span>
                                     <input
                                             id="titleFr"
                                             type="text"

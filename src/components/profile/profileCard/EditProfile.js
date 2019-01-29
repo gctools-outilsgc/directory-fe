@@ -254,13 +254,11 @@ class EditProfile extends Component {
                                         <Col sm="3">
                                             <label htmlFor="officePhone">
                                                 <span className="font-weight-bold">Office Phone</span>
-                                    <small className="text-muted ml-2">
-                                                    1234567890
-                                    </small>
                                                 <input
                                                     id="officePhone"
                                                     type="tel"
                                                     className="form-control"
+                                                    aria-describedby="officePhoneHelp"
                                                     value={this.state.officePhone || ''}
                                                     pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$"
                                                     onChange={(e) => {
@@ -269,18 +267,19 @@ class EditProfile extends Component {
                                                         });
                                                     }}
                                                 />
+                                                <small id="officePhoneHelp" className="text-muted">
+                                                    1234567890
+                                                </small>
                                             </label>
                                         </Col>
                                         <Col sm="3">
                                             <label htmlFor="mobilePhone">
                                             <span className="font-weight-bold">Mobile Phone</span>
-                                    <small className="text-muted ml-2">
-                                                    1234567890
-                                    </small>
                                                 <input
                                                     id="mobilePhone"
                                                     type="tel"
                                                     className="form-control"
+                                                    aria-describedby="mobilePhoneHelp"
                                                     value={this.state.mobilePhone || ''}
                                                     pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$"
                                                     onChange={(e) => {
@@ -289,6 +288,9 @@ class EditProfile extends Component {
                                                         });
                                                     }}
                                                 />
+                                                <small id="mobilePhoneHelp" className="text-muted">
+                                                    1234567890
+                                                </small>
                                             </label>
                                         </Col>
                                     </Row>

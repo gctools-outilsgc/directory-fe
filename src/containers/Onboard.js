@@ -5,7 +5,7 @@ import OnboardMod from '../components/onboard/GQLOnboard';
 class Onboard extends Component {
     render() {
         return (
-            <div>
+            <div className="onboard-container m-auto">
                 <OnboardMod />
             </div>
         );

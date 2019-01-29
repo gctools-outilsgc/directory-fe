@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Card, CardTitle, CardBody } from 'reactstrap';
+import { Card, CardTitle, CardBody, Row, Col } from 'reactstrap';
 
 const style = {
     card: {
@@ -34,10 +34,16 @@ class Loading extends React.Component {
                         <div className="loading-state fake-head mb-3"></div>
                     </CardTitle>
                     <span className="sr-only">Loading ...</span>
-                    <div className="loading-state mt-3" style={style.fakeBodyTitle}></div>
-                    <div className="loading-state" style={style.fakeInfo}></div>
-                    <div className="loading-state mt-3" style={style.fakeBodyTitle}></div>
-                    <div className="loading-state" style={style.fakeInfo}></div>
+                    <Row>
+                        <Col>
+                            <div className="loading-state mt-3" style={style.fakeBodyTitle}></div>
+                            <div className="loading-state" style={style.fakeInfo}></div>
+                        </Col>
+                        <Col>
+                            <div className="loading-state mt-3" style={style.fakeBodyTitle}></div>
+                            <div className="loading-state" style={style.fakeInfo}></div>
+                        </Col>
+                    </Row>
                 </CardBody>
             </Card>
         );

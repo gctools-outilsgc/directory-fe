@@ -89,7 +89,7 @@ class OnboardStep3 extends Component {
                         <Row>
                             <Col md="4">
                                 <label htmlFor="streetAddress">
-                                    Address
+                                <span className="font-weight-bold">Address</span>
                                     <input
                                         id="streetAddress"
                                         type="text"
@@ -105,7 +105,7 @@ class OnboardStep3 extends Component {
                             </Col>
                             <Col md="4">
                                 <label htmlFor="city">
-                                    City
+                                <span className="font-weight-bold">City</span>
                                     <input
                                         id="city"
                                         type="text"
@@ -121,7 +121,7 @@ class OnboardStep3 extends Component {
                             </Col>
                             <Col md="4">
                                 <label htmlFor="province">
-                                    Province
+                                <span className="font-weight-bold">Province</span>
                                     <input
                                         id="province"
                                         type="text"
@@ -139,7 +139,7 @@ class OnboardStep3 extends Component {
                         <Row className="mb-2">
                             <Col md="3">
                                 <label htmlFor="postalCode">
-                                    Postal Code
+                                <span className="font-weight-bold">Postal Code</span>
                                     <input
                                         id="postalCode"
                                         type="text"
@@ -155,7 +155,7 @@ class OnboardStep3 extends Component {
                             </Col>
                             <Col md="3">
                                 <label htmlFor="country">
-                                    Country
+                                <span className="font-weight-bold">Country</span>
                                     <input
                                         id="country"
                                         type="text"
@@ -176,14 +176,12 @@ class OnboardStep3 extends Component {
                         <Row>
                             <Col md="3">
                                 <label htmlFor="officePhone">
-                                    Phone number
-                                    <small className="text-muted ml-2">
-                                        1234567890
-                  </small>
+                                <span className="font-weight-bold">Phone number</span>
                                     <input
                                         id="officePhone"
                                         type="tel"
                                         className="form-control"
+                                        aria-describedby="officePhoneHelp"
                                         value={this.state.officePhone || ''}
                                         pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$"
                                         onChange={(e) => {
@@ -192,18 +190,19 @@ class OnboardStep3 extends Component {
                                             });
                                         }}
                                     />
+                                    <small id="officePhoneHelp" className="text-muted">
+                                        1234567890
+                                    </small>
                                 </label>
                             </Col>
                             <Col md="3">
                                 <label htmlFor="mobilePhone">
-                                    Mobile phone number
-                                    <small className="text-muted ml-2">
-                                        1234567890
-                  </small>
+                                <span className="font-weight-bold">Mobile phone number</span>
                                     <input
                                         id="mobilePhone"
                                         type="tel"
                                         className="form-control"
+                                        aria-describedby="mobilePhoneHelp"
                                         value={this.state.mobilePhone || ''}
                                         pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$"
                                         onChange={(e) => {
@@ -212,6 +211,9 @@ class OnboardStep3 extends Component {
                                             });
                                         }}
                                     />
+                                    <small id="mobilePhoneHelp" className="text-muted">
+                                        1234567890
+                                    </small>
                                 </label>
                             </Col>
                         </Row>
