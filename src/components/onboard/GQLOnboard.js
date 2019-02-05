@@ -74,18 +74,23 @@ class OnboardMod extends Component {
             exitRight: 'fadeIn animated',
             exitLeft: 'fadeIn animated',
         };
+        const canSkip = myGcID ? false : true;
         return (
             <Query
                 variables={{ gcID: (String(myGcID)) }}
+                skip={canSkip}
                 query={PROFILE_INFO_QUERY}
             >
                 {({ loading, error, data }) => {
                     if (loading) return 'loading ...';
                     if (error) return `Error!: ${error}`;
-                    const userInfo = data.profiles[0];
+                    const userInfo = (!data) ? [''] : data.profiles[0];
                     return (
                         <div>
-                            <StepWizard
+                            {canSkip ? (
+                                "I can't find your logged in ID :("
+                            ) : (
+                                <StepWizard
                                 transitions={customTransitions}
                                 nav={<OnboardNav />}
                             >
@@ -107,6 +112,7 @@ class OnboardMod extends Component {
                                     forwardID={userInfo.gcID}
                                 />
                             </StepWizard>
+                            )}
                         </div>
                     );
                 }}
