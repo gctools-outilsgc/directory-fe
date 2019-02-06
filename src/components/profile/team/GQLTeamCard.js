@@ -106,11 +106,14 @@ export class GQLTeamCard extends React.Component {
                 {({ loading, error, data }) => {
                     if (loading) return <Loading />;
                     if (error) return `Error!: ${error}`;
-                    const supTest = data.profiles[0].supervisor;
-                    const teamTest = data.profiles[0].org;
+                    const userInfo = (!data) ? '' : data.profiles[0];
+                    const supTest = (!userInfo) ? '' : userInfo.supervisor;
+                    const teamTest = (!userInfo) ? '' : userInfo.org;
                     return (
                         <Card style={style.card}>
-                            <CardBody>
+                        {userInfo ? (
+                            <div>
+<CardBody>
                                 <CardTitle className="profile-card-title">
                                     Teams
                             </CardTitle>
@@ -222,6 +225,13 @@ export class GQLTeamCard extends React.Component {
                                     ''
                                 }
                             </CardFooter>
+                            </div>
+                        ) : (
+                            <CardBody>
+                                Cannot find GCID
+                            </CardBody>
+                        )}
+                            
                         </Card>
                     )
                 }}

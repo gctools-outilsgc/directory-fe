@@ -35,12 +35,12 @@ query profileInfoQuery($gcID: String!) {
 const mapStateToProps = ({ user }) => {
     const props = {};
     if (user) {
-      props.accessToken = user.access_token;
-      props.myGcID = user.profile.sub;
-      props.modifyProfile = user.profile.modify_profile === 'True';
+        props.accessToken = user.access_token;
+        props.myGcID = user.profile.sub;
+        props.modifyProfile = user.profile.modify_profile === 'True';
     }
     return props;
-  };
+};
 
 const style = {
     card: {
@@ -67,25 +67,35 @@ export class GQLProfileCard extends Component {
                 {({ loading, error, data }) => {
                     if (loading) return <Loading />;
                     if (error) return `Error!: ${error}`;
-                    const userInfo = data.profiles[0];
+                    const userInfo = (!data) ? '' : data.profiles[0];
                     return (
                         <Card style={style.card}>
-                            <CardBody>
-                                <CardTitle className="profile-card-title">
-                                    <div>
-                                        Profile
-                                    </div>
-                                </CardTitle>
-                                <ProfileCardDisplay
-                                    user={userInfo}
-                                />
-                            </CardBody>
-                            <CardFooter>
-                                {canEdit ? 
-                                    <EditProfile profile={userInfo} token={accessToken} /> : 
-                                    ''
-                                }
-                            </CardFooter>
+                            {userInfo ? (
+                                <div>
+                                    <CardBody>
+                                        <CardTitle className="profile-card-title">
+                                            <div>
+                                                Profile
+                                </div>
+                                        </CardTitle>
+                                        <ProfileCardDisplay
+                                            user={userInfo}
+                                        />
+                                    </CardBody>
+                                    <CardFooter>
+                                        {canEdit ?
+                                            <EditProfile profile={userInfo} token={accessToken} /> :
+                                            ''
+                                        }
+                                    </CardFooter>
+                                </div>
+                            ) : (
+
+                                    <CardBody>
+                                        Cannot find GCID
+                                </CardBody>
+                                )}
+
                         </Card>
                     )
                 }}
