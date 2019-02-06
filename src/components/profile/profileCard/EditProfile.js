@@ -64,6 +64,7 @@ class EditProfile extends Component {
                             }
                             }
                             onCompleted={() => {
+                                //Do this nicer / hot load maybe?
                                 window.location.reload(false);
                             }}
                         >
@@ -91,8 +92,6 @@ class EditProfile extends Component {
                                                 },
                                             },
                                         });
-                                        //Do this nicer / on result return / hot load maybe?
-                                        //window.location.reload(false); 
                                     }}
                                 >
                                     <Row>

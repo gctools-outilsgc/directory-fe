@@ -1,5 +1,4 @@
 import React from 'react';
-//import PropTypes from 'prop-types';
 import { Input } from 'reactstrap';
 
 import gql from 'graphql-tag';
@@ -28,7 +27,9 @@ class TeamPicker extends React.Component {
       supervisor,
     } = this.props;
     return (
-      <Query
+      <div>
+        {supervisor ? (
+          <Query
         variables={{
           gcID: (supervisor) ? supervisor.gcID : null,
         }}
@@ -60,16 +61,7 @@ class TeamPicker extends React.Component {
           data,
         }) => {
           if (error) return `Error...${error.message}`;
-          /*
-          const lang = capitalize(localizer.lang.split('_', 1)[0]);
 
-          if (!editMode) {
-            if (selectedOrgTier && selectedOrgTier[`name${lang}`]) {
-              return selectedOrgTier[`name${lang}`];
-            }
-            return 'Team has not been identified.';
-          }
-          */
           const OwnerOfOrgTier =
             (data.profiles && data.profiles.length === 1) ?
               data.profiles[0].OwnerOfOrgTier.slice(0) : [];
@@ -113,43 +105,15 @@ class TeamPicker extends React.Component {
           );
         }}
       </Query>
+        ): (
+          <div>
+            Please pick a supervisor
+          </div>
+        )}
+      </div>
+      
     );
   }
 }
 
-/*
-OrgTierChooser.defaultProps = {
-  supervisor: undefined,
-  selectedOrgTier: undefined,
-  editMode: false,
-  onTeamChange: () => {},
-};
-*/
-/*
-OrgTierChooser.propTypes = {
-  /** Supervisor object, to filter org tiers */
-  /*
-  supervisor: PropTypes.shape({
-    gcID: PropTypes.string.isRequired,
-    name: PropTypes.string,
-  }),
-  */
-  /** ID of selected org tier */
-  /*
-  selectedOrgTier: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    nameEn: PropTypes.string,
-    nameFr: PropTypes.string,
-  }),
-  */
-  /** Whether or not the component is in edit mode */
-  /*
-  editMode: PropTypes.bool,
-  */
-  /** Triggered when the team is changed */
-  /*
-  onTeamChange: PropTypes.func,
-  
-};
-*/
 export default TeamPicker;
