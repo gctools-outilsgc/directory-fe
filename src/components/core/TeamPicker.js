@@ -95,7 +95,7 @@ class TeamPicker extends React.Component {
                 type="select"
                 onChange={this.handleTeamChange}
                 disabled={!supervisor || loading}
-                value={this.state.newTeamVal.id}
+                value={(this.state.newTeamVal) ? this.state.newTeamVal.id : ''}
               >
                 {tierOptions.map(x => (
                   <option key={x.value} value={x.value}>{x.text}</option>
