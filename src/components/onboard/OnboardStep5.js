@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 //import PropTypes from 'prop-types';
 
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
+
 import gql from 'graphql-tag';
 import { Query, Mutation } from 'react-apollo';
 
@@ -82,12 +85,12 @@ class OnboardStep5 extends Component {
           return (
             <div>
               <h1 className="h3 border-bottom mb-2 pb-2">
-                Step5T1
+                {__('Step5T1')}
               </h1>
               <Row className="mb-2">
                 <Col>
-                  <p>Step5D1</p>
-                  <p>Step5D2</p>
+                  <p>{__('Step5D1')}</p>
+                  <p>{__('Step5D2')}</p>
                 </Col>
               </Row>
               <Row>
@@ -111,7 +114,7 @@ class OnboardStep5 extends Component {
                         >
                           {modifyProfile => (
                             <div className="onboard-profile">
-                              Supervisor
+                              {__('Supervisor')}
                               <SupervisorPicker 
                               onResultSelect={(s) => {
                                 modifyProfile({
@@ -168,7 +171,7 @@ class OnboardStep5 extends Component {
                         >
                           {modifyProfile => (
                             <div>
-                              Teams
+                              {__('Teams')}
                               <TeamPicker
                                 id="idTest"
                                 editMode
@@ -219,14 +222,14 @@ class OnboardStep5 extends Component {
                     onClick={this.props.previousStep}
                     color="primary"
                   >
-                    Back
+                    {__('Back')}
                   </Button>
                   <Button
                     onClick={this.props.nextStep}
                     color="primary"
                     className="ml-3"
                   >
-                    Next
+                    {__('Next')}
                   </Button>
                 </div>
               </Row>
@@ -254,4 +257,4 @@ OnboardStep5.propTypes = {
   previousStep: PropTypes.func,
 };
 */
-export default OnboardStep5;
+export default LocalizedComponent(OnboardStep5);

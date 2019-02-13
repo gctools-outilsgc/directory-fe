@@ -1,0 +1,56 @@
+msgid ""
+msgstr ""
+"Language : en\n"
+"Plural-Forms : nplurals=2; plural=(n != 1);\n"
+"MIME-Version : 1.0\n"
+"Content-Type : text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding : 8bit\n"
+
+#: src/components/profile/profileCard/EditProfile.js 102:84
+msgid "Full name"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 119:80
+msgid "Work email"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 139:80
+msgid "English job title"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 155:80
+msgid "French job title"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 174:80
+msgid "Address"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 190:80
+msgid "City"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 206:80
+msgid "Province"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 222:80
+msgid "Postal Code"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 238:80
+msgid "Country"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 257:84
+msgid "Office Phone Number"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 278:80
+msgid "Mobile Phone Number"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 307:45
+msgid "Save"
+msgstr ""
+

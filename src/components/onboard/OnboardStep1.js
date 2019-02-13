@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
+
 import { Button, Row } from 'reactstrap';
 /* eslint react/prop-types: 0 */
 /* eslint react/prefer-stateless-function: 0 */
@@ -9,30 +12,30 @@ class OnboardStep1 extends Component {
     return (
       <div>
         <h1 className="h3 mb-2 pb-1">
-          Welcome
+          {__('Welcome')}
         </h1>
         <h2 className="h4 mb-2 pb-1 border-bottom">
-          Step1Sub1
+          {__('Step1Sub1')}
         </h2>
-        <p>welcome body</p>
+        <p>{__('welcome body')}</p>
         <ul>
-          <li>Step1List1</li>
-          <li>Step1List2</li>
-          <li>Step1List3</li>
-          <li>Step1List4</li>
+          <li>{__('Step1List1')}</li>
+          <li>{__('Step1List2')}</li>
+          <li>{__('Step1List3')}</li>
+          <li>{__('Step1List4')}</li>
         </ul>
         <h2 className="h4 mb-2 pb-1 border-bottom">
-          Step1Sub2
+          {__('Step1Sub2')}
         </h2>
-        <p>Step1Sub2Desc</p>
-        <p>Step1Sub2Desc2</p>
+        <p>{__('Step1Sub2Desc')}</p>
+        <p>{__('Step1Sub2Desc2')}</p>
         <Row className="m-1 border-top">
           <div className="ml-auto mt-3">
             <Button
               onClick={this.props.nextStep}
               color="primary"
             >
-              Get Started
+              {__('Get Started')}
             </Button>
           </div>
         </Row>
@@ -41,4 +44,4 @@ class OnboardStep1 extends Component {
   }
 }
 
-export default OnboardStep1;
+export default LocalizedComponent(OnboardStep1);

@@ -1,0 +1,60 @@
+msgid ""
+msgstr ""
+"Language : en\n"
+"Plural-Forms : nplurals=2; plural=(n != 1);\n"
+"MIME-Version : 1.0\n"
+"Content-Type : text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding : 8bit\n"
+
+#: src/components/onboard/OnboardStep3.js 81:29
+msgid "Step3T1"
+msgstr ""
+
+#: src/components/onboard/OnboardStep3.js 83:28
+msgid "Step3D1"
+msgstr ""
+
+#: src/components/onboard/OnboardStep3.js 87:37
+msgid "Step3SubT2"
+msgstr ""
+
+#: src/components/onboard/OnboardStep3.js 94:68
+msgid "Address"
+msgstr ""
+
+#: src/components/onboard/OnboardStep3.js 110:68
+msgid "City"
+msgstr ""
+
+#: src/components/onboard/OnboardStep3.js 126:68
+msgid "Province"
+msgstr ""
+
+#: src/components/onboard/OnboardStep3.js 144:68
+msgid "Postal Code"
+msgstr ""
+
+#: src/components/onboard/OnboardStep3.js 160:68
+msgid "Country"
+msgstr ""
+
+#: src/components/onboard/OnboardStep3.js 181:68
+msgid "Phone number"
+msgstr ""
+
+#: src/components/onboard/OnboardStep3.js 202:68
+msgid "Mobile phone number"
+msgstr ""
+
+#: src/components/onboard/OnboardStep3.js 228:37
+msgid "Back"
+msgstr ""
+
+#: src/components/onboard/OnboardStep3.js 235:37
+msgid "Next"
+msgstr ""
+
+#: src/components/onboard/OnboardStep3.js 176:29
+msgid "Step3T2"
+msgstr ""
+

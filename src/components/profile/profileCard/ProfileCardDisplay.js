@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
 
 import { Row, Col } from 'reactstrap';
 
@@ -23,7 +25,7 @@ class ProfileCardDisplay extends Component {
                     <ul className="list-unstyled mt-3">
                         <li className="mb-2">
                             <div>
-                                <div className="font-weight-bold">Email </div>
+                                <div className="font-weight-bold">{__('Email')}</div>
                                 <span className="list-desc-ph">
                                     {user.email ? user.email : 'No Email'}
                                 </span>
@@ -31,7 +33,7 @@ class ProfileCardDisplay extends Component {
                         </li>
                         <li className="float-left mr-4">
                             <div>
-                                <div className="font-weight-bold">Work</div>
+                                <div className="font-weight-bold">{__('Work')}</div>
                                 <span className="list-desc-ph">
                                     {user.officePhone ? user.officePhone : 'No Offce Phone'}
                                 </span>
@@ -39,7 +41,7 @@ class ProfileCardDisplay extends Component {
                         </li>
                         <li className="float-left mr-4">
                             <div>
-                                <div className="font-weight-bold">Mobile</div>
+                                <div className="font-weight-bold">{__('Mobile')}</div>
                                 <span className="list-desc-ph">
                                     {user.mobilePhone ? user.mobilePhone : 'No Mobile Phone'}
                                 </span>
@@ -47,7 +49,7 @@ class ProfileCardDisplay extends Component {
                         </li>
                         <li className="float-left">
                             <div>
-                                <div className="font-weight-bold">Address</div>
+                                <div className="font-weight-bold">{__('Address')}</div>
                                 <span className="list-desc-ph">
                                     <span className="mr-1">
                                         {userAddress ? user.address.streetAddress : ''}
@@ -74,4 +76,4 @@ class ProfileCardDisplay extends Component {
     }
 }
 
-export default ProfileCardDisplay;
+export default LocalizedComponent(ProfileCardDisplay);

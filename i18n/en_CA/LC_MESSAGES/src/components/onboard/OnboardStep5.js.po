@@ -1,0 +1,46 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-02-13 10:22-0500\n"
+"PO-Revision-Date: 2019-02-13 10:22-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en_CA\n"
+"Language-Team: en_CA <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: 88:17 src/components/onboard/OnboardStep5.js
+msgid "Step5T1"
+msgstr "Your team"
+
+#: 92:22 src/components/onboard/OnboardStep5.js
+msgid "Step5D1"
+msgstr "Teams are created by supervisors to show who is working together and what"
+" they are working on."
+
+#: 93:22 src/components/onboard/OnboardStep5.js
+msgid "Step5D2"
+msgstr "Find your supervisor and request to join a team. You can skip this step "
+"if your supervisor doesn’t have a GCprofile or a team yet."
+
+#: 117:31 src/components/onboard/OnboardStep5.js
+msgid "Supervisor"
+msgstr ""
+
+#: 174:31 src/components/onboard/OnboardStep5.js
+msgid "Teams"
+msgstr ""
+
+#: 225:21 src/components/onboard/OnboardStep5.js
+msgid "Back"
+msgstr ""
+
+#: 232:21 src/components/onboard/OnboardStep5.js
+msgid "Next"
+msgstr "Save"
+

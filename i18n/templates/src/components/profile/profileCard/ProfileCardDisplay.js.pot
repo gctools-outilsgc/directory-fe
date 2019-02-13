@@ -1,0 +1,24 @@
+msgid ""
+msgstr ""
+"Language : en\n"
+"Plural-Forms : nplurals=2; plural=(n != 1);\n"
+"MIME-Version : 1.0\n"
+"Content-Type : text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding : 8bit\n"
+
+#: src/components/profile/profileCard/ProfileCardDisplay.js 28:67
+msgid "Email"
+msgstr ""
+
+#: src/components/profile/profileCard/ProfileCardDisplay.js 36:67
+msgid "Work"
+msgstr ""
+
+#: src/components/profile/profileCard/ProfileCardDisplay.js 44:67
+msgid "Mobile"
+msgstr ""
+
+#: src/components/profile/profileCard/ProfileCardDisplay.js 52:67
+msgid "Address"
+msgstr ""
+
