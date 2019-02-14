@@ -1,11 +1,12 @@
 import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
 import {
   Container,
   Button,
   Navbar,
   NavbarBrand,
   Nav,
-  NavItem,
+  NavItem
 } from 'reactstrap';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
@@ -15,7 +16,7 @@ import Login from '@gctools-components/gc-login';
 import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
 
- import { loginAction, logoutAction, clearErrorAction } from '../store';
+import { loginAction, logoutAction, clearErrorAction } from '../store';
 
 import oidcConfig from '../oidcConfig.dev';
 
@@ -34,7 +35,7 @@ export class App extends Component {
   }
   constructor(props) {
     super(props);
-    this.state = { name: false, id: false };
+    this.state = { name: false };
   }
   render() {
     const {
@@ -43,12 +44,12 @@ export class App extends Component {
     } = this.props;
 
     const doLogin = (user) => {
-      this.setState({ name: user.profile.name, id: user.profile.sub });
+      this.setState({ name: user.profile.name });
       onLogin(user);
     };
 
     const doLogout = () => {
-      this.setState({ name: false, id: false });
+      this.setState({ name: false });
       onLogout();
     };
     return (
@@ -57,7 +58,7 @@ export class App extends Component {
           <Navbar color="white" className="shadow-sm">
             <div className="h-100 directory-fip">
               <img src={enFip} alt="Government of Canada" />
-              </div>
+            </div>
             <NavbarBrand href="/" className="directory-brand">
               <span>Directory</span>
             </NavbarBrand>
@@ -84,7 +85,7 @@ export class App extends Component {
                         onClick(e);
                       }}
                     >
-                      {this.state.name || "Login"}
+                      {this.state.name || 'Login'}
                     </Button>
                   )}
                 </Login>
@@ -115,6 +116,18 @@ export class App extends Component {
   }
 }
 
+App.defaultProps = {
+  onLogin: () => {},
+  onLogout: () => {},
+};
+
+App.propTypes = {
+  /** Login event callback  */
+  onLogin: PropTypes.func,
+  /** Logout event callback */
+  onLogout: PropTypes.func,
+};
+
 const mapStToProps = ({ showError }) => ({ showError: showError || [] });
 
 const mapDispToProps = dispatch => ({
@@ -123,6 +136,4 @@ const mapDispToProps = dispatch => ({
   onErrorClose: () => dispatch(clearErrorAction()),
 });
 
-export default connect(mapStToProps, mapDispToProps)(
-  LocalizedComponent(App)
-);
+export default connect(mapStToProps, mapDispToProps)(LocalizedComponent(App));

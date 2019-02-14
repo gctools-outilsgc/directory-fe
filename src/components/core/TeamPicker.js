@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import { Input } from 'reactstrap';
 
 import gql from 'graphql-tag';
@@ -30,11 +32,11 @@ class TeamPicker extends React.Component {
       <div>
         {supervisor ? (
           <Query
-        variables={{
+            variables={{
           gcID: (supervisor) ? supervisor.gcID : null,
         }}
-        skip={!supervisor}
-        query={gql`
+            skip={!supervisor}
+            query={gql`
           query organizationQuery($gcID: String!) {
             profiles(gcID: $gcID) {
               org {
@@ -54,8 +56,8 @@ class TeamPicker extends React.Component {
               }
             }
           }`}
-      >
-        {({
+          >
+            {({
           loading,
           error,
           data,
@@ -68,10 +70,8 @@ class TeamPicker extends React.Component {
 
           if (data.profiles && data.profiles.length === 1
             && data.profiles[0].org) {
-              OwnerOfOrgTier = [].concat(
-                [data.profiles[0].org],
-                OwnerOfOrgTier
-              );
+              OwnerOfOrgTier = []
+                .concat([data.profiles[0].org], OwnerOfOrgTier);
           }
 
           const tierOptions = [];
@@ -85,7 +85,7 @@ class TeamPicker extends React.Component {
             .forEach(tier =>
               tierOptions.push({
                 key: `orgtier-${tier.id}`,
-                text: tier.nameEn, //Localize later
+                text: tier.nameEn, // Localize later
                 value: tier.id,
                 data: tier,
               }));
@@ -105,15 +105,19 @@ class TeamPicker extends React.Component {
             </div>
           );
         }}
-      </Query>
-        ): (
-          <div>
-            Please pick a supervisor
-          </div>
+          </Query>
+        ) : (
+          <div>Please pick a supervisor</div>
         )}
       </div>
     );
   }
 }
+
+TeamPicker.propTypes = {
+  selectedOrgTier: PropTypes.number.isRequired,
+  onTeamChange: PropTypes.func.isRequired,
+  supervisor: PropTypes.shape({}).isRequired,
+};
 
 export default TeamPicker;

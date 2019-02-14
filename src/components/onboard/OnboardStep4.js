@@ -6,7 +6,7 @@ import { Button, Row } from 'reactstrap';
 /* eslint react/prop-types: 0 */
 /* eslint react/prefer-stateless-function: 0 */
 
-class OnboardStep4 extends Component {
+export class OnboardStep4 extends Component {
   render() {
     return (
       <div>

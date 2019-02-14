@@ -1,15 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import OnboardMod from '../components/onboard/GQLOnboard';
+import ConnectedOnboardMod from '../components/onboard/GQLOnboard';
 
-class Onboard extends Component {
-    render() {
-        return (
-            <div className="onboard-container m-auto">
-                <OnboardMod />
-            </div>
-        );
-    }
-}
-
-export default Onboard;
+export default () => (
+  <div className="onboard-container m-auto">
+    <ConnectedOnboardMod />
+  </div>
+);

@@ -1,5 +1,4 @@
 import React from 'react';
-//import PropTypes from 'prop-types';
 
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
@@ -14,14 +13,14 @@ class ProfileSearch extends React.Component {
       skip: true,
     };
 
-    this.handleChange = this.handleChange.bind(this);;
+    this.handleChange = this.handleChange.bind(this);
     this.searchDelay = false;
   }
 
   handleChange(event) {
     this.setState({
       value: event.target.value,
-      skip: true
+      skip: true,
     });
     this.searchDelay = setTimeout(() => {
       this.setState({ skip: false });
@@ -46,30 +45,28 @@ class ProfileSearch extends React.Component {
         skip={this.state.skip}
         variables={{ name: this.state.value }}
       >
-        {({
-          loading,
-          data,
-        }) => {
+        {({ data }) => {
           const checkResult = (!data) ? [''] : data;
-          const results = (checkResult.profiles) ? checkResult.profiles.map((a) =>
-            <li key={a.gcID}>
-              <a href={"/p/" + a.gcID}>
-                {a.name}
-              </a>
-
-            </li>
-          ) : [];
-          const styleClasses = (!data) ?  'search-results-none' : "list-unstyled search-results";
+          const results = (checkResult.profiles)
+            ? checkResult.profiles.map(a => (
+              <li key={a.gcID}>
+                <a href={`/p/${a.gcID}`}>
+                  {a.name}
+                </a>
+              </li>
+            )) : [];
+          const styleClasses = (!data)
+            ? 'search-results-none' : 'list-unstyled search-results';
           return (
             <div className="search-form search-form-round">
               <label>
                 <span className="sr-only">Search</span>
-                  <Input
-                    type="text"
-                    onChange={this.handleChange}
-                    value={this.state.value}
-                    placeholder="Search Profiles"
-                  />
+                <Input
+                  type="text"
+                  onChange={this.handleChange}
+                  value={this.state.value}
+                  placeholder="Search Profiles"
+                />
               </label>
               <ul className={styleClasses}>{results}</ul>
             </div>

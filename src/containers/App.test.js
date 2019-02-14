@@ -1,8 +1,9 @@
 import React from 'react';
-import { render, fireEvent } from 'react-testing-library'
-import { App } from './App';
 
+import { render, fireEvent } from 'react-testing-library';
 import { MockedProvider } from 'react-apollo/test-utils';
+
+import { App } from './App';
 
 
 describe('App', () => {
@@ -10,11 +11,11 @@ describe('App', () => {
     localizer.lang = 'en_CA';
   });
   it('renders without crashing', () => {
-    const { queryByText } = render(
+    const { queryByText } = render((
       <MockedProvider>
         <App />
       </MockedProvider>
-    );
+    ));
     const welcomeText = queryByText('Directory');
     expect(welcomeText.innerHTML).toBe('Directory');
   });

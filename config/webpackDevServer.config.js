@@ -1,8 +1,9 @@
-'use strict';
-
-const errorOverlayMiddleware = require('react-dev-utils/errorOverlayMiddleware');
-const evalSourceMapMiddleware = require('react-dev-utils/evalSourceMapMiddleware');
-const noopServiceWorkerMiddleware = require('react-dev-utils/noopServiceWorkerMiddleware');
+const errorOverlayMiddleware
+  = require('react-dev-utils/errorOverlayMiddleware');
+const evalSourceMapMiddleware
+  = require('react-dev-utils/evalSourceMapMiddleware');
+const noopServiceWorkerMiddleware
+  = require('react-dev-utils/noopServiceWorkerMiddleware');
 const ignoredFiles = require('react-dev-utils/ignoredFiles');
 const paths = require('./paths');
 const fs = require('fs');
@@ -10,18 +11,19 @@ const fs = require('fs');
 const protocol = process.env.HTTPS === 'true' ? 'https' : 'http';
 const host = process.env.HOST || '0.0.0.0';
 
-module.exports = function(proxy, allowedHost) {
+module.exports = function webpackConfig(proxy, allowedHost) {
   return {
     // WebpackDevServer 2.4.3 introduced a security fix that prevents remote
     // websites from potentially accessing local content through DNS rebinding:
     // https://github.com/webpack/webpack-dev-server/issues/887
-    // https://medium.com/webpack/webpack-dev-server-middleware-security-issues-1489d950874a
+    // https://medium.com/webpack/webpack-dev-server-middleware-security-issues
+    // -1489d950874a
     // However, it made several existing use cases such as development in cloud
     // environment or subdomains in development significantly more complicated:
     // https://github.com/facebook/create-react-app/issues/2271
     // https://github.com/facebook/create-react-app/issues/2233
     // While we're investigating better solutions, for now we will take a
-    // compromise. Since our WDS configuration only serves files in the `public`
+    // compromise. Since our WDS configuration only serves files in the `public
     // folder we won't consider accessing them a vulnerability. However, if you
     // use the `proxy` feature, it gets more dangerous because it can expose
     // remote code execution vulnerabilities in backends like Django and Rails.
@@ -36,8 +38,8 @@ module.exports = function(proxy, allowedHost) {
     // It will still show compile warnings and errors with this setting.
     clientLogLevel: 'none',
     // By default WebpackDevServer serves physical files from current directory
-    // in addition to all the virtual build products that it serves from memory.
-    // This is confusing because those files won’t automatically be available in
+    // in addition to all the virtual build products that it serves from memory
+    // This is confusing because those files won’t automatically be available i
     // production build folder unless we copy them. However, copying the whole
     // project directory is dangerous because we may expose sensitive files.
     // Instead, we establish a convention that only files in `public` directory
@@ -47,7 +49,7 @@ module.exports = function(proxy, allowedHost) {
     // In JavaScript code, you can access it with `process.env.PUBLIC_URL`.
     // Note that we only recommend to use `public` folder as an escape hatch
     // for files like `favicon.ico`, `manifest.json`, and libraries that are
-    // for some reason broken when imported through Webpack. If you just want to
+    // for some reason broken when imported through Webpack. If you just want t
     // use an image, put it in `src` and `import` it from JavaScript instead.
     contentBase: paths.appPublic,
     // By default files from `contentBase` will not trigger a page reload.
@@ -62,7 +64,8 @@ module.exports = function(proxy, allowedHost) {
     // as we specified in the config. In development, we always serve from /.
     publicPath: '/',
     // WebpackDevServer is noisy by default so we emit custom message instead
-    // by listening to the compiler events with `compiler.hooks[...].tap` calls above.
+    // by listening to the compiler events with `compiler.hooks[...].tap` calls
+    // above.
     quiet: true,
     // Reportedly, this avoids CPU overload on some systems.
     // https://github.com/facebook/create-react-app/issues/293
@@ -97,7 +100,8 @@ module.exports = function(proxy, allowedHost) {
       // previous service worker registered for the same host:port combination.
       // We do this in development to avoid hitting the production cache if
       // it used the same host and port.
-      // https://github.com/facebook/create-react-app/issues/2272#issuecomment-302832432
+      // https://github.com/facebook/create-react-app/issues/2272#issuecomment
+      // -302832432
       app.use(noopServiceWorkerMiddleware());
     },
   };
