@@ -10,6 +10,7 @@
     "@gctools-components/react-i18n-translation-webpack": "1.1.4",
     "@storybook/addon-actions": "4.1.11",
     "@storybook/addon-links": "4.1.11",
+    "@storybook/addon-storyshots": "4.1.11",
     "@storybook/addons": "4.1.11",
     "@storybook/react": "4.1.11",
     "@svgr/webpack": "4.1.0",
@@ -78,6 +79,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
+    "test2": "jest --rootDir . --watchPathIgnorePatterns jest.json --testURL http://localhost --config ./node_modules/@gctools-components/jest-config/index.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "eslint ."
@@ -104,6 +106,14 @@
     "not op_mini all"
   ],
   "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "text",
+      "json",
+      "json-summary",
+      "lcov"
+    ],
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
       "!src/**/*.d.ts"
@@ -111,11 +121,13 @@
     "resolver": "jest-pnp-resolver",
     "setupFiles": [
       "react-app-polyfill/jsdom",
-      "<rootDir>/config/jest/i18n.js"
+      "<rootDir>/config/jest/i18n.js",
+      "<rootDir>/config/jest/register-context.js"
     ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
-      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}"
+      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}",
+      "<rootDir>/.storybook/Storyshots.test.js"
     ],
     "testEnvironment": "jsdom",
     "testURL": "http://localhost",
@@ -148,6 +160,15 @@
   "babel": {
     "presets": [
       "react-app"
-    ]
+    ],
+    "env": {
+      "test": {
+        "plugins": ["require-context-hook"]
+      }
+    }
+  },
+  "devDependencies": {
+    "babel-plugin-require-context-hook": "^1.0.0",
+    "react-test-renderer": "^16.8.2"
   }
 }

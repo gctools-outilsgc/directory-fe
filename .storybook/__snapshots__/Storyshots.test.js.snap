@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Loading With default options 1`] = `
+<div
+  className="card"
+  style={
+    Object {
+      "border": "none",
+      "boxShadow": "none",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    className="card-body"
+  >
+    <div
+      className="card-title"
+    >
+      <div
+        className="loading-state fake-head mb-3"
+      />
+    </div>
+    <span
+      className="sr-only"
+    >
+      Loading ...
+    </span>
+    <div
+      className="row"
+    >
+      <div
+        className="col"
+      >
+        <div
+          className="loading-state mt-3"
+          style={
+            Object {
+              "height": "18px",
+              "marginBottom": "3px",
+              "width": "65px",
+            }
+          }
+        />
+        <div
+          className="loading-state"
+          style={
+            Object {
+              "height": "16px",
+              "width": "150px",
+            }
+          }
+        />
+      </div>
+      <div
+        className="col"
+      >
+        <div
+          className="loading-state mt-3"
+          style={
+            Object {
+              "height": "18px",
+              "marginBottom": "3px",
+              "width": "65px",
+            }
+          }
+        />
+        <div
+          className="loading-state"
+          style={
+            Object {
+              "height": "16px",
+              "width": "150px",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
