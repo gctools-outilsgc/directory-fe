@@ -52,7 +52,7 @@ query organizationTierQuery($gcID: String!) {
 
 const modifyProfileMutation = gql`
 mutation changeTeam($gcID: String!, $profileInfo: ModifyProfileInput!) {
-  modifyProfile(gcId: $gcID, profileInfo: $profileInfo) {
+  modifyProfile(gcID: $gcID, profileInfo: $profileInfo) {
     gcID
   }
 }
@@ -123,10 +123,10 @@ export class GQLTeamCard extends React.Component {
                                             Supervisor
                                         </div>
                                         <div>
-                                            {supTest ? supTest.name : 'None'}  
+                                            {supTest ? supTest.name : 'None'}
                                         </div>
                                         <small className="text-muted">
-                                            {supTest ? supTest.titleEn : ''} 
+                                            {supTest ? supTest.titleEn : ''}
                                         </small>
                                     </Col>
                                     <Col>
@@ -169,7 +169,7 @@ export class GQLTeamCard extends React.Component {
                                                                             gcID: String(id),
                                                                             profileInfo: {
                                                                                 supervisor: {
-                                                                                    gcId: s,
+                                                                                    gcID: s,
                                                                                 },
                                                                             },
                                                                         },
@@ -231,7 +231,7 @@ export class GQLTeamCard extends React.Component {
                                 Cannot find GCID
                             </CardBody>
                         )}
-                            
+
                         </Card>
                     )
                 }}

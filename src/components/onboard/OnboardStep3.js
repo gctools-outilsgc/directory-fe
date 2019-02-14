@@ -8,7 +8,7 @@ import { Button, Form, Row, Col } from 'reactstrap';
 
 const MODIFY_PROFILE_MUTATION = gql`
 mutation modifyPr($gcID: String!, $profileInfo: ModifyProfileInput!) {
-  modifyProfile(gcId: $gcID, profileInfo: $profileInfo) {
+  modifyProfile(gcID: $gcID, profileInfo: $profileInfo) {
     gcID
   }
 }

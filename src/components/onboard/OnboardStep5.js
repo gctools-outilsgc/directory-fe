@@ -34,7 +34,7 @@ query orgTeamQuery($gcID: String!) {
 
 const modifyProfileMutation = gql`
 mutation modifyPr($gcID: String!, $profileInfo: ModifyProfileInput!) {
-  modifyProfile(gcId: $gcID, profileInfo: $profileInfo) {
+  modifyProfile(gcID: $gcID, profileInfo: $profileInfo) {
     gcID
   }
 }
@@ -112,14 +112,14 @@ class OnboardStep5 extends Component {
                           {modifyProfile => (
                             <div className="onboard-profile">
                               Supervisor
-                              <SupervisorPicker 
+                              <SupervisorPicker
                               onResultSelect={(s) => {
                                 modifyProfile({
                                   variables: {
                                     gcID: String(userObject.gcID),
                                     profileInfo: {
                                       supervisor: {
-                                        gcId: s,
+                                        gcID: s,
                                       },
                                     },
                                   },
