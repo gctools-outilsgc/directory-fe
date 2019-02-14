@@ -7,13 +7,13 @@ import { Query } from 'react-apollo';
 import { connect } from 'react-redux';
 
 import StepWizard from 'react-step-wizard';
-import OnboardNav from './OnboardNav';
-import OnboardStep1 from './OnboardStep1';
-import OnboardStep2 from './OnboardStep2';
-import OnboardStep3 from './OnboardStep3';
-import OnboardStep4 from './OnboardStep4';
-import OnboardStep5 from './OnboardStep5';
-import OnboardStep6 from './OnboardStep6';
+import LocalizedOnboardNav from './OnboardNav';
+import LocalizedOnboardStep1 from './OnboardStep1';
+import LocalizedOnboardStep2 from './OnboardStep2';
+import LocalizedOnboardStep3 from './OnboardStep3';
+import LocalizedOnboardStep4 from './OnboardStep4';
+import LocalizedOnboardStep5 from './OnboardStep5';
+import LocalizedOnboardStep6 from './OnboardStep6';
 
 const PROFILE_INFO_QUERY = gql`
 query profileInfoQuery($gcID: String!) {
@@ -94,23 +94,23 @@ export const OnboardMod = (props) => {
             ) : (
               <StepWizard
                 transitions={customTransitions}
-                nav={<OnboardNav />}
+                nav={<LocalizedOnboardNav />}
               >
-                <OnboardStep1 />
-                <OnboardStep2
+                <LocalizedOnboardStep1 />
+                <LocalizedOnboardStep2
                   userObject={userInfo}
                   token={accessToken}
                 />
-                <OnboardStep3
+                <LocalizedOnboardStep3
                   userObject={userInfo}
                   token={accessToken}
                 />
-                <OnboardStep4 />
-                <OnboardStep5
+                <LocalizedOnboardStep4 />
+                <LocalizedOnboardStep5
                   userObject={userInfo}
                   token={accessToken}
                 />
-                <OnboardStep6
+                <LocalizedOnboardStep6
                   forwardID={userInfo.gcID}
                 />
               </StepWizard>

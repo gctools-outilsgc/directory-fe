@@ -186,5 +186,4 @@ OnboardStep2.propTypes = {
   token: PropTypes.string.isRequired,
   nextStep: PropTypes.func,
 };
-
 export default LocalizedComponent(OnboardStep2);
