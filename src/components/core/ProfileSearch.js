@@ -1,5 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
@@ -46,19 +45,18 @@ class ProfileSearch extends React.Component {
         skip={this.state.skip}
         variables={{ name: this.state.value }}
       >
-        {({
-          loading,
-          data,
-        }) => {
+        {({ data }) => {
           const checkResult = (!data) ? [''] : data;
-          const results = (checkResult.profiles) ? checkResult.profiles.map(a =>
-            (<li key={a.gcID}>
-              <a href={`/p/${a.gcID}`}>
-                {a.name}
-              </a>
-
-             </li>)) : [];
-          const styleClasses = (!data) ? 'search-results-none' : 'list-unstyled search-results';
+          const results = (checkResult.profiles)
+            ? checkResult.profiles.map(a => (
+              <li key={a.gcID}>
+                <a href={`/p/${a.gcID}`}>
+                  {a.name}
+                </a>
+              </li>
+            )) : [];
+          const styleClasses = (!data)
+            ? 'search-results-none' : 'list-unstyled search-results';
           return (
             <div className="search-form search-form-round">
               <label>

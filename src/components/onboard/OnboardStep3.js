@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
 
@@ -46,7 +46,7 @@ class OnboardStep3 extends Component {
         context={{
                     headers: {
                         Authorization:
-                            `Bearer ${token}`,
+                          `Bearer ${token}`,
                     },
                 }
                 }
@@ -54,24 +54,24 @@ class OnboardStep3 extends Component {
         {modifyProfile => (
           <Form
             onSubmit={(e) => {
-                            e.preventDefault();
-                            modifyProfile({
-                                variables: {
-                                    gcID: (String(userObject.gcID)),
-                                    profileInfo: {
-                                        officePhone: this.state.officePhone,
-                                        mobilePhone: this.state.mobilePhone,
-                                        address: {
-                                            streetAddress: this.state.streetAddress,
-                                            city: this.state.city,
-                                            province: this.state.province,
-                                            postalCode: this.state.postalCode,
-                                            country: this.state.country,
-                                        },
-                                    },
-                                },
-                            });
-                            this.props.nextStep();
+                          e.preventDefault();
+                          modifyProfile({
+                              variables: {
+                                  gcID: (String(userObject.gcID)),
+                                  profileInfo: {
+                  officePhone: this.state.officePhone,
+                  mobilePhone: this.state.mobilePhone,
+                  address: {
+                      streetAddress: this.state.streetAddress,
+                      city: this.state.city,
+                      province: this.state.province,
+                      postalCode: this.state.postalCode,
+                      country: this.state.country,
+                  },
+                                  },
+                              },
+                          });
+                          this.props.nextStep();
                         }
 
                         }
@@ -98,10 +98,10 @@ class OnboardStep3 extends Component {
                     className="form-control"
                     value={this.state.streetAddress || ''}
                     onChange={(e) => {
-                                            this.setState({
-                                                streetAddress: e.target.value,
-                                            });
-                                        }}
+                      this.setState({
+                        streetAddress: e.target.value,
+                      });
+                    }}
                   />
                 </label>
               </Col>
@@ -114,10 +114,10 @@ class OnboardStep3 extends Component {
                     className="form-control"
                     value={this.state.city || ''}
                     onChange={(e) => {
-                                            this.setState({
-                                                city: e.target.value,
-                                            });
-                                        }}
+                      this.setState({
+                        city: e.target.value,
+                      });
+                    }}
                   />
                 </label>
               </Col>
@@ -130,10 +130,10 @@ class OnboardStep3 extends Component {
                     className="form-control"
                     value={this.state.province || ''}
                     onChange={(e) => {
-                                            this.setState({
-                                                province: e.target.value,
-                                            });
-                                        }}
+                      this.setState({
+                        province: e.target.value,
+                      });
+                    }}
                   />
                 </label>
               </Col>
@@ -148,10 +148,10 @@ class OnboardStep3 extends Component {
                     className="form-control"
                     value={this.state.postalCode || ''}
                     onChange={(e) => {
-                                            this.setState({
-                                                postalCode: e.target.value,
-                                            });
-                                        }}
+                      this.setState({
+                        postalCode: e.target.value,
+                      });
+                    }}
                   />
                 </label>
               </Col>
@@ -164,10 +164,10 @@ class OnboardStep3 extends Component {
                     className="form-control"
                     value={this.state.country || ''}
                     onChange={(e) => {
-                                            this.setState({
-                                                country: e.target.value,
-                                            });
-                                        }}
+                      this.setState({
+                        country: e.target.value,
+                      });
+                    }}
                   />
                 </label>
               </Col>
@@ -178,7 +178,9 @@ class OnboardStep3 extends Component {
             <Row>
               <Col md="3">
                 <label htmlFor="officePhone">
-                  <span className="font-weight-bold">{__('Phone number')}</span>
+                  <span className="font-weight-bold">
+                    {__('Phone number')}
+                  </span>
                   <input
                     id="officePhone"
                     type="tel"
@@ -187,19 +189,21 @@ class OnboardStep3 extends Component {
                     value={this.state.officePhone || ''}
                     pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$"
                     onChange={(e) => {
-                                            this.setState({
-                                                officePhone: e.target.value,
-                                            });
-                                        }}
+                      this.setState({
+                        officePhone: e.target.value,
+                      });
+                    }}
                   />
                   <small id="officePhoneHelp" className="text-muted">
-                                        1234567890
+                  1234567890
                   </small>
                 </label>
               </Col>
               <Col md="3">
                 <label htmlFor="mobilePhone">
-                  <span className="font-weight-bold">{__('Mobile phone number')}</span>
+                  <span className="font-weight-bold">
+                    {__('Mobile phone number')}
+                  </span>
                   <input
                     id="mobilePhone"
                     type="tel"
@@ -208,13 +212,13 @@ class OnboardStep3 extends Component {
                     value={this.state.mobilePhone || ''}
                     pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$"
                     onChange={(e) => {
-                                            this.setState({
-                                                mobilePhone: e.target.value,
-                                            });
-                                        }}
+                      this.setState({
+                        mobilePhone: e.target.value,
+                      });
+                      }}
                   />
                   <small id="mobilePhoneHelp" className="text-muted">
-                                        1234567890
+                  1234567890
                   </small>
                 </label>
               </Col>
@@ -243,7 +247,7 @@ class OnboardStep3 extends Component {
     );
   }
 }
-/*
+
 OnboardStep3.defaultProps = {
   userObject: { address: {} },
   nextStep: undefined,
@@ -268,5 +272,5 @@ OnboardStep3.propTypes = {
   nextStep: PropTypes.func,
   previousStep: PropTypes.func,
 };
-*/
+
 export default LocalizedComponent(OnboardStep3);

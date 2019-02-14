@@ -42,17 +42,21 @@ afterEach(cleanup);
 
 describe('GQLProfileCard', () => {
   it('renders GQLProfileCard loading state without crashing', () => {
-    const { queryByText } = render(<MockedProvider mocks={[]}>
-      <GQLProfileCard />
-    </MockedProvider>);
+    const { queryByText } = render((
+      <MockedProvider mocks={[]}>
+        <GQLProfileCard />
+      </MockedProvider>
+    ));
     const loadingText = queryByText('Loading ...');
     expect(loadingText.innerHTML).toBe('Loading ...');
   });
 
   it('should render a profile card with data', async () => {
-    const { queryByText } = render(<MockedProvider mocks={mock} addTypename={false}>
-      <GQLProfileCard id="1" />
-    </MockedProvider>);
+    const { queryByText } = render((
+      <MockedProvider mocks={mock} addTypename={false}>
+        <GQLProfileCard id="1" />
+      </MockedProvider>
+    ));
     await waitForElement(() => queryByText('test@test.test'));
   });
 });

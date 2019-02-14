@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
@@ -7,6 +7,9 @@ import { Query } from 'react-apollo';
 import { Input, Button } from 'reactstrap';
 
 class SupervisorPicker extends React.Component {
+  static propTypes = {
+    onResultSelect: PropTypes.func.isRequired,
+  }
   constructor(props) {
     super(props);
     this.state = {
@@ -54,19 +57,18 @@ class SupervisorPicker extends React.Component {
         skip={this.state.skip}
         variables={{ name: this.state.value }}
       >
-        {({
-          loading,
-          data,
-        }) => {
+        {({ data }) => {
           const checkResult = (!data) ? [''] : data;
-          const results = (checkResult.profiles) ? checkResult.profiles.map(a =>
-            (<li key={a.gcID}>
-              <Button onClick={() => this.handleResultClick(a.gcID)}>
-                {a.name}
-              </Button>
-
-             </li>)) : [];
-          const styleClasses = (!data) ? 'search-results-none' : 'list-unstyled search-results';
+          const results = (checkResult.profiles) ?
+            checkResult.profiles.map(a => (
+              <li key={a.gcID}>
+                <Button onClick={() => this.handleResultClick(a.gcID)}>
+                  {a.name}
+                </Button>
+              </li>
+              )) : [];
+          const styleClasses = (!data) ?
+            'search-results-none' : 'list-unstyled search-results';
           return (
             <div>
               <label>

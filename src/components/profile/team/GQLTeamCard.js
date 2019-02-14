@@ -92,7 +92,7 @@ export class GQLTeamCard extends React.Component {
     id: PropTypes.number.isRequired,
     accessToken: PropTypes.string.isRequired,
     myGcID: PropTypes.number.isRequired,
-    modifyProfile: PropTypes.func.isRequired,
+    modifyProfile: PropTypes.bool.isRequired,
   }
   constructor(props) {
     super(props);
@@ -113,9 +113,9 @@ export class GQLTeamCard extends React.Component {
       id,
       accessToken,
       myGcID,
-      modifyProfile,
+      modifyProfile: canModify,
     } = this.props;
-    const canEdit = (accessToken !== '') && modifyProfile && (id === myGcID);
+    const canEdit = (accessToken !== '') && canModify && (id === myGcID);
     return (
       <Query
         query={TEAM_INFO_QUERY}
@@ -183,23 +183,25 @@ export class GQLTeamCard extends React.Component {
                                 },
                               }}
                             >
-                              <div>
-                                {supTest ? supTest.name : 'None'}
-                                <SupervisorPicker
-                                  onResultSelect={(s) => {
-                                    modifyProfile({
-                                        variables: {
-                                            gcID: String(id),
-                                            profileInfo: {
-                                                supervisor: {
-                                                    gcId: s,
-                                                },
-                                            },
-                                        },
-                                    });
-                                }}
-                                />
-                              </div>
+                              {modifyProfile => (
+                                <div>
+                                  {supTest ? supTest.name : 'None'}
+                                  <SupervisorPicker
+                                    onResultSelect={(s) => {
+                                      modifyProfile({
+                                          variables: {
+                                              gcID: String(id),
+                                              profileInfo: {
+                                                  supervisor: {
+                                                      gcId: s,
+                                                  },
+                                              },
+                                          },
+                                      });
+                                  }}
+                                  />
+                                </div>
+                              )}
                             </Mutation>
                             <br />
                             <Mutation
@@ -214,25 +216,27 @@ export class GQLTeamCard extends React.Component {
                                 },
                               }}
                             >
-                              <TeamPicker
-                                id="idTest"
-                                editMode
-                                selectedOrgTier={teamTest}
-                                supervisor={supTest}
-                                gcID={id}
-                                onTeamChange={(t) => {
-                                  modifyProfile({
-                                    variables: {
-                                      gcID: String(id),
-                                      profileInfo: {
-                                        org: {
-                                          orgTierId: t,
+                              {modifyProfile => (
+                                <TeamPicker
+                                  id="idTest"
+                                  editMode
+                                  selectedOrgTier={teamTest}
+                                  supervisor={supTest}
+                                  gcID={id}
+                                  onTeamChange={(t) => {
+                                    modifyProfile({
+                                      variables: {
+                                        gcID: String(id),
+                                        profileInfo: {
+                                          org: {
+                                            orgTierId: t,
+                                          },
                                         },
                                       },
-                                    },
-                                  });
-                                }}
-                              />
+                                    });
+                                  }}
+                                />
+                              )}
                             </Mutation>
                             <Button color="primary" onClick={this.toggle}>
                               Close this

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
@@ -42,34 +42,33 @@ class OnboardStep2 extends Component {
       <Mutation
         mutation={MODIFY_PROFILE_MUTATION}
         context={{
-                    headers: {
-                        Authorization:
-                            `Bearer ${token}`,
-                    },
-                }
-                }
+          headers: {
+            Authorization:
+              `Bearer ${token}`,
+          },
+        }}
       >
         {modifyProfile => (
           <div className="basic-form-holder">
             <h1 className="sr-only">
-                            Hidden Heading?
+                          Hidden Heading?
             </h1>
             <Form
               onSubmit={(e) => {
-                                e.preventDefault();
-                                modifyProfile({
-                                    variables: {
-                                        gcID: (String(userObject.gcID)),
-                                        profileInfo: {
-                                            name: this.state.name,
-                                            email: this.state.email,
-                                            titleEn: this.state.titleEn,
-                                            titleFr: this.state.titleFr,
-                                        },
-                                    },
-                                });
-                                this.props.nextStep();
-                            }}
+                e.preventDefault();
+                modifyProfile({
+                  variables: {
+                    gcID: (String(userObject.gcID)),
+                    profileInfo: {
+                      name: this.state.name,
+                      email: this.state.email,
+                      titleEn: this.state.titleEn,
+                      titleFr: this.state.titleFr,
+                    },
+                  },
+                });
+                this.props.nextStep();
+            }}
             >
               <Row className="pb-2 mb-3 mt-3">
                 <Col sm="12">
@@ -88,16 +87,18 @@ class OnboardStep2 extends Component {
                       className="form-control"
                       value={this.state.name || ''}
                       onChange={(e) => {
-                                                this.setState({
-                                                    name: e.target.value,
-                                                });
-                                            }}
+                        this.setState({
+                          name: e.target.value,
+                        });
+                      }}
                     />
                   </label>
                 </Col>
                 <Col md="6">
                   <label htmlFor="emailTest">
-                    <span className="font-weight-bold">{__('Work email')}</span>
+                    <span className="font-weight-bold">
+                      {__('Work email')}
+                    </span>
                     <input
                       id="emailTest"
                       type="email"
@@ -105,10 +106,10 @@ class OnboardStep2 extends Component {
                       className="form-control"
                       value={this.state.email || ''}
                       onChange={(e) => {
-                                                this.setState({
-                                                    email: e.target.value,
-                                                });
-                                            }}
+                        this.setState({
+                          email: e.target.value,
+                        });
+                      }}
                     />
                   </label>
                 </Col>
@@ -116,33 +117,37 @@ class OnboardStep2 extends Component {
               <Row>
                 <Col md="6">
                   <label htmlFor="titleEn">
-                    <span className="font-weight-bold">{__('English job title')}</span>
+                    <span className="font-weight-bold">
+                      {__('English job title')}
+                    </span>
                     <input
                       id="titleEn"
                       type="text"
                       className="form-control"
                       value={this.state.titleEn || ''}
                       onChange={(e) => {
-                                                this.setState({
-                                                    titleEn: e.target.value,
-                                                });
-                                            }}
+                        this.setState({
+                          titleEn: e.target.value,
+                        });
+                      }}
                     />
                   </label>
                 </Col>
                 <Col md="6">
                   <label htmlFor="titleFr">
-                    <span className="font-weight-bold">{__('French job title')}</span>
+                    <span className="font-weight-bold">
+                      {__('French job title')}
+                    </span>
                     <input
                       id="titleFr"
                       type="text"
                       className="form-control"
                       value={this.state.titleFr || ''}
                       onChange={(e) => {
-                                                this.setState({
-                                                    titleFr: e.target.value,
-                                                });
-                                            }}
+                        this.setState({
+                          titleFr: e.target.value,
+                        });
+                      }}
                     />
                   </label>
                 </Col>
@@ -164,22 +169,22 @@ class OnboardStep2 extends Component {
     );
   }
 }
-/*
+
 OnboardStep2.defaultProps = {
-    userObject: {},
-    nextStep: undefined,
+  userObject: {},
+  nextStep: undefined,
 };
 
 OnboardStep2.propTypes = {
-    userObject: PropTypes.shape({
-        gcID: PropTypes.string,
-        name: PropTypes.string,
-        email: PropTypes.string,
-        titleEn: PropTypes.string,
-        titleFr: PropTypes.string,
-    }),
-    token: PropTypes.string.isRequired,
-    nextStep: PropTypes.func,
+  userObject: PropTypes.shape({
+    gcID: PropTypes.string,
+    name: PropTypes.string,
+    email: PropTypes.string,
+    titleEn: PropTypes.string,
+    titleFr: PropTypes.string,
+  }),
+  token: PropTypes.string.isRequired,
+  nextStep: PropTypes.func,
 };
-*/
+
 export default LocalizedComponent(OnboardStep2);

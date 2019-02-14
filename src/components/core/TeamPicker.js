@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import { Input } from 'reactstrap';
 
 import gql from 'graphql-tag';
@@ -6,6 +8,11 @@ import { Query } from 'react-apollo';
 
 
 class TeamPicker extends React.Component {
+  static propTypes = {
+    selectedOrgTier: PropTypes.number.isRequired,
+    onTeamChange: PropTypes.func.isRequired,
+    supervisor: PropTypes.shape({}).isRequired,
+  }
   constructor(props) {
     super(props);
     this.state = {
@@ -107,9 +114,7 @@ class TeamPicker extends React.Component {
         }}
           </Query>
         ) : (
-          <div>
-            Please pick a supervisor
-          </div>
+          <div>Please pick a supervisor</div>
         )}
       </div>
     );

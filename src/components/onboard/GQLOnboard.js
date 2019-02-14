@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
@@ -62,63 +63,68 @@ const mapStateToProps = ({ user }) => {
   return props;
 };
 
-class OnboardMod extends Component {
-  render() {
-    const {
-      myGcID,
-      accessToken,
-    } = this.props;
-    const customTransitions = {
-      enterRight: 'fadeIn animated',
-      enterLeft: 'fadeIn animated',
-      exitRight: 'fadeIn animated',
-      exitLeft: 'fadeIn animated',
-    };
-    const canSkip = !myGcID;
-    return (
-      <Query
-        variables={{ gcID: (String(myGcID)) }}
-        skip={canSkip}
-        query={PROFILE_INFO_QUERY}
-      >
-        {({ loading, error, data }) => {
-                    if (loading) return 'loading ...';
-                    if (error) return `Error!: ${error}`;
-                    const userInfo = (!data) ? [''] : data.profiles[0];
-                    return (
-                      <div>
-                        {canSkip ? (
-                                "I can't find your logged in ID :("
-                            ) : (
-                              <StepWizard
-                                transitions={customTransitions}
-                                nav={<OnboardNav />}
-                              >
-                                <OnboardStep1 />
-                                <OnboardStep2
-                                  userObject={userInfo}
-                                  token={accessToken}
-                                />
-                                <OnboardStep3
-                                  userObject={userInfo}
-                                  token={accessToken}
-                                />
-                                <OnboardStep4 />
-                                <OnboardStep5
-                                  userObject={userInfo}
-                                  token={accessToken}
-                                />
-                                <OnboardStep6
-                                  forwardID={userInfo.gcID}
-                                />
-                              </StepWizard>
-                            )}
-                      </div>
-                    );
-                }}
-      </Query>
-    );
-  }
-}
+const customTransitions = {
+  enterRight: 'fadeIn animated',
+  enterLeft: 'fadeIn animated',
+  exitRight: 'fadeIn animated',
+  exitLeft: 'fadeIn animated',
+};
+
+const OnboardMod = (props) => {
+  const {
+    myGcID,
+    accessToken,
+  } = props;
+  const canSkip = !myGcID;
+
+  return (
+    <Query
+      variables={{ gcID: (String(myGcID)) }}
+      skip={canSkip}
+      query={PROFILE_INFO_QUERY}
+    >
+      {({ loading, error, data }) => {
+        if (loading) return 'loading ...';
+        if (error) return `Error!: ${error}`;
+        const userInfo = (!data) ? [''] : data.profiles[0];
+        return (
+          <div>
+            {canSkip ? (
+              "I can't find your logged in ID :("
+            ) : (
+              <StepWizard
+                transitions={customTransitions}
+                nav={<OnboardNav />}
+              >
+                <OnboardStep1 />
+                <OnboardStep2
+                  userObject={userInfo}
+                  token={accessToken}
+                />
+                <OnboardStep3
+                  userObject={userInfo}
+                  token={accessToken}
+                />
+                <OnboardStep4 />
+                <OnboardStep5
+                  userObject={userInfo}
+                  token={accessToken}
+                />
+                <OnboardStep6
+                  forwardID={userInfo.gcID}
+                />
+              </StepWizard>
+            )}
+          </div>
+        );
+      }}
+    </Query>
+  );
+};
+
+OnboardMod.propTypes = {
+  myGcID: PropTypes.string.isRequired,
+  accessToken: PropTypes.string.isRequired,
+};
 
 export default connect(mapStateToProps)(OnboardMod);

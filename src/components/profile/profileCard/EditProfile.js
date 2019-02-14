@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
 
@@ -6,7 +7,15 @@ import gql from 'graphql-tag';
 import { Mutation } from 'react-apollo';
 
 // import { PROFILE_INFO_QUERY } from './GQLProfileCard';
-import { Button, Modal, ModalBody, ModalHeader, Form, Row, Col } from 'reactstrap';
+import {
+  Button,
+  Modal,
+  ModalBody,
+  ModalHeader,
+  Form,
+  Row,
+  Col
+} from 'reactstrap';
 
 const MODIFY_PROFILE_MUTATION = gql`
 mutation modifyPr($gcID: String!, $profileInfo: ModifyProfileInput!) {
@@ -16,8 +25,25 @@ mutation modifyPr($gcID: String!, $profileInfo: ModifyProfileInput!) {
 }
 `;
 
-
-class EditProfile extends Component {
+export class EditProfile extends Component {
+  static propTypes = {
+    profile: PropTypes.shape({
+      name: PropTypes.string,
+      email: PropTypes.string,
+      titleEn: PropTypes.string,
+      titleFr: PropTypes.string,
+      officePhone: PropTypes.string,
+      mobilePhone: PropTypes.string,
+      address: PropTypes.shape({
+        streetAddress: PropTypes.string,
+        city: PropTypes.string,
+        province: PropTypes.string,
+        postalCode: PropTypes.string,
+        country: PropTypes.string,
+      }),
+    }).isRequired,
+    token: PropTypes.string.isRequired,
+  }
   constructor(props) {
     super(props);
     this.state = {
@@ -50,56 +76,61 @@ class EditProfile extends Component {
     } = this.props;
     return (
       <div className="profile-card-footer">
-        <Button className="float-right" size="sm" color="primary" onClick={this.toggle}>
-                    Edit Profile
+        <Button
+          className="float-right"
+          size="sm"
+          color="primary"
+          onClick={this.toggle}
+        >
+          Edit Profile
         </Button>
-        <Modal isOpen={this.state.modal} toggle={this.toggle} className="modal-lg edit-profile-modal">
+        <Modal
+          isOpen={this.state.modal}
+          toggle={this.toggle}
+          className="modal-lg edit-profile-modal"
+        >
           <ModalHeader toggle={this.toggle}>Edit Profile</ModalHeader>
           <ModalBody>
             <Mutation
               mutation={MODIFY_PROFILE_MUTATION}
-              context={{
-                                headers: {
-                                    Authorization:
-                                        `Bearer ${token}`,
-                                },
-                            }
-                            }
+              context={{ headers: { Authorization: `Bearer ${token}` } }}
               onCompleted={() => {
-                                // Do this nicer / hot load maybe?
-                                window.location.reload(false);
-                            }}
+                // Do this nicer / hot load maybe?
+                window.location.reload(false);
+              }}
             >
               {modifyProfile => (
                 <Form
                   onSubmit={(e) => {
-                                        e.preventDefault();
-                                        modifyProfile({
-                                            variables: {
-                                                gcID: (String(profile.gcID)),
-                                                profileInfo: {
-                                                    name: this.state.name,
-                                                    email: this.state.email,
-                                                    titleEn: this.state.titleEn,
-                                                    titleFr: this.state.titleFr,
-                                                    officePhone: this.state.officePhone,
-                                                    mobilePhone: this.state.mobilePhone,
-                                                    address: {
-                                                        streetAddress: this.state.streetAddress,
-                                                        city: this.state.city,
-                                                        province: this.state.province,
-                                                        postalCode: this.state.postalCode,
-                                                        country: this.state.country,
-                                                    },
-                                                },
-                                            },
-                                        });
-                                    }}
+                    e.preventDefault();
+                    modifyProfile({
+                      variables: {
+                        gcID: (String(profile.gcID)),
+                        profileInfo: {
+                          name: this.state.name,
+                          email: this.state.email,
+                          titleEn: this.state.titleEn,
+                          titleFr: this.state.titleFr,
+                          officePhone: this.state.officePhone,
+                          mobilePhone: this.state.mobilePhone,
+                          address: {
+                            streetAddress: this.state.streetAddress,
+                            city: this.state.city,
+                            province: this.state.province,
+                            postalCode: this.state.postalCode,
+                            country: this.state.country,
+                          },
+                        },
+                      },
+                    });
+                }}
                 >
                   <Row>
                     <Col sm="12">
                       <label htmlFor="nameTest">
-                        <span className="font-weight-bold">{__('Full name')}</span>
+                        <span className="font-weight-bold">
+                          {__('Full name')}
+                        </span>
                         <input
                           required
                           type="text"
@@ -107,16 +138,18 @@ class EditProfile extends Component {
                           className="form-control"
                           value={this.state.name || ''}
                           onChange={(e) => {
-                                                        this.setState({
-                                                            name: e.target.value,
-                                                        });
-                                                    }}
+                            this.setState({
+                              name: e.target.value,
+                            });
+                          }}
                         />
                       </label>
                     </Col>
                     <Col sm="12">
                       <label htmlFor="emailTest">
-                        <span className="font-weight-bold">{__('Work email')}</span>
+                        <span className="font-weight-bold">
+                          {__('Work email')}
+                        </span>
                         <input
                           id="emailTest"
                           type="email"
@@ -124,10 +157,10 @@ class EditProfile extends Component {
                           className="form-control"
                           value={this.state.email || ''}
                           onChange={(e) => {
-                                                        this.setState({
-                                                            email: e.target.value,
-                                                        });
-                                                    }}
+                            this.setState({
+                              email: e.target.value,
+                            });
+                          }}
                         />
                       </label>
                     </Col>
@@ -136,33 +169,37 @@ class EditProfile extends Component {
                   <Row>
                     <Col>
                       <label htmlFor="titleEn">
-                        <span className="font-weight-bold">{__('English job title')}</span>
+                        <span className="font-weight-bold">
+                          {__('English job title')}
+                        </span>
                         <input
                           id="titleEn"
                           type="text"
                           className="form-control"
                           value={this.state.titleEn || ''}
                           onChange={(e) => {
-                                                        this.setState({
-                                                            titleEn: e.target.value,
-                                                        });
-                                                    }}
+                            this.setState({
+                              titleEn: e.target.value,
+                            });
+                          }}
                         />
                       </label>
                     </Col>
                     <Col>
                       <label htmlFor="titleFr">
-                        <span className="font-weight-bold">{__('French job title')}</span>
+                        <span className="font-weight-bold">
+                          {__('French job title')}
+                        </span>
                         <input
                           id="titleFr"
                           type="text"
                           className="form-control"
                           value={this.state.titleFr || ''}
                           onChange={(e) => {
-                                                        this.setState({
-                                                            titleFr: e.target.value,
-                                                        });
-                                                    }}
+                            this.setState({
+                              titleFr: e.target.value,
+                            });
+                          }}
                         />
                       </label>
                     </Col>
@@ -171,17 +208,19 @@ class EditProfile extends Component {
                   <Row>
                     <Col sm="6">
                       <label htmlFor="streetAddress">
-                        <span className="font-weight-bold">{__('Address')}</span>
+                        <span className="font-weight-bold">
+                          {__('Address')}
+                        </span>
                         <input
                           id="streetAddress"
                           type="text"
                           className="form-control"
                           value={this.state.streetAddress || ''}
                           onChange={(e) => {
-                                                        this.setState({
-                                                            streetAddress: e.target.value,
-                                                        });
-                                                    }}
+                            this.setState({
+                              streetAddress: e.target.value,
+                            });
+                          }}
                         />
                       </label>
                     </Col>
@@ -194,58 +233,64 @@ class EditProfile extends Component {
                           className="form-control"
                           value={this.state.city || ''}
                           onChange={(e) => {
-                                                        this.setState({
-                                                            city: e.target.value,
-                                                        });
-                                                    }}
+                            this.setState({
+                              city: e.target.value,
+                            });
+                          }}
                         />
                       </label>
                     </Col>
                     <Col sm="4">
                       <label htmlFor="province">
-                        <span className="font-weight-bold">{__('Province')}</span>
+                        <span className="font-weight-bold">
+                          {__('Province')}
+                        </span>
                         <input
                           id="province"
                           type="text"
                           className="form-control"
                           value={this.state.province || ''}
                           onChange={(e) => {
-                                                        this.setState({
-                                                            province: e.target.value,
-                                                        });
-                                                    }}
+                            this.setState({
+                              province: e.target.value,
+                            });
+                          }}
                         />
                       </label>
                     </Col>
                     <Col sm="2">
                       <label htmlFor="postalCode">
-                        <span className="font-weight-bold">{__('Postal Code')}</span>
+                        <span className="font-weight-bold">
+                          {__('Postal Code')}
+                        </span>
                         <input
                           id="postalCode"
                           type="text"
                           className="form-control"
                           value={this.state.postalCode || ''}
                           onChange={(e) => {
-                                                        this.setState({
-                                                            postalCode: e.target.value,
-                                                        });
-                                                    }}
+                            this.setState({
+                              postalCode: e.target.value,
+                            });
+                          }}
                         />
                       </label>
                     </Col>
                     <Col sm="6">
                       <label htmlFor="country">
-                        <span className="font-weight-bold">{__('Country')}</span>
+                        <span className="font-weight-bold">
+                          {__('Country')}
+                        </span>
                         <input
                           id="country"
                           type="text"
                           className="form-control"
                           value={this.state.country || ''}
                           onChange={(e) => {
-                                                        this.setState({
-                                                            country: e.target.value,
-                                                        });
-                                                    }}
+                            this.setState({
+                              country: e.target.value,
+                            });
+                          }}
                         />
                       </label>
                     </Col>
@@ -254,7 +299,9 @@ class EditProfile extends Component {
                   <Row>
                     <Col sm="3">
                       <label htmlFor="officePhone">
-                        <span className="font-weight-bold">{__('Office Phone Number')}</span>
+                        <span className="font-weight-bold">
+                          {__('Office Phone Number')}
+                        </span>
                         <input
                           id="officePhone"
                           type="tel"
@@ -263,19 +310,21 @@ class EditProfile extends Component {
                           value={this.state.officePhone || ''}
                           pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$"
                           onChange={(e) => {
-                                                        this.setState({
-                                                            officePhone: e.target.value,
-                                                        });
-                                                    }}
+                            this.setState({
+                              officePhone: e.target.value,
+                            });
+                          }}
                         />
                         <small id="officePhoneHelp" className="text-muted">
-                                                    1234567890
+                          1234567890
                         </small>
                       </label>
                     </Col>
                     <Col sm="3">
                       <label htmlFor="mobilePhone">
-                        <span className="font-weight-bold">{__('Mobile Phone Number')}</span>
+                        <span className="font-weight-bold">
+                          {__('Mobile Phone Number')}
+                        </span>
                         <input
                           id="mobilePhone"
                           type="tel"
@@ -284,13 +333,13 @@ class EditProfile extends Component {
                           value={this.state.mobilePhone || ''}
                           pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$"
                           onChange={(e) => {
-                                                        this.setState({
-                                                            mobilePhone: e.target.value,
-                                                        });
-                                                    }}
+                            this.setState({
+                              mobilePhone: e.target.value,
+                            });
+                          }}
                         />
                         <small id="mobilePhoneHelp" className="text-muted">
-                                                    1234567890
+                          1234567890
                         </small>
                       </label>
                     </Col>
@@ -308,7 +357,7 @@ class EditProfile extends Component {
                     </Button>
                   </div>
                 </Form>
-                            )}
+              )}
             </Mutation>
           </ModalBody>
         </Modal>

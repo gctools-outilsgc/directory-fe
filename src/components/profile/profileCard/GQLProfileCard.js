@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
@@ -7,7 +8,7 @@ import { connect } from 'react-redux';
 import { Card, CardBody, CardTitle, CardFooter } from 'reactstrap';
 
 import ProfileCardDisplay from './ProfileCardDisplay';
-import EditProfile from './EditProfile';
+import LocalizedEditProfile from './EditProfile';
 import Loading from './Loading';
 
 export const PROFILE_INFO_QUERY = gql`
@@ -49,60 +50,58 @@ const style = {
   },
 };
 
-export class GQLProfileCard extends Component {
-  render() {
-    const {
-      id,
-      accessToken,
-      myGcID,
-      modifyProfile,
-    } = this.props;
+const GQLProfileCard = (props) => {
+  const {
+    id,
+    accessToken,
+    myGcID,
+    modifyProfile,
+  } = props;
 
-    const canEdit = (accessToken !== '') && modifyProfile && (id === myGcID);
-    return (
-      <Query
-        query={PROFILE_INFO_QUERY}
-        variables={{ gcID: (String(id)) }}
-      >
-        {({ loading, error, data }) => {
-                    if (loading) return <Loading />;
-                    if (error) return `Error!: ${error}`;
-                    const userInfo = (!data) ? '' : data.profiles[0];
-                    return (
-                      <Card style={style.card}>
-                        {userInfo ? (
-                          <div>
-                            <CardBody>
-                              <CardTitle className="profile-card-title">
-                                <div>
-                                                Profile
-                                </div>
-                              </CardTitle>
-                              <ProfileCardDisplay
-                                user={userInfo}
-                              />
-                            </CardBody>
-                            <CardFooter>
-                              {canEdit ?
-                                <EditProfile profile={userInfo} token={accessToken} /> :
-                                            ''
-                                        }
-                            </CardFooter>
-                          </div>
-                            ) : (
+  const canEdit = (accessToken !== '') && modifyProfile && (id === myGcID);
 
-                              <CardBody>
-                                        Cannot find GCID
-                              </CardBody>
-                                )}
+  return (
+    <Query
+      query={PROFILE_INFO_QUERY}
+      variables={{ gcID: (String(id)) }}
+    >
+      {({ loading, error, data }) => {
+        if (loading) return <Loading />;
+        if (error) return `Error!: ${error}`;
+        const userInfo = (!data) ? '' : data.profiles[0];
+        return (
+          <Card style={style.card}>
+            {userInfo ? (
+              <div>
+                <CardBody>
+                  <CardTitle className="profile-card-title">
+                    <div>Profile</div>
+                  </CardTitle>
+                  <ProfileCardDisplay
+                    user={userInfo}
+                  />
+                </CardBody>
+                <CardFooter>
+                  {canEdit ?
+                    <LocalizedEditProfile
+                      profile={userInfo}
+                      token={accessToken}
+                    /> : ''}
+                </CardFooter>
+              </div>
+            ) : (<CardBody>Cannot find GCID</CardBody>)}
+          </Card>
+        );
+    }}
+    </Query>
+  );
+};
 
-                      </Card>
-                    );
-                }}
-      </Query>
-
-    );
-  }
-}
+GQLProfileCard.propTypes = {
+  id: PropTypes.number.isRequired,
+  accessToken: PropTypes.string.isRequired,
+  myGcID: PropTypes.number.isRequired,
+  modifyProfile: PropTypes.bool.isRequired,
+};
 
 export default connect(mapStateToProps)(GQLProfileCard);

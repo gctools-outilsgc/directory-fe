@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
@@ -241,7 +241,7 @@ class OnboardStep5 extends Component {
     );
   }
 }
-/*
+
 OnboardStep5.defaultProps = {
   userObject: {},
   nextStep: undefined,
@@ -256,5 +256,5 @@ OnboardStep5.propTypes = {
   nextStep: PropTypes.func,
   previousStep: PropTypes.func,
 };
-*/
+
 export default LocalizedComponent(OnboardStep5);
