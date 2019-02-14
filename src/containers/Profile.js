@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row } from 'reactstrap';
 
 import GQLProfileCard from '../components/profile/profileCard/GQLProfileCard';
-import GQLTeamCard from '../components/profile/team/GQLTeamCard';
+import TeamCardHolder from '../components/profile/team/TeamCardHolder';
 
 
 const Profile = ({ match }) => (
@@ -11,7 +11,7 @@ const Profile = ({ match }) => (
         <GQLProfileCard id={match.params.id} />
       </Row>
       <Row className="mt-3">
-        <GQLTeamCard id={match.params.id} />
+        <TeamCardHolder id={match.params.id} />
       </Row>
     </Container>
   );

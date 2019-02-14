@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import gql from 'graphql-tag';
 import { Query, Mutation } from 'react-apollo';
 
-import { Card, CardBody, CardTitle, CardFooter, Button, Modal, ModalHeader, ModalBody, Row, Col } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, Row, Col } from 'reactstrap';
 
 import SupervisorPicker from '../../core/SupervisorPicker';
 import TeamPicker from '../../core/TeamPicker';
@@ -71,7 +71,7 @@ const mapStateToProps = ({ user }) => {
 const style = {
     card: {
         width: '100%',
-        padding: '0 15px 10px 15px',
+        padding: '15px 0px 0px 0px',
     },
 };
 
@@ -110,13 +110,9 @@ export class GQLTeamCard extends React.Component {
                     const supTest = (!userInfo) ? '' : userInfo.supervisor;
                     const teamTest = (!userInfo) ? '' : userInfo.org;
                     return (
-                        <Card style={style.card}>
+                        <div style={style.card}>
                         {userInfo ? (
                             <div>
-<CardBody>
-                                <CardTitle className="profile-card-title">
-                                    Teams
-                            </CardTitle>
                                 <Row>
                                     <Col>
                                         <div className="font-weight-bold">
@@ -136,8 +132,7 @@ export class GQLTeamCard extends React.Component {
                                         {teamTest ? teamTest.nameEn : 'None'}
                                     </Col>
                                 </Row>
-                            </CardBody>
-                            <CardFooter>
+                            <div>
                                 {canEdit ?
                                     <div className="profile-card-footer">
                                         <Button className="float-right" size="sm" color="primary" onClick={this.toggle}>Edit</Button>
@@ -224,15 +219,15 @@ export class GQLTeamCard extends React.Component {
                                     </div> :
                                     ''
                                 }
-                            </CardFooter>
+                            </div>
                             </div>
                         ) : (
-                            <CardBody>
+                            <div>
                                 Cannot find GCID
-                            </CardBody>
+                            </div>
                         )}
 
-                        </Card>
+                        </div>
                     )
                 }}
 
