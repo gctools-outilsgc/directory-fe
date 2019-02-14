@@ -17,7 +17,7 @@ mutation modifyPr($gcID: String!, $profileInfo: ModifyProfileInput!) {
 `;
 
 
-class EditProfile extends Component {
+export class EditProfile extends Component {
     constructor(props) {
         super(props);
         this.state = {

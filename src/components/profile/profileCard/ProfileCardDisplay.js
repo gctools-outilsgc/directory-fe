@@ -4,7 +4,7 @@ import LocalizedComponent
 
 import { Row, Col } from 'reactstrap';
 
-class ProfileCardDisplay extends Component {
+export class ProfileCardDisplay extends Component {
     render() {
         const {
             user,
