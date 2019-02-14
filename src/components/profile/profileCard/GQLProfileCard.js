@@ -33,76 +33,76 @@ query profileInfoQuery($gcID: String!) {
 }`;
 
 const mapStateToProps = ({ user }) => {
-    const props = {};
-    if (user) {
-        props.accessToken = user.access_token;
-        props.myGcID = user.profile.sub;
-        props.modifyProfile = user.profile.modify_profile === 'True';
-    }
-    return props;
+  const props = {};
+  if (user) {
+    props.accessToken = user.access_token;
+    props.myGcID = user.profile.sub;
+    props.modifyProfile = user.profile.modify_profile === 'True';
+  }
+  return props;
 };
 
 const style = {
-    card: {
-        width: '100%',
-        padding: '0 15px 10px 15px',
-    },
+  card: {
+    width: '100%',
+    padding: '0 15px 10px 15px',
+  },
 };
 
 export class GQLProfileCard extends Component {
-    render() {
-        const {
-            id,
-            accessToken,
-            myGcID,
-            modifyProfile,
-        } = this.props
+  render() {
+    const {
+      id,
+      accessToken,
+      myGcID,
+      modifyProfile,
+    } = this.props;
 
-        const canEdit = (accessToken !== '') && modifyProfile && (id === myGcID);
-        return (
-            <Query
-                query={PROFILE_INFO_QUERY}
-                variables={{ gcID: (String(id)) }}
-            >
-                {({ loading, error, data }) => {
+    const canEdit = (accessToken !== '') && modifyProfile && (id === myGcID);
+    return (
+      <Query
+        query={PROFILE_INFO_QUERY}
+        variables={{ gcID: (String(id)) }}
+      >
+        {({ loading, error, data }) => {
                     if (loading) return <Loading />;
                     if (error) return `Error!: ${error}`;
                     const userInfo = (!data) ? '' : data.profiles[0];
                     return (
-                        <Card style={style.card}>
-                            {userInfo ? (
+                      <Card style={style.card}>
+                        {userInfo ? (
+                          <div>
+                            <CardBody>
+                              <CardTitle className="profile-card-title">
                                 <div>
-                                    <CardBody>
-                                        <CardTitle className="profile-card-title">
-                                            <div>
                                                 Profile
                                 </div>
-                                        </CardTitle>
-                                        <ProfileCardDisplay
-                                            user={userInfo}
-                                        />
-                                    </CardBody>
-                                    <CardFooter>
-                                        {canEdit ?
-                                            <EditProfile profile={userInfo} token={accessToken} /> :
+                              </CardTitle>
+                              <ProfileCardDisplay
+                                user={userInfo}
+                              />
+                            </CardBody>
+                            <CardFooter>
+                              {canEdit ?
+                                <EditProfile profile={userInfo} token={accessToken} /> :
                                             ''
                                         }
-                                    </CardFooter>
-                                </div>
+                            </CardFooter>
+                          </div>
                             ) : (
 
-                                    <CardBody>
+                              <CardBody>
                                         Cannot find GCID
-                                </CardBody>
+                              </CardBody>
                                 )}
 
-                        </Card>
-                    )
+                      </Card>
+                    );
                 }}
-            </Query>
+      </Query>
 
-        );
-    }
+    );
+  }
 }
 
 export default connect(mapStateToProps)(GQLProfileCard);

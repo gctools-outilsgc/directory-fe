@@ -30,11 +30,11 @@ class TeamPicker extends React.Component {
       <div>
         {supervisor ? (
           <Query
-        variables={{
+            variables={{
           gcID: (supervisor) ? supervisor.gcID : null,
         }}
-        skip={!supervisor}
-        query={gql`
+            skip={!supervisor}
+            query={gql`
           query organizationQuery($gcID: String!) {
             profiles(gcID: $gcID) {
               org {
@@ -54,8 +54,8 @@ class TeamPicker extends React.Component {
               }
             }
           }`}
-      >
-        {({
+          >
+            {({
           loading,
           error,
           data,
@@ -70,7 +70,7 @@ class TeamPicker extends React.Component {
             && data.profiles[0].org) {
               OwnerOfOrgTier = [].concat(
                 [data.profiles[0].org],
-                OwnerOfOrgTier
+                OwnerOfOrgTier,
               );
           }
 
@@ -85,7 +85,7 @@ class TeamPicker extends React.Component {
             .forEach(tier =>
               tierOptions.push({
                 key: `orgtier-${tier.id}`,
-                text: tier.nameEn, //Localize later
+                text: tier.nameEn, // Localize later
                 value: tier.id,
                 data: tier,
               }));
@@ -105,8 +105,8 @@ class TeamPicker extends React.Component {
             </div>
           );
         }}
-      </Query>
-        ): (
+          </Query>
+        ) : (
           <div>
             Please pick a supervisor
           </div>

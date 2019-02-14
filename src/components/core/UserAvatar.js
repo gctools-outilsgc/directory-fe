@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-  //Putting this here for the future
-//import PropTypes from 'prop-types';
+// Putting this here for the future
+// import PropTypes from 'prop-types';
 
 // import { Query, Mutation } from 'react-apollo';
 import { Button } from 'reactstrap';

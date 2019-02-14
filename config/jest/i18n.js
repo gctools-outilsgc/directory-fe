@@ -3,10 +3,10 @@
  * @gctools-components/i18n-translation-webpack-plugin
  */
 
-const localizer = function() {
+const localizer = function () {
   this.lang = 'en_CA';
   this.setLanguage = lang => this.lang = lang;
-}
+};
 
 global.localizer = new localizer();
 

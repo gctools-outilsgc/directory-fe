@@ -1,5 +1,5 @@
 import React from 'react';
-//import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
@@ -29,7 +29,7 @@ class SupervisorPicker extends React.Component {
   handleChange(event) {
     this.setState({
       value: event.target.value,
-      skip: true
+      skip: true,
     });
     this.searchDelay = setTimeout(() => {
       this.setState({ skip: false });
@@ -59,24 +59,23 @@ class SupervisorPicker extends React.Component {
           data,
         }) => {
           const checkResult = (!data) ? [''] : data;
-          const results = (checkResult.profiles) ? checkResult.profiles.map((a) =>
-            <li key={a.gcID}>
+          const results = (checkResult.profiles) ? checkResult.profiles.map(a =>
+            (<li key={a.gcID}>
               <Button onClick={() => this.handleResultClick(a.gcID)}>
                 {a.name}
               </Button>
 
-            </li>
-          ) : [];
-          const styleClasses = (!data) ?  'search-results-none' : "list-unstyled search-results";
+             </li>)) : [];
+          const styleClasses = (!data) ? 'search-results-none' : 'list-unstyled search-results';
           return (
             <div>
               <label>
                 Search
-                  <Input
-                    type="text"
-                    onChange={this.handleChange}
-                    value={this.state.value}
-                  />
+                <Input
+                  type="text"
+                  onChange={this.handleChange}
+                  value={this.state.value}
+                />
               </label>
               <ul className={styleClasses}>{results}</ul>
             </div>
