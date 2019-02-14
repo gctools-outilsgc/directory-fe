@@ -12,7 +12,10 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import { connect } from 'react-redux';
 import Login from '@gctools-components/gc-login';
-import { loginAction, logoutAction, clearErrorAction } from '../store';
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
+
+ import { loginAction, logoutAction, clearErrorAction } from '../store';
 
 import oidcConfig from '../oidcConfig.dev';
 
@@ -25,11 +28,14 @@ import ProfileSearch from '../components/core/ProfileSearch';
 import enFip from '../assets/imgs/sig-en-w.png';
 
 export class App extends Component {
+  static toggleLanguage(e) {
+    if (e) e.preventDefault();
+    localizer.setLanguage(((localizer.lang === 'en_CA') ? 'fr_CA' : 'en_CA'));
+  }
   constructor(props) {
     super(props);
     this.state = { name: false, id: false };
   }
-
   render() {
     const {
       onLogin,
@@ -84,9 +90,9 @@ export class App extends Component {
                 </Login>
               </NavItem>
               <NavItem>
-                <Button>
-                  Language
-                  </Button>
+                <Button onClick={App.toggleLanguage}>
+                  {__('Language')}
+                </Button>
               </NavItem>
             </Nav>
           </Navbar>
@@ -117,4 +123,6 @@ const mapDispToProps = dispatch => ({
   onErrorClose: () => dispatch(clearErrorAction()),
 });
 
-export default connect(mapStToProps, mapDispToProps)(App);
+export default connect(mapStToProps, mapDispToProps)(
+  LocalizedComponent(App)
+);

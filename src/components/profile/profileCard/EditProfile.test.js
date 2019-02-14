@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, cleanup, fireEvent } from 'react-testing-library';
 
-import EditProfile from './EditProfile';
+import {EditProfile} from './EditProfile';
 
 afterEach(cleanup)
 

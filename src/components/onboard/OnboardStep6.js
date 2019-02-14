@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 //import PropTypes from 'prop-types';
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
 
 import { Button, Row } from 'reactstrap';
 /* eslint react/prefer-stateless-function: 0 */
@@ -12,19 +14,19 @@ class OnboardStep6 extends Component {
     return (
       <div>
         <h1 className="h3 border-bottom mb-2 pb-2">
-          Step6T1
+          {__('Step6T1')}
         </h1>
-        <p>Step6D1</p>
-        <p>Step6D2</p>
-        <p>Step6D3</p>
-        <p>Step6D4</p>
+        <p>{__('Step6D1')}</p>
+        <p>{__('Step6D2')}</p>
+        <p>{__('Step6D3')}</p>
+        <p>{__('Step6D4')}</p>
         <Row className="m-2 border-top">
           <div className="ml-auto mt-3">
             <Button
               href={`/p/${forwardID}`}
               color="primary"
             >
-              View my Profile
+              {__('View my Profile')}
             </Button>
           </div>
         </Row>
@@ -37,4 +39,4 @@ OnboardStep6.propTypes = {
   forwardID: PropTypes.string.isRequired,
 };
 */
-export default OnboardStep6;
+export default LocalizedComponent(OnboardStep6);

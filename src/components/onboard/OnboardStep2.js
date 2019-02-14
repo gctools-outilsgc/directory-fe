@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 //import PropTypes from 'prop-types';
 
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
+
 import gql from 'graphql-tag';
 import { Mutation } from 'react-apollo';
 
@@ -71,13 +74,13 @@ class OnboardStep2 extends Component {
                             <Row className="pb-2 mb-3 mt-3">
                                 <Col sm="12">
                                     <h2 className="h4 mb-2 pb-2 border-bottom text-primary">
-                                        Step2T1
+                                        {__('Step2T1')}
                                     </h2>
-                                    <p>Step2D1</p>
+                                    <p>{__('Step2D1')}</p>
                                 </Col>
                                 <Col md="6">
                                     <label htmlFor="nameTest">
-                                    <span className="font-weight-bold">Full name</span>
+                                    <span className="font-weight-bold">{__('Full name')}</span>
                                         <input
                                             required
                                             type="text"
@@ -94,7 +97,7 @@ class OnboardStep2 extends Component {
                                 </Col>
                                 <Col md="6">
                                     <label htmlFor="emailTest">
-                                    <span className="font-weight-bold">Work email</span>
+                                    <span className="font-weight-bold">{__('Work email')}</span>
                                         <input
                                             id="emailTest"
                                             type="email"
@@ -113,7 +116,7 @@ class OnboardStep2 extends Component {
                             <Row>
                                 <Col md="6">
                                     <label htmlFor="titleEn">
-                                    <span className="font-weight-bold">English Title</span>
+                                    <span className="font-weight-bold">{__('English job title')}</span>
                                     <input
                                             id="titleEn"
                                             type="text"
@@ -129,7 +132,7 @@ class OnboardStep2 extends Component {
                                 </Col>
                                 <Col md="6">
                                     <label htmlFor="titleFr">
-                                    <span className="font-weight-bold">French Title</span>
+                                    <span className="font-weight-bold">{__('French job title')}</span>
                                     <input
                                             id="titleFr"
                                             type="text"
@@ -150,7 +153,7 @@ class OnboardStep2 extends Component {
                                         type="submit"
                                         color="primary"
                                     >
-                                        Next
+                                        {__('Next')}
                                     </Button>
                                 </div>
                             </Row>
@@ -179,4 +182,4 @@ OnboardStep2.propTypes = {
     nextStep: PropTypes.func,
 };
 */
-export default OnboardStep2;
+export default LocalizedComponent(OnboardStep2);

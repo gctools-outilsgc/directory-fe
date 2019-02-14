@@ -62,15 +62,16 @@ class TeamPicker extends React.Component {
         }) => {
           if (error) return `Error...${error.message}`;
 
-          const OwnerOfOrgTier =
+          let OwnerOfOrgTier =
             (data.profiles && data.profiles.length === 1) ?
               data.profiles[0].OwnerOfOrgTier.slice(0) : [];
 
           if (data.profiles && data.profiles.length === 1
             && data.profiles[0].org) {
-              OwnerOfOrgTier.unshift({
-                ...data.profiles[0].org,
-              });
+              OwnerOfOrgTier = [].concat(
+                [data.profiles[0].org],
+                OwnerOfOrgTier
+              );
           }
 
           const tierOptions = [];
@@ -111,7 +112,6 @@ class TeamPicker extends React.Component {
           </div>
         )}
       </div>
-      
     );
   }
 }

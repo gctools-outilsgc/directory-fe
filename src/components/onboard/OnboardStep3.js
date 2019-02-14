@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 //import PropTypes from 'prop-types';
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
 
 import gql from 'graphql-tag';
 import { Mutation } from 'react-apollo';
@@ -76,20 +78,20 @@ class OnboardStep3 extends Component {
                         className="basic-form-holder"
                     >
                         <h1 className="mb-2 pb-2 h3 text-primary">
-                            Step3T1
+                            {__('Step3T1')}
                         </h1>
-                        <p>Step3D1</p>
+                        <p>{__('Step3D1')}</p>
                         <Row>
                             <Col>
                                 <h2 className="border-bottom mb-4 pb-2 h4 text-primary">
-                                    Step3SubT2
+                                    {__('Step3SubT2')}
                                 </h2>
                             </Col>
                         </Row>
                         <Row>
                             <Col md="4">
                                 <label htmlFor="streetAddress">
-                                <span className="font-weight-bold">Address</span>
+                                <span className="font-weight-bold">{__('Address')}</span>
                                     <input
                                         id="streetAddress"
                                         type="text"
@@ -105,7 +107,7 @@ class OnboardStep3 extends Component {
                             </Col>
                             <Col md="4">
                                 <label htmlFor="city">
-                                <span className="font-weight-bold">City</span>
+                                <span className="font-weight-bold">{__('City')}</span>
                                     <input
                                         id="city"
                                         type="text"
@@ -121,7 +123,7 @@ class OnboardStep3 extends Component {
                             </Col>
                             <Col md="4">
                                 <label htmlFor="province">
-                                <span className="font-weight-bold">Province</span>
+                                <span className="font-weight-bold">{__('Province')}</span>
                                     <input
                                         id="province"
                                         type="text"
@@ -139,7 +141,7 @@ class OnboardStep3 extends Component {
                         <Row className="mb-2">
                             <Col md="3">
                                 <label htmlFor="postalCode">
-                                <span className="font-weight-bold">Postal Code</span>
+                                <span className="font-weight-bold">{__('Postal Code')}</span>
                                     <input
                                         id="postalCode"
                                         type="text"
@@ -155,7 +157,7 @@ class OnboardStep3 extends Component {
                             </Col>
                             <Col md="3">
                                 <label htmlFor="country">
-                                <span className="font-weight-bold">Country</span>
+                                <span className="font-weight-bold">{__('Country')}</span>
                                     <input
                                         id="country"
                                         type="text"
@@ -171,12 +173,12 @@ class OnboardStep3 extends Component {
                             </Col>
                         </Row>
                         <h2 className="border-bottom mb-4 pb-2 h4 text-primary">
-                            Step3T2
+                            {__('Step3T2')}
                         </h2>
                         <Row>
                             <Col md="3">
                                 <label htmlFor="officePhone">
-                                <span className="font-weight-bold">Phone number</span>
+                                <span className="font-weight-bold">{__('Phone number')}</span>
                                     <input
                                         id="officePhone"
                                         type="tel"
@@ -197,7 +199,7 @@ class OnboardStep3 extends Component {
                             </Col>
                             <Col md="3">
                                 <label htmlFor="mobilePhone">
-                                <span className="font-weight-bold">Mobile phone number</span>
+                                <span className="font-weight-bold">{__('Mobile phone number')}</span>
                                     <input
                                         id="mobilePhone"
                                         type="tel"
@@ -223,14 +225,14 @@ class OnboardStep3 extends Component {
                                     onClick={this.handleClick}
                                     color="primary"
                                 >
-                                    Back
+                                    {__('Back')}
                                 </Button>
                                 <Button
                                     type="submit"
                                     color="primary"
                                     className="ml-3"
                                 >
-                                    Next
+                                    {__('Next')}
                                 </Button>
                             </div>
                         </Row>
@@ -267,4 +269,4 @@ OnboardStep3.propTypes = {
   previousStep: PropTypes.func,
 };
 */
-export default OnboardStep3;
+export default LocalizedComponent(OnboardStep3);

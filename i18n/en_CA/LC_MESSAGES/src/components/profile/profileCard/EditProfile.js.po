@@ -1,0 +1,64 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-02-13 11:10-0500\n"
+"PO-Revision-Date: 2019-02-13 11:10-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en_CA\n"
+"Language-Team: en_CA <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: 102:84 src/components/profile/profileCard/EditProfile.js
+msgid "Full name"
+msgstr ""
+
+#: 119:80 src/components/profile/profileCard/EditProfile.js
+msgid "Work email"
+msgstr ""
+
+#: 139:80 src/components/profile/profileCard/EditProfile.js
+msgid "English job title"
+msgstr ""
+
+#: 155:80 src/components/profile/profileCard/EditProfile.js
+msgid "French job title"
+msgstr ""
+
+#: 174:80 src/components/profile/profileCard/EditProfile.js
+msgid "Address"
+msgstr ""
+
+#: 190:80 src/components/profile/profileCard/EditProfile.js
+msgid "City"
+msgstr ""
+
+#: 206:80 src/components/profile/profileCard/EditProfile.js
+msgid "Province"
+msgstr ""
+
+#: 222:80 src/components/profile/profileCard/EditProfile.js
+msgid "Postal Code"
+msgstr ""
+
+#: 238:80 src/components/profile/profileCard/EditProfile.js
+msgid "Country"
+msgstr ""
+
+#: 257:84 src/components/profile/profileCard/EditProfile.js
+msgid "Office Phone Number"
+msgstr ""
+
+#: 278:80 src/components/profile/profileCard/EditProfile.js
+msgid "Mobile Phone Number"
+msgstr ""
+
+#: 307:45 src/components/profile/profileCard/EditProfile.js
+msgid "Save"
+msgstr ""
+

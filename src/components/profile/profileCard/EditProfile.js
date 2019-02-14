@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
 
 import gql from 'graphql-tag';
 import { Mutation } from 'react-apollo';
@@ -15,7 +17,7 @@ mutation modifyPr($gcID: String!, $profileInfo: ModifyProfileInput!) {
 `;
 
 
-class EditProfile extends Component {
+export class EditProfile extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -97,7 +99,7 @@ class EditProfile extends Component {
                                     <Row>
                                         <Col sm="12">
                                             <label htmlFor="nameTest">
-                                                <span className="font-weight-bold">Full Name</span>
+                                                <span className="font-weight-bold">{__('Full name')}</span>
                                 <input
                                                     required
                                                     type="text"
@@ -114,7 +116,7 @@ class EditProfile extends Component {
                                         </Col>
                                         <Col sm="12">
                                             <label htmlFor="emailTest">
-                                            <span className="font-weight-bold">Work Email</span>
+                                            <span className="font-weight-bold">{__('Work email')}</span>
                                     <input
                                                     id="emailTest"
                                                     type="email"
@@ -134,7 +136,7 @@ class EditProfile extends Component {
                                     <Row>
                                         <Col>
                                             <label htmlFor="titleEn">
-                                            <span className="font-weight-bold">English Title</span>
+                                            <span className="font-weight-bold">{__('English job title')}</span>
                                     <input
                                                     id="titleEn"
                                                     type="text"
@@ -150,7 +152,7 @@ class EditProfile extends Component {
                                         </Col>
                                         <Col>
                                             <label htmlFor="titleFr">
-                                            <span className="font-weight-bold">French Title</span>
+                                            <span className="font-weight-bold">{__('French job title')}</span>
                                     <input
                                                     id="titleFr"
                                                     type="text"
@@ -169,7 +171,7 @@ class EditProfile extends Component {
                                     <Row>
                                         <Col sm="6">
                                             <label htmlFor="streetAddress">
-                                            <span className="font-weight-bold">Address</span>
+                                            <span className="font-weight-bold">{__('Address')}</span>
                                     <input
                                                     id="streetAddress"
                                                     type="text"
@@ -185,7 +187,7 @@ class EditProfile extends Component {
                                         </Col>
                                         <Col sm="6">
                                             <label htmlFor="city">
-                                            <span className="font-weight-bold">City</span>
+                                            <span className="font-weight-bold">{__('City')}</span>
                                     <input
                                                     id="city"
                                                     type="text"
@@ -201,7 +203,7 @@ class EditProfile extends Component {
                                         </Col>
                                         <Col sm="4">
                                             <label htmlFor="province">
-                                            <span className="font-weight-bold">Province</span>
+                                            <span className="font-weight-bold">{__('Province')}</span>
                                     <input
                                                     id="province"
                                                     type="text"
@@ -217,7 +219,7 @@ class EditProfile extends Component {
                                         </Col>
                                         <Col sm="2">
                                             <label htmlFor="postalCode">
-                                            <span className="font-weight-bold">Postal Code</span>
+                                            <span className="font-weight-bold">{__('Postal Code')}</span>
                                     <input
                                                     id="postalCode"
                                                     type="text"
@@ -233,7 +235,7 @@ class EditProfile extends Component {
                                         </Col>
                                         <Col sm="6">
                                             <label htmlFor="country">
-                                            <span className="font-weight-bold">Country</span>
+                                            <span className="font-weight-bold">{__('Country')}</span>
                                     <input
                                                     id="country"
                                                     type="text"
@@ -252,7 +254,7 @@ class EditProfile extends Component {
                                     <Row>
                                         <Col sm="3">
                                             <label htmlFor="officePhone">
-                                                <span className="font-weight-bold">Office Phone</span>
+                                                <span className="font-weight-bold">{__('Office Phone Number')}</span>
                                                 <input
                                                     id="officePhone"
                                                     type="tel"
@@ -273,7 +275,7 @@ class EditProfile extends Component {
                                         </Col>
                                         <Col sm="3">
                                             <label htmlFor="mobilePhone">
-                                            <span className="font-weight-bold">Mobile Phone</span>
+                                            <span className="font-weight-bold">{__('Mobile Phone Number')}</span>
                                                 <input
                                                     id="mobilePhone"
                                                     type="tel"
@@ -302,7 +304,7 @@ class EditProfile extends Component {
                                             type="submit"
                                             color="primary"
                                         >
-                                            Save
+                                            {__('Save')}
                                 </Button>
                                     </div>
                                 </Form>
@@ -315,4 +317,4 @@ class EditProfile extends Component {
     }
 }
 
-export default EditProfile;
+export default LocalizedComponent(EditProfile);

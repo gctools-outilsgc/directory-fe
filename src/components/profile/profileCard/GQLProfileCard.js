@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 
 import { Card, CardBody, CardTitle, CardFooter } from 'reactstrap';
 
-import ProfileCardDisplay from './ProfileCardDisplay';
+import { ProfileCardDisplay } from './ProfileCardDisplay';
 import EditProfile from './EditProfile';
 import Loading from './Loading';
 

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
 
 import { Button, Row } from 'reactstrap';
 /* eslint react/prop-types: 0 */
@@ -9,11 +11,11 @@ class OnboardStep4 extends Component {
     return (
       <div>
         <h1 className="h3 border-bottom mb-2 pb-2">
-          Step4T1
+          {__('Step4T1')}
         </h1>
         <Row>
-          <p>Step4D1</p>
-          <p>Step4D2</p>
+          <p>{__('Step4D1')}</p>
+          <p>{__('Step4D2')}</p>
         </Row>
         <Row className="m-2">
           <div className="ml-auto mt-3">
@@ -21,14 +23,14 @@ class OnboardStep4 extends Component {
               onClick={this.props.previousStep}
               color="primary"
             >
-              Back
+              {__('Back')}
             </Button>
             <Button
               onClick={this.props.nextStep}
               color="primary"
               className="ml-3"
             >
-              Next
+              {__('Next')}
             </Button>
           </div>
         </Row>
@@ -37,4 +39,4 @@ class OnboardStep4 extends Component {
   }
 }
 
-export default OnboardStep4;
+export default LocalizedComponent(OnboardStep4);
