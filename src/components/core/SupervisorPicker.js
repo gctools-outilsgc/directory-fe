@@ -7,9 +7,6 @@ import { Query } from 'react-apollo';
 import { Input, Button } from 'reactstrap';
 
 class SupervisorPicker extends React.Component {
-  static propTypes = {
-    onResultSelect: PropTypes.func.isRequired,
-  }
   constructor(props) {
     super(props);
     this.state = {
@@ -87,5 +84,9 @@ class SupervisorPicker extends React.Component {
     );
   }
 }
+
+SupervisorPicker.propTypes = {
+  onResultSelect: PropTypes.func.isRequired,
+};
 
 export default SupervisorPicker;

@@ -88,12 +88,6 @@ const style = {
 };
 
 export class GQLTeamCard extends React.Component {
-  static propTypes = {
-    id: PropTypes.number.isRequired,
-    accessToken: PropTypes.string.isRequired,
-    myGcID: PropTypes.number.isRequired,
-    modifyProfile: PropTypes.bool.isRequired,
-  }
   constructor(props) {
     super(props);
     this.state = {
@@ -259,5 +253,19 @@ export class GQLTeamCard extends React.Component {
     );
   }
 }
+
+GQLTeamCard.defaultProps = {
+  id: undefined,
+  accessToken: undefined,
+  myGcID: undefined,
+  modifyProfile: undefined,
+};
+
+GQLTeamCard.propTypes = {
+  id: PropTypes.string,
+  accessToken: PropTypes.string,
+  myGcID: PropTypes.string,
+  modifyProfile: PropTypes.bool,
+};
 
 export default connect(mapStateToProps)(GQLTeamCard);

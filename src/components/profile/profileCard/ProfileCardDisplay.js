@@ -5,7 +5,7 @@ import LocalizedComponent
 
 import { Row, Col } from 'reactstrap';
 
-const ProfileCardDisplay = (props) => {
+export const ProfileCardDisplay = (props) => {
   const { user } = props;
   const { address: userAddress } = user;
   return (

@@ -26,24 +26,6 @@ mutation modifyPr($gcID: String!, $profileInfo: ModifyProfileInput!) {
 `;
 
 export class EditProfile extends Component {
-  static propTypes = {
-    profile: PropTypes.shape({
-      name: PropTypes.string,
-      email: PropTypes.string,
-      titleEn: PropTypes.string,
-      titleFr: PropTypes.string,
-      officePhone: PropTypes.string,
-      mobilePhone: PropTypes.string,
-      address: PropTypes.shape({
-        streetAddress: PropTypes.string,
-        city: PropTypes.string,
-        province: PropTypes.string,
-        postalCode: PropTypes.string,
-        country: PropTypes.string,
-      }),
-    }).isRequired,
-    token: PropTypes.string.isRequired,
-  }
   constructor(props) {
     super(props);
     this.state = {
@@ -365,5 +347,29 @@ export class EditProfile extends Component {
     );
   }
 }
+
+EditProfile.defaultProps = {
+  profile: undefined,
+  token: undefined,
+};
+
+EditProfile.propTypes = {
+  profile: PropTypes.shape({
+    name: PropTypes.string,
+    email: PropTypes.string,
+    titleEn: PropTypes.string,
+    titleFr: PropTypes.string,
+    officePhone: PropTypes.string,
+    mobilePhone: PropTypes.string,
+    address: PropTypes.shape({
+      streetAddress: PropTypes.string,
+      city: PropTypes.string,
+      province: PropTypes.string,
+      postalCode: PropTypes.string,
+      country: PropTypes.string,
+    }),
+  }),
+  token: PropTypes.string,
+};
 
 export default LocalizedComponent(EditProfile);

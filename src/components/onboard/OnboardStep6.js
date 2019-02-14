@@ -7,7 +7,7 @@ import LocalizedComponent
 import { Button, Row } from 'reactstrap';
 /* eslint react/prefer-stateless-function: 0 */
 
-const OnboardStep6 = (props) => {
+export const OnboardStep6 = (props) => {
   const { forwardID } = props;
   return (
     <div>

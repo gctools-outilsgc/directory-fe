@@ -16,7 +16,7 @@ mutation modifyPr($gcID: String!, $profileInfo: ModifyProfileInput!) {
 }
 `;
 
-class OnboardStep3 extends Component {
+export class OnboardStep3 extends Component {
   constructor(props) {
     super(props);
     this.state = {

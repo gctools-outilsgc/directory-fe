@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 
 import { Card, CardBody, CardTitle, CardFooter } from 'reactstrap';
 
-import ProfileCardDisplay from './ProfileCardDisplay';
+import LocalizedProfileCardDisplay from './ProfileCardDisplay';
 import LocalizedEditProfile from './EditProfile';
 import Loading from './Loading';
 
@@ -50,7 +50,7 @@ const style = {
   },
 };
 
-const GQLProfileCard = (props) => {
+export const GQLProfileCard = (props) => {
   const {
     id,
     accessToken,
@@ -77,7 +77,7 @@ const GQLProfileCard = (props) => {
                   <CardTitle className="profile-card-title">
                     <div>Profile</div>
                   </CardTitle>
-                  <ProfileCardDisplay
+                  <LocalizedProfileCardDisplay
                     user={userInfo}
                   />
                 </CardBody>
@@ -97,11 +97,18 @@ const GQLProfileCard = (props) => {
   );
 };
 
+GQLProfileCard.defaultProps = {
+  id: undefined,
+  accessToken: undefined,
+  myGcID: undefined,
+  modifyProfile: undefined,
+};
+
 GQLProfileCard.propTypes = {
-  id: PropTypes.number.isRequired,
-  accessToken: PropTypes.string.isRequired,
-  myGcID: PropTypes.number.isRequired,
-  modifyProfile: PropTypes.bool.isRequired,
+  id: PropTypes.string,
+  accessToken: PropTypes.string,
+  myGcID: PropTypes.string,
+  modifyProfile: PropTypes.bool,
 };
 
 export default connect(mapStateToProps)(GQLProfileCard);

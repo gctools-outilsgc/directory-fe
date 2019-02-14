@@ -3,7 +3,7 @@ import React from 'react';
 // import { Button } from 'reactstrap';
 /* eslint react/prop-types: 0 */
 
-const OnboardNav = (props) => {
+export const OnboardNav = (props) => {
   const dots = [];
   const words = [
     '',

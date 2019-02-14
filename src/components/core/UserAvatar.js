@@ -14,7 +14,7 @@ const mapStateToProps = ({ user }) => {
   return props;
 };
 
-const UserAvatar = (props) => {
+export const UserAvatar = (props) => {
   const {
     myGcID,
     accessToken,

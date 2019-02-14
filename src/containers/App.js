@@ -29,12 +29,6 @@ import ProfileSearch from '../components/core/ProfileSearch';
 import enFip from '../assets/imgs/sig-en-w.png';
 
 export class App extends Component {
-  static propTypes = {
-    /** Login event callback  */
-    onLogin: PropTypes.func.isRequired,
-    /** Logout event callback */
-    onLogout: PropTypes.func.isRequired,
-  }
   static toggleLanguage(e) {
     if (e) e.preventDefault();
     localizer.setLanguage(((localizer.lang === 'en_CA') ? 'fr_CA' : 'en_CA'));
@@ -121,6 +115,18 @@ export class App extends Component {
     );
   }
 }
+
+App.defaultProps = {
+  onLogin: () => {},
+  onLogout: () => {},
+};
+
+App.propTypes = {
+  /** Login event callback  */
+  onLogin: PropTypes.func,
+  /** Logout event callback */
+  onLogout: PropTypes.func,
+};
 
 const mapStToProps = ({ showError }) => ({ showError: showError || [] });
 

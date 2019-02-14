@@ -70,7 +70,7 @@ const customTransitions = {
   exitLeft: 'fadeIn animated',
 };
 
-const OnboardMod = (props) => {
+export const OnboardMod = (props) => {
   const {
     myGcID,
     accessToken,

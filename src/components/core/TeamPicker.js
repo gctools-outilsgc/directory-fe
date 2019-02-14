@@ -8,11 +8,6 @@ import { Query } from 'react-apollo';
 
 
 class TeamPicker extends React.Component {
-  static propTypes = {
-    selectedOrgTier: PropTypes.number.isRequired,
-    onTeamChange: PropTypes.func.isRequired,
-    supervisor: PropTypes.shape({}).isRequired,
-  }
   constructor(props) {
     super(props);
     this.state = {
@@ -75,10 +70,8 @@ class TeamPicker extends React.Component {
 
           if (data.profiles && data.profiles.length === 1
             && data.profiles[0].org) {
-              OwnerOfOrgTier = [].concat(
-                [data.profiles[0].org],
-                OwnerOfOrgTier,
-              );
+              OwnerOfOrgTier = []
+                .concat([data.profiles[0].org], OwnerOfOrgTier);
           }
 
           const tierOptions = [];
@@ -120,5 +113,11 @@ class TeamPicker extends React.Component {
     );
   }
 }
+
+TeamPicker.propTypes = {
+  selectedOrgTier: PropTypes.number.isRequired,
+  onTeamChange: PropTypes.func.isRequired,
+  supervisor: PropTypes.shape({}).isRequired,
+};
 
 export default TeamPicker;
