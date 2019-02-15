@@ -6,10 +6,6 @@ import gql from 'graphql-tag';
 import { Query, Mutation } from 'react-apollo';
 
 import {
-  Card,
-  CardBody,
-  CardTitle,
-  CardFooter,
   Button,
   Modal,
   ModalHeader,
@@ -83,7 +79,7 @@ const mapStateToProps = ({ user }) => {
 const style = {
   card: {
     width: '100%',
-    padding: '0 15px 10px 15px',
+    padding: '10px 0 10px 0',
   },
 };
 
@@ -122,13 +118,10 @@ export class GQLTeamCard extends React.Component {
           const supTest = (!userInfo) ? '' : userInfo.supervisor;
           const teamTest = (!userInfo) ? '' : userInfo.org;
           return (
-            <Card style={style.card}>
+            <div style={style.card}>
               {userInfo ? (
                 <div>
-                  <CardBody>
-                    <CardTitle className="profile-card-title">
-                          Teams
-                    </CardTitle>
+                  <div>
                     <Row>
                       <Col>
                         <div className="font-weight-bold">
@@ -148,8 +141,8 @@ export class GQLTeamCard extends React.Component {
                         {teamTest ? teamTest.nameEn : 'None'}
                       </Col>
                     </Row>
-                  </CardBody>
-                  <CardFooter>
+                  </div>
+                  <div>
                     {canEdit ?
                       <div className="profile-card-footer">
                         <Button
@@ -241,12 +234,12 @@ export class GQLTeamCard extends React.Component {
                       </div> :
                           ''
                       }
-                  </CardFooter>
+                  </div>
                 </div>
               ) : (
-                <CardBody>Cannot find GCID</CardBody>
+                <div>Cannot find GCID</div>
               )}
-            </Card>
+            </div>
           );
       }}
       </Query>
