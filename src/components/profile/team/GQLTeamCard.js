@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
 
 import { connect } from 'react-redux';
 import gql from 'graphql-tag';
@@ -125,7 +127,7 @@ export class GQLTeamCard extends React.Component {
                     <Row>
                       <Col>
                         <div className="font-weight-bold">
-                                  Supervisor
+                          {__('Supervisor')}
                         </div>
                         <div>
                           {supTest ? supTest.name : 'None'}
@@ -136,7 +138,7 @@ export class GQLTeamCard extends React.Component {
                       </Col>
                       <Col>
                         <div className="font-weight-bold">
-                                  Team
+                          {__('Team')}
                         </div>
                         {teamTest ? teamTest.nameEn : 'None'}
                       </Col>
@@ -151,11 +153,11 @@ export class GQLTeamCard extends React.Component {
                           color="primary"
                           onClick={this.toggle}
                         >
-                          Edit
+                          {__('Edit')}
                         </Button>
                         <Modal isOpen={this.state.modal} toggle={this.toggle}>
                           <ModalHeader toggle={this.toggle}>
-                            Edit Team
+                            {__('Edit Team')}
                           </ModalHeader>
                           <ModalBody>
                             <Mutation
@@ -226,7 +228,7 @@ export class GQLTeamCard extends React.Component {
                               )}
                             </Mutation>
                             <Button color="primary" onClick={this.toggle}>
-                              Close this
+                              {__('Cancel')}
                             </Button>
                           </ModalBody>
 
@@ -237,7 +239,7 @@ export class GQLTeamCard extends React.Component {
                   </div>
                 </div>
               ) : (
-                <div>Cannot find GCID</div>
+                <div>{__('Cannot find GCID')}</div>
               )}
             </div>
           );
@@ -261,4 +263,4 @@ GQLTeamCard.propTypes = {
   modifyProfile: PropTypes.bool,
 };
 
-export default connect(mapStateToProps)(GQLTeamCard);
+export default connect(mapStateToProps)(LocalizedComponent(GQLTeamCard));

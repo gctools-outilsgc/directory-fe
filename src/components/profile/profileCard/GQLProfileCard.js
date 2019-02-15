@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
 
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
@@ -75,7 +77,7 @@ export const GQLProfileCard = (props) => {
               <div>
                 <CardBody>
                   <CardTitle className="profile-card-title">
-                    <div>Profile</div>
+                    <div>{__('Profile')}</div>
                   </CardTitle>
                   <LocalizedProfileCardDisplay
                     user={userInfo}
@@ -89,7 +91,7 @@ export const GQLProfileCard = (props) => {
                     /> : ''}
                 </CardFooter>
               </div>
-            ) : (<CardBody>Cannot find GCID</CardBody>)}
+            ) : (<CardBody>{__('Cannot find GCID')}</CardBody>)}
           </Card>
         );
     }}
@@ -111,4 +113,4 @@ GQLProfileCard.propTypes = {
   modifyProfile: PropTypes.bool,
 };
 
-export default connect(mapStateToProps)(GQLProfileCard);
+export default connect(mapStateToProps)(LocalizedComponent(GQLProfileCard));
