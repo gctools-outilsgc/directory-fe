@@ -4,8 +4,7 @@ import ReactRouterPropTypes from 'react-router-prop-types';
 
 import ConnectedGQLProfileCard
   from '../components/profile/profileCard/GQLProfileCard';
-import ConnectedGQLTeamCard from '../components/profile/team/GQLTeamCard';
-
+import TeamCardHolder from '../components/profile/team/TeamCardHolder';
 
 const Profile = ({ match }) => (
   <Container>
@@ -13,7 +12,7 @@ const Profile = ({ match }) => (
       <ConnectedGQLProfileCard id={match.params.id} />
     </Row>
     <Row className="mt-3">
-      <ConnectedGQLTeamCard id={match.params.id} />
+      <TeamCardHolder id={match.params.id} />
     </Row>
   </Container>
 );
