@@ -16,15 +16,15 @@ msgstr ""
 
 #: 130:27 src/components/profile/team/GQLTeamCard.js
 msgid "Supervisor"
-msgstr ""
+msgstr "Superviseur"
 
 #: 141:27 src/components/profile/team/GQLTeamCard.js
 msgid "Team"
-msgstr ""
+msgstr "Équipes"
 
 #: 156:27 src/components/profile/team/GQLTeamCard.js
 msgid "Edit"
-msgstr ""
+msgstr "Modifier"
 
 #: 160:29 src/components/profile/team/GQLTeamCard.js
 msgid "Edit Team"
@@ -32,7 +32,7 @@ msgstr ""
 
 #: 231:31 src/components/profile/team/GQLTeamCard.js
 msgid "Cancel"
-msgstr ""
+msgstr "Annuler"
 
 #: 242:22 src/components/profile/team/GQLTeamCard.js
 msgid "Cannot find GCID"

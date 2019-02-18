@@ -16,5 +16,5 @@ msgstr ""
 
 #: 51:15 src/components/profile/team/TeamCardHolder.js
 msgid "Teams"
-msgstr ""
+msgstr "Équipes"
 

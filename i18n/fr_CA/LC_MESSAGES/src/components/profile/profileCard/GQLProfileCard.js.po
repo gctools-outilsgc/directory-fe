@@ -16,9 +16,9 @@ msgstr ""
 
 #: 80:26 src/components/profile/profileCard/GQLProfileCard.js
 msgid "Profile"
-msgstr ""
+msgstr "Profil"
 
 #: 94:28 src/components/profile/profileCard/GQLProfileCard.js
 msgid "Cannot find GCID"
-msgstr ""
+msgstr "Le profil spécifié n'existe pas."
 
