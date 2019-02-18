@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import { connect } from 'react-redux';
 
@@ -11,34 +10,13 @@ import LocalizedProfileCardDisplay from './ProfileCardDisplay';
 import LocalizedEditProfile from './EditProfile';
 import Loading from './Loading';
 
-export const PROFILE_INFO_QUERY = gql`
-query profileInfoQuery($gcID: String!) {
-  profiles(gcID: $gcID) {
-    gcID
-    name
-    email
-    avatar
-    mobilePhone
-    officePhone
-    address {
-      id
-      streetAddress
-      city
-      province
-      postalCode
-      country
-    }
-    titleEn
-    titleFr
-  }
-}`;
+import { GET } from '../../../gql/profile';
 
 const mapStateToProps = ({ user }) => {
   const props = {};
   if (user) {
     props.accessToken = user.access_token;
     props.myGcID = user.profile.sub;
-    props.modifyProfile = user.profile.modify_profile === 'True';
   }
   return props;
 };
@@ -55,14 +33,13 @@ export const GQLProfileCard = (props) => {
     id,
     accessToken,
     myGcID,
-    modifyProfile,
   } = props;
 
-  const canEdit = (accessToken !== '') && modifyProfile && (id === myGcID);
+  const canEdit = (accessToken !== '') && (id === myGcID);
 
   return (
     <Query
-      query={PROFILE_INFO_QUERY}
+      query={GET}
       variables={{ gcID: (String(id)) }}
     >
       {({ loading, error, data }) => {
@@ -101,14 +78,12 @@ GQLProfileCard.defaultProps = {
   id: undefined,
   accessToken: undefined,
   myGcID: undefined,
-  modifyProfile: undefined,
 };
 
 GQLProfileCard.propTypes = {
   id: PropTypes.string,
   accessToken: PropTypes.string,
   myGcID: PropTypes.string,
-  modifyProfile: PropTypes.bool,
 };
 
 export default connect(mapStateToProps)(GQLProfileCard);

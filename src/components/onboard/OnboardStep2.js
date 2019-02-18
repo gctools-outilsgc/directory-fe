@@ -4,18 +4,11 @@ import PropTypes from 'prop-types';
 import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
 
-import gql from 'graphql-tag';
 import { Mutation } from 'react-apollo';
 
 import { Button, Form, Row, Col } from 'reactstrap';
 
-const MODIFY_PROFILE_MUTATION = gql`
-mutation modifyPr($gcID: String!, $profileInfo: ModifyProfileInput!) {
-  modifyProfile(gcId: $gcID, profileInfo: $profileInfo) {
-    gcID
-  }
-}
-`;
+import { EDIT, prepareEditProfile } from '../../gql/profile';
 
 export class OnboardStep2 extends Component {
   constructor(props) {
@@ -36,17 +29,10 @@ export class OnboardStep2 extends Component {
   render() {
     const {
       userObject,
-      token,
     } = this.props;
     return (
       <Mutation
-        mutation={MODIFY_PROFILE_MUTATION}
-        context={{
-          headers: {
-            Authorization:
-              `Bearer ${token}`,
-          },
-        }}
+        mutation={EDIT}
       >
         {modifyProfile => (
           <div className="basic-form-holder">
@@ -56,17 +42,19 @@ export class OnboardStep2 extends Component {
             <Form
               onSubmit={(e) => {
                 e.preventDefault();
-                modifyProfile({
-                  variables: {
-                    gcID: (String(userObject.gcID)),
-                    profileInfo: {
-                      name: this.state.name,
-                      email: this.state.email,
-                      titleEn: this.state.titleEn,
-                      titleFr: this.state.titleFr,
-                    },
-                  },
-                });
+                const {
+                  name,
+                  email,
+                  titleEn,
+                  titleFr,
+                } = this.state;
+                modifyProfile(prepareEditProfile({
+                  gcID: userObject.gcID,
+                  name,
+                  email,
+                  titleEn,
+                  titleFr,
+                }));
                 this.props.nextStep();
             }}
             >
@@ -183,7 +171,6 @@ OnboardStep2.propTypes = {
     titleEn: PropTypes.string,
     titleFr: PropTypes.string,
   }),
-  token: PropTypes.string.isRequired,
   nextStep: PropTypes.func,
 };
 export default LocalizedComponent(OnboardStep2);

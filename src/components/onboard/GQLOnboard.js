@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 
 import { connect } from 'react-redux';
@@ -15,50 +14,13 @@ import LocalizedOnboardStep4 from './OnboardStep4';
 import LocalizedOnboardStep5 from './OnboardStep5';
 import LocalizedOnboardStep6 from './OnboardStep6';
 
-const PROFILE_INFO_QUERY = gql`
-query profileInfoQuery($gcID: String!) {
-  profiles(gcID: $gcID) {
-    gcID
-    name
-    email
-    avatar
-    mobilePhone
-    officePhone
-    supervisor {
-      gcID
-      name
-    }
-    address {
-      id
-      streetAddress
-      city
-      province
-      postalCode
-      country
-    }
-    titleEn
-    titleFr
-    org {
-      id
-      nameEn
-      nameFr
-      organization {
-        id
-        nameEn
-        nameFr
-        acronymEn
-        acronymFr
-      }
-    }
-  }
-}`;
+import { GET } from '../../gql/profile';
 
 const mapStateToProps = ({ user }) => {
   const props = {};
   if (user) {
     props.accessToken = user.access_token;
     props.myGcID = user.profile.sub;
-    props.modifyProfile = user.profile.modify_profile === 'True';
   }
   return props;
 };
@@ -81,7 +43,7 @@ export const OnboardMod = (props) => {
     <Query
       variables={{ gcID: (String(myGcID)) }}
       skip={canSkip}
-      query={PROFILE_INFO_QUERY}
+      query={GET}
     >
       {({ loading, error, data }) => {
         if (loading) return 'loading ...';
@@ -111,7 +73,7 @@ export const OnboardMod = (props) => {
                   token={accessToken}
                 />
                 <LocalizedOnboardStep6
-                  forwardID={userInfo.gcID}
+                  forwardID={myGcID}
                 />
               </StepWizard>
             )}
@@ -122,9 +84,14 @@ export const OnboardMod = (props) => {
   );
 };
 
+OnboardMod.defaultProps = {
+  myGcID: undefined,
+  accessToken: undefined,
+};
+
 OnboardMod.propTypes = {
-  myGcID: PropTypes.string.isRequired,
-  accessToken: PropTypes.string.isRequired,
+  myGcID: PropTypes.string,
+  accessToken: PropTypes.string,
 };
 
 export default connect(mapStateToProps)(OnboardMod);

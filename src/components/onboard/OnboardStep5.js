@@ -4,44 +4,11 @@ import PropTypes from 'prop-types';
 import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
 
-import gql from 'graphql-tag';
 import { Query, Mutation } from 'react-apollo';
 
 import { Button, Row, Col } from 'reactstrap';
 
-import TeamPicker from '../core/TeamPicker';
-import SupervisorPicker from '../core/SupervisorPicker';
-
-const orgTeamQuery = gql`
-query orgTeamQuery($gcID: String!) {
-  profiles(gcID: $gcID) {
-    gcID
-    supervisor {
-      gcID
-      name
-    }
-    org {
-      id
-      nameEn
-      nameFr
-      organization {
-        id
-        nameEn
-        nameFr
-        acronymEn
-        acronymFr
-      }
-    }
-  }
-}`;
-
-const modifyProfileMutation = gql`
-mutation modifyPr($gcID: String!, $profileInfo: ModifyProfileInput!) {
-  modifyProfile(gcId: $gcID, profileInfo: $profileInfo) {
-    gcID
-  }
-}
-`;
+import { GET, EDIT } from '../../gql/profile';
 
 export class OnboardStep5 extends Component {
   constructor(props) {
@@ -75,13 +42,14 @@ export class OnboardStep5 extends Component {
     return (
       <Query
         variables={{ gcID: (String(userObject.gcID)) }}
-        query={orgTeamQuery}
+        query={GET}
       >
         {({ loading, error, data }) => {
           if (loading) return 'Loading...';
           if (error) return `Error! ${error.message}`;
-          const orgTest = data.profiles[0].org;
-          const supTest = data.profiles[0].supervisor;
+          const [profile] = data.profiles;
+          const orgTest = (profile && profile.org);
+          const supTest = (profile && profile.supervisor);
           return (
             <div>
               <h1 className="h3 border-bottom mb-2 pb-2">
@@ -99,9 +67,9 @@ export class OnboardStep5 extends Component {
                     if (this.state.supEdit) {
                       return (
                         <Mutation
-                          mutation={modifyProfileMutation}
+                          mutation={EDIT}
                           refetchQueries={[{
-                            query: orgTeamQuery,
+                            query: GET,
                             variables: { gcID: String(userObject.gcID) },
                           }]}
                           context={{
@@ -112,24 +80,9 @@ export class OnboardStep5 extends Component {
                           }
                           }
                         >
-                          {modifyProfile => (
+                          {() => (
                             <div className="onboard-profile">
                               {__('Supervisor')}
-                              <SupervisorPicker
-                                onResultSelect={(s) => {
-                                modifyProfile({
-                                  variables: {
-                                    gcID: String(userObject.gcID),
-                                    profileInfo: {
-                                      supervisor: {
-                                        gcId: s,
-                                      },
-                                    },
-                                  },
-                                });
-                                this.editSup(this.state.supEdit);
-                              }}
-                              />
                             </div>
                           )}
                         </Mutation>
@@ -156,9 +109,9 @@ export class OnboardStep5 extends Component {
                     if (this.state.orgEdit) {
                       return (
                         <Mutation
-                          mutation={modifyProfileMutation}
+                          mutation={EDIT}
                           refetchQueries={[{
-                            query: orgTeamQuery,
+                            query: GET,
                             variables: { gcID: String(userObject.gcID) },
                           }]}
                           context={{
@@ -169,29 +122,9 @@ export class OnboardStep5 extends Component {
                           }
                           }
                         >
-                          {modifyProfile => (
+                          {() => (
                             <div>
                               {__('Teams')}
-                              <TeamPicker
-                                id="idTest"
-                                editMode
-                                selectedOrgTier={orgTest}
-                                supervisor={supTest}
-                                gcID={userObject.gcID}
-                                onTeamChange={(t) => {
-                                  this.editOrg(this.state.orgEdit);
-                                  modifyProfile({
-                                    variables: {
-                                      gcID: String(userObject.gcID),
-                                      profileInfo: {
-                                        org: {
-                                          orgTierId: t,
-                                        },
-                                      },
-                                    },
-                                  });
-                                }}
-                              />
                             </div>
                           )}
                         </Mutation>
