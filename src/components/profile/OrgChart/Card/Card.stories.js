@@ -15,7 +15,7 @@ const user = {
   title: sampleOrgChart.title.en_CA,
 };
 
-storiesOf('OrgChart/Card Component', module)
+storiesOf('OrgChart/Card', module)
   .add(
     'Only required options',
     () => (

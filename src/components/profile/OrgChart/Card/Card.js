@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import { Button } from 'reactstrap';
 
+import styled from 'styled-components';
+
 import './css/card.css';
 
 class Card extends React.PureComponent {
@@ -52,50 +54,90 @@ class Card extends React.PureComponent {
   }
 
   render() {
-    const classes = [
-      'card',
-      (this.props.active) ? 'card-active' : '',
-      (this.props.blurred) ? 'card-blur' : '',
-      (this.props.dragging) ? 'being-dragged' : 'clickable',
-    ];
+    const { active, blurred, dragging } = this.props;
+
+    const StyledCard = styled.a`
+      :hover {
+        box-shadow: 0 1px 5px rgba(0,0,0,0.25), 0 1px 10px rgba(0,0,0,0.22);
+        color: inherit;
+      }
+      --line-colour: rgba(93,193,190, 1);
+      background: ${((active) ? '#5DC1BE' : '#467B8D')};
+      opacity: ${((blurred) ? '0.6' : '1')};
+      border-radius: 2px;
+      width: 350px;
+      height: 75px;
+      display: flex;
+      justify-content: space-between;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+      text-decoration: none;
+      color: inherit;
+      ${blurred && 'overflow: hidden;'}
+      cursor: ${((dragging) ? 'grab' : 'pointer')};
+    `;
+
+    const Avatar = styled.img`
+      max-width: 75px !important;
+      min-width: 75px !important;
+      overflow: hidden;
+      object-fit: cover;
+      padding: 2px;
+    `;
+
+    const CardInfo = styled.div`
+      align-self: center;
+      padding: 0 10px;
+      width: 100%;
+    `;
+
+    const CardName = styled.div`
+      font-family: "rubik", sans-serif;
+      font-size: 1.2em;
+    `;
+
+    const CardTitle = styled.div`
+      font-family: "nunito", sans-serif;
+    `;
+
+    const CardButton = styled.div`
+      align-self: center;
+      padding-right: 10px;
+    `;
 
     return (
-      <a
+      <StyledCard
         href={this.props.cardClickUrl}
         onClick={this.cardClick}
         aria-label={this.props.label}
         tabIndex="0"
         ref={this.element}
-        className={classes.join(' ')}
         style={{
           position: 'absolute',
           left: this.props.position.x,
           top: this.props.position.y,
         }}
       >
-        <img
+        <Avatar
           name="user"
-          className="card-avatar"
           src={this.props.avatar}
           alt={this.props.avatarText}
         />
-        <div className="card-info">
-          <div
-            className="card-name"
+        <CardInfo>
+          <CardName
             role="heading"
             aria-level={1}
           >
             {this.props.name}
-          </div>
-          <div
-            className="card-title"
+          </CardName>
+          <CardTitle
             role="heading"
             aria-level={2}
           >
             {this.props.title}
-          </div>
-        </div>
-        <div className="card-button">
+          </CardTitle>
+        </CardInfo>
+        <CardButton>
           <Button
             tabIndex="0"
             onClick={this.buttonClick}
@@ -104,8 +146,8 @@ class Card extends React.PureComponent {
           >
             {this.props.buttonTitle}
           </Button>
-        </div>
-      </a>
+        </CardButton>
+      </StyledCard>
     );
   }
 }

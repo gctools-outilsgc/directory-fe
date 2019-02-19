@@ -1,3 +1,4 @@
+/* eslint-disable comma-dangle */
 import React from 'react';
 
 import PropTypes from 'prop-types';
@@ -49,7 +50,7 @@ class CardContainer extends React.Component {
             this.container.current.scrollTo({
               left: nextProps.selectedCard.x - scrollXDiff,
               top: nextProps.selectedCard.y - scrollYDiff,
-              behavior: 'auto',
+              behavior: 'auto'
             });
           }, 0);
         } else {
@@ -76,7 +77,7 @@ class CardContainer extends React.Component {
         this.container.current.scrollTo({
           top: y,
           left: x,
-          behavior: 'smooth',
+          behavior: 'smooth'
         });
       });
     }
@@ -133,14 +134,14 @@ class CardContainer extends React.Component {
       if (!str) return str;
       return Object.keys(node).reduce(
         (r, i) => r.replace(`!${i}!`, node[i]),
-        str,
+        str
       );
     };
 
     const svgWidth = Math
       .max(
         Math.max(...this.props.cards.map(b => b.x)) + this.props.cardWidth,
-        this.oldWidth,
+        this.oldWidth
       );
     const svgHeight =
       Math.max(...this.props.cards.map(b => b.y), this.oldHeight);
@@ -240,10 +241,10 @@ CardContainer.propTypes = {
       avatar: PropTypes.string,
       name: PropTypes.string,
       title: PropTypes.string,
-      x: PropTypes.number,
-      y: PropTypes.number,
-      on_path: PropTypes.bool,
     }),
+    x: PropTypes.number,
+    y: PropTypes.number,
+    on_path: PropTypes.bool,
   })),
   /** Array of lines to draw */
   lines: PropTypes.arrayOf(PropTypes.shape({

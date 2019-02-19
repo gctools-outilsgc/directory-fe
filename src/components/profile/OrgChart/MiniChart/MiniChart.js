@@ -37,12 +37,11 @@ const MiniChartWrapper = (() => {
       lines,
       style,
     } = props;
-
     const Card = props.cardComponent || MiniCard;
     const svgWidth = Math.max(0, ...cards.map(b => b.x))
-    + ((cards.length) ? cards[0].node.width : 0);
+    + ((cards.length) ? cards[0].width : 0);
     const svgHeight = Math.max(0, ...cards.map(b => b.y))
-    + ((cards.length) ? cards[0].node.height : 0);
+    + ((cards.length) ? cards[0].height : 0);
 
     const ox1 = (props.overlay) ? props.overlay.x1 : 0;
     const ox2 = (props.overlay) ? props.overlay.x2 : 0;
@@ -57,7 +56,8 @@ const MiniChartWrapper = (() => {
         width: `${ox2 - ox1}px`,
         top: oy1,
         height: `${oy2 - oy1}px`,
-      },
+      // eslint-disable-next-line comma-dangle
+      }
     );
 
     return (
@@ -95,8 +95,8 @@ const MiniChartWrapper = (() => {
             title={card.node.title}
             blurred={!card.on_path}
             active={(props.selectedNode === card.node)}
-            width={card.node.width}
-            height={card.node.height}
+            width={card.width}
+            height={card.height}
             position={{
               x: card.x,
               y: card.y,

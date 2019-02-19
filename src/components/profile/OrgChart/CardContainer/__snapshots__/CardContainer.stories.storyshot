@@ -38,10 +38,6 @@ exports[`FileProperties OrgChart/CardContainer With no selected card 1`] = `
     >
       <path
         className=""
-        d="M 995 75 v 30 h -205 V 230 H 175 V 270"
-      />
-      <path
-        className=""
         d="M 995 75 v 30 H 175 V 135"
       />
       <path
@@ -62,7 +58,7 @@ exports[`FileProperties OrgChart/CardContainer With no selected card 1`] = `
       />
       <path
         className=""
-        d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
+        d="M 995 75 v 30 h -205 V 230 H 175 V 270"
       />
       <path
         className=""
@@ -75,6 +71,10 @@ exports[`FileProperties OrgChart/CardContainer With no selected card 1`] = `
       <path
         className=""
         d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
       />
       <path
         className=""
@@ -794,10 +794,6 @@ exports[`FileProperties OrgChart/CardContainer with button title 1`] = `
     >
       <path
         className=""
-        d="M 995 75 v 30 h -205 V 230 H 175 V 270"
-      />
-      <path
-        className=""
         d="M 995 75 v 30 H 175 V 135"
       />
       <path
@@ -818,7 +814,7 @@ exports[`FileProperties OrgChart/CardContainer with button title 1`] = `
       />
       <path
         className=""
-        d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
+        d="M 995 75 v 30 h -205 V 230 H 175 V 270"
       />
       <path
         className=""
@@ -831,6 +827,10 @@ exports[`FileProperties OrgChart/CardContainer with button title 1`] = `
       <path
         className=""
         d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
       />
       <path
         className=""
@@ -1550,10 +1550,6 @@ exports[`FileProperties OrgChart/CardContainer with cardClickUrl 1`] = `
     >
       <path
         className=""
-        d="M 995 75 v 30 h -205 V 230 H 175 V 270"
-      />
-      <path
-        className=""
         d="M 995 75 v 30 H 175 V 135"
       />
       <path
@@ -1574,7 +1570,7 @@ exports[`FileProperties OrgChart/CardContainer with cardClickUrl 1`] = `
       />
       <path
         className=""
-        d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
+        d="M 995 75 v 30 h -205 V 230 H 175 V 270"
       />
       <path
         className=""
@@ -1587,6 +1583,10 @@ exports[`FileProperties OrgChart/CardContainer with cardClickUrl 1`] = `
       <path
         className=""
         d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
       />
       <path
         className=""
@@ -2306,10 +2306,6 @@ exports[`FileProperties OrgChart/CardContainer with click handlers 1`] = `
     >
       <path
         className=""
-        d="M 995 75 v 30 h -205 V 230 H 175 V 270"
-      />
-      <path
-        className=""
         d="M 995 75 v 30 H 175 V 135"
       />
       <path
@@ -2330,7 +2326,7 @@ exports[`FileProperties OrgChart/CardContainer with click handlers 1`] = `
       />
       <path
         className=""
-        d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
+        d="M 995 75 v 30 h -205 V 230 H 175 V 270"
       />
       <path
         className=""
@@ -2343,6 +2339,10 @@ exports[`FileProperties OrgChart/CardContainer with click handlers 1`] = `
       <path
         className=""
         d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
       />
       <path
         className=""
@@ -3066,10 +3066,6 @@ exports[`FileProperties OrgChart/CardContainer with custom styles (backgroundCol
     >
       <path
         className=""
-        d="M 995 75 v 30 h -205 V 230 H 175 V 270"
-      />
-      <path
-        className=""
         d="M 995 75 v 30 H 175 V 135"
       />
       <path
@@ -3090,7 +3086,7 @@ exports[`FileProperties OrgChart/CardContainer with custom styles (backgroundCol
       />
       <path
         className=""
-        d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
+        d="M 995 75 v 30 h -205 V 230 H 175 V 270"
       />
       <path
         className=""
@@ -3103,6 +3099,10 @@ exports[`FileProperties OrgChart/CardContainer with custom styles (backgroundCol
       <path
         className=""
         d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
       />
       <path
         className=""
@@ -3822,10 +3822,6 @@ exports[`FileProperties OrgChart/CardContainer with selectedCard 1`] = `
     >
       <path
         className=""
-        d="M 995 75 v 30 h -205 V 230 H 175 V 270"
-      />
-      <path
-        className=""
         d="M 995 75 v 30 H 175 V 135"
       />
       <path
@@ -3846,7 +3842,7 @@ exports[`FileProperties OrgChart/CardContainer with selectedCard 1`] = `
       />
       <path
         className=""
-        d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
+        d="M 995 75 v 30 h -205 V 230 H 175 V 270"
       />
       <path
         className=""
@@ -3859,6 +3855,10 @@ exports[`FileProperties OrgChart/CardContainer with selectedCard 1`] = `
       <path
         className=""
         d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
       />
       <path
         className=""

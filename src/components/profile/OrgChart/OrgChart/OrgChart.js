@@ -111,6 +111,7 @@ class OrgChart extends React.Component {
   }
 
   trackScrolling({ target }) {
+    console.time('scroll');
     this.setState({
       scrollY: target.scrollTop,
       scrollX: target.scrollLeft,
@@ -162,7 +163,8 @@ class OrgChart extends React.Component {
     const rect = this.miniChartComponent.current.getBoundingClientRect();
     this.scrollContainerToOverlayCoord(
       e.clientX - rect.left,
-      e.clientY - rect.top,
+      // eslint-disable-next-line comma-dangle
+      e.clientY - rect.top
     );
   }
 
@@ -170,7 +172,8 @@ class OrgChart extends React.Component {
     const rect = this.miniChartComponent.current.getBoundingClientRect();
     this.scrollContainerToOverlayCoord(
       e.clientX - rect.left,
-      e.clientY - rect.top,
+      // eslint-disable-next-line comma-dangle
+      e.clientY - rect.top
     );
   }
 
@@ -187,28 +190,32 @@ class OrgChart extends React.Component {
         case 37: { // left
           this.scrollContainerToOverlayCoord(
             (coord.x1 + (overlayWidth / 2)) - stepX,
-            coord.y1 + (overlayHeight / 2),
+            // eslint-disable-next-line comma-dangle
+            coord.y1 + (overlayHeight / 2)
           );
           break;
         }
         case 38: { // up
           this.scrollContainerToOverlayCoord(
             coord.x1 + (overlayWidth / 2),
-            (coord.y1 + (overlayHeight / 2)) - stepY,
+            // eslint-disable-next-line comma-dangle
+            (coord.y1 + (overlayHeight / 2)) - stepY
           );
           break;
         }
         case 39: { // right
           this.scrollContainerToOverlayCoord(
             (coord.x1 + (overlayWidth / 2)) + stepX,
-            coord.y1 + (overlayHeight / 2),
+            // eslint-disable-next-line comma-dangle
+            coord.y1 + (overlayHeight / 2)
           );
           break;
         }
         case 40: { // down
           this.scrollContainerToOverlayCoord(
             coord.x1 + (overlayWidth / 2),
-            (coord.y1 + (overlayHeight / 2)) + stepY,
+            // eslint-disable-next-line comma-dangle
+            (coord.y1 + (overlayHeight / 2)) + stepY
           );
           break;
         }
@@ -232,7 +239,8 @@ class OrgChart extends React.Component {
     this.cardContainer.current.container.current.scrollTo({
       top: newTop,
       left: newLeft,
-      behavior: 'auto',
+      // eslint-disable-next-line comma-dangle
+      behavior: 'auto'
     });
   }
 
@@ -241,7 +249,8 @@ class OrgChart extends React.Component {
       const overlay = Object.assign(
         {},
         { style: this.props.miniOverlayStyle },
-        this.getMiniChartOffsetCoordinates(),
+        // eslint-disable-next-line comma-dangle
+        this.getMiniChartOffsetCoordinates()
       );
       return (
         <div
@@ -270,13 +279,15 @@ class OrgChart extends React.Component {
   }
 
   render() {
+    console.time('render');
     const UseMenu = this.props.menuComponent || Menu;
     const MoveToActive = this.props.moveToActiveComponent || (props => (
       <button {...props}>{this.props.moveToActiveText}</button>
     ));
     const searchComponent =
       (this.props.searchComponent) ? this.props.searchComponent : undefined;
-    return (
+
+    const bla = (
       <div>
         {this.renderMiniChart()}
         <UseMenu>
@@ -303,6 +314,9 @@ class OrgChart extends React.Component {
         </div>
       </div>
     );
+    console.timeEnd('render');
+    console.timeEnd('scroll');
+    return bla;
   }
 }
 
