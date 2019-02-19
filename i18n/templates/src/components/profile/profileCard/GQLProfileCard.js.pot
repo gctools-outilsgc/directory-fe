@@ -1,0 +1,16 @@
+msgid ""
+msgstr ""
+"Language : en\n"
+"Plural-Forms : nplurals=2; plural=(n != 1);\n"
+"MIME-Version : 1.0\n"
+"Content-Type : text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding : 8bit\n"
+
+#: src/components/profile/profileCard/GQLProfileCard.js 80:26
+msgid "Profile"
+msgstr ""
+
+#: src/components/profile/profileCard/GQLProfileCard.js 94:28
+msgid "Cannot find GCID"
+msgstr ""
+

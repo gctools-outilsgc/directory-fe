@@ -16,49 +16,49 @@ msgstr ""
 
 #: 102:84 src/components/profile/profileCard/EditProfile.js
 msgid "Full name"
-msgstr ""
+msgstr "Nom complet"
 
 #: 119:80 src/components/profile/profileCard/EditProfile.js
 msgid "Work email"
-msgstr ""
+msgstr "Courriel de travail"
 
 #: 139:80 src/components/profile/profileCard/EditProfile.js
 msgid "English job title"
-msgstr ""
+msgstr "Titre du poste en anglais"
 
 #: 155:80 src/components/profile/profileCard/EditProfile.js
 msgid "French job title"
-msgstr ""
+msgstr "Titre du poste en français"
 
 #: 174:80 src/components/profile/profileCard/EditProfile.js
 msgid "Address"
-msgstr ""
+msgstr "Numéro et nom de rue"
 
 #: 190:80 src/components/profile/profileCard/EditProfile.js
 msgid "City"
-msgstr ""
+msgstr "Ville"
 
 #: 206:80 src/components/profile/profileCard/EditProfile.js
 msgid "Province"
-msgstr ""
+msgstr "Province"
 
 #: 222:80 src/components/profile/profileCard/EditProfile.js
 msgid "Postal Code"
-msgstr ""
+msgstr "Code postal"
 
 #: 238:80 src/components/profile/profileCard/EditProfile.js
 msgid "Country"
-msgstr ""
+msgstr "Pays"
 
 #: 257:84 src/components/profile/profileCard/EditProfile.js
 msgid "Office Phone Number"
-msgstr ""
+msgstr "Numéro de téléphone au travail"
 
 #: 278:80 src/components/profile/profileCard/EditProfile.js
 msgid "Mobile Phone Number"
-msgstr ""
+msgstr "Numéro de téléphone cellulaire"
 
 #: 307:45 src/components/profile/profileCard/EditProfile.js
 msgid "Save"
-msgstr ""
+msgstr "Enregistrer"
 
