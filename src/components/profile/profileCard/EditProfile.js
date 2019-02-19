@@ -12,7 +12,11 @@ import {
   ModalHeader,
   Form,
   Row,
-  Col
+  Col,
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
 } from 'reactstrap';
 
 import { EDIT, prepareEditProfile } from '../../../gql/profile';
@@ -31,6 +35,7 @@ export class EditProfile extends Component {
     } = props.profile;
     this.state = {
       modal: false,
+      dropdownOpen: false,
       name: name || '',
       email: email || '',
       titleEn: titleEn || '',
@@ -44,6 +49,7 @@ export class EditProfile extends Component {
       country: (address) ? address.country || '' : '',
     };
     this.toggle = this.toggle.bind(this);
+    this.ddtoggle = this.ddtoggle.bind(this);
   }
 
   toggle() {
@@ -52,20 +58,35 @@ export class EditProfile extends Component {
     });
   }
 
+  ddtoggle() {
+    this.setState(prevState => ({
+      dropdownOpen: !prevState.dropdownOpen,
+    }));
+  }
+
   render() {
     const {
       profile,
     } = this.props;
     return (
-      <div className="profile-card-footer">
-        <Button
-          className="float-right"
-          size="sm"
-          color="primary"
-          onClick={this.toggle}
-        >
-          Edit Profile
-        </Button>
+      <div className="">
+        <Dropdown isOpen={this.state.dropdownOpen} toggle={this.ddtoggle}>
+          <DropdownToggle
+            color="light"
+          >
+            ...
+          </DropdownToggle>
+          <DropdownMenu right>
+            <DropdownItem
+              onClick={this.toggle}
+            >
+              Edit Profile
+            </DropdownItem>
+            <DropdownItem>
+              Placeholder Example
+            </DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
         <Modal
           isOpen={this.state.modal}
           toggle={this.toggle}
