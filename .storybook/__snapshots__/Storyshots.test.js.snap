@@ -79,3 +79,7617 @@ exports[`Storyshots Loading With default options 1`] = `
   </div>
 </div>
 `;
+
+exports[`Storyshots OrgChart Only required options 1`] = `
+<div>
+  <div>
+    <div
+      className="react-gc-orgchart-wrapper-minichart-wrapper"
+    >
+      <div
+        className="react-gc-orgchart-wrapper-minichart"
+      >
+        <div
+          className="react-gc-orgchart-minichart-container"
+          onClick={[Function]}
+          onMouseDown={[Function]}
+          onMouseMove={[Function]}
+          onMouseUp={[Function]}
+          role="tree"
+          style={Object {}}
+          tabIndex={0}
+        >
+          <svg
+            style={
+              Object {
+                "height": 0,
+                "width": 0,
+              }
+            }
+          />
+          <div
+            aria-describedby="test"
+            aria-label="Quick scroll box"
+            className="react-gc-orgchart-minichart-overlay"
+            onKeyUp={[Function]}
+            role="tree"
+            style={
+              Object {
+                "height": "0px",
+                "left": 0,
+                "opacity": 0.3,
+                "position": "absolute",
+                "top": 0,
+                "width": "0px",
+              }
+            }
+            tabIndex={0}
+          />
+          <div
+            id="test"
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+          >
+            Use the keyboard arrow keys to quickly scroll the org chart
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="react-gc-orgchart-wrapper-menu"
+    >
+      <button
+        onClick={[Function]}
+      >
+        Go to me
+      </button>
+    </div>
+    <div
+      className="react-gc-orgchart-wrapper-chart"
+    >
+      <div
+        className="card-container"
+        style={Object {}}
+      >
+        <svg
+          style={
+            Object {
+              "height": 0,
+              "width": 0,
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots OrgChart using minichart 1`] = `
+<div
+  style={
+    Object {
+      "padding": "10px",
+    }
+  }
+>
+  <div>
+    <div
+      className="react-gc-orgchart-wrapper-minichart-wrapper"
+    >
+      <div
+        className="react-gc-orgchart-wrapper-minichart"
+      >
+        <div
+          className="react-gc-orgchart-minichart-container"
+          onClick={[Function]}
+          onMouseDown={[Function]}
+          onMouseMove={[Function]}
+          onMouseUp={[Function]}
+          role="tree"
+          style={Object {}}
+          tabIndex={0}
+        >
+          <svg
+            style={
+              Object {
+                "height": 70,
+                "width": 275,
+              }
+            }
+          >
+            <path
+              className=""
+              d="M 137.5 10 v 5 H 23.5 V 20"
+            />
+            <path
+              className=""
+              d="M 137.5 10 v 5 H 80.5 V 20"
+            />
+            <path
+              className=""
+              d="M 137.5 10 v 5 H 137.5 V 20"
+            />
+            <path
+              className=""
+              d="M 137.5 10 v 5 H 194.5 V 20"
+            />
+            <path
+              className=""
+              d="M 137.5 10 v 5 H 251.5 V 20"
+            />
+            <path
+              className=""
+              d="M 137.5 10 v 5 h -28.5 V 33.333333333333336 H 23.5 V 40"
+            />
+            <path
+              className=""
+              d="M 137.5 10 v 5 h -28.5 V 33.333333333333336 H 80.5 V 40"
+            />
+            <path
+              className=""
+              d="M 137.5 10 v 5 h -28.5 V 33.333333333333336 H 137.5 V 40"
+            />
+            <path
+              className=""
+              d="M 137.5 10 v 5 h -28.5 V 33.333333333333336 H 194.5 V 40"
+            />
+            <path
+              className=""
+              d="M 137.5 10 v 5 h -28.5 V 33.333333333333336 H 251.5 V 40"
+            />
+            <path
+              className=""
+              d="M 137.5 10 v 5 h -28.5 V 53.333333333333336 H 23.5 V 60"
+            />
+            <path
+              className="onPath"
+              d="M 137.5 10 v 5 h -28.5 V 53.333333333333336 H 80.5 V 60"
+            />
+          </svg>
+          <div
+            className="react-gc-orgchart-minichart-minicard-card"
+            style={
+              Object {
+                "height": "10px",
+                "left": 114,
+                "position": "absolute",
+                "top": 0,
+                "width": "47px",
+              }
+            }
+          />
+          <div
+            className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+            style={
+              Object {
+                "height": "10px",
+                "left": 0,
+                "position": "absolute",
+                "top": 20,
+                "width": "47px",
+              }
+            }
+          />
+          <div
+            className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-active"
+            style={
+              Object {
+                "height": "10px",
+                "left": 57,
+                "position": "absolute",
+                "top": 60,
+                "width": "47px",
+              }
+            }
+          />
+          <div
+            className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+            style={
+              Object {
+                "height": "10px",
+                "left": 57,
+                "position": "absolute",
+                "top": 20,
+                "width": "47px",
+              }
+            }
+          />
+          <div
+            className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+            style={
+              Object {
+                "height": "10px",
+                "left": 114,
+                "position": "absolute",
+                "top": 20,
+                "width": "47px",
+              }
+            }
+          />
+          <div
+            className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+            style={
+              Object {
+                "height": "10px",
+                "left": 171,
+                "position": "absolute",
+                "top": 20,
+                "width": "47px",
+              }
+            }
+          />
+          <div
+            className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+            style={
+              Object {
+                "height": "10px",
+                "left": 228,
+                "position": "absolute",
+                "top": 20,
+                "width": "47px",
+              }
+            }
+          />
+          <div
+            className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+            style={
+              Object {
+                "height": "10px",
+                "left": 0,
+                "position": "absolute",
+                "top": 40,
+                "width": "47px",
+              }
+            }
+          />
+          <div
+            className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+            style={
+              Object {
+                "height": "10px",
+                "left": 57,
+                "position": "absolute",
+                "top": 40,
+                "width": "47px",
+              }
+            }
+          />
+          <div
+            className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+            style={
+              Object {
+                "height": "10px",
+                "left": 114,
+                "position": "absolute",
+                "top": 40,
+                "width": "47px",
+              }
+            }
+          />
+          <div
+            className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+            style={
+              Object {
+                "height": "10px",
+                "left": 171,
+                "position": "absolute",
+                "top": 40,
+                "width": "47px",
+              }
+            }
+          />
+          <div
+            className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+            style={
+              Object {
+                "height": "10px",
+                "left": 228,
+                "position": "absolute",
+                "top": 40,
+                "width": "47px",
+              }
+            }
+          />
+          <div
+            className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+            style={
+              Object {
+                "height": "10px",
+                "left": 0,
+                "position": "absolute",
+                "top": 60,
+                "width": "47px",
+              }
+            }
+          />
+          <div
+            aria-describedby="test"
+            aria-label="Quick scroll box"
+            className="react-gc-orgchart-minichart-overlay"
+            onKeyUp={[Function]}
+            role="tree"
+            style={
+              Object {
+                "height": "0px",
+                "left": 0,
+                "opacity": 0.3,
+                "position": "absolute",
+                "top": 0,
+                "width": "0px",
+              }
+            }
+            tabIndex={0}
+          />
+          <div
+            id="test"
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+          >
+            Use the keyboard arrow keys to quickly scroll the org chart
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="react-gc-orgchart-wrapper-menu"
+    >
+      <button
+        onClick={[Function]}
+      >
+        Go to me
+      </button>
+    </div>
+    <div
+      className="react-gc-orgchart-wrapper-chart"
+    >
+      <div
+        className="card-container"
+        style={
+          Object {
+            "height": "550px",
+          }
+        }
+      >
+        <svg
+          style={
+            Object {
+              "height": 405,
+              "width": 1990,
+            }
+          }
+        >
+          <path
+            className=""
+            d="M 995 75 v 30 H 175 V 135"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 H 585 V 135"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 H 995 V 135"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 H 1405 V 135"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 H 1815 V 135"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 230 H 585 V 270"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 230 H 995 V 270"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 365 H 175 V 405"
+          />
+          <path
+            className="onPath"
+            d="M 995 75 v 30 h -205 V 365 H 585 V 405"
+          />
+        </svg>
+        <a
+          className="card   clickable"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 820,
+              "position": "absolute",
+              "top": 0,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Iain Stewart"
+            className="card-avatar"
+            name="user"
+            src="1.jpg"
+          />
+          <div
+            className="card-info"
+          >
+            <div
+              aria-level={1}
+              className="card-name"
+              role="heading"
+            >
+              Iain Stewart
+            </div>
+            <div
+              aria-level={2}
+              className="card-title"
+              role="heading"
+            >
+              President - NRC
+            </div>
+          </div>
+          <div
+            className="card-button"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Iain Stewart's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="card  card-blur clickable"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 0,
+              "position": "absolute",
+              "top": 135,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Dale MacMillan"
+            className="card-avatar"
+            name="user"
+            src="2.jpg"
+          />
+          <div
+            className="card-info"
+          >
+            <div
+              aria-level={1}
+              className="card-name"
+              role="heading"
+            >
+              Dale MacMillan
+            </div>
+            <div
+              aria-level={2}
+              className="card-title"
+              role="heading"
+            >
+              Vice President, Corporate Services and Chief Financial Officer
+            </div>
+          </div>
+          <div
+            className="card-button"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Dale MacMillan's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="card card-active  clickable"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 410,
+              "position": "absolute",
+              "top": 405,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Danial Wayner"
+            className="card-avatar"
+            name="user"
+            src="3.gif"
+          />
+          <div
+            className="card-info"
+          >
+            <div
+              aria-level={1}
+              className="card-name"
+              role="heading"
+            >
+              Danial Wayner
+            </div>
+            <div
+              aria-level={2}
+              className="card-title"
+              role="heading"
+            >
+              Departmental Science Advisor
+            </div>
+          </div>
+          <div
+            className="card-button"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Danial Wayner's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="card  card-blur clickable"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 410,
+              "position": "absolute",
+              "top": 135,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="David Lisk"
+            className="card-avatar"
+            name="user"
+            src="4.jpg"
+          />
+          <div
+            className="card-info"
+          >
+            <div
+              aria-level={1}
+              className="card-name"
+              role="heading"
+            >
+              David Lisk
+            </div>
+            <div
+              aria-level={2}
+              className="card-title"
+              role="heading"
+            >
+              Vice President, IRAP
+            </div>
+          </div>
+          <div
+            className="card-button"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              David Lisk's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="card  card-blur clickable"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 820,
+              "position": "absolute",
+              "top": 135,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Emily Harrison"
+            className="card-avatar"
+            name="user"
+            src="5.jpg"
+          />
+          <div
+            className="card-info"
+          >
+            <div
+              aria-level={1}
+              className="card-name"
+              role="heading"
+            >
+              Emily Harrison
+            </div>
+            <div
+              aria-level={2}
+              className="card-title"
+              role="heading"
+            >
+              Vice-President, HRB
+            </div>
+          </div>
+          <div
+            className="card-button"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Emily Harrison's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="card  card-blur clickable"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 1230,
+              "position": "absolute",
+              "top": 135,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="François Cordeau"
+            className="card-avatar"
+            name="user"
+            src="6.jpg"
+          />
+          <div
+            className="card-info"
+          >
+            <div
+              aria-level={1}
+              className="card-name"
+              role="heading"
+            >
+              François Cordeau
+            </div>
+            <div
+              aria-level={2}
+              className="card-title"
+              role="heading"
+            >
+              VP, Transportation and Manufacturing
+            </div>
+          </div>
+          <div
+            className="card-button"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              François Cordeau's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="card  card-blur clickable"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 1640,
+              "position": "absolute",
+              "top": 135,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Geneviève Tanguay"
+            className="card-avatar"
+            name="user"
+            src="7.jpg"
+          />
+          <div
+            className="card-info"
+          >
+            <div
+              aria-level={1}
+              className="card-name"
+              role="heading"
+            >
+              Geneviève Tanguay
+            </div>
+            <div
+              aria-level={2}
+              className="card-title"
+              role="heading"
+            >
+              Vice-President, Emerging Technologies
+            </div>
+          </div>
+          <div
+            className="card-button"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Geneviève Tanguay's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="card  card-blur clickable"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 0,
+              "position": "absolute",
+              "top": 270,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Marcel Turcot"
+            className="card-avatar"
+            name="user"
+            src="8.jpg"
+          />
+          <div
+            className="card-info"
+          >
+            <div
+              aria-level={1}
+              className="card-name"
+              role="heading"
+            >
+              Marcel Turcot
+            </div>
+            <div
+              aria-level={2}
+              className="card-title"
+              role="heading"
+            >
+              Chief of Staff, Office of the President
+            </div>
+          </div>
+          <div
+            className="card-button"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Marcel Turcot's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="card  card-blur clickable"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 410,
+              "position": "absolute",
+              "top": 270,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Maria Aubrey"
+            className="card-avatar"
+            name="user"
+            src="9.jpg"
+          />
+          <div
+            className="card-info"
+          >
+            <div
+              aria-level={1}
+              className="card-name"
+              role="heading"
+            >
+              Maria Aubrey
+            </div>
+            <div
+              aria-level={2}
+              className="card-title"
+              role="heading"
+            >
+              VP, Business and Professional Services
+            </div>
+          </div>
+          <div
+            className="card-button"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Maria Aubrey's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="card  card-blur clickable"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 820,
+              "position": "absolute",
+              "top": 270,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Michel Dumoulin"
+            className="card-avatar"
+            name="user"
+            src="10.jpg"
+          />
+          <div
+            className="card-info"
+          >
+            <div
+              aria-level={1}
+              className="card-name"
+              role="heading"
+            >
+              Michel Dumoulin
+            </div>
+            <div
+              aria-level={2}
+              className="card-title"
+              role="heading"
+            >
+              Vice-President, Engineering
+            </div>
+          </div>
+          <div
+            className="card-button"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Michel Dumoulin's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="card  card-blur clickable"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 1230,
+              "position": "absolute",
+              "top": 270,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Roger Scott-Douglas"
+            className="card-avatar"
+            name="user"
+            src="11.jpg"
+          />
+          <div
+            className="card-info"
+          >
+            <div
+              aria-level={1}
+              className="card-name"
+              role="heading"
+            >
+              Roger Scott-Douglas
+            </div>
+            <div
+              aria-level={2}
+              className="card-title"
+              role="heading"
+            >
+              Secretary General
+            </div>
+          </div>
+          <div
+            className="card-button"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Roger Scott-Douglas's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="card  card-blur clickable"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 1640,
+              "position": "absolute",
+              "top": 270,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Roman Szumski"
+            className="card-avatar"
+            name="user"
+            src="12.jpg"
+          />
+          <div
+            className="card-info"
+          >
+            <div
+              aria-level={1}
+              className="card-name"
+              role="heading"
+            >
+              Roman Szumski
+            </div>
+            <div
+              aria-level={2}
+              className="card-title"
+              role="heading"
+            >
+              VP, Life Sciences
+            </div>
+          </div>
+          <div
+            className="card-button"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Roman Szumski's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="card  card-blur clickable"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 0,
+              "position": "absolute",
+              "top": 405,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Thomas Pedersen"
+            className="card-avatar"
+            name="user"
+            src="13.jpg"
+          />
+          <div
+            className="card-info"
+          >
+            <div
+              aria-level={1}
+              className="card-name"
+              role="heading"
+            >
+              Thomas Pedersen
+            </div>
+            <div
+              aria-level={2}
+              className="card-title"
+              role="heading"
+            >
+              Special Advisor, Group of Head of Federal Agencies
+            </div>
+          </div>
+          <div
+            className="card-button"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Thomas Pedersen's profile
+            </button>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots OrgChart with activeUser 1`] = `
+<div
+  style={
+    Object {
+      "padding": "10px",
+    }
+  }
+>
+  <div>
+    <div
+      className="react-gc-orgchart-wrapper-minichart-wrapper"
+    >
+      <div
+        className="react-gc-orgchart-wrapper-minichart"
+      >
+        <div
+          className="react-gc-orgchart-minichart-container"
+          onClick={[Function]}
+          onMouseDown={[Function]}
+          onMouseMove={[Function]}
+          onMouseUp={[Function]}
+          role="tree"
+          style={Object {}}
+          tabIndex={0}
+        >
+          <svg
+            style={
+              Object {
+                "height": 0,
+                "width": 0,
+              }
+            }
+          />
+          <div
+            aria-describedby="test"
+            aria-label="Quick scroll box"
+            className="react-gc-orgchart-minichart-overlay"
+            onKeyUp={[Function]}
+            role="tree"
+            style={
+              Object {
+                "height": "0px",
+                "left": 0,
+                "opacity": 0.3,
+                "position": "absolute",
+                "top": 0,
+                "width": "0px",
+              }
+            }
+            tabIndex={0}
+          />
+          <div
+            id="test"
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+          >
+            Use the keyboard arrow keys to quickly scroll the org chart
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="react-gc-orgchart-wrapper-menu"
+    >
+      <button
+        onClick={[Function]}
+      >
+        Go to me
+      </button>
+    </div>
+    <div
+      className="react-gc-orgchart-wrapper-chart"
+    >
+      <div
+        className="card-container"
+        style={
+          Object {
+            "height": "550px",
+          }
+        }
+      >
+        <svg
+          style={
+            Object {
+              "height": 405,
+              "width": 1990,
+            }
+          }
+        >
+          <path
+            className=""
+            d="M 995 75 v 30 H 175 V 135"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 H 585 V 135"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 H 995 V 135"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 H 1405 V 135"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 H 1815 V 135"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 230 H 585 V 270"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 230 H 995 V 270"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 365 H 175 V 405"
+          />
+          <path
+            className="onPath"
+            d="M 995 75 v 30 h -205 V 365 H 585 V 405"
+          />
+        </svg>
+        <a
+          className="card   clickable"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 820,
+              "position": "absolute",
+              "top": 0,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Iain Stewart"
+            className="card-avatar"
+            name="user"
+            src="1.jpg"
+          />
+          <div
+            className="card-info"
+          >
+            <div
+              aria-level={1}
+              className="card-name"
+              role="heading"
+            >
+              Iain Stewart
+            </div>
+            <div
+              aria-level={2}
+              className="card-title"
+              role="heading"
+            >
+              President - NRC
+            </div>
+          </div>
+          <div
+            className="card-button"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Iain Stewart's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="card  card-blur clickable"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 0,
+              "position": "absolute",
+              "top": 135,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Dale MacMillan"
+            className="card-avatar"
+            name="user"
+            src="2.jpg"
+          />
+          <div
+            className="card-info"
+          >
+            <div
+              aria-level={1}
+              className="card-name"
+              role="heading"
+            >
+              Dale MacMillan
+            </div>
+            <div
+              aria-level={2}
+              className="card-title"
+              role="heading"
+            >
+              Vice President, Corporate Services and Chief Financial Officer
+            </div>
+          </div>
+          <div
+            className="card-button"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Dale MacMillan's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="card card-active  clickable"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 410,
+              "position": "absolute",
+              "top": 405,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Danial Wayner"
+            className="card-avatar"
+            name="user"
+            src="3.gif"
+          />
+          <div
+            className="card-info"
+          >
+            <div
+              aria-level={1}
+              className="card-name"
+              role="heading"
+            >
+              Danial Wayner
+            </div>
+            <div
+              aria-level={2}
+              className="card-title"
+              role="heading"
+            >
+              Departmental Science Advisor
+            </div>
+          </div>
+          <div
+            className="card-button"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Danial Wayner's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="card  card-blur clickable"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 410,
+              "position": "absolute",
+              "top": 135,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="David Lisk"
+            className="card-avatar"
+            name="user"
+            src="4.jpg"
+          />
+          <div
+            className="card-info"
+          >
+            <div
+              aria-level={1}
+              className="card-name"
+              role="heading"
+            >
+              David Lisk
+            </div>
+            <div
+              aria-level={2}
+              className="card-title"
+              role="heading"
+            >
+              Vice President, IRAP
+            </div>
+          </div>
+          <div
+            className="card-button"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              David Lisk's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="card  card-blur clickable"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 820,
+              "position": "absolute",
+              "top": 135,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Emily Harrison"
+            className="card-avatar"
+            name="user"
+            src="5.jpg"
+          />
+          <div
+            className="card-info"
+          >
+            <div
+              aria-level={1}
+              className="card-name"
+              role="heading"
+            >
+              Emily Harrison
+            </div>
+            <div
+              aria-level={2}
+              className="card-title"
+              role="heading"
+            >
+              Vice-President, HRB
+            </div>
+          </div>
+          <div
+            className="card-button"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Emily Harrison's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="card  card-blur clickable"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 1230,
+              "position": "absolute",
+              "top": 135,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="François Cordeau"
+            className="card-avatar"
+            name="user"
+            src="6.jpg"
+          />
+          <div
+            className="card-info"
+          >
+            <div
+              aria-level={1}
+              className="card-name"
+              role="heading"
+            >
+              François Cordeau
+            </div>
+            <div
+              aria-level={2}
+              className="card-title"
+              role="heading"
+            >
+              VP, Transportation and Manufacturing
+            </div>
+          </div>
+          <div
+            className="card-button"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              François Cordeau's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="card  card-blur clickable"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 1640,
+              "position": "absolute",
+              "top": 135,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Geneviève Tanguay"
+            className="card-avatar"
+            name="user"
+            src="7.jpg"
+          />
+          <div
+            className="card-info"
+          >
+            <div
+              aria-level={1}
+              className="card-name"
+              role="heading"
+            >
+              Geneviève Tanguay
+            </div>
+            <div
+              aria-level={2}
+              className="card-title"
+              role="heading"
+            >
+              Vice-President, Emerging Technologies
+            </div>
+          </div>
+          <div
+            className="card-button"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Geneviève Tanguay's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="card  card-blur clickable"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 0,
+              "position": "absolute",
+              "top": 270,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Marcel Turcot"
+            className="card-avatar"
+            name="user"
+            src="8.jpg"
+          />
+          <div
+            className="card-info"
+          >
+            <div
+              aria-level={1}
+              className="card-name"
+              role="heading"
+            >
+              Marcel Turcot
+            </div>
+            <div
+              aria-level={2}
+              className="card-title"
+              role="heading"
+            >
+              Chief of Staff, Office of the President
+            </div>
+          </div>
+          <div
+            className="card-button"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Marcel Turcot's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="card  card-blur clickable"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 410,
+              "position": "absolute",
+              "top": 270,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Maria Aubrey"
+            className="card-avatar"
+            name="user"
+            src="9.jpg"
+          />
+          <div
+            className="card-info"
+          >
+            <div
+              aria-level={1}
+              className="card-name"
+              role="heading"
+            >
+              Maria Aubrey
+            </div>
+            <div
+              aria-level={2}
+              className="card-title"
+              role="heading"
+            >
+              VP, Business and Professional Services
+            </div>
+          </div>
+          <div
+            className="card-button"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Maria Aubrey's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="card  card-blur clickable"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 820,
+              "position": "absolute",
+              "top": 270,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Michel Dumoulin"
+            className="card-avatar"
+            name="user"
+            src="10.jpg"
+          />
+          <div
+            className="card-info"
+          >
+            <div
+              aria-level={1}
+              className="card-name"
+              role="heading"
+            >
+              Michel Dumoulin
+            </div>
+            <div
+              aria-level={2}
+              className="card-title"
+              role="heading"
+            >
+              Vice-President, Engineering
+            </div>
+          </div>
+          <div
+            className="card-button"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Michel Dumoulin's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="card  card-blur clickable"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 1230,
+              "position": "absolute",
+              "top": 270,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Roger Scott-Douglas"
+            className="card-avatar"
+            name="user"
+            src="11.jpg"
+          />
+          <div
+            className="card-info"
+          >
+            <div
+              aria-level={1}
+              className="card-name"
+              role="heading"
+            >
+              Roger Scott-Douglas
+            </div>
+            <div
+              aria-level={2}
+              className="card-title"
+              role="heading"
+            >
+              Secretary General
+            </div>
+          </div>
+          <div
+            className="card-button"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Roger Scott-Douglas's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="card  card-blur clickable"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 1640,
+              "position": "absolute",
+              "top": 270,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Roman Szumski"
+            className="card-avatar"
+            name="user"
+            src="12.jpg"
+          />
+          <div
+            className="card-info"
+          >
+            <div
+              aria-level={1}
+              className="card-name"
+              role="heading"
+            >
+              Roman Szumski
+            </div>
+            <div
+              aria-level={2}
+              className="card-title"
+              role="heading"
+            >
+              VP, Life Sciences
+            </div>
+          </div>
+          <div
+            className="card-button"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Roman Szumski's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="card  card-blur clickable"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 0,
+              "position": "absolute",
+              "top": 405,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Thomas Pedersen"
+            className="card-avatar"
+            name="user"
+            src="13.jpg"
+          />
+          <div
+            className="card-info"
+          >
+            <div
+              aria-level={1}
+              className="card-name"
+              role="heading"
+            >
+              Thomas Pedersen
+            </div>
+            <div
+              aria-level={2}
+              className="card-title"
+              role="heading"
+            >
+              Special Advisor, Group of Head of Federal Agencies
+            </div>
+          </div>
+          <div
+            className="card-button"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Thomas Pedersen's profile
+            </button>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots OrgChart/Card Component Only required options 1`] = `
+<div
+  style={
+    Object {
+      "height": "100px",
+      "margin": "20px",
+    }
+  }
+>
+  <a
+    className="card   clickable"
+    href="#"
+    onClick={[Function]}
+    style={
+      Object {
+        "left": undefined,
+        "position": "absolute",
+        "top": undefined,
+      }
+    }
+    tabIndex="0"
+  >
+    <img
+      alt="Iain Stewart"
+      className="card-avatar"
+      name="user"
+      src="1.jpg"
+    />
+    <div
+      className="card-info"
+    >
+      <div
+        aria-level={1}
+        className="card-name"
+        role="heading"
+      >
+        Iain Stewart
+      </div>
+      <div
+        aria-level={2}
+        className="card-title"
+        role="heading"
+      >
+        President - NRC
+      </div>
+    </div>
+    <div
+      className="card-button"
+    >
+      <button
+        aria-label={null}
+        className="btn btn-secondary"
+        icon="user"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+        type="button"
+      >
+        Test Iain Stewart's profile button
+      </button>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Storyshots OrgChart/Card Component active 1`] = `
+<div
+  style={
+    Object {
+      "height": "100px",
+      "margin": "20px",
+    }
+  }
+>
+  <a
+    className="card card-active  clickable"
+    href="#"
+    onClick={[Function]}
+    style={
+      Object {
+        "left": undefined,
+        "position": "absolute",
+        "top": undefined,
+      }
+    }
+    tabIndex="0"
+  >
+    <img
+      alt="Iain Stewart"
+      className="card-avatar"
+      name="user"
+      src="1.jpg"
+    />
+    <div
+      className="card-info"
+    >
+      <div
+        aria-level={1}
+        className="card-name"
+        role="heading"
+      >
+        Iain Stewart
+      </div>
+      <div
+        aria-level={2}
+        className="card-title"
+        role="heading"
+      >
+        President - NRC
+      </div>
+    </div>
+    <div
+      className="card-button"
+    >
+      <button
+        aria-label={null}
+        className="btn btn-secondary"
+        icon="user"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+        type="button"
+      >
+        Test Iain Stewart's profile button
+      </button>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Storyshots OrgChart/Card Component at position x=150, y=220 1`] = `
+<div
+  style={
+    Object {
+      "height": "100px",
+      "margin": "20px",
+    }
+  }
+>
+  <a
+    className="card   clickable"
+    href="#"
+    onClick={[Function]}
+    style={
+      Object {
+        "left": 150,
+        "position": "absolute",
+        "top": 220,
+      }
+    }
+    tabIndex="0"
+  >
+    <img
+      alt="Iain Stewart"
+      className="card-avatar"
+      name="user"
+      src="1.jpg"
+    />
+    <div
+      className="card-info"
+    >
+      <div
+        aria-level={1}
+        className="card-name"
+        role="heading"
+      >
+        Iain Stewart
+      </div>
+      <div
+        aria-level={2}
+        className="card-title"
+        role="heading"
+      >
+        President - NRC
+      </div>
+    </div>
+    <div
+      className="card-button"
+    >
+      <button
+        aria-label={null}
+        className="btn btn-secondary"
+        icon="user"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+        type="button"
+      >
+        Test Iain Stewart's profile button
+      </button>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Storyshots OrgChart/Card Component blurred 1`] = `
+<div
+  style={
+    Object {
+      "height": "100px",
+      "margin": "20px",
+    }
+  }
+>
+  <a
+    className="card  card-blur clickable"
+    href="#"
+    onClick={[Function]}
+    style={
+      Object {
+        "left": undefined,
+        "position": "absolute",
+        "top": undefined,
+      }
+    }
+    tabIndex="0"
+  >
+    <img
+      alt="Iain Stewart"
+      className="card-avatar"
+      name="user"
+      src="1.jpg"
+    />
+    <div
+      className="card-info"
+    >
+      <div
+        aria-level={1}
+        className="card-name"
+        role="heading"
+      >
+        Iain Stewart
+      </div>
+      <div
+        aria-level={2}
+        className="card-title"
+        role="heading"
+      >
+        President - NRC
+      </div>
+    </div>
+    <div
+      className="card-button"
+    >
+      <button
+        aria-label={null}
+        className="btn btn-secondary"
+        icon="user"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+        type="button"
+      >
+        Test Iain Stewart's profile button
+      </button>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Storyshots OrgChart/Card Component blurred and active 1`] = `
+<div
+  style={
+    Object {
+      "height": "100px",
+      "margin": "20px",
+    }
+  }
+>
+  <a
+    className="card card-active card-blur clickable"
+    href="#"
+    onClick={[Function]}
+    style={
+      Object {
+        "left": undefined,
+        "position": "absolute",
+        "top": undefined,
+      }
+    }
+    tabIndex="0"
+  >
+    <img
+      alt="Iain Stewart"
+      className="card-avatar"
+      name="user"
+      src="1.jpg"
+    />
+    <div
+      className="card-info"
+    >
+      <div
+        aria-level={1}
+        className="card-name"
+        role="heading"
+      >
+        Iain Stewart
+      </div>
+      <div
+        aria-level={2}
+        className="card-title"
+        role="heading"
+      >
+        President - NRC
+      </div>
+    </div>
+    <div
+      className="card-button"
+    >
+      <button
+        aria-label={null}
+        className="btn btn-secondary"
+        icon="user"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+        type="button"
+      >
+        Test Iain Stewart's profile button
+      </button>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Storyshots OrgChart/Card Component blurred and dragging 1`] = `
+<div
+  style={
+    Object {
+      "height": "100px",
+      "margin": "20px",
+    }
+  }
+>
+  <a
+    className="card  card-blur being-dragged"
+    href="#"
+    onClick={[Function]}
+    style={
+      Object {
+        "left": undefined,
+        "position": "absolute",
+        "top": undefined,
+      }
+    }
+    tabIndex="0"
+  >
+    <img
+      alt="Iain Stewart"
+      className="card-avatar"
+      name="user"
+      src="1.jpg"
+    />
+    <div
+      className="card-info"
+    >
+      <div
+        aria-level={1}
+        className="card-name"
+        role="heading"
+      >
+        Iain Stewart
+      </div>
+      <div
+        aria-level={2}
+        className="card-title"
+        role="heading"
+      >
+        President - NRC
+      </div>
+    </div>
+    <div
+      className="card-button"
+    >
+      <button
+        aria-label={null}
+        className="btn btn-secondary"
+        icon="user"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+        type="button"
+      >
+        Test Iain Stewart's profile button
+      </button>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Storyshots OrgChart/Card Component blurred, active and dragging 1`] = `
+<div
+  style={
+    Object {
+      "height": "100px",
+      "margin": "20px",
+    }
+  }
+>
+  <a
+    className="card card-active card-blur being-dragged"
+    href="#"
+    onClick={[Function]}
+    style={
+      Object {
+        "left": undefined,
+        "position": "absolute",
+        "top": undefined,
+      }
+    }
+    tabIndex="0"
+  >
+    <img
+      alt="Iain Stewart"
+      className="card-avatar"
+      name="user"
+      src="1.jpg"
+    />
+    <div
+      className="card-info"
+    >
+      <div
+        aria-level={1}
+        className="card-name"
+        role="heading"
+      >
+        Iain Stewart
+      </div>
+      <div
+        aria-level={2}
+        className="card-title"
+        role="heading"
+      >
+        President - NRC
+      </div>
+    </div>
+    <div
+      className="card-button"
+    >
+      <button
+        aria-label={null}
+        className="btn btn-secondary"
+        icon="user"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+        type="button"
+      >
+        Test Iain Stewart's profile button
+      </button>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Storyshots OrgChart/Card Component dragging 1`] = `
+<div
+  style={
+    Object {
+      "height": "100px",
+      "margin": "20px",
+    }
+  }
+>
+  <a
+    className="card   being-dragged"
+    href="#"
+    onClick={[Function]}
+    style={
+      Object {
+        "left": undefined,
+        "position": "absolute",
+        "top": undefined,
+      }
+    }
+    tabIndex="0"
+  >
+    <img
+      alt="Iain Stewart"
+      className="card-avatar"
+      name="user"
+      src="1.jpg"
+    />
+    <div
+      className="card-info"
+    >
+      <div
+        aria-level={1}
+        className="card-name"
+        role="heading"
+      >
+        Iain Stewart
+      </div>
+      <div
+        aria-level={2}
+        className="card-title"
+        role="heading"
+      >
+        President - NRC
+      </div>
+    </div>
+    <div
+      className="card-button"
+    >
+      <button
+        aria-label={null}
+        className="btn btn-secondary"
+        icon="user"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+        type="button"
+      >
+        Test Iain Stewart's profile button
+      </button>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Storyshots OrgChart/Card Component dragging and active 1`] = `
+<div
+  style={
+    Object {
+      "height": "100px",
+      "margin": "20px",
+    }
+  }
+>
+  <a
+    className="card card-active  being-dragged"
+    href="#"
+    onClick={[Function]}
+    style={
+      Object {
+        "left": undefined,
+        "position": "absolute",
+        "top": undefined,
+      }
+    }
+    tabIndex="0"
+  >
+    <img
+      alt="Iain Stewart"
+      className="card-avatar"
+      name="user"
+      src="1.jpg"
+    />
+    <div
+      className="card-info"
+    >
+      <div
+        aria-level={1}
+        className="card-name"
+        role="heading"
+      >
+        Iain Stewart
+      </div>
+      <div
+        aria-level={2}
+        className="card-title"
+        role="heading"
+      >
+        President - NRC
+      </div>
+    </div>
+    <div
+      className="card-button"
+    >
+      <button
+        aria-label={null}
+        className="btn btn-secondary"
+        icon="user"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+        type="button"
+      >
+        Test Iain Stewart's profile button
+      </button>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Storyshots OrgChart/Card Component with a card click url 1`] = `
+<div
+  style={
+    Object {
+      "height": "100px",
+      "margin": "20px",
+    }
+  }
+>
+  <a
+    className="card   clickable"
+    href="http://example.com"
+    onClick={[Function]}
+    style={
+      Object {
+        "left": undefined,
+        "position": "absolute",
+        "top": undefined,
+      }
+    }
+    tabIndex="0"
+  >
+    <img
+      alt="Iain Stewart"
+      className="card-avatar"
+      name="user"
+      src="1.jpg"
+    />
+    <div
+      className="card-info"
+    >
+      <div
+        aria-level={1}
+        className="card-name"
+        role="heading"
+      >
+        Iain Stewart
+      </div>
+      <div
+        aria-level={2}
+        className="card-title"
+        role="heading"
+      >
+        President - NRC
+      </div>
+    </div>
+    <div
+      className="card-button"
+    >
+      <button
+        aria-label={null}
+        className="btn btn-secondary"
+        icon="user"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+        type="button"
+      >
+        Test Iain Stewart's profile button
+      </button>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Storyshots OrgChart/Card Component with click handlers 1`] = `
+<div
+  style={
+    Object {
+      "height": "100px",
+      "margin": "20px",
+    }
+  }
+>
+  <a
+    className="card   clickable"
+    href="#"
+    onClick={[Function]}
+    style={
+      Object {
+        "left": undefined,
+        "position": "absolute",
+        "top": undefined,
+      }
+    }
+    tabIndex="0"
+  >
+    <img
+      alt="Iain Stewart"
+      className="card-avatar"
+      name="user"
+      src="1.jpg"
+    />
+    <div
+      className="card-info"
+    >
+      <div
+        aria-level={1}
+        className="card-name"
+        role="heading"
+      >
+        Iain Stewart
+      </div>
+      <div
+        aria-level={2}
+        className="card-title"
+        role="heading"
+      >
+        President - NRC
+      </div>
+    </div>
+    <div
+      className="card-button"
+    >
+      <button
+        aria-label={null}
+        className="btn btn-secondary"
+        icon="user"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+        type="button"
+      >
+        Test Iain Stewart's profile button
+      </button>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Storyshots OrgChart/CardContainer Only required options 1`] = `
+<div>
+  <div
+    className="card-container"
+    style={Object {}}
+  >
+    <svg
+      style={
+        Object {
+          "height": 0,
+          "width": 0,
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots OrgChart/CardContainer With no selected card 1`] = `
+<div>
+  <div
+    className="card-container"
+    style={
+      Object {
+        "height": "600px",
+      }
+    }
+  >
+    <svg
+      style={
+        Object {
+          "height": 405,
+          "width": 1990,
+        }
+      }
+    >
+      <path
+        className=""
+        d="M 995 75 v 30 H 175 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 H 585 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 H 995 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 H 1405 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 H 1815 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 585 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 995 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 365 H 175 V 405"
+      />
+      <path
+        className="onPath"
+        d="M 995 75 v 30 h -205 V 365 H 585 V 405"
+      />
+    </svg>
+    <a
+      className="card card-active  clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 820,
+          "position": "absolute",
+          "top": 0,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Iain Stewart"
+        className="card-avatar"
+        name="user"
+        src="1.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Iain Stewart
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          President - NRC
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Iain Stewart's profile
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Dale MacMillan"
+        className="card-avatar"
+        name="user"
+        src="2.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Dale MacMillan
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice President, Corporate Services and Chief Financial Officer
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Dale MacMillan's profile
+        </button>
+      </div>
+    </a>
+    <a
+      className="card   clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 410,
+          "position": "absolute",
+          "top": 405,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Danial Wayner"
+        className="card-avatar"
+        name="user"
+        src="3.gif"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Danial Wayner
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Departmental Science Advisor
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Danial Wayner's profile
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 410,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="David Lisk"
+        className="card-avatar"
+        name="user"
+        src="4.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          David Lisk
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice President, IRAP
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          David Lisk's profile
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 820,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Emily Harrison"
+        className="card-avatar"
+        name="user"
+        src="5.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Emily Harrison
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice-President, HRB
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Emily Harrison's profile
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 1230,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="François Cordeau"
+        className="card-avatar"
+        name="user"
+        src="6.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          François Cordeau
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          VP, Transportation and Manufacturing
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          François Cordeau's profile
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 1640,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Geneviève Tanguay"
+        className="card-avatar"
+        name="user"
+        src="7.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Geneviève Tanguay
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice-President, Emerging Technologies
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Geneviève Tanguay's profile
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Marcel Turcot"
+        className="card-avatar"
+        name="user"
+        src="8.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Marcel Turcot
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Chief of Staff, Office of the President
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Marcel Turcot's profile
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 410,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Maria Aubrey"
+        className="card-avatar"
+        name="user"
+        src="9.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Maria Aubrey
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          VP, Business and Professional Services
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Maria Aubrey's profile
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 820,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Michel Dumoulin"
+        className="card-avatar"
+        name="user"
+        src="10.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Michel Dumoulin
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice-President, Engineering
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Michel Dumoulin's profile
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 1230,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Roger Scott-Douglas"
+        className="card-avatar"
+        name="user"
+        src="11.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Roger Scott-Douglas
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Secretary General
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Roger Scott-Douglas's profile
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 1640,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Roman Szumski"
+        className="card-avatar"
+        name="user"
+        src="12.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Roman Szumski
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          VP, Life Sciences
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Roman Szumski's profile
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "top": 405,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Thomas Pedersen"
+        className="card-avatar"
+        name="user"
+        src="13.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Thomas Pedersen
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Special Advisor, Group of Head of Federal Agencies
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Thomas Pedersen's profile
+        </button>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots OrgChart/CardContainer with button title 1`] = `
+<div>
+  <div
+    className="card-container"
+    style={Object {}}
+  >
+    <svg
+      style={
+        Object {
+          "height": 405,
+          "width": 1990,
+        }
+      }
+    >
+      <path
+        className=""
+        d="M 995 75 v 30 H 175 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 H 585 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 H 995 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 H 1405 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 H 1815 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 585 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 995 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 365 H 175 V 405"
+      />
+      <path
+        className="onPath"
+        d="M 995 75 v 30 h -205 V 365 H 585 V 405"
+      />
+    </svg>
+    <a
+      className="card   clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 820,
+          "position": "absolute",
+          "top": 0,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Iain Stewart"
+        className="card-avatar"
+        name="user"
+        src="1.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Iain Stewart
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          President - NRC
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          button for Iain Stewart, 1
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Dale MacMillan"
+        className="card-avatar"
+        name="user"
+        src="2.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Dale MacMillan
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice President, Corporate Services and Chief Financial Officer
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          button for Dale MacMillan, 2
+        </button>
+      </div>
+    </a>
+    <a
+      className="card   clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 410,
+          "position": "absolute",
+          "top": 405,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Danial Wayner"
+        className="card-avatar"
+        name="user"
+        src="3.gif"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Danial Wayner
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Departmental Science Advisor
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          button for Danial Wayner, 3
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 410,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="David Lisk"
+        className="card-avatar"
+        name="user"
+        src="4.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          David Lisk
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice President, IRAP
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          button for David Lisk, 4
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 820,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Emily Harrison"
+        className="card-avatar"
+        name="user"
+        src="5.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Emily Harrison
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice-President, HRB
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          button for Emily Harrison, 5
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 1230,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="François Cordeau"
+        className="card-avatar"
+        name="user"
+        src="6.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          François Cordeau
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          VP, Transportation and Manufacturing
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          button for François Cordeau, 6
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 1640,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Geneviève Tanguay"
+        className="card-avatar"
+        name="user"
+        src="7.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Geneviève Tanguay
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice-President, Emerging Technologies
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          button for Geneviève Tanguay, 7
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Marcel Turcot"
+        className="card-avatar"
+        name="user"
+        src="8.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Marcel Turcot
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Chief of Staff, Office of the President
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          button for Marcel Turcot, 8
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 410,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Maria Aubrey"
+        className="card-avatar"
+        name="user"
+        src="9.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Maria Aubrey
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          VP, Business and Professional Services
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          button for Maria Aubrey, 9
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 820,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Michel Dumoulin"
+        className="card-avatar"
+        name="user"
+        src="10.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Michel Dumoulin
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice-President, Engineering
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          button for Michel Dumoulin, 10
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 1230,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Roger Scott-Douglas"
+        className="card-avatar"
+        name="user"
+        src="11.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Roger Scott-Douglas
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Secretary General
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          button for Roger Scott-Douglas, 11
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 1640,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Roman Szumski"
+        className="card-avatar"
+        name="user"
+        src="12.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Roman Szumski
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          VP, Life Sciences
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          button for Roman Szumski, 12
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "top": 405,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Thomas Pedersen"
+        className="card-avatar"
+        name="user"
+        src="13.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Thomas Pedersen
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Special Advisor, Group of Head of Federal Agencies
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          button for Thomas Pedersen, 13
+        </button>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots OrgChart/CardContainer with cardClickUrl 1`] = `
+<div>
+  <div
+    className="card-container"
+    style={Object {}}
+  >
+    <svg
+      style={
+        Object {
+          "height": 405,
+          "width": 1990,
+        }
+      }
+    >
+      <path
+        className=""
+        d="M 995 75 v 30 H 175 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 H 585 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 H 995 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 H 1405 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 H 1815 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 585 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 995 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 365 H 175 V 405"
+      />
+      <path
+        className="onPath"
+        d="M 995 75 v 30 h -205 V 365 H 585 V 405"
+      />
+    </svg>
+    <a
+      className="card   clickable"
+      href="/path/to/1"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 820,
+          "position": "absolute",
+          "top": 0,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Iain Stewart"
+        className="card-avatar"
+        name="user"
+        src="1.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Iain Stewart
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          President - NRC
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Iain Stewart
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="/path/to/2"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Dale MacMillan"
+        className="card-avatar"
+        name="user"
+        src="2.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Dale MacMillan
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice President, Corporate Services and Chief Financial Officer
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Dale MacMillan
+        </button>
+      </div>
+    </a>
+    <a
+      className="card   clickable"
+      href="/path/to/3"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 410,
+          "position": "absolute",
+          "top": 405,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Danial Wayner"
+        className="card-avatar"
+        name="user"
+        src="3.gif"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Danial Wayner
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Departmental Science Advisor
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Danial Wayner
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="/path/to/4"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 410,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="David Lisk"
+        className="card-avatar"
+        name="user"
+        src="4.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          David Lisk
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice President, IRAP
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          David Lisk
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="/path/to/5"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 820,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Emily Harrison"
+        className="card-avatar"
+        name="user"
+        src="5.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Emily Harrison
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice-President, HRB
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Emily Harrison
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="/path/to/6"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 1230,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="François Cordeau"
+        className="card-avatar"
+        name="user"
+        src="6.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          François Cordeau
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          VP, Transportation and Manufacturing
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          François Cordeau
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="/path/to/7"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 1640,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Geneviève Tanguay"
+        className="card-avatar"
+        name="user"
+        src="7.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Geneviève Tanguay
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice-President, Emerging Technologies
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Geneviève Tanguay
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="/path/to/8"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Marcel Turcot"
+        className="card-avatar"
+        name="user"
+        src="8.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Marcel Turcot
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Chief of Staff, Office of the President
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Marcel Turcot
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="/path/to/9"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 410,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Maria Aubrey"
+        className="card-avatar"
+        name="user"
+        src="9.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Maria Aubrey
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          VP, Business and Professional Services
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Maria Aubrey
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="/path/to/10"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 820,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Michel Dumoulin"
+        className="card-avatar"
+        name="user"
+        src="10.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Michel Dumoulin
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice-President, Engineering
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Michel Dumoulin
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="/path/to/11"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 1230,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Roger Scott-Douglas"
+        className="card-avatar"
+        name="user"
+        src="11.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Roger Scott-Douglas
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Secretary General
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Roger Scott-Douglas
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="/path/to/12"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 1640,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Roman Szumski"
+        className="card-avatar"
+        name="user"
+        src="12.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Roman Szumski
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          VP, Life Sciences
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Roman Szumski
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="/path/to/13"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "top": 405,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Thomas Pedersen"
+        className="card-avatar"
+        name="user"
+        src="13.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Thomas Pedersen
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Special Advisor, Group of Head of Federal Agencies
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Thomas Pedersen
+        </button>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots OrgChart/CardContainer with click handlers 1`] = `
+<div>
+  <div
+    className="card-container"
+    style={Object {}}
+  >
+    <svg
+      style={
+        Object {
+          "height": 405,
+          "width": 1990,
+        }
+      }
+    >
+      <path
+        className=""
+        d="M 995 75 v 30 H 175 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 H 585 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 H 995 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 H 1405 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 H 1815 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 585 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 995 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 365 H 175 V 405"
+      />
+      <path
+        className="onPath"
+        d="M 995 75 v 30 h -205 V 365 H 585 V 405"
+      />
+    </svg>
+    <a
+      className="card   clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 820,
+          "position": "absolute",
+          "top": 0,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Iain Stewart"
+        className="card-avatar"
+        name="user"
+        src="1.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Iain Stewart
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          President - NRC
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Iain Stewart
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Dale MacMillan"
+        className="card-avatar"
+        name="user"
+        src="2.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Dale MacMillan
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice President, Corporate Services and Chief Financial Officer
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Dale MacMillan
+        </button>
+      </div>
+    </a>
+    <a
+      className="card   clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 410,
+          "position": "absolute",
+          "top": 405,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Danial Wayner"
+        className="card-avatar"
+        name="user"
+        src="3.gif"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Danial Wayner
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Departmental Science Advisor
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Danial Wayner
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 410,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="David Lisk"
+        className="card-avatar"
+        name="user"
+        src="4.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          David Lisk
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice President, IRAP
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          David Lisk
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 820,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Emily Harrison"
+        className="card-avatar"
+        name="user"
+        src="5.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Emily Harrison
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice-President, HRB
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Emily Harrison
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 1230,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="François Cordeau"
+        className="card-avatar"
+        name="user"
+        src="6.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          François Cordeau
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          VP, Transportation and Manufacturing
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          François Cordeau
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 1640,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Geneviève Tanguay"
+        className="card-avatar"
+        name="user"
+        src="7.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Geneviève Tanguay
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice-President, Emerging Technologies
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Geneviève Tanguay
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Marcel Turcot"
+        className="card-avatar"
+        name="user"
+        src="8.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Marcel Turcot
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Chief of Staff, Office of the President
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Marcel Turcot
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 410,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Maria Aubrey"
+        className="card-avatar"
+        name="user"
+        src="9.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Maria Aubrey
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          VP, Business and Professional Services
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Maria Aubrey
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 820,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Michel Dumoulin"
+        className="card-avatar"
+        name="user"
+        src="10.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Michel Dumoulin
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice-President, Engineering
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Michel Dumoulin
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 1230,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Roger Scott-Douglas"
+        className="card-avatar"
+        name="user"
+        src="11.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Roger Scott-Douglas
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Secretary General
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Roger Scott-Douglas
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 1640,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Roman Szumski"
+        className="card-avatar"
+        name="user"
+        src="12.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Roman Szumski
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          VP, Life Sciences
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Roman Szumski
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "top": 405,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Thomas Pedersen"
+        className="card-avatar"
+        name="user"
+        src="13.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Thomas Pedersen
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Special Advisor, Group of Head of Federal Agencies
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Thomas Pedersen
+        </button>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots OrgChart/CardContainer with custom styles (backgroundColor=#ccc) 1`] = `
+<div>
+  <div
+    className="card-container"
+    style={
+      Object {
+        "backgroundColor": "#ccc",
+      }
+    }
+  >
+    <svg
+      style={
+        Object {
+          "height": 405,
+          "width": 1990,
+        }
+      }
+    >
+      <path
+        className=""
+        d="M 995 75 v 30 H 175 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 H 585 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 H 995 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 H 1405 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 H 1815 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 585 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 995 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 365 H 175 V 405"
+      />
+      <path
+        className="onPath"
+        d="M 995 75 v 30 h -205 V 365 H 585 V 405"
+      />
+    </svg>
+    <a
+      className="card   clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 820,
+          "position": "absolute",
+          "top": 0,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Iain Stewart"
+        className="card-avatar"
+        name="user"
+        src="1.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Iain Stewart
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          President - NRC
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Iain Stewart
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Dale MacMillan"
+        className="card-avatar"
+        name="user"
+        src="2.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Dale MacMillan
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice President, Corporate Services and Chief Financial Officer
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Dale MacMillan
+        </button>
+      </div>
+    </a>
+    <a
+      className="card   clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 410,
+          "position": "absolute",
+          "top": 405,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Danial Wayner"
+        className="card-avatar"
+        name="user"
+        src="3.gif"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Danial Wayner
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Departmental Science Advisor
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Danial Wayner
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 410,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="David Lisk"
+        className="card-avatar"
+        name="user"
+        src="4.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          David Lisk
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice President, IRAP
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          David Lisk
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 820,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Emily Harrison"
+        className="card-avatar"
+        name="user"
+        src="5.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Emily Harrison
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice-President, HRB
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Emily Harrison
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 1230,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="François Cordeau"
+        className="card-avatar"
+        name="user"
+        src="6.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          François Cordeau
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          VP, Transportation and Manufacturing
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          François Cordeau
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 1640,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Geneviève Tanguay"
+        className="card-avatar"
+        name="user"
+        src="7.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Geneviève Tanguay
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice-President, Emerging Technologies
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Geneviève Tanguay
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Marcel Turcot"
+        className="card-avatar"
+        name="user"
+        src="8.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Marcel Turcot
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Chief of Staff, Office of the President
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Marcel Turcot
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 410,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Maria Aubrey"
+        className="card-avatar"
+        name="user"
+        src="9.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Maria Aubrey
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          VP, Business and Professional Services
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Maria Aubrey
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 820,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Michel Dumoulin"
+        className="card-avatar"
+        name="user"
+        src="10.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Michel Dumoulin
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice-President, Engineering
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Michel Dumoulin
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 1230,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Roger Scott-Douglas"
+        className="card-avatar"
+        name="user"
+        src="11.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Roger Scott-Douglas
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Secretary General
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Roger Scott-Douglas
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 1640,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Roman Szumski"
+        className="card-avatar"
+        name="user"
+        src="12.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Roman Szumski
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          VP, Life Sciences
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Roman Szumski
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "top": 405,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Thomas Pedersen"
+        className="card-avatar"
+        name="user"
+        src="13.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Thomas Pedersen
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Special Advisor, Group of Head of Federal Agencies
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Thomas Pedersen
+        </button>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots OrgChart/CardContainer with selectedCard 1`] = `
+<div>
+  <div
+    className="card-container"
+    style={Object {}}
+  >
+    <svg
+      style={
+        Object {
+          "height": 405,
+          "width": 1990,
+        }
+      }
+    >
+      <path
+        className=""
+        d="M 995 75 v 30 H 175 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 H 585 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 H 995 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 H 1405 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 H 1815 V 135"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 585 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 995 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
+      />
+      <path
+        className=""
+        d="M 995 75 v 30 h -205 V 365 H 175 V 405"
+      />
+      <path
+        className="onPath"
+        d="M 995 75 v 30 h -205 V 365 H 585 V 405"
+      />
+    </svg>
+    <a
+      className="card   clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 820,
+          "position": "absolute",
+          "top": 0,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Iain Stewart"
+        className="card-avatar"
+        name="user"
+        src="1.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Iain Stewart
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          President - NRC
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Iain Stewart
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Dale MacMillan"
+        className="card-avatar"
+        name="user"
+        src="2.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Dale MacMillan
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice President, Corporate Services and Chief Financial Officer
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Dale MacMillan
+        </button>
+      </div>
+    </a>
+    <a
+      className="card card-active  clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 410,
+          "position": "absolute",
+          "top": 405,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Danial Wayner"
+        className="card-avatar"
+        name="user"
+        src="3.gif"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Danial Wayner
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Departmental Science Advisor
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Danial Wayner
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 410,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="David Lisk"
+        className="card-avatar"
+        name="user"
+        src="4.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          David Lisk
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice President, IRAP
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          David Lisk
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 820,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Emily Harrison"
+        className="card-avatar"
+        name="user"
+        src="5.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Emily Harrison
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice-President, HRB
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Emily Harrison
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 1230,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="François Cordeau"
+        className="card-avatar"
+        name="user"
+        src="6.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          François Cordeau
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          VP, Transportation and Manufacturing
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          François Cordeau
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 1640,
+          "position": "absolute",
+          "top": 135,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Geneviève Tanguay"
+        className="card-avatar"
+        name="user"
+        src="7.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Geneviève Tanguay
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice-President, Emerging Technologies
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Geneviève Tanguay
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Marcel Turcot"
+        className="card-avatar"
+        name="user"
+        src="8.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Marcel Turcot
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Chief of Staff, Office of the President
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Marcel Turcot
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 410,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Maria Aubrey"
+        className="card-avatar"
+        name="user"
+        src="9.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Maria Aubrey
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          VP, Business and Professional Services
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Maria Aubrey
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 820,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Michel Dumoulin"
+        className="card-avatar"
+        name="user"
+        src="10.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Michel Dumoulin
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Vice-President, Engineering
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Michel Dumoulin
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 1230,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Roger Scott-Douglas"
+        className="card-avatar"
+        name="user"
+        src="11.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Roger Scott-Douglas
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Secretary General
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Roger Scott-Douglas
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 1640,
+          "position": "absolute",
+          "top": 270,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Roman Szumski"
+        className="card-avatar"
+        name="user"
+        src="12.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Roman Szumski
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          VP, Life Sciences
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Roman Szumski
+        </button>
+      </div>
+    </a>
+    <a
+      className="card  card-blur clickable"
+      href="#"
+      onClick={[Function]}
+      style={
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "top": 405,
+        }
+      }
+      tabIndex="0"
+    >
+      <img
+        alt="Thomas Pedersen"
+        className="card-avatar"
+        name="user"
+        src="13.jpg"
+      />
+      <div
+        className="card-info"
+      >
+        <div
+          aria-level={1}
+          className="card-name"
+          role="heading"
+        >
+          Thomas Pedersen
+        </div>
+        <div
+          aria-level={2}
+          className="card-title"
+          role="heading"
+        >
+          Special Advisor, Group of Head of Federal Agencies
+        </div>
+      </div>
+      <div
+        className="card-button"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          icon="user"
+          onClick={[Function]}
+          role="button"
+          tabIndex="0"
+          type="button"
+        >
+          Thomas Pedersen
+        </button>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots OrgChart/Placement Algorithm Using sample data 1`] = `
+<div
+  style={
+    Object {
+      "margin": "20px",
+    }
+  }
+>
+  <div
+    className="orgChart"
+    id="orgChart"
+  >
+    <svg
+      style={
+        Object {
+          "height": 330,
+          "width": 990,
+        }
+      }
+    >
+      <path
+        className=""
+        d="M 495 50 v 30 H 75 V 110"
+      />
+      <path
+        className=""
+        d="M 495 50 v 30 H 285 V 110"
+      />
+      <path
+        className=""
+        d="M 495 50 v 30 H 495 V 110"
+      />
+      <path
+        className=""
+        d="M 495 50 v 30 H 705 V 110"
+      />
+      <path
+        className=""
+        d="M 495 50 v 30 H 915 V 110"
+      />
+      <path
+        className=""
+        d="M 495 50 v 30 h -105 V 180 H 75 V 220"
+      />
+      <path
+        className=""
+        d="M 495 50 v 30 h -105 V 180 H 285 V 220"
+      />
+      <path
+        className=""
+        d="M 495 50 v 30 h -105 V 180 H 495 V 220"
+      />
+      <path
+        className=""
+        d="M 495 50 v 30 h -105 V 180 H 705 V 220"
+      />
+      <path
+        className=""
+        d="M 495 50 v 30 h -105 V 180 H 915 V 220"
+      />
+      <path
+        className=""
+        d="M 495 50 v 30 h -105 V 290 H 75 V 330"
+      />
+      <path
+        className="onPath"
+        d="M 495 50 v 30 h -105 V 290 H 285 V 330"
+      />
+    </svg>
+    <div
+      className="priority_3"
+      style={
+        Object {
+          "height": 50,
+          "left": 420,
+          "top": 0,
+          "width": 150,
+        }
+      }
+    >
+      <img
+        alt="Iain Stewart"
+        src="1.jpg"
+      />
+      <p>
+        -3
+        ,
+        1
+         
+        Iain Stewart
+      </p>
+    </div>
+    <div
+      className="priority_6 faded"
+      style={
+        Object {
+          "height": 50,
+          "left": 0,
+          "top": 110,
+          "width": 150,
+        }
+      }
+    >
+      <img
+        alt="Dale MacMillan"
+        src="2.jpg"
+      />
+      <p>
+        -2
+        ,
+        -1
+         
+        Dale MacMillan
+      </p>
+    </div>
+    <div
+      className="priority_6 faded"
+      style={
+        Object {
+          "height": 50,
+          "left": 210,
+          "top": 110,
+          "width": 150,
+        }
+      }
+    >
+      <img
+        alt="Danial Wayner"
+        src="3.gif"
+      />
+      <p>
+        -2
+        ,
+        0
+         
+        Danial Wayner
+      </p>
+    </div>
+    <div
+      className="priority_6 active"
+      style={
+        Object {
+          "height": 50,
+          "left": 210,
+          "top": 330,
+          "width": 150,
+        }
+      }
+    >
+      <img
+        alt="David Lisk"
+        src="4.jpg"
+      />
+      <p>
+        0
+        ,
+        0
+         
+        David Lisk
+      </p>
+    </div>
+    <div
+      className="priority_6 faded"
+      style={
+        Object {
+          "height": 50,
+          "left": 420,
+          "top": 110,
+          "width": 150,
+        }
+      }
+    >
+      <img
+        alt="Emily Harrison"
+        src="5.jpg"
+      />
+      <p>
+        -2
+        ,
+        1
+         
+        Emily Harrison
+      </p>
+    </div>
+    <div
+      className="priority_6 faded"
+      style={
+        Object {
+          "height": 50,
+          "left": 630,
+          "top": 110,
+          "width": 150,
+        }
+      }
+    >
+      <img
+        alt="François Cordeau"
+        src="6.jpg"
+      />
+      <p>
+        -2
+        ,
+        2
+         
+        François Cordeau
+      </p>
+    </div>
+    <div
+      className="priority_6 faded"
+      style={
+        Object {
+          "height": 50,
+          "left": 840,
+          "top": 110,
+          "width": 150,
+        }
+      }
+    >
+      <img
+        alt="Geneviève Tanguay"
+        src="7.jpg"
+      />
+      <p>
+        -2
+        ,
+        3
+         
+        Geneviève Tanguay
+      </p>
+    </div>
+    <div
+      className="priority_6 faded"
+      style={
+        Object {
+          "height": 50,
+          "left": 0,
+          "top": 220,
+          "width": 150,
+        }
+      }
+    >
+      <img
+        alt="Marcel Turcot"
+        src="8.jpg"
+      />
+      <p>
+        -1
+        ,
+        -1
+         
+        Marcel Turcot
+      </p>
+    </div>
+    <div
+      className="priority_6 faded"
+      style={
+        Object {
+          "height": 50,
+          "left": 210,
+          "top": 220,
+          "width": 150,
+        }
+      }
+    >
+      <img
+        alt="Maria Aubrey"
+        src="9.jpg"
+      />
+      <p>
+        -1
+        ,
+        0
+         
+        Maria Aubrey
+      </p>
+    </div>
+    <div
+      className="priority_6 faded"
+      style={
+        Object {
+          "height": 50,
+          "left": 420,
+          "top": 220,
+          "width": 150,
+        }
+      }
+    >
+      <img
+        alt="Michel Dumoulin"
+        src="10.jpg"
+      />
+      <p>
+        -1
+        ,
+        1
+         
+        Michel Dumoulin
+      </p>
+    </div>
+    <div
+      className="priority_6 faded"
+      style={
+        Object {
+          "height": 50,
+          "left": 630,
+          "top": 220,
+          "width": 150,
+        }
+      }
+    >
+      <img
+        alt="Roger Scott-Douglas"
+        src="11.jpg"
+      />
+      <p>
+        -1
+        ,
+        2
+         
+        Roger Scott-Douglas
+      </p>
+    </div>
+    <div
+      className="priority_6 faded"
+      style={
+        Object {
+          "height": 50,
+          "left": 840,
+          "top": 220,
+          "width": 150,
+        }
+      }
+    >
+      <img
+        alt="Roman Szumski"
+        src="12.jpg"
+      />
+      <p>
+        -1
+        ,
+        3
+         
+        Roman Szumski
+      </p>
+    </div>
+    <div
+      className="priority_6 faded"
+      style={
+        Object {
+          "height": 50,
+          "left": 0,
+          "top": 330,
+          "width": 150,
+        }
+      }
+    >
+      <img
+        alt="Thomas Pedersen"
+        src="13.jpg"
+      />
+      <p>
+        0
+        ,
+        -1
+         
+        Thomas Pedersen
+      </p>
+    </div>
+  </div>
+</div>
+`;
