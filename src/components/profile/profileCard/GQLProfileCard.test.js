@@ -3,12 +3,13 @@ import { render, cleanup, waitForElement } from 'react-testing-library';
 
 import { MockedProvider } from 'react-apollo/test-utils';
 
-import { GQLProfileCard, PROFILE_INFO_QUERY } from './GQLProfileCard';
+import { GQLProfileCard } from './GQLProfileCard';
+import { GET } from '../../../gql/profile';
 
 const mock = [
   {
     request: {
-      query: PROFILE_INFO_QUERY,
+      query: GET,
       variables: {
         gcID: (String(1)),
       },
