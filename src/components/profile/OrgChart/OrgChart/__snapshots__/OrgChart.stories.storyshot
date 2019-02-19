@@ -435,7 +435,7 @@ exports[`FileProperties OrgChart using minichart 1`] = `
           />
         </svg>
         <a
-          className="card   clickable"
+          className="sc-bdVaJa fhstoZ"
           href="#"
           onClick={[Function]}
           style={
@@ -449,30 +449,30 @@ exports[`FileProperties OrgChart using minichart 1`] = `
         >
           <img
             alt="Iain Stewart"
-            className="card-avatar"
+            className="sc-bwzfXH gQszWm"
             name="user"
             src="1.jpg"
           />
           <div
-            className="card-info"
+            className="sc-htpNat fgEekJ"
           >
             <div
               aria-level={1}
-              className="card-name"
+              className="sc-bxivhb cwDeYE"
               role="heading"
             >
               Iain Stewart
             </div>
             <div
               aria-level={2}
-              className="card-title"
+              className="sc-ifAKCX eBmtR"
               role="heading"
             >
               President - NRC
             </div>
           </div>
           <div
-            className="card-button"
+            className="sc-EHOje kMcEwg"
           >
             <button
               aria-label={null}
@@ -488,7 +488,7 @@ exports[`FileProperties OrgChart using minichart 1`] = `
           </div>
         </a>
         <a
-          className="card  card-blur clickable"
+          className="sc-bdVaJa fiIXNq"
           href="#"
           onClick={[Function]}
           style={
@@ -502,30 +502,30 @@ exports[`FileProperties OrgChart using minichart 1`] = `
         >
           <img
             alt="Dale MacMillan"
-            className="card-avatar"
+            className="sc-bwzfXH gQszWm"
             name="user"
             src="2.jpg"
           />
           <div
-            className="card-info"
+            className="sc-htpNat fgEekJ"
           >
             <div
               aria-level={1}
-              className="card-name"
+              className="sc-bxivhb cwDeYE"
               role="heading"
             >
               Dale MacMillan
             </div>
             <div
               aria-level={2}
-              className="card-title"
+              className="sc-ifAKCX eBmtR"
               role="heading"
             >
               Vice President, Corporate Services and Chief Financial Officer
             </div>
           </div>
           <div
-            className="card-button"
+            className="sc-EHOje kMcEwg"
           >
             <button
               aria-label={null}
@@ -541,7 +541,7 @@ exports[`FileProperties OrgChart using minichart 1`] = `
           </div>
         </a>
         <a
-          className="card card-active  clickable"
+          className="sc-bdVaJa cHBWIo"
           href="#"
           onClick={[Function]}
           style={
@@ -555,30 +555,30 @@ exports[`FileProperties OrgChart using minichart 1`] = `
         >
           <img
             alt="Danial Wayner"
-            className="card-avatar"
+            className="sc-bwzfXH gQszWm"
             name="user"
             src="3.gif"
           />
           <div
-            className="card-info"
+            className="sc-htpNat fgEekJ"
           >
             <div
               aria-level={1}
-              className="card-name"
+              className="sc-bxivhb cwDeYE"
               role="heading"
             >
               Danial Wayner
             </div>
             <div
               aria-level={2}
-              className="card-title"
+              className="sc-ifAKCX eBmtR"
               role="heading"
             >
               Departmental Science Advisor
             </div>
           </div>
           <div
-            className="card-button"
+            className="sc-EHOje kMcEwg"
           >
             <button
               aria-label={null}
@@ -594,7 +594,7 @@ exports[`FileProperties OrgChart using minichart 1`] = `
           </div>
         </a>
         <a
-          className="card  card-blur clickable"
+          className="sc-bdVaJa fiIXNq"
           href="#"
           onClick={[Function]}
           style={
@@ -608,30 +608,30 @@ exports[`FileProperties OrgChart using minichart 1`] = `
         >
           <img
             alt="David Lisk"
-            className="card-avatar"
+            className="sc-bwzfXH gQszWm"
             name="user"
             src="4.jpg"
           />
           <div
-            className="card-info"
+            className="sc-htpNat fgEekJ"
           >
             <div
               aria-level={1}
-              className="card-name"
+              className="sc-bxivhb cwDeYE"
               role="heading"
             >
               David Lisk
             </div>
             <div
               aria-level={2}
-              className="card-title"
+              className="sc-ifAKCX eBmtR"
               role="heading"
             >
               Vice President, IRAP
             </div>
           </div>
           <div
-            className="card-button"
+            className="sc-EHOje kMcEwg"
           >
             <button
               aria-label={null}
@@ -647,7 +647,7 @@ exports[`FileProperties OrgChart using minichart 1`] = `
           </div>
         </a>
         <a
-          className="card  card-blur clickable"
+          className="sc-bdVaJa fiIXNq"
           href="#"
           onClick={[Function]}
           style={
@@ -661,30 +661,30 @@ exports[`FileProperties OrgChart using minichart 1`] = `
         >
           <img
             alt="Emily Harrison"
-            className="card-avatar"
+            className="sc-bwzfXH gQszWm"
             name="user"
             src="5.jpg"
           />
           <div
-            className="card-info"
+            className="sc-htpNat fgEekJ"
           >
             <div
               aria-level={1}
-              className="card-name"
+              className="sc-bxivhb cwDeYE"
               role="heading"
             >
               Emily Harrison
             </div>
             <div
               aria-level={2}
-              className="card-title"
+              className="sc-ifAKCX eBmtR"
               role="heading"
             >
               Vice-President, HRB
             </div>
           </div>
           <div
-            className="card-button"
+            className="sc-EHOje kMcEwg"
           >
             <button
               aria-label={null}
@@ -700,7 +700,7 @@ exports[`FileProperties OrgChart using minichart 1`] = `
           </div>
         </a>
         <a
-          className="card  card-blur clickable"
+          className="sc-bdVaJa fiIXNq"
           href="#"
           onClick={[Function]}
           style={
@@ -714,30 +714,30 @@ exports[`FileProperties OrgChart using minichart 1`] = `
         >
           <img
             alt="François Cordeau"
-            className="card-avatar"
+            className="sc-bwzfXH gQszWm"
             name="user"
             src="6.jpg"
           />
           <div
-            className="card-info"
+            className="sc-htpNat fgEekJ"
           >
             <div
               aria-level={1}
-              className="card-name"
+              className="sc-bxivhb cwDeYE"
               role="heading"
             >
               François Cordeau
             </div>
             <div
               aria-level={2}
-              className="card-title"
+              className="sc-ifAKCX eBmtR"
               role="heading"
             >
               VP, Transportation and Manufacturing
             </div>
           </div>
           <div
-            className="card-button"
+            className="sc-EHOje kMcEwg"
           >
             <button
               aria-label={null}
@@ -753,7 +753,7 @@ exports[`FileProperties OrgChart using minichart 1`] = `
           </div>
         </a>
         <a
-          className="card  card-blur clickable"
+          className="sc-bdVaJa fiIXNq"
           href="#"
           onClick={[Function]}
           style={
@@ -767,30 +767,30 @@ exports[`FileProperties OrgChart using minichart 1`] = `
         >
           <img
             alt="Geneviève Tanguay"
-            className="card-avatar"
+            className="sc-bwzfXH gQszWm"
             name="user"
             src="7.jpg"
           />
           <div
-            className="card-info"
+            className="sc-htpNat fgEekJ"
           >
             <div
               aria-level={1}
-              className="card-name"
+              className="sc-bxivhb cwDeYE"
               role="heading"
             >
               Geneviève Tanguay
             </div>
             <div
               aria-level={2}
-              className="card-title"
+              className="sc-ifAKCX eBmtR"
               role="heading"
             >
               Vice-President, Emerging Technologies
             </div>
           </div>
           <div
-            className="card-button"
+            className="sc-EHOje kMcEwg"
           >
             <button
               aria-label={null}
@@ -806,7 +806,7 @@ exports[`FileProperties OrgChart using minichart 1`] = `
           </div>
         </a>
         <a
-          className="card  card-blur clickable"
+          className="sc-bdVaJa fiIXNq"
           href="#"
           onClick={[Function]}
           style={
@@ -820,30 +820,30 @@ exports[`FileProperties OrgChart using minichart 1`] = `
         >
           <img
             alt="Marcel Turcot"
-            className="card-avatar"
+            className="sc-bwzfXH gQszWm"
             name="user"
             src="8.jpg"
           />
           <div
-            className="card-info"
+            className="sc-htpNat fgEekJ"
           >
             <div
               aria-level={1}
-              className="card-name"
+              className="sc-bxivhb cwDeYE"
               role="heading"
             >
               Marcel Turcot
             </div>
             <div
               aria-level={2}
-              className="card-title"
+              className="sc-ifAKCX eBmtR"
               role="heading"
             >
               Chief of Staff, Office of the President
             </div>
           </div>
           <div
-            className="card-button"
+            className="sc-EHOje kMcEwg"
           >
             <button
               aria-label={null}
@@ -859,7 +859,7 @@ exports[`FileProperties OrgChart using minichart 1`] = `
           </div>
         </a>
         <a
-          className="card  card-blur clickable"
+          className="sc-bdVaJa fiIXNq"
           href="#"
           onClick={[Function]}
           style={
@@ -873,30 +873,30 @@ exports[`FileProperties OrgChart using minichart 1`] = `
         >
           <img
             alt="Maria Aubrey"
-            className="card-avatar"
+            className="sc-bwzfXH gQszWm"
             name="user"
             src="9.jpg"
           />
           <div
-            className="card-info"
+            className="sc-htpNat fgEekJ"
           >
             <div
               aria-level={1}
-              className="card-name"
+              className="sc-bxivhb cwDeYE"
               role="heading"
             >
               Maria Aubrey
             </div>
             <div
               aria-level={2}
-              className="card-title"
+              className="sc-ifAKCX eBmtR"
               role="heading"
             >
               VP, Business and Professional Services
             </div>
           </div>
           <div
-            className="card-button"
+            className="sc-EHOje kMcEwg"
           >
             <button
               aria-label={null}
@@ -912,7 +912,7 @@ exports[`FileProperties OrgChart using minichart 1`] = `
           </div>
         </a>
         <a
-          className="card  card-blur clickable"
+          className="sc-bdVaJa fiIXNq"
           href="#"
           onClick={[Function]}
           style={
@@ -926,30 +926,30 @@ exports[`FileProperties OrgChart using minichart 1`] = `
         >
           <img
             alt="Michel Dumoulin"
-            className="card-avatar"
+            className="sc-bwzfXH gQszWm"
             name="user"
             src="10.jpg"
           />
           <div
-            className="card-info"
+            className="sc-htpNat fgEekJ"
           >
             <div
               aria-level={1}
-              className="card-name"
+              className="sc-bxivhb cwDeYE"
               role="heading"
             >
               Michel Dumoulin
             </div>
             <div
               aria-level={2}
-              className="card-title"
+              className="sc-ifAKCX eBmtR"
               role="heading"
             >
               Vice-President, Engineering
             </div>
           </div>
           <div
-            className="card-button"
+            className="sc-EHOje kMcEwg"
           >
             <button
               aria-label={null}
@@ -965,7 +965,7 @@ exports[`FileProperties OrgChart using minichart 1`] = `
           </div>
         </a>
         <a
-          className="card  card-blur clickable"
+          className="sc-bdVaJa fiIXNq"
           href="#"
           onClick={[Function]}
           style={
@@ -979,30 +979,30 @@ exports[`FileProperties OrgChart using minichart 1`] = `
         >
           <img
             alt="Roger Scott-Douglas"
-            className="card-avatar"
+            className="sc-bwzfXH gQszWm"
             name="user"
             src="11.jpg"
           />
           <div
-            className="card-info"
+            className="sc-htpNat fgEekJ"
           >
             <div
               aria-level={1}
-              className="card-name"
+              className="sc-bxivhb cwDeYE"
               role="heading"
             >
               Roger Scott-Douglas
             </div>
             <div
               aria-level={2}
-              className="card-title"
+              className="sc-ifAKCX eBmtR"
               role="heading"
             >
               Secretary General
             </div>
           </div>
           <div
-            className="card-button"
+            className="sc-EHOje kMcEwg"
           >
             <button
               aria-label={null}
@@ -1018,7 +1018,7 @@ exports[`FileProperties OrgChart using minichart 1`] = `
           </div>
         </a>
         <a
-          className="card  card-blur clickable"
+          className="sc-bdVaJa fiIXNq"
           href="#"
           onClick={[Function]}
           style={
@@ -1032,30 +1032,30 @@ exports[`FileProperties OrgChart using minichart 1`] = `
         >
           <img
             alt="Roman Szumski"
-            className="card-avatar"
+            className="sc-bwzfXH gQszWm"
             name="user"
             src="12.jpg"
           />
           <div
-            className="card-info"
+            className="sc-htpNat fgEekJ"
           >
             <div
               aria-level={1}
-              className="card-name"
+              className="sc-bxivhb cwDeYE"
               role="heading"
             >
               Roman Szumski
             </div>
             <div
               aria-level={2}
-              className="card-title"
+              className="sc-ifAKCX eBmtR"
               role="heading"
             >
               VP, Life Sciences
             </div>
           </div>
           <div
-            className="card-button"
+            className="sc-EHOje kMcEwg"
           >
             <button
               aria-label={null}
@@ -1071,7 +1071,7 @@ exports[`FileProperties OrgChart using minichart 1`] = `
           </div>
         </a>
         <a
-          className="card  card-blur clickable"
+          className="sc-bdVaJa fiIXNq"
           href="#"
           onClick={[Function]}
           style={
@@ -1085,30 +1085,30 @@ exports[`FileProperties OrgChart using minichart 1`] = `
         >
           <img
             alt="Thomas Pedersen"
-            className="card-avatar"
+            className="sc-bwzfXH gQszWm"
             name="user"
             src="13.jpg"
           />
           <div
-            className="card-info"
+            className="sc-htpNat fgEekJ"
           >
             <div
               aria-level={1}
-              className="card-name"
+              className="sc-bxivhb cwDeYE"
               role="heading"
             >
               Thomas Pedersen
             </div>
             <div
               aria-level={2}
-              className="card-title"
+              className="sc-ifAKCX eBmtR"
               role="heading"
             >
               Special Advisor, Group of Head of Federal Agencies
             </div>
           </div>
           <div
-            className="card-button"
+            className="sc-EHOje kMcEwg"
           >
             <button
               aria-label={null}
@@ -1271,7 +1271,7 @@ exports[`FileProperties OrgChart with activeUser 1`] = `
           />
         </svg>
         <a
-          className="card   clickable"
+          className="sc-bdVaJa fhstoZ"
           href="#"
           onClick={[Function]}
           style={
@@ -1285,30 +1285,30 @@ exports[`FileProperties OrgChart with activeUser 1`] = `
         >
           <img
             alt="Iain Stewart"
-            className="card-avatar"
+            className="sc-bwzfXH gQszWm"
             name="user"
             src="1.jpg"
           />
           <div
-            className="card-info"
+            className="sc-htpNat fgEekJ"
           >
             <div
               aria-level={1}
-              className="card-name"
+              className="sc-bxivhb cwDeYE"
               role="heading"
             >
               Iain Stewart
             </div>
             <div
               aria-level={2}
-              className="card-title"
+              className="sc-ifAKCX eBmtR"
               role="heading"
             >
               President - NRC
             </div>
           </div>
           <div
-            className="card-button"
+            className="sc-EHOje kMcEwg"
           >
             <button
               aria-label={null}
@@ -1324,7 +1324,7 @@ exports[`FileProperties OrgChart with activeUser 1`] = `
           </div>
         </a>
         <a
-          className="card  card-blur clickable"
+          className="sc-bdVaJa fiIXNq"
           href="#"
           onClick={[Function]}
           style={
@@ -1338,30 +1338,30 @@ exports[`FileProperties OrgChart with activeUser 1`] = `
         >
           <img
             alt="Dale MacMillan"
-            className="card-avatar"
+            className="sc-bwzfXH gQszWm"
             name="user"
             src="2.jpg"
           />
           <div
-            className="card-info"
+            className="sc-htpNat fgEekJ"
           >
             <div
               aria-level={1}
-              className="card-name"
+              className="sc-bxivhb cwDeYE"
               role="heading"
             >
               Dale MacMillan
             </div>
             <div
               aria-level={2}
-              className="card-title"
+              className="sc-ifAKCX eBmtR"
               role="heading"
             >
               Vice President, Corporate Services and Chief Financial Officer
             </div>
           </div>
           <div
-            className="card-button"
+            className="sc-EHOje kMcEwg"
           >
             <button
               aria-label={null}
@@ -1377,7 +1377,7 @@ exports[`FileProperties OrgChart with activeUser 1`] = `
           </div>
         </a>
         <a
-          className="card card-active  clickable"
+          className="sc-bdVaJa cHBWIo"
           href="#"
           onClick={[Function]}
           style={
@@ -1391,30 +1391,30 @@ exports[`FileProperties OrgChart with activeUser 1`] = `
         >
           <img
             alt="Danial Wayner"
-            className="card-avatar"
+            className="sc-bwzfXH gQszWm"
             name="user"
             src="3.gif"
           />
           <div
-            className="card-info"
+            className="sc-htpNat fgEekJ"
           >
             <div
               aria-level={1}
-              className="card-name"
+              className="sc-bxivhb cwDeYE"
               role="heading"
             >
               Danial Wayner
             </div>
             <div
               aria-level={2}
-              className="card-title"
+              className="sc-ifAKCX eBmtR"
               role="heading"
             >
               Departmental Science Advisor
             </div>
           </div>
           <div
-            className="card-button"
+            className="sc-EHOje kMcEwg"
           >
             <button
               aria-label={null}
@@ -1430,7 +1430,7 @@ exports[`FileProperties OrgChart with activeUser 1`] = `
           </div>
         </a>
         <a
-          className="card  card-blur clickable"
+          className="sc-bdVaJa fiIXNq"
           href="#"
           onClick={[Function]}
           style={
@@ -1444,30 +1444,30 @@ exports[`FileProperties OrgChart with activeUser 1`] = `
         >
           <img
             alt="David Lisk"
-            className="card-avatar"
+            className="sc-bwzfXH gQszWm"
             name="user"
             src="4.jpg"
           />
           <div
-            className="card-info"
+            className="sc-htpNat fgEekJ"
           >
             <div
               aria-level={1}
-              className="card-name"
+              className="sc-bxivhb cwDeYE"
               role="heading"
             >
               David Lisk
             </div>
             <div
               aria-level={2}
-              className="card-title"
+              className="sc-ifAKCX eBmtR"
               role="heading"
             >
               Vice President, IRAP
             </div>
           </div>
           <div
-            className="card-button"
+            className="sc-EHOje kMcEwg"
           >
             <button
               aria-label={null}
@@ -1483,7 +1483,7 @@ exports[`FileProperties OrgChart with activeUser 1`] = `
           </div>
         </a>
         <a
-          className="card  card-blur clickable"
+          className="sc-bdVaJa fiIXNq"
           href="#"
           onClick={[Function]}
           style={
@@ -1497,30 +1497,30 @@ exports[`FileProperties OrgChart with activeUser 1`] = `
         >
           <img
             alt="Emily Harrison"
-            className="card-avatar"
+            className="sc-bwzfXH gQszWm"
             name="user"
             src="5.jpg"
           />
           <div
-            className="card-info"
+            className="sc-htpNat fgEekJ"
           >
             <div
               aria-level={1}
-              className="card-name"
+              className="sc-bxivhb cwDeYE"
               role="heading"
             >
               Emily Harrison
             </div>
             <div
               aria-level={2}
-              className="card-title"
+              className="sc-ifAKCX eBmtR"
               role="heading"
             >
               Vice-President, HRB
             </div>
           </div>
           <div
-            className="card-button"
+            className="sc-EHOje kMcEwg"
           >
             <button
               aria-label={null}
@@ -1536,7 +1536,7 @@ exports[`FileProperties OrgChart with activeUser 1`] = `
           </div>
         </a>
         <a
-          className="card  card-blur clickable"
+          className="sc-bdVaJa fiIXNq"
           href="#"
           onClick={[Function]}
           style={
@@ -1550,30 +1550,30 @@ exports[`FileProperties OrgChart with activeUser 1`] = `
         >
           <img
             alt="François Cordeau"
-            className="card-avatar"
+            className="sc-bwzfXH gQszWm"
             name="user"
             src="6.jpg"
           />
           <div
-            className="card-info"
+            className="sc-htpNat fgEekJ"
           >
             <div
               aria-level={1}
-              className="card-name"
+              className="sc-bxivhb cwDeYE"
               role="heading"
             >
               François Cordeau
             </div>
             <div
               aria-level={2}
-              className="card-title"
+              className="sc-ifAKCX eBmtR"
               role="heading"
             >
               VP, Transportation and Manufacturing
             </div>
           </div>
           <div
-            className="card-button"
+            className="sc-EHOje kMcEwg"
           >
             <button
               aria-label={null}
@@ -1589,7 +1589,7 @@ exports[`FileProperties OrgChart with activeUser 1`] = `
           </div>
         </a>
         <a
-          className="card  card-blur clickable"
+          className="sc-bdVaJa fiIXNq"
           href="#"
           onClick={[Function]}
           style={
@@ -1603,30 +1603,30 @@ exports[`FileProperties OrgChart with activeUser 1`] = `
         >
           <img
             alt="Geneviève Tanguay"
-            className="card-avatar"
+            className="sc-bwzfXH gQszWm"
             name="user"
             src="7.jpg"
           />
           <div
-            className="card-info"
+            className="sc-htpNat fgEekJ"
           >
             <div
               aria-level={1}
-              className="card-name"
+              className="sc-bxivhb cwDeYE"
               role="heading"
             >
               Geneviève Tanguay
             </div>
             <div
               aria-level={2}
-              className="card-title"
+              className="sc-ifAKCX eBmtR"
               role="heading"
             >
               Vice-President, Emerging Technologies
             </div>
           </div>
           <div
-            className="card-button"
+            className="sc-EHOje kMcEwg"
           >
             <button
               aria-label={null}
@@ -1642,7 +1642,7 @@ exports[`FileProperties OrgChart with activeUser 1`] = `
           </div>
         </a>
         <a
-          className="card  card-blur clickable"
+          className="sc-bdVaJa fiIXNq"
           href="#"
           onClick={[Function]}
           style={
@@ -1656,30 +1656,30 @@ exports[`FileProperties OrgChart with activeUser 1`] = `
         >
           <img
             alt="Marcel Turcot"
-            className="card-avatar"
+            className="sc-bwzfXH gQszWm"
             name="user"
             src="8.jpg"
           />
           <div
-            className="card-info"
+            className="sc-htpNat fgEekJ"
           >
             <div
               aria-level={1}
-              className="card-name"
+              className="sc-bxivhb cwDeYE"
               role="heading"
             >
               Marcel Turcot
             </div>
             <div
               aria-level={2}
-              className="card-title"
+              className="sc-ifAKCX eBmtR"
               role="heading"
             >
               Chief of Staff, Office of the President
             </div>
           </div>
           <div
-            className="card-button"
+            className="sc-EHOje kMcEwg"
           >
             <button
               aria-label={null}
@@ -1695,7 +1695,7 @@ exports[`FileProperties OrgChart with activeUser 1`] = `
           </div>
         </a>
         <a
-          className="card  card-blur clickable"
+          className="sc-bdVaJa fiIXNq"
           href="#"
           onClick={[Function]}
           style={
@@ -1709,30 +1709,30 @@ exports[`FileProperties OrgChart with activeUser 1`] = `
         >
           <img
             alt="Maria Aubrey"
-            className="card-avatar"
+            className="sc-bwzfXH gQszWm"
             name="user"
             src="9.jpg"
           />
           <div
-            className="card-info"
+            className="sc-htpNat fgEekJ"
           >
             <div
               aria-level={1}
-              className="card-name"
+              className="sc-bxivhb cwDeYE"
               role="heading"
             >
               Maria Aubrey
             </div>
             <div
               aria-level={2}
-              className="card-title"
+              className="sc-ifAKCX eBmtR"
               role="heading"
             >
               VP, Business and Professional Services
             </div>
           </div>
           <div
-            className="card-button"
+            className="sc-EHOje kMcEwg"
           >
             <button
               aria-label={null}
@@ -1748,7 +1748,7 @@ exports[`FileProperties OrgChart with activeUser 1`] = `
           </div>
         </a>
         <a
-          className="card  card-blur clickable"
+          className="sc-bdVaJa fiIXNq"
           href="#"
           onClick={[Function]}
           style={
@@ -1762,30 +1762,30 @@ exports[`FileProperties OrgChart with activeUser 1`] = `
         >
           <img
             alt="Michel Dumoulin"
-            className="card-avatar"
+            className="sc-bwzfXH gQszWm"
             name="user"
             src="10.jpg"
           />
           <div
-            className="card-info"
+            className="sc-htpNat fgEekJ"
           >
             <div
               aria-level={1}
-              className="card-name"
+              className="sc-bxivhb cwDeYE"
               role="heading"
             >
               Michel Dumoulin
             </div>
             <div
               aria-level={2}
-              className="card-title"
+              className="sc-ifAKCX eBmtR"
               role="heading"
             >
               Vice-President, Engineering
             </div>
           </div>
           <div
-            className="card-button"
+            className="sc-EHOje kMcEwg"
           >
             <button
               aria-label={null}
@@ -1801,7 +1801,7 @@ exports[`FileProperties OrgChart with activeUser 1`] = `
           </div>
         </a>
         <a
-          className="card  card-blur clickable"
+          className="sc-bdVaJa fiIXNq"
           href="#"
           onClick={[Function]}
           style={
@@ -1815,30 +1815,30 @@ exports[`FileProperties OrgChart with activeUser 1`] = `
         >
           <img
             alt="Roger Scott-Douglas"
-            className="card-avatar"
+            className="sc-bwzfXH gQszWm"
             name="user"
             src="11.jpg"
           />
           <div
-            className="card-info"
+            className="sc-htpNat fgEekJ"
           >
             <div
               aria-level={1}
-              className="card-name"
+              className="sc-bxivhb cwDeYE"
               role="heading"
             >
               Roger Scott-Douglas
             </div>
             <div
               aria-level={2}
-              className="card-title"
+              className="sc-ifAKCX eBmtR"
               role="heading"
             >
               Secretary General
             </div>
           </div>
           <div
-            className="card-button"
+            className="sc-EHOje kMcEwg"
           >
             <button
               aria-label={null}
@@ -1854,7 +1854,7 @@ exports[`FileProperties OrgChart with activeUser 1`] = `
           </div>
         </a>
         <a
-          className="card  card-blur clickable"
+          className="sc-bdVaJa fiIXNq"
           href="#"
           onClick={[Function]}
           style={
@@ -1868,30 +1868,30 @@ exports[`FileProperties OrgChart with activeUser 1`] = `
         >
           <img
             alt="Roman Szumski"
-            className="card-avatar"
+            className="sc-bwzfXH gQszWm"
             name="user"
             src="12.jpg"
           />
           <div
-            className="card-info"
+            className="sc-htpNat fgEekJ"
           >
             <div
               aria-level={1}
-              className="card-name"
+              className="sc-bxivhb cwDeYE"
               role="heading"
             >
               Roman Szumski
             </div>
             <div
               aria-level={2}
-              className="card-title"
+              className="sc-ifAKCX eBmtR"
               role="heading"
             >
               VP, Life Sciences
             </div>
           </div>
           <div
-            className="card-button"
+            className="sc-EHOje kMcEwg"
           >
             <button
               aria-label={null}
@@ -1907,7 +1907,7 @@ exports[`FileProperties OrgChart with activeUser 1`] = `
           </div>
         </a>
         <a
-          className="card  card-blur clickable"
+          className="sc-bdVaJa fiIXNq"
           href="#"
           onClick={[Function]}
           style={
@@ -1921,30 +1921,30 @@ exports[`FileProperties OrgChart with activeUser 1`] = `
         >
           <img
             alt="Thomas Pedersen"
-            className="card-avatar"
+            className="sc-bwzfXH gQszWm"
             name="user"
             src="13.jpg"
           />
           <div
-            className="card-info"
+            className="sc-htpNat fgEekJ"
           >
             <div
               aria-level={1}
-              className="card-name"
+              className="sc-bxivhb cwDeYE"
               role="heading"
             >
               Thomas Pedersen
             </div>
             <div
               aria-level={2}
-              className="card-title"
+              className="sc-ifAKCX eBmtR"
               role="heading"
             >
               Special Advisor, Group of Head of Federal Agencies
             </div>
           </div>
           <div
-            className="card-button"
+            className="sc-EHOje kMcEwg"
           >
             <button
               aria-label={null}

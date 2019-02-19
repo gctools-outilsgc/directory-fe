@@ -34,6 +34,7 @@ class CardContainer extends React.Component {
     this.enableDrag();
     if (this.props.onScroll && this.container.current) {
       this.container.current.addEventListener('scroll', this.props.onScroll);
+      this.props.onScroll({ target: this.container.current });
     }
   }
 

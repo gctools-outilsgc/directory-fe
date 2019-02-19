@@ -98,7 +98,7 @@ class OrgChart extends React.Component {
     const { current } = this.miniChartComponent;
     const cards = this.props.miniCards;
     this.miniChartSvgHeight = Math.max(0, ...cards.map(b => b.y))
-    + ((cards.length) ? cards[0].node.height : 0);
+    + ((cards.length) ? cards[0].height : 0);
 
     if (current) {
       this.miniClientHeight
@@ -111,7 +111,6 @@ class OrgChart extends React.Component {
   }
 
   trackScrolling({ target }) {
-    console.time('scroll');
     this.setState({
       scrollY: target.scrollTop,
       scrollX: target.scrollLeft,
@@ -279,7 +278,6 @@ class OrgChart extends React.Component {
   }
 
   render() {
-    console.time('render');
     const UseMenu = this.props.menuComponent || Menu;
     const MoveToActive = this.props.moveToActiveComponent || (props => (
       <button {...props}>{this.props.moveToActiveText}</button>
@@ -287,7 +285,7 @@ class OrgChart extends React.Component {
     const searchComponent =
       (this.props.searchComponent) ? this.props.searchComponent : undefined;
 
-    const bla = (
+    return (
       <div>
         {this.renderMiniChart()}
         <UseMenu>
@@ -314,9 +312,6 @@ class OrgChart extends React.Component {
         </div>
       </div>
     );
-    console.timeEnd('render');
-    console.timeEnd('scroll');
-    return bla;
   }
 }
 

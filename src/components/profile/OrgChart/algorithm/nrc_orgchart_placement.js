@@ -708,6 +708,8 @@ export const computePositions = ({
         priority: node.prio,
         x: node.x,
         y: node.y,
+        width: node.width,
+        height: node.height,
         node,
         on_path: (criticalPath.includes(node)),
       }]);

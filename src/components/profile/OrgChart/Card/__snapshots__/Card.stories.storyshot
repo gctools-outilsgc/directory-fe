@@ -1,720 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FileProperties OrgChart/Card Component Only required options 1`] = `
-<div
-  style={
-    Object {
-      "height": "100px",
-      "margin": "20px",
-    }
-  }
->
-  <a
-    className="card   clickable"
-    href="#"
-    onClick={[Function]}
-    style={
-      Object {
-        "left": undefined,
-        "position": "absolute",
-        "top": undefined,
-      }
-    }
-    tabIndex="0"
-  >
-    <img
-      alt="Iain Stewart"
-      className="card-avatar"
-      name="user"
-      src="1.jpg"
-    />
-    <div
-      className="card-info"
-    >
-      <div
-        aria-level={1}
-        className="card-name"
-        role="heading"
-      >
-        Iain Stewart
-      </div>
-      <div
-        aria-level={2}
-        className="card-title"
-        role="heading"
-      >
-        President - NRC
-      </div>
-    </div>
-    <div
-      className="card-button"
-    >
-      <button
-        aria-label={null}
-        className="btn btn-secondary"
-        icon="user"
-        onClick={[Function]}
-        role="button"
-        tabIndex="0"
-        type="button"
-      >
-        Test Iain Stewart's profile button
-      </button>
-    </div>
-  </a>
-</div>
-`;
-
-exports[`FileProperties OrgChart/Card Component active 1`] = `
-<div
-  style={
-    Object {
-      "height": "100px",
-      "margin": "20px",
-    }
-  }
->
-  <a
-    className="card card-active  clickable"
-    href="#"
-    onClick={[Function]}
-    style={
-      Object {
-        "left": undefined,
-        "position": "absolute",
-        "top": undefined,
-      }
-    }
-    tabIndex="0"
-  >
-    <img
-      alt="Iain Stewart"
-      className="card-avatar"
-      name="user"
-      src="1.jpg"
-    />
-    <div
-      className="card-info"
-    >
-      <div
-        aria-level={1}
-        className="card-name"
-        role="heading"
-      >
-        Iain Stewart
-      </div>
-      <div
-        aria-level={2}
-        className="card-title"
-        role="heading"
-      >
-        President - NRC
-      </div>
-    </div>
-    <div
-      className="card-button"
-    >
-      <button
-        aria-label={null}
-        className="btn btn-secondary"
-        icon="user"
-        onClick={[Function]}
-        role="button"
-        tabIndex="0"
-        type="button"
-      >
-        Test Iain Stewart's profile button
-      </button>
-    </div>
-  </a>
-</div>
-`;
-
-exports[`FileProperties OrgChart/Card Component at position x=150, y=220 1`] = `
-<div
-  style={
-    Object {
-      "height": "100px",
-      "margin": "20px",
-    }
-  }
->
-  <a
-    className="card   clickable"
-    href="#"
-    onClick={[Function]}
-    style={
-      Object {
-        "left": 150,
-        "position": "absolute",
-        "top": 220,
-      }
-    }
-    tabIndex="0"
-  >
-    <img
-      alt="Iain Stewart"
-      className="card-avatar"
-      name="user"
-      src="1.jpg"
-    />
-    <div
-      className="card-info"
-    >
-      <div
-        aria-level={1}
-        className="card-name"
-        role="heading"
-      >
-        Iain Stewart
-      </div>
-      <div
-        aria-level={2}
-        className="card-title"
-        role="heading"
-      >
-        President - NRC
-      </div>
-    </div>
-    <div
-      className="card-button"
-    >
-      <button
-        aria-label={null}
-        className="btn btn-secondary"
-        icon="user"
-        onClick={[Function]}
-        role="button"
-        tabIndex="0"
-        type="button"
-      >
-        Test Iain Stewart's profile button
-      </button>
-    </div>
-  </a>
-</div>
-`;
-
-exports[`FileProperties OrgChart/Card Component blurred 1`] = `
-<div
-  style={
-    Object {
-      "height": "100px",
-      "margin": "20px",
-    }
-  }
->
-  <a
-    className="card  card-blur clickable"
-    href="#"
-    onClick={[Function]}
-    style={
-      Object {
-        "left": undefined,
-        "position": "absolute",
-        "top": undefined,
-      }
-    }
-    tabIndex="0"
-  >
-    <img
-      alt="Iain Stewart"
-      className="card-avatar"
-      name="user"
-      src="1.jpg"
-    />
-    <div
-      className="card-info"
-    >
-      <div
-        aria-level={1}
-        className="card-name"
-        role="heading"
-      >
-        Iain Stewart
-      </div>
-      <div
-        aria-level={2}
-        className="card-title"
-        role="heading"
-      >
-        President - NRC
-      </div>
-    </div>
-    <div
-      className="card-button"
-    >
-      <button
-        aria-label={null}
-        className="btn btn-secondary"
-        icon="user"
-        onClick={[Function]}
-        role="button"
-        tabIndex="0"
-        type="button"
-      >
-        Test Iain Stewart's profile button
-      </button>
-    </div>
-  </a>
-</div>
-`;
-
-exports[`FileProperties OrgChart/Card Component blurred and active 1`] = `
-<div
-  style={
-    Object {
-      "height": "100px",
-      "margin": "20px",
-    }
-  }
->
-  <a
-    className="card card-active card-blur clickable"
-    href="#"
-    onClick={[Function]}
-    style={
-      Object {
-        "left": undefined,
-        "position": "absolute",
-        "top": undefined,
-      }
-    }
-    tabIndex="0"
-  >
-    <img
-      alt="Iain Stewart"
-      className="card-avatar"
-      name="user"
-      src="1.jpg"
-    />
-    <div
-      className="card-info"
-    >
-      <div
-        aria-level={1}
-        className="card-name"
-        role="heading"
-      >
-        Iain Stewart
-      </div>
-      <div
-        aria-level={2}
-        className="card-title"
-        role="heading"
-      >
-        President - NRC
-      </div>
-    </div>
-    <div
-      className="card-button"
-    >
-      <button
-        aria-label={null}
-        className="btn btn-secondary"
-        icon="user"
-        onClick={[Function]}
-        role="button"
-        tabIndex="0"
-        type="button"
-      >
-        Test Iain Stewart's profile button
-      </button>
-    </div>
-  </a>
-</div>
-`;
-
-exports[`FileProperties OrgChart/Card Component blurred and dragging 1`] = `
-<div
-  style={
-    Object {
-      "height": "100px",
-      "margin": "20px",
-    }
-  }
->
-  <a
-    className="card  card-blur being-dragged"
-    href="#"
-    onClick={[Function]}
-    style={
-      Object {
-        "left": undefined,
-        "position": "absolute",
-        "top": undefined,
-      }
-    }
-    tabIndex="0"
-  >
-    <img
-      alt="Iain Stewart"
-      className="card-avatar"
-      name="user"
-      src="1.jpg"
-    />
-    <div
-      className="card-info"
-    >
-      <div
-        aria-level={1}
-        className="card-name"
-        role="heading"
-      >
-        Iain Stewart
-      </div>
-      <div
-        aria-level={2}
-        className="card-title"
-        role="heading"
-      >
-        President - NRC
-      </div>
-    </div>
-    <div
-      className="card-button"
-    >
-      <button
-        aria-label={null}
-        className="btn btn-secondary"
-        icon="user"
-        onClick={[Function]}
-        role="button"
-        tabIndex="0"
-        type="button"
-      >
-        Test Iain Stewart's profile button
-      </button>
-    </div>
-  </a>
-</div>
-`;
-
-exports[`FileProperties OrgChart/Card Component blurred, active and dragging 1`] = `
-<div
-  style={
-    Object {
-      "height": "100px",
-      "margin": "20px",
-    }
-  }
->
-  <a
-    className="card card-active card-blur being-dragged"
-    href="#"
-    onClick={[Function]}
-    style={
-      Object {
-        "left": undefined,
-        "position": "absolute",
-        "top": undefined,
-      }
-    }
-    tabIndex="0"
-  >
-    <img
-      alt="Iain Stewart"
-      className="card-avatar"
-      name="user"
-      src="1.jpg"
-    />
-    <div
-      className="card-info"
-    >
-      <div
-        aria-level={1}
-        className="card-name"
-        role="heading"
-      >
-        Iain Stewart
-      </div>
-      <div
-        aria-level={2}
-        className="card-title"
-        role="heading"
-      >
-        President - NRC
-      </div>
-    </div>
-    <div
-      className="card-button"
-    >
-      <button
-        aria-label={null}
-        className="btn btn-secondary"
-        icon="user"
-        onClick={[Function]}
-        role="button"
-        tabIndex="0"
-        type="button"
-      >
-        Test Iain Stewart's profile button
-      </button>
-    </div>
-  </a>
-</div>
-`;
-
-exports[`FileProperties OrgChart/Card Component dragging 1`] = `
-<div
-  style={
-    Object {
-      "height": "100px",
-      "margin": "20px",
-    }
-  }
->
-  <a
-    className="card   being-dragged"
-    href="#"
-    onClick={[Function]}
-    style={
-      Object {
-        "left": undefined,
-        "position": "absolute",
-        "top": undefined,
-      }
-    }
-    tabIndex="0"
-  >
-    <img
-      alt="Iain Stewart"
-      className="card-avatar"
-      name="user"
-      src="1.jpg"
-    />
-    <div
-      className="card-info"
-    >
-      <div
-        aria-level={1}
-        className="card-name"
-        role="heading"
-      >
-        Iain Stewart
-      </div>
-      <div
-        aria-level={2}
-        className="card-title"
-        role="heading"
-      >
-        President - NRC
-      </div>
-    </div>
-    <div
-      className="card-button"
-    >
-      <button
-        aria-label={null}
-        className="btn btn-secondary"
-        icon="user"
-        onClick={[Function]}
-        role="button"
-        tabIndex="0"
-        type="button"
-      >
-        Test Iain Stewart's profile button
-      </button>
-    </div>
-  </a>
-</div>
-`;
-
-exports[`FileProperties OrgChart/Card Component dragging and active 1`] = `
-<div
-  style={
-    Object {
-      "height": "100px",
-      "margin": "20px",
-    }
-  }
->
-  <a
-    className="card card-active  being-dragged"
-    href="#"
-    onClick={[Function]}
-    style={
-      Object {
-        "left": undefined,
-        "position": "absolute",
-        "top": undefined,
-      }
-    }
-    tabIndex="0"
-  >
-    <img
-      alt="Iain Stewart"
-      className="card-avatar"
-      name="user"
-      src="1.jpg"
-    />
-    <div
-      className="card-info"
-    >
-      <div
-        aria-level={1}
-        className="card-name"
-        role="heading"
-      >
-        Iain Stewart
-      </div>
-      <div
-        aria-level={2}
-        className="card-title"
-        role="heading"
-      >
-        President - NRC
-      </div>
-    </div>
-    <div
-      className="card-button"
-    >
-      <button
-        aria-label={null}
-        className="btn btn-secondary"
-        icon="user"
-        onClick={[Function]}
-        role="button"
-        tabIndex="0"
-        type="button"
-      >
-        Test Iain Stewart's profile button
-      </button>
-    </div>
-  </a>
-</div>
-`;
-
-exports[`FileProperties OrgChart/Card Component with a card click url 1`] = `
-<div
-  style={
-    Object {
-      "height": "100px",
-      "margin": "20px",
-    }
-  }
->
-  <a
-    className="card   clickable"
-    href="http://example.com"
-    onClick={[Function]}
-    style={
-      Object {
-        "left": undefined,
-        "position": "absolute",
-        "top": undefined,
-      }
-    }
-    tabIndex="0"
-  >
-    <img
-      alt="Iain Stewart"
-      className="card-avatar"
-      name="user"
-      src="1.jpg"
-    />
-    <div
-      className="card-info"
-    >
-      <div
-        aria-level={1}
-        className="card-name"
-        role="heading"
-      >
-        Iain Stewart
-      </div>
-      <div
-        aria-level={2}
-        className="card-title"
-        role="heading"
-      >
-        President - NRC
-      </div>
-    </div>
-    <div
-      className="card-button"
-    >
-      <button
-        aria-label={null}
-        className="btn btn-secondary"
-        icon="user"
-        onClick={[Function]}
-        role="button"
-        tabIndex="0"
-        type="button"
-      >
-        Test Iain Stewart's profile button
-      </button>
-    </div>
-  </a>
-</div>
-`;
-
-exports[`FileProperties OrgChart/Card Component with click handlers 1`] = `
-<div
-  style={
-    Object {
-      "height": "100px",
-      "margin": "20px",
-    }
-  }
->
-  <a
-    className="card   clickable"
-    href="#"
-    onClick={[Function]}
-    style={
-      Object {
-        "left": undefined,
-        "position": "absolute",
-        "top": undefined,
-      }
-    }
-    tabIndex="0"
-  >
-    <img
-      alt="Iain Stewart"
-      className="card-avatar"
-      name="user"
-      src="1.jpg"
-    />
-    <div
-      className="card-info"
-    >
-      <div
-        aria-level={1}
-        className="card-name"
-        role="heading"
-      >
-        Iain Stewart
-      </div>
-      <div
-        aria-level={2}
-        className="card-title"
-        role="heading"
-      >
-        President - NRC
-      </div>
-    </div>
-    <div
-      className="card-button"
-    >
-      <button
-        aria-label={null}
-        className="btn btn-secondary"
-        icon="user"
-        onClick={[Function]}
-        role="button"
-        tabIndex="0"
-        type="button"
-      >
-        Test Iain Stewart's profile button
-      </button>
-    </div>
-  </a>
-</div>
-`;
-
 exports[`FileProperties OrgChart/Card Only required options 1`] = `
 <div
   style={
@@ -725,7 +10,7 @@ exports[`FileProperties OrgChart/Card Only required options 1`] = `
   }
 >
   <a
-    className="card   clickable"
+    className="sc-bdVaJa fhstoZ"
     href="#"
     onClick={[Function]}
     style={
@@ -739,30 +24,30 @@ exports[`FileProperties OrgChart/Card Only required options 1`] = `
   >
     <img
       alt="Iain Stewart"
-      className="card-avatar"
+      className="sc-bwzfXH gQszWm"
       name="user"
       src="1.jpg"
     />
     <div
-      className="card-info"
+      className="sc-htpNat fgEekJ"
     >
       <div
         aria-level={1}
-        className="card-name"
+        className="sc-bxivhb cwDeYE"
         role="heading"
       >
         Iain Stewart
       </div>
       <div
         aria-level={2}
-        className="card-title"
+        className="sc-ifAKCX eBmtR"
         role="heading"
       >
         President - NRC
       </div>
     </div>
     <div
-      className="card-button"
+      className="sc-EHOje kMcEwg"
     >
       <button
         aria-label={null}
@@ -790,7 +75,7 @@ exports[`FileProperties OrgChart/Card active 1`] = `
   }
 >
   <a
-    className="card card-active  clickable"
+    className="sc-bdVaJa cHBWIo"
     href="#"
     onClick={[Function]}
     style={
@@ -804,30 +89,30 @@ exports[`FileProperties OrgChart/Card active 1`] = `
   >
     <img
       alt="Iain Stewart"
-      className="card-avatar"
+      className="sc-bwzfXH gQszWm"
       name="user"
       src="1.jpg"
     />
     <div
-      className="card-info"
+      className="sc-htpNat fgEekJ"
     >
       <div
         aria-level={1}
-        className="card-name"
+        className="sc-bxivhb cwDeYE"
         role="heading"
       >
         Iain Stewart
       </div>
       <div
         aria-level={2}
-        className="card-title"
+        className="sc-ifAKCX eBmtR"
         role="heading"
       >
         President - NRC
       </div>
     </div>
     <div
-      className="card-button"
+      className="sc-EHOje kMcEwg"
     >
       <button
         aria-label={null}
@@ -855,7 +140,7 @@ exports[`FileProperties OrgChart/Card at position x=150, y=220 1`] = `
   }
 >
   <a
-    className="card   clickable"
+    className="sc-bdVaJa fhstoZ"
     href="#"
     onClick={[Function]}
     style={
@@ -869,30 +154,30 @@ exports[`FileProperties OrgChart/Card at position x=150, y=220 1`] = `
   >
     <img
       alt="Iain Stewart"
-      className="card-avatar"
+      className="sc-bwzfXH gQszWm"
       name="user"
       src="1.jpg"
     />
     <div
-      className="card-info"
+      className="sc-htpNat fgEekJ"
     >
       <div
         aria-level={1}
-        className="card-name"
+        className="sc-bxivhb cwDeYE"
         role="heading"
       >
         Iain Stewart
       </div>
       <div
         aria-level={2}
-        className="card-title"
+        className="sc-ifAKCX eBmtR"
         role="heading"
       >
         President - NRC
       </div>
     </div>
     <div
-      className="card-button"
+      className="sc-EHOje kMcEwg"
     >
       <button
         aria-label={null}
@@ -920,7 +205,7 @@ exports[`FileProperties OrgChart/Card blurred 1`] = `
   }
 >
   <a
-    className="card  card-blur clickable"
+    className="sc-bdVaJa fiIXNq"
     href="#"
     onClick={[Function]}
     style={
@@ -934,30 +219,30 @@ exports[`FileProperties OrgChart/Card blurred 1`] = `
   >
     <img
       alt="Iain Stewart"
-      className="card-avatar"
+      className="sc-bwzfXH gQszWm"
       name="user"
       src="1.jpg"
     />
     <div
-      className="card-info"
+      className="sc-htpNat fgEekJ"
     >
       <div
         aria-level={1}
-        className="card-name"
+        className="sc-bxivhb cwDeYE"
         role="heading"
       >
         Iain Stewart
       </div>
       <div
         aria-level={2}
-        className="card-title"
+        className="sc-ifAKCX eBmtR"
         role="heading"
       >
         President - NRC
       </div>
     </div>
     <div
-      className="card-button"
+      className="sc-EHOje kMcEwg"
     >
       <button
         aria-label={null}
@@ -985,7 +270,7 @@ exports[`FileProperties OrgChart/Card blurred and active 1`] = `
   }
 >
   <a
-    className="card card-active card-blur clickable"
+    className="sc-bdVaJa bcbwfc"
     href="#"
     onClick={[Function]}
     style={
@@ -999,30 +284,30 @@ exports[`FileProperties OrgChart/Card blurred and active 1`] = `
   >
     <img
       alt="Iain Stewart"
-      className="card-avatar"
+      className="sc-bwzfXH gQszWm"
       name="user"
       src="1.jpg"
     />
     <div
-      className="card-info"
+      className="sc-htpNat fgEekJ"
     >
       <div
         aria-level={1}
-        className="card-name"
+        className="sc-bxivhb cwDeYE"
         role="heading"
       >
         Iain Stewart
       </div>
       <div
         aria-level={2}
-        className="card-title"
+        className="sc-ifAKCX eBmtR"
         role="heading"
       >
         President - NRC
       </div>
     </div>
     <div
-      className="card-button"
+      className="sc-EHOje kMcEwg"
     >
       <button
         aria-label={null}
@@ -1050,7 +335,7 @@ exports[`FileProperties OrgChart/Card blurred and dragging 1`] = `
   }
 >
   <a
-    className="card  card-blur being-dragged"
+    className="sc-bdVaJa bvckga"
     href="#"
     onClick={[Function]}
     style={
@@ -1064,30 +349,30 @@ exports[`FileProperties OrgChart/Card blurred and dragging 1`] = `
   >
     <img
       alt="Iain Stewart"
-      className="card-avatar"
+      className="sc-bwzfXH gQszWm"
       name="user"
       src="1.jpg"
     />
     <div
-      className="card-info"
+      className="sc-htpNat fgEekJ"
     >
       <div
         aria-level={1}
-        className="card-name"
+        className="sc-bxivhb cwDeYE"
         role="heading"
       >
         Iain Stewart
       </div>
       <div
         aria-level={2}
-        className="card-title"
+        className="sc-ifAKCX eBmtR"
         role="heading"
       >
         President - NRC
       </div>
     </div>
     <div
-      className="card-button"
+      className="sc-EHOje kMcEwg"
     >
       <button
         aria-label={null}
@@ -1115,7 +400,7 @@ exports[`FileProperties OrgChart/Card blurred, active and dragging 1`] = `
   }
 >
   <a
-    className="card card-active card-blur being-dragged"
+    className="sc-bdVaJa jyxbMX"
     href="#"
     onClick={[Function]}
     style={
@@ -1129,30 +414,30 @@ exports[`FileProperties OrgChart/Card blurred, active and dragging 1`] = `
   >
     <img
       alt="Iain Stewart"
-      className="card-avatar"
+      className="sc-bwzfXH gQszWm"
       name="user"
       src="1.jpg"
     />
     <div
-      className="card-info"
+      className="sc-htpNat fgEekJ"
     >
       <div
         aria-level={1}
-        className="card-name"
+        className="sc-bxivhb cwDeYE"
         role="heading"
       >
         Iain Stewart
       </div>
       <div
         aria-level={2}
-        className="card-title"
+        className="sc-ifAKCX eBmtR"
         role="heading"
       >
         President - NRC
       </div>
     </div>
     <div
-      className="card-button"
+      className="sc-EHOje kMcEwg"
     >
       <button
         aria-label={null}
@@ -1180,7 +465,7 @@ exports[`FileProperties OrgChart/Card dragging 1`] = `
   }
 >
   <a
-    className="card   being-dragged"
+    className="sc-bdVaJa gETxgF"
     href="#"
     onClick={[Function]}
     style={
@@ -1194,30 +479,30 @@ exports[`FileProperties OrgChart/Card dragging 1`] = `
   >
     <img
       alt="Iain Stewart"
-      className="card-avatar"
+      className="sc-bwzfXH gQszWm"
       name="user"
       src="1.jpg"
     />
     <div
-      className="card-info"
+      className="sc-htpNat fgEekJ"
     >
       <div
         aria-level={1}
-        className="card-name"
+        className="sc-bxivhb cwDeYE"
         role="heading"
       >
         Iain Stewart
       </div>
       <div
         aria-level={2}
-        className="card-title"
+        className="sc-ifAKCX eBmtR"
         role="heading"
       >
         President - NRC
       </div>
     </div>
     <div
-      className="card-button"
+      className="sc-EHOje kMcEwg"
     >
       <button
         aria-label={null}
@@ -1245,7 +530,7 @@ exports[`FileProperties OrgChart/Card dragging and active 1`] = `
   }
 >
   <a
-    className="card card-active  being-dragged"
+    className="sc-bdVaJa ijLhFD"
     href="#"
     onClick={[Function]}
     style={
@@ -1259,30 +544,30 @@ exports[`FileProperties OrgChart/Card dragging and active 1`] = `
   >
     <img
       alt="Iain Stewart"
-      className="card-avatar"
+      className="sc-bwzfXH gQszWm"
       name="user"
       src="1.jpg"
     />
     <div
-      className="card-info"
+      className="sc-htpNat fgEekJ"
     >
       <div
         aria-level={1}
-        className="card-name"
+        className="sc-bxivhb cwDeYE"
         role="heading"
       >
         Iain Stewart
       </div>
       <div
         aria-level={2}
-        className="card-title"
+        className="sc-ifAKCX eBmtR"
         role="heading"
       >
         President - NRC
       </div>
     </div>
     <div
-      className="card-button"
+      className="sc-EHOje kMcEwg"
     >
       <button
         aria-label={null}
@@ -1310,7 +595,7 @@ exports[`FileProperties OrgChart/Card with a card click url 1`] = `
   }
 >
   <a
-    className="card   clickable"
+    className="sc-bdVaJa fhstoZ"
     href="http://example.com"
     onClick={[Function]}
     style={
@@ -1324,30 +609,30 @@ exports[`FileProperties OrgChart/Card with a card click url 1`] = `
   >
     <img
       alt="Iain Stewart"
-      className="card-avatar"
+      className="sc-bwzfXH gQszWm"
       name="user"
       src="1.jpg"
     />
     <div
-      className="card-info"
+      className="sc-htpNat fgEekJ"
     >
       <div
         aria-level={1}
-        className="card-name"
+        className="sc-bxivhb cwDeYE"
         role="heading"
       >
         Iain Stewart
       </div>
       <div
         aria-level={2}
-        className="card-title"
+        className="sc-ifAKCX eBmtR"
         role="heading"
       >
         President - NRC
       </div>
     </div>
     <div
-      className="card-button"
+      className="sc-EHOje kMcEwg"
     >
       <button
         aria-label={null}
@@ -1375,7 +660,7 @@ exports[`FileProperties OrgChart/Card with click handlers 1`] = `
   }
 >
   <a
-    className="card   clickable"
+    className="sc-bdVaJa fhstoZ"
     href="#"
     onClick={[Function]}
     style={
@@ -1389,30 +674,30 @@ exports[`FileProperties OrgChart/Card with click handlers 1`] = `
   >
     <img
       alt="Iain Stewart"
-      className="card-avatar"
+      className="sc-bwzfXH gQszWm"
       name="user"
       src="1.jpg"
     />
     <div
-      className="card-info"
+      className="sc-htpNat fgEekJ"
     >
       <div
         aria-level={1}
-        className="card-name"
+        className="sc-bxivhb cwDeYE"
         role="heading"
       >
         Iain Stewart
       </div>
       <div
         aria-level={2}
-        className="card-title"
+        className="sc-ifAKCX eBmtR"
         role="heading"
       >
         President - NRC
       </div>
     </div>
     <div
-      className="card-button"
+      className="sc-EHOje kMcEwg"
     >
       <button
         aria-label={null}

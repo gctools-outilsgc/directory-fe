@@ -1,3 +1,4 @@
+/* eslint-disable no-confusing-arrow */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -6,6 +7,56 @@ import { Button } from 'reactstrap';
 import styled from 'styled-components';
 
 import './css/card.css';
+
+const StyledCard = styled.a`
+  :hover {
+    box-shadow: 0 1px 5px rgba(0,0,0,0.25), 0 1px 10px rgba(0,0,0,0.22);
+    color: inherit;
+  }
+  --line-colour: rgba(93,193,190, 1);
+  background: ${props => props.active ? '#5DC1BE' : '#467B8D'};
+  opacity: ${props => props.blurred ? '0.6' : '1'};
+  border-radius: 2px;
+  width: 350px;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  text-decoration: none;
+  color: inherit;
+  ${props => (props.blurred && 'overflow: hidden;')}
+  cursor: ${props => props.dragging ? 'grab' : 'pointer'};
+`;
+
+const Avatar = styled.img`
+  max-width: 75px !important;
+  min-width: 75px !important;
+  overflow: hidden;
+  object-fit: cover;
+  padding: 2px;
+`;
+
+const CardInfo = styled.div`
+  align-self: center;
+  padding: 0 10px;
+  width: 100%;
+`;
+
+const CardName = styled.div`
+  font-family: "rubik", sans-serif;
+  font-size: 1.2em;
+`;
+
+const CardTitle = styled.div`
+  font-family: "nunito", sans-serif;
+`;
+
+const CardButton = styled.div`
+  align-self: center;
+  padding-right: 10px;
+`;
+
 
 class Card extends React.PureComponent {
   constructor() {
@@ -54,59 +105,11 @@ class Card extends React.PureComponent {
   }
 
   render() {
-    const { active, blurred, dragging } = this.props;
-
-    const StyledCard = styled.a`
-      :hover {
-        box-shadow: 0 1px 5px rgba(0,0,0,0.25), 0 1px 10px rgba(0,0,0,0.22);
-        color: inherit;
-      }
-      --line-colour: rgba(93,193,190, 1);
-      background: ${((active) ? '#5DC1BE' : '#467B8D')};
-      opacity: ${((blurred) ? '0.6' : '1')};
-      border-radius: 2px;
-      width: 350px;
-      height: 75px;
-      display: flex;
-      justify-content: space-between;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-      transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-      text-decoration: none;
-      color: inherit;
-      ${blurred && 'overflow: hidden;'}
-      cursor: ${((dragging) ? 'grab' : 'pointer')};
-    `;
-
-    const Avatar = styled.img`
-      max-width: 75px !important;
-      min-width: 75px !important;
-      overflow: hidden;
-      object-fit: cover;
-      padding: 2px;
-    `;
-
-    const CardInfo = styled.div`
-      align-self: center;
-      padding: 0 10px;
-      width: 100%;
-    `;
-
-    const CardName = styled.div`
-      font-family: "rubik", sans-serif;
-      font-size: 1.2em;
-    `;
-
-    const CardTitle = styled.div`
-      font-family: "nunito", sans-serif;
-    `;
-
-    const CardButton = styled.div`
-      align-self: center;
-      padding-right: 10px;
-    `;
-
     return (
       <StyledCard
+        active={this.props.active}
+        blurred={this.props.blurred}
+        dragging={this.props.dragging}
         href={this.props.cardClickUrl}
         onClick={this.cardClick}
         aria-label={this.props.label}
