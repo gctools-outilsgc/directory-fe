@@ -5,12 +5,20 @@ import LocalizedComponent
 
 import { Row, Col } from 'reactstrap';
 
+import ConnectedUserAvatar from '../../core/UserAvatar';
+
 export const ProfileCardDisplay = (props) => {
   const { user } = props;
   const { address: userAddress } = user;
   return (
     <Row>
-      <Col xs="2">Avatar</Col>
+      <Col xs="2">
+        <ConnectedUserAvatar
+          gcID={user.gcID}
+          avatar={user.avatar}
+          edit
+        />
+      </Col>
       <Col xs="10">
         <div className="profile-name">
           {user.name ? user.name : ''}

@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// import { Query, Mutation } from 'react-apollo';
+import { Mutation } from 'react-apollo';
 import { Button } from 'reactstrap';
 import { connect } from 'react-redux';
+
+import { EDIT } from '../../gql/profile';
 
 const mapStateToProps = ({ user }) => {
   const props = {};
@@ -47,21 +49,36 @@ export const UserAvatar = (props) => {
           })()}
 
         <div className="mutate">
-          <Button>
-            <label htmlFor="avatarUploadTest">
-              Upload
-              <input
-                type="file"
-                id="avatarUploadTest"
-                style={{ display: 'none' }}
-                required
-                onChange={({ target }) => {
-                  const reader = new FileReader();
-                  reader.readAsDataURL(target.files[0]);
-                }}
-              />
-            </label>
-          </Button>
+          <Mutation
+            mutation={EDIT}
+          >
+            {(uploadAvatar, { data }) => (
+              <Button>
+                <label htmlFor="avatarUploadTest">
+                  Upload
+                  <input
+                    type="file"
+                    id="avatarUploadTest"
+                    style={{ display: 'none' }}
+                    required
+                    onChange={({ target }) => {
+                      uploadAvatar({
+                        variables: {
+                          gcID: myGcID,
+                          data: {
+                            avatar: target.files[0],
+                          },
+                        },
+                      }).then((result) => {
+                        console.log(result);
+                        console.log(data);
+                      });
+                    }}
+                  />
+                </label>
+              </Button>
+            )}
+          </Mutation>
         </div>
       </div>
     </div>
