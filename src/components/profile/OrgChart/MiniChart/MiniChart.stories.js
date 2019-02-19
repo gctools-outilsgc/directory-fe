@@ -1,26 +1,32 @@
-storiesOf('MiniChart component', module)
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+
+import { calculateTree } from '../algorithm/nrc_orgchart_placement';
+
+import MiniChart from './MiniChart';
+
+import root from '../fixtures/sample.json';
+import { getNode, assumeLanguage } from '../fixtures/utils';
+
+assumeLanguage(root, 'en_CA');
+
+const nodeA = getNode(root, '3');
+
+storiesOf('OrgChart/MiniChart', module)
   .add(
     'Only required options',
-    withInfo({
-      header: true,
-      inline: true,
-      source: false,
-    })(() => (
+    () => (
       <div>
         <MiniChart />
       </div>
-    )),
+    ),
   )
   .add(
     'Using cards',
-    withInfo({
-      header: true,
-      inline: true,
-      source: false,
-    })(() => {
+    () => {
       const { boxes } = calculateTree({
-        nodeA: luc,
-        root: NRCOrgChart,
+        nodeA,
+        root,
         cardHeight: 10,
         cardWidth: 10,
         cardPadding: 10,
@@ -30,18 +36,14 @@ storiesOf('MiniChart component', module)
           <MiniChart cards={boxes} />
         </div>
       );
-    }),
+    },
   )
   .add(
     'Using cards and lines',
-    withInfo({
-      header: true,
-      inline: true,
-      source: false,
-    })(() => {
+    () => {
       const { boxes, lines } = calculateTree({
-        nodeA: luc,
-        root: NRCOrgChart,
+        nodeA,
+        root,
         cardHeight: 10,
         cardWidth: 10,
         cardPadding: 10,
@@ -51,18 +53,14 @@ storiesOf('MiniChart component', module)
           <MiniChart cards={boxes} lines={lines} />
         </div>
       );
-    }),
+    },
   )
   .add(
     'Using cards, lines and overlay',
-    withInfo({
-      header: true,
-      inline: true,
-      source: false,
-    })(() => {
+    () => {
       const { boxes, lines } = calculateTree({
-        nodeA: luc,
-        root: NRCOrgChart,
+        nodeA,
+        root,
         cardHeight: 10,
         cardWidth: 10,
         cardPadding: 10,
@@ -81,5 +79,5 @@ storiesOf('MiniChart component', module)
           />
         </div>
       );
-    }),
+    },
   );

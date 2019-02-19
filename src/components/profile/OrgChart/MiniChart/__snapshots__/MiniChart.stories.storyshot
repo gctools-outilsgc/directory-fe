@@ -1,0 +1,771 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FileProperties OrgChart/MiniChart Only required options 1`] = `
+<div>
+  <div
+    className="react-gc-orgchart-minichart-container"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+    onMouseMove={[Function]}
+    onMouseUp={[Function]}
+    role="tree"
+    style={Object {}}
+    tabIndex={0}
+  >
+    <svg
+      style={
+        Object {
+          "height": 0,
+          "width": 0,
+        }
+      }
+    />
+    <div
+      aria-describedby="test"
+      aria-label="Quick scroll box"
+      className="react-gc-orgchart-minichart-overlay"
+      role="tree"
+      style={
+        Object {
+          "height": "0px",
+          "left": 0,
+          "opacity": 0.3,
+          "position": "absolute",
+          "top": 0,
+          "width": "0px",
+        }
+      }
+      tabIndex={0}
+    />
+    <div
+      id="test"
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+    >
+      Use the keyboard arrow keys to quickly scroll the org chart
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FileProperties OrgChart/MiniChart Using cards 1`] = `
+<div>
+  <div
+    className="react-gc-orgchart-minichart-container"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+    onMouseMove={[Function]}
+    onMouseUp={[Function]}
+    role="tree"
+    style={Object {}}
+    tabIndex={0}
+  >
+    <svg
+      style={
+        Object {
+          "height": 70,
+          "width": 90,
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card"
+      style={
+        Object {
+          "height": "10px",
+          "left": 40,
+          "position": "absolute",
+          "top": 0,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 0,
+          "position": "absolute",
+          "top": 20,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card"
+      style={
+        Object {
+          "height": "10px",
+          "left": 20,
+          "position": "absolute",
+          "top": 60,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 20,
+          "position": "absolute",
+          "top": 20,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 40,
+          "position": "absolute",
+          "top": 20,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 60,
+          "position": "absolute",
+          "top": 20,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 80,
+          "position": "absolute",
+          "top": 20,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 0,
+          "position": "absolute",
+          "top": 40,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 20,
+          "position": "absolute",
+          "top": 40,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 40,
+          "position": "absolute",
+          "top": 40,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 60,
+          "position": "absolute",
+          "top": 40,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 80,
+          "position": "absolute",
+          "top": 40,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 0,
+          "position": "absolute",
+          "top": 60,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      aria-describedby="test"
+      aria-label="Quick scroll box"
+      className="react-gc-orgchart-minichart-overlay"
+      role="tree"
+      style={
+        Object {
+          "height": "0px",
+          "left": 0,
+          "opacity": 0.3,
+          "position": "absolute",
+          "top": 0,
+          "width": "0px",
+        }
+      }
+      tabIndex={0}
+    />
+    <div
+      id="test"
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+    >
+      Use the keyboard arrow keys to quickly scroll the org chart
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FileProperties OrgChart/MiniChart Using cards and lines 1`] = `
+<div>
+  <div
+    className="react-gc-orgchart-minichart-container"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+    onMouseMove={[Function]}
+    onMouseUp={[Function]}
+    role="tree"
+    style={Object {}}
+    tabIndex={0}
+  >
+    <svg
+      style={
+        Object {
+          "height": 70,
+          "width": 90,
+        }
+      }
+    >
+      <path
+        className=""
+        d="M 45 10 v 5 h -10 V 33.333333333333336 H 5 V 40"
+      />
+      <path
+        className=""
+        d="M 45 10 v 5 H 5 V 20"
+      />
+      <path
+        className=""
+        d="M 45 10 v 5 H 25 V 20"
+      />
+      <path
+        className=""
+        d="M 45 10 v 5 H 45 V 20"
+      />
+      <path
+        className=""
+        d="M 45 10 v 5 H 65 V 20"
+      />
+      <path
+        className=""
+        d="M 45 10 v 5 H 85 V 20"
+      />
+      <path
+        className=""
+        d="M 45 10 v 5 h -10 V 33.333333333333336 H 85 V 40"
+      />
+      <path
+        className=""
+        d="M 45 10 v 5 h -10 V 33.333333333333336 H 25 V 40"
+      />
+      <path
+        className=""
+        d="M 45 10 v 5 h -10 V 33.333333333333336 H 45 V 40"
+      />
+      <path
+        className=""
+        d="M 45 10 v 5 h -10 V 33.333333333333336 H 65 V 40"
+      />
+      <path
+        className=""
+        d="M 45 10 v 5 h -10 V 53.333333333333336 H 5 V 60"
+      />
+      <path
+        className="onPath"
+        d="M 45 10 v 5 h -10 V 53.333333333333336 H 25 V 60"
+      />
+    </svg>
+    <div
+      className="react-gc-orgchart-minichart-minicard-card"
+      style={
+        Object {
+          "height": "10px",
+          "left": 40,
+          "position": "absolute",
+          "top": 0,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 0,
+          "position": "absolute",
+          "top": 20,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card"
+      style={
+        Object {
+          "height": "10px",
+          "left": 20,
+          "position": "absolute",
+          "top": 60,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 20,
+          "position": "absolute",
+          "top": 20,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 40,
+          "position": "absolute",
+          "top": 20,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 60,
+          "position": "absolute",
+          "top": 20,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 80,
+          "position": "absolute",
+          "top": 20,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 0,
+          "position": "absolute",
+          "top": 40,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 20,
+          "position": "absolute",
+          "top": 40,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 40,
+          "position": "absolute",
+          "top": 40,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 60,
+          "position": "absolute",
+          "top": 40,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 80,
+          "position": "absolute",
+          "top": 40,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 0,
+          "position": "absolute",
+          "top": 60,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      aria-describedby="test"
+      aria-label="Quick scroll box"
+      className="react-gc-orgchart-minichart-overlay"
+      role="tree"
+      style={
+        Object {
+          "height": "0px",
+          "left": 0,
+          "opacity": 0.3,
+          "position": "absolute",
+          "top": 0,
+          "width": "0px",
+        }
+      }
+      tabIndex={0}
+    />
+    <div
+      id="test"
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+    >
+      Use the keyboard arrow keys to quickly scroll the org chart
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FileProperties OrgChart/MiniChart Using cards, lines and overlay 1`] = `
+<div>
+  <div
+    className="react-gc-orgchart-minichart-container"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+    onMouseMove={[Function]}
+    onMouseUp={[Function]}
+    role="tree"
+    style={Object {}}
+    tabIndex={0}
+  >
+    <svg
+      style={
+        Object {
+          "height": 70,
+          "width": 90,
+        }
+      }
+    >
+      <path
+        className=""
+        d="M 45 10 v 5 h -10 V 33.333333333333336 H 5 V 40"
+      />
+      <path
+        className=""
+        d="M 45 10 v 5 H 5 V 20"
+      />
+      <path
+        className=""
+        d="M 45 10 v 5 H 25 V 20"
+      />
+      <path
+        className=""
+        d="M 45 10 v 5 H 45 V 20"
+      />
+      <path
+        className=""
+        d="M 45 10 v 5 H 65 V 20"
+      />
+      <path
+        className=""
+        d="M 45 10 v 5 H 85 V 20"
+      />
+      <path
+        className=""
+        d="M 45 10 v 5 h -10 V 33.333333333333336 H 85 V 40"
+      />
+      <path
+        className=""
+        d="M 45 10 v 5 h -10 V 33.333333333333336 H 25 V 40"
+      />
+      <path
+        className=""
+        d="M 45 10 v 5 h -10 V 33.333333333333336 H 45 V 40"
+      />
+      <path
+        className=""
+        d="M 45 10 v 5 h -10 V 33.333333333333336 H 65 V 40"
+      />
+      <path
+        className=""
+        d="M 45 10 v 5 h -10 V 53.333333333333336 H 5 V 60"
+      />
+      <path
+        className="onPath"
+        d="M 45 10 v 5 h -10 V 53.333333333333336 H 25 V 60"
+      />
+    </svg>
+    <div
+      className="react-gc-orgchart-minichart-minicard-card"
+      style={
+        Object {
+          "height": "10px",
+          "left": 40,
+          "position": "absolute",
+          "top": 0,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 0,
+          "position": "absolute",
+          "top": 20,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card"
+      style={
+        Object {
+          "height": "10px",
+          "left": 20,
+          "position": "absolute",
+          "top": 60,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 20,
+          "position": "absolute",
+          "top": 20,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 40,
+          "position": "absolute",
+          "top": 20,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 60,
+          "position": "absolute",
+          "top": 20,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 80,
+          "position": "absolute",
+          "top": 20,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 0,
+          "position": "absolute",
+          "top": 40,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 20,
+          "position": "absolute",
+          "top": 40,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 40,
+          "position": "absolute",
+          "top": 40,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 60,
+          "position": "absolute",
+          "top": 40,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 80,
+          "position": "absolute",
+          "top": 40,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+      style={
+        Object {
+          "height": "10px",
+          "left": 0,
+          "position": "absolute",
+          "top": 60,
+          "width": "10px",
+        }
+      }
+    />
+    <div
+      aria-describedby="test"
+      aria-label="Quick scroll box"
+      className="react-gc-orgchart-minichart-overlay"
+      role="tree"
+      style={
+        Object {
+          "height": "110px",
+          "left": 35,
+          "opacity": 0.3,
+          "position": "absolute",
+          "top": 130,
+          "width": "100px",
+        }
+      }
+      tabIndex={0}
+    />
+    <div
+      id="test"
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+    >
+      Use the keyboard arrow keys to quickly scroll the org chart
+    </div>
+  </div>
+</div>
+`;

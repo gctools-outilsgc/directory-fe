@@ -111,7 +111,7 @@
     "collectCoverage": true,
     "coverageDirectory": "coverage",
     "coverageReporters": [
-      "text",
+      "text-summary",
       "json",
       "json-summary",
       "lcov"
