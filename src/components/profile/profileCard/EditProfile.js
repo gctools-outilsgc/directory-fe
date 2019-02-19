@@ -3,10 +3,8 @@ import PropTypes from 'prop-types';
 import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
 
-import gql from 'graphql-tag';
 import { Mutation } from 'react-apollo';
 
-// import { PROFILE_INFO_QUERY } from './GQLProfileCard';
 import {
   Button,
   Modal,
@@ -17,30 +15,33 @@ import {
   Col
 } from 'reactstrap';
 
-const MODIFY_PROFILE_MUTATION = gql`
-mutation modifyPr($gcID: String!, $profileInfo: ModifyProfileInput!) {
-  modifyProfile(gcId: $gcID, profileInfo: $profileInfo) {
-    gcID
-  }
-}
-`;
+import { EDIT, prepareEditProfile } from '../../../gql/profile';
 
 export class EditProfile extends Component {
   constructor(props) {
     super(props);
+    const {
+      name,
+      email,
+      titleEn,
+      titleFr,
+      officePhone,
+      mobilePhone,
+      address,
+    } = props.profile;
     this.state = {
       modal: false,
-      name: this.props.profile.name || '',
-      email: this.props.profile.email || '',
-      titleEn: this.props.profile.titleEn || '',
-      titleFr: this.props.profile.titleFr || '',
-      officePhone: this.props.profile.officePhone || '',
-      mobilePhone: this.props.profile.mobilePhone || '',
-      streetAddress: this.props.profile.address.streetAddress || '',
-      city: this.props.profile.address.city || '',
-      province: this.props.profile.address.province || '',
-      postalCode: this.props.profile.address.postalCode || '',
-      country: this.props.profile.address.country || '',
+      name: name || '',
+      email: email || '',
+      titleEn: titleEn || '',
+      titleFr: titleFr || '',
+      officePhone: officePhone || '',
+      mobilePhone: mobilePhone || '',
+      streetAddress: (address) ? address.streetAddress || '' : '',
+      city: (address) ? address.city || '' : '',
+      province: (address) ? address.province || '' : '',
+      postalCode: (address) ? address.postalCode || '' : '',
+      country: (address) ? address.country || '' : '',
     };
     this.toggle = this.toggle.bind(this);
   }
@@ -54,7 +55,6 @@ export class EditProfile extends Component {
   render() {
     const {
       profile,
-      token,
     } = this.props;
     return (
       <div className="profile-card-footer">
@@ -74,37 +74,38 @@ export class EditProfile extends Component {
           <ModalHeader toggle={this.toggle}>Edit Profile</ModalHeader>
           <ModalBody>
             <Mutation
-              mutation={MODIFY_PROFILE_MUTATION}
-              context={{ headers: { Authorization: `Bearer ${token}` } }}
+              mutation={EDIT}
               onCompleted={() => {
+                this.setState({ modal: false });
                 // Do this nicer / hot load maybe?
-                window.location.reload(false);
+                // window.location.reload(false);
               }}
+              onError={() => {
+                alert('ERROR - Replace with error UX');
+               }}
             >
               {modifyProfile => (
                 <Form
                   onSubmit={(e) => {
                     e.preventDefault();
-                    modifyProfile({
-                      variables: {
-                        gcID: (String(profile.gcID)),
-                        profileInfo: {
-                          name: this.state.name,
-                          email: this.state.email,
-                          titleEn: this.state.titleEn,
-                          titleFr: this.state.titleFr,
-                          officePhone: this.state.officePhone,
-                          mobilePhone: this.state.mobilePhone,
-                          address: {
-                            streetAddress: this.state.streetAddress,
-                            city: this.state.city,
-                            province: this.state.province,
-                            postalCode: this.state.postalCode,
-                            country: this.state.country,
-                          },
-                        },
-                      },
-                    });
+                    const {
+                      name, email, titleEn, titleFr, officePhone, mobilePhone,
+                      streetAddress, city, province, postalCode, country,
+                    } = this.state;
+                    modifyProfile(prepareEditProfile({
+                      gcID: profile.gcID,
+                      name,
+                      email,
+                      titleEn,
+                      titleFr,
+                      officePhone,
+                      mobilePhone,
+                      streetAddress,
+                      city,
+                      province,
+                      postalCode,
+                      country,
+                    }));
                 }}
                 >
                   <Row>
@@ -350,7 +351,6 @@ export class EditProfile extends Component {
 
 EditProfile.defaultProps = {
   profile: undefined,
-  token: undefined,
 };
 
 EditProfile.propTypes = {
@@ -369,7 +369,6 @@ EditProfile.propTypes = {
       country: PropTypes.string,
     }),
   }),
-  token: PropTypes.string,
 };
 
 export default LocalizedComponent(EditProfile);

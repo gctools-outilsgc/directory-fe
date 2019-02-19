@@ -3,30 +3,24 @@ import PropTypes from 'prop-types';
 import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
 
-import gql from 'graphql-tag';
 import { Mutation } from 'react-apollo';
 
 import { Button, Form, Row, Col } from 'reactstrap';
 
-const MODIFY_PROFILE_MUTATION = gql`
-mutation modifyPr($gcID: String!, $profileInfo: ModifyProfileInput!) {
-  modifyProfile(gcId: $gcID, profileInfo: $profileInfo) {
-    gcID
-  }
-}
-`;
+import { EDIT, prepareEditProfile } from '../../gql/profile';
 
 export class OnboardStep3 extends Component {
   constructor(props) {
     super(props);
+    const { officePhone, mobilePhone, address } = props.userObject;
     this.state = {
-      officePhone: this.props.userObject.officePhone || '',
-      mobilePhone: this.props.userObject.mobilePhone || '',
-      streetAddress: '',
-      city: '',
-      province: '',
-      postalCode: '',
-      country: '',
+      officePhone: officePhone || '',
+      mobilePhone: mobilePhone || '',
+      streetAddress: (address) ? address.streetAddress || '' : '',
+      city: (address) ? address.city || '' : '',
+      province: (address) ? address.province || '' : '',
+      postalCode: (address) ? address.postalCode || '' : '',
+      country: (address) ? address.country || '' : '',
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -38,43 +32,34 @@ export class OnboardStep3 extends Component {
   render() {
     const {
       userObject,
-      token,
     } = this.props;
     return (
-      <Mutation
-        mutation={MODIFY_PROFILE_MUTATION}
-        context={{
-                    headers: {
-                        Authorization:
-                          `Bearer ${token}`,
-                    },
-                }
-                }
-      >
+      <Mutation mutation={EDIT}>
         {modifyProfile => (
           <Form
             onSubmit={(e) => {
-                          e.preventDefault();
-                          modifyProfile({
-                              variables: {
-                                  gcID: (String(userObject.gcID)),
-                                  profileInfo: {
-                  officePhone: this.state.officePhone,
-                  mobilePhone: this.state.mobilePhone,
-                  address: {
-                      streetAddress: this.state.streetAddress,
-                      city: this.state.city,
-                      province: this.state.province,
-                      postalCode: this.state.postalCode,
-                      country: this.state.country,
-                  },
-                                  },
-                              },
-                          });
-                          this.props.nextStep();
-                        }
-
-                        }
+              e.preventDefault();
+              const {
+                officePhone,
+                mobilePhone,
+                streetAddress,
+                city,
+                province,
+                postalCode,
+                country,
+              } = this.state;
+              modifyProfile(prepareEditProfile({
+                gcID: userObject.gcID,
+                officePhone,
+                mobilePhone,
+                streetAddress,
+                city,
+                province,
+                postalCode,
+                country,
+              }));
+              this.props.nextStep();
+            }}
             className="basic-form-holder"
           >
             <h1 className="mb-2 pb-2 h3 text-primary">
@@ -268,7 +253,6 @@ OnboardStep3.propTypes = {
       country: PropTypes.string,
     }),
   }),
-  token: PropTypes.string.isRequired,
   nextStep: PropTypes.func,
   previousStep: PropTypes.func,
 };

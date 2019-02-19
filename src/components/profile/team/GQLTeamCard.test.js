@@ -4,12 +4,13 @@ import { render, cleanup, waitForElement } from 'react-testing-library';
 
 import { MockedProvider } from 'react-apollo/test-utils';
 
-import { GQLTeamCard, TEAM_INFO_QUERY } from './GQLTeamCard';
+import { GQLTeamCard } from './GQLTeamCard';
+import { GET_TEAM } from '../../../gql/profile';
 
 const mock = [
   {
     request: {
-      query: TEAM_INFO_QUERY,
+      query: GET_TEAM,
       variables: {
         gcID: (String(1)),
       },
@@ -17,28 +18,17 @@ const mock = [
     result: {
       data: {
         profiles: [{
-          name: 'Test Name',
           gcID: '1',
-          Employees: [],
           supervisor: {
             gcID: '2',
             name: 'Test Supervisor',
             titleEn: 'Boss',
             titleFr: '',
           },
-          org: {
-            id: '3',
+          team: {
             nameEn: 'Test Team',
             nameFr: 'Test Team FR',
-            organization: {
-              id: '1',
-              nameEn: 'Treasury Board Secretariat',
-              nameFr: 'Secretariat du Conseil du Treso',
-              acronymEn: 'TBS',
-              acronymFr: 'SCT',
-            },
           },
-          OwnerOfOrgTier: [],
         }],
       },
     },

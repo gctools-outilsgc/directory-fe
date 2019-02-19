@@ -4,76 +4,22 @@ import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
 
 import { connect } from 'react-redux';
-import gql from 'graphql-tag';
-import { Query, Mutation } from 'react-apollo';
+import { Query } from 'react-apollo';
 
 import {
-  Button,
-  Modal,
-  ModalHeader,
-  ModalBody,
   Row,
   Col
 } from 'reactstrap';
 
-import SupervisorPicker from '../../core/SupervisorPicker';
-import TeamPicker from '../../core/TeamPicker';
 import Loading from './Loading';
 
-export const TEAM_INFO_QUERY = gql`
-query organizationTierQuery($gcID: String!) {
-  profiles(gcID: $gcID) {
-    name
-    gcID
-    Employees {
-      name
-      gcID
-    }
-    supervisor {
-      gcID
-      name
-      titleEn
-      titleFr
-    }
-    org {
-      id
-      nameEn
-      nameFr
-      organization {
-        id
-        nameEn
-        nameFr
-        acronymEn
-        acronymFr
-      }
-    }
-    OwnerOfOrgTier {
-      id
-      nameEn
-      nameFr
-      OrgMembers {
-        name
-        gcID
-      }
-    }
-  }
-}`;
-
-
-const modifyProfileMutation = gql`
-mutation changeTeam($gcID: String!, $profileInfo: ModifyProfileInput!) {
-  modifyProfile(gcId: $gcID, profileInfo: $profileInfo) {
-    gcID
-  }
-}
-`;
+import { GET_TEAM } from '../../../gql/profile';
 
 const mapStateToProps = ({ user }) => {
   const props = {};
   if (user) {
     props.accessToken = user.access_token;
     props.myGcID = user.profile.sub;
-    props.modifyProfile = user.profile.modify_profile === 'True';
   }
   return props;
 };
@@ -103,14 +49,11 @@ export class GQLTeamCard extends React.Component {
   render() {
     const {
       id,
-      accessToken,
-      myGcID,
-      modifyProfile: canModify,
     } = this.props;
-    const canEdit = (accessToken !== '') && canModify && (id === myGcID);
+
     return (
       <Query
-        query={TEAM_INFO_QUERY}
+        query={GET_TEAM}
         variables={{ gcID: (String(id)) }}
       >
         {({ loading, error, data }) => {
@@ -118,7 +61,7 @@ export class GQLTeamCard extends React.Component {
           if (error) return `Error!: ${error}`;
           const userInfo = (!data) ? '' : data.profiles[0];
           const supTest = (!userInfo) ? '' : userInfo.supervisor;
-          const teamTest = (!userInfo) ? '' : userInfo.org;
+          const teamTest = (!userInfo) ? '' : userInfo.team;
           return (
             <div style={style.card}>
               {userInfo ? (
@@ -144,99 +87,6 @@ export class GQLTeamCard extends React.Component {
                       </Col>
                     </Row>
                   </div>
-                  <div>
-                    {canEdit ?
-                      <div className="profile-card-footer">
-                        <Button
-                          className="float-right"
-                          size="sm"
-                          color="primary"
-                          onClick={this.toggle}
-                        >
-                          {__('Edit')}
-                        </Button>
-                        <Modal isOpen={this.state.modal} toggle={this.toggle}>
-                          <ModalHeader toggle={this.toggle}>
-                            {__('Edit Team')}
-                          </ModalHeader>
-                          <ModalBody>
-                            <Mutation
-                              mutation={modifyProfileMutation}
-                              refetchQueries={[{
-                                query: TEAM_INFO_QUERY,
-                                variables: { gcID: String(id) },
-                              }]}
-                              context={{
-                                headers: {
-                                  Authorization: `Bearer ${accessToken}`,
-                                },
-                              }}
-                            >
-                              {modifyProfile => (
-                                <div>
-                                  {supTest ? supTest.name : 'None'}
-                                  <SupervisorPicker
-                                    onResultSelect={(s) => {
-                                      modifyProfile({
-                                          variables: {
-                                              gcID: String(id),
-                                              profileInfo: {
-                                                  supervisor: {
-                                                      gcId: s,
-                                                  },
-                                              },
-                                          },
-                                      });
-                                  }}
-                                  />
-                                </div>
-                              )}
-                            </Mutation>
-                            <br />
-                            <Mutation
-                              mutation={modifyProfileMutation}
-                              refetchQueries={[{
-                                  query: TEAM_INFO_QUERY,
-                                  variables: { gcID: String(id) },
-                              }]}
-                              context={{
-                                headers: {
-                                  Authorization: `Bearer ${accessToken}`,
-                                },
-                              }}
-                            >
-                              {modifyProfile => (
-                                <TeamPicker
-                                  id="idTest"
-                                  editMode
-                                  selectedOrgTier={teamTest}
-                                  supervisor={supTest}
-                                  gcID={id}
-                                  onTeamChange={(t) => {
-                                    modifyProfile({
-                                      variables: {
-                                        gcID: String(id),
-                                        profileInfo: {
-                                          org: {
-                                            orgTierId: t,
-                                          },
-                                        },
-                                      },
-                                    });
-                                  }}
-                                />
-                              )}
-                            </Mutation>
-                            <Button color="primary" onClick={this.toggle}>
-                              {__('Cancel')}
-                            </Button>
-                          </ModalBody>
-
-                        </Modal>
-                      </div> :
-                          ''
-                      }
-                  </div>
                 </div>
               ) : (
                 <div>{__('Cannot find GCID')}</div>
@@ -251,16 +101,10 @@ export class GQLTeamCard extends React.Component {
 
 GQLTeamCard.defaultProps = {
   id: undefined,
-  accessToken: undefined,
-  myGcID: undefined,
-  modifyProfile: undefined,
 };
 
 GQLTeamCard.propTypes = {
   id: PropTypes.string,
-  accessToken: PropTypes.string,
-  myGcID: PropTypes.string,
-  modifyProfile: PropTypes.bool,
 };
 
 export default connect(mapStateToProps)(LocalizedComponent(GQLTeamCard));
