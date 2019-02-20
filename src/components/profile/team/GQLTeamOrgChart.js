@@ -43,6 +43,7 @@ export class GQLTeamOrgChart extends React.Component {
     this.OrgChart = React.createRef();
     this.changeSelectedCard = this.changeSelectedCard.bind(this);
     this.navigateToProfile = this.navigateToProfile.bind(this);
+    this.moveToLoggedInUser = this.moveToLoggedInUser.bind(this);
   }
   componentWillReceiveProps(next) {
     const { visible } = this.props;
@@ -61,12 +62,15 @@ export class GQLTeamOrgChart extends React.Component {
     const { history } = this.props;
     history.push(`/p/${card.id}`);
   }
+  moveToLoggedInUser(_, container) {
+    if (this.profileCard) container.scrollToCard(this.profileCard.node);
+  }
   render() {
     const { selected } = this.state;
     return (
       <Query
         query={GET}
-        variables={{ gcIDa: selected }}
+        variables={{ gcIDa: selected, gcIDb: this.props.myGcID }}
       >
         {({ loading, error, data }) => {
           if (loading && !data.orgchart) return <Loading />;
@@ -79,6 +83,7 @@ export class GQLTeamOrgChart extends React.Component {
               minilines,
             },
           } = data;
+          [this.profileCard] = cards.filter(c => c.id === this.props.myGcID);
           const selectedCard = cards.filter(c => c.id === selected)[0];
           const mSelectedCard = minicards.filter(c => c.id === selected)[0];
           return (
@@ -94,6 +99,7 @@ export class GQLTeamOrgChart extends React.Component {
                 miniLines={minilines}
                 miniSelectedNode={mSelectedCard && mSelectedCard.node}
                 style={{ height: '500px' }}
+                onMoveToActiveClick={this.moveToLoggedInUser}
               />
             </OrgChartLoading>
           );
@@ -105,12 +111,14 @@ export class GQLTeamOrgChart extends React.Component {
 
 GQLTeamOrgChart.defaultProps = {
   id: undefined,
+  myGcID: undefined,
 };
 
 GQLTeamOrgChart.propTypes = {
   id: PropTypes.string,
   history: ReactRouterPropTypes.history.isRequired,
   visible: PropTypes.bool.isRequired,
+  myGcID: PropTypes.string,
 };
 
 export default connect(mapStateToProps)(withRouter(GQLTeamOrgChart));

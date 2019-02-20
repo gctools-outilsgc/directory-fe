@@ -155,7 +155,12 @@ class OrgChart extends React.Component {
   }
 
   handleCentreClick() {
-    this.cardContainer.current.scrollToCard(this.props.selectedCard);
+    const { onMoveToActiveClick, selectedCard } = this.props;
+    if (onMoveToActiveClick) {
+      onMoveToActiveClick(selectedCard, this.cardContainer.current);
+    } else {
+      this.cardContainer.current.scrollToCard(selectedCard);
+    }
   }
 
   miniChartClick(e) {
@@ -348,6 +353,7 @@ OrgChart.defaultProps = {
   moveToActiveText: 'Go to me',
   menuComponent: undefined,
   moveToActiveComponent: undefined,
+  onMoveToActiveClick: undefined,
 };
 
 const nodeShape = PropTypes.shape({
@@ -428,6 +434,8 @@ OrgChart.propTypes = {
   moveToActiveText: PropTypes.string,
   /** Custom component to alter the built-in "move to active" button */
   moveToActiveComponent: PropTypes.func,
+  /** Override built-in behavior when the MoveToActive component is clicked */
+  onMoveToActiveClick: PropTypes.func,
 };
 
 export default OrgChart;

@@ -55,6 +55,32 @@ storiesOf('OrgChart', module)
     },
   )
   .add(
+    'with onMoveToActiveClick',
+    () => {
+      const { boxes, lines } = calculateTree({
+        nodeA,
+        root,
+        cardHeight: 75,
+        cardWidth: 350,
+      });
+      return (
+        <div style={{ padding: '10px' }}>
+          <OrgChart
+            selectedCard={boxes.filter(c => c.id === nodeA.uuid)[0].node}
+            cards={boxes}
+            lines={lines}
+            buttonTitle="!name!'s profile"
+            handleItemClick={action('profile-button-click')}
+            style={{ height: '550px' }}
+            cardWidth={350}
+            cardHeight={75}
+            onMoveToActiveClick={action('move click')}
+          />
+        </div>
+      );
+    },
+  )
+  .add(
     'using minichart',
     () => {
       const { boxes: cards, lines } = calculateTree({
