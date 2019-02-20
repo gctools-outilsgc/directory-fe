@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import { Mutation } from 'react-apollo';
+
 import {
   Dropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem
 } from 'reactstrap';
+
+import { EDIT } from '../../../gql/profile';
 
 class UserOptions extends Component {
   constructor(props) {
@@ -27,6 +31,7 @@ class UserOptions extends Component {
   render() {
     const {
       id,
+      loggedUser,
     } = this.props;
 
     return (
@@ -37,11 +42,28 @@ class UserOptions extends Component {
           ...
         </DropdownToggle>
         <DropdownMenu right>
-          <DropdownItem
-            onClick={this.toggle}
+          <Mutation
+            mutation={EDIT}
           >
-            Make this person your supervisor {id}
-          </DropdownItem>
+            {modifyProfile => (
+              <DropdownItem
+                onClick={() => {
+                  modifyProfile({
+                    variables: {
+                      gcID: String(loggedUser),
+                      data: {
+                        supervisor: {
+                          gcID: id,
+                        },
+                      },
+                    },
+                  });
+                }}
+              >
+                Make this person your supervisor {id}
+              </DropdownItem>
+            )}
+          </Mutation>
           <DropdownItem>
             Placeholder Example
           </DropdownItem>
@@ -55,8 +77,10 @@ export default UserOptions;
 
 UserOptions.defaultProps = {
   id: undefined,
+  loggedUser: undefined,
 };
 
 UserOptions.propTypes = {
   id: PropTypes.string,
+  loggedUser: PropTypes.string,
 };

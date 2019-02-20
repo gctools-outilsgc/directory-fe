@@ -60,7 +60,11 @@ export const GQLProfileCard = (props) => {
                       <LocalizedEditProfile
                         profile={userInfo}
                         token={accessToken}
-                      /> : <UserOptions id={userInfo.gcID} />}
+                      /> :
+                      <UserOptions
+                        id={userInfo.gcID}
+                        loggedUser={myGcID}
+                      />}
                   </CardTitle>
                   <LocalizedProfileCardDisplay
                     user={userInfo}
