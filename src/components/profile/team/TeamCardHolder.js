@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
 
 import {
   Card,
@@ -47,7 +49,7 @@ class TeamCardHolder extends React.Component {
       <Card style={style.card}>
         <CardBody>
           <CardTitle className="profile-card-title">
-              Teams
+            {__('Teams')}
           </CardTitle>
           <div>
             <Nav tabs>
@@ -111,4 +113,4 @@ TeamCardHolder.propTypes = {
   id: PropTypes.string,
 };
 
-export default TeamCardHolder;
+export default LocalizedComponent(TeamCardHolder);
