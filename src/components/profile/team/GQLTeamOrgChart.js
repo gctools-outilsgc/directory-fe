@@ -70,7 +70,11 @@ export class GQLTeamOrgChart extends React.Component {
     return (
       <Query
         query={GET}
-        variables={{ gcIDa: selected, gcIDb: this.props.myGcID }}
+        variables={{
+          gcIDa: selected,
+          gcIDb: this.props.myGcID,
+          leftGutter: 310,
+        }}
       >
         {({ loading, error, data }) => {
           if (loading && !data.orgchart) return <Loading />;

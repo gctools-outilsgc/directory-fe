@@ -1,8 +1,8 @@
 import gql from 'graphql-tag';
 
 export const GET = gql`
-query getOrgChart($gcIDa: String!, $gcIDb: String) {
-  orgchart(gcIDa: $gcIDa, gcIDb: $gcIDb) {
+query getOrgChart($gcIDa: String!, $gcIDb: String, $leftGutter: Float) {
+  orgchart(gcIDa: $gcIDa, gcIDb: $gcIDb, leftGutter: $leftGutter) {
     boxes {
       id
       x
