@@ -30,7 +30,7 @@ class TeamCardHolder extends React.Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      activeTab: '3',
+      activeTab: '1',
     };
   }
 
@@ -90,7 +90,10 @@ class TeamCardHolder extends React.Component {
                   Tab 2 Right Over here
               </TabPane>
               <TabPane tabId="3">
-                <LocalizedGQLTeamOrgChart id={this.props.id} />
+                <LocalizedGQLTeamOrgChart
+                  visible={this.state.activeTab === '3'}
+                  id={this.props.id}
+                />
               </TabPane>
             </TabContent>
           </div>

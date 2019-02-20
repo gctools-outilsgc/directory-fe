@@ -4,9 +4,9 @@ import TestRenderer from 'react-test-renderer';
 import MiniChart from './MiniChart';
 import MiniCard from './MiniCard';
 
-import { calculateTree } from '../algorithm/nrc_orgchart_placement';
+import { calculateTree, getNode } from '../algorithm/nrc_orgchart_placement';
 import NRCOrgChart from '../fixtures/sample.json';
-import { assumeLanguage, getNode } from '../fixtures/utils';
+import { assumeLanguage } from '../fixtures/utils';
 
 assumeLanguage(NRCOrgChart, 'en_CA');
 

@@ -6,6 +6,7 @@ import { Button } from 'reactstrap';
 
 import styled from 'styled-components';
 
+import GenericAvatar from './img/user.gif';
 import './css/card.css';
 
 const StyledCard = styled.a`
@@ -164,6 +165,8 @@ Card.defaultProps = {
   dragging: false,
   label: undefined,
   position: { },
+  avatar: GenericAvatar,
+  title: '',
 };
 
 Card.propTypes = {
@@ -178,13 +181,13 @@ Card.propTypes = {
   /** Function to fire when button is clicked */
   onButtonClick: PropTypes.func,
   /** URL of image to display as avatar */
-  avatar: PropTypes.string.isRequired,
+  avatar: PropTypes.string,
   /** Text describing avatar image */
   avatarText: PropTypes.string.isRequired,
   /** User's name */
   name: PropTypes.string.isRequired,
   /** User's title */
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   /** true if the card should be blurred */
   blurred: PropTypes.bool,
   /** true if the card should be displayed as "active" */

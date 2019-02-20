@@ -139,7 +139,7 @@ exports[`FileProperties OrgChart/Placement Algorithm Using sample data 1`] = `
       </p>
     </div>
     <div
-      className="priority_6 active"
+      className="priority_1 active"
       style={
         Object {
           "height": 50,

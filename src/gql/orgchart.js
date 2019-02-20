@@ -14,6 +14,9 @@ query getOrgChart($gcIDa: String!, $gcIDb: String) {
         avatar
         name
         titleEn
+        root
+        x
+        y
       }
     }
     lines {
@@ -32,6 +35,9 @@ query getOrgChart($gcIDa: String!, $gcIDb: String) {
         avatar
         name
         titleEn
+        root
+        x
+        y
       }
     }
     minilines {

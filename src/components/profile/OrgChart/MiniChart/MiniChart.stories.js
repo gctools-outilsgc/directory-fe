@@ -1,12 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { calculateTree } from '../algorithm/nrc_orgchart_placement';
+import { calculateTree, getNode } from '../algorithm/nrc_orgchart_placement';
 
 import MiniChart from './MiniChart';
 
 import root from '../fixtures/sample.json';
-import { getNode, assumeLanguage } from '../fixtures/utils';
+import { assumeLanguage } from '../fixtures/utils';
 
 assumeLanguage(root, 'en_CA');
 

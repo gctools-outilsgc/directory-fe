@@ -1,10 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import { calculateTree } from '../algorithm/nrc_orgchart_placement';
+import { calculateTree, getNode } from '../algorithm/nrc_orgchart_placement';
 
 import root from '../fixtures/sample.json';
-import { getNode, assumeLanguage } from '../fixtures/utils';
+import { assumeLanguage } from '../fixtures/utils';
 
 import '../fixtures/placement.css';
 
@@ -30,7 +30,7 @@ storiesOf('OrgChart/Placement Algorithm', module)
 
       const getClasses = (pos) => {
         const classes = [`priority_${pos.priority}`];
-        if (pos.node === nodeA) {
+        if (pos.id === nodeA.uuid) {
           classes.push('active');
         }
         if (!pos.on_path) {

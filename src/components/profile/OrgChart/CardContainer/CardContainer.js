@@ -176,7 +176,10 @@ class CardContainer extends React.Component {
           label={evaluateString(this.props.cardLabel, card)}
           buttonTitle={evaluateString(this.props.buttonTitle, card)}
           onButtonClick={e => this.cardButtonClick(card, e)}
-          avatar={card.node.avatar}
+          avatar={
+            (typeof card.node.avatar === 'string')
+              ? card.node.avatar : undefined
+          }
           avatarText={evaluateString(this.props.avatarText, card)}
           name={card.node.name}
           title={card.node.title}

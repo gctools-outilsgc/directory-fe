@@ -86,7 +86,7 @@ exports[`FileProperties OrgChart/CardContainer With no selected card 1`] = `
       />
     </svg>
     <a
-      className="sc-bdVaJa cHBWIo"
+      className="sc-bdVaJa fhstoZ"
       href="#"
       onClick={[Function]}
       style={
@@ -3976,7 +3976,7 @@ exports[`FileProperties OrgChart/CardContainer with selectedCard 1`] = `
       </div>
     </a>
     <a
-      className="sc-bdVaJa cHBWIo"
+      className="sc-bdVaJa fhstoZ"
       href="#"
       onClick={[Function]}
       style={

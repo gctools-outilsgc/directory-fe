@@ -139,6 +139,7 @@ const prioritizeNodes = (nodeA, nodeB, root) => {
       results = nodes.length;
     }
   };
+  nodeA.prio = 1; // eslint-disable-line no-param-reassign
   prioritize(nodeA);
   if (nodeB !== root) {
     prioritize(nodeB);
@@ -785,6 +786,35 @@ export const resetTree = (node) => {
 };
 
 /**
+ * Create a recursive copy of the supplied node.
+ * @param {object} node
+ */
+export const copyNode = (node) => {
+  const newNode = Object.assign(
+    {},
+    node,
+    { direct_reports: [], parent: null },
+  );
+  node.direct_reports
+    .forEach(child => newNode.direct_reports.push(copyNode(child)));
+  return newNode;
+};
+
+/**
+ * From the set of nodes provided, find the one matching the uuid and return it
+ * @param {object} node
+ * @param {string} uuid
+ */
+export const getNode = (node, uuid) => {
+  if (node.uuid === uuid) return node;
+  for (let x = 0; x < node.direct_reports.length; x += 1) {
+    const n = getNode(node.direct_reports[x], uuid);
+    if (n) return n;
+  }
+  return false;
+};
+
+/**
  * Calculate the positions of boxes and lines needed to generate a tree
  * @param {*} nodeA  First, or nodeA node
  * @param {*} nodeB  Node to draw path to, defaults to "root"
@@ -801,6 +831,9 @@ export const calculateTree = (options) => {
     cardPadding: 60,
     leftGutter: 0,
   }, options);
+  if (opt.root) opt.root = copyNode(opt.root);
+  if (opt.nodeA) opt.nodeA = getNode(opt.root, opt.nodeA.uuid);
+  if (opt.nodeB) opt.nodeB = getNode(opt.root, opt.nodeB.uuid);
   opt.nodeB = opt.nodeB || opt.root;
   resetTree(opt.root);
   addLinkToParent(opt.root);

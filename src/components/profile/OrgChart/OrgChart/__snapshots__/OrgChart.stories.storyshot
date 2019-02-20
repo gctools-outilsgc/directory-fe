@@ -1129,7 +1129,7 @@ exports[`FileProperties OrgChart using minichart 1`] = `
 </div>
 `;
 
-exports[`FileProperties OrgChart with activeUser 1`] = `
+exports[`FileProperties OrgChart with selectedCard 1`] = `
 <div
   style={
     Object {

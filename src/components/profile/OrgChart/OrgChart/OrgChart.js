@@ -155,7 +155,7 @@ class OrgChart extends React.Component {
   }
 
   handleCentreClick() {
-    this.cardContainer.current.scrollToCard(this.props.activeCard);
+    this.cardContainer.current.scrollToCard(this.props.selectedCard);
   }
 
   miniChartClick(e) {
@@ -165,6 +165,15 @@ class OrgChart extends React.Component {
       // eslint-disable-next-line comma-dangle
       e.clientY - rect.top
     );
+  }
+
+  center() {
+    setTimeout(() => {
+      this.updateMiniChartSize();
+      if (this.props.selectedCard) {
+        this.cardContainer.current.scrollToCard(this.props.selectedCard);
+      }
+    }, 20);
   }
 
   miniChartDrag(e) {
@@ -328,7 +337,6 @@ OrgChart.defaultProps = {
   cardWidth: 300,
   cardClickUrl: undefined,
   selectedCard: undefined,
-  activeCard: undefined,
   searchComponent: undefined,
   minichart: true,
   miniCards: [],
@@ -388,11 +396,6 @@ OrgChart.propTypes = {
   cardHeight: PropTypes.number,
   /** Currently selected card */
   selectedCard: PropTypes.shape({
-    id: PropTypes.string,
-    node: nodeShape,
-  }),
-  /** Currently selected card */
-  activeCard: PropTypes.shape({
     id: PropTypes.string,
     node: nodeShape,
   }),

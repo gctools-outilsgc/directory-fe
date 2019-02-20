@@ -2,12 +2,13 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
-import { calculateTree } from '../algorithm/nrc_orgchart_placement';
+import { calculateTree, getNode, copyNode }
+  from '../algorithm/nrc_orgchart_placement';
 
 import OrgChart from './OrgChart';
 
 import root from '../fixtures/sample.json';
-import { getNode, copyNode, assumeLanguage } from '../fixtures/utils';
+import { assumeLanguage } from '../fixtures/utils';
 
 const root2 = copyNode(root);
 
@@ -29,7 +30,7 @@ storiesOf('OrgChart', module)
     ),
   )
   .add(
-    'with activeUser',
+    'with selectedCard',
     () => {
       const { boxes, lines } = calculateTree({
         nodeA,
@@ -40,8 +41,7 @@ storiesOf('OrgChart', module)
       return (
         <div style={{ padding: '10px' }}>
           <OrgChart
-            activeCard={nodeA}
-            selectedCard={nodeA}
+            selectedCard={boxes.filter(c => c.id === nodeA.uuid)[0].node}
             cards={boxes}
             lines={lines}
             buttonTitle="!name!'s profile"
@@ -73,8 +73,7 @@ storiesOf('OrgChart', module)
       return (
         <div style={{ padding: '10px' }}>
           <OrgChart
-            activeCard={nodeA}
-            selectedCard={nodeA}
+            selectedCard={cards.filter(c => c.id === nodeA.uuid)[0].node}
             cards={cards}
             lines={lines}
             buttonTitle="!name!'s profile"
@@ -84,7 +83,9 @@ storiesOf('OrgChart', module)
             cardHeight={75}
             miniCards={miniCards}
             miniLines={miniLines}
-            miniSelectedNode={nodeA2}
+            miniSelectedNode={
+              miniCards.filter(c => c.id === nodeA.uuid)[0].node
+            }
           />
         </div>
       );

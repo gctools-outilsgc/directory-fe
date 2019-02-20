@@ -1,8 +1,7 @@
 import svgPathParse from 'parse-svg-path';
 
-import { calculateTree } from './nrc_orgchart_placement';
+import { calculateTree, getNode } from './nrc_orgchart_placement';
 import NRCOrgChart from '../fixtures/sample.json';
-import { getNode } from '../fixtures/utils';
 
 describe('calculateTree', () => {
   let rows = [];
