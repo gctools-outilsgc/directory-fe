@@ -1,14 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { PropTypes } from 'prop-types';
-
-const mapStateToProps = ({ user }) => {
-  const props = {};
-  if (user) {
-    props.myGcID = user.profile.sub;
-  }
-  return props;
-};
 
 class Home extends Component {
   componentDidMount() {
@@ -24,7 +14,7 @@ class Home extends Component {
             <a href="/onboard">Onboard</a>
           </li>
           <li>
-            <a href={`/p/${this.props.myGcID}`}>A Profile</a>
+            <a href="/p/22">A Profile</a>
           </li>
         </ul>
 
@@ -33,8 +23,4 @@ class Home extends Component {
   }
 }
 
-Home.propTypes = {
-  myGcID: PropTypes.string.isRequired,
-};
-
-export default connect(mapStateToProps)(Home);
+export default Home;

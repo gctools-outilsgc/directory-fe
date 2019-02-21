@@ -3,29 +3,18 @@ import PropTypes from 'prop-types';
 
 import { Mutation } from 'react-apollo';
 import { Button } from 'reactstrap';
-import { connect } from 'react-redux';
 
 import { EDIT } from '../../gql/profile';
-
-const mapStateToProps = ({ user }) => {
-  const props = {};
-  if (user) {
-    props.accessToken = user.access_token;
-    props.myGcID = user.profile.sub;
-  }
-  return props;
-};
 
 export const UserAvatar = (props) => {
   const {
     myGcID,
-    accessToken,
     edit,
     name,
     avatar,
     gcID,
   } = props;
-  const canEdit = (accessToken !== '') && edit && (gcID === myGcID);
+  const canEdit = edit && (gcID === myGcID);
 
   const avatarComp = (canEdit) ? (
     <div>
@@ -52,7 +41,7 @@ export const UserAvatar = (props) => {
           <Mutation
             mutation={EDIT}
           >
-            {(uploadAvatar, { data }) => (
+            {uploadAvatar => (
               <Button>
                 <label htmlFor="avatarUploadTest">
                   Upload
@@ -69,9 +58,6 @@ export const UserAvatar = (props) => {
                             avatar: target.files[0],
                           },
                         },
-                      }).then((result) => {
-                        console.log(result);
-                        console.log(data);
                       });
                     }}
                   />
@@ -113,9 +99,8 @@ UserAvatar.defaultProps = {
   edit: false,
   name: 'No photo',
   gcID: '',
-  accessToken: '',
   myGcID: '',
-  avatar: 'https://avatars0.githubusercontent.com/u/7603237?s=460&v=4',
+  avatar: '',
 };
 
 UserAvatar.propTypes = {
@@ -123,9 +108,8 @@ UserAvatar.propTypes = {
   gcID: PropTypes.string,
   name: PropTypes.string,
   avatar: PropTypes.string,
-  accessToken: PropTypes.string,
   myGcID: PropTypes.string,
 };
 
-export default connect(mapStateToProps)(UserAvatar);
+export default UserAvatar;
 

@@ -5,18 +5,19 @@ import LocalizedComponent
 
 import { Row, Col } from 'reactstrap';
 
-import ConnectedUserAvatar from '../../core/UserAvatar';
+import { UserAvatar } from '../../core/UserAvatar';
 
 export const ProfileCardDisplay = (props) => {
-  const { user } = props;
+  const { user, edit } = props;
   const { address: userAddress } = user;
   return (
     <Row>
       <Col xs="2">
-        <ConnectedUserAvatar
+        <UserAvatar
           gcID={user.gcID}
+          myGcID={user.gcID}
           avatar={user.avatar}
-          edit
+          edit={edit}
         />
       </Col>
       <Col xs="10">
@@ -94,6 +95,7 @@ ProfileCardDisplay.propTypes = {
       country: PropTypes.string,
     }),
   }).isRequired,
+  edit: PropTypes.bool.isRequired,
 };
 
 export default LocalizedComponent(ProfileCardDisplay);
