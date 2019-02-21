@@ -14,7 +14,7 @@ import store from './store';
 import './assets/css/index.css';
 
 const cache = new InMemoryCache({
-  dataIdFromObject: object => object.gcID || null,
+  dataIdFromObject: object => object.gcID || object.id || null,
 });
 
 const client = new ApolloClient({

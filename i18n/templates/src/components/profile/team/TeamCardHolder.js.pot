@@ -1,0 +1,64 @@
+msgid ""
+msgstr ""
+"Language : en\n"
+"Plural-Forms : nplurals=2; plural=(n != 1);\n"
+"MIME-Version : 1.0\n"
+"Content-Type : text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding : 8bit\n"
+
+#: src/components/profile/team/TeamCardHolder.js 147:35
+msgid "Team Name"
+msgstr ""
+
+#: src/components/profile/team/TeamCardHolder.js 139:31
+msgid "What is a team text"
+msgstr ""
+
+#: src/components/profile/team/TeamCardHolder.js 153:49
+msgid "Enter team name here"
+msgstr ""
+
+#: src/components/profile/team/TeamCardHolder.js 171:35
+msgid "Titre d'equipe"
+msgstr ""
+
+#: src/components/profile/team/TeamCardHolder.js 178:49
+msgid "Entrez titre d'equipe"
+msgstr ""
+
+#: src/components/profile/team/TeamCardHolder.js 196:35
+msgid "Description (English)"
+msgstr ""
+
+#: src/components/profile/team/TeamCardHolder.js 199:47
+msgid "Describe your team..."
+msgstr ""
+
+#: src/components/profile/team/TeamCardHolder.js 216:35
+msgid "La description (Francais)"
+msgstr ""
+
+#: src/components/profile/team/TeamCardHolder.js 219:47
+msgid "Decris ton equipe..."
+msgstr ""
+
+#: src/components/profile/team/TeamCardHolder.js 120:23
+msgid "+ Create Team"
+msgstr ""
+
+#: src/components/profile/team/TeamCardHolder.js 128:25
+msgid "Create a Team"
+msgstr ""
+
+#: src/components/profile/team/TeamCardHolder.js 139:31
+msgid "What is a team"
+msgstr ""
+
+#: src/components/profile/team/TeamCardHolder.js 239:33
+msgid "Save"
+msgstr ""
+
+#: src/components/profile/team/TeamCardHolder.js 245:33
+msgid "Cancel"
+msgstr ""
+
