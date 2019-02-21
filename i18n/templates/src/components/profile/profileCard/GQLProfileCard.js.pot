@@ -6,6 +6,11 @@ msgstr ""
 "Content-Type : text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding : 8bit\n"
 
-#: src/components/profile/team/TeamCardHolder.js 51:15
-msgid "Teams"
+#: src/components/profile/profileCard/GQLProfileCard.js 80:26
+msgid "Profile"
 msgstr ""
+
+#: src/components/profile/profileCard/GQLProfileCard.js 94:28
+msgid "Cannot find GCID"
+msgstr ""
+

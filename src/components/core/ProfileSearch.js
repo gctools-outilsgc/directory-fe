@@ -1,5 +1,4 @@
 import React from 'react';
-
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 
@@ -60,12 +59,12 @@ class ProfileSearch extends React.Component {
           return (
             <div className="search-form search-form-round">
               <label>
-                <span className="sr-only">Search</span>
+                <span className="sr-only">{__('Search')}</span>
                 <Input
                   type="text"
                   onChange={this.handleChange}
                   value={this.state.value}
-                  placeholder="Search Profiles"
+                  placeholder={__('Search Profiles')}
                 />
               </label>
               <ul className={styleClasses}>{results}</ul>

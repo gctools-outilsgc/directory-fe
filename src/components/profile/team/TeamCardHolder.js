@@ -76,7 +76,7 @@ class TeamCardHolder extends React.Component {
             <Card style={style.card}>
               <CardBody>
                 <CardTitle className="profile-card-title">
-                  Teams
+                  {__('Teams')}
                 </CardTitle>
                 <div>
                   <Nav tabs>

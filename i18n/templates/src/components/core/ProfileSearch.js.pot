@@ -6,6 +6,11 @@ msgstr ""
 "Content-Type : text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding : 8bit\n"
 
-#: src/components/profile/team/TeamCardHolder.js 51:15
-msgid "Teams"
+#: src/components/core/ProfileSearch.js 66:43
+msgid "Search"
 msgstr ""
+
+#: src/components/core/ProfileSearch.js 70:31
+msgid "Search Profiles"
+msgstr ""
+

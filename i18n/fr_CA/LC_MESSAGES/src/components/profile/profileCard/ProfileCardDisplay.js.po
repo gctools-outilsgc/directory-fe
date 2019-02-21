@@ -16,17 +16,17 @@ msgstr ""
 
 #: 28:67 src/components/profile/profileCard/ProfileCardDisplay.js
 msgid "Email"
-msgstr "Email FR"
+msgstr "Courriel"
 
 #: 36:67 src/components/profile/profileCard/ProfileCardDisplay.js
 msgid "Work"
-msgstr "Work FR"
+msgstr "Travail"
 
 #: 44:67 src/components/profile/profileCard/ProfileCardDisplay.js
 msgid "Mobile"
-msgstr "Mobile FR"
+msgstr "Mobile"
 
 #: 52:67 src/components/profile/profileCard/ProfileCardDisplay.js
 msgid "Address"
-msgstr "Address FR"
+msgstr "Adresse"
 
