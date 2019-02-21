@@ -35,6 +35,11 @@ query getTeam($gcID: String!) {
     team {
       nameEn
       nameFr
+      organization {
+        id,
+        nameEn,
+        nameFr
+      }
     }
   }
 }`;
