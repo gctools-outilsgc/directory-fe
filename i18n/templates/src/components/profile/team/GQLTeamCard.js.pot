@@ -1,0 +1,20 @@
+msgid ""
+msgstr ""
+"Language : en\n"
+"Plural-Forms : nplurals=2; plural=(n != 1);\n"
+"MIME-Version : 1.0\n"
+"Content-Type : text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding : 8bit\n"
+
+#: src/components/profile/team/GQLTeamCard.js 73:27
+msgid "Supervisor"
+msgstr ""
+
+#: src/components/profile/team/GQLTeamCard.js 84:27
+msgid "Team"
+msgstr ""
+
+#: src/components/profile/team/GQLTeamCard.js 92:22
+msgid "Cannot find GCID"
+msgstr ""
+
