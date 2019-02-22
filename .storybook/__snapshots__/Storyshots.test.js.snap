@@ -80,7 +80,7 @@ exports[`Storyshots Loading With default options 1`] = `
 </div>
 `;
 
-exports[`Storyshots TransferConfirmation With default options 1`] = `<div />`;
+exports[`Storyshots TransferConfirmation isOpen=false 1`] = `<div />`;
 
 exports[`Storyshots TransferConfirmation isOpen=true 1`] = `
 <div>
@@ -125,6 +125,54 @@ exports[`Storyshots TransferConfirmation isOpen=true 1`] = `
     being transffered, from what Team and Super, to what team and Supervisor.
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu
     porttitor ex. Nam luctus tincidunt dui, sit amet semper mi consequat eu.
+              <div
+                className="sc-bdVaJa gYWbJm"
+              />
+              <div
+                className="sc-bwzfXH geznlt"
+              >
+                <img
+                  alt="Avatar of  Mark Phillips"
+                />
+                <div
+                  className="name"
+                >
+                  <h2>
+                    Mark Phillips
+                  </h2>
+                  <span>
+                    Team: Global Affairs Advocacy
+                  </span>
+                </div>
+                <div
+                  className="break"
+                >
+                  <div />
+                </div>
+                <img
+                  alt="Avatar of  Clara MacKinnon"
+                />
+                <div
+                  className="name"
+                >
+                  <h2>
+                    Clara MacKinnon
+                  </h2>
+                </div>
+                <img
+                  alt="Avatar of  Mia Jarrel"
+                />
+                <div
+                  className="name"
+                >
+                  <h2>
+                    Mia Jarrel
+                  </h2>
+                  <span>
+                    Team: Default
+                  </span>
+                </div>
+              </div>
             </div>
             <div
               className="modal-footer"
@@ -133,15 +181,260 @@ exports[`Storyshots TransferConfirmation isOpen=true 1`] = `
                 aria-label={null}
                 className="btn btn-primary"
                 onClick={[Function]}
+                type="button"
               >
-                Transfer
+                Primary
               </button>
               <button
                 aria-label={null}
                 className="btn btn-secondary"
                 onClick={[Function]}
+                type="button"
               >
-                Cancel
+                Secondary
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="modal-backdrop fade"
+      />
+    </div>
+  </portal-dummy>
+</div>
+`;
+
+exports[`Storyshots TransferConfirmation with click handlers 1`] = `
+<div>
+  <portal-dummy>
+    <div
+      className=""
+    >
+      <div
+        className="modal fade"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        role="dialog"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        tabIndex="-1"
+      >
+        <div
+          className="modal-dialog modal-dialog-centered"
+          role="document"
+        >
+          <div
+            className="modal-content"
+          >
+            <div
+              className="modal-header"
+            >
+              <h5
+                className="modal-title"
+              >
+                You will transfer to a new Supervisor (& Team)
+              </h5>
+            </div>
+            <div
+              className="modal-body"
+            >
+              Explicit information about the transfer to include the Person
+    being transffered, from what Team and Super, to what team and Supervisor.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu
+    porttitor ex. Nam luctus tincidunt dui, sit amet semper mi consequat eu.
+              <div
+                className="sc-bdVaJa gYWbJm"
+              />
+              <div
+                className="sc-bwzfXH geznlt"
+              >
+                <img
+                  alt="Avatar of  Mark Phillips"
+                />
+                <div
+                  className="name"
+                >
+                  <h2>
+                    Mark Phillips
+                  </h2>
+                  <span>
+                    Team: Global Affairs Advocacy
+                  </span>
+                </div>
+                <div
+                  className="break"
+                >
+                  <div />
+                </div>
+                <img
+                  alt="Avatar of  Clara MacKinnon"
+                />
+                <div
+                  className="name"
+                >
+                  <h2>
+                    Clara MacKinnon
+                  </h2>
+                </div>
+                <img
+                  alt="Avatar of  Mia Jarrel"
+                />
+                <div
+                  className="name"
+                >
+                  <h2>
+                    Mia Jarrel
+                  </h2>
+                  <span>
+                    Team: Default
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              className="modal-footer"
+            >
+              <button
+                aria-label={null}
+                className="btn btn-primary"
+                onClick={[Function]}
+                type="button"
+              >
+                Primary
+              </button>
+              <button
+                aria-label={null}
+                className="btn btn-secondary"
+                onClick={[Function]}
+                type="button"
+              >
+                Secondary
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="modal-backdrop fade"
+      />
+    </div>
+  </portal-dummy>
+</div>
+`;
+
+exports[`Storyshots TransferConfirmation with custom text 1`] = `
+<div>
+  <portal-dummy>
+    <div
+      className=""
+    >
+      <div
+        className="modal fade"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        role="dialog"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        tabIndex="-1"
+      >
+        <div
+          className="modal-dialog modal-dialog-centered"
+          role="document"
+        >
+          <div
+            className="modal-content"
+          >
+            <div
+              className="modal-header"
+            >
+              <h5
+                className="modal-title"
+              >
+                Custom title
+              </h5>
+            </div>
+            <div
+              className="modal-body"
+            >
+              Custom dialog body
+              <div
+                className="sc-bdVaJa gYWbJm"
+              />
+              <div
+                className="sc-bwzfXH geznlt"
+              >
+                <img
+                  alt="Avatar of  Mark Phillips"
+                />
+                <div
+                  className="name"
+                >
+                  <h2>
+                    Mark Phillips
+                  </h2>
+                  <span>
+                    Team: Global Affairs Advocacy
+                  </span>
+                </div>
+                <div
+                  className="break"
+                >
+                  <div />
+                </div>
+                <img
+                  alt="Avatar of  Clara MacKinnon"
+                />
+                <div
+                  className="name"
+                >
+                  <h2>
+                    Clara MacKinnon
+                  </h2>
+                </div>
+                <img
+                  alt="Avatar of  Mia Jarrel"
+                />
+                <div
+                  className="name"
+                >
+                  <h2>
+                    Mia Jarrel
+                  </h2>
+                  <span>
+                    Team: Default
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div
+              className="modal-footer"
+            >
+              <button
+                aria-label={null}
+                className="btn btn-primary"
+                onClick={[Function]}
+                type="button"
+              >
+                Custom Primary
+              </button>
+              <button
+                aria-label={null}
+                className="btn btn-secondary"
+                onClick={[Function]}
+                type="button"
+              >
+                Custom Secondary
               </button>
             </div>
           </div>
