@@ -19,6 +19,9 @@ const nodeA = getNode(root, '3');
 const nodeA2 = getNode(root2, '3');
 
 storiesOf('OrgChart', module)
+  .addParameters({
+    info: { header: true, inline: true, source: false },
+  })
   .add(
     'Only required options',
     () => (

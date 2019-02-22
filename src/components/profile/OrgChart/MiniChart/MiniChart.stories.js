@@ -13,6 +13,9 @@ assumeLanguage(root, 'en_CA');
 const nodeA = getNode(root, '3');
 
 storiesOf('OrgChart/MiniChart', module)
+  .addParameters({
+    info: { header: true, inline: true, source: false },
+  })
   .add(
     'Only required options',
     () => (

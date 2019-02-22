@@ -16,6 +16,9 @@ const user = {
 };
 
 storiesOf('OrgChart/Card', module)
+  .addParameters({
+    info: { header: true, inline: true, source: false },
+  })
   .add(
     'Only required options',
     () => (

@@ -12,11 +12,11 @@ import { assumeLanguage } from '../fixtures/utils';
 assumeLanguage(root, 'en_CA');
 
 const nodeA = getNode(root, '3');
-// // eslint-disable-next-line import/no-dynamic-require
-// const UserAvatar = require(`../fixtures/${avatar}`);
-
 
 storiesOf('OrgChart/CardContainer', module)
+  .addParameters({
+    info: { header: true, inline: true, source: false },
+  })
   .add(
     'Only required options',
     () => (
