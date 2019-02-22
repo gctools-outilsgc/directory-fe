@@ -79,3 +79,78 @@ exports[`Storyshots Loading With default options 1`] = `
   </div>
 </div>
 `;
+
+exports[`Storyshots TransferConfirmation With default options 1`] = `<div />`;
+
+exports[`Storyshots TransferConfirmation isOpen=true 1`] = `
+<div>
+  <portal-dummy>
+    <div
+      className=""
+    >
+      <div
+        className="modal fade"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        role="dialog"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        tabIndex="-1"
+      >
+        <div
+          className="modal-dialog modal-dialog-centered"
+          role="document"
+        >
+          <div
+            className="modal-content"
+          >
+            <div
+              className="modal-header"
+            >
+              <h5
+                className="modal-title"
+              >
+                You will transfer to a new Supervisor (& Team)
+              </h5>
+            </div>
+            <div
+              className="modal-body"
+            >
+              Explicit information about the transfer to include the Person
+    being transffered, from what Team and Super, to what team and Supervisor.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu
+    porttitor ex. Nam luctus tincidunt dui, sit amet semper mi consequat eu.
+            </div>
+            <div
+              className="modal-footer"
+            >
+              <button
+                aria-label={null}
+                className="btn btn-primary"
+                onClick={[Function]}
+              >
+                Transfer
+              </button>
+              <button
+                aria-label={null}
+                className="btn btn-secondary"
+                onClick={[Function]}
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="modal-backdrop fade"
+      />
+    </div>
+  </portal-dummy>
+</div>
+`;
