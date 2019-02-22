@@ -13,9 +13,24 @@ import {
   Button
 } from 'reactstrap';
 
+// Fallback for browsers who don't support CSS variables
+const cssVariables = {
+  '--primary': '#002D42',
+  '--warning': '#f90',
+  '--info': '#269abc',
+};
+const styles = getComputedStyle(document.body);
+
+const varTag = (variable) => {
+  if (!styles.getPropertyValue(variable)) {
+    return cssVariables[variable];
+  }
+  return `var(${variable})`;
+};
+
 const Arrow = styled.div`
     position: relative;
-    background: var(--primary);
+    background: ${varTag('--primary')};
     margin-top: 50px;
     margin-bottom: 50px;
     margin-left: 75px;
@@ -31,7 +46,7 @@ const Arrow = styled.div`
     position: absolute;
     pointer-events: none;
     border-color: rgba(136, 183, 213, 0);
-    border-left-color: var(--primary);
+    border-left-color: ${varTag('--primary')};
     border-width: 15px;
     margin-top: -15px;
   }`;
@@ -48,7 +63,7 @@ const Avatars = styled.div`
     max-width: 75px;
     height: 75px;
     border-radius: 50%;
-    border: 3px solid var(--primary);
+    border: 3px solid ${varTag('--primary')};
     margin-left: 80px;
   }
   >div.name {
@@ -70,14 +85,14 @@ const Avatars = styled.div`
     border-radius: 5px;
     width: 40px;
     height: 40px;
-    border: 2px solid var(--info);
+    border: 2px solid ${varTag('--info')};
     color: #fff;
-    background-color: var(--warning);
+    background-color: ${varTag('--warning')};
     margin-top: 55px;
     margin-left: -25px;
   }
   div.team.new {
-    background-color: var(--primary);
+    background-color: ${varTag('--primary')};
   }
   div.team>span {
     position: absolute;
@@ -92,7 +107,8 @@ const Avatars = styled.div`
     margin-top: 20px;
     position: absolute;
     display: inline-block;
-    background-color: var(--primary);
+    background-color: ${varTag('--primary')};
+    background-color: ${varTag('--primary')};
     width: 30px;
     height: 35px;
   }

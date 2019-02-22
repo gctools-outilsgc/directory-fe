@@ -5,8 +5,13 @@ import { action } from '@storybook/addon-actions';
 
 import TransferConfirmation from './TransferConfirmation';
 
+import avatar1 from './fixtures/1.jpg';
+import avatar2 from './fixtures/2.jpg';
+import avatar3 from './fixtures/3.jpg';
+
 const user1 = {
   name: 'Mark Phillips',
+  avatar: avatar1,
   team: {
     name: 'Team: Global Affairs Advocacy',
     avatar: 'GA',
@@ -15,6 +20,7 @@ const user1 = {
 
 const user2 = {
   name: 'Clara MacKinnon',
+  avatar: avatar2,
   team: {
     name: 'Team: Global Affairs Advocacy',
   },
@@ -22,6 +28,7 @@ const user2 = {
 
 const user3 = {
   name: 'Mia Jarrel',
+  avatar: avatar3,
   team: {
     name: 'Team: Default',
     avatar: 'DT',
