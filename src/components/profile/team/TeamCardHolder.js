@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
 
 import {
   Card,
@@ -14,6 +16,7 @@ import {
 import classnames from 'classnames';
 
 import LocalizedGQLTeamCard from './GQLTeamCard';
+import LocalizedGQLTeamOrgChart from './GQLTeamOrgChart';
 
 const style = {
   card: {
@@ -46,7 +49,7 @@ class TeamCardHolder extends React.Component {
       <Card style={style.card}>
         <CardBody>
           <CardTitle className="profile-card-title">
-              Teams
+            {__('Teams')}
           </CardTitle>
           <div>
             <Nav tabs>
@@ -89,7 +92,10 @@ class TeamCardHolder extends React.Component {
                   Tab 2 Right Over here
               </TabPane>
               <TabPane tabId="3">
-                  Put the Org Chart Here!
+                <LocalizedGQLTeamOrgChart
+                  visible={this.state.activeTab === '3'}
+                  id={this.props.id}
+                />
               </TabPane>
             </TabContent>
           </div>
@@ -107,4 +113,4 @@ TeamCardHolder.propTypes = {
   id: PropTypes.string,
 };
 
-export default TeamCardHolder;
+export default LocalizedComponent(TeamCardHolder);
