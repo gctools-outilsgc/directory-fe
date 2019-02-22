@@ -8,7 +8,9 @@ import { calculateTree, getNode, copyNode }
 import OrgChart from './OrgChart';
 
 import root from '../fixtures/sample.json';
-import { assumeLanguage } from '../fixtures/utils';
+import { assumeLanguage, linkAvatars } from '../fixtures/utils';
+
+linkAvatars(root);
 
 const root2 = copyNode(root);
 

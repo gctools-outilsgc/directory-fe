@@ -1427,7 +1427,7 @@ exports[`FileProperties OrgChart/CardContainer With no selected card 1`] = `
             alt="Marcel Turcot"
             className="sc-bwzfXH gQszWm"
             name="user"
-            src="8.jpg"
+            src="8.gif"
           />
           <div
             className="sc-htpNat fgEekJ"
@@ -1692,7 +1692,7 @@ exports[`FileProperties OrgChart/CardContainer With no selected card 1`] = `
             alt="Thomas Pedersen"
             className="sc-bwzfXH gQszWm"
             name="user"
-            src="13.jpg"
+            src="13.gif"
           />
           <div
             className="sc-htpNat fgEekJ"
@@ -3078,7 +3078,7 @@ exports[`FileProperties OrgChart/CardContainer with button title 1`] = `
             alt="Marcel Turcot"
             className="sc-bwzfXH gQszWm"
             name="user"
-            src="8.jpg"
+            src="8.gif"
           />
           <div
             className="sc-htpNat fgEekJ"
@@ -3343,7 +3343,7 @@ exports[`FileProperties OrgChart/CardContainer with button title 1`] = `
             alt="Thomas Pedersen"
             className="sc-bwzfXH gQszWm"
             name="user"
-            src="13.jpg"
+            src="13.gif"
           />
           <div
             className="sc-htpNat fgEekJ"
@@ -4729,7 +4729,7 @@ exports[`FileProperties OrgChart/CardContainer with cardClickUrl 1`] = `
             alt="Marcel Turcot"
             className="sc-bwzfXH gQszWm"
             name="user"
-            src="8.jpg"
+            src="8.gif"
           />
           <div
             className="sc-htpNat fgEekJ"
@@ -4994,7 +4994,7 @@ exports[`FileProperties OrgChart/CardContainer with cardClickUrl 1`] = `
             alt="Thomas Pedersen"
             className="sc-bwzfXH gQszWm"
             name="user"
-            src="13.jpg"
+            src="13.gif"
           />
           <div
             className="sc-htpNat fgEekJ"
@@ -6380,7 +6380,7 @@ exports[`FileProperties OrgChart/CardContainer with click handlers 1`] = `
             alt="Marcel Turcot"
             className="sc-bwzfXH gQszWm"
             name="user"
-            src="8.jpg"
+            src="8.gif"
           />
           <div
             className="sc-htpNat fgEekJ"
@@ -6645,7 +6645,7 @@ exports[`FileProperties OrgChart/CardContainer with click handlers 1`] = `
             alt="Thomas Pedersen"
             className="sc-bwzfXH gQszWm"
             name="user"
-            src="13.jpg"
+            src="13.gif"
           />
           <div
             className="sc-htpNat fgEekJ"
@@ -8035,7 +8035,7 @@ exports[`FileProperties OrgChart/CardContainer with custom styles (backgroundCol
             alt="Marcel Turcot"
             className="sc-bwzfXH gQszWm"
             name="user"
-            src="8.jpg"
+            src="8.gif"
           />
           <div
             className="sc-htpNat fgEekJ"
@@ -8300,7 +8300,7 @@ exports[`FileProperties OrgChart/CardContainer with custom styles (backgroundCol
             alt="Thomas Pedersen"
             className="sc-bwzfXH gQszWm"
             name="user"
-            src="13.jpg"
+            src="13.gif"
           />
           <div
             className="sc-htpNat fgEekJ"
@@ -9686,7 +9686,7 @@ exports[`FileProperties OrgChart/CardContainer with selectedCard 1`] = `
             alt="Marcel Turcot"
             className="sc-bwzfXH gQszWm"
             name="user"
-            src="8.jpg"
+            src="8.gif"
           />
           <div
             className="sc-htpNat fgEekJ"
@@ -9951,7 +9951,7 @@ exports[`FileProperties OrgChart/CardContainer with selectedCard 1`] = `
             alt="Thomas Pedersen"
             className="sc-bwzfXH gQszWm"
             name="user"
-            src="13.jpg"
+            src="13.gif"
           />
           <div
             className="sc-htpNat fgEekJ"

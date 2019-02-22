@@ -2370,7 +2370,7 @@ exports[`FileProperties OrgChart using minichart 1`] = `
                 alt="Marcel Turcot"
                 className="sc-bwzfXH gQszWm"
                 name="user"
-                src="8.jpg"
+                src="8.gif"
               />
               <div
                 className="sc-htpNat fgEekJ"
@@ -2635,7 +2635,7 @@ exports[`FileProperties OrgChart using minichart 1`] = `
                 alt="Thomas Pedersen"
                 className="sc-bwzfXH gQszWm"
                 name="user"
-                src="13.jpg"
+                src="13.gif"
               />
               <div
                 className="sc-htpNat fgEekJ"
@@ -4695,7 +4695,7 @@ exports[`FileProperties OrgChart with onMoveToActiveClick 1`] = `
                 alt="Marcel Turcot"
                 className="sc-bwzfXH gQszWm"
                 name="user"
-                src="8.jpg"
+                src="8.gif"
               />
               <div
                 className="sc-htpNat fgEekJ"
@@ -4960,7 +4960,7 @@ exports[`FileProperties OrgChart with onMoveToActiveClick 1`] = `
                 alt="Thomas Pedersen"
                 className="sc-bwzfXH gQszWm"
                 name="user"
-                src="13.jpg"
+                src="13.gif"
               />
               <div
                 className="sc-htpNat fgEekJ"
@@ -7020,7 +7020,7 @@ exports[`FileProperties OrgChart with selectedCard 1`] = `
                 alt="Marcel Turcot"
                 className="sc-bwzfXH gQszWm"
                 name="user"
-                src="8.jpg"
+                src="8.gif"
               />
               <div
                 className="sc-htpNat fgEekJ"
@@ -7285,7 +7285,7 @@ exports[`FileProperties OrgChart with selectedCard 1`] = `
                 alt="Thomas Pedersen"
                 className="sc-bwzfXH gQszWm"
                 name="user"
-                src="13.jpg"
+                src="13.gif"
               />
               <div
                 className="sc-htpNat fgEekJ"
