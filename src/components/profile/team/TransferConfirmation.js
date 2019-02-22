@@ -54,7 +54,7 @@ const Avatars = styled.div`
   >div.name {
     position: absolute;
     display: inline-block;
-    margin-top: 80px;
+    margin-top: 100px;
     margin-left: -105px;
     width: 150px;
     text-align: center;
@@ -64,7 +64,28 @@ const Avatars = styled.div`
     font-weight: bold;
     margin: 0;
   }
-  span { }
+  div.team {
+    position: absolute;
+    display: inline-block;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--info);
+    color: #fff;
+    background-color: var(--warning);
+    margin-top: 55px;
+    margin-left: -25px;
+  }
+  div.team.new {
+    background-color: var(--primary);
+  }
+  div.team>span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  }
   >div.break {
     margin-left: 25px;
     margin-right: -25px;
@@ -150,6 +171,9 @@ const TransferConfirmation = (props) => {
               src={user1.avatar}
               alt={`${avatarAltText} ${user1.name}`}
             />
+            <div className="team">
+              <span>{user1.team.avatar}</span>
+            </div>
             <div className="name">
               <h2>{user1.name}</h2>
               <span>{user1.team.name}</span>
@@ -166,6 +190,9 @@ const TransferConfirmation = (props) => {
               src={user3.avatar}
               alt={`${avatarAltText} ${user3.name}`}
             />
+            <div className="team new">
+              <span>{user3.team.avatar}</span>
+            </div>
             <div className="name">
               <h2>{user3.name}</h2>
               <span>{user3.team.name}</span>

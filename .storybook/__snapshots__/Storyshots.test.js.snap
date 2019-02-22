@@ -135,11 +135,18 @@ exports[`Storyshots TransferConfirmation isOpen=true 1`] = `
                 className="sc-bdVaJa gYWbJm"
               />
               <div
-                className="sc-bwzfXH geznlt"
+                className="sc-bwzfXH bwzfLG"
               >
                 <img
                   alt="Avatar of  Mark Phillips"
                 />
+                <div
+                  className="team"
+                >
+                  <span>
+                    GA
+                  </span>
+                </div>
                 <div
                   className="name"
                 >
@@ -168,6 +175,13 @@ exports[`Storyshots TransferConfirmation isOpen=true 1`] = `
                 <img
                   alt="Avatar of  Mia Jarrel"
                 />
+                <div
+                  className="team new"
+                >
+                  <span>
+                    DT
+                  </span>
+                </div>
                 <div
                   className="name"
                 >
@@ -264,11 +278,18 @@ exports[`Storyshots TransferConfirmation with click handlers 1`] = `
                 className="sc-bdVaJa gYWbJm"
               />
               <div
-                className="sc-bwzfXH geznlt"
+                className="sc-bwzfXH bwzfLG"
               >
                 <img
                   alt="Avatar of  Mark Phillips"
                 />
+                <div
+                  className="team"
+                >
+                  <span>
+                    GA
+                  </span>
+                </div>
                 <div
                   className="name"
                 >
@@ -297,6 +318,13 @@ exports[`Storyshots TransferConfirmation with click handlers 1`] = `
                 <img
                   alt="Avatar of  Mia Jarrel"
                 />
+                <div
+                  className="team new"
+                >
+                  <span>
+                    DT
+                  </span>
+                </div>
                 <div
                   className="name"
                 >
@@ -390,11 +418,18 @@ exports[`Storyshots TransferConfirmation with custom text 1`] = `
                 className="sc-bdVaJa gYWbJm"
               />
               <div
-                className="sc-bwzfXH geznlt"
+                className="sc-bwzfXH bwzfLG"
               >
                 <img
                   alt="Avatar of  Mark Phillips"
                 />
+                <div
+                  className="team"
+                >
+                  <span>
+                    GA
+                  </span>
+                </div>
                 <div
                   className="name"
                 >
@@ -423,6 +458,13 @@ exports[`Storyshots TransferConfirmation with custom text 1`] = `
                 <img
                   alt="Avatar of  Mia Jarrel"
                 />
+                <div
+                  className="team new"
+                >
+                  <span>
+                    DT
+                  </span>
+                </div>
                 <div
                   className="name"
                 >

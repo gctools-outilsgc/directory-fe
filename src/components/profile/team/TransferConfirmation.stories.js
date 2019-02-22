@@ -9,6 +9,7 @@ const user1 = {
   name: 'Mark Phillips',
   team: {
     name: 'Team: Global Affairs Advocacy',
+    avatar: 'GA',
   },
 };
 
@@ -23,6 +24,7 @@ const user3 = {
   name: 'Mia Jarrel',
   team: {
     name: 'Team: Default',
+    avatar: 'DT',
   },
 };
 
