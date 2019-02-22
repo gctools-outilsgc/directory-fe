@@ -44,6 +44,9 @@ class UserOptions extends Component {
         <DropdownMenu right>
           <Mutation
             mutation={EDIT}
+            onCompleted={() => {
+              alert('Supervisor Changed: Change this');
+            }}
           >
             {modifyProfile => (
               <DropdownItem
@@ -60,7 +63,7 @@ class UserOptions extends Component {
                   });
                 }}
               >
-                Make this person your supervisor {id}
+                Make this person your supervisor
               </DropdownItem>
             )}
           </Mutation>
