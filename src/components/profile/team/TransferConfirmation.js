@@ -296,11 +296,28 @@ TransferConfirmation.propTypes = {
   /** Text to use for avatar alt tag, suffixed by the user's name */
   avatarAltText: PropTypes.string,
   /** The profile of the old supervisor */
-  oldSupervisor: userProps.isRequired,
+  oldSupervisor: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    avatar: PropTypes.string,
+    team: PropTypes.shape({
+      name: PropTypes.string,
+      avatar: PropTypes.string,
+    }).isRequired,
+  }).isRequired,
   /** The profile of user being transferred */
-  transferredUser: userProps.isRequired,
+  transferredUser: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    avatar: PropTypes.string,
+  }).isRequired,
   /** The profile of the new supervisor */
-  newSupervisor: userProps.isRequired,
+  newSupervisor: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    avatar: PropTypes.string,
+    team: PropTypes.shape({
+      name: PropTypes.string,
+      avatar: PropTypes.string,
+    }).isRequired,
+  }).isRequired,
 };
 
 export default TransferConfirmation;

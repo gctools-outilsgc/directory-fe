@@ -36,6 +36,9 @@ const user3 = {
 };
 
 storiesOf('TransferConfirmation', module)
+  .addParameters({
+    info: { header: true, inline: true, source: false },
+  })
   .add(
     'isOpen=true',
     () => (
