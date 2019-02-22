@@ -132,13 +132,14 @@ exports[`Storyshots TransferConfirmation isOpen=true 1`] = `
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu
     porttitor ex. Nam luctus tincidunt dui, sit amet semper mi consequat eu.
               <div
-                className="sc-bdVaJa gYWbJm"
+                className="sc-bdVaJa lpswum"
               />
               <div
-                className="sc-bwzfXH bwzfLG"
+                className="sc-bwzfXH jEKndz"
               >
                 <img
                   alt="Avatar of  Mark Phillips"
+                  src="1.jpg"
                 />
                 <div
                   className="team"
@@ -164,6 +165,7 @@ exports[`Storyshots TransferConfirmation isOpen=true 1`] = `
                 </div>
                 <img
                   alt="Avatar of  Clara MacKinnon"
+                  src="2.jpg"
                 />
                 <div
                   className="name"
@@ -174,6 +176,7 @@ exports[`Storyshots TransferConfirmation isOpen=true 1`] = `
                 </div>
                 <img
                   alt="Avatar of  Mia Jarrel"
+                  src="3.jpg"
                 />
                 <div
                   className="team new"
@@ -275,13 +278,14 @@ exports[`Storyshots TransferConfirmation with click handlers 1`] = `
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu
     porttitor ex. Nam luctus tincidunt dui, sit amet semper mi consequat eu.
               <div
-                className="sc-bdVaJa gYWbJm"
+                className="sc-bdVaJa lpswum"
               />
               <div
-                className="sc-bwzfXH bwzfLG"
+                className="sc-bwzfXH jEKndz"
               >
                 <img
                   alt="Avatar of  Mark Phillips"
+                  src="1.jpg"
                 />
                 <div
                   className="team"
@@ -307,6 +311,7 @@ exports[`Storyshots TransferConfirmation with click handlers 1`] = `
                 </div>
                 <img
                   alt="Avatar of  Clara MacKinnon"
+                  src="2.jpg"
                 />
                 <div
                   className="name"
@@ -317,6 +322,7 @@ exports[`Storyshots TransferConfirmation with click handlers 1`] = `
                 </div>
                 <img
                   alt="Avatar of  Mia Jarrel"
+                  src="3.jpg"
                 />
                 <div
                   className="team new"
@@ -415,13 +421,14 @@ exports[`Storyshots TransferConfirmation with custom text 1`] = `
             >
               Custom dialog body
               <div
-                className="sc-bdVaJa gYWbJm"
+                className="sc-bdVaJa lpswum"
               />
               <div
-                className="sc-bwzfXH bwzfLG"
+                className="sc-bwzfXH jEKndz"
               >
                 <img
                   alt="Avatar of  Mark Phillips"
+                  src="1.jpg"
                 />
                 <div
                   className="team"
@@ -447,6 +454,7 @@ exports[`Storyshots TransferConfirmation with custom text 1`] = `
                 </div>
                 <img
                   alt="Avatar of  Clara MacKinnon"
+                  src="2.jpg"
                 />
                 <div
                   className="name"
@@ -457,6 +465,7 @@ exports[`Storyshots TransferConfirmation with custom text 1`] = `
                 </div>
                 <img
                   alt="Avatar of  Mia Jarrel"
+                  src="3.jpg"
                 />
                 <div
                   className="team new"
