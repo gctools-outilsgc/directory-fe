@@ -6,7 +6,7 @@ msgstr ""
 "Content-Type : text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding : 8bit\n"
 
-#: src/components/profile/team/TeamCardHolder.js 51:15
+#: src/components/profile/team/TeamCardHolder.js 52:13
 msgid "Teams"
 msgstr ""
 

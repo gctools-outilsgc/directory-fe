@@ -1,0 +1,716 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FileProperties OrgChart/Card Only required options 1`] = `
+<div
+  style={
+    Object {
+      "height": "100px",
+      "margin": "20px",
+    }
+  }
+>
+  <a
+    className="sc-bdVaJa fhstoZ"
+    href="#"
+    onClick={[Function]}
+    style={
+      Object {
+        "left": undefined,
+        "position": "absolute",
+        "top": undefined,
+      }
+    }
+    tabIndex="0"
+  >
+    <img
+      alt="Iain Stewart"
+      className="sc-bwzfXH gQszWm"
+      name="user"
+      src="1.jpg"
+    />
+    <div
+      className="sc-htpNat fgEekJ"
+    >
+      <div
+        aria-level={1}
+        className="sc-bxivhb cwDeYE"
+        role="heading"
+      >
+        Iain Stewart
+      </div>
+      <div
+        aria-level={2}
+        className="sc-ifAKCX eBmtR"
+        role="heading"
+      >
+        President - NRC
+      </div>
+    </div>
+    <div
+      className="sc-EHOje kMcEwg"
+    >
+      <button
+        aria-label={null}
+        className="btn btn-secondary"
+        icon="user"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+        type="button"
+      >
+        Test Iain Stewart's profile button
+      </button>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`FileProperties OrgChart/Card active 1`] = `
+<div
+  style={
+    Object {
+      "height": "100px",
+      "margin": "20px",
+    }
+  }
+>
+  <a
+    className="sc-bdVaJa cHBWIo"
+    href="#"
+    onClick={[Function]}
+    style={
+      Object {
+        "left": undefined,
+        "position": "absolute",
+        "top": undefined,
+      }
+    }
+    tabIndex="0"
+  >
+    <img
+      alt="Iain Stewart"
+      className="sc-bwzfXH gQszWm"
+      name="user"
+      src="1.jpg"
+    />
+    <div
+      className="sc-htpNat fgEekJ"
+    >
+      <div
+        aria-level={1}
+        className="sc-bxivhb cwDeYE"
+        role="heading"
+      >
+        Iain Stewart
+      </div>
+      <div
+        aria-level={2}
+        className="sc-ifAKCX eBmtR"
+        role="heading"
+      >
+        President - NRC
+      </div>
+    </div>
+    <div
+      className="sc-EHOje kMcEwg"
+    >
+      <button
+        aria-label={null}
+        className="btn btn-secondary"
+        icon="user"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+        type="button"
+      >
+        Test Iain Stewart's profile button
+      </button>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`FileProperties OrgChart/Card at position x=150, y=220 1`] = `
+<div
+  style={
+    Object {
+      "height": "100px",
+      "margin": "20px",
+    }
+  }
+>
+  <a
+    className="sc-bdVaJa fhstoZ"
+    href="#"
+    onClick={[Function]}
+    style={
+      Object {
+        "left": 150,
+        "position": "absolute",
+        "top": 220,
+      }
+    }
+    tabIndex="0"
+  >
+    <img
+      alt="Iain Stewart"
+      className="sc-bwzfXH gQszWm"
+      name="user"
+      src="1.jpg"
+    />
+    <div
+      className="sc-htpNat fgEekJ"
+    >
+      <div
+        aria-level={1}
+        className="sc-bxivhb cwDeYE"
+        role="heading"
+      >
+        Iain Stewart
+      </div>
+      <div
+        aria-level={2}
+        className="sc-ifAKCX eBmtR"
+        role="heading"
+      >
+        President - NRC
+      </div>
+    </div>
+    <div
+      className="sc-EHOje kMcEwg"
+    >
+      <button
+        aria-label={null}
+        className="btn btn-secondary"
+        icon="user"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+        type="button"
+      >
+        Test Iain Stewart's profile button
+      </button>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`FileProperties OrgChart/Card blurred 1`] = `
+<div
+  style={
+    Object {
+      "height": "100px",
+      "margin": "20px",
+    }
+  }
+>
+  <a
+    className="sc-bdVaJa fiIXNq"
+    href="#"
+    onClick={[Function]}
+    style={
+      Object {
+        "left": undefined,
+        "position": "absolute",
+        "top": undefined,
+      }
+    }
+    tabIndex="0"
+  >
+    <img
+      alt="Iain Stewart"
+      className="sc-bwzfXH gQszWm"
+      name="user"
+      src="1.jpg"
+    />
+    <div
+      className="sc-htpNat fgEekJ"
+    >
+      <div
+        aria-level={1}
+        className="sc-bxivhb cwDeYE"
+        role="heading"
+      >
+        Iain Stewart
+      </div>
+      <div
+        aria-level={2}
+        className="sc-ifAKCX eBmtR"
+        role="heading"
+      >
+        President - NRC
+      </div>
+    </div>
+    <div
+      className="sc-EHOje kMcEwg"
+    >
+      <button
+        aria-label={null}
+        className="btn btn-secondary"
+        icon="user"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+        type="button"
+      >
+        Test Iain Stewart's profile button
+      </button>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`FileProperties OrgChart/Card blurred and active 1`] = `
+<div
+  style={
+    Object {
+      "height": "100px",
+      "margin": "20px",
+    }
+  }
+>
+  <a
+    className="sc-bdVaJa bcbwfc"
+    href="#"
+    onClick={[Function]}
+    style={
+      Object {
+        "left": undefined,
+        "position": "absolute",
+        "top": undefined,
+      }
+    }
+    tabIndex="0"
+  >
+    <img
+      alt="Iain Stewart"
+      className="sc-bwzfXH gQszWm"
+      name="user"
+      src="1.jpg"
+    />
+    <div
+      className="sc-htpNat fgEekJ"
+    >
+      <div
+        aria-level={1}
+        className="sc-bxivhb cwDeYE"
+        role="heading"
+      >
+        Iain Stewart
+      </div>
+      <div
+        aria-level={2}
+        className="sc-ifAKCX eBmtR"
+        role="heading"
+      >
+        President - NRC
+      </div>
+    </div>
+    <div
+      className="sc-EHOje kMcEwg"
+    >
+      <button
+        aria-label={null}
+        className="btn btn-secondary"
+        icon="user"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+        type="button"
+      >
+        Test Iain Stewart's profile button
+      </button>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`FileProperties OrgChart/Card blurred and dragging 1`] = `
+<div
+  style={
+    Object {
+      "height": "100px",
+      "margin": "20px",
+    }
+  }
+>
+  <a
+    className="sc-bdVaJa bvckga"
+    href="#"
+    onClick={[Function]}
+    style={
+      Object {
+        "left": undefined,
+        "position": "absolute",
+        "top": undefined,
+      }
+    }
+    tabIndex="0"
+  >
+    <img
+      alt="Iain Stewart"
+      className="sc-bwzfXH gQszWm"
+      name="user"
+      src="1.jpg"
+    />
+    <div
+      className="sc-htpNat fgEekJ"
+    >
+      <div
+        aria-level={1}
+        className="sc-bxivhb cwDeYE"
+        role="heading"
+      >
+        Iain Stewart
+      </div>
+      <div
+        aria-level={2}
+        className="sc-ifAKCX eBmtR"
+        role="heading"
+      >
+        President - NRC
+      </div>
+    </div>
+    <div
+      className="sc-EHOje kMcEwg"
+    >
+      <button
+        aria-label={null}
+        className="btn btn-secondary"
+        icon="user"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+        type="button"
+      >
+        Test Iain Stewart's profile button
+      </button>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`FileProperties OrgChart/Card blurred, active and dragging 1`] = `
+<div
+  style={
+    Object {
+      "height": "100px",
+      "margin": "20px",
+    }
+  }
+>
+  <a
+    className="sc-bdVaJa jyxbMX"
+    href="#"
+    onClick={[Function]}
+    style={
+      Object {
+        "left": undefined,
+        "position": "absolute",
+        "top": undefined,
+      }
+    }
+    tabIndex="0"
+  >
+    <img
+      alt="Iain Stewart"
+      className="sc-bwzfXH gQszWm"
+      name="user"
+      src="1.jpg"
+    />
+    <div
+      className="sc-htpNat fgEekJ"
+    >
+      <div
+        aria-level={1}
+        className="sc-bxivhb cwDeYE"
+        role="heading"
+      >
+        Iain Stewart
+      </div>
+      <div
+        aria-level={2}
+        className="sc-ifAKCX eBmtR"
+        role="heading"
+      >
+        President - NRC
+      </div>
+    </div>
+    <div
+      className="sc-EHOje kMcEwg"
+    >
+      <button
+        aria-label={null}
+        className="btn btn-secondary"
+        icon="user"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+        type="button"
+      >
+        Test Iain Stewart's profile button
+      </button>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`FileProperties OrgChart/Card dragging 1`] = `
+<div
+  style={
+    Object {
+      "height": "100px",
+      "margin": "20px",
+    }
+  }
+>
+  <a
+    className="sc-bdVaJa gETxgF"
+    href="#"
+    onClick={[Function]}
+    style={
+      Object {
+        "left": undefined,
+        "position": "absolute",
+        "top": undefined,
+      }
+    }
+    tabIndex="0"
+  >
+    <img
+      alt="Iain Stewart"
+      className="sc-bwzfXH gQszWm"
+      name="user"
+      src="1.jpg"
+    />
+    <div
+      className="sc-htpNat fgEekJ"
+    >
+      <div
+        aria-level={1}
+        className="sc-bxivhb cwDeYE"
+        role="heading"
+      >
+        Iain Stewart
+      </div>
+      <div
+        aria-level={2}
+        className="sc-ifAKCX eBmtR"
+        role="heading"
+      >
+        President - NRC
+      </div>
+    </div>
+    <div
+      className="sc-EHOje kMcEwg"
+    >
+      <button
+        aria-label={null}
+        className="btn btn-secondary"
+        icon="user"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+        type="button"
+      >
+        Test Iain Stewart's profile button
+      </button>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`FileProperties OrgChart/Card dragging and active 1`] = `
+<div
+  style={
+    Object {
+      "height": "100px",
+      "margin": "20px",
+    }
+  }
+>
+  <a
+    className="sc-bdVaJa ijLhFD"
+    href="#"
+    onClick={[Function]}
+    style={
+      Object {
+        "left": undefined,
+        "position": "absolute",
+        "top": undefined,
+      }
+    }
+    tabIndex="0"
+  >
+    <img
+      alt="Iain Stewart"
+      className="sc-bwzfXH gQszWm"
+      name="user"
+      src="1.jpg"
+    />
+    <div
+      className="sc-htpNat fgEekJ"
+    >
+      <div
+        aria-level={1}
+        className="sc-bxivhb cwDeYE"
+        role="heading"
+      >
+        Iain Stewart
+      </div>
+      <div
+        aria-level={2}
+        className="sc-ifAKCX eBmtR"
+        role="heading"
+      >
+        President - NRC
+      </div>
+    </div>
+    <div
+      className="sc-EHOje kMcEwg"
+    >
+      <button
+        aria-label={null}
+        className="btn btn-secondary"
+        icon="user"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+        type="button"
+      >
+        Test Iain Stewart's profile button
+      </button>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`FileProperties OrgChart/Card with a card click url 1`] = `
+<div
+  style={
+    Object {
+      "height": "100px",
+      "margin": "20px",
+    }
+  }
+>
+  <a
+    className="sc-bdVaJa fhstoZ"
+    href="http://example.com"
+    onClick={[Function]}
+    style={
+      Object {
+        "left": undefined,
+        "position": "absolute",
+        "top": undefined,
+      }
+    }
+    tabIndex="0"
+  >
+    <img
+      alt="Iain Stewart"
+      className="sc-bwzfXH gQszWm"
+      name="user"
+      src="1.jpg"
+    />
+    <div
+      className="sc-htpNat fgEekJ"
+    >
+      <div
+        aria-level={1}
+        className="sc-bxivhb cwDeYE"
+        role="heading"
+      >
+        Iain Stewart
+      </div>
+      <div
+        aria-level={2}
+        className="sc-ifAKCX eBmtR"
+        role="heading"
+      >
+        President - NRC
+      </div>
+    </div>
+    <div
+      className="sc-EHOje kMcEwg"
+    >
+      <button
+        aria-label={null}
+        className="btn btn-secondary"
+        icon="user"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+        type="button"
+      >
+        Test Iain Stewart's profile button
+      </button>
+    </div>
+  </a>
+</div>
+`;
+
+exports[`FileProperties OrgChart/Card with click handlers 1`] = `
+<div
+  style={
+    Object {
+      "height": "100px",
+      "margin": "20px",
+    }
+  }
+>
+  <a
+    className="sc-bdVaJa fhstoZ"
+    href="#"
+    onClick={[Function]}
+    style={
+      Object {
+        "left": undefined,
+        "position": "absolute",
+        "top": undefined,
+      }
+    }
+    tabIndex="0"
+  >
+    <img
+      alt="Iain Stewart"
+      className="sc-bwzfXH gQszWm"
+      name="user"
+      src="1.jpg"
+    />
+    <div
+      className="sc-htpNat fgEekJ"
+    >
+      <div
+        aria-level={1}
+        className="sc-bxivhb cwDeYE"
+        role="heading"
+      >
+        Iain Stewart
+      </div>
+      <div
+        aria-level={2}
+        className="sc-ifAKCX eBmtR"
+        role="heading"
+      >
+        President - NRC
+      </div>
+    </div>
+    <div
+      className="sc-EHOje kMcEwg"
+    >
+      <button
+        aria-label={null}
+        className="btn btn-secondary"
+        icon="user"
+        onClick={[Function]}
+        role="button"
+        tabIndex="0"
+        type="button"
+      >
+        Test Iain Stewart's profile button
+      </button>
+    </div>
+  </a>
+</div>
+`;

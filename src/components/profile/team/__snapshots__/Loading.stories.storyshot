@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Loading With default options 1`] = `
+exports[`FileProperties Loading With default options 1`] = `
 <div
   className="card"
   style={

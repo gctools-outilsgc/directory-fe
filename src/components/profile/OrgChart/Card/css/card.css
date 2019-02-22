@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "rubik";
+  src: url("../fonts/rubik-regular-webfont.ttf") format("ttf"),
+       url("../fonts/rubik-regular-webfont.woff") format("woff"),
+       url("../fonts/rubik-regular-webfont.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "nunito";
+  src: url("../fonts/nunitosans-regular-webfont.ttf") format("ttf"),
+       url("../fonts/nunitosans-regular-webfont.woff") format("woff"),
+       url("../fonts/nunitosans-regular-webfont.woff2") format("woff2");
+}

@@ -1,0 +1,2802 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FileProperties OrgChart Only required options 1`] = `
+<div>
+  <div>
+    <div
+      className="react-gc-orgchart-wrapper-minichart-wrapper"
+    >
+      <div
+        className="react-gc-orgchart-wrapper-minichart"
+      >
+        <div
+          className="react-gc-orgchart-minichart-container"
+          onClick={[Function]}
+          onMouseDown={[Function]}
+          onMouseMove={[Function]}
+          onMouseUp={[Function]}
+          role="tree"
+          style={Object {}}
+          tabIndex={0}
+        >
+          <svg
+            style={
+              Object {
+                "height": 0,
+                "width": 0,
+              }
+            }
+          />
+          <div
+            aria-describedby="test"
+            aria-label="Quick scroll box"
+            className="react-gc-orgchart-minichart-overlay"
+            onKeyUp={[Function]}
+            role="tree"
+            style={
+              Object {
+                "height": "0px",
+                "left": 0,
+                "opacity": 0.3,
+                "position": "absolute",
+                "top": 0,
+                "width": "0px",
+              }
+            }
+            tabIndex={0}
+          />
+          <div
+            id="test"
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+          >
+            Use the keyboard arrow keys to quickly scroll the org chart
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="react-gc-orgchart-wrapper-menu"
+    >
+      <button
+        onClick={[Function]}
+      >
+        Go to me
+      </button>
+    </div>
+    <div
+      className="react-gc-orgchart-wrapper-chart"
+    >
+      <div
+        className="card-container"
+        style={Object {}}
+      >
+        <svg
+          style={
+            Object {
+              "height": 0,
+              "width": 0,
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FileProperties OrgChart using minichart 1`] = `
+<div
+  style={
+    Object {
+      "padding": "10px",
+    }
+  }
+>
+  <div>
+    <div
+      className="react-gc-orgchart-wrapper-minichart-wrapper"
+    >
+      <div
+        className="react-gc-orgchart-wrapper-minichart"
+      >
+        <div
+          className="react-gc-orgchart-minichart-container"
+          onClick={[Function]}
+          onMouseDown={[Function]}
+          onMouseMove={[Function]}
+          onMouseUp={[Function]}
+          role="tree"
+          style={Object {}}
+          tabIndex={0}
+        >
+          <svg
+            style={
+              Object {
+                "height": 70,
+                "width": 275,
+              }
+            }
+          >
+            <path
+              className=""
+              d="M 137.5 10 v 5 H 23.5 V 20"
+            />
+            <path
+              className=""
+              d="M 137.5 10 v 5 H 80.5 V 20"
+            />
+            <path
+              className=""
+              d="M 137.5 10 v 5 H 137.5 V 20"
+            />
+            <path
+              className=""
+              d="M 137.5 10 v 5 H 194.5 V 20"
+            />
+            <path
+              className=""
+              d="M 137.5 10 v 5 H 251.5 V 20"
+            />
+            <path
+              className=""
+              d="M 137.5 10 v 5 h -28.5 V 33.333333333333336 H 23.5 V 40"
+            />
+            <path
+              className=""
+              d="M 137.5 10 v 5 h -28.5 V 33.333333333333336 H 80.5 V 40"
+            />
+            <path
+              className=""
+              d="M 137.5 10 v 5 h -28.5 V 33.333333333333336 H 137.5 V 40"
+            />
+            <path
+              className=""
+              d="M 137.5 10 v 5 h -28.5 V 33.333333333333336 H 194.5 V 40"
+            />
+            <path
+              className=""
+              d="M 137.5 10 v 5 h -28.5 V 33.333333333333336 H 251.5 V 40"
+            />
+            <path
+              className=""
+              d="M 137.5 10 v 5 h -28.5 V 53.333333333333336 H 23.5 V 60"
+            />
+            <path
+              className="onPath"
+              d="M 137.5 10 v 5 h -28.5 V 53.333333333333336 H 80.5 V 60"
+            />
+          </svg>
+          <div
+            className="react-gc-orgchart-minichart-minicard-card"
+            style={
+              Object {
+                "height": "10px",
+                "left": 114,
+                "position": "absolute",
+                "top": 0,
+                "width": "47px",
+              }
+            }
+          />
+          <div
+            className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+            style={
+              Object {
+                "height": "10px",
+                "left": 0,
+                "position": "absolute",
+                "top": 20,
+                "width": "47px",
+              }
+            }
+          />
+          <div
+            className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-active"
+            style={
+              Object {
+                "height": "10px",
+                "left": 57,
+                "position": "absolute",
+                "top": 60,
+                "width": "47px",
+              }
+            }
+          />
+          <div
+            className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+            style={
+              Object {
+                "height": "10px",
+                "left": 57,
+                "position": "absolute",
+                "top": 20,
+                "width": "47px",
+              }
+            }
+          />
+          <div
+            className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+            style={
+              Object {
+                "height": "10px",
+                "left": 114,
+                "position": "absolute",
+                "top": 20,
+                "width": "47px",
+              }
+            }
+          />
+          <div
+            className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+            style={
+              Object {
+                "height": "10px",
+                "left": 171,
+                "position": "absolute",
+                "top": 20,
+                "width": "47px",
+              }
+            }
+          />
+          <div
+            className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+            style={
+              Object {
+                "height": "10px",
+                "left": 228,
+                "position": "absolute",
+                "top": 20,
+                "width": "47px",
+              }
+            }
+          />
+          <div
+            className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+            style={
+              Object {
+                "height": "10px",
+                "left": 0,
+                "position": "absolute",
+                "top": 40,
+                "width": "47px",
+              }
+            }
+          />
+          <div
+            className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+            style={
+              Object {
+                "height": "10px",
+                "left": 57,
+                "position": "absolute",
+                "top": 40,
+                "width": "47px",
+              }
+            }
+          />
+          <div
+            className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+            style={
+              Object {
+                "height": "10px",
+                "left": 114,
+                "position": "absolute",
+                "top": 40,
+                "width": "47px",
+              }
+            }
+          />
+          <div
+            className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+            style={
+              Object {
+                "height": "10px",
+                "left": 171,
+                "position": "absolute",
+                "top": 40,
+                "width": "47px",
+              }
+            }
+          />
+          <div
+            className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+            style={
+              Object {
+                "height": "10px",
+                "left": 228,
+                "position": "absolute",
+                "top": 40,
+                "width": "47px",
+              }
+            }
+          />
+          <div
+            className="react-gc-orgchart-minichart-minicard-card react-gc-orgchart-minichart-minicard-blur"
+            style={
+              Object {
+                "height": "10px",
+                "left": 0,
+                "position": "absolute",
+                "top": 60,
+                "width": "47px",
+              }
+            }
+          />
+          <div
+            aria-describedby="test"
+            aria-label="Quick scroll box"
+            className="react-gc-orgchart-minichart-overlay"
+            onKeyUp={[Function]}
+            role="tree"
+            style={
+              Object {
+                "height": "0px",
+                "left": 0,
+                "opacity": 0.3,
+                "position": "absolute",
+                "top": 0,
+                "width": "0px",
+              }
+            }
+            tabIndex={0}
+          />
+          <div
+            id="test"
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+          >
+            Use the keyboard arrow keys to quickly scroll the org chart
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="react-gc-orgchart-wrapper-menu"
+    >
+      <button
+        onClick={[Function]}
+      >
+        Go to me
+      </button>
+    </div>
+    <div
+      className="react-gc-orgchart-wrapper-chart"
+    >
+      <div
+        className="card-container"
+        style={
+          Object {
+            "height": "550px",
+          }
+        }
+      >
+        <svg
+          style={
+            Object {
+              "height": 405,
+              "width": 1990,
+            }
+          }
+        >
+          <path
+            className=""
+            d="M 995 75 v 30 H 175 V 135"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 H 585 V 135"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 H 995 V 135"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 H 1405 V 135"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 H 1815 V 135"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 230 H 585 V 270"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 230 H 995 V 270"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 365 H 175 V 405"
+          />
+          <path
+            className="onPath"
+            d="M 995 75 v 30 h -205 V 365 H 585 V 405"
+          />
+        </svg>
+        <a
+          className="sc-bdVaJa fhstoZ"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 820,
+              "position": "absolute",
+              "top": 0,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Iain Stewart"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="1.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Iain Stewart
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              President - NRC
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Iain Stewart's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 0,
+              "position": "absolute",
+              "top": 135,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Dale MacMillan"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="2.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Dale MacMillan
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              Vice President, Corporate Services and Chief Financial Officer
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Dale MacMillan's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa cHBWIo"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 410,
+              "position": "absolute",
+              "top": 405,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Danial Wayner"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="3.gif"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Danial Wayner
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              Departmental Science Advisor
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Danial Wayner's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 410,
+              "position": "absolute",
+              "top": 135,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="David Lisk"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="4.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              David Lisk
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              Vice President, IRAP
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              David Lisk's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 820,
+              "position": "absolute",
+              "top": 135,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Emily Harrison"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="5.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Emily Harrison
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              Vice-President, HRB
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Emily Harrison's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 1230,
+              "position": "absolute",
+              "top": 135,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="François Cordeau"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="6.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              François Cordeau
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              VP, Transportation and Manufacturing
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              François Cordeau's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 1640,
+              "position": "absolute",
+              "top": 135,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Geneviève Tanguay"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="7.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Geneviève Tanguay
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              Vice-President, Emerging Technologies
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Geneviève Tanguay's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 0,
+              "position": "absolute",
+              "top": 270,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Marcel Turcot"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="8.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Marcel Turcot
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              Chief of Staff, Office of the President
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Marcel Turcot's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 410,
+              "position": "absolute",
+              "top": 270,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Maria Aubrey"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="9.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Maria Aubrey
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              VP, Business and Professional Services
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Maria Aubrey's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 820,
+              "position": "absolute",
+              "top": 270,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Michel Dumoulin"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="10.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Michel Dumoulin
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              Vice-President, Engineering
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Michel Dumoulin's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 1230,
+              "position": "absolute",
+              "top": 270,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Roger Scott-Douglas"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="11.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Roger Scott-Douglas
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              Secretary General
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Roger Scott-Douglas's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 1640,
+              "position": "absolute",
+              "top": 270,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Roman Szumski"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="12.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Roman Szumski
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              VP, Life Sciences
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Roman Szumski's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 0,
+              "position": "absolute",
+              "top": 405,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Thomas Pedersen"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="13.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Thomas Pedersen
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              Special Advisor, Group of Head of Federal Agencies
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Thomas Pedersen's profile
+            </button>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FileProperties OrgChart with onMoveToActiveClick 1`] = `
+<div
+  style={
+    Object {
+      "padding": "10px",
+    }
+  }
+>
+  <div>
+    <div
+      className="react-gc-orgchart-wrapper-minichart-wrapper"
+    >
+      <div
+        className="react-gc-orgchart-wrapper-minichart"
+      >
+        <div
+          className="react-gc-orgchart-minichart-container"
+          onClick={[Function]}
+          onMouseDown={[Function]}
+          onMouseMove={[Function]}
+          onMouseUp={[Function]}
+          role="tree"
+          style={Object {}}
+          tabIndex={0}
+        >
+          <svg
+            style={
+              Object {
+                "height": 0,
+                "width": 0,
+              }
+            }
+          />
+          <div
+            aria-describedby="test"
+            aria-label="Quick scroll box"
+            className="react-gc-orgchart-minichart-overlay"
+            onKeyUp={[Function]}
+            role="tree"
+            style={
+              Object {
+                "height": "0px",
+                "left": 0,
+                "opacity": 0.3,
+                "position": "absolute",
+                "top": 0,
+                "width": "0px",
+              }
+            }
+            tabIndex={0}
+          />
+          <div
+            id="test"
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+          >
+            Use the keyboard arrow keys to quickly scroll the org chart
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="react-gc-orgchart-wrapper-menu"
+    >
+      <button
+        onClick={[Function]}
+      >
+        Go to me
+      </button>
+    </div>
+    <div
+      className="react-gc-orgchart-wrapper-chart"
+    >
+      <div
+        className="card-container"
+        style={
+          Object {
+            "height": "550px",
+          }
+        }
+      >
+        <svg
+          style={
+            Object {
+              "height": 405,
+              "width": 1990,
+            }
+          }
+        >
+          <path
+            className=""
+            d="M 995 75 v 30 H 175 V 135"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 H 585 V 135"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 H 995 V 135"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 H 1405 V 135"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 H 1815 V 135"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 230 H 585 V 270"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 230 H 995 V 270"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 365 H 175 V 405"
+          />
+          <path
+            className="onPath"
+            d="M 995 75 v 30 h -205 V 365 H 585 V 405"
+          />
+        </svg>
+        <a
+          className="sc-bdVaJa fhstoZ"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 820,
+              "position": "absolute",
+              "top": 0,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Iain Stewart"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="1.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Iain Stewart
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              President - NRC
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Iain Stewart's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 0,
+              "position": "absolute",
+              "top": 135,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Dale MacMillan"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="2.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Dale MacMillan
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              Vice President, Corporate Services and Chief Financial Officer
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Dale MacMillan's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa cHBWIo"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 410,
+              "position": "absolute",
+              "top": 405,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Danial Wayner"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="3.gif"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Danial Wayner
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              Departmental Science Advisor
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Danial Wayner's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 410,
+              "position": "absolute",
+              "top": 135,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="David Lisk"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="4.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              David Lisk
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              Vice President, IRAP
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              David Lisk's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 820,
+              "position": "absolute",
+              "top": 135,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Emily Harrison"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="5.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Emily Harrison
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              Vice-President, HRB
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Emily Harrison's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 1230,
+              "position": "absolute",
+              "top": 135,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="François Cordeau"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="6.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              François Cordeau
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              VP, Transportation and Manufacturing
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              François Cordeau's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 1640,
+              "position": "absolute",
+              "top": 135,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Geneviève Tanguay"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="7.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Geneviève Tanguay
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              Vice-President, Emerging Technologies
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Geneviève Tanguay's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 0,
+              "position": "absolute",
+              "top": 270,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Marcel Turcot"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="8.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Marcel Turcot
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              Chief of Staff, Office of the President
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Marcel Turcot's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 410,
+              "position": "absolute",
+              "top": 270,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Maria Aubrey"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="9.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Maria Aubrey
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              VP, Business and Professional Services
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Maria Aubrey's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 820,
+              "position": "absolute",
+              "top": 270,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Michel Dumoulin"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="10.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Michel Dumoulin
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              Vice-President, Engineering
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Michel Dumoulin's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 1230,
+              "position": "absolute",
+              "top": 270,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Roger Scott-Douglas"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="11.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Roger Scott-Douglas
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              Secretary General
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Roger Scott-Douglas's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 1640,
+              "position": "absolute",
+              "top": 270,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Roman Szumski"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="12.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Roman Szumski
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              VP, Life Sciences
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Roman Szumski's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 0,
+              "position": "absolute",
+              "top": 405,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Thomas Pedersen"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="13.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Thomas Pedersen
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              Special Advisor, Group of Head of Federal Agencies
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Thomas Pedersen's profile
+            </button>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FileProperties OrgChart with selectedCard 1`] = `
+<div
+  style={
+    Object {
+      "padding": "10px",
+    }
+  }
+>
+  <div>
+    <div
+      className="react-gc-orgchart-wrapper-minichart-wrapper"
+    >
+      <div
+        className="react-gc-orgchart-wrapper-minichart"
+      >
+        <div
+          className="react-gc-orgchart-minichart-container"
+          onClick={[Function]}
+          onMouseDown={[Function]}
+          onMouseMove={[Function]}
+          onMouseUp={[Function]}
+          role="tree"
+          style={Object {}}
+          tabIndex={0}
+        >
+          <svg
+            style={
+              Object {
+                "height": 0,
+                "width": 0,
+              }
+            }
+          />
+          <div
+            aria-describedby="test"
+            aria-label="Quick scroll box"
+            className="react-gc-orgchart-minichart-overlay"
+            onKeyUp={[Function]}
+            role="tree"
+            style={
+              Object {
+                "height": "0px",
+                "left": 0,
+                "opacity": 0.3,
+                "position": "absolute",
+                "top": 0,
+                "width": "0px",
+              }
+            }
+            tabIndex={0}
+          />
+          <div
+            id="test"
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+          >
+            Use the keyboard arrow keys to quickly scroll the org chart
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="react-gc-orgchart-wrapper-menu"
+    >
+      <button
+        onClick={[Function]}
+      >
+        Go to me
+      </button>
+    </div>
+    <div
+      className="react-gc-orgchart-wrapper-chart"
+    >
+      <div
+        className="card-container"
+        style={
+          Object {
+            "height": "550px",
+          }
+        }
+      >
+        <svg
+          style={
+            Object {
+              "height": 405,
+              "width": 1990,
+            }
+          }
+        >
+          <path
+            className=""
+            d="M 995 75 v 30 H 175 V 135"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 H 585 V 135"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 H 995 V 135"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 H 1405 V 135"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 H 1815 V 135"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 230 H 585 V 270"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 230 H 995 V 270"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
+          />
+          <path
+            className=""
+            d="M 995 75 v 30 h -205 V 365 H 175 V 405"
+          />
+          <path
+            className="onPath"
+            d="M 995 75 v 30 h -205 V 365 H 585 V 405"
+          />
+        </svg>
+        <a
+          className="sc-bdVaJa fhstoZ"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 820,
+              "position": "absolute",
+              "top": 0,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Iain Stewart"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="1.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Iain Stewart
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              President - NRC
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Iain Stewart's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 0,
+              "position": "absolute",
+              "top": 135,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Dale MacMillan"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="2.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Dale MacMillan
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              Vice President, Corporate Services and Chief Financial Officer
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Dale MacMillan's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa cHBWIo"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 410,
+              "position": "absolute",
+              "top": 405,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Danial Wayner"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="3.gif"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Danial Wayner
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              Departmental Science Advisor
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Danial Wayner's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 410,
+              "position": "absolute",
+              "top": 135,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="David Lisk"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="4.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              David Lisk
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              Vice President, IRAP
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              David Lisk's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 820,
+              "position": "absolute",
+              "top": 135,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Emily Harrison"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="5.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Emily Harrison
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              Vice-President, HRB
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Emily Harrison's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 1230,
+              "position": "absolute",
+              "top": 135,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="François Cordeau"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="6.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              François Cordeau
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              VP, Transportation and Manufacturing
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              François Cordeau's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 1640,
+              "position": "absolute",
+              "top": 135,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Geneviève Tanguay"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="7.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Geneviève Tanguay
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              Vice-President, Emerging Technologies
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Geneviève Tanguay's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 0,
+              "position": "absolute",
+              "top": 270,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Marcel Turcot"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="8.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Marcel Turcot
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              Chief of Staff, Office of the President
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Marcel Turcot's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 410,
+              "position": "absolute",
+              "top": 270,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Maria Aubrey"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="9.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Maria Aubrey
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              VP, Business and Professional Services
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Maria Aubrey's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 820,
+              "position": "absolute",
+              "top": 270,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Michel Dumoulin"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="10.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Michel Dumoulin
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              Vice-President, Engineering
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Michel Dumoulin's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 1230,
+              "position": "absolute",
+              "top": 270,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Roger Scott-Douglas"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="11.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Roger Scott-Douglas
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              Secretary General
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Roger Scott-Douglas's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 1640,
+              "position": "absolute",
+              "top": 270,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Roman Szumski"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="12.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Roman Szumski
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              VP, Life Sciences
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Roman Szumski's profile
+            </button>
+          </div>
+        </a>
+        <a
+          className="sc-bdVaJa fiIXNq"
+          href="#"
+          onClick={[Function]}
+          style={
+            Object {
+              "left": 0,
+              "position": "absolute",
+              "top": 405,
+            }
+          }
+          tabIndex="0"
+        >
+          <img
+            alt="Thomas Pedersen"
+            className="sc-bwzfXH gQszWm"
+            name="user"
+            src="13.jpg"
+          />
+          <div
+            className="sc-htpNat fgEekJ"
+          >
+            <div
+              aria-level={1}
+              className="sc-bxivhb cwDeYE"
+              role="heading"
+            >
+              Thomas Pedersen
+            </div>
+            <div
+              aria-level={2}
+              className="sc-ifAKCX eBmtR"
+              role="heading"
+            >
+              Special Advisor, Group of Head of Federal Agencies
+            </div>
+          </div>
+          <div
+            className="sc-EHOje kMcEwg"
+          >
+            <button
+              aria-label={null}
+              className="btn btn-secondary"
+              icon="user"
+              onClick={[Function]}
+              role="button"
+              tabIndex="0"
+              type="button"
+            >
+              Thomas Pedersen's profile
+            </button>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;

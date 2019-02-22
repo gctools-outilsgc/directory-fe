@@ -1,0 +1,23 @@
+.react-gc-orgchart-minichart-container {
+  position: relative;
+  overflow: none;
+  min-height: 200px;
+  width: calc(100% + 2px);
+  margin-left: -1px;
+}
+
+.react-gc-orgchart-minichart-container svg path {
+  stroke: #CECECE;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  fill: transparent;
+  pointer-events: none;
+}
+
+.react-gc-orgchart-minichart-container svg path.onPath {
+  stroke: #FEC04F;
+}
+
+.react-gc-orgchart-minichart-overlay {
+  background-color: #aaf;
+}

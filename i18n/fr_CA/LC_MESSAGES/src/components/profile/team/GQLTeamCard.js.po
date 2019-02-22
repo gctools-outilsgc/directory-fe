@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-02-15 10:36-0500\n"
-"PO-Revision-Date: 2019-02-15 10:36-0500\n"
+"POT-Creation-Date: 2019-02-21 14:05-0500\n"
+"PO-Revision-Date: 2019-02-21 14:05-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr_CA\n"
 "Language-Team: fr_CA <LL@li.org>\n"
@@ -14,27 +14,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: 130:27 src/components/profile/team/GQLTeamCard.js
+#: 73:27 src/components/profile/team/GQLTeamCard.js
 msgid "Supervisor"
 msgstr "Superviseur"
 
-#: 141:27 src/components/profile/team/GQLTeamCard.js
+#: 84:27 src/components/profile/team/GQLTeamCard.js
 msgid "Team"
 msgstr "Équipes"
 
-#: 156:27 src/components/profile/team/GQLTeamCard.js
-msgid "Edit"
-msgstr "Modifier"
-
-#: 160:29 src/components/profile/team/GQLTeamCard.js
-msgid "Edit Team"
-msgstr ""
-
-#: 231:31 src/components/profile/team/GQLTeamCard.js
-msgid "Cancel"
-msgstr "Annuler"
-
-#: 242:22 src/components/profile/team/GQLTeamCard.js
+#: 92:22 src/components/profile/team/GQLTeamCard.js
 msgid "Cannot find GCID"
 msgstr ""
 
