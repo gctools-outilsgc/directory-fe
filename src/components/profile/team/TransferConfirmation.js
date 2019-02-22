@@ -107,6 +107,7 @@ const TransferConfirmation = (props) => {
     primaryButtonClick,
     secondaryButtonText,
     secondaryButtonClick,
+    closeButtonClick,
     onEnter,
     onExit,
     onOpened,
@@ -132,7 +133,15 @@ const TransferConfirmation = (props) => {
         onClosed={onClosed}
         zIndex={zIndex}
       >
-        <ModalHeader>{title}</ModalHeader>
+        <ModalHeader
+          close={(
+            <button className="close" onClick={closeButtonClick}>
+              &times;
+            </button>
+          )}
+        >
+          {title}
+        </ModalHeader>
         <ModalBody>
           {bodyText}
           <Arrow />
@@ -202,6 +211,7 @@ TransferConfirmation.defaultProps = {
   primaryButtonClick: () => {},
   secondaryButtonText: 'Secondary',
   secondaryButtonClick: () => {},
+  closeButtonClick: () => {},
   onEnter: undefined,
   onExit: undefined,
   onOpened: undefined,
@@ -225,6 +235,8 @@ TransferConfirmation.propTypes = {
   secondaryButtonText: PropTypes.string,
   /** Handler fired when secondary button is clicked */
   secondaryButtonClick: PropTypes.func,
+  /** Handler fired when close button is clicked */
+  closeButtonClick: PropTypes.func,
   /** called on componentDidMount */
   onEnter: PropTypes.func,
   /** called on componentWillUnmount */

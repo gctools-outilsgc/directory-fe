@@ -57,8 +57,9 @@ storiesOf('TransferConfirmation', module)
         oldSupervisor={user1}
         transferredUser={user2}
         newSupervisor={user3}
-        primaryButtonClick={action('primary click')}
-        secondaryButtonClick={action('secondary click')}
+        primaryButtonClick={action('primary')}
+        secondaryButtonClick={action('secondary')}
+        closeButtonClick={action('close')}
       />
     ),
   )
