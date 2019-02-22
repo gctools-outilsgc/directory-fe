@@ -1,0 +1,12 @@
+.react-gc-orgchart-minichart-minicard-card {
+  background-color: #ccc;
+}
+
+.react-gc-orgchart-minichart-minicard-blur {
+  opacity: 0.4;
+  overflow: hidden;
+}
+
+.react-gc-orgchart-minichart-minicard-active {
+  background: #5DC1BE;
+}

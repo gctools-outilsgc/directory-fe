@@ -89,7 +89,4 @@ storiesOf('TransferConfirmation', module)
         secondaryButtonText="Custom Secondary"
       />
     ),
-  )
-
-// eslint-disable-next-line semi-style
-;
+  );

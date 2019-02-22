@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-02-15 11:21-0500\n"
-"PO-Revision-Date: 2019-02-15 11:21-0500\n"
+"POT-Creation-Date: 2019-02-21 14:05-0500\n"
+"PO-Revision-Date: 2019-02-21 14:05-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en_CA\n"
 "Language-Team: en_CA <LL@li.org>\n"
@@ -14,11 +14,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: 80:26 src/components/profile/profileCard/GQLProfileCard.js
+#: 57:26 src/components/profile/profileCard/GQLProfileCard.js
 msgid "Profile"
 msgstr ""
 
-#: 94:28 src/components/profile/profileCard/GQLProfileCard.js
+#: 71:28 src/components/profile/profileCard/GQLProfileCard.js
 msgid "Cannot find GCID"
 msgstr ""
 

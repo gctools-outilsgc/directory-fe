@@ -16,6 +16,7 @@ import {
 import classnames from 'classnames';
 
 import LocalizedGQLTeamCard from './GQLTeamCard';
+import LocalizedGQLTeamOrgChart from './GQLTeamOrgChart';
 
 const style = {
   card: {
@@ -91,7 +92,10 @@ class TeamCardHolder extends React.Component {
                   Tab 2 Right Over here
               </TabPane>
               <TabPane tabId="3">
-                  Put the Org Chart Here!
+                <LocalizedGQLTeamOrgChart
+                  visible={this.state.activeTab === '3'}
+                  id={this.props.id}
+                />
               </TabPane>
             </TabContent>
           </div>

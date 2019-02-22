@@ -1,0 +1,194 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FileProperties Loading With default options 1`] = `
+<div>
+  <div>
+    <div
+      style={
+        Object {
+          "WebkitFontSmoothing": "antialiased",
+          "backgroundColor": "#fff",
+          "border": "1px solid #eee",
+          "borderRadius": "2px",
+          "color": "#444",
+          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+          "fontSize": "15px",
+          "fontWeight": 300,
+          "lineHeight": 1.45,
+          "marginBottom": "20px",
+          "marginTop": "20px",
+          "padding": "20px 40px 40px",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "borderBottom": "1px solid #eee",
+            "marginBottom": 10,
+            "paddingTop": 10,
+          }
+        }
+      >
+        <h1
+          style={
+            Object {
+              "fontSize": "35px",
+              "margin": 0,
+              "padding": 0,
+            }
+          }
+        >
+          Loading
+        </h1>
+        <h2
+          style={
+            Object {
+              "fontSize": "22px",
+              "fontWeight": 400,
+              "margin": "0 0 10px 0",
+              "padding": 0,
+            }
+          }
+        >
+          With default options
+        </h2>
+      </div>
+    </div>
+  </div>
+  <div
+    id="story-root"
+    style={Object {}}
+  >
+    <div
+      className="card"
+      style={
+        Object {
+          "border": "none",
+          "boxShadow": "none",
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="card-body"
+      >
+        <div
+          className="card-title"
+        >
+          <div
+            className="loading-state fake-head mb-3"
+          />
+        </div>
+        <span
+          className="sr-only"
+        >
+          Loading ...
+        </span>
+        <div
+          className="row"
+        >
+          <div
+            className="col"
+          >
+            <div
+              className="loading-state mt-3"
+              style={
+                Object {
+                  "height": "18px",
+                  "marginBottom": "3px",
+                  "width": "65px",
+                }
+              }
+            />
+            <div
+              className="loading-state"
+              style={
+                Object {
+                  "height": "16px",
+                  "width": "150px",
+                }
+              }
+            />
+          </div>
+          <div
+            className="col"
+          >
+            <div
+              className="loading-state mt-3"
+              style={
+                Object {
+                  "height": "18px",
+                  "marginBottom": "3px",
+                  "width": "65px",
+                }
+              }
+            />
+            <div
+              className="loading-state"
+              style={
+                Object {
+                  "height": "16px",
+                  "width": "150px",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      style={
+        Object {
+          "WebkitFontSmoothing": "antialiased",
+          "backgroundColor": "#fff",
+          "border": "1px solid #eee",
+          "borderRadius": "2px",
+          "color": "#444",
+          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+          "fontSize": "15px",
+          "fontWeight": 300,
+          "lineHeight": 1.45,
+          "marginBottom": "20px",
+          "marginTop": "20px",
+          "padding": "20px 40px 40px",
+        }
+      }
+    >
+      
+      <div>
+        <h1
+          style={
+            Object {
+              "borderBottom": "1px solid #EEE",
+              "fontSize": "25px",
+              "margin": "20px 0 0 0",
+              "padding": "0 0 5px 0",
+            }
+          }
+        >
+          Prop Types
+        </h1>
+        <div>
+          <h2
+            style={
+              Object {
+                "margin": "20px 0 0 0",
+              }
+            }
+          >
+            "
+            _default
+            " Component
+          </h2>
+          <small>
+            No propTypes defined!
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

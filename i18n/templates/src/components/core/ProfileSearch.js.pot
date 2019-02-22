@@ -6,11 +6,11 @@ msgstr ""
 "Content-Type : text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding : 8bit\n"
 
-#: src/components/core/ProfileSearch.js 66:43
+#: src/components/core/ProfileSearch.js 62:43
 msgid "Search"
 msgstr ""
 
-#: src/components/core/ProfileSearch.js 70:31
+#: src/components/core/ProfileSearch.js 67:31
 msgid "Search Profiles"
 msgstr ""
 
