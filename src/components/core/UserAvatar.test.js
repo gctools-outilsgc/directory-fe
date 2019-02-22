@@ -19,11 +19,15 @@ const mockProvider = [
       query: EDIT,
       variables: {
         gcID: mockProps.gcID,
-        data: {},
+        data: {
+          avatar: 'http://test.com/avatar',
+        },
       },
     },
     result: {
-      data: {},
+      data: {
+        avatar: 'http://test.com/avatar',
+      },
     },
   },
 ];
@@ -34,13 +38,15 @@ describe('UserAvatar', () => {
       render(<MockedProvider><UserAvatar {...mockProps} /></MockedProvider>);
     expect(component).toBeTruthy();
   });
-  it('renders the component', () => {
-    const { getByText } =
+  it('uploading photo sets the photo', () => {
+    const { getByText, asFragment } =
       render((
         <MockedProvider mocks={mockProvider}>
           <UserAvatar {...mockProps} />
         </MockedProvider>
       ));
+    const firstRender = asFragment();
     fireEvent.click(getByText(/Upload/));
+    expect(firstRender).toMatchSnapshot(asFragment());
   });
 });

@@ -79,3 +79,116 @@ exports[`Storyshots Loading With default options 1`] = `
   </div>
 </div>
 `;
+
+exports[`Storyshots UserAvatar Authenticated User with avatar and editing 1`] = `
+<div>
+  <div>
+    <div
+      className="query"
+    >
+      <div>
+        <img
+          alt="No photo"
+          src="https://avatars0.githubusercontent.com/u/7603237?s=460&v=4"
+        />
+      </div>
+      <div
+        className="mutate"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          onClick={[Function]}
+        >
+          <label
+            htmlFor="avatarUploadTest"
+          >
+            Upload
+            <input
+              id="avatarUploadTest"
+              onChange={[Function]}
+              required={true}
+              style={
+                Object {
+                  "display": "none",
+                }
+              }
+              type="file"
+            />
+          </label>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots UserAvatar Authenticated User with no avatar and editing 1`] = `
+<div>
+  <div>
+    <div
+      className="query"
+    >
+      <div>
+        No AVATAR
+      </div>
+      <div
+        className="mutate"
+      >
+        <button
+          aria-label={null}
+          className="btn btn-secondary"
+          onClick={[Function]}
+        >
+          <label
+            htmlFor="avatarUploadTest"
+          >
+            Upload
+            <input
+              id="avatarUploadTest"
+              onChange={[Function]}
+              required={true}
+              style={
+                Object {
+                  "display": "none",
+                }
+              }
+              type="file"
+            />
+          </label>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots UserAvatar Authenticated User with no avatar and no editing 1`] = `
+<div>
+  <div>
+    <div>
+      No AVATAR
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots UserAvatar Not logged in not own profile 1`] = `
+<div>
+  <div>
+    <div>
+      No AVATAR
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots UserAvatar With default options 1`] = `
+<div>
+  <div>
+    <div>
+      No AVATAR
+    </div>
+  </div>
+</div>
+`;

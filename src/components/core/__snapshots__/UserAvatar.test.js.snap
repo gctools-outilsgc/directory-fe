@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserAvatar uploading photo sets the photo 1`] = `Object {}`;
