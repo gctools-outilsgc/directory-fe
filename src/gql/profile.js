@@ -58,6 +58,9 @@ mutation editProfile($gcID: String!, $data: ModifyProfileInput!) {
     }
     titleEn
     titleFr
+    supervisor {
+      gcID
+    }
   }
 }
 `;

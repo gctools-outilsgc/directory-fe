@@ -25,13 +25,13 @@ const OnboardNav = (props) => {
         dots.push((
           <li
             key={`step-${i}`}
-            className={`nav-item ${isActive ? 'ob-active' : ''}`}
+            className={`${isActive ? 'active' : ''}`}
           >
-            <div className="d-flex justify-content-center">
-              <div className="display-num align-self-center">
+            <div>
+              <div>
                 {displayNum}
               </div>
-              <div className="display-text align-self-center">
+              <div>
                 {words[i]}
               </div>
             </div>
@@ -41,8 +41,8 @@ const OnboardNav = (props) => {
   }
 
   return (
-    <div className="mb-4 onboard-nav">
-      <ul className="nav justify-content-center">
+    <div aria-label="progress" className="step-indicator">
+      <ul className="steps">
         {dots}
       </ul>
     </div>
