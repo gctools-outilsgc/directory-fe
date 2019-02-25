@@ -10,7 +10,6 @@ import { Card, CardBody, CardTitle } from 'reactstrap';
 
 import LocalizedProfileCardDisplay from './ProfileCardDisplay';
 import LocalizedEditProfile from './EditProfile';
-import UserOptions from './UserOptions';
 import Loading from './Loading';
 
 import { GET } from '../../../gql/profile';
@@ -60,11 +59,7 @@ export const GQLProfileCard = (props) => {
                       <LocalizedEditProfile
                         profile={userInfo}
                         token={accessToken}
-                      /> :
-                      <UserOptions
-                        id={userInfo.gcID}
-                        loggedUser={myGcID}
-                      />}
+                      /> : ''}
                   </CardTitle>
                   <LocalizedProfileCardDisplay
                     user={userInfo}
