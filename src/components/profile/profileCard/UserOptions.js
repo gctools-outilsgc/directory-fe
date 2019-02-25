@@ -17,6 +17,7 @@ class UserOptions extends Component {
     super(props);
     this.state = {
       dropdownOpen: false,
+      feedback: '',
     };
 
     this.ddtoggle = this.ddtoggle.bind(this);
@@ -45,7 +46,9 @@ class UserOptions extends Component {
           <Mutation
             mutation={EDIT}
             onCompleted={() => {
-              alert('Supervisor Changed: Change this');
+              this.setState({
+                feedback: 'Confirm',
+              });
             }}
           >
             {modifyProfile => (
@@ -69,6 +72,9 @@ class UserOptions extends Component {
           </Mutation>
           <DropdownItem>
             Placeholder Example
+          </DropdownItem>
+          <DropdownItem>
+            {this.state.feedback}
           </DropdownItem>
         </DropdownMenu>
       </Dropdown>
