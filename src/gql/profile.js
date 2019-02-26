@@ -26,6 +26,10 @@ export const GET_TEAM = gql`
 query getTeam($gcID: String!) {
   profiles(gcID: $gcID) {
     gcID
+    name
+    avatar
+    titleEn
+    titleFr
     supervisor {
       gcID
       name
@@ -60,6 +64,21 @@ mutation editProfile($gcID: String!, $data: ModifyProfileInput!) {
     titleFr
     supervisor {
       gcID
+    }
+  }
+}
+`;
+
+export const EDIT_TEAM = gql`
+mutation editTeam($gcID: String!, $data: ModifyProfileInput!)
+{
+  modifyProfile(gcID: $gcID, data: $data){
+    gcID
+    supervisor {
+      gcID
+    }
+    team {
+      id
     }
   }
 }

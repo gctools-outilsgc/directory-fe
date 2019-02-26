@@ -9,12 +9,17 @@ import { Query } from 'react-apollo';
 import {
   Row,
   Col,
-  Button
+  Button,
+  Modal,
+  ModalHeader,
+  ModalBody
 } from 'reactstrap';
 
 import Loading from './Loading';
 
 import { GET_TEAM } from '../../../gql/profile';
+import SupervisorPicker from '../../core/SupervisorPicker';
+import TeamPicker from '../../core/TeamPicker';
 
 const mapStateToProps = ({ user }) => {
   const props = {};
@@ -37,8 +42,13 @@ export class GQLTeamCard extends React.Component {
     super(props);
     this.state = {
       modal: false,
+      chosenSupervisor: '',
+      editSup: false,
+      editTeam: false,
     };
     this.toggle = this.toggle.bind(this);
+    this.toggleSup = this.toggleSup.bind(this);
+    this.toggleTeam = this.toggleTeam.bind(this);
   }
 
   toggle() {
@@ -47,12 +57,28 @@ export class GQLTeamCard extends React.Component {
     });
   }
 
+  toggleSup() {
+    this.setState(prevState => ({
+      editSup: !prevState.editSup,
+    }));
+  }
+
+  toggleTeam() {
+    this.setState(prevState => ({
+      editTeam: !prevState.editTeam,
+    }));
+  }
+
   render() {
     const {
       id,
       accessToken,
       myGcID,
     } = this.props;
+    const {
+      chosenSupervisor,
+      editSup,
+    } = this.state;
     const canEdit = (accessToken !== '') && (id === myGcID);
     return (
       <Query
@@ -82,11 +108,74 @@ export class GQLTeamCard extends React.Component {
                           {supTest ? supTest.titleEn : ''}
                         </small>
                         {canEdit ?
-                          <Button
-                            color="light"
-                          >
-                            Change supervisor
-                          </Button>
+                          <div>
+                            <Button
+                              color="light"
+                              size="sm"
+                              onClick={this.toggle}
+                            >
+                              Change supervisor
+                            </Button>
+                            <Modal
+                              isOpen={this.state.modal}
+                              toggle={this.toggle}
+                              size="lg"
+                            >
+                              <ModalHeader
+                                toggle={this.toggle}
+                              >
+                                Edit Team
+                              </ModalHeader>
+                              <ModalBody>
+                                <Row
+                                  className="justify-content-md-center"
+                                >
+                                  <div className="text-center">
+                                    <div>
+                                      Avatar
+                                    </div>
+                                    <div>
+                                      {userInfo.name}
+                                    </div>
+                                    <div>
+                                      {userInfo.titleEn}
+                                    </div>
+                                  </div>
+                                </Row>
+                                <Row className="mt-3">
+                                  <Col>
+                                    Supervisor
+                                    {editSup ?
+                                      <SupervisorPicker
+                                        onResultSelect={(s) => {
+                                          this.setState({
+                                            chosenSupervisor: s,
+                                          });
+                                          this.toggleSup(editSup);
+                                        }}
+                                      /> :
+                                      <div>
+                                        {supTest ? supTest.name : 'None'}
+                                        <Button
+                                          onClick={this.toggleSup}
+                                        >
+                                          Search
+                                        </Button>
+                                      </div>
+                                    }
+                                    {chosenSupervisor.name}
+                                    {chosenSupervisor.gcID}
+                                  </Col>
+                                  <Col>
+                                    Team Picker here
+                                    <TeamPicker
+                                      supervisor={chosenSupervisor.gcID}
+                                    />
+                                  </Col>
+                                </Row>
+                              </ModalBody>
+                            </Modal>
+                          </div>
                           : ''}
                       </Col>
                       <Col>
