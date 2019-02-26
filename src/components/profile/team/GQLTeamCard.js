@@ -8,7 +8,8 @@ import { Query } from 'react-apollo';
 
 import {
   Row,
-  Col
+  Col,
+  Button
 } from 'reactstrap';
 
 import Loading from './Loading';
@@ -49,8 +50,10 @@ export class GQLTeamCard extends React.Component {
   render() {
     const {
       id,
+      accessToken,
+      myGcID,
     } = this.props;
-
+    const canEdit = (accessToken !== '') && (id === myGcID);
     return (
       <Query
         query={GET_TEAM}
@@ -78,6 +81,13 @@ export class GQLTeamCard extends React.Component {
                         <small className="text-muted">
                           {supTest ? supTest.titleEn : ''}
                         </small>
+                        {canEdit ?
+                          <Button
+                            color="light"
+                          >
+                            Change supervisor
+                          </Button>
+                          : ''}
                       </Col>
                       <Col>
                         <div className="font-weight-bold">
@@ -101,10 +111,14 @@ export class GQLTeamCard extends React.Component {
 
 GQLTeamCard.defaultProps = {
   id: undefined,
+  accessToken: undefined,
+  myGcID: undefined,
 };
 
 GQLTeamCard.propTypes = {
   id: PropTypes.string,
+  accessToken: PropTypes.string,
+  myGcID: PropTypes.string,
 };
 
 export default connect(mapStateToProps)(LocalizedComponent(GQLTeamCard));
