@@ -1,7 +1,7 @@
 import gql from 'graphql-tag';
 
 export const GET = gql`
-query getProfile($gcID: String!) {
+query getProfile($gcID: ID!) {
   profiles(gcID: $gcID) {
     gcID
     name
@@ -23,7 +23,7 @@ query getProfile($gcID: String!) {
 }`;
 
 export const GET_TEAM = gql`
-query getTeam($gcID: String!) {
+query getTeam($gcID: ID!) {
   profiles(gcID: $gcID) {
     gcID
     name
@@ -44,7 +44,7 @@ query getTeam($gcID: String!) {
 }`;
 
 export const EDIT = gql`
-mutation editProfile($gcID: String!, $data: ModifyProfileInput!) {
+mutation editProfile($gcID: ID!, $data: ModifyProfileInput!) {
   modifyProfile(gcID: $gcID, data: $data) {
     gcID
     name
@@ -70,7 +70,7 @@ mutation editProfile($gcID: String!, $data: ModifyProfileInput!) {
 `;
 
 export const EDIT_TEAM = gql`
-mutation editTeam($gcID: String!, $data: ModifyProfileInput!)
+mutation editTeam($gcID: ID!, $data: ModifyProfileInput!)
 {
   modifyProfile(gcID: $gcID, data: $data){
     gcID

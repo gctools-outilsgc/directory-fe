@@ -37,7 +37,7 @@ class TeamPicker extends React.Component {
         }}
             skip={!supervisor}
             query={gql`
-          query organizationQuery($gcID: String!) {
+          query organizationQuery($gcID: ID!) {
             profiles(gcID: $gcID) {
               ownerOfTeams {
                 id
