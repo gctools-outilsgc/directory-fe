@@ -46,6 +46,7 @@ export class GQLTeamCard extends React.Component {
       modal: false,
       confirmModal: false,
       chosenSupervisor: '',
+      chosenTeam: '',
       editSup: false,
       editTeam: false,
     };
@@ -88,6 +89,7 @@ export class GQLTeamCard extends React.Component {
     } = this.props;
     const {
       chosenSupervisor,
+      chosenTeam,
       editSup,
     } = this.state;
     const canEdit = (accessToken !== '') && (id === myGcID);
@@ -189,8 +191,18 @@ export class GQLTeamCard extends React.Component {
                                   </Col>
                                   <Col>
                                     <TeamPicker
-                                      supervisor={chosenSupervisor.gcID}
+                                      editMode
+                                      supervisor={chosenSupervisor}
+                                      gcID={id}
+                                      selectedOrgTier={teamTest}
+                                      onTeamChange={(t) => {
+                                        this.setState({
+                                          chosenTeam: t,
+                                        });
+                                      }}
                                     />
+                                    {chosenTeam.id}
+                                    {chosenTeam.name}
                                   </Col>
                                 </Row>
                               </ModalBody>
