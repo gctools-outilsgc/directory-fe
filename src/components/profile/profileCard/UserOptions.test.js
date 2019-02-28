@@ -10,10 +10,10 @@ const mocks = [
     request: {
       query: EDIT,
       variables: {
-        gcID: "1",
+        gcID: '1',
         data: {
           supervisor: {
-            gcID: "2",
+            gcID: '2',
           },
         },
       },
@@ -21,7 +21,7 @@ const mocks = [
     result: {
       data: {
         modifyProfile: {
-          gcID: "1",
+          gcID: '1',
           name: 'Test Name',
           email: 'test@test.test',
           avatar: '',
@@ -38,23 +38,21 @@ const mocks = [
           titleEn: '',
           titleFr: '',
           supervisor: {
-            gcID: "2",
+            gcID: '2',
           },
         },
       },
     },
   },
-]
+];
 
 afterEach(cleanup);
 
 describe('UserOptions', () => {
   it('renders the UserOptions component', () => {
-    const { queryByText } = render(
-      <MockedProvider mocks={[]}>
-        <UserOptions />
-      </MockedProvider>
-    );
+    const { queryByText } = render(<MockedProvider mocks={[]}>
+      <UserOptions />
+                                   </MockedProvider>);
     const userOptionText = queryByText('Make this person your supervisor');
     expect(userOptionText.innerHTML).toBe('Make this person your supervisor');
   });

@@ -31,7 +31,7 @@ storiesOf('OrgChart/Card', module)
           title={user.title}
         />
       </div>
-    ),
+    )
   )
   .add(
     'with click handlers',
@@ -47,7 +47,7 @@ storiesOf('OrgChart/Card', module)
           onCardClick={action('card click')}
         />
       </div>
-    ),
+    )
   )
   .add(
     'with a card click url',
@@ -66,7 +66,7 @@ storiesOf('OrgChart/Card', module)
           }}
         />
       </div>
-    ),
+    )
   )
   .add(
     'blurred',
@@ -81,7 +81,7 @@ storiesOf('OrgChart/Card', module)
           blurred
         />
       </div>
-    ),
+    )
   )
   .add(
     'active',
@@ -96,7 +96,7 @@ storiesOf('OrgChart/Card', module)
           active
         />
       </div>
-    ),
+    )
   )
   .add(
     'dragging',
@@ -111,7 +111,7 @@ storiesOf('OrgChart/Card', module)
           dragging
         />
       </div>
-    ),
+    )
   )
   .add(
     'blurred and active',
@@ -127,7 +127,7 @@ storiesOf('OrgChart/Card', module)
           active
         />
       </div>
-    ),
+    )
   )
   .add(
     'blurred and dragging',
@@ -143,7 +143,7 @@ storiesOf('OrgChart/Card', module)
           dragging
         />
       </div>
-    ),
+    )
   )
   .add(
     'dragging and active',
@@ -159,7 +159,7 @@ storiesOf('OrgChart/Card', module)
           active
         />
       </div>
-    ),
+    )
   )
   .add(
     'blurred, active and dragging',
@@ -176,7 +176,7 @@ storiesOf('OrgChart/Card', module)
           dragging
         />
       </div>
-    ),
+    )
   )
   .add(
     'at position x=150, y=220',
@@ -191,5 +191,5 @@ storiesOf('OrgChart/Card', module)
           position={{ x: 150, y: 220 }}
         />
       </div>
-    ),
+    )
   );

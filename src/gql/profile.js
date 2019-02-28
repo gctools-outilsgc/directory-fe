@@ -43,6 +43,50 @@ query getTeam($gcID: ID!) {
   }
 }`;
 
+const profileDataForOrgChart = gql`
+  fragment profileDataForOrgChart on Profile {
+    gcID
+    name
+    avatar
+    titleEn
+    titleFr
+  }
+`;
+
+const teamDataForOrgChart = gql`
+  fragment teamDataForOrgChart on Team {
+    id
+    nameEn
+    nameFr
+  }
+`;
+
+export const ORGCHART = gql`
+query orgChart($gcID: String!) {
+  profiles(gcID: $gcID) {
+    ...profileDataForOrgChart
+    ownerOfTeams {
+      ...teamDataForOrgChart
+      members {
+        ...profileDataForOrgChart
+      }
+    }
+    team {
+      ...teamDataForOrgChart
+      owner {
+        ...profileDataForOrgChart
+      }
+      members {
+        ...profileDataForOrgChart
+      }
+    }
+  }
+}
+${profileDataForOrgChart}
+${teamDataForOrgChart}
+`;
+
+
 export const EDIT = gql`
 mutation editProfile($gcID: ID!, $data: ModifyProfileInput!) {
   modifyProfile(gcID: $gcID, data: $data) {

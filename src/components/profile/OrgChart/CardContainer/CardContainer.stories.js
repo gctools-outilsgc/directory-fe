@@ -26,7 +26,7 @@ storiesOf('OrgChart/CardContainer', module)
           cardHeight={75}
         />
       </div>
-    ),
+    )
   )
   .add(
     'with cardClickUrl',
@@ -49,7 +49,7 @@ storiesOf('OrgChart/CardContainer', module)
           />
         </div>
       );
-    },
+    }
   )
   .add(
     'with click handlers',
@@ -72,7 +72,7 @@ storiesOf('OrgChart/CardContainer', module)
           />
         </div>
       );
-    },
+    }
   )
   .add(
     'with button title',
@@ -94,7 +94,7 @@ storiesOf('OrgChart/CardContainer', module)
           />
         </div>
       );
-    },
+    }
   )
   .add(
     'with custom styles (backgroundColor=#ccc)',
@@ -118,7 +118,7 @@ storiesOf('OrgChart/CardContainer', module)
           />
         </div>
       );
-    },
+    }
   )
   .add(
     'with selectedCard',
@@ -140,7 +140,7 @@ storiesOf('OrgChart/CardContainer', module)
           />
         </div>
       );
-    },
+    }
   )
   .add(
     'With no selected card',
@@ -165,7 +165,7 @@ storiesOf('OrgChart/CardContainer', module)
           />
         </div>
       );
-    },
+    }
   );
 // .add(
 //   'Controlled example (navigation)',

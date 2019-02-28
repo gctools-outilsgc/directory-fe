@@ -24,7 +24,7 @@ describe('MiniChart', () => {
     const mock = jest.fn();
     const r1 = TestRenderer.create(
       <MiniChart cards={boxes} lines={lines} onClick={mock} />,
-      { createNodeMock: () => ({ focus: () => {} }) },
+      { createNodeMock: () => ({ focus: () => {} }) }
     );
     r1.root.children[0].props.onClick();
     expect(mock).toBeCalled();
@@ -33,7 +33,7 @@ describe('MiniChart', () => {
     const mock = jest.fn();
     const r1 = TestRenderer.create(
       <MiniChart cards={boxes} lines={lines} onOverlayDrag={mock} />,
-      { },
+      { }
     );
     r1.root.children[0].props.onMouseMove();
     expect(mock).not.toBeCalled();
@@ -47,7 +47,7 @@ describe('MiniChart', () => {
     const mock = jest.fn();
     const r1 = TestRenderer.create(
       <MiniChart cards={boxes} lines={lines} onOverlayDrag={mock} />,
-      { },
+      { }
     );
     r1.root.children[0].props.onMouseDown();
     r1.root.children[0].props.onMouseMove({ buttons: 0 });
@@ -57,7 +57,7 @@ describe('MiniChart', () => {
     const mock = jest.fn();
     const r1 = TestRenderer.create(
       <MiniChart cards={boxes} lines={lines} onOverlayKeyUp={mock} />,
-      {},
+      {}
     );
     const overlay =
       r1.root.children[0].children[r1.root.children[0].children.length - 2];
@@ -76,7 +76,7 @@ describe('MiniChart', () => {
           }
           return {};
         },
-      },
+      }
     );
     r1.root.children[0].props.onClick();
     expect(focus).toBeCalled();
@@ -211,7 +211,7 @@ describe('MiniChart', () => {
       expect(overE2.props.style).toEqual(Object.assign(
         {},
         overE1.props.style,
-        overlay2.style,
+        overlay2.style
       ));
     });
   });

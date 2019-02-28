@@ -48,7 +48,7 @@ storiesOf('TransferConfirmation', module)
         transferredUser={user2}
         newSupervisor={user3}
       />
-    ),
+    )
   )
   .add(
     'isOpen=false',
@@ -59,7 +59,7 @@ storiesOf('TransferConfirmation', module)
         transferredUser={user2}
         newSupervisor={user3}
       />
-    ),
+    )
   )
   .add(
     'with click handlers',
@@ -73,7 +73,7 @@ storiesOf('TransferConfirmation', module)
         secondaryButtonClick={action('secondary')}
         closeButtonClick={action('close')}
       />
-    ),
+    )
   )
   .add(
     'with custom text',
@@ -88,5 +88,5 @@ storiesOf('TransferConfirmation', module)
         primaryButtonText="Custom Primary"
         secondaryButtonText="Custom Secondary"
       />
-    ),
+    )
   );
