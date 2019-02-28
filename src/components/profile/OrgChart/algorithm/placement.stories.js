@@ -80,5 +80,5 @@ storiesOf('OrgChart/Placement Algorithm', module)
           </div>
         </div>
       );
-    },
+    }
   );

@@ -32,7 +32,7 @@ storiesOf('OrgChart', module)
           handleItemClick={action('centre-org-chart-click')}
         />
       </div>
-    ),
+    )
   )
   .add(
     'with selectedCard',
@@ -57,7 +57,7 @@ storiesOf('OrgChart', module)
           />
         </div>
       );
-    },
+    }
   )
   .add(
     'with onMoveToActiveClick',
@@ -83,7 +83,7 @@ storiesOf('OrgChart', module)
           />
         </div>
       );
-    },
+    }
   )
   .add(
     'using minichart',
@@ -120,5 +120,5 @@ storiesOf('OrgChart', module)
           />
         </div>
       );
-    },
+    }
   );
