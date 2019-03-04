@@ -9,6 +9,7 @@ import { Mutation } from 'react-apollo';
 import { Button, Form, Row, Col } from 'reactstrap';
 
 import { EDIT, prepareEditProfile } from '../../gql/profile';
+import DepartmentPicker from '../core/DepartmentPicker';
 
 export class OnboardStep2 extends Component {
   constructor(props) {
@@ -18,6 +19,7 @@ export class OnboardStep2 extends Component {
       email: this.props.userObject.email || '',
       titleEn: this.props.userObject.titleEn || '',
       titleFr: this.props.userObject.titleFr || '',
+      teamId: '',
     };
     this.handleNext = this.handleNext.bind(this);
   }
@@ -47,6 +49,7 @@ export class OnboardStep2 extends Component {
                   email,
                   titleEn,
                   titleFr,
+                  teamId,
                 } = this.state;
                 modifyProfile(prepareEditProfile({
                   gcID: userObject.gcID,
@@ -54,6 +57,7 @@ export class OnboardStep2 extends Component {
                   email,
                   titleEn,
                   titleFr,
+                  teamId,
                 }));
                 this.props.nextStep();
             }}
@@ -138,6 +142,17 @@ export class OnboardStep2 extends Component {
                       }}
                     />
                   </label>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <DepartmentPicker
+                    onResultSelect={(d) => {
+                      this.setState({
+                        teamId: d.teams[0].id,
+                      });
+                    }}
+                  />
                 </Col>
               </Row>
               <Row className="m-2 border-top">

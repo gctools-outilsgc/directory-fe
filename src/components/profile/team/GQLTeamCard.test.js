@@ -19,6 +19,10 @@ const mock = [
       data: {
         profiles: [{
           gcID: '1',
+          name: 'Test User',
+          avatar: '',
+          titleEn: '',
+          titleFr: '',
           supervisor: {
             gcID: '2',
             name: 'Test Supervisor',

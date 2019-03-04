@@ -21,6 +21,7 @@ class DepartmentPicker extends React.Component {
   handleResultClick(e) {
     this.setState({
       skip: true,
+      value: e.nameEn,
     });
     setTimeout(() => this.props.onResultSelect(e), 0);
   }
@@ -47,6 +48,10 @@ class DepartmentPicker extends React.Component {
             organizations(nameEn: $nameEn) {
               id
               nameEn
+              teams {
+                id
+                nameEn
+              }
             }
           }`}
         skip={this.state.skip}
@@ -54,14 +59,12 @@ class DepartmentPicker extends React.Component {
       >
         {({ data }) => {
           const checkResult = (!data) ? [''] : data;
-          console.log(data);
           const results = (checkResult.organizations) ?
             checkResult.organizations.map(r => (
               <li key={r.id}>
                 <Button
-                  onClick={
-                    this.handleResultClick(r)
-                  }
+                  onClick={() => this.handleResultClick(r)}
+                  color="light"
                 >
                   {r.nameEn}
                 </Button>
@@ -71,7 +74,7 @@ class DepartmentPicker extends React.Component {
             'search-results-none' : 'list-unstyled search-results';
           return (
             <div>
-              org
+              Department
               <Input
                 type="text"
                 onChange={this.handleChange}

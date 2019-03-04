@@ -18,6 +18,10 @@ export const ProfileCardDisplay = (props) => {
         <div className="profile-title">
           {user.titleEn ? user.titleEn : 'No Title'}
         </div>
+        <div className="profile-title">
+          {user.team ?
+            user.team.organization.nameEn : ''}
+        </div>
         <ul className="list-unstyled mt-3">
           <li className="mb-2">
             <div>

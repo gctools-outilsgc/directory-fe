@@ -9,6 +9,14 @@ query getProfile($gcID: ID!) {
     avatar
     mobilePhone
     officePhone
+    team {
+      id
+      organization {
+        id
+        nameEn
+        nameFr
+      }
+    }
     address {
       id
       streetAddress
@@ -96,6 +104,9 @@ mutation editProfile($gcID: ID!, $data: ModifyProfileInput!) {
     avatar
     mobilePhone
     officePhone
+    team {
+      id
+    }
     address {
       id
       streetAddress
@@ -175,6 +186,9 @@ export const prepareEditProfile = (data) => {
           province: valueOrUndefined(province),
           postalCode: valueOrUndefined(postalCode),
           country: valueOrUndefined(country),
+        }),
+        team: valueOrUndefined({
+          id: valueOrUndefined(data.teamId),
         }),
       },
     },
