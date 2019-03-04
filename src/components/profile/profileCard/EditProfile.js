@@ -16,6 +16,7 @@ import {
 } from 'reactstrap';
 
 import { EDIT, prepareEditProfile } from '../../../gql/profile';
+import DepartmentPicker from '../../core/DepartmentPicker';
 
 export class EditProfile extends Component {
   constructor(props) {
@@ -148,6 +149,13 @@ export class EditProfile extends Component {
                     </Col>
                   </Row>
                   <hr />
+                  <Row>
+                    <DepartmentPicker
+                      onResultSelect={(d) => {
+                        console.log(d.id);
+                      }}
+                    />
+                  </Row>
                   <Row>
                     <Col>
                       <label htmlFor="titleEn">
