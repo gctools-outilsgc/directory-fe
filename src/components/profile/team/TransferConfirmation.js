@@ -135,6 +135,14 @@ const getProfileDetails = (profile) => {
   };
 };
 
+const getTeamDetails = (team) => {
+  const { name, avatar } = team || {};
+  return {
+    name,
+    avatar,
+  };
+};
+
 const TransferConfirmation = (props) => {
   const {
     isOpen,
@@ -153,11 +161,13 @@ const TransferConfirmation = (props) => {
     oldSupervisor,
     transferredUser,
     newSupervisor,
+    newTeam,
     avatarAltText,
   } = props;
   const user1 = getProfileDetails(oldSupervisor);
   const user2 = getProfileDetails(transferredUser);
   const user3 = getProfileDetails(newSupervisor);
+  const nteam = getTeamDetails(newTeam);
   return (
     <div>
       <Modal
@@ -207,11 +217,11 @@ const TransferConfirmation = (props) => {
               alt={`${avatarAltText} ${user3.name}`}
             />
             <div className="team new">
-              <span>{user3.team.avatar}</span>
+              <span>{nteam.avatar}</span>
             </div>
             <div className="name">
               <h2>{user3.name}</h2>
-              <span>{user3.team.name}</span>
+              <span>{nteam.name}</span>
             </div>
           </Avatars>
         </ModalBody>
@@ -317,6 +327,11 @@ TransferConfirmation.propTypes = {
       name: PropTypes.string,
       avatar: PropTypes.string,
     }).isRequired,
+  }).isRequired,
+
+  newTeam: PropTypes.shape({
+    name: PropTypes.string,
+    avatar: PropTypes.string,
   }).isRequired,
 };
 

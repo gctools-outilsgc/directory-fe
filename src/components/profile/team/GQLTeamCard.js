@@ -226,6 +226,14 @@ export class GQLTeamCard extends React.Component {
                               oldSupervisor={supTest}
                               transferredUser={userInfo}
                               newSupervisor={chosenSupervisor}
+                              newTeam={chosenTeam}
+                              primaryButtonClick={() => {
+                                // Put Notifcation Mutation here
+                                console.log(supTest);
+                                console.log(userInfo.gcID);
+                                console.log(chosenSupervisor.gcID);
+                                console.log(chosenTeam.id);
+                              }}
                             />
                           </div>
                           : ''}
