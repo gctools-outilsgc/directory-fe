@@ -10,8 +10,9 @@ class DepartmentPicker extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: '',
+      value: props.currentDepart.nameEn || '',
       skip: true,
+      wasChanged: false,
     };
     this.handleResultClick = this.handleResultClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -22,8 +23,9 @@ class DepartmentPicker extends React.Component {
     this.setState({
       skip: true,
       value: e.nameEn,
+      wasChanged: true,
     });
-    setTimeout(() => this.props.onResultSelect(e), 0);
+    setTimeout(() => this.props.onResultSelect(e, this.state.wasChanged), 0);
   }
 
   handleChange(e) {
@@ -91,8 +93,16 @@ class DepartmentPicker extends React.Component {
   }
 }
 
+DepartmentPicker.defaultProps = {
+  currentDepart: undefined,
+};
+
 DepartmentPicker.propTypes = {
   onResultSelect: PropTypes.func.isRequired,
+  currentDepart: PropTypes.shape({
+    id: PropTypes.string,
+    nameEn: PropTypes.string,
+  }),
 };
 
 export default DepartmentPicker;
