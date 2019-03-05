@@ -15,7 +15,7 @@ import {
   Col
 } from 'reactstrap';
 
-import { EDIT, prepareEditProfile } from '../../../gql/profile';
+import { EDIT, prepareEditProfile, EDIT_TEAM } from '../../../gql/profile';
 import DepartmentPicker from '../../core/DepartmentPicker';
 import TransferConfirmation from '../team/TransferConfirmation';
 
@@ -31,11 +31,13 @@ export class EditProfile extends Component {
       mobilePhone,
       address,
       team,
+      supervisor,
     } = props.profile;
     this.state = {
       modal: false,
       depChange: false,
       confirmModal: false,
+      newTeamId: '',
       name: name || '',
       email: email || '',
       titleEn: titleEn || '',
@@ -48,6 +50,7 @@ export class EditProfile extends Component {
       postalCode: (address) ? address.postalCode || '' : '',
       country: (address) ? address.country || '' : '',
       organization: (team) ? team.organization || '' : '',
+      supervisor: (supervisor) ? supervisor || '' : '',
     };
     this.toggle = this.toggle.bind(this);
     this.toggleConfirm = this.toggleConfirm.bind(this);
@@ -171,10 +174,10 @@ export class EditProfile extends Component {
                       <DepartmentPicker
                         currentDepart={this.state.organization}
                         onResultSelect={(d, change) => {
-                          console.log(d.id);
                           if (change) {
                             this.setState({
                               depChange: true,
+                              newTeamId: d.teams[0].id,
                             });
                             console.log('yup');
                           }
@@ -379,9 +382,44 @@ export class EditProfile extends Component {
             </Mutation>
           </ModalBody>
         </Modal>
-        <TransferConfirmation
-          isOpen={this.state.confirmModal}
-        />
+        <Mutation
+          mutation={EDIT_TEAM}
+          onCompleted={() => {
+            this.setState({ confirmModal: false });
+          }}
+        >
+          {modifyProfile => (
+            <TransferConfirmation
+              isOpen={this.state.confirmModal}
+              transferredUser={this.props.profile}
+              newSupervisor={
+                {
+                  name: 'Choose a new Supervisor',
+                  avatar: 'placeholder icon',
+                  team: {
+                    name: 'No Team',
+                    avatar: 'placeholder',
+                  },
+                }
+              }
+              oldSupervisor={this.state.supervisor}
+              primaryButtonClick={() => {
+                // TODO hotload / apollo cache
+                // TODO remove user's supervisor as well
+                modifyProfile({
+                  variables: {
+                    gcID: profile.gcID,
+                    data: {
+                      team: {
+                        id: String(this.state.newTeamId),
+                      },
+                    },
+                  },
+                });
+              }}
+            />
+          )}
+        </Mutation>
       </div>
     );
   }
@@ -412,6 +450,12 @@ EditProfile.propTypes = {
         nameEn: PropTypes.string,
         nameFr: PropTypes.string,
       }),
+    }),
+    supervisor: PropTypes.shape({
+      gcID: PropTypes.string,
+      name: PropTypes.string,
+      titleEn: PropTypes.string,
+      titleFr: PropTypes.string,
     }),
   }),
 };
