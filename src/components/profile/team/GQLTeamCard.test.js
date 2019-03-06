@@ -26,6 +26,7 @@ const mock = [
           supervisor: {
             gcID: '2',
             name: 'Test Supervisor',
+            avatar: '',
             titleEn: 'Boss',
             titleFr: '',
           },

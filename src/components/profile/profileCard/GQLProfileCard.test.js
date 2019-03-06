@@ -41,6 +41,13 @@ const mock = [
           },
           titleEn: '',
           titleFr: '',
+          supervisor: {
+            gcID: '',
+            name: '',
+            avatar: '',
+            titleEn: '',
+            titleFr: '',
+          },
         }],
       },
     },

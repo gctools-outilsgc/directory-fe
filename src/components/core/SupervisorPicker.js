@@ -48,6 +48,8 @@ class SupervisorPicker extends React.Component {
             profiles(name: $name) {
               gcID
               name
+              titleEn
+              titleFr
               avatar
             }
           }`}
@@ -59,7 +61,10 @@ class SupervisorPicker extends React.Component {
           const results = (checkResult.profiles) ?
             checkResult.profiles.map(a => (
               <li key={a.gcID}>
-                <Button onClick={() => this.handleResultClick(a)}>
+                <Button
+                  onClick={() => this.handleResultClick(a)}
+                  color="light"
+                >
                   {a.name}
                 </Button>
               </li>

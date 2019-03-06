@@ -48,6 +48,7 @@ query getTeam($gcID: ID!) {
     supervisor {
       gcID
       name
+      avatar
       titleEn
       titleFr
     }
