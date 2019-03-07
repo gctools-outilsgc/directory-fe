@@ -56,6 +56,11 @@ query getTeam($gcID: ID!) {
         titleEn
         titleFr
       }
+      members {
+        name
+        titleEn
+        avatar
+      }
     }
   }
 }`;
@@ -138,9 +143,6 @@ mutation editTeam($gcID: ID!, $data: ModifyProfileInput!)
 {
   modifyProfile(gcID: $gcID, data: $data){
     gcID
-    supervisor {
-      gcID
-    }
     team {
       id
     }

@@ -4,7 +4,7 @@ import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
 
 import { connect } from 'react-redux';
-import { Query } from 'react-apollo';
+import { Query, Mutation } from 'react-apollo';
 
 import {
   Row,
@@ -18,10 +18,11 @@ import {
 
 import Loading from './Loading';
 
-import { GET_TEAM } from '../../../gql/profile';
+import { GET_TEAM, EDIT_TEAM } from '../../../gql/profile';
 import SupervisorPicker from '../../core/SupervisorPicker';
 import TeamPicker from '../../core/TeamPicker';
 import TransferConfirmation from './TransferConfirmation';
+import TeamDisplayMemberList from './TeamDisplayMemberList';
 
 const mapStateToProps = ({ user }) => {
   const props = {};
@@ -105,6 +106,7 @@ export class GQLTeamCard extends React.Component {
           const userInfo = (!data) ? '' : data.profiles[0];
           const teamTest = (!userInfo) ? '' : userInfo.team;
           const supTest = (!teamTest) ? '' : userInfo.team.owner;
+          const memberTest = (!teamTest) ? '' : userInfo.team.members;
           return (
             <div style={style.card}>
               {userInfo ? (
@@ -289,30 +291,52 @@ export class GQLTeamCard extends React.Component {
                                 </Button>
                               </ModalFooter>
                             </Modal>
-                            <TransferConfirmation
-                              isOpen={this.state.confirmModal}
-                              oldSupervisor={supTest}
-                              transferredUser={userInfo}
-                              newSupervisor={
-                                {
-                                  name: chosenSupervisor.name,
-                                  avatar: chosenSupervisor.avatar,
-                                  team: {
-                                    name: chosenTeam.name,
-                                    avatar: chosenTeam.avatar,
-                                  },
-                                }
-                              }
-                              primaryButtonClick={() => {
-                                // TODO Send this to notifications
-                                console.log(supTest);
-                                console.log(userInfo.gcID);
-                                console.log(chosenTeam.id);
+                            <Mutation
+                              mutation={EDIT_TEAM}
+                              refetchQueries={[{
+                                query: GET_TEAM,
+                                variables: { gcID: String(userInfo.gcID) },
+                              }]}
+                              onCompleted={() => {
+                                this.setState({
+                                  confirmModal: false,
+                                });
                               }}
-                              secondaryButtonClick={() => {
-                                this.toggleConfirm();
-                              }}
-                            />
+                            >
+                              {modifyProfile => (
+                                <TransferConfirmation
+                                  isOpen={this.state.confirmModal}
+                                  oldSupervisor={supTest}
+                                  transferredUser={userInfo}
+                                  newSupervisor={
+                                    {
+                                      name: chosenSupervisor.name,
+                                      avatar: chosenSupervisor.avatar,
+                                      team: {
+                                        name: chosenTeam.name,
+                                        avatar: chosenTeam.avatar,
+                                      },
+                                    }
+                                  }
+                                  primaryButtonClick={() => {
+                                    // TODO Send this to notifications
+                                    modifyProfile({
+                                      variables: {
+                                        gcID: String(userInfo.gcID),
+                                        data: {
+                                          team: {
+                                            id: chosenTeam.id,
+                                          },
+                                        },
+                                      },
+                                    });
+                                  }}
+                                  secondaryButtonClick={() => {
+                                    this.toggleConfirm();
+                                  }}
+                                />
+                              )}
+                            </Mutation>
                           </div>
                           : ''}
                       </Col>
@@ -323,6 +347,13 @@ export class GQLTeamCard extends React.Component {
                         {teamTest ? teamTest.nameEn : 'None'}
                       </Col>
                     </Row>
+                    <hr />
+                    <div className="font-weight-bold">
+                      People
+                    </div>
+                    <TeamDisplayMemberList
+                      members={memberTest}
+                    />
                   </div>
                 </div>
               ) : (
