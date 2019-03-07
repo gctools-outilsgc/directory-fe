@@ -103,8 +103,8 @@ export class GQLTeamCard extends React.Component {
           if (loading) return <Loading />;
           if (error) return `Error!: ${error}`;
           const userInfo = (!data) ? '' : data.profiles[0];
-          const supTest = (!userInfo) ? '' : userInfo.supervisor;
           const teamTest = (!userInfo) ? '' : userInfo.team;
+          const supTest = (!teamTest) ? '' : userInfo.team.owner;
           return (
             <div style={style.card}>
               {userInfo ? (
@@ -260,7 +260,7 @@ export class GQLTeamCard extends React.Component {
                                         }}
                                       /> :
                                       <div>
-                                        Current Team?
+                                        {teamTest ? teamTest.nameEn : 'None'}
                                       </div>
                                     }
                                   </Col>
@@ -307,7 +307,6 @@ export class GQLTeamCard extends React.Component {
                                 // TODO Send this to notifications
                                 console.log(supTest);
                                 console.log(userInfo.gcID);
-                                console.log(chosenSupervisor.gcID);
                                 console.log(chosenTeam.id);
                               }}
                               secondaryButtonClick={() => {

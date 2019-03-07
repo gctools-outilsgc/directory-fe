@@ -16,6 +16,13 @@ query getProfile($gcID: ID!) {
         nameEn
         nameFr
       }
+      owner {
+        gcID
+        name
+        avatar
+        titleEn
+        titleFr
+      }
     }
     address {
       id
@@ -27,13 +34,6 @@ query getProfile($gcID: ID!) {
     }
     titleEn
     titleFr
-    supervisor {
-      gcID
-      name
-      avatar
-      titleEn
-      titleFr
-    }
   }
 }`;
 
@@ -45,16 +45,17 @@ query getTeam($gcID: ID!) {
     avatar
     titleEn
     titleFr
-    supervisor {
-      gcID
-      name
-      avatar
-      titleEn
-      titleFr
-    }
     team {
+      id
       nameEn
       nameFr
+      owner {
+        gcID
+        name
+        avatar
+        titleEn
+        titleFr
+      }
     }
   }
 }`;

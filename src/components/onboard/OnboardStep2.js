@@ -19,6 +19,7 @@ export class OnboardStep2 extends Component {
       email: this.props.userObject.email || '',
       titleEn: this.props.userObject.titleEn || '',
       titleFr: this.props.userObject.titleFr || '',
+      team: this.props.userObject.team || '',
       teamId: '',
     };
     this.handleNext = this.handleNext.bind(this);
@@ -147,6 +148,7 @@ export class OnboardStep2 extends Component {
               <Row>
                 <Col>
                   <DepartmentPicker
+                    currentDepart={this.state.team.organization}
                     onResultSelect={(d) => {
                       this.setState({
                         teamId: d.teams[0].id,
@@ -185,6 +187,13 @@ OnboardStep2.propTypes = {
     email: PropTypes.string,
     titleEn: PropTypes.string,
     titleFr: PropTypes.string,
+    team: PropTypes.shape({
+      organization: PropTypes.shape({
+        id: PropTypes.string,
+        nameEn: PropTypes.string,
+        nameFr: PropTypes.string,
+      }),
+    }),
   }),
   nextStep: PropTypes.func,
 };

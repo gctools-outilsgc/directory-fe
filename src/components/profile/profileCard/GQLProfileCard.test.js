@@ -30,6 +30,13 @@ const mock = [
               nameEn: '',
               nameFr:'',
             },
+            owner: {
+              gcID: '',
+              name: '',
+              avatar: '',
+              titleEn: '',
+              titleFr: '',
+            },
           },
           address: {
             id: '',
@@ -41,13 +48,6 @@ const mock = [
           },
           titleEn: '',
           titleFr: '',
-          supervisor: {
-            gcID: '',
-            name: '',
-            avatar: '',
-            titleEn: '',
-            titleFr: '',
-          },
         }],
       },
     },

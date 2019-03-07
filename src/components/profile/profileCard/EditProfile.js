@@ -31,7 +31,6 @@ export class EditProfile extends Component {
       mobilePhone,
       address,
       team,
-      supervisor,
     } = props.profile;
     this.state = {
       modal: false,
@@ -50,7 +49,7 @@ export class EditProfile extends Component {
       postalCode: (address) ? address.postalCode || '' : '',
       country: (address) ? address.country || '' : '',
       organization: (team) ? team.organization || '' : '',
-      supervisor: (supervisor) ? supervisor || '' : '',
+      supervisor: (team) ? team.owner || '' : '',
     };
     this.toggle = this.toggle.bind(this);
     this.toggleConfirm = this.toggleConfirm.bind(this);
