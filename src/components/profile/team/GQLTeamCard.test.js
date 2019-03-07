@@ -34,6 +34,11 @@ const mock = [
               titleEn: 'Boss',
               titleFr: '',
             },
+            members: [{
+              name: '',
+              titleEn: '',
+              avatar: '',
+            }],
           },
         }],
       },

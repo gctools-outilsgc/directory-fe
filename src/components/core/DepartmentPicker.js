@@ -76,12 +76,16 @@ class DepartmentPicker extends React.Component {
             'search-results-none' : 'list-unstyled search-results';
           return (
             <div>
-              Department
-              <Input
-                type="text"
-                onChange={this.handleChange}
-                value={this.state.value}
-              />
+              <label>
+                <span className="font-weight-bold">
+                  Department
+                </span>
+                <Input
+                  type="text"
+                  onChange={this.handleChange}
+                  value={this.state.value}
+                />
+              </label>
               <ul className={styleClasses}>
                 {results}
               </ul>
