@@ -116,6 +116,7 @@ export class CreateTeam extends Component {
                             <Input
                               placeholder="Enter team name"
                               id="nameEn"
+                              aria-label="Enter team name"
                               type="text"
                               value={this.state.nameEn || ''}
                               onChange={(e) => {
@@ -141,6 +142,7 @@ export class CreateTeam extends Component {
                             <Input
                               placeholder={'Entrez titre d\'\u00E9quipe'}
                               id="nameFr"
+                              aria-label="Entrez titre d\'\u00E9quipe"
                               type="text"
                               value={this.state.nameFr || ''}
                               onChange={(e) => {
