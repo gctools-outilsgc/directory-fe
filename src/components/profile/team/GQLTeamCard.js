@@ -8,12 +8,20 @@ import { Query } from 'react-apollo';
 
 import {
   Row,
-  Col
+  Col,
+  Button,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter
 } from 'reactstrap';
 
 import Loading from './Loading';
 
 import { GET_TEAM } from '../../../gql/profile';
+import SupervisorPicker from '../../core/SupervisorPicker';
+import TeamPicker from '../../core/TeamPicker';
+import TransferConfirmation from './TransferConfirmation';
 
 const mapStateToProps = ({ user }) => {
   const props = {};
@@ -36,8 +44,15 @@ export class GQLTeamCard extends React.Component {
     super(props);
     this.state = {
       modal: false,
+      confirmModal: false,
+      chosenSupervisor: '',
+      editSup: false,
+      editTeam: false,
     };
     this.toggle = this.toggle.bind(this);
+    this.toggleSup = this.toggleSup.bind(this);
+    this.toggleTeam = this.toggleTeam.bind(this);
+    this.toggleConfirm = this.toggleConfirm.bind(this);
   }
 
   toggle() {
@@ -46,11 +61,36 @@ export class GQLTeamCard extends React.Component {
     });
   }
 
+  toggleSup() {
+    this.setState(prevState => ({
+      editSup: !prevState.editSup,
+    }));
+  }
+
+  toggleTeam() {
+    this.setState(prevState => ({
+      editTeam: !prevState.editTeam,
+    }));
+  }
+
+  toggleConfirm() {
+    this.setState({
+      modal: !this.state.modal,
+      confirmModal: !this.state.confirmModal,
+    });
+  }
+
   render() {
     const {
       id,
+      accessToken,
+      myGcID,
     } = this.props;
-
+    const {
+      chosenSupervisor,
+      editSup,
+    } = this.state;
+    const canEdit = (accessToken !== '') && (id === myGcID);
     return (
       <Query
         query={GET_TEAM}
@@ -76,8 +116,107 @@ export class GQLTeamCard extends React.Component {
                           {supTest ? supTest.name : 'None'}
                         </div>
                         <small className="text-muted">
-                          {supTest ? supTest.titleEn : ''}
+                          {supTest ? supTest.titleEn : 'None'}
                         </small>
+                        {canEdit ?
+                          <div>
+                            <Button
+                              color="light"
+                              size="sm"
+                              onClick={this.toggle}
+                            >
+                              Change supervisor
+                            </Button>
+                            <Modal
+                              isOpen={this.state.modal}
+                              toggle={this.toggle}
+                              size="lg"
+                            >
+                              <ModalHeader
+                                toggle={this.toggle}
+                                className="border-bottom"
+                              >
+                                Edit Team
+                              </ModalHeader>
+                              <ModalBody>
+                                <Row
+                                  className="justify-content-md-center"
+                                >
+                                  <div className="text-center">
+                                    <div>
+                                      Avatar
+                                    </div>
+                                    <div>
+                                      <span className="font-weight-bold">
+                                        {userInfo.name}
+                                      </span>
+                                    </div>
+                                    <div>
+                                      {userInfo.titleEn}
+                                    </div>
+                                  </div>
+                                </Row>
+                                <Row className="mt-3">
+                                  <Col>
+                                    {editSup ?
+                                      <SupervisorPicker
+                                        onResultSelect={(s) => {
+                                          this.setState({
+                                            chosenSupervisor: s,
+                                          });
+                                          this.toggleSup(editSup);
+                                        }}
+                                      /> :
+                                      <div className="d-flex">
+                                        <div className="mr-auto">
+                                          <span className="mr-2">
+                                            AVA
+                                          </span>
+                                          {supTest ? supTest.name : 'None'}
+                                          {supTest ? supTest.titleEn : 'No'}
+                                        </div>
+                                        <div>
+                                          <Button
+                                            onClick={this.toggleSup}
+                                          >
+                                            S
+                                          </Button>
+                                        </div>
+                                      </div>
+                                    }
+                                    {chosenSupervisor.name}
+                                    {chosenSupervisor.gcID}
+                                  </Col>
+                                  <Col>
+                                    <TeamPicker
+                                      supervisor={chosenSupervisor.gcID}
+                                    />
+                                  </Col>
+                                </Row>
+                              </ModalBody>
+                              <ModalFooter>
+                                <Button
+                                  color="primary"
+                                  onClick={() => {
+                                    this.toggle();
+                                    this.toggleConfirm();
+                                  }}
+                                >
+                                  Next
+                                </Button>
+                                <Button>
+                                  Cancel
+                                </Button>
+                              </ModalFooter>
+                            </Modal>
+                            <TransferConfirmation
+                              isOpen={this.state.confirmModal}
+                              oldSupervisor={supTest}
+                              transferredUser={userInfo}
+                              newSupervisor={chosenSupervisor}
+                            />
+                          </div>
+                          : ''}
                       </Col>
                       <Col>
                         <div className="font-weight-bold">
@@ -101,10 +240,14 @@ export class GQLTeamCard extends React.Component {
 
 GQLTeamCard.defaultProps = {
   id: undefined,
+  accessToken: undefined,
+  myGcID: undefined,
 };
 
 GQLTeamCard.propTypes = {
   id: PropTypes.string,
+  accessToken: PropTypes.string,
+  myGcID: PropTypes.string,
 };
 
 export default connect(mapStateToProps)(LocalizedComponent(GQLTeamCard));

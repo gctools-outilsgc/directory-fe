@@ -57,14 +57,13 @@ export class EditProfile extends Component {
       profile,
     } = this.props;
     return (
-      <div className="profile-card-footer">
+      <div className="">
         <Button
-          className="float-right"
-          size="sm"
-          color="primary"
           onClick={this.toggle}
+          color="light"
         >
-          Edit Profile
+          Icon
+          <span className="sr-only">Edit Profile</span>
         </Button>
         <Modal
           isOpen={this.state.modal}

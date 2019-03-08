@@ -1,7 +1,7 @@
 import gql from 'graphql-tag';
 
 export const GET = gql`
-query getProfile($gcID: String!) {
+query getProfile($gcID: ID!) {
   profiles(gcID: $gcID) {
     gcID
     name
@@ -23,9 +23,13 @@ query getProfile($gcID: String!) {
 }`;
 
 export const GET_TEAM = gql`
-query getTeam($gcID: String!) {
+query getTeam($gcID: ID!) {
   profiles(gcID: $gcID) {
     gcID
+    name
+    avatar
+    titleEn
+    titleFr
     supervisor {
       gcID
       name
@@ -44,8 +48,52 @@ query getTeam($gcID: String!) {
   }
 }`;
 
+const profileDataForOrgChart = gql`
+  fragment profileDataForOrgChart on Profile {
+    gcID
+    name
+    avatar
+    titleEn
+    titleFr
+  }
+`;
+
+const teamDataForOrgChart = gql`
+  fragment teamDataForOrgChart on Team {
+    id
+    nameEn
+    nameFr
+  }
+`;
+
+export const ORGCHART = gql`
+query orgChart($gcID: ID!) {
+  profiles(gcID: $gcID) {
+    ...profileDataForOrgChart
+    ownerOfTeams {
+      ...teamDataForOrgChart
+      members {
+        ...profileDataForOrgChart
+      }
+    }
+    team {
+      ...teamDataForOrgChart
+      owner {
+        ...profileDataForOrgChart
+      }
+      members {
+        ...profileDataForOrgChart
+      }
+    }
+  }
+}
+${profileDataForOrgChart}
+${teamDataForOrgChart}
+`;
+
+
 export const EDIT = gql`
-mutation editProfile($gcID: String!, $data: ModifyProfileInput!) {
+mutation editProfile($gcID: ID!, $data: ModifyProfileInput!) {
   modifyProfile(gcID: $gcID, data: $data) {
     gcID
     name
@@ -63,6 +111,24 @@ mutation editProfile($gcID: String!, $data: ModifyProfileInput!) {
     }
     titleEn
     titleFr
+    supervisor {
+      gcID
+    }
+  }
+}
+`;
+
+export const EDIT_TEAM = gql`
+mutation editTeam($gcID: ID!, $data: ModifyProfileInput!)
+{
+  modifyProfile(gcID: $gcID, data: $data){
+    gcID
+    supervisor {
+      gcID
+    }
+    team {
+      id
+    }
   }
 }
 `;

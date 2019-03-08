@@ -17,6 +17,7 @@ import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
 import Loading from './Loading';
 import { GET_TEAM } from '../../../gql/profile';
+import LocalizedGQLTeamOrgChart from './GQLTeamOrgChart';
 import LocalizedGQLTeamCard from './GQLTeamCard';
 import LocalizedCreateTeam from './CreateTeam';
 
@@ -71,7 +72,8 @@ class TeamCardHolder extends React.Component {
           if (loading) return <Loading />;
           if (error) return `Error!: ${error}`;
           const p = (!data) ? '' : data.profiles[0];
-          const orgId = (!p.team.organization) ? '' : p.team.organization.id;
+          const orgId = (!p.team || !p.team.organization)
+            ? '' : p.team.organization.id;
           return (
             <Card style={style.card}>
               <CardBody>
@@ -116,14 +118,20 @@ class TeamCardHolder extends React.Component {
                       <LocalizedGQLTeamCard id={this.props.id} />
                     </TabPane>
                     <TabPane tabId="2">
-                      {canEdit ?
+                      {canEdit && (
                         <LocalizedCreateTeam
                           gcID={this.props.id}
                           orgId={orgId}
-                        /> : ''}
+                        />
+                      )}
                     </TabPane>
                     <TabPane tabId="3">
-                        Put the Org Chart Here!
+                      {p && p.team && (
+                        <LocalizedGQLTeamOrgChart
+                          visible={this.state.activeTab === '3'}
+                          id={this.props.id}
+                        />
+                      )}
                     </TabPane>
                   </TabContent>
                 </div>

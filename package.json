@@ -3,25 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@babel/core": "7.2.2",
+    "@babel/core": "7.3.3",
     "@gctools-components/eslint-config": "1.1.3",
     "@gctools-components/gc-login": "1.1.3",
     "@gctools-components/i18n-translation-webpack-plugin": "2.0.1",
     "@gctools-components/react-i18n-translation-webpack": "1.1.4",
-    "@storybook/addon-actions": "4.1.11",
-    "@storybook/addon-links": "4.1.11",
-    "@storybook/addon-storyshots": "4.1.11",
-    "@storybook/addons": "4.1.11",
-    "@storybook/react": "4.1.11",
+    "@storybook/addon-actions": "4.1.13",
+    "@storybook/addon-info": "4.1.13",
+    "@storybook/addon-links": "4.1.13",
+    "@storybook/addon-storyshots": "4.1.13",
+    "@storybook/addons": "4.1.13",
+    "@storybook/react": "4.1.13",
     "@svgr/webpack": "4.1.0",
     "apollo-boost": "0.1.28",
-    "apollo-cache-inmemory": "^1.4.3",
+    "apollo-cache-inmemory": "1.4.3",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.0.1",
     "babel-jest": "24.1.0",
     "babel-loader": "8.0.5",
     "babel-plugin-named-asset-import": "0.3.1",
-    "babel-preset-react-app": "7.0.1",
     "bfj": "6.1.1",
     "case-sensitive-paths-webpack-plugin": "2.2.0",
     "chalk": "2.4.2",
@@ -29,10 +29,10 @@
     "css-loader": "2.1.0",
     "dotenv": "6.2.0",
     "dotenv-expand": "4.2.0",
-    "eslint": "5.13.0",
+    "eslint": "5.14.1",
     "eslint-config-react-app": "3.0.7",
     "eslint-loader": "2.1.2",
-    "eslint-plugin-flowtype": "3.4.1",
+    "eslint-plugin-flowtype": "3.4.2",
     "eslint-plugin-import": "2.16.0",
     "eslint-plugin-jsx-a11y": "6.2.1",
     "eslint-plugin-react": "7.12.4",
@@ -48,31 +48,33 @@
     "jest-resolve": "24.1.0",
     "mini-css-extract-plugin": "0.5.0",
     "optimize-css-assets-webpack-plugin": "5.0.1",
+    "parse-svg-path": "^0.1.2",
     "pnp-webpack-plugin": "1.2.1",
     "postcss-flexbugs-fixes": "4.1.0",
     "postcss-loader": "3.0.0",
     "postcss-preset-env": "6.5.0",
     "postcss-safe-parser": "4.0.1",
     "prop-types": "15.7.2",
-    "react": "16.8.1",
+    "react": "16.8.3",
     "react-apollo": "2.4.1",
     "react-app-polyfill": "0.2.1",
     "react-dev-utils": "7.0.3",
-    "react-dom": "16.8.1",
-    "react-redux": "6.0.0",
+    "react-dom": "16.8.3",
+    "react-redux": "6.0.1",
     "react-router-dom": "4.3.1",
     "react-router-prop-types": "1.0.4",
     "react-step-wizard": "5.0.0",
-    "react-testing-library": "5.8.0",
+    "react-testing-library": "5.9.0",
     "reactstrap": "7.1.0",
     "redux": "4.0.1",
     "resolve": "1.10.0",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.1",
+    "styled-components": "4.1.3",
     "terser-webpack-plugin": "1.2.2",
     "url-loader": "1.1.2",
-    "webpack": "4.29.3",
-    "webpack-dev-server": "3.1.14",
+    "webpack": "4.29.5",
+    "webpack-dev-server": "3.2.0",
     "webpack-manifest-plugin": "2.0.4",
     "workbox-webpack-plugin": "3.6.3"
   },
@@ -89,6 +91,16 @@
     "extends": "@gctools-components",
     "root": true,
     "rules": {
+      "comma-dangle": [
+        "error",
+        {
+          "arrays": "always-multiline",
+          "objects": "always-multiline",
+          "imports": "never",
+          "exports": "always-multiline",
+          "functions": "never"
+        }
+      ],
       "jsx-a11y/label-has-for": 0,
       "jsx-a11y/label-has-associated-control": [
         2,
@@ -110,7 +122,7 @@
     "collectCoverage": true,
     "coverageDirectory": "coverage",
     "coverageReporters": [
-      "text",
+      "text-summary",
       "json",
       "json-summary",
       "lcov"
@@ -122,6 +134,7 @@
     "resolver": "jest-pnp-resolver",
     "setupFiles": [
       "react-app-polyfill/jsdom",
+      "babel-polyfill",
       "<rootDir>/config/jest/i18n.js",
       "<rootDir>/config/jest/register-context.js"
     ],
@@ -160,16 +173,19 @@
   },
   "babel": {
     "presets": [
-      "react-app"
+      "@babel/env",
+      "@babel/react"
     ],
     "env": {
       "test": {
-        "plugins": ["require-context-hook"]
+        "plugins": [
+          "require-context-hook"
+        ]
       }
     }
   },
   "devDependencies": {
-    "babel-plugin-require-context-hook": "^1.0.0",
-    "react-test-renderer": "^16.8.2"
+    "babel-plugin-require-context-hook": "1.0.0",
+    "react-test-renderer": "16.8.3"
   }
 }

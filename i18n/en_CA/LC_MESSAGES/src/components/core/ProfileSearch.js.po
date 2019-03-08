@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-02-18 09:52-0500\n"
-"PO-Revision-Date: 2019-02-15 15:42-0500\n"
+"POT-Creation-Date: 2019-02-25 15:14-0500\n"
+"PO-Revision-Date: 2019-02-21 14:05-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en_CA\n"
 "Language-Team: en_CA <LL@li.org>\n"
@@ -14,11 +14,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: 66:43 src/components/core/ProfileSearch.js
+#: 62:43 src/components/core/ProfileSearch.js
 msgid "Search"
 msgstr ""
 
-#: 70:31 src/components/core/ProfileSearch.js
+#: 67:31 src/components/core/ProfileSearch.js
 msgid "Search Profiles"
 msgstr ""
 

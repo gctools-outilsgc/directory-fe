@@ -6,27 +6,15 @@ msgstr ""
 "Content-Type : text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding : 8bit\n"
 
-#: src/components/profile/team/GQLTeamCard.js 130:27
+#: src/components/profile/team/GQLTeamCard.js 73:27
 msgid "Supervisor"
 msgstr ""
 
-#: src/components/profile/team/GQLTeamCard.js 141:27
+#: src/components/profile/team/GQLTeamCard.js 84:27
 msgid "Team"
 msgstr ""
 
-#: src/components/profile/team/GQLTeamCard.js 156:27
-msgid "Edit"
-msgstr ""
-
-#: src/components/profile/team/GQLTeamCard.js 160:29
-msgid "Edit Team"
-msgstr ""
-
-#: src/components/profile/team/GQLTeamCard.js 231:31
-msgid "Cancel"
-msgstr ""
-
-#: src/components/profile/team/GQLTeamCard.js 242:22
+#: src/components/profile/team/GQLTeamCard.js 92:22
 msgid "Cannot find GCID"
 msgstr ""
 
