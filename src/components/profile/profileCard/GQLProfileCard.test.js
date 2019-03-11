@@ -23,6 +23,21 @@ const mock = [
           avatar: '',
           mobilePhone: '',
           officePhone: '',
+          team: {
+            id: '',
+            organization: {
+              id: '',
+              nameEn: '',
+              nameFr:'',
+            },
+            owner: {
+              gcID: '',
+              name: '',
+              avatar: '',
+              titleEn: '',
+              titleFr: '',
+            },
+          },
           address: {
             id: '',
             streetAddress: '',

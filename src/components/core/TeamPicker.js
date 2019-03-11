@@ -17,10 +17,12 @@ class TeamPicker extends React.Component {
   }
 
   handleTeamChange(e) {
-    const team = e.target.value;
-    this.props.onTeamChange(team);
+    const teamObj = [];
+    teamObj.id = e.target.value;
+    teamObj.name = e.target.innerText;
+    this.props.onTeamChange(teamObj);
     this.setState({
-      newTeamVal: team,
+      newTeamVal: teamObj.id,
     });
   }
 
