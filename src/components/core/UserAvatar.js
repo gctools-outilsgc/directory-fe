@@ -7,6 +7,8 @@ import { Button } from 'reactstrap';
 import styled from 'styled-components';
 
 import { EDIT } from '../../gql/profile';
+import GenericAvatar from '../profile/OrgChart/Card/img/user.gif';
+
 
 const UploadContainer = styled.div`
   text-align: center;
@@ -18,33 +20,23 @@ export const UserAvatar = (props) => {
     myGcID,
     edit,
     name,
-    avatar,
+    avatar: profileAvatar,
     gcID,
   } = props;
   const canEdit = edit && (gcID === myGcID);
+  const avatar = profileAvatar || GenericAvatar;
 
-  const avatarComp = (canEdit) ? (
+  return (
     <div>
       <div className="query">
-        {(() => {
-          if (avatar) {
-            return (
-              <div>
-                <img
-                  className="avatar avatar-lg rounded-circle"
-                  src={avatar}
-                  alt={name}
-                />
-              </div>
-            );
-          }
-          return (
-            <div>
-              No AVATAR
-            </div>
-          );
-          })()}
-
+        <div>
+          <img
+            className="avatar avatar-lg rounded-circle"
+            src={avatar}
+            alt={name}
+          />
+        </div>
+        {canEdit && (
         <UploadContainer className="mutate">
           <Mutation
             mutation={EDIT}
@@ -74,31 +66,8 @@ export const UserAvatar = (props) => {
             )}
           </Mutation>
         </UploadContainer>
+        )}
       </div>
-    </div>
-  ) : (
-    <div>{(() => {
-      if (avatar) {
-        return (
-          <div>
-            <img
-              src={avatar}
-              alt={name}
-            />
-          </div>
-        );
-      }
-      return (
-        <div>
-          No AVATAR
-        </div>
-      );
-      })()}
-    </div>
-  );
-  return (
-    <div>
-      {avatarComp}
     </div>
   );
 };
