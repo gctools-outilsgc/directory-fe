@@ -1752,7 +1752,7 @@ anymatch@^2.0.0:
     micromatch "^3.1.4"
     normalize-path "^2.1.1"
 
-apollo-cache-inmemory@^1.4.3:
+apollo-cache-inmemory@1.4.3:
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/apollo-cache-inmemory/-/apollo-cache-inmemory-1.4.3.tgz#aded4fb8b3de9e2fb2573a6c03591b07ef98ed36"
   dependencies:
@@ -1768,10 +1768,9 @@ apollo-cache@1.1.26, apollo-cache@^1.1.26:
     apollo-utilities "^1.1.3"
     tslib "^1.9.3"
 
-apollo-client@^2.4.13:
+apollo-client@2.4.13:
   version "2.4.13"
   resolved "https://registry.yarnpkg.com/apollo-client/-/apollo-client-2.4.13.tgz#09829fcbd68e069de9840d0a10764d7c6a3d0787"
-  integrity sha512-7mBdW/CW1qHB8Mj4EFAG3MTtbRc6S8aUUntUdrKfRWV1rZdWa0NovxsgVD/R4HZWZjRQ2UOM4ENsHdM5g1uXOQ==
   dependencies:
     "@types/zen-observable" "^0.8.0"
     apollo-cache "1.1.26"
@@ -1800,10 +1799,9 @@ apollo-link@^1.0.0, apollo-link@^1.2.6, apollo-link@^1.2.8:
   dependencies:
     zen-observable-ts "^0.8.15"
 
-apollo-upload-client@^10.0.0:
+apollo-upload-client@10.0.0:
   version "10.0.0"
   resolved "https://registry.yarnpkg.com/apollo-upload-client/-/apollo-upload-client-10.0.0.tgz#6cc3d0ea2aef40bc237b655f5042809cacee1859"
-  integrity sha512-N0SENiEkZXoY4nl9xxrXFcj/cL0AVkSNQ4aYXSaruCBWE0aKpK6aCe4DBmiEHrK3FAsMxZPEJxBRIWNbsXT8dw==
   dependencies:
     apollo-link "^1.2.6"
     apollo-link-http-common "^0.2.8"
@@ -4455,7 +4453,6 @@ extglob@^2.0.4:
 extract-files@^5.0.0:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/extract-files/-/extract-files-5.0.1.tgz#c9492a8410be643e260a376f0151361993d5f659"
-  integrity sha512-qRW6y9eKF0VbCyOoOEtFhzJ3uykAw8GKwQVXyAIqwocyEWW4m+v+evec34RwtUkkxxHh7NKBLJ6AnXM8W4dH5w==
 
 extsprintf@1.3.0:
   version "1.3.0"
@@ -9088,13 +9085,6 @@ recursive-readdir@2.2.2:
   resolved "https://registry.yarnpkg.com/recursive-readdir/-/recursive-readdir-2.2.2.tgz#9946fb3274e1628de6e36b2f6714953b4845094f"
   dependencies:
     minimatch "3.0.4"
-
-redux-mock-store@^1.5.3:
-  version "1.5.3"
-  resolved "https://registry.yarnpkg.com/redux-mock-store/-/redux-mock-store-1.5.3.tgz#1f10528949b7ce8056c2532624f7cafa98576c6d"
-  integrity sha512-ryhkkb/4D4CUGpAV2ln1GOY/uh51aczjcRz9k2L2bPx/Xja3c5pSGJJPyR25GNVRXtKIExScdAgFdiXp68GmJA==
-  dependencies:
-    lodash.isplainobject "^4.0.6"
 
 redux@4.0.1, redux@^4.0.1:
   version "4.0.1"

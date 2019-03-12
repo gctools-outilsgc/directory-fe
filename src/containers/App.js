@@ -44,8 +44,6 @@ export class App extends Component {
     } = this.props;
 
     const doLogin = (user) => {
-      // eslint-disable-next-line no-param-reassign
-      user.profile.sub = '22589';
       this.setState({ name: user.profile.name });
       onLogin(user);
     };
