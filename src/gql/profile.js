@@ -84,7 +84,7 @@ const teamDataForOrgChart = gql`
 `;
 
 export const ORGCHART = gql`
-query orgChart($gcID: String!) {
+query orgChart($gcID: ID!) {
   profiles(gcID: $gcID) {
     ...profileDataForOrgChart
     ownerOfTeams {
