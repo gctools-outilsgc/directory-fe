@@ -4,7 +4,14 @@ import PropTypes from 'prop-types';
 import { Mutation } from 'react-apollo';
 import { Button } from 'reactstrap';
 
+import styled from 'styled-components';
+
 import { EDIT } from '../../gql/profile';
+
+const UploadContainer = styled.div`
+  text-align: center;
+  margin-top: 10px;
+`;
 
 export const UserAvatar = (props) => {
   const {
@@ -24,6 +31,7 @@ export const UserAvatar = (props) => {
             return (
               <div>
                 <img
+                  className="avatar avatar-lg rounded-circle"
                   src={avatar}
                   alt={name}
                 />
@@ -37,7 +45,7 @@ export const UserAvatar = (props) => {
           );
           })()}
 
-        <div className="mutate">
+        <UploadContainer className="mutate">
           <Mutation
             mutation={EDIT}
           >
@@ -65,7 +73,7 @@ export const UserAvatar = (props) => {
               </Button>
             )}
           </Mutation>
-        </div>
+        </UploadContainer>
       </div>
     </div>
   ) : (
