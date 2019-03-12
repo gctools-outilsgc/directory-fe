@@ -8,7 +8,9 @@ import { calculateTree, getNode, copyNode }
 import OrgChart from './OrgChart';
 
 import root from '../fixtures/sample.json';
-import { assumeLanguage } from '../fixtures/utils';
+import { assumeLanguage, linkAvatars } from '../fixtures/utils';
+
+linkAvatars(root);
 
 const root2 = copyNode(root);
 
@@ -30,7 +32,7 @@ storiesOf('OrgChart', module)
           handleItemClick={action('centre-org-chart-click')}
         />
       </div>
-    ),
+    )
   )
   .add(
     'with selectedCard',
@@ -55,7 +57,7 @@ storiesOf('OrgChart', module)
           />
         </div>
       );
-    },
+    }
   )
   .add(
     'with onMoveToActiveClick',
@@ -81,7 +83,7 @@ storiesOf('OrgChart', module)
           />
         </div>
       );
-    },
+    }
   )
   .add(
     'using minichart',
@@ -118,5 +120,5 @@ storiesOf('OrgChart', module)
           />
         </div>
       );
-    },
+    }
   );

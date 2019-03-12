@@ -56,7 +56,7 @@ describe('OrgChart component', () => {
         miniCards={miniCards}
         miniLines={miniLines}
       />,
-      rendererOptions,
+      rendererOptions
     ).getInstance();
 
     instance.state.scrollWidth = 4040;
@@ -88,9 +88,9 @@ describe('OrgChart component', () => {
         createNodeMock: () => Object.assign(
           {},
           rendererOptions.createNodeMock(),
-          { scrollTo: scrollCapture },
+          { scrollTo: scrollCapture }
         ),
-      },
+      }
     );
     const instance = TestRenderer.create(
       <OrgChart
@@ -99,7 +99,7 @@ describe('OrgChart component', () => {
         miniCards={miniCards}
         miniLines={miniLines}
       />,
-      options,
+      options
     ).getInstance();
 
     instance.state.scrollWidth = 4040;
@@ -147,11 +147,11 @@ describe('OrgChart component', () => {
   test('has a working minichart boolean prop', () => {
     const r1 = TestRenderer.create(
       <OrgChart cards={boxes} lines={lines} minichart={false} />,
-      rendererOptions,
+      rendererOptions
     );
     const r2 = TestRenderer.create(
       <OrgChart cards={boxes} lines={lines} minichart />,
-      rendererOptions,
+      rendererOptions
     );
     const wrap1 = r1.root.children[0];
     const wrap2 = r2.root.children[0];
@@ -160,7 +160,7 @@ describe('OrgChart component', () => {
   test('can calculate overlay coordinates', () => {
     const instance = TestRenderer.create(
       <OrgChart cards={boxes} lines={lines} />,
-      rendererOptions,
+      rendererOptions
     ).getInstance();
     expect(instance.getMiniChartOffsetCoordinates()).toEqual({
       x1: 0,
@@ -194,7 +194,7 @@ describe('OrgChart component', () => {
   test('is able to track and syncronize scrolling', () => {
     const instance = TestRenderer.create(
       <OrgChart cards={boxes} lines={lines} />,
-      rendererOptions,
+      rendererOptions
     ).getInstance();
 
     instance.state.scrollWidth = 100;
@@ -228,7 +228,7 @@ describe('OrgChart component', () => {
       <OrgChart
         moveToActiveText={activeText}
       />,
-      rendererOptions,
+      rendererOptions
     );
     const menu = renderer.root.children[0].children[1];
     const button = menu.children[0].children[0].children[0];
@@ -239,7 +239,7 @@ describe('OrgChart component', () => {
       <OrgChart
         {...OrgChart.defaultProps}
       />,
-      rendererOptions,
+      rendererOptions
     );
     const menu = renderer.root.children[0].children[1];
     const button = menu.children[0].children[0].children[0];
@@ -258,7 +258,7 @@ describe('OrgChart component', () => {
       <OrgChart
         menuComponent={menuComponent}
       />,
-      rendererOptions,
+      rendererOptions
     );
     const menu = renderer.root.children[0].children[1];
     expect(menu.type).toEqual(menuComponent);
@@ -275,7 +275,7 @@ describe('OrgChart component', () => {
       <OrgChart
         moveToActiveComponent={activeComponent}
       />,
-      rendererOptions,
+      rendererOptions
     );
     const menu = renderer.root.children[0].children[1];
     const button = menu.children[0].children[0].children[0];
@@ -291,7 +291,7 @@ describe('OrgChart component', () => {
       <OrgChart
         searchComponent={searchComponent}
       />,
-      rendererOptions,
+      rendererOptions
     );
     const menu = renderer.root.children[0].children[1];
     const search = menu.children[0].children[1];
@@ -301,7 +301,7 @@ describe('OrgChart component', () => {
     test('includes the minichart in its output', () => {
       const renderer = TestRenderer.create(
         <OrgChart cards={boxes} lines={lines} minichart />,
-        rendererOptions,
+        rendererOptions
       );
       const container = renderer.root.children[0].children[0];
       expect(container.props.className)

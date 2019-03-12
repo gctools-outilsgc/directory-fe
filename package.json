@@ -92,6 +92,16 @@
     "extends": "@gctools-components",
     "root": true,
     "rules": {
+      "comma-dangle": [
+        "error",
+        {
+          "arrays": "always-multiline",
+          "objects": "always-multiline",
+          "imports": "never",
+          "exports": "always-multiline",
+          "functions": "never"
+        }
+      ],
       "jsx-a11y/label-has-for": 0,
       "jsx-a11y/label-has-associated-control": [
         2,

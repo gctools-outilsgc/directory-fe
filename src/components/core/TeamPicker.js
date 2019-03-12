@@ -17,10 +17,12 @@ class TeamPicker extends React.Component {
   }
 
   handleTeamChange(e) {
-    const team = e.target.value;
-    this.props.onTeamChange(team);
+    const teamObj = [];
+    teamObj.id = e.target.value;
+    teamObj.name = e.target.innerText;
+    this.props.onTeamChange(teamObj);
     this.setState({
-      newTeamVal: team,
+      newTeamVal: teamObj.id,
     });
   }
 
@@ -33,18 +35,13 @@ class TeamPicker extends React.Component {
         {supervisor ? (
           <Query
             variables={{
-          gcID: (supervisor) ? supervisor.gcID : null,
+          gcID: (supervisor) ? String(supervisor.gcID) : null,
         }}
             skip={!supervisor}
             query={gql`
-          query organizationQuery($gcID: String!) {
+          query organizationQuery($gcID: ID!) {
             profiles(gcID: $gcID) {
-              org {
-                id
-                nameEn
-                nameFr
-              }
-              OwnerOfOrgTier {
+              ownerOfTeams {
                 id
                 nameEn
                 nameFr
@@ -64,14 +61,14 @@ class TeamPicker extends React.Component {
         }) => {
           if (error) return `Error...${error.message}`;
 
-          let OwnerOfOrgTier =
+          let ownerOfTeams =
             (data.profiles && data.profiles.length === 1) ?
-              data.profiles[0].OwnerOfOrgTier.slice(0) : [];
+              data.profiles[0].ownerOfTeams.slice(0) : [];
 
           if (data.profiles && data.profiles.length === 1
             && data.profiles[0].org) {
-              OwnerOfOrgTier = []
-                .concat([data.profiles[0].org], OwnerOfOrgTier);
+              ownerOfTeams = []
+                .concat([data.profiles[0].org], ownerOfTeams);
           }
 
           const tierOptions = [];
@@ -81,7 +78,7 @@ class TeamPicker extends React.Component {
             value: null,
             data: null,
           });
-          OwnerOfOrgTier
+          ownerOfTeams
             .forEach(tier =>
               tierOptions.push({
                 key: `orgtier-${tier.id}`,

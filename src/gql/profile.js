@@ -1,7 +1,7 @@
 import gql from 'graphql-tag';
 
 export const GET = gql`
-query getProfile($gcID: String!) {
+query getProfile($gcID: ID!) {
   profiles(gcID: $gcID) {
     gcID
     name
@@ -9,6 +9,21 @@ query getProfile($gcID: String!) {
     avatar
     mobilePhone
     officePhone
+    team {
+      id
+      organization {
+        id
+        nameEn
+        nameFr
+      }
+      owner {
+        gcID
+        name
+        avatar
+        titleEn
+        titleFr
+      }
+    }
     address {
       id
       streetAddress
@@ -23,24 +38,79 @@ query getProfile($gcID: String!) {
 }`;
 
 export const GET_TEAM = gql`
-query getTeam($gcID: String!) {
+query getTeam($gcID: ID!) {
   profiles(gcID: $gcID) {
     gcID
-    supervisor {
-      gcID
-      name
-      titleEn
-      titleFr
-    }
+    name
+    avatar
+    titleEn
+    titleFr
     team {
+      id
       nameEn
       nameFr
+      owner {
+        gcID
+        name
+        avatar
+        titleEn
+        titleFr
+      }
+      members {
+        name
+        titleEn
+        avatar
+      }
     }
   }
 }`;
 
+const profileDataForOrgChart = gql`
+  fragment profileDataForOrgChart on Profile {
+    gcID
+    name
+    avatar
+    titleEn
+    titleFr
+  }
+`;
+
+const teamDataForOrgChart = gql`
+  fragment teamDataForOrgChart on Team {
+    id
+    nameEn
+    nameFr
+  }
+`;
+
+export const ORGCHART = gql`
+query orgChart($gcID: String!) {
+  profiles(gcID: $gcID) {
+    ...profileDataForOrgChart
+    ownerOfTeams {
+      ...teamDataForOrgChart
+      members {
+        ...profileDataForOrgChart
+      }
+    }
+    team {
+      ...teamDataForOrgChart
+      owner {
+        ...profileDataForOrgChart
+      }
+      members {
+        ...profileDataForOrgChart
+      }
+    }
+  }
+}
+${profileDataForOrgChart}
+${teamDataForOrgChart}
+`;
+
+
 export const EDIT = gql`
-mutation editProfile($gcID: String!, $data: ModifyProfileInput!) {
+mutation editProfile($gcID: ID!, $data: ModifyProfileInput!) {
   modifyProfile(gcID: $gcID, data: $data) {
     gcID
     name
@@ -48,6 +118,9 @@ mutation editProfile($gcID: String!, $data: ModifyProfileInput!) {
     avatar
     mobilePhone
     officePhone
+    team {
+      id
+    }
     address {
       id
       streetAddress
@@ -58,6 +131,21 @@ mutation editProfile($gcID: String!, $data: ModifyProfileInput!) {
     }
     titleEn
     titleFr
+    supervisor {
+      gcID
+    }
+  }
+}
+`;
+
+export const EDIT_TEAM = gql`
+mutation editTeam($gcID: ID!, $data: ModifyProfileInput!)
+{
+  modifyProfile(gcID: $gcID, data: $data){
+    gcID
+    team {
+      id
+    }
   }
 }
 `;
@@ -109,6 +197,9 @@ export const prepareEditProfile = (data) => {
           province: valueOrUndefined(province),
           postalCode: valueOrUndefined(postalCode),
           country: valueOrUndefined(country),
+        }),
+        team: valueOrUndefined({
+          id: valueOrUndefined(data.teamId),
         }),
       },
     },

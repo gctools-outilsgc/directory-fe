@@ -24,7 +24,7 @@ describe('CardContainer component', () => {
           }
           return {};
         },
-      },
+      }
     );
     trigger();
     expect(onScroll).toBeCalled();

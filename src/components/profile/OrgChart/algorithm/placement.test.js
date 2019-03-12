@@ -142,7 +142,7 @@ describe('calculateTree', () => {
             { x: seg1.x1, y: seg1.y1 },
             { x: seg1.x2, y: seg1.y2 },
             { x: s2.x1, y: s2.y1 },
-            { x: s2.x2, y: s2.y2 },
+            { x: s2.x2, y: s2.y2 }
           ) && seg1.parent !== s2.parent)
           .length).toBe(0);
       });

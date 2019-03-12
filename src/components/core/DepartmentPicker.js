@@ -6,29 +6,31 @@ import { Query } from 'react-apollo';
 
 import { Input, Button } from 'reactstrap';
 
-class SupervisorPicker extends React.Component {
+class DepartmentPicker extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: '',
+      value: props.currentDepart.nameEn || '',
       skip: true,
+      wasChanged: false,
     };
-
-    this.handleChange = this.handleChange.bind(this);
     this.handleResultClick = this.handleResultClick.bind(this);
+    this.handleChange = this.handleChange.bind(this);
     this.searchDelay = false;
   }
 
   handleResultClick(e) {
     this.setState({
       skip: true,
+      value: e.nameEn,
+      wasChanged: true,
     });
-    setTimeout(() => this.props.onResultSelect(e), 0);
+    setTimeout(() => this.props.onResultSelect(e, this.state.wasChanged), 0);
   }
 
-  handleChange(event) {
+  handleChange(e) {
     this.setState({
-      value: event.target.value,
+      value: e.target.value,
       skip: true,
     });
     this.searchDelay = setTimeout(() => {
@@ -44,44 +46,49 @@ class SupervisorPicker extends React.Component {
     return (
       <Query
         query={gql`
-          query profileSearchQuery($name: String!) {
-            profiles(name: $name) {
-              gcID
-              name
-              titleEn
-              titleFr
-              avatar
+          query organizationSearch($nameEn: String!) {
+            organizations(nameEn: $nameEn) {
+              id
+              nameEn
+              teams {
+                id
+                nameEn
+              }
             }
           }`}
         skip={this.state.skip}
-        variables={{ name: this.state.value }}
+        variables={{ nameEn: this.state.value }}
       >
         {({ data }) => {
           const checkResult = (!data) ? [''] : data;
-          const results = (checkResult.profiles) ?
-            checkResult.profiles.map(a => (
-              <li key={a.gcID}>
+          const results = (checkResult.organizations) ?
+            checkResult.organizations.map(r => (
+              <li key={r.id}>
                 <Button
-                  onClick={() => this.handleResultClick(a)}
+                  onClick={() => this.handleResultClick(r)}
                   color="light"
                 >
-                  {a.name}
+                  {r.nameEn}
                 </Button>
               </li>
-              )) : [];
+            )) : [];
           const styleClasses = (!data) ?
             'search-results-none' : 'list-unstyled search-results';
           return (
             <div>
               <label>
-                Search
+                <span className="font-weight-bold">
+                  Department
+                </span>
                 <Input
                   type="text"
                   onChange={this.handleChange}
                   value={this.state.value}
                 />
               </label>
-              <ul className={styleClasses}>{results}</ul>
+              <ul className={styleClasses}>
+                {results}
+              </ul>
             </div>
           );
         }}
@@ -90,8 +97,16 @@ class SupervisorPicker extends React.Component {
   }
 }
 
-SupervisorPicker.propTypes = {
-  onResultSelect: PropTypes.func.isRequired,
+DepartmentPicker.defaultProps = {
+  currentDepart: undefined,
 };
 
-export default SupervisorPicker;
+DepartmentPicker.propTypes = {
+  onResultSelect: PropTypes.func.isRequired,
+  currentDepart: PropTypes.shape({
+    id: PropTypes.string,
+    nameEn: PropTypes.string,
+  }),
+};
+
+export default DepartmentPicker;

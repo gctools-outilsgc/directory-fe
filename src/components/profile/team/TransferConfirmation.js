@@ -233,7 +233,7 @@ const TransferConfirmation = (props) => {
     </div>
   );
 };
-
+/*
 const userProps = PropTypes.shape({
   name: PropTypes.string.isRequired,
   avatar: PropTypes.string,
@@ -242,7 +242,7 @@ const userProps = PropTypes.shape({
     avatar: PropTypes.string,
   }).isRequired,
 });
-
+*/
 TransferConfirmation.defaultProps = {
   isOpen: false,
   title: 'You will transfer to a new Supervisor (& Team)',

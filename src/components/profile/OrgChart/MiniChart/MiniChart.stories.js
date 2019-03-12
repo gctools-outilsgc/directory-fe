@@ -22,7 +22,7 @@ storiesOf('OrgChart/MiniChart', module)
       <div>
         <MiniChart />
       </div>
-    ),
+    )
   )
   .add(
     'Using cards',
@@ -39,7 +39,7 @@ storiesOf('OrgChart/MiniChart', module)
           <MiniChart cards={boxes} />
         </div>
       );
-    },
+    }
   )
   .add(
     'Using cards and lines',
@@ -56,7 +56,7 @@ storiesOf('OrgChart/MiniChart', module)
           <MiniChart cards={boxes} lines={lines} />
         </div>
       );
-    },
+    }
   )
   .add(
     'Using cards, lines and overlay',
@@ -82,5 +82,5 @@ storiesOf('OrgChart/MiniChart', module)
           />
         </div>
       );
-    },
+    }
   );

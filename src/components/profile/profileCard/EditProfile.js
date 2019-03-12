@@ -15,7 +15,9 @@ import {
   Col
 } from 'reactstrap';
 
-import { EDIT, prepareEditProfile } from '../../../gql/profile';
+import { EDIT, prepareEditProfile, EDIT_TEAM } from '../../../gql/profile';
+import DepartmentPicker from '../../core/DepartmentPicker';
+import TransferConfirmation from '../team/TransferConfirmation';
 
 export class EditProfile extends Component {
   constructor(props) {
@@ -28,9 +30,13 @@ export class EditProfile extends Component {
       officePhone,
       mobilePhone,
       address,
+      team,
     } = props.profile;
     this.state = {
       modal: false,
+      depChange: false,
+      confirmModal: false,
+      newTeamId: '',
       name: name || '',
       email: email || '',
       titleEn: titleEn || '',
@@ -42,8 +48,11 @@ export class EditProfile extends Component {
       province: (address) ? address.province || '' : '',
       postalCode: (address) ? address.postalCode || '' : '',
       country: (address) ? address.country || '' : '',
+      organization: (team) ? team.organization || '' : '',
+      supervisor: (team) ? team.owner || '' : '',
     };
     this.toggle = this.toggle.bind(this);
+    this.toggleConfirm = this.toggleConfirm.bind(this);
   }
 
   toggle() {
@@ -52,19 +61,26 @@ export class EditProfile extends Component {
     });
   }
 
+  toggleConfirm() {
+    this.setState({
+      modal: !this.state.modal,
+      confirmModal: !this.state.confirmModal,
+    });
+    console.log('I fired');
+  }
+
   render() {
     const {
       profile,
     } = this.props;
     return (
-      <div className="profile-card-footer">
+      <div className="">
         <Button
-          className="float-right"
-          size="sm"
-          color="primary"
           onClick={this.toggle}
+          color="light"
         >
-          Edit Profile
+          Icon
+          <span className="sr-only">Edit Profile</span>
         </Button>
         <Modal
           isOpen={this.state.modal}
@@ -88,6 +104,9 @@ export class EditProfile extends Component {
                 <Form
                   onSubmit={(e) => {
                     e.preventDefault();
+                    if (this.state.depChange) {
+                      this.toggleConfirm();
+                    }
                     const {
                       name, email, titleEn, titleFr, officePhone, mobilePhone,
                       streetAddress, city, province, postalCode, country,
@@ -146,6 +165,24 @@ export class EditProfile extends Component {
                           }}
                         />
                       </label>
+                    </Col>
+                  </Row>
+                  <hr />
+                  <Row>
+                    <Col>
+                      <DepartmentPicker
+                        currentDepart={this.state.organization}
+                        onResultSelect={(d, change) => {
+                          if (change) {
+                            this.setState({
+                              depChange: true,
+                              newTeamId: d.teams[0].id,
+                            });
+                            console.log('yup');
+                          }
+                        }}
+                      />
+                      {this.state.depChange}
                     </Col>
                   </Row>
                   <hr />
@@ -344,6 +381,44 @@ export class EditProfile extends Component {
             </Mutation>
           </ModalBody>
         </Modal>
+        <Mutation
+          mutation={EDIT_TEAM}
+          onCompleted={() => {
+            this.setState({ confirmModal: false });
+          }}
+        >
+          {modifyProfile => (
+            <TransferConfirmation
+              isOpen={this.state.confirmModal}
+              transferredUser={this.props.profile}
+              newSupervisor={
+                {
+                  name: 'Choose a new Supervisor',
+                  avatar: 'placeholder icon',
+                  team: {
+                    name: 'No Team',
+                    avatar: 'placeholder',
+                  },
+                }
+              }
+              oldSupervisor={this.state.supervisor}
+              primaryButtonClick={() => {
+                // TODO hotload / apollo cache
+                // TODO remove user's supervisor as well
+                modifyProfile({
+                  variables: {
+                    gcID: profile.gcID,
+                    data: {
+                      team: {
+                        id: String(this.state.newTeamId),
+                      },
+                    },
+                  },
+                });
+              }}
+            />
+          )}
+        </Mutation>
       </div>
     );
   }
@@ -367,6 +442,19 @@ EditProfile.propTypes = {
       province: PropTypes.string,
       postalCode: PropTypes.string,
       country: PropTypes.string,
+    }),
+    team: PropTypes.shape({
+      organization: PropTypes.shape({
+        id: PropTypes.string,
+        nameEn: PropTypes.string,
+        nameFr: PropTypes.string,
+      }),
+    }),
+    supervisor: PropTypes.shape({
+      gcID: PropTypes.string,
+      name: PropTypes.string,
+      titleEn: PropTypes.string,
+      titleFr: PropTypes.string,
     }),
   }),
 };

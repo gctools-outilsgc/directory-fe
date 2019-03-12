@@ -68,7 +68,7 @@ const getNodesAlongPath = (a, b, root) => {
   if (common) {
     const newPath = [].concat(
       pathA.slice(0, pathA.indexOf(common) + 1),
-      pathB.slice(pathB.indexOf(common) + 1),
+      pathB.slice(pathB.indexOf(common) + 1)
     );
     return newPath;
   }
@@ -160,6 +160,7 @@ export const computePositions = ({
   cardHeight,
   cardPadding,
   leftGutter,
+  withPath,
 }) => {
   const getCoord = (row, col) => ({
     x: cardPadding + (col * (cardWidth + cardPadding)),
@@ -181,8 +182,8 @@ export const computePositions = ({
   const computeLine = (parent, child, opt, buf) => {
     const getMiddle = (obj) => {
       const middle = Math.floor((
-        Math.max(...obj.direct_reports.map(n => n.col)) +
-        Math.min(...obj.direct_reports.map(n => n.col))
+        Math.max.apply(null, obj.direct_reports.map(n => n.col)) +
+        Math.min.apply(null, obj.direct_reports.map(n => n.col))
       ) / 2) - obj.col;
       const cardSpace = (((cardWidth / 2) + (cardPadding / 2)));
       return ((middle) * (cardWidth + cardPadding)) - cardSpace;
@@ -226,13 +227,12 @@ export const computePositions = ({
     // Attach to child
     d += ` V ${child.y}`;
 
-    lineArray.push({
+    lineArray.push(Object.assign({}, {
       id: `${opt.parent.uuid}->${opt.child.uuid}`,
       node: opt.child,
       parent: opt.parent,
       d,
-      ...opt,
-    });
+    }, opt));
   };
 
   /**
@@ -463,7 +463,7 @@ export const computePositions = ({
           boxPosition.row + mod.y,
           boxPosition.col + mod.x,
           bNode,
-          { override: true },
+          { override: true }
         );
         nextBox(mod);
       }
@@ -505,7 +505,7 @@ export const computePositions = ({
             }
             return p;
           }, -1),
-          1,
+          1
         );
 
         addNode(newRow, newCol, tNode, { override: true });
@@ -556,11 +556,11 @@ export const computePositions = ({
       if (inter) {
         const newPos = Math.min(
           firstNode.direct_reports.length,
-          Math.ceil(childrenMaxColumns / 2),
+          Math.ceil(childrenMaxColumns / 2)
         );
         firstNode.direct_reports.splice(
           firstNode.direct_reports.indexOf(inter),
-          1,
+          1
         );
         firstNode.direct_reports.splice(newPos - 1, 0, inter);
       }
@@ -570,7 +570,7 @@ export const computePositions = ({
           geometry.bottom,
           estimateStartColumn(geometry, firstNode),
           firstNode,
-          { b: geometry.bottom - 1 },
+          { b: geometry.bottom - 1 }
         );
       }
       let anc = [firstNode];
@@ -581,14 +581,14 @@ export const computePositions = ({
               geometry.top - 1,
               estimateStartColumn(geometry, node),
               node,
-              { a: geometry.top + 1, anc },
+              { a: geometry.top + 1, anc }
             );
           }
           geometry = addNode(
             geometry.top - 1,
             geometry.mid_col,
             node,
-            { a: geometry.top },
+            { a: geometry.top }
           );
         } else if (node.direct_reports.length > 0) {
           const balanceL = rows
@@ -622,14 +622,14 @@ export const computePositions = ({
               node.parent,
               bounds,
               childrenMaxColumns,
-              (balanceL > balanceR),
+              (balanceL > balanceR)
             );
             const B = getSortingNumber(
               b,
               node.parent,
               bounds,
               childrenMaxColumns,
-              (balanceL > balanceR),
+              (balanceL > balanceR)
             );
             return A - B;
           };
@@ -654,7 +654,7 @@ export const computePositions = ({
                 moveNode(
                   node,
                   node.row,
-                  (box.col < node.col) ? ((box.col + size.x) - 1) : box.col,
+                  (box.col < node.col) ? ((box.col + size.x) - 1) : box.col
                 );
               }
               break;
@@ -668,7 +668,7 @@ export const computePositions = ({
             node.row,
             estimateStartColumn({ mid_col: node.col }, node),
             node,
-            { b: node.row },
+            { b: node.row }
           );
         } else if (
           node.col !== node.parent.col &&
@@ -712,19 +712,19 @@ export const computePositions = ({
         width: node.width,
         height: node.height,
         node,
-        on_path: (criticalPath.includes(node)),
+        on_path: withPath && (criticalPath.includes(node)),
       }]);
       if (parent && typeof parent.x !== 'undefined') {
         computeLine(
           { y: parent.y, x: parent.x },
           { y: node.y, x: node.x },
           {
-            on_path: (
+            on_path: withPath && (
               criticalPath.includes(node) && criticalPath.includes(parent)
             ),
             child: node,
             parent,
-          },
+          }
         );
       }
     }
@@ -793,7 +793,7 @@ export const copyNode = (node) => {
   const newNode = Object.assign(
     {},
     node,
-    { direct_reports: [], parent: null },
+    { direct_reports: [], parent: null }
   );
   node.direct_reports
     .forEach(child => newNode.direct_reports.push(copyNode(child)));
@@ -830,6 +830,7 @@ export const calculateTree = (options) => {
     cardHeight: 50,
     cardPadding: 60,
     leftGutter: 0,
+    withPath: true,
   }, options);
   if (opt.root) opt.root = copyNode(opt.root);
   if (opt.nodeA) opt.nodeA = getNode(opt.root, opt.nodeA.uuid);
@@ -839,6 +840,106 @@ export const calculateTree = (options) => {
   addLinkToParent(opt.root);
   prioritizeNodes(opt.nodeA, opt.nodeB, opt.root);
   return computePositions(opt);
+};
+
+/**
+ * Convert Profile from profile-service GraphQL into node suitable for
+ * placement.
+ * @param {} profile GraphQL Profile object
+ * @param {*} team GraphQL Team object
+ */
+export const profileToNode = (profile, team) => ({
+  uuid: profile.gcID,
+  gcID: profile.gcID,
+  name: profile.name,
+  avatar: profile.avatar,
+  titleEn: profile.titleEn,
+  titleFt: profile.titleFr,
+  department: {
+    en_CA: team.nameEn,
+    fr_CA: team.nameFr,
+    id: team.id,
+  },
+  direct_reports: [],
+  root: false,
+});
+
+/**
+ * Given a team convert to a profile node suitable for placement.
+ * @param {*} team GraphQL Team object
+ */
+export const teamToNode = (team) => {
+  const root = profileToNode(team.owner, team);
+  team.members.forEach(m => root.direct_reports.push(profileToNode(m, team)));
+  return root;
+};
+
+const defaultCardHeight = 75;
+const defaultCardWidth = 350;
+const defaultCardPadding = 60;
+const defaultMiniCardHeight = 10;
+const defaultLeftGutter = 0;
+const getMiniWidth = (miniCardWidth, miniCardHeight, cardWidth, cardHeight) =>
+  miniCardWidth || (miniCardHeight *
+    (cardWidth || defaultCardWidth)) /
+    (cardHeight || defaultCardHeight);
+
+/**
+ * Return boxes and mini boxes suitable for display
+ */
+export const calculateOrgChart = ({
+  root, nodeA, nodeB,
+  cardHeight, cardWidth, cardPadding, leftGutter,
+  miniCardWidth, miniCardHeight, miniCardPadding,
+}) => {
+  const miniHeight = miniCardHeight || defaultMiniCardHeight;
+  const miniWidth =
+    getMiniWidth(miniCardWidth, miniHeight, cardWidth, cardHeight);
+
+  let withPath = true;
+  let noRootA = nodeA;
+  if (noRootA.uuid === root.uuid) {
+    if (root.direct_reports.length > 0) {
+      [noRootA] = root.direct_reports;
+      withPath = false;
+    }
+  }
+  const { boxes, lines } = calculateTree({
+    root,
+    nodeA: noRootA,
+    nodeB,
+    cardHeight: cardHeight || defaultCardHeight,
+    cardWidth: cardWidth || defaultCardWidth,
+    cardPadding: cardPadding || defaultCardPadding,
+    leftGutter: leftGutter || defaultLeftGutter,
+    withPath,
+  });
+  const { boxes: miniboxes, lines: minilines } = calculateTree({
+    root,
+    nodeA: noRootA,
+    nodeB,
+    cardHeight: miniCardHeight || defaultMiniCardHeight,
+    cardWidth: miniWidth,
+    cardPadding: miniCardPadding || defaultMiniCardHeight,
+    leftGutter:
+      (miniWidth / (cardWidth || defaultCardWidth)) *
+      (leftGutter || defaultLeftGutter),
+    withPath,
+  });
+  return {
+    boxes, lines, miniboxes, minilines,
+  };
+};
+
+export const graphQLToNode = (profile) => {
+  const { team } = profile;
+  const root = (team) ?
+    teamToNode(team) : profileToNode(profile, profile.ownerOfTeams[0]);
+  const node = getNode(root, profile.gcID);
+  profile.ownerOfTeams
+    .forEach(t => t.members
+      .forEach(p => node.direct_reports.push(profileToNode(p, t))));
+  return root;
 };
 
 export default computePositions;

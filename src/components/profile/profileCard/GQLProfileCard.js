@@ -6,7 +6,7 @@ import LocalizedComponent
 import { Query } from 'react-apollo';
 import { connect } from 'react-redux';
 
-import { Card, CardBody, CardTitle, CardFooter } from 'reactstrap';
+import { Card, CardBody, CardTitle } from 'reactstrap';
 
 import LocalizedProfileCardDisplay from './ProfileCardDisplay';
 import LocalizedEditProfile from './EditProfile';
@@ -53,21 +53,19 @@ export const GQLProfileCard = (props) => {
             {userInfo ? (
               <div>
                 <CardBody>
-                  <CardTitle className="profile-card-title">
-                    <div>{__('Profile')}</div>
+                  <CardTitle className="profile-card-title d-flex">
+                    <div className="mr-auto">{__('Profile')}</div>
+                    {canEdit ?
+                      <LocalizedEditProfile
+                        profile={userInfo}
+                        token={accessToken}
+                      /> : ''}
                   </CardTitle>
                   <LocalizedProfileCardDisplay
                     user={userInfo}
                     edit={canEdit}
                   />
                 </CardBody>
-                <CardFooter>
-                  {canEdit ?
-                    <LocalizedEditProfile
-                      profile={userInfo}
-                      token={accessToken}
-                    /> : ''}
-                </CardFooter>
               </div>
             ) : (<CardBody>{__('Cannot find GCID')}</CardBody>)}
           </Card>

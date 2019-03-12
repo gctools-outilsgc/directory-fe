@@ -12,10 +12,12 @@ import { Query } from 'react-apollo';
 import styled from 'styled-components';
 
 import OrgChart from '../OrgChart/OrgChart/OrgChart';
+import { graphQLToNode, calculateOrgChart }
+  from '../OrgChart/algorithm/nrc_orgchart_placement';
 
 import Loading from './Loading';
 
-import { GET } from '../../../gql/orgchart';
+import { ORGCHART } from '../../../gql/profile';
 
 
 const OrgChartLoading = styled.div`
@@ -54,40 +56,57 @@ export class GQLTeamOrgChart extends React.Component {
     }
   }
   changeSelectedCard(card) {
-    if (!card.node.root) {
-      this.setState({ selected: card.id });
-    }
+    this.setState({ selected: card.id });
   }
   navigateToProfile(card) {
     const { history } = this.props;
     history.push(`/p/${card.id}`);
   }
-  moveToLoggedInUser(_, container) {
-    if (this.profileCard) container.scrollToCard(this.profileCard.node);
+  moveToLoggedInUser() {
+    this.setState({ selected: this.props.myGcID });
+  }
+  requireFullReload(data) {
+    if (!data.profiles) return true;
+    const { profiles: [profile] } = data;
+    const { selected } = this.state;
+    const { team } = profile;
+    if (
+      (profile.gcID === selected) ||
+      (team && team.members &&
+        team.members.reduce((p, c) => p + (c.gcID === selected) ? 1 : 0, 0) > 0
+      ) ||
+      (team && team.owner && team.owner.gcID === selected) ||
+      (profile.ownerOfTeams
+        .reduce((p, t) => p + t.members
+          .reduce((mp, c) => mp + (c.gcID === selected) ? 1 : 0, 0), 0) > 0)
+    ) return false;
+    return true;
   }
   render() {
     const { selected } = this.state;
     return (
       <Query
-        query={GET}
+        query={ORGCHART}
         variables={{
-          gcIDa: selected,
-          gcIDb: this.props.myGcID,
-          leftGutter: 310,
+          gcID: selected,
         }}
       >
         {({ loading, error, data }) => {
-          if (loading && !data.orgchart) return <Loading />;
+          if (loading && this.requireFullReload(data)) return <Loading />;
           if (error) return `Error!: ${error}`;
+          const { profiles: [profile] } = data;
           const {
-            orgchart: {
-              boxes: cards,
-              lines,
-              miniboxes: minicards,
-              minilines,
-            },
-          } = data;
-          [this.profileCard] = cards.filter(c => c.id === this.props.myGcID);
+            boxes: cards,
+            lines,
+            miniboxes: minicards,
+            minilines,
+          } = (profile) ? calculateOrgChart({
+            root: graphQLToNode(profile),
+            nodeA: { uuid: selected },
+            leftGutter: 350,
+          }) : {
+            boxes: [], lines: [], miniboxes: [], minilines: [],
+          };
           const selectedCard = cards.filter(c => c.id === selected)[0];
           const mSelectedCard = minicards.filter(c => c.id === selected)[0];
           return (
