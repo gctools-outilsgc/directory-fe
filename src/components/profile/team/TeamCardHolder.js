@@ -19,6 +19,7 @@ import classnames from 'classnames';
 
 import LocalizedGQLTeamCard from './GQLTeamCard';
 import LocalizedGQLTeamOrgChart from './GQLTeamOrgChart';
+import GQLYourTeamsTab from './GQLYourTeamsTab';
 
 const mapStateToProps = ({ user }) => {
   const props = {};
@@ -112,7 +113,7 @@ class TeamCardHolder extends React.Component {
               </TabPane>
               {canEdit ?
                 <TabPane tabId="2">
-                    Tab 2 Right Over here
+                  <GQLYourTeamsTab id={id} />
                 </TabPane> :
                 ''
               }
