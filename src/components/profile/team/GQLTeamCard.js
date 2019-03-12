@@ -4,7 +4,7 @@ import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
 
 import { connect } from 'react-redux';
-import { Query } from 'react-apollo';
+import { Query, Mutation } from 'react-apollo';
 
 import {
   Row,
@@ -18,10 +18,11 @@ import {
 
 import Loading from './Loading';
 
-import { GET_TEAM } from '../../../gql/profile';
+import { GET_TEAM, EDIT_TEAM } from '../../../gql/profile';
 import SupervisorPicker from '../../core/SupervisorPicker';
 import TeamPicker from '../../core/TeamPicker';
 import TransferConfirmation from './TransferConfirmation';
+import TeamDisplayMemberList from './TeamDisplayMemberList';
 
 const mapStateToProps = ({ user }) => {
   const props = {};
@@ -46,6 +47,7 @@ export class GQLTeamCard extends React.Component {
       modal: false,
       confirmModal: false,
       chosenSupervisor: '',
+      chosenTeam: '',
       editSup: false,
       editTeam: false,
     };
@@ -88,7 +90,9 @@ export class GQLTeamCard extends React.Component {
     } = this.props;
     const {
       chosenSupervisor,
+      chosenTeam,
       editSup,
+      editTeam,
     } = this.state;
     const canEdit = (accessToken !== '') && (id === myGcID);
     return (
@@ -100,8 +104,9 @@ export class GQLTeamCard extends React.Component {
           if (loading) return <Loading />;
           if (error) return `Error!: ${error}`;
           const userInfo = (!data) ? '' : data.profiles[0];
-          const supTest = (!userInfo) ? '' : userInfo.supervisor;
           const teamTest = (!userInfo) ? '' : userInfo.team;
+          const supTest = (!teamTest) ? '' : userInfo.team.owner;
+          const memberTest = (!teamTest) ? '' : userInfo.team.members;
           return (
             <div style={style.card}>
               {userInfo ? (
@@ -112,12 +117,25 @@ export class GQLTeamCard extends React.Component {
                         <div className="font-weight-bold">
                           {__('Supervisor')}
                         </div>
-                        <div>
-                          {supTest ? supTest.name : 'None'}
+                        <div className="d-flex">
+                          <img
+                            className="rounded-circle avatar"
+                            src={
+                              supTest ? supTest.avatar : ''
+                            }
+                            alt={
+                              supTest ? supTest.name : 'None'
+                            }
+                          />
+                          <div className="ml-2">
+                            <div>
+                              {supTest ? supTest.name : 'None'}
+                            </div>
+                            <small className="text-muted">
+                              {supTest ? supTest.titleEn : 'None'}
+                            </small>
+                          </div>
                         </div>
-                        <small className="text-muted">
-                          {supTest ? supTest.titleEn : 'None'}
-                        </small>
                         {canEdit ?
                           <div>
                             <Button
@@ -125,7 +143,7 @@ export class GQLTeamCard extends React.Component {
                               size="sm"
                               onClick={this.toggle}
                             >
-                              Change supervisor
+                              Change supervisor / team
                             </Button>
                             <Modal
                               isOpen={this.state.modal}
@@ -163,34 +181,90 @@ export class GQLTeamCard extends React.Component {
                                         onResultSelect={(s) => {
                                           this.setState({
                                             chosenSupervisor: s,
+                                            editTeam: true,
                                           });
                                           this.toggleSup(editSup);
                                         }}
                                       /> :
                                       <div className="d-flex">
-                                        <div className="mr-auto">
-                                          <span className="mr-2">
-                                            AVA
-                                          </span>
-                                          {supTest ? supTest.name : 'None'}
-                                          {supTest ? supTest.titleEn : 'No'}
-                                        </div>
+                                        {!chosenSupervisor ?
+                                          <div className="mr-auto d-flex">
+                                            <div className="mr-2">
+                                              <img
+                                                className="avatar"
+                                                src={
+                                                  supTest ? supTest.avatar : ''
+                                                }
+                                                alt={
+                                                  supTest ? supTest.name : 'N'
+                                                }
+                                              />
+                                            </div>
+                                            <div>
+                                              <div
+                                                className="font-weight-bold"
+                                              >
+                                                {supTest
+                                                  ? supTest.name : 'None'}
+                                              </div>
+                                              <small className="text-muted">
+                                                {supTest ?
+                                                  supTest.titleEn : 'No'}
+                                              </small>
+                                            </div>
+                                          </div> :
+                                          <div className="mr-auto d-flex">
+                                            <div className="mr-2">
+                                              <img
+                                                className="avatar"
+                                                src={
+                                                  chosenSupervisor.avatar
+                                                }
+                                                alt={
+                                                  chosenSupervisor.name
+                                                }
+                                              />
+                                            </div>
+                                            <div>
+                                              <div
+                                                className="font-weight-bold"
+                                              >
+                                                {chosenSupervisor.name}
+                                              </div>
+                                              <small className="text-muted">
+                                                {chosenSupervisor.titleEn}
+                                              </small>
+                                            </div>
+                                          </div>
+                                        }
                                         <div>
                                           <Button
                                             onClick={this.toggleSup}
+                                            color="light"
                                           >
                                             S
                                           </Button>
                                         </div>
                                       </div>
                                     }
-                                    {chosenSupervisor.name}
-                                    {chosenSupervisor.gcID}
                                   </Col>
                                   <Col>
-                                    <TeamPicker
-                                      supervisor={chosenSupervisor.gcID}
-                                    />
+                                    {editTeam ?
+                                      <TeamPicker
+                                        editMode
+                                        supervisor={chosenSupervisor}
+                                        gcID={id}
+                                        selectedOrgTier={teamTest}
+                                        onTeamChange={(t) => {
+                                          this.setState({
+                                            chosenTeam: t,
+                                          });
+                                        }}
+                                      /> :
+                                      <div>
+                                        {teamTest ? teamTest.nameEn : 'None'}
+                                      </div>
+                                    }
                                   </Col>
                                 </Row>
                               </ModalBody>
@@ -204,17 +278,65 @@ export class GQLTeamCard extends React.Component {
                                 >
                                   Next
                                 </Button>
-                                <Button>
+                                <Button
+                                  onClick={() => {
+                                    this.setState({
+                                      chosenSupervisor: '',
+                                      chosenTeam: '',
+                                      modal: false,
+                                    });
+                                  }}
+                                >
                                   Cancel
                                 </Button>
                               </ModalFooter>
                             </Modal>
-                            <TransferConfirmation
-                              isOpen={this.state.confirmModal}
-                              oldSupervisor={supTest}
-                              transferredUser={userInfo}
-                              newSupervisor={chosenSupervisor}
-                            />
+                            <Mutation
+                              mutation={EDIT_TEAM}
+                              refetchQueries={[{
+                                query: GET_TEAM,
+                                variables: { gcID: String(userInfo.gcID) },
+                              }]}
+                              onCompleted={() => {
+                                this.setState({
+                                  confirmModal: false,
+                                });
+                              }}
+                            >
+                              {modifyProfile => (
+                                <TransferConfirmation
+                                  isOpen={this.state.confirmModal}
+                                  oldSupervisor={supTest}
+                                  transferredUser={userInfo}
+                                  newSupervisor={
+                                    {
+                                      name: chosenSupervisor.name,
+                                      avatar: chosenSupervisor.avatar,
+                                      team: {
+                                        name: chosenTeam.name,
+                                        avatar: chosenTeam.avatar,
+                                      },
+                                    }
+                                  }
+                                  primaryButtonClick={() => {
+                                    // TODO Send this to notifications
+                                    modifyProfile({
+                                      variables: {
+                                        gcID: String(userInfo.gcID),
+                                        data: {
+                                          team: {
+                                            id: chosenTeam.id,
+                                          },
+                                        },
+                                      },
+                                    });
+                                  }}
+                                  secondaryButtonClick={() => {
+                                    this.toggleConfirm();
+                                  }}
+                                />
+                              )}
+                            </Mutation>
                           </div>
                           : ''}
                       </Col>
@@ -225,6 +347,13 @@ export class GQLTeamCard extends React.Component {
                         {teamTest ? teamTest.nameEn : 'None'}
                       </Col>
                     </Row>
+                    <hr />
+                    <div className="font-weight-bold">
+                      People
+                    </div>
+                    <TeamDisplayMemberList
+                      members={memberTest}
+                    />
                   </div>
                 </div>
               ) : (

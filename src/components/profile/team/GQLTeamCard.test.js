@@ -19,20 +19,31 @@ const mock = [
       data: {
         profiles: [{
           gcID: '1',
-          supervisor: {
-            gcID: '2',
-            name: 'Test Supervisor',
-            titleEn: 'Boss',
-            titleFr: '',
-          },
+          name: 'Test User',
+          avatar: '',
+          titleEn: '',
+          titleFr: '',
           team: {
+            id: '10',
             nameEn: 'Test Team',
             nameFr: 'Test Team FR',
             organization: {
               id: '1',
               nameEn: 'Org Name EN',
               nameFr: 'Org Name FR',
-            }
+            },
+            owner: {
+              gcID: '2',
+              name: 'Test Supervisor',
+              avatar: '',
+              titleEn: 'Boss',
+              titleFr: '',
+            },
+            members: [{
+              name: '',
+              titleEn: '',
+              avatar: '',
+            }],
           },
         }],
       },

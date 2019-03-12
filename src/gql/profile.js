@@ -9,6 +9,21 @@ query getProfile($gcID: ID!) {
     avatar
     mobilePhone
     officePhone
+    team {
+      id
+      organization {
+        id
+        nameEn
+        nameFr
+      }
+      owner {
+        gcID
+        name
+        avatar
+        titleEn
+        titleFr
+      }
+    }
     address {
       id
       streetAddress
@@ -30,19 +45,26 @@ query getTeam($gcID: ID!) {
     avatar
     titleEn
     titleFr
-    supervisor {
-      gcID
-      name
-      titleEn
-      titleFr
-    }
     team {
+      id
       nameEn
       nameFr
       organization {
         id,
         nameEn,
         nameFr
+      }
+      owner {
+        gcID
+        name
+        avatar
+        titleEn
+        titleFr
+      }
+      members {
+        name
+        titleEn
+        avatar
       }
     }
   }
@@ -101,6 +123,9 @@ mutation editProfile($gcID: ID!, $data: ModifyProfileInput!) {
     avatar
     mobilePhone
     officePhone
+    team {
+      id
+    }
     address {
       id
       streetAddress
@@ -123,9 +148,6 @@ mutation editTeam($gcID: ID!, $data: ModifyProfileInput!)
 {
   modifyProfile(gcID: $gcID, data: $data){
     gcID
-    supervisor {
-      gcID
-    }
     team {
       id
     }
@@ -180,6 +202,9 @@ export const prepareEditProfile = (data) => {
           province: valueOrUndefined(province),
           postalCode: valueOrUndefined(postalCode),
           country: valueOrUndefined(country),
+        }),
+        team: valueOrUndefined({
+          id: valueOrUndefined(data.teamId),
         }),
       },
     },
