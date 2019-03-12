@@ -1,93 +1,73 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// import { Query, Mutation } from 'react-apollo';
+import { Mutation } from 'react-apollo';
 import { Button } from 'reactstrap';
-import { connect } from 'react-redux';
 
-const mapStateToProps = ({ user }) => {
-  const props = {};
-  if (user) {
-    props.accessToken = user.access_token;
-    props.myGcID = user.profile.sub;
-  }
-  return props;
-};
+import styled from 'styled-components';
+
+import { EDIT } from '../../gql/profile';
+import GenericAvatar from '../profile/OrgChart/Card/img/user.gif';
+
+
+const UploadContainer = styled.div`
+  text-align: center;
+  margin-top: 10px;
+`;
 
 export const UserAvatar = (props) => {
   const {
     myGcID,
-    accessToken,
     edit,
     name,
-    avatar,
+    avatar: profileAvatar,
     gcID,
   } = props;
-  const canEdit = (accessToken !== '') && edit && (gcID === myGcID);
+  const canEdit = edit && (gcID === myGcID);
+  const avatar = profileAvatar || GenericAvatar;
 
-  const avatarComp = (canEdit) ? (
-    <div>
-      <div className="query">
-        {(() => {
-          if (avatar) {
-            return (
-              <div>
-                <img
-                  src={avatar}
-                  alt={name}
-                />
-              </div>
-            );
-          }
-          return (
-            <div>
-              No AVATAR
-            </div>
-          );
-          })()}
-
-        <div className="mutate">
-          <Button>
-            <label htmlFor="avatarUploadTest">
-              Upload
-              <input
-                type="file"
-                id="avatarUploadTest"
-                style={{ display: 'none' }}
-                required
-                onChange={({ target }) => {
-                  const reader = new FileReader();
-                  reader.readAsDataURL(target.files[0]);
-                }}
-              />
-            </label>
-          </Button>
-        </div>
-      </div>
-    </div>
-  ) : (
-    <div>{(() => {
-      if (avatar) {
-        return (
-          <div>
-            <img
-              src={avatar}
-              alt={name}
-            />
-          </div>
-        );
-      }
-      return (
-        <div>
-          No AVATAR
-        </div>
-      );
-      })()}
-    </div>
-  );
   return (
     <div>
-      {avatarComp}
+      <div className="query">
+        <div>
+          <img
+            className="avatar avatar-lg rounded-circle"
+            src={avatar}
+            alt={name}
+          />
+        </div>
+        {canEdit && (
+        <UploadContainer className="mutate">
+          <Mutation
+            mutation={EDIT}
+          >
+            {uploadAvatar => (
+              <Button>
+                <label htmlFor="avatarUploadTest">
+                  Upload
+                  <input
+                    type="file"
+                    id="avatarUploadTest"
+                    style={{ display: 'none' }}
+                    required
+                    onChange={({ target }) => {
+                      uploadAvatar({
+                        variables: {
+                          gcID: myGcID,
+                          data: {
+                            avatar: target.files[0],
+                          },
+                        },
+                      });
+                    }}
+                  />
+                </label>
+              </Button>
+            )}
+          </Mutation>
+        </UploadContainer>
+        )}
+      </div>
     </div>
   );
 };
@@ -96,9 +76,8 @@ UserAvatar.defaultProps = {
   edit: false,
   name: 'No photo',
   gcID: '',
-  accessToken: '',
   myGcID: '',
-  avatar: 'https://avatars0.githubusercontent.com/u/7603237?s=460&v=4',
+  avatar: '',
 };
 
 UserAvatar.propTypes = {
@@ -106,9 +85,8 @@ UserAvatar.propTypes = {
   gcID: PropTypes.string,
   name: PropTypes.string,
   avatar: PropTypes.string,
-  accessToken: PropTypes.string,
   myGcID: PropTypes.string,
 };
 
-export default connect(mapStateToProps)(UserAvatar);
+export default UserAvatar;
 
