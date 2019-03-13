@@ -7,7 +7,7 @@ const TeamDisplayMemberList = (props) => {
   const { members } = props;
   const list = (members) ?
     members.map(p => (
-      <Col sm="4" className="mb-3">
+      <Col sm="4" className="mb-3" key={p.name}>
         <div className="d-flex">
           <img
             className="rounded-circle avatar"
