@@ -131,9 +131,6 @@ mutation editProfile($gcID: ID!, $data: ModifyProfileInput!) {
     }
     titleEn
     titleFr
-    supervisor {
-      gcID
-    }
   }
 }
 `;
