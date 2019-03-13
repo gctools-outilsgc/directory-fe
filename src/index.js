@@ -7,6 +7,8 @@ import { ApolloProvider } from 'react-apollo';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { createUploadLink } from 'apollo-upload-client';
 
+import '@gctools-components/aurora-css/css/aurora.min.css';
+
 import { Provider } from 'react-redux';
 
 import ConnectedAndLocalizedApp from './containers/App';
