@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import ApolloClient from 'apollo-boost';
+import { ApolloClient } from 'apollo-client';
+// import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 import { InMemoryCache } from 'apollo-cache-inmemory';
+import { createUploadLink } from 'apollo-upload-client';
 
 import { Provider } from 'react-redux';
 
@@ -18,7 +20,9 @@ const cache = new InMemoryCache({
 });
 
 const client = new ApolloClient({
-  uri: 'https://paas.beta.gccollab.ca/graphql',
+  link: createUploadLink({
+    uri: 'https://paas.beta.gccollab.ca/graphql',
+  }),
   cache,
 });
 
