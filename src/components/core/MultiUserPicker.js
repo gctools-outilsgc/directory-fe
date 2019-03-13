@@ -44,7 +44,61 @@ const PersonCard = styled.div`
   padding: 10px;
 `;
 
+const PersonCardContainer = (props) => {
+  const [checked, setChecked] = useState(false);
+  const { user, setCheckCount, checkCount } = props;
+  return (
+    <PersonCard checked={checked}>
+      <ListGroupItem
+        onClick={() => {
+          setChecked(!checked);
+          setCheckCount(checkCount + ((!checked) ? 1 : -1));
+        }}
+      >
+        <div>
+          <Input
+            addon
+            type="checkbox"
+            checked={checked}
+            onChange={() => { setChecked(!checked); }}
+            aria-label={`Checkbox for ${user.name}`}
+          />
+          <img
+            className="avatar rounded-circle"
+            style={{ marginLeft: '10px' }}
+            src={user.avatar}
+            alt={(user.avatarAltText || '%s').replace(/%s/g, user.name)}
+          />
+          <PersonDetails>
+            <strong>{user.name}</strong><br />
+            {user.title}
+          </PersonDetails>
+        </div>
+      </ListGroupItem>
+    </PersonCard>
+  );
+};
+PersonCardContainer.propTypes = {
+  user: PropTypes.shape({
+    /** gcID of the user */
+    gcID: PropTypes.string.isRequired,
+    /** Name of the person */
+    name: PropTypes.string.isRequired,
+    /** URL of the avatar */
+    avatar: PropTypes.string,
+    /** Text to use for avatar alt tag, `%s` replaced by user's name */
+    avatarAltText: PropTypes.string,
+    /** User's title (language unaware) */
+    title: PropTypes.string,
+  }).isRequired,
+  /** How many items are checked (state from parent) */
+  checkCount: PropTypes.number.isRequired,
+  /** State function that can alter the checkCount */
+  setCheckCount: PropTypes.func.isRequired,
+};
+
 const MultiUserPicker = (props) => {
+  const [checkCount, setCheckCount] = useState(0);
   const {
     isOpen,
     title,
@@ -85,46 +139,21 @@ const MultiUserPicker = (props) => {
         <ModalBody>
           {bodyText}
           <ListGroup>
-            {users.map((u) => {
-              const [checked, setChecked] = useState(false);
-              return (
-                <PersonCard checked={checked}>
-                <ListGroupItem
-                  key={`multi-user-picker-gcid-${u.gcID}`}
-                  onClick={() => { setChecked(!checked); }}
-                >
-                  {(() => {
-                    return (
-                      <div>
-                        <Input
-                          addon
-                          type="checkbox"
-                          checked={checked}
-                          onChange={() => { setChecked(!checked); }}
-                          aria-label={`Checkbox for ${u.name}`}
-                        />
-                        <img
-                          className="avatar rounded-circle"
-                          style={{ marginLeft: '10px' }}
-                          src={u.avatar}
-                          alt={(u.avatarAltText || '%s').replace(/%s/g, u.name)}
-                        />
-                        <PersonDetails>
-                          <strong>{u.name}</strong><br />
-                          {u.title}
-                        </PersonDetails>
-                      </div>
-                    );
-                  })()}
-                </ListGroupItem>
-                </PersonCard>
-            )})}
+            {users.map(u => (
+              <PersonCardContainer
+                user={u}
+                key={`multi-user-picker-gcid-${u.gcID}`}
+                setCheckCount={setCheckCount}
+                checkCount={checkCount}
+              />
+            ))}
           </ListGroup>
         </ModalBody>
         <ModalFooter>
           <Button
             color="primary"
             onClick={primaryButtonClick}
+            disabled={(checkCount === 0)}
           >
             {primaryButtonText}
           </Button>
@@ -145,7 +174,7 @@ MultiUserPicker.defaultProps = {
   title: '1. Title',
   bodyText: `2. Paragraph text.  Lorem ipsum dolor sit amet, consectetur
     adipiscing elit. Aenean eu porttitor ex. Nam luctus tincidunt dui, sit
-    amet semper mi consequat eu.`,
+    amet semper mi consequat euser.`,
   primaryButtonText: '4. Primary action',
   primaryButtonClick: () => {},
   secondaryButtonText: 'Cancel',
