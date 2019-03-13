@@ -13,6 +13,8 @@ const StyledCard = styled.a`
   :hover {
     box-shadow: 0 1px 5px rgba(0,0,0,0.25), 0 1px 10px rgba(0,0,0,0.22);
     color: inherit;
+    opacity: 1;
+    text-decoration: none;
   }
   --line-colour: rgba(93,193,190, 1);
   background: ${props => props.active ? '#FFFFFF' : '#FFFFFF'};
