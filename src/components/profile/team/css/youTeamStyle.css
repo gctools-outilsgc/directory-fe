@@ -1,13 +1,18 @@
 .your-teams-container .nav-link.active {
   background-color: white;
-  box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.15);
+  /*box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.15);*/
   border-radius: 5px;
 }
 
 .your-teams-container .nav-link:hover {
   cursor: pointer;
+  background-color: white;
 }
 
 .your-teams-container .tab-content>.active {
   background-color: white;
+}
+
+.your-teams-container .tab-content .tab-head {
+  background-color: #F4F8F9;
 }

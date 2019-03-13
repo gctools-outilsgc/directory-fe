@@ -58,12 +58,13 @@ class GQLYouTeamsTab extends React.Component {
           }) => (
             <NavItem key={id}>
               <NavLink
+                href="#!"
                 onClick={() => { this.toggle(id); }}
                 className={
                   classnames({ active: this.state.activeTab === id })}
               >
                 <div>
-                  <div>
+                  <div className="font-weight-bold">
                     {nameEn} / {nameFr}
                   </div>
                   <small>
@@ -84,7 +85,7 @@ class GQLYouTeamsTab extends React.Component {
             members,
           }) => (
             <TabPane tabId={id} key={id} className="w-100">
-              <div className="border-bottom d-flex p-2">
+              <div className="border-bottom d-flex p-3 tab-head">
                 <div className="mr-auto font-weight-bold">
                   People
                 </div>
@@ -96,7 +97,7 @@ class GQLYouTeamsTab extends React.Component {
                   </Button>
                 </div>
               </div>
-              <div className="vh-100">
+              <div className="vh-100 p-3">
                 People for {nameEn}
                 <YourTeamMemberList members={members} />
               </div>
@@ -106,7 +107,7 @@ class GQLYouTeamsTab extends React.Component {
             <RowContainer>
               <Row className="mt-3 your-teams-container">
                 <Col className="pr-0">
-                  <div className="border-bottom d-flex p-2">
+                  <div className="border-bottom d-flex p-3">
                     <div className="mr-auto font-weight-bold">
                       Teams {userInfo.gcID}
                     </div>
@@ -121,11 +122,12 @@ class GQLYouTeamsTab extends React.Component {
                   <Nav vertical>
                     <NavItem>
                       <NavLink
+                        href="#!"
                         onClick={() => { this.toggle('1'); }}
                         className={
                           classnames({ active: this.state.activeTab === '1' })}
                       >
-                        <div>Default Team</div>
+                        <div className="font-weight-bold">Default Team</div>
                         <small>Your teamless people live here</small>
                       </NavLink>
                     </NavItem>
@@ -141,7 +143,7 @@ class GQLYouTeamsTab extends React.Component {
                       tabId="1"
                       className="h-100 w-100"
                     >
-                      <div className="border-bottom d-flex p-2">
+                      <div className="border-bottom d-flex p-3 tab-head">
                         <div className="mr-auto font-weight-bold">
                           People
                         </div>
@@ -153,7 +155,9 @@ class GQLYouTeamsTab extends React.Component {
                           </Button>
                         </div>
                       </div>
-                      I am the default team! put default people in here!
+                      <div className="p-3">
+                        I am the default team! put default people in here!
+                      </div>
                     </TabPane>
                     {tabPanel}
                   </TabContent>
