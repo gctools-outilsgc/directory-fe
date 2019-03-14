@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
 
+import { connect } from 'react-redux';
+
 import {
   Card,
   CardBody,
@@ -17,6 +19,17 @@ import classnames from 'classnames';
 
 import LocalizedGQLTeamCard from './GQLTeamCard';
 import LocalizedGQLTeamOrgChart from './GQLTeamOrgChart';
+import GQLYourTeamsTab from './GQLYourTeamsTab';
+
+const mapStateToProps = ({ user }) => {
+  const props = {};
+  if (user) {
+    props.accessToken = user.access_token;
+    props.myGcID = user.profile.sub;
+  }
+  return props;
+};
+
 
 const style = {
   card: {
@@ -45,6 +58,12 @@ class TeamCardHolder extends React.Component {
   }
 
   render() {
+    const {
+      id,
+      accessToken,
+      myGcID,
+    } = this.props;
+    const canEdit = (accessToken !== '') && (id === myGcID);
     return (
       <Card style={style.card}>
         <CardBody>
@@ -60,19 +79,23 @@ class TeamCardHolder extends React.Component {
                   }
                   onClick={() => { this.toggle('1'); }}
                 >
-                  You
+                  Team
                 </NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink
-                  className={
-                    classnames({ active: this.state.activeTab === '2' })
-                  }
-                  onClick={() => { this.toggle('2'); }}
-                >
-                  Your Teams
-                </NavLink>
-              </NavItem>
+              {canEdit ?
+                <NavItem>
+                  <NavLink
+                    className={
+                      classnames({ active: this.state.activeTab === '2' })
+                    }
+                    onClick={() => { this.toggle('2'); }}
+                  >
+                    Your Teams
+                  </NavLink>
+                </NavItem>
+              :
+              ''
+              }
               <NavItem>
                 <NavLink
                   className={
@@ -86,15 +109,18 @@ class TeamCardHolder extends React.Component {
             </Nav>
             <TabContent activeTab={this.state.activeTab}>
               <TabPane tabId="1">
-                <LocalizedGQLTeamCard id={this.props.id} />
+                <LocalizedGQLTeamCard id={id} />
               </TabPane>
-              <TabPane tabId="2">
-                  Tab 2 Right Over here
-              </TabPane>
+              {canEdit ?
+                <TabPane tabId="2">
+                  <GQLYourTeamsTab id={id} />
+                </TabPane> :
+                ''
+              }
               <TabPane tabId="3">
                 <LocalizedGQLTeamOrgChart
                   visible={this.state.activeTab === '3'}
-                  id={this.props.id}
+                  id={id}
                 />
               </TabPane>
             </TabContent>
@@ -107,10 +133,14 @@ class TeamCardHolder extends React.Component {
 
 TeamCardHolder.defaultProps = {
   id: undefined,
+  accessToken: undefined,
+  myGcID: undefined,
 };
 
 TeamCardHolder.propTypes = {
   id: PropTypes.string,
+  accessToken: PropTypes.string,
+  myGcID: PropTypes.string,
 };
 
-export default LocalizedComponent(TeamCardHolder);
+export default connect(mapStateToProps)(LocalizedComponent(TeamCardHolder));
