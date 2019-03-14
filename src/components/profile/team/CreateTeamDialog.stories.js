@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 
 import LocalizedCreateTeamDialog from './CreateTeamDialog';
 
-storiesOf('CreateTeam', module)
+storiesOf('CreateTeamDialog', module)
   .addParameters({
     info: { header: true, inline: true, source: false },
   })

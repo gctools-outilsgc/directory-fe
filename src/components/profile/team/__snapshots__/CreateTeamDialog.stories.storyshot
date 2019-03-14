@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FileProperties CreateTeam isOpen 1`] = `
+exports[`FileProperties CreateTeamDialog isOpen 1`] = `
 <div>
   <div>
     <div
@@ -39,7 +39,7 @@ exports[`FileProperties CreateTeam isOpen 1`] = `
             }
           }
         >
-          CreateTeam
+          CreateTeamDialog
         </h1>
         <h2
           style={
@@ -540,7 +540,7 @@ exports[`FileProperties CreateTeam isOpen 1`] = `
 </div>
 `;
 
-exports[`FileProperties CreateTeam onCancel 1`] = `
+exports[`FileProperties CreateTeamDialog onCancel 1`] = `
 <div>
   <div>
     <div
@@ -579,7 +579,7 @@ exports[`FileProperties CreateTeam onCancel 1`] = `
             }
           }
         >
-          CreateTeam
+          CreateTeamDialog
         </h1>
         <h2
           style={
@@ -1080,7 +1080,7 @@ exports[`FileProperties CreateTeam onCancel 1`] = `
 </div>
 `;
 
-exports[`FileProperties CreateTeam onSave 1`] = `
+exports[`FileProperties CreateTeamDialog onSave 1`] = `
 <div>
   <div>
     <div
@@ -1119,7 +1119,7 @@ exports[`FileProperties CreateTeam onSave 1`] = `
             }
           }
         >
-          CreateTeam
+          CreateTeamDialog
         </h1>
         <h2
           style={
@@ -1620,7 +1620,7 @@ exports[`FileProperties CreateTeam onSave 1`] = `
 </div>
 `;
 
-exports[`FileProperties CreateTeam with defaults 1`] = `
+exports[`FileProperties CreateTeamDialog with defaults 1`] = `
 <div>
   <div>
     <div
@@ -1659,7 +1659,7 @@ exports[`FileProperties CreateTeam with defaults 1`] = `
             }
           }
         >
-          CreateTeam
+          CreateTeamDialog
         </h1>
         <h2
           style={
