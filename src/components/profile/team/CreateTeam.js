@@ -19,16 +19,18 @@ import { CREATE_TEAM } from '../../../gql/team';
 
 import InputCharacterCount from '../../core/InputCharacterCount';
 
+const initialState = {
+  modal: false,
+  nameEn: '',
+  nameFr: '',
+  descriptionEn: '',
+  descriptionFr: '',
+};
+
 export class CreateTeam extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      modal: false,
-      nameEn: '',
-      nameFr: '',
-      descriptionEn: '',
-      descriptionFr: '',
-    };
+    this.state = initialState;
     this.toggleModal = this.toggleModal.bind(this);
   }
 
@@ -65,7 +67,7 @@ export class CreateTeam extends Component {
               <Mutation
                 mutation={CREATE_TEAM}
                 onCompleted={() => {
-                  this.setState({ modal: false });
+                  this.setState(initialState);
                 }}
                 onError={() => {
                   alert('ERROR - Replace with error UX');
@@ -213,6 +215,7 @@ export class CreateTeam extends Component {
                         </Button>
                         <Button
                           size="sm"
+                          onClick={() => { this.setState(initialState); }}
                         >
                           {__('Cancel')}
                         </Button>
