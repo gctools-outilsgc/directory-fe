@@ -49,6 +49,11 @@ query getTeam($gcID: ID!) {
       id
       nameEn
       nameFr
+      organization {
+        id,
+        nameEn,
+        nameFr
+      }
       owner {
         gcID
         name
@@ -69,6 +74,12 @@ export const GET_YOUR_TEAM = gql`
 query getProfile($gcID: ID!) {
   profiles(gcID: $gcID) {
     gcID
+    team {
+      id
+      organization {
+        id
+      }
+    }
     ownerOfTeams {
       id
       nameEn

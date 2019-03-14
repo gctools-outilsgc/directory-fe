@@ -18,6 +18,7 @@ import {
 import { GET_YOUR_TEAM } from '../../../gql/profile';
 import './css/youTeamStyle.css';
 import YourTeamMemberList from './YourTeamMemberList';
+import GQLCreateTeamDialog from './GQLCreateTeamDialog';
 
 const RowContainer = styled.div`
 background-color: #F4F8F9;
@@ -30,6 +31,7 @@ class GQLYouTeamsTab extends React.Component {
     this.toggle = this.toggle.bind(this);
     this.state = {
       activeTab: '1',
+      createDialogOpen: false,
     };
   }
 
@@ -47,10 +49,16 @@ class GQLYouTeamsTab extends React.Component {
         query={GET_YOUR_TEAM}
         variables={{ gcID: (String(this.props.id)) }}
       >
-        {({ loading, error, data }) => {
+        {({
+          loading,
+          error,
+          data,
+          refetch,
+        }) => {
           if (loading) return 'Loading...';
           if (error) return `Error!: ${error}`;
           const userInfo = (!data) ? '' : data.profiles[0];
+          console.log(userInfo);
           const teamList = userInfo.ownerOfTeams.map(({
             id,
             nameEn,
@@ -114,9 +122,24 @@ class GQLYouTeamsTab extends React.Component {
                     <div>
                       <Button
                         size="small"
+                        onClick={() => {
+                          this.setState({ createDialogOpen: true });
+                        }}
                       >
                         Add
                       </Button>
+                      <GQLCreateTeamDialog
+                        isOpen={this.state.createDialogOpen}
+                        orgId={userInfo.team.organization.id}
+                        gcID={userInfo.gcID}
+                        onSave={() => {
+                          this.setState({ createDialogOpen: false });
+                          refetch();
+                        }}
+                        onCancel={() => {
+                          this.setState({ createDialogOpen: false });
+                        }}
+                      />
                     </div>
                   </div>
                   <Nav vertical>

@@ -118,10 +118,12 @@ class TeamCardHolder extends React.Component {
                 ''
               }
               <TabPane tabId="3">
+                {(this.state.activeTab === '3' &&
                 <LocalizedGQLTeamOrgChart
                   visible={this.state.activeTab === '3'}
                   id={id}
                 />
+              )}
               </TabPane>
             </TabContent>
           </div>
