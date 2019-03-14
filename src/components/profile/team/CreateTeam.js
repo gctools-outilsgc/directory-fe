@@ -17,6 +17,8 @@ import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
 import { CREATE_TEAM } from '../../../gql/team';
 
+import InputCharacterCount from '../../core/InputCharacterCount';
+
 export class CreateTeam extends Component {
   constructor(props) {
     super(props);
@@ -161,7 +163,8 @@ export class CreateTeam extends Component {
                           <span className="font-weight-bold">
                             Description (English)
                           </span>
-                          <Input
+                          <InputCharacterCount
+                            maxLength={280}
                             placeholder="Describe your team..."
                             id="descriptionEn"
                             type="textarea"
@@ -181,7 +184,8 @@ export class CreateTeam extends Component {
                           <span className="font-weight-bold">
                             La description (Fran&ccedil;ais)
                           </span>
-                          <Input
+                          <InputCharacterCount
+                            maxLength={280}
                             placeholder={
                               'd\'\u00E9cris ton \u00E9quipe...'}
                             id="descriptionFr"
