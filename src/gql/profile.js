@@ -49,6 +49,11 @@ query getTeam($gcID: ID!) {
       id
       nameEn
       nameFr
+      organization {
+        id,
+        nameEn,
+        nameFr
+      }
       owner {
         gcID
         name
