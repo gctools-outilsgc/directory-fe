@@ -35,7 +35,7 @@ const InputCharacterCount = (props) => {
         }}
       />
       {(showCounter &&
-      <div>q
+      <div>
         {value.length} / {maxLength}
       </div>
       )}

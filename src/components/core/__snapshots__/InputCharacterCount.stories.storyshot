@@ -70,7 +70,6 @@ exports[`FileProperties InputCharacterCount With default options 1`] = `
         value=""
       />
       <div>
-        q
         0
          / 
         255
@@ -532,7 +531,6 @@ exports[`FileProperties InputCharacterCount with id 1`] = `
         value=""
       />
       <div>
-        q
         0
          / 
         255
@@ -993,7 +991,6 @@ exports[`FileProperties InputCharacterCount with maxLength 1`] = `
         value=""
       />
       <div>
-        q
         0
          / 
         5
@@ -1454,7 +1451,6 @@ exports[`FileProperties InputCharacterCount with onChange 1`] = `
         value=""
       />
       <div>
-        q
         0
          / 
         255
@@ -1916,7 +1912,6 @@ exports[`FileProperties InputCharacterCount with placeholder 1`] = `
         value=""
       />
       <div>
-        q
         0
          / 
         255
@@ -2832,7 +2827,6 @@ exports[`FileProperties InputCharacterCount with showCounter=true 1`] = `
         value=""
       />
       <div>
-        q
         0
          / 
         255
