@@ -35,7 +35,7 @@ const InputCharacterCount = (props) => {
         }}
       />
       {(showCounter &&
-      <div>
+      <div>q
         {value.length} / {maxLength}
       </div>
       )}
@@ -55,7 +55,7 @@ InputCharacterCount.propTypes = {
   /** Maximum length of text box */
   maxLength: PropTypes.number,
   /** Show the character counter or not */
-  showCounter: PropTypes.boolean,
+  showCounter: PropTypes.bool,
   /** Text to use as input's placeholder */
   placeholder: PropTypes.string,
   /** Fired when text changes */
