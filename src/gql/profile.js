@@ -73,10 +73,14 @@ query getProfile($gcID: ID!) {
       id
       nameEn
       nameFr
+      descriptionEn
+      descriptionFr
       members {
         gcID
         name
         avatar
+        titleEn
+        titleFr
       }
       organization {
         id

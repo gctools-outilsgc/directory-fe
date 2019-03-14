@@ -21,6 +21,8 @@ import YourTeamMemberList from './YourTeamMemberList';
 
 const RowContainer = styled.div`
 background-color: #F4F8F9;
+height: 430px;
+overflow: hidden;
 `;
 
 class GQLYouTeamsTab extends React.Component {
@@ -55,6 +57,7 @@ class GQLYouTeamsTab extends React.Component {
             id,
             nameEn,
             nameFr,
+            descriptionEn,
           }) => (
             <NavItem key={id}>
               <NavLink
@@ -68,20 +71,42 @@ class GQLYouTeamsTab extends React.Component {
                     {nameEn} / {nameFr}
                   </div>
                   <small>
-                    Description here
+                    {descriptionEn}
                   </small>
-                  <ul className="list-inline">
-                    <li className="list-inline-item">Transfer</li>
-                    <li className="list-inline-item">Edit</li>
-                    <li className="list-inline-item">Delete</li>
-                  </ul>
+                  <small>
+                    <ul className="list-inline text-primary">
+                      <li className="list-inline-item">
+                        <Button
+                          color="link"
+                          size="small"
+                        >
+                          Transfer
+                        </Button>
+                      </li>
+                      <li className="list-inline-item">
+                        <Button
+                          color="link"
+                          size="small"
+                        >
+                          Edit
+                        </Button>
+                      </li>
+                      <li className="list-inline-item">
+                        <Button
+                          color="link"
+                          size="small"
+                        >
+                          Delete
+                        </Button>
+                      </li>
+                    </ul>
+                  </small>
                 </div>
               </NavLink>
             </NavItem>
           ));
           const tabPanel = userInfo.ownerOfTeams.map(({
             id,
-            nameEn,
             members,
           }) => (
             <TabPane tabId={id} key={id} className="w-100">
@@ -97,8 +122,7 @@ class GQLYouTeamsTab extends React.Component {
                   </Button>
                 </div>
               </div>
-              <div className="vh-100 p-3">
-                People for {nameEn}
+              <div className="vh-100 p-3 member-holder">
                 <YourTeamMemberList members={members} />
               </div>
             </TabPane>
@@ -109,7 +133,7 @@ class GQLYouTeamsTab extends React.Component {
                 <Col className="pr-0">
                   <div className="border-bottom d-flex p-3">
                     <div className="mr-auto font-weight-bold">
-                      Teams {userInfo.gcID}
+                      Teams
                     </div>
                     <div>
                       <Button
@@ -156,7 +180,7 @@ class GQLYouTeamsTab extends React.Component {
                         </div>
                       </div>
                       <div className="p-3">
-                        I am the default team! put default people in here!
+                        TODO: put the teamless people here!
                       </div>
                     </TabPane>
                     {tabPanel}

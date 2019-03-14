@@ -3,37 +3,48 @@ import PropTypes from 'prop-types';
 
 const YourTeamMemberList = (props) => {
   const { members } = props;
-  const list = (members) ?
+  const list = (members.length > 1) ?
     members.map(p => (
-      <div className="d-flex" key={p.name}>
-        <img
-          className="rounded-circle avatar"
-          src={
-            p ? p.avatar : ''
-          }
-          alt={
-            p ? p.name : 'None'
-          }
-        />
-        <div className="ml-2 font-weight-bold">
-          <div>
-            {p ? p.name : 'None'}
+      <li key={p.name} className="mb-3">
+        <div className="d-flex">
+          <img
+            className="rounded-circle avatar"
+            src={
+              p ? p.avatar : ''
+            }
+            alt={
+              p ? p.name : 'None'
+            }
+          />
+          <div className="ml-3">
+            <div className="font-weight-bold member-name">
+              {p ? p.name : 'None'}
+            </div>
+            <small className="text-muted">
+              {p ? p.titleEn : 'None'}
+            </small>
+            <small>
+              <ul className="list-inline">
+                <li className="list-inline-item border-right pr-2">
+                  <a href="#!">action</a>
+                </li>
+                <li className="list-inline-item">
+                  <a href="#!">action</a>
+                </li>
+              </ul>
+            </small>
           </div>
-          <small className="text-muted">
-            {p ? p.titleEn : 'None'}
-          </small>
         </div>
-        <div>
-          <ul>
-            <li>action</li>
-          </ul>
-        </div>
-      </div>
-    )) : 'No Members';
+      </li>
+    )) : (
+      <li>
+        There are no members in this team
+      </li>
+    );
   return (
-    <div>
+    <ul className="list-unstyled">
       {list}
-    </div>
+    </ul>
   );
 };
 
