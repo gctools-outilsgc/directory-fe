@@ -70,6 +70,34 @@ query getTeam($gcID: ID!) {
   }
 }`;
 
+export const GET_YOUR_TEAM = gql`
+query getProfile($gcID: ID!) {
+  profiles(gcID: $gcID) {
+    gcID
+    team {
+      id
+      organization {
+        id
+      }
+    }
+    ownerOfTeams {
+      id
+      nameEn
+      nameFr
+      members {
+        gcID
+        name
+        avatar
+      }
+      organization {
+        id
+        nameEn
+        nameFr
+      }
+    }
+  }
+}`;
+
 const profileDataForOrgChart = gql`
   fragment profileDataForOrgChart on Profile {
     gcID
