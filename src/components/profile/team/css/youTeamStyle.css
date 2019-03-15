@@ -21,7 +21,7 @@
   background-color: white;
 }
 
-.your-teams-container .tab-content>.active .member-holder {
+.member-holder {
   height: 345px;
   overflow: auto;
 }

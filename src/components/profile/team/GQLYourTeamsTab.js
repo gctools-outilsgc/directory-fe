@@ -143,20 +143,27 @@ class GQLYouTeamsTab extends React.Component {
                       </Button>
                     </div>
                   </div>
-                  <Nav vertical>
-                    <NavItem>
-                      <NavLink
-                        href="#!"
-                        onClick={() => { this.toggle('1'); }}
-                        className={
-                          classnames({ active: this.state.activeTab === '1' })}
-                      >
-                        <div className="font-weight-bold">Default Team</div>
-                        <small>Your teamless people live here</small>
-                      </NavLink>
-                    </NavItem>
-                    {teamList}
-                  </Nav>
+                  <div className="member-holder">
+                    <Nav vertical>
+                      <NavItem>
+                        <NavLink
+                          href="#!"
+                          onClick={() => { this.toggle('1'); }}
+                          className={
+                            classnames({
+                              active: this.state.activeTab === '1',
+                            })
+                          }
+                        >
+                          <div className="font-weight-bold">
+                            Default Team
+                          </div>
+                          <small>Your teamless people live here</small>
+                        </NavLink>
+                      </NavItem>
+                      {teamList}
+                    </Nav>
+                  </div>
                 </Col>
                 <Col className="pl-0 d-flex">
                   <TabContent

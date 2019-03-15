@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { render, cleanup } from 'react-testing-library';
+import { render, cleanup, waitForElement } from 'react-testing-library';
 
 import { MockedProvider } from 'react-apollo/test-utils';
 
 import GQLYourTeamsTab from './GQLYourTeamsTab';
-// import { GET_YOUR_TEAM } from '../../../gql/profile';
+import { GET_YOUR_TEAM } from '../../../gql/profile';
 
-/*
+
 const mock = [
   {
     request: {
@@ -22,15 +22,28 @@ const mock = [
           gcID: '1',
           ownerOfTeams: [{
             id: '10',
-            nameEn: 'Test Team',
+            nameEn: 'Example Team',
             nameFr: 'Teams Team FR',
+            descriptionEn: 'Test Description',
+            descriptionFr: 'Test Descript FR',
+            members: [{
+              gcID: '2',
+              name: 'Team Member',
+              avatar: '',
+              titleEn: '',
+              titleFr: '',
+            }],
+            organization: {
+              id: '123',
+              nameEn: 'Org Name',
+              nameFr: 'Org Name FR',
+            },
           }],
       }],
       },
     },
   }
-]
-*/
+];
 
 afterEach(cleanup);
 
@@ -43,5 +56,14 @@ describe('GQLYourTeamsTab', () => {
     ));
     const loadingText = queryByText('Loading...');
     expect(loadingText.innerHTML).toBe('Loading...');
+  });
+
+  it('renders with data', async () => {
+    const { queryByText } = render((
+      <MockedProvider mocks={mock} addTypename={false}>
+        <GQLYourTeamsTab id="1" />
+      </MockedProvider>
+    ));
+    await waitForElement(() => queryByText('Test Description'));
   });
 });
