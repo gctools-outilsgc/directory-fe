@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const YourTeamMemberList = (props) => {
   const { members } = props;
-  const list = (members.length > 1) ?
+  const list = (members.length > 0) ?
     members.map(p => (
       <li key={p.name} className="mb-3">
         <div className="d-flex">

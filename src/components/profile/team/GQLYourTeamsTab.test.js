@@ -13,7 +13,7 @@ const mock = [
     request: {
       query: GET_YOUR_TEAM,
       variables: {
-        gcID: (String(1)),
+        gcID: '1',
       },
     },
     result: {
@@ -39,10 +39,10 @@ const mock = [
               nameFr: 'Org Name FR',
             },
           }],
-      }],
+        }],
       },
     },
-  }
+  },
 ];
 
 afterEach(cleanup);
