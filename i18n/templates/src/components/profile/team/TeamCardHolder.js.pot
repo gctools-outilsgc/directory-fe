@@ -9,4 +9,3 @@ msgstr ""
 #: src/components/profile/team/TeamCardHolder.js 52:13
 msgid "Teams"
 msgstr ""
-

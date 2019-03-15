@@ -27,6 +27,11 @@ const mock = [
             id: '10',
             nameEn: 'Test Team',
             nameFr: 'Test Team FR',
+            organization: {
+              id: '1',
+              nameEn: 'Org Name EN',
+              nameFr: 'Org Name FR',
+            },
             owner: {
               gcID: '2',
               name: 'Test Supervisor',

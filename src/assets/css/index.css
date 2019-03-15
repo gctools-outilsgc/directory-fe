@@ -33,7 +33,7 @@ animation: LoadingText 2s ease infinite;
     50%{background-position:100% 51%}
     100%{background-position:0% 50%}
 }
-@keyframes LoadingText { 
+@keyframes LoadingText {
     0%{background-position:0% 50%}
     50%{background-position:100% 51%}
     100%{background-position:0% 50%}
@@ -133,6 +133,37 @@ animation: LoadingText 2s ease infinite;
   padding-top: 15px;
 }
 
+/* Create Team Modal */
+
+.create-team-modal {
+  border-radius: 6px;
+}
+.create-team-modal-description {
+  margin-bottom: 12px;
+}
+.create-team-modal label {
+  width: 100%;
+  margin-bottom: 12px;
+}
+.create-team-modal label .font-weight-bold {
+  margin-bottom: 5px;
+  display: inline-block;
+}
+.create-team-modal-section {
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
+  padding-top: 15px;
+}
+.create-team-modal-buttons {
+  border-top: 1px solid black;
+  padding-top: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.create-team-modal-buttons button.btn {
+  margin-left: 10px;
+}
+
 /* Onboarding Module */
 
 .basic-form-holder label {
@@ -195,7 +226,7 @@ animation: LoadingText 2s ease infinite;
   width: 75%;
 }
 
-@media (max-width: 992px) { 
+@media (max-width: 992px) {
   .onboard-container {
     width: 100%;
   }
