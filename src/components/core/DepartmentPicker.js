@@ -83,7 +83,7 @@ class DepartmentPicker extends React.Component {
                 <Input
                   type="text"
                   onChange={this.handleChange}
-                  value={this.state.value}
+                  value={(this.state.value) ? this.state.value : ''}
                 />
               </label>
               <ul className={styleClasses}>

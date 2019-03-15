@@ -1216,10 +1216,10 @@ exports[`FileProperties TransferConfirmation isOpen=true 1`] = `
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu
     porttitor ex. Nam luctus tincidunt dui, sit amet semper mi consequat eu.
                   <div
-                    className="sc-bZQynM fvWLtU"
+                    className="sc-dnqmqq gIoGmN"
                   />
                   <div
-                    className="sc-gzVnrw kvMNUz"
+                    className="sc-iwsKbI isTKZc"
                   >
                     <img
                       alt="Avatar of  Mark Phillips"
@@ -2465,10 +2465,10 @@ exports[`FileProperties TransferConfirmation with click handlers 1`] = `
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu
     porttitor ex. Nam luctus tincidunt dui, sit amet semper mi consequat eu.
                   <div
-                    className="sc-bZQynM fvWLtU"
+                    className="sc-dnqmqq gIoGmN"
                   />
                   <div
-                    className="sc-gzVnrw kvMNUz"
+                    className="sc-iwsKbI isTKZc"
                   >
                     <img
                       alt="Avatar of  Mark Phillips"
@@ -3711,10 +3711,10 @@ exports[`FileProperties TransferConfirmation with custom text 1`] = `
                 >
                   Custom dialog body
                   <div
-                    className="sc-bZQynM fvWLtU"
+                    className="sc-dnqmqq gIoGmN"
                   />
                   <div
-                    className="sc-gzVnrw kvMNUz"
+                    className="sc-iwsKbI isTKZc"
                   >
                     <img
                       alt="Avatar of  Mark Phillips"

@@ -13,16 +13,21 @@ const StyledCard = styled.a`
   :hover {
     box-shadow: 0 1px 5px rgba(0,0,0,0.25), 0 1px 10px rgba(0,0,0,0.22);
     color: inherit;
+    opacity: 1;
+    text-decoration: none;
   }
   --line-colour: rgba(93,193,190, 1);
-  background: ${props => props.active ? '#5DC1BE' : '#467B8D'};
+  background: ${props => props.active ? '#FFFFFF' : '#FFFFFF'};
   opacity: ${props => props.blurred ? '0.6' : '1'};
-  border-radius: 2px;
-  width: 350px;
-  height: 75px;
+  border: 1px solid ${props => props.active ? '#29ABE2' : 'transparent'};
+  border-radius: 5px;
+  width: 300px;
+  height: 90px;
   display: flex;
   justify-content: space-between;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: ${props => props.active ?
+    '0px 0px 18px rgba(41, 171, 226, 0.3);' :
+    '0px 0px 18px rgba(0, 0, 0, 0.15);'}
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   text-decoration: none;
   color: inherit;
@@ -32,10 +37,13 @@ const StyledCard = styled.a`
 
 const Avatar = styled.img`
   max-width: 75px !important;
-  min-width: 75px !important;
+  min-width: 50px !important;
+  height: 50px !important;
+  border-radius: 50% !important;
   overflow: hidden;
   object-fit: cover;
-  padding: 2px;
+  margin: 0 7px;
+  align-self: center;
 `;
 
 const CardInfo = styled.div`
@@ -47,15 +55,20 @@ const CardInfo = styled.div`
 const CardName = styled.div`
   font-family: "rubik", sans-serif;
   font-size: 1.2em;
+  font-weight: bold;
 `;
 
 const CardTitle = styled.div`
   font-family: "nunito", sans-serif;
+  font-size: 80%;
+  color: #6c757d!important;
+  font-weight: 400;
 `;
-
+// Temporary display none to style
 const CardButton = styled.div`
   align-self: center;
   padding-right: 10px;
+  display: none;
 `;
 
 

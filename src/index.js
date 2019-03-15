@@ -7,6 +7,8 @@ import { ApolloProvider } from 'react-apollo';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { createUploadLink } from 'apollo-upload-client';
 
+import '@gctools-components/aurora-css/css/aurora.min.css';
+
 import { Provider } from 'react-redux';
 
 import ConnectedAndLocalizedApp from './containers/App';
@@ -16,7 +18,7 @@ import store from './store';
 import './assets/css/index.css';
 
 const cache = new InMemoryCache({
-  dataIdFromObject: object => object.gcID || null,
+  dataIdFromObject: object => object.gcID || object.id || null,
 });
 
 const client = new ApolloClient({

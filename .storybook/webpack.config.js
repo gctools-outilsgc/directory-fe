@@ -1,4 +1,8 @@
+const I18nTranslationWebpackPlugin =
+  require('@gctools-components/i18n-translation-webpack-plugin');
+
 module.exports = {
+  plugins: [new I18nTranslationWebpackPlugin()],
   module: {
     rules: [
       {

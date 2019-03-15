@@ -69,7 +69,7 @@ exports[`FileProperties OrgChart/Card Only required options 1`] = `
       }
     >
       <a
-        className="sc-bdVaJa fhstoZ"
+        className="sc-htpNat fMdZtI"
         href="#"
         onClick={[Function]}
         style={
@@ -83,30 +83,30 @@ exports[`FileProperties OrgChart/Card Only required options 1`] = `
       >
         <img
           alt="Iain Stewart"
-          className="sc-bwzfXH gQszWm"
+          className="sc-bxivhb doBcjM"
           name="user"
           src="1.jpg"
         />
         <div
-          className="sc-htpNat fgEekJ"
+          className="sc-ifAKCX krJOpu"
         >
           <div
             aria-level={1}
-            className="sc-bxivhb cwDeYE"
+            className="sc-EHOje mbjcj"
             role="heading"
           >
             Iain Stewart
           </div>
           <div
             aria-level={2}
-            className="sc-ifAKCX eBmtR"
+            className="sc-bZQynM diJstw"
             role="heading"
           >
             President - NRC
           </div>
         </div>
         <div
-          className="sc-EHOje kMcEwg"
+          className="sc-gzVnrw jzztnu"
         >
           <button
             aria-label={null}
@@ -1028,7 +1028,7 @@ exports[`FileProperties OrgChart/Card active 1`] = `
       }
     >
       <a
-        className="sc-bdVaJa cHBWIo"
+        className="sc-htpNat fujqyl"
         href="#"
         onClick={[Function]}
         style={
@@ -1042,30 +1042,30 @@ exports[`FileProperties OrgChart/Card active 1`] = `
       >
         <img
           alt="Iain Stewart"
-          className="sc-bwzfXH gQszWm"
+          className="sc-bxivhb doBcjM"
           name="user"
           src="1.jpg"
         />
         <div
-          className="sc-htpNat fgEekJ"
+          className="sc-ifAKCX krJOpu"
         >
           <div
             aria-level={1}
-            className="sc-bxivhb cwDeYE"
+            className="sc-EHOje mbjcj"
             role="heading"
           >
             Iain Stewart
           </div>
           <div
             aria-level={2}
-            className="sc-ifAKCX eBmtR"
+            className="sc-bZQynM diJstw"
             role="heading"
           >
             President - NRC
           </div>
         </div>
         <div
-          className="sc-EHOje kMcEwg"
+          className="sc-gzVnrw jzztnu"
         >
           <button
             aria-label={null}
@@ -1987,7 +1987,7 @@ exports[`FileProperties OrgChart/Card at position x=150, y=220 1`] = `
       }
     >
       <a
-        className="sc-bdVaJa fhstoZ"
+        className="sc-htpNat fMdZtI"
         href="#"
         onClick={[Function]}
         style={
@@ -2001,30 +2001,30 @@ exports[`FileProperties OrgChart/Card at position x=150, y=220 1`] = `
       >
         <img
           alt="Iain Stewart"
-          className="sc-bwzfXH gQszWm"
+          className="sc-bxivhb doBcjM"
           name="user"
           src="1.jpg"
         />
         <div
-          className="sc-htpNat fgEekJ"
+          className="sc-ifAKCX krJOpu"
         >
           <div
             aria-level={1}
-            className="sc-bxivhb cwDeYE"
+            className="sc-EHOje mbjcj"
             role="heading"
           >
             Iain Stewart
           </div>
           <div
             aria-level={2}
-            className="sc-ifAKCX eBmtR"
+            className="sc-bZQynM diJstw"
             role="heading"
           >
             President - NRC
           </div>
         </div>
         <div
-          className="sc-EHOje kMcEwg"
+          className="sc-gzVnrw jzztnu"
         >
           <button
             aria-label={null}
@@ -2946,7 +2946,7 @@ exports[`FileProperties OrgChart/Card blurred 1`] = `
       }
     >
       <a
-        className="sc-bdVaJa fiIXNq"
+        className="sc-htpNat bXXpvt"
         href="#"
         onClick={[Function]}
         style={
@@ -2960,30 +2960,30 @@ exports[`FileProperties OrgChart/Card blurred 1`] = `
       >
         <img
           alt="Iain Stewart"
-          className="sc-bwzfXH gQszWm"
+          className="sc-bxivhb doBcjM"
           name="user"
           src="1.jpg"
         />
         <div
-          className="sc-htpNat fgEekJ"
+          className="sc-ifAKCX krJOpu"
         >
           <div
             aria-level={1}
-            className="sc-bxivhb cwDeYE"
+            className="sc-EHOje mbjcj"
             role="heading"
           >
             Iain Stewart
           </div>
           <div
             aria-level={2}
-            className="sc-ifAKCX eBmtR"
+            className="sc-bZQynM diJstw"
             role="heading"
           >
             President - NRC
           </div>
         </div>
         <div
-          className="sc-EHOje kMcEwg"
+          className="sc-gzVnrw jzztnu"
         >
           <button
             aria-label={null}
@@ -3905,7 +3905,7 @@ exports[`FileProperties OrgChart/Card blurred and active 1`] = `
       }
     >
       <a
-        className="sc-bdVaJa bcbwfc"
+        className="sc-htpNat egQfdm"
         href="#"
         onClick={[Function]}
         style={
@@ -3919,30 +3919,30 @@ exports[`FileProperties OrgChart/Card blurred and active 1`] = `
       >
         <img
           alt="Iain Stewart"
-          className="sc-bwzfXH gQszWm"
+          className="sc-bxivhb doBcjM"
           name="user"
           src="1.jpg"
         />
         <div
-          className="sc-htpNat fgEekJ"
+          className="sc-ifAKCX krJOpu"
         >
           <div
             aria-level={1}
-            className="sc-bxivhb cwDeYE"
+            className="sc-EHOje mbjcj"
             role="heading"
           >
             Iain Stewart
           </div>
           <div
             aria-level={2}
-            className="sc-ifAKCX eBmtR"
+            className="sc-bZQynM diJstw"
             role="heading"
           >
             President - NRC
           </div>
         </div>
         <div
-          className="sc-EHOje kMcEwg"
+          className="sc-gzVnrw jzztnu"
         >
           <button
             aria-label={null}
@@ -4864,7 +4864,7 @@ exports[`FileProperties OrgChart/Card blurred and dragging 1`] = `
       }
     >
       <a
-        className="sc-bdVaJa bvckga"
+        className="sc-htpNat ghTFnm"
         href="#"
         onClick={[Function]}
         style={
@@ -4878,30 +4878,30 @@ exports[`FileProperties OrgChart/Card blurred and dragging 1`] = `
       >
         <img
           alt="Iain Stewart"
-          className="sc-bwzfXH gQszWm"
+          className="sc-bxivhb doBcjM"
           name="user"
           src="1.jpg"
         />
         <div
-          className="sc-htpNat fgEekJ"
+          className="sc-ifAKCX krJOpu"
         >
           <div
             aria-level={1}
-            className="sc-bxivhb cwDeYE"
+            className="sc-EHOje mbjcj"
             role="heading"
           >
             Iain Stewart
           </div>
           <div
             aria-level={2}
-            className="sc-ifAKCX eBmtR"
+            className="sc-bZQynM diJstw"
             role="heading"
           >
             President - NRC
           </div>
         </div>
         <div
-          className="sc-EHOje kMcEwg"
+          className="sc-gzVnrw jzztnu"
         >
           <button
             aria-label={null}
@@ -5823,7 +5823,7 @@ exports[`FileProperties OrgChart/Card blurred, active and dragging 1`] = `
       }
     >
       <a
-        className="sc-bdVaJa jyxbMX"
+        className="sc-htpNat duODb"
         href="#"
         onClick={[Function]}
         style={
@@ -5837,30 +5837,30 @@ exports[`FileProperties OrgChart/Card blurred, active and dragging 1`] = `
       >
         <img
           alt="Iain Stewart"
-          className="sc-bwzfXH gQszWm"
+          className="sc-bxivhb doBcjM"
           name="user"
           src="1.jpg"
         />
         <div
-          className="sc-htpNat fgEekJ"
+          className="sc-ifAKCX krJOpu"
         >
           <div
             aria-level={1}
-            className="sc-bxivhb cwDeYE"
+            className="sc-EHOje mbjcj"
             role="heading"
           >
             Iain Stewart
           </div>
           <div
             aria-level={2}
-            className="sc-ifAKCX eBmtR"
+            className="sc-bZQynM diJstw"
             role="heading"
           >
             President - NRC
           </div>
         </div>
         <div
-          className="sc-EHOje kMcEwg"
+          className="sc-gzVnrw jzztnu"
         >
           <button
             aria-label={null}
@@ -6782,7 +6782,7 @@ exports[`FileProperties OrgChart/Card dragging 1`] = `
       }
     >
       <a
-        className="sc-bdVaJa gETxgF"
+        className="sc-htpNat hMIxKB"
         href="#"
         onClick={[Function]}
         style={
@@ -6796,30 +6796,30 @@ exports[`FileProperties OrgChart/Card dragging 1`] = `
       >
         <img
           alt="Iain Stewart"
-          className="sc-bwzfXH gQszWm"
+          className="sc-bxivhb doBcjM"
           name="user"
           src="1.jpg"
         />
         <div
-          className="sc-htpNat fgEekJ"
+          className="sc-ifAKCX krJOpu"
         >
           <div
             aria-level={1}
-            className="sc-bxivhb cwDeYE"
+            className="sc-EHOje mbjcj"
             role="heading"
           >
             Iain Stewart
           </div>
           <div
             aria-level={2}
-            className="sc-ifAKCX eBmtR"
+            className="sc-bZQynM diJstw"
             role="heading"
           >
             President - NRC
           </div>
         </div>
         <div
-          className="sc-EHOje kMcEwg"
+          className="sc-gzVnrw jzztnu"
         >
           <button
             aria-label={null}
@@ -7741,7 +7741,7 @@ exports[`FileProperties OrgChart/Card dragging and active 1`] = `
       }
     >
       <a
-        className="sc-bdVaJa ijLhFD"
+        className="sc-htpNat cpqNMJ"
         href="#"
         onClick={[Function]}
         style={
@@ -7755,30 +7755,30 @@ exports[`FileProperties OrgChart/Card dragging and active 1`] = `
       >
         <img
           alt="Iain Stewart"
-          className="sc-bwzfXH gQszWm"
+          className="sc-bxivhb doBcjM"
           name="user"
           src="1.jpg"
         />
         <div
-          className="sc-htpNat fgEekJ"
+          className="sc-ifAKCX krJOpu"
         >
           <div
             aria-level={1}
-            className="sc-bxivhb cwDeYE"
+            className="sc-EHOje mbjcj"
             role="heading"
           >
             Iain Stewart
           </div>
           <div
             aria-level={2}
-            className="sc-ifAKCX eBmtR"
+            className="sc-bZQynM diJstw"
             role="heading"
           >
             President - NRC
           </div>
         </div>
         <div
-          className="sc-EHOje kMcEwg"
+          className="sc-gzVnrw jzztnu"
         >
           <button
             aria-label={null}
@@ -8700,7 +8700,7 @@ exports[`FileProperties OrgChart/Card with a card click url 1`] = `
       }
     >
       <a
-        className="sc-bdVaJa fhstoZ"
+        className="sc-htpNat fMdZtI"
         href="http://example.com"
         onClick={[Function]}
         style={
@@ -8714,30 +8714,30 @@ exports[`FileProperties OrgChart/Card with a card click url 1`] = `
       >
         <img
           alt="Iain Stewart"
-          className="sc-bwzfXH gQszWm"
+          className="sc-bxivhb doBcjM"
           name="user"
           src="1.jpg"
         />
         <div
-          className="sc-htpNat fgEekJ"
+          className="sc-ifAKCX krJOpu"
         >
           <div
             aria-level={1}
-            className="sc-bxivhb cwDeYE"
+            className="sc-EHOje mbjcj"
             role="heading"
           >
             Iain Stewart
           </div>
           <div
             aria-level={2}
-            className="sc-ifAKCX eBmtR"
+            className="sc-bZQynM diJstw"
             role="heading"
           >
             President - NRC
           </div>
         </div>
         <div
-          className="sc-EHOje kMcEwg"
+          className="sc-gzVnrw jzztnu"
         >
           <button
             aria-label={null}
@@ -9659,7 +9659,7 @@ exports[`FileProperties OrgChart/Card with click handlers 1`] = `
       }
     >
       <a
-        className="sc-bdVaJa fhstoZ"
+        className="sc-htpNat fMdZtI"
         href="#"
         onClick={[Function]}
         style={
@@ -9673,30 +9673,30 @@ exports[`FileProperties OrgChart/Card with click handlers 1`] = `
       >
         <img
           alt="Iain Stewart"
-          className="sc-bwzfXH gQszWm"
+          className="sc-bxivhb doBcjM"
           name="user"
           src="1.jpg"
         />
         <div
-          className="sc-htpNat fgEekJ"
+          className="sc-ifAKCX krJOpu"
         >
           <div
             aria-level={1}
-            className="sc-bxivhb cwDeYE"
+            className="sc-EHOje mbjcj"
             role="heading"
           >
             Iain Stewart
           </div>
           <div
             aria-level={2}
-            className="sc-ifAKCX eBmtR"
+            className="sc-bZQynM diJstw"
             role="heading"
           >
             President - NRC
           </div>
         </div>
         <div
-          className="sc-EHOje kMcEwg"
+          className="sc-gzVnrw jzztnu"
         >
           <button
             aria-label={null}

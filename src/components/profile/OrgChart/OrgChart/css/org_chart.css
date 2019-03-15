@@ -3,10 +3,12 @@
   position: absolute;
   margin: 70px 0 0 5px;
   padding: 10px;
-  border: 1px solid #444;
+  border: 1px solid transparent;
   background: #fff;
   z-index: 100;
   overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.15);
 }
 
 .react-gc-orgchart-wrapper-minichart {

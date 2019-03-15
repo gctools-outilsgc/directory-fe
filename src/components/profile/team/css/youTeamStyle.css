@@ -1,0 +1,35 @@
+.your-teams-container {
+  height: 100% !important;
+}
+
+.your-teams-container a.nav-link {
+  color: black;
+}
+
+.your-teams-container .nav-link.active {
+  background-color: white;
+  /*box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.15);*/
+  border-radius: 5px;
+}
+
+.your-teams-container .nav-link:hover {
+  cursor: pointer;
+  background-color: white;
+}
+
+.your-teams-container .tab-content>.active {
+  background-color: white;
+}
+
+.member-holder {
+  height: 345px;
+  overflow: auto;
+}
+
+.your-teams-container .member-name {
+  margin-bottom: -5px;
+}
+
+.your-teams-container .tab-content .tab-head {
+  background-color: #F4F8F9;
+}

@@ -49,6 +49,11 @@ query getTeam($gcID: ID!) {
       id
       nameEn
       nameFr
+      organization {
+        id,
+        nameEn,
+        nameFr
+      }
       owner {
         gcID
         name
@@ -60,6 +65,38 @@ query getTeam($gcID: ID!) {
         name
         titleEn
         avatar
+      }
+    }
+  }
+}`;
+
+export const GET_YOUR_TEAM = gql`
+query getProfile($gcID: ID!) {
+  profiles(gcID: $gcID) {
+    gcID
+    team {
+      id
+      organization {
+        id
+      }
+    }
+    ownerOfTeams {
+      id
+      nameEn
+      nameFr
+      descriptionEn
+      descriptionFr
+      members {
+        gcID
+        name
+        avatar
+        titleEn
+        titleFr
+      }
+      organization {
+        id
+        nameEn
+        nameFr
       }
     }
   }
@@ -131,9 +168,6 @@ mutation editProfile($gcID: ID!, $data: ModifyProfileInput!) {
     }
     titleEn
     titleFr
-    supervisor {
-      gcID
-    }
   }
 }
 `;
