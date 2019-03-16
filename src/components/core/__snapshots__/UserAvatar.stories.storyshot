@@ -22,7 +22,7 @@ exports[`FileProperties UserAvatar Authenticated User with avatar and editing 1`
           />
         </div>
         <div
-          className="mutate sc-bwzfXH eJTdaJ"
+          className="mutate sc-bxivhb ceszzy"
         >
           <button
             aria-label={null}
@@ -938,7 +938,7 @@ exports[`FileProperties UserAvatar Authenticated User with no avatar and editing
           />
         </div>
         <div
-          className="mutate sc-bwzfXH eJTdaJ"
+          className="mutate sc-bxivhb ceszzy"
         >
           <button
             aria-label={null}

@@ -20,6 +20,12 @@ const mock = [
       data: {
         profiles: [{
           gcID: '1',
+          team: {
+            id: '32324',
+            organization: {
+              id: '1213232',
+            },
+          },
           ownerOfTeams: [{
             id: '10',
             nameEn: 'Example Team',

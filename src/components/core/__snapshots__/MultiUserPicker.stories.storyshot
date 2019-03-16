@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FileProperties TransferConfirmation isOpen=false 1`] = `
+exports[`FileProperties MultiUserPicker isOpen=false 1`] = `
 <div>
   <div>
     <div
@@ -39,7 +39,7 @@ exports[`FileProperties TransferConfirmation isOpen=false 1`] = `
             }
           }
         >
-          TransferConfirmation
+          MultiUserPicker
         </h1>
         <h2
           style={
@@ -104,7 +104,7 @@ exports[`FileProperties TransferConfirmation isOpen=false 1`] = `
             }
           >
             "
-            TransferConfirmation
+            MultiUserPicker
             " Component
           </h2>
           <table>
@@ -268,7 +268,7 @@ exports[`FileProperties TransferConfirmation isOpen=false 1`] = `
                       }
                     }
                   >
-                    You will transfer to a new Supervisor (& Team)
+                    1. Title
                   </span>
                 </td>
                 <td
@@ -327,7 +327,7 @@ exports[`FileProperties TransferConfirmation isOpen=false 1`] = `
                       }
                     }
                   >
-                    Explicit information about the transfer to include…
+                    2. Paragraph text.  Lorem ipsum dolor sit amet, co…
                   </span>
                 </td>
                 <td
@@ -386,7 +386,7 @@ exports[`FileProperties TransferConfirmation isOpen=false 1`] = `
                       }
                     }
                   >
-                    Primary
+                    4. Primary action
                   </span>
                 </td>
                 <td
@@ -503,7 +503,7 @@ exports[`FileProperties TransferConfirmation isOpen=false 1`] = `
                       }
                     }
                   >
-                    Secondary
+                    Cancel
                   </span>
                 </td>
                 <td
@@ -898,166 +898,7 @@ exports[`FileProperties TransferConfirmation isOpen=false 1`] = `
                     }
                   }
                 >
-                  avatarAltText
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  <span />
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  -
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
-                    Avatar of 
-                  </span>
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                />
-              </tr>
-              <tr>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  oldSupervisor
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  <span />
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  yes
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  -
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                />
-              </tr>
-              <tr>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  transferredUser
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  <span />
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  yes
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  -
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                />
-              </tr>
-              <tr>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  newSupervisor
+                  users
                 </td>
                 <td
                   style={
@@ -1107,7 +948,7 @@ exports[`FileProperties TransferConfirmation isOpen=false 1`] = `
 </div>
 `;
 
-exports[`FileProperties TransferConfirmation isOpen=true 1`] = `
+exports[`FileProperties MultiUserPicker isOpen=true 1`] = `
 <div>
   <div>
     <div
@@ -1146,7 +987,7 @@ exports[`FileProperties TransferConfirmation isOpen=true 1`] = `
             }
           }
         >
-          TransferConfirmation
+          MultiUserPicker
         </h1>
         <h2
           style={
@@ -1199,7 +1040,7 @@ exports[`FileProperties TransferConfirmation isOpen=true 1`] = `
                   <h5
                     className="modal-title"
                   >
-                    You will transfer to a new Supervisor (& Team)
+                    1. Title
                   </h5>
                   <button
                     className="close"
@@ -1211,86 +1052,139 @@ exports[`FileProperties TransferConfirmation isOpen=true 1`] = `
                 <div
                   className="modal-body"
                 >
-                  Explicit information about the transfer to include the Person
-    being transffered, from what Team and Super, to what team and Supervisor.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu
-    porttitor ex. Nam luctus tincidunt dui, sit amet semper mi consequat eu.
-                  <div
-                    className="sc-gZMcBi jbhIgY"
-                  />
-                  <div
-                    className="sc-gqjmRU jlxiWD"
+                  2. Paragraph text.  Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Aenean eu porttitor ex. Nam luctus tincidunt dui, sit
+    amet semper mi consequat euser.
+                  <ul
+                    className="list-group"
                   >
-                    <img
-                      alt="Avatar of  Mark Phillips"
-                      src="1.jpg"
-                    />
                     <div
-                      className="team"
+                      checked={false}
+                      className="sc-htpNat iohKOY"
                     >
-                      <span>
-                        GA
-                      </span>
+                      <li
+                        className="list-group-item"
+                        onClick={[Function]}
+                      >
+                        <div>
+                          <input
+                            aria-label="Checkbox for Mark Phillips"
+                            checked={false}
+                            className=""
+                            onChange={[Function]}
+                            type="checkbox"
+                          />
+                          <img
+                            alt="Mark Phillips"
+                            className="avatar rounded-circle"
+                            src="1.jpg"
+                            style={
+                              Object {
+                                "marginLeft": "10px",
+                              }
+                            }
+                          />
+                          <div
+                            className="sc-bwzfXH hgetGb"
+                          >
+                            <strong>
+                              Mark Phillips
+                            </strong>
+                            <br />
+                            Lawyer
+                          </div>
+                        </div>
+                      </li>
                     </div>
                     <div
-                      className="name"
+                      checked={false}
+                      className="sc-htpNat iohKOY"
                     >
-                      <h2>
-                        Mark Phillips
-                      </h2>
-                      <span>
-                        Team: Global Affairs Advocacy
-                      </span>
+                      <li
+                        className="list-group-item"
+                        onClick={[Function]}
+                      >
+                        <div>
+                          <input
+                            aria-label="Checkbox for Clara MacKinnon"
+                            checked={false}
+                            className=""
+                            onChange={[Function]}
+                            type="checkbox"
+                          />
+                          <img
+                            alt="Clara MacKinnon"
+                            className="avatar rounded-circle"
+                            src="2.jpg"
+                            style={
+                              Object {
+                                "marginLeft": "10px",
+                              }
+                            }
+                          />
+                          <div
+                            className="sc-bwzfXH hgetGb"
+                          >
+                            <strong>
+                              Clara MacKinnon
+                            </strong>
+                            <br />
+                            Analyst
+                          </div>
+                        </div>
+                      </li>
                     </div>
                     <div
-                      className="break"
+                      checked={false}
+                      className="sc-htpNat iohKOY"
                     >
-                      <div />
+                      <li
+                        className="list-group-item"
+                        onClick={[Function]}
+                      >
+                        <div>
+                          <input
+                            aria-label="Checkbox for Mia Jarrel"
+                            checked={false}
+                            className=""
+                            onChange={[Function]}
+                            type="checkbox"
+                          />
+                          <img
+                            alt="Mia Jarrel"
+                            className="avatar rounded-circle"
+                            src="3.jpg"
+                            style={
+                              Object {
+                                "marginLeft": "10px",
+                              }
+                            }
+                          />
+                          <div
+                            className="sc-bwzfXH hgetGb"
+                          >
+                            <strong>
+                              Mia Jarrel
+                            </strong>
+                            <br />
+                            Director
+                          </div>
+                        </div>
+                      </li>
                     </div>
-                    <img
-                      alt="Avatar of  Clara MacKinnon"
-                      src="2.jpg"
-                    />
-                    <div
-                      className="name"
-                    >
-                      <h2>
-                        Clara MacKinnon
-                      </h2>
-                    </div>
-                    <img
-                      alt="Avatar of  Mia Jarrel"
-                      src="3.jpg"
-                    />
-                    <div
-                      className="team new"
-                    >
-                      <span>
-                        DT
-                      </span>
-                    </div>
-                    <div
-                      className="name"
-                    >
-                      <h2>
-                        Mia Jarrel
-                      </h2>
-                      <span>
-                        Team: Default
-                      </span>
-                    </div>
-                  </div>
+                  </ul>
                 </div>
                 <div
                   className="modal-footer"
                 >
                   <button
                     aria-label={null}
-                    className="btn btn-primary"
+                    className="btn btn-primary disabled"
+                    disabled={true}
                     onClick={[Function]}
                     type="button"
                   >
-                    Primary
+                    4. Primary action
                   </button>
                   <button
                     aria-label={null}
@@ -1298,7 +1192,7 @@ exports[`FileProperties TransferConfirmation isOpen=true 1`] = `
                     onClick={[Function]}
                     type="button"
                   >
-                    Secondary
+                    Cancel
                   </button>
                 </div>
               </div>
@@ -1353,7 +1247,7 @@ exports[`FileProperties TransferConfirmation isOpen=true 1`] = `
             }
           >
             "
-            TransferConfirmation
+            MultiUserPicker
             " Component
           </h2>
           <table>
@@ -1517,7 +1411,7 @@ exports[`FileProperties TransferConfirmation isOpen=true 1`] = `
                       }
                     }
                   >
-                    You will transfer to a new Supervisor (& Team)
+                    1. Title
                   </span>
                 </td>
                 <td
@@ -1576,7 +1470,7 @@ exports[`FileProperties TransferConfirmation isOpen=true 1`] = `
                       }
                     }
                   >
-                    Explicit information about the transfer to include…
+                    2. Paragraph text.  Lorem ipsum dolor sit amet, co…
                   </span>
                 </td>
                 <td
@@ -1635,7 +1529,7 @@ exports[`FileProperties TransferConfirmation isOpen=true 1`] = `
                       }
                     }
                   >
-                    Primary
+                    4. Primary action
                   </span>
                 </td>
                 <td
@@ -1752,7 +1646,7 @@ exports[`FileProperties TransferConfirmation isOpen=true 1`] = `
                       }
                     }
                   >
-                    Secondary
+                    Cancel
                   </span>
                 </td>
                 <td
@@ -2147,166 +2041,7 @@ exports[`FileProperties TransferConfirmation isOpen=true 1`] = `
                     }
                   }
                 >
-                  avatarAltText
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  <span />
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  -
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
-                    Avatar of 
-                  </span>
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                />
-              </tr>
-              <tr>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  oldSupervisor
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  <span />
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  yes
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  -
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                />
-              </tr>
-              <tr>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  transferredUser
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  <span />
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  yes
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  -
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                />
-              </tr>
-              <tr>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  newSupervisor
+                  users
                 </td>
                 <td
                   style={
@@ -2356,7 +2091,7 @@ exports[`FileProperties TransferConfirmation isOpen=true 1`] = `
 </div>
 `;
 
-exports[`FileProperties TransferConfirmation with click handlers 1`] = `
+exports[`FileProperties MultiUserPicker with click handlers 1`] = `
 <div>
   <div>
     <div
@@ -2395,7 +2130,7 @@ exports[`FileProperties TransferConfirmation with click handlers 1`] = `
             }
           }
         >
-          TransferConfirmation
+          MultiUserPicker
         </h1>
         <h2
           style={
@@ -2448,7 +2183,7 @@ exports[`FileProperties TransferConfirmation with click handlers 1`] = `
                   <h5
                     className="modal-title"
                   >
-                    You will transfer to a new Supervisor (& Team)
+                    1. Title
                   </h5>
                   <button
                     className="close"
@@ -2460,86 +2195,139 @@ exports[`FileProperties TransferConfirmation with click handlers 1`] = `
                 <div
                   className="modal-body"
                 >
-                  Explicit information about the transfer to include the Person
-    being transffered, from what Team and Super, to what team and Supervisor.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu
-    porttitor ex. Nam luctus tincidunt dui, sit amet semper mi consequat eu.
-                  <div
-                    className="sc-gZMcBi jbhIgY"
-                  />
-                  <div
-                    className="sc-gqjmRU jlxiWD"
+                  2. Paragraph text.  Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Aenean eu porttitor ex. Nam luctus tincidunt dui, sit
+    amet semper mi consequat euser.
+                  <ul
+                    className="list-group"
                   >
-                    <img
-                      alt="Avatar of  Mark Phillips"
-                      src="1.jpg"
-                    />
                     <div
-                      className="team"
+                      checked={false}
+                      className="sc-htpNat iohKOY"
                     >
-                      <span>
-                        GA
-                      </span>
+                      <li
+                        className="list-group-item"
+                        onClick={[Function]}
+                      >
+                        <div>
+                          <input
+                            aria-label="Checkbox for Mark Phillips"
+                            checked={false}
+                            className=""
+                            onChange={[Function]}
+                            type="checkbox"
+                          />
+                          <img
+                            alt="Mark Phillips"
+                            className="avatar rounded-circle"
+                            src="1.jpg"
+                            style={
+                              Object {
+                                "marginLeft": "10px",
+                              }
+                            }
+                          />
+                          <div
+                            className="sc-bwzfXH hgetGb"
+                          >
+                            <strong>
+                              Mark Phillips
+                            </strong>
+                            <br />
+                            Lawyer
+                          </div>
+                        </div>
+                      </li>
                     </div>
                     <div
-                      className="name"
+                      checked={false}
+                      className="sc-htpNat iohKOY"
                     >
-                      <h2>
-                        Mark Phillips
-                      </h2>
-                      <span>
-                        Team: Global Affairs Advocacy
-                      </span>
+                      <li
+                        className="list-group-item"
+                        onClick={[Function]}
+                      >
+                        <div>
+                          <input
+                            aria-label="Checkbox for Clara MacKinnon"
+                            checked={false}
+                            className=""
+                            onChange={[Function]}
+                            type="checkbox"
+                          />
+                          <img
+                            alt="Clara MacKinnon"
+                            className="avatar rounded-circle"
+                            src="2.jpg"
+                            style={
+                              Object {
+                                "marginLeft": "10px",
+                              }
+                            }
+                          />
+                          <div
+                            className="sc-bwzfXH hgetGb"
+                          >
+                            <strong>
+                              Clara MacKinnon
+                            </strong>
+                            <br />
+                            Analyst
+                          </div>
+                        </div>
+                      </li>
                     </div>
                     <div
-                      className="break"
+                      checked={false}
+                      className="sc-htpNat iohKOY"
                     >
-                      <div />
+                      <li
+                        className="list-group-item"
+                        onClick={[Function]}
+                      >
+                        <div>
+                          <input
+                            aria-label="Checkbox for Mia Jarrel"
+                            checked={false}
+                            className=""
+                            onChange={[Function]}
+                            type="checkbox"
+                          />
+                          <img
+                            alt="Mia Jarrel"
+                            className="avatar rounded-circle"
+                            src="3.jpg"
+                            style={
+                              Object {
+                                "marginLeft": "10px",
+                              }
+                            }
+                          />
+                          <div
+                            className="sc-bwzfXH hgetGb"
+                          >
+                            <strong>
+                              Mia Jarrel
+                            </strong>
+                            <br />
+                            Director
+                          </div>
+                        </div>
+                      </li>
                     </div>
-                    <img
-                      alt="Avatar of  Clara MacKinnon"
-                      src="2.jpg"
-                    />
-                    <div
-                      className="name"
-                    >
-                      <h2>
-                        Clara MacKinnon
-                      </h2>
-                    </div>
-                    <img
-                      alt="Avatar of  Mia Jarrel"
-                      src="3.jpg"
-                    />
-                    <div
-                      className="team new"
-                    >
-                      <span>
-                        DT
-                      </span>
-                    </div>
-                    <div
-                      className="name"
-                    >
-                      <h2>
-                        Mia Jarrel
-                      </h2>
-                      <span>
-                        Team: Default
-                      </span>
-                    </div>
-                  </div>
+                  </ul>
                 </div>
                 <div
                   className="modal-footer"
                 >
                   <button
                     aria-label={null}
-                    className="btn btn-primary"
+                    className="btn btn-primary disabled"
+                    disabled={true}
                     onClick={[Function]}
                     type="button"
                   >
-                    Primary
+                    4. Primary action
                   </button>
                   <button
                     aria-label={null}
@@ -2547,7 +2335,7 @@ exports[`FileProperties TransferConfirmation with click handlers 1`] = `
                     onClick={[Function]}
                     type="button"
                   >
-                    Secondary
+                    Cancel
                   </button>
                 </div>
               </div>
@@ -2602,7 +2390,7 @@ exports[`FileProperties TransferConfirmation with click handlers 1`] = `
             }
           >
             "
-            TransferConfirmation
+            MultiUserPicker
             " Component
           </h2>
           <table>
@@ -2766,7 +2554,7 @@ exports[`FileProperties TransferConfirmation with click handlers 1`] = `
                       }
                     }
                   >
-                    You will transfer to a new Supervisor (& Team)
+                    1. Title
                   </span>
                 </td>
                 <td
@@ -2825,7 +2613,7 @@ exports[`FileProperties TransferConfirmation with click handlers 1`] = `
                       }
                     }
                   >
-                    Explicit information about the transfer to include…
+                    2. Paragraph text.  Lorem ipsum dolor sit amet, co…
                   </span>
                 </td>
                 <td
@@ -2884,7 +2672,7 @@ exports[`FileProperties TransferConfirmation with click handlers 1`] = `
                       }
                     }
                   >
-                    Primary
+                    4. Primary action
                   </span>
                 </td>
                 <td
@@ -3001,7 +2789,7 @@ exports[`FileProperties TransferConfirmation with click handlers 1`] = `
                       }
                     }
                   >
-                    Secondary
+                    Cancel
                   </span>
                 </td>
                 <td
@@ -3396,166 +3184,7 @@ exports[`FileProperties TransferConfirmation with click handlers 1`] = `
                     }
                   }
                 >
-                  avatarAltText
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  <span />
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  -
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
-                    Avatar of 
-                  </span>
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                />
-              </tr>
-              <tr>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  oldSupervisor
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  <span />
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  yes
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  -
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                />
-              </tr>
-              <tr>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  transferredUser
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  <span />
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  yes
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  -
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                />
-              </tr>
-              <tr>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  newSupervisor
+                  users
                 </td>
                 <td
                   style={
@@ -3605,7 +3234,7 @@ exports[`FileProperties TransferConfirmation with click handlers 1`] = `
 </div>
 `;
 
-exports[`FileProperties TransferConfirmation with custom text 1`] = `
+exports[`FileProperties MultiUserPicker with custom text 1`] = `
 <div>
   <div>
     <div
@@ -3644,7 +3273,7 @@ exports[`FileProperties TransferConfirmation with custom text 1`] = `
             }
           }
         >
-          TransferConfirmation
+          MultiUserPicker
         </h1>
         <h2
           style={
@@ -3710,78 +3339,132 @@ exports[`FileProperties TransferConfirmation with custom text 1`] = `
                   className="modal-body"
                 >
                   Custom dialog body
-                  <div
-                    className="sc-gZMcBi jbhIgY"
-                  />
-                  <div
-                    className="sc-gqjmRU jlxiWD"
+                  <ul
+                    className="list-group"
                   >
-                    <img
-                      alt="Avatar of  Mark Phillips"
-                      src="1.jpg"
-                    />
                     <div
-                      className="team"
+                      checked={false}
+                      className="sc-htpNat iohKOY"
                     >
-                      <span>
-                        GA
-                      </span>
+                      <li
+                        className="list-group-item"
+                        onClick={[Function]}
+                      >
+                        <div>
+                          <input
+                            aria-label="Checkbox for Mark Phillips"
+                            checked={false}
+                            className=""
+                            onChange={[Function]}
+                            type="checkbox"
+                          />
+                          <img
+                            alt="Mark Phillips"
+                            className="avatar rounded-circle"
+                            src="1.jpg"
+                            style={
+                              Object {
+                                "marginLeft": "10px",
+                              }
+                            }
+                          />
+                          <div
+                            className="sc-bwzfXH hgetGb"
+                          >
+                            <strong>
+                              Mark Phillips
+                            </strong>
+                            <br />
+                            Lawyer
+                          </div>
+                        </div>
+                      </li>
                     </div>
                     <div
-                      className="name"
+                      checked={false}
+                      className="sc-htpNat iohKOY"
                     >
-                      <h2>
-                        Mark Phillips
-                      </h2>
-                      <span>
-                        Team: Global Affairs Advocacy
-                      </span>
+                      <li
+                        className="list-group-item"
+                        onClick={[Function]}
+                      >
+                        <div>
+                          <input
+                            aria-label="Checkbox for Clara MacKinnon"
+                            checked={false}
+                            className=""
+                            onChange={[Function]}
+                            type="checkbox"
+                          />
+                          <img
+                            alt="Clara MacKinnon"
+                            className="avatar rounded-circle"
+                            src="2.jpg"
+                            style={
+                              Object {
+                                "marginLeft": "10px",
+                              }
+                            }
+                          />
+                          <div
+                            className="sc-bwzfXH hgetGb"
+                          >
+                            <strong>
+                              Clara MacKinnon
+                            </strong>
+                            <br />
+                            Analyst
+                          </div>
+                        </div>
+                      </li>
                     </div>
                     <div
-                      className="break"
+                      checked={false}
+                      className="sc-htpNat iohKOY"
                     >
-                      <div />
+                      <li
+                        className="list-group-item"
+                        onClick={[Function]}
+                      >
+                        <div>
+                          <input
+                            aria-label="Checkbox for Mia Jarrel"
+                            checked={false}
+                            className=""
+                            onChange={[Function]}
+                            type="checkbox"
+                          />
+                          <img
+                            alt="Mia Jarrel"
+                            className="avatar rounded-circle"
+                            src="3.jpg"
+                            style={
+                              Object {
+                                "marginLeft": "10px",
+                              }
+                            }
+                          />
+                          <div
+                            className="sc-bwzfXH hgetGb"
+                          >
+                            <strong>
+                              Mia Jarrel
+                            </strong>
+                            <br />
+                            Director
+                          </div>
+                        </div>
+                      </li>
                     </div>
-                    <img
-                      alt="Avatar of  Clara MacKinnon"
-                      src="2.jpg"
-                    />
-                    <div
-                      className="name"
-                    >
-                      <h2>
-                        Clara MacKinnon
-                      </h2>
-                    </div>
-                    <img
-                      alt="Avatar of  Mia Jarrel"
-                      src="3.jpg"
-                    />
-                    <div
-                      className="team new"
-                    >
-                      <span>
-                        DT
-                      </span>
-                    </div>
-                    <div
-                      className="name"
-                    >
-                      <h2>
-                        Mia Jarrel
-                      </h2>
-                      <span>
-                        Team: Default
-                      </span>
-                    </div>
-                  </div>
+                  </ul>
                 </div>
                 <div
                   className="modal-footer"
                 >
                   <button
                     aria-label={null}
-                    className="btn btn-primary"
+                    className="btn btn-primary disabled"
+                    disabled={true}
                     onClick={[Function]}
                     type="button"
                   >
@@ -3848,7 +3531,7 @@ exports[`FileProperties TransferConfirmation with custom text 1`] = `
             }
           >
             "
-            TransferConfirmation
+            MultiUserPicker
             " Component
           </h2>
           <table>
@@ -4012,7 +3695,7 @@ exports[`FileProperties TransferConfirmation with custom text 1`] = `
                       }
                     }
                   >
-                    You will transfer to a new Supervisor (& Team)
+                    1. Title
                   </span>
                 </td>
                 <td
@@ -4071,7 +3754,7 @@ exports[`FileProperties TransferConfirmation with custom text 1`] = `
                       }
                     }
                   >
-                    Explicit information about the transfer to include…
+                    2. Paragraph text.  Lorem ipsum dolor sit amet, co…
                   </span>
                 </td>
                 <td
@@ -4130,7 +3813,7 @@ exports[`FileProperties TransferConfirmation with custom text 1`] = `
                       }
                     }
                   >
-                    Primary
+                    4. Primary action
                   </span>
                 </td>
                 <td
@@ -4247,7 +3930,7 @@ exports[`FileProperties TransferConfirmation with custom text 1`] = `
                       }
                     }
                   >
-                    Secondary
+                    Cancel
                   </span>
                 </td>
                 <td
@@ -4642,166 +4325,7 @@ exports[`FileProperties TransferConfirmation with custom text 1`] = `
                     }
                   }
                 >
-                  avatarAltText
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  <span />
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  -
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
-                    Avatar of 
-                  </span>
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                />
-              </tr>
-              <tr>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  oldSupervisor
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  <span />
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  yes
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  -
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                />
-              </tr>
-              <tr>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  transferredUser
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  <span />
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  yes
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  -
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                />
-              </tr>
-              <tr>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  newSupervisor
+                  users
                 </td>
                 <td
                   style={

@@ -61,6 +61,7 @@ const TeamList = (props) => {
                   {
                     title: (localizer.lang === 'en_CA') ?
                       m.titleEn : m.titleFr,
+                    avatarAltText: `${m.name}'s avatar`,
                   }
                 ))}
                 closeButtonClick={() => { setIsOpen(false); }}
@@ -93,14 +94,12 @@ TeamList.propTypes = {
     gcID: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     avatar: PropTypes.string.isRequired,
-    avatarAltText: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
   })).isRequired,
   otherMembers: PropTypes.arrayOf(PropTypes.shape({
     gcID: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     avatar: PropTypes.string.isRequired,
-    avatarAltText: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
   })).isRequired,
   teamId: PropTypes.string.isRequired,
@@ -131,7 +130,7 @@ class GQLYouTeamsTab extends React.Component {
     return (
       <Query
         query={GET_YOUR_TEAM}
-        variables={{ gcID: (String(this.props.id)) }}
+        variables={{ gcID: this.props.id }}
       >
         {({
           loading,
@@ -141,7 +140,6 @@ class GQLYouTeamsTab extends React.Component {
         }) => {
           if (loading) return 'Loading...';
           if (error) return `Error!: ${error}`;
-          console.log(data);
           if (!data || !data.profiles || data.profiles.length === 0) {
             return 'Invalid object';
           }
@@ -213,8 +211,25 @@ class GQLYouTeamsTab extends React.Component {
           }) => (
             <TeamList
               teamId={id}
-              members={members}
-              otherMembers={defaultMembers}
+              key={`teamlist_${id}`}
+              members={members.map(m => Object.assign(
+                {},
+                m,
+                {
+                  title: (localizer.lang === 'en_CA') ?
+                    m.titleEn : m.titleFr,
+                  avatarAltText: `${m.name}'s avatar`,
+                }
+              ))}
+              otherMembers={defaultMembers.map(m => Object.assign(
+                {},
+                m,
+                {
+                  title: (localizer.lang === 'en_CA') ?
+                    m.titleEn : m.titleFr,
+                  avatarAltText: `${m.name}'s avatar`,
+                }
+              ))}
               refetch={refetch}
             />
           ));

@@ -49,11 +49,11 @@ const YourTeamMemberList = (props) => {
 };
 
 YourTeamMemberList.propTypes = {
-  members: PropTypes.shape({
+  members: PropTypes.arrayOf(PropTypes.shape({
     avatar: PropTypes.string,
     name: PropTypes.string,
     titleEn: PropTypes.string,
-  }).isRequired,
+  })).isRequired,
 };
 
 export default YourTeamMemberList;
