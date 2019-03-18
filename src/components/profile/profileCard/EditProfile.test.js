@@ -41,11 +41,11 @@ const mockProps = {
 
 describe('EditProfile', () => {
   it('renders the component', () => {
-    const { queryByText } = render(
-    <MockedProvider mocks={[]}>
-      <EditProfile profile={mockProps} />
-    </MockedProvider>
-    );
+    const { queryByText } = render((
+      <MockedProvider mocks={[]}>
+        <EditProfile profile={mockProps} />
+      </MockedProvider>
+    ));
     const editText = queryByText('Edit Profile');
     expect(editText.innerHTML).toBe('Edit Profile');
   });

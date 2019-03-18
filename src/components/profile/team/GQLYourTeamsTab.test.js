@@ -39,10 +39,10 @@ const mock = [
               nameFr: 'Org Name FR',
             },
           }],
-      }],
+        }],
       },
     },
-  }
+  },
 ];
 
 afterEach(cleanup);
