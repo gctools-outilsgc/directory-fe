@@ -30,7 +30,7 @@ const user3 = {
   title: 'Director',
 };
 
-storiesOf('MultiUserPicker', module)
+storiesOf('components/core/MultiUserPicker', module)
   .addParameters({
     info: { header: true, inline: true, source: false },
   })

@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 
 import Loading from './Loading';
 
-storiesOf('Loading', module)
+storiesOf('components/profile/team/Loading', module)
   .addParameters({
     info: { header: true, inline: true, source: false },
   })

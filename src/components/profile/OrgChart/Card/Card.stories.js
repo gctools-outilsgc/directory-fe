@@ -15,7 +15,7 @@ const user = {
   title: sampleOrgChart.title.en_CA,
 };
 
-storiesOf('OrgChart/Card', module)
+storiesOf('components/profile/OrgChart/Card', module)
   .addParameters({
     info: { header: true, inline: true, source: false },
   })

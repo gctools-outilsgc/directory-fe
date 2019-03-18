@@ -1,9 +1,11 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
 import { MockedProvider } from 'react-apollo/test-utils';
 
-import ProfileDropdown from './ProfileDropdown';
+import LocalizedProfileListSearch, { ProfileListSearch }
+  from './ProfileListSearch';
 import { SEARCH } from '../../gql/profile';
 
 import avatar1 from './fixtures/1.jpg';
@@ -71,18 +73,32 @@ const mocks = [
   },
 ];
 
-storiesOf('ProfileDropdown', module)
+storiesOf('components/core/ProfileListSearch', module)
   .addParameters({
     info: {
       header: true,
       inline: true,
       source: false,
-      propTablesExclude: [MockedProvider],
+      propTablesExclude: [MockedProvider, LocalizedProfileListSearch],
+      propTables: [ProfileListSearch],
       text: 'Search for "tes" to test',
     },
   })
   .add('With default options', () => (
     <MockedProvider addTypename={false} mocks={mocks}>
-      <ProfileDropdown />
+      <LocalizedProfileListSearch />
+    </MockedProvider>
+  ))
+  .add('With initial search', () => (
+    <MockedProvider addTypename={false} mocks={mocks}>
+      <LocalizedProfileListSearch initialSearch="tes" />
+    </MockedProvider>
+  ))
+  .add('With onChange', () => (
+    <MockedProvider addTypename={false} mocks={mocks}>
+      <LocalizedProfileListSearch
+        initialSearch="tes"
+        onChange={action('onChange')}
+      />
     </MockedProvider>
   ));

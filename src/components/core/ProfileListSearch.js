@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import { Query } from 'react-apollo';
+
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
 
 import {
   InputGroup,
@@ -33,6 +36,7 @@ const ListItemStyle = styled.li`
 :hover {
   background-color: ${varTag('--primary')};
   color: #fff;
+  cursor: pointer;
 }
 font-size: 1.2em;
 div {
@@ -47,8 +51,10 @@ h3 {
 }
 `;
 
-const ProfileDropdown = () => {
-  const [search, setSearch] = useState('tes');
+export const ProfileListSearch = (props) => {
+  const { onChange, initialSearch } = props;
+  const [search, setSearch] = useState(initialSearch);
+  const [selected, setSelected] = useState(false);
   return (
     <Query
       query={SEARCH}
@@ -63,6 +69,7 @@ const ProfileDropdown = () => {
               <Input
                 value={search}
                 onChange={({ target: { value } }) => { setSearch(value); }}
+                placeholder={__('Search for a new supervisor')}
               />
               <InputGroupAddon addonType="append">
                 <InputGroupText>SearchIcon</InputGroupText>
@@ -76,27 +83,37 @@ const ProfileDropdown = () => {
                 <Spinner color="primary" />
               )}
               {!loading && !error && data && data.profiles && (
-                data.profiles.map(profile => (
+                data.profiles.map(({
+                  gcID,
+                  name,
+                  titleFr,
+                  titleEn,
+                  email,
+                  avatar,
+                }) => (
                   <ListItemStyle
-                    key={`pdd-profile-${profile.gcID}`}
-                    className="list-group-item"
+                    key={`pdd-profile-${gcID}`}
+                    className={
+                      `list-group-item ${(selected === gcID) && 'active'}`
+                    }
+                    onClick={(e) => {
+                      setSelected(gcID);
+                      onChange(e, gcID);
+                    }}
                   >
                     <div>
                       <img
                         className="avatar rounded-circle"
                         style={{ marginLeft: '10px' }}
-                        src={profile.avatar}
-                        alt={
-                          (profile.avatarAltText || '%s')
-                            .replace(/%s/g, profile.name)
-                        }
+                        src={avatar}
+                        alt={___(__('%1$s avatar'), name)}
                       />
                     </div>
                     <div>
-                      <h3>{profile.name}</h3>
+                      <h3>{name}</h3>
                       {(lang === 'en_CA') ?
-                        profile.titleEn : profile.titleFr}<br />
-                      {profile.email}
+                        titleEn : titleFr}<br />
+                      {email}
                     </div>
                   </ListItemStyle>
                 ))
@@ -109,4 +126,16 @@ const ProfileDropdown = () => {
   );
 };
 
-export default ProfileDropdown;
+ProfileListSearch.defaultProps = {
+  onChange: () => {},
+  initialSearch: '',
+};
+
+ProfileListSearch.propTypes = {
+  /** Event triggered when a user is chosen from the search */
+  onChange: PropTypes.func,
+  /** Perform a search immediately based on the provided text */
+  initialSearch: PropTypes.string,
+};
+
+export default LocalizedComponent(ProfileListSearch);

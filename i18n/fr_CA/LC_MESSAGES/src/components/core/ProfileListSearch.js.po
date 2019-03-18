@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-03-18 19:34-0300\n"
-"PO-Revision-Date: 2019-03-18 14:46-0300\n"
+"POT-Creation-Date: 2019-03-18 20:02-0300\n"
+"PO-Revision-Date: 2019-03-18 19:57-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr_CA\n"
 "Language-Team: fr_CA <LL@li.org>\n"
@@ -14,13 +14,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: 57:39 src/components/core/ProfileDropdown.js
+#: 82:39 src/components/core/ProfileListSearch.js
 msgid "Unable to perform search"
 msgstr ""
 
-#: 89:33 src/components/core/ProfileDropdown.js
+#: 108:33 src/components/core/ProfileListSearch.js
 msgid "%1$s avatar"
 msgid_plural ""
-msgstr[0] "avatar de %1$s"
+msgstr[0] ""
 msgstr[1] ""
+
+#: 72:29 src/components/core/ProfileListSearch.js
+msgid "Search for a new supervisor"
+msgstr ""
 

@@ -20,7 +20,7 @@ assumeLanguage(root2);
 const nodeA = getNode(root, '3');
 const nodeA2 = getNode(root2, '3');
 
-storiesOf('OrgChart', module)
+storiesOf('components/profile/OrgChart', module)
   .addParameters({
     info: { header: true, inline: true, source: false },
   })
