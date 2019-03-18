@@ -101,7 +101,7 @@ exports[`FileProperties CreateTeamDialog isOpen 1`] = `
                   className=""
                 >
                   <div
-                    className="sc-htoDjs ezfqPz"
+                    className="sc-iwsKbI fzrLKt"
                   >
                     <p>
                       en_CA: What is a team
@@ -298,7 +298,7 @@ exports[`FileProperties CreateTeamDialog isOpen 1`] = `
             }
           >
             "
-            LocalizedCreateTeam
+            LocalizedCreateTeamDialog
             " Component
           </h2>
           <table>
@@ -641,7 +641,7 @@ exports[`FileProperties CreateTeamDialog onCancel 1`] = `
                   className=""
                 >
                   <div
-                    className="sc-htoDjs ezfqPz"
+                    className="sc-iwsKbI fzrLKt"
                   >
                     <p>
                       en_CA: What is a team
@@ -838,7 +838,7 @@ exports[`FileProperties CreateTeamDialog onCancel 1`] = `
             }
           >
             "
-            LocalizedCreateTeam
+            LocalizedCreateTeamDialog
             " Component
           </h2>
           <table>
@@ -1181,7 +1181,7 @@ exports[`FileProperties CreateTeamDialog onSave 1`] = `
                   className=""
                 >
                   <div
-                    className="sc-htoDjs ezfqPz"
+                    className="sc-iwsKbI fzrLKt"
                   >
                     <p>
                       en_CA: What is a team
@@ -1378,7 +1378,7 @@ exports[`FileProperties CreateTeamDialog onSave 1`] = `
             }
           >
             "
-            LocalizedCreateTeam
+            LocalizedCreateTeamDialog
             " Component
           </h2>
           <table>
@@ -1722,7 +1722,7 @@ exports[`FileProperties CreateTeamDialog with defaults 1`] = `
             }
           >
             "
-            LocalizedCreateTeam
+            LocalizedCreateTeamDialog
             " Component
           </h2>
           <table>

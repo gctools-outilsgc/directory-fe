@@ -13,13 +13,19 @@ const mock = [
     request: {
       query: GET_YOUR_TEAM,
       variables: {
-        gcID: (String(1)),
+        gcID: '1',
       },
     },
     result: {
       data: {
         profiles: [{
           gcID: '1',
+          team: {
+            id: '32324',
+            organization: {
+              id: '1213232',
+            },
+          },
           ownerOfTeams: [{
             id: '10',
             nameEn: 'Example Team',
@@ -39,10 +45,10 @@ const mock = [
               nameFr: 'Org Name FR',
             },
           }],
-      }],
+        }],
       },
     },
-  }
+  },
 ];
 
 afterEach(cleanup);

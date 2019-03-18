@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import styled from 'styled-components';
-import { Query } from 'react-apollo';
+import { Query, Mutation } from 'react-apollo';
 
 import {
   TabContent,
@@ -15,10 +15,11 @@ import {
   Button
 } from 'reactstrap';
 
-import { GET_YOUR_TEAM } from '../../../gql/profile';
+import { GET_YOUR_TEAM, EDIT_TEAM } from '../../../gql/profile';
 import './css/youTeamStyle.css';
 import YourTeamMemberList from './YourTeamMemberList';
 import GQLCreateTeamDialog from './GQLCreateTeamDialog';
+import MultiUserPicker from '../../core/MultiUserPicker';
 
 const RowContainer = styled.div`
 background-color: #F4F8F9;
@@ -26,13 +27,92 @@ height: 430px;
 overflow: hidden;
 `;
 
+const TeamList = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const {
+    teamId,
+    members,
+    otherMembers,
+    refetch,
+  } = props;
+  return (
+    <TabPane tabId={teamId} key={teamId} className="w-100">
+      <div className="border-bottom d-flex p-3 tab-head">
+        <div className="mr-auto font-weight-bold">
+          People
+        </div>
+        <div>
+          <Button
+            size="small"
+            onClick={() => { setIsOpen(!isOpen); }}
+          >
+            Add {teamId}
+          </Button>
+          <Mutation
+            mutation={EDIT_TEAM}
+            onCompleted={refetch}
+          >
+            {updateTeam => (
+              <MultiUserPicker
+                isOpen={isOpen}
+                users={otherMembers.map(m => Object.assign(
+                  {},
+                  m,
+                  {
+                    title: (localizer.lang === 'en_CA') ?
+                      m.titleEn : m.titleFr,
+                    avatarAltText: `${m.name}'s avatar`,
+                  }
+                ))}
+                closeButtonClick={() => { setIsOpen(false); }}
+                secondaryButtonClick={() => { setIsOpen(false); }}
+                primaryButtonClick={(e, selected) => {
+                  selected.forEach((gcID) => {
+                    updateTeam({
+                      variables: {
+                        gcID,
+                        data: { team: { id: teamId } },
+                      },
+                    });
+                  });
+                  setIsOpen(false);
+                }}
+              />
+            )}
+          </Mutation>
+        </div>
+      </div>
+      <div className="vh-100 p-3 member-holder">
+        <YourTeamMemberList members={members} />
+      </div>
+    </TabPane>
+  );
+};
+
+TeamList.propTypes = {
+  members: PropTypes.arrayOf(PropTypes.shape({
+    gcID: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+  })).isRequired,
+  otherMembers: PropTypes.arrayOf(PropTypes.shape({
+    gcID: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+  })).isRequired,
+  teamId: PropTypes.string.isRequired,
+  refetch: PropTypes.func.isRequired,
+};
+
 class GQLYouTeamsTab extends React.Component {
   constructor(props) {
     super(props);
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      activeTab: '1',
+      activeTab: undefined,
       createDialogOpen: false,
     };
   }
@@ -46,10 +126,11 @@ class GQLYouTeamsTab extends React.Component {
   }
 
   render() {
+    const { activeTab } = this.state;
     return (
       <Query
         query={GET_YOUR_TEAM}
-        variables={{ gcID: (String(this.props.id)) }}
+        variables={{ gcID: this.props.id }}
       >
         {({
           loading,
@@ -59,9 +140,19 @@ class GQLYouTeamsTab extends React.Component {
         }) => {
           if (loading) return 'Loading...';
           if (error) return `Error!: ${error}`;
-          const userInfo = (!data) ? '' : data.profiles[0];
-          console.log(userInfo);
-          const teamList = userInfo.ownerOfTeams.map(({
+          if (!data || !data.profiles || data.profiles.length === 0) {
+            return 'Invalid object';
+          }
+          const [userInfo] = data.profiles;
+          const sortedTeams = userInfo.ownerOfTeams
+            .sort(t => t.nameEn === '' && -1);
+          const defaultId = (sortedTeams.length > 0) ? sortedTeams[0].id : 0;
+          const defaultMembers = (sortedTeams.length > 0) ?
+            sortedTeams[0].members : [];
+
+          const currentTab = activeTab || defaultId;
+
+          const teamList = sortedTeams.map(({
             id,
             nameEn,
             nameFr,
@@ -72,11 +163,12 @@ class GQLYouTeamsTab extends React.Component {
                 href="#!"
                 onClick={() => { this.toggle(id); }}
                 className={
-                  classnames({ active: this.state.activeTab === id })}
+                  classnames({ active: currentTab === id })}
               >
                 <div>
                   <div className="font-weight-bold">
-                    {nameEn} / {nameFr}
+                    {(nameEn === '') && 'Default Team'}
+                    {(nameEn !== '') && `${nameEn} / ${nameFr}`}
                   </div>
                   <small>
                     {descriptionEn}
@@ -113,27 +205,33 @@ class GQLYouTeamsTab extends React.Component {
               </NavLink>
             </NavItem>
           ));
-          const tabPanel = userInfo.ownerOfTeams.map(({
+          const tabPanel = sortedTeams.map(({
             id,
             members,
           }) => (
-            <TabPane tabId={id} key={id} className="w-100">
-              <div className="border-bottom d-flex p-3 tab-head">
-                <div className="mr-auto font-weight-bold">
-                  People
-                </div>
-                <div>
-                  <Button
-                    size="small"
-                  >
-                    Add {id}
-                  </Button>
-                </div>
-              </div>
-              <div className="vh-100 p-3 member-holder">
-                <YourTeamMemberList members={members} />
-              </div>
-            </TabPane>
+            <TeamList
+              teamId={id}
+              key={`teamlist_${id}`}
+              members={members.map(m => Object.assign(
+                {},
+                m,
+                {
+                  title: (localizer.lang === 'en_CA') ?
+                    m.titleEn : m.titleFr,
+                  avatarAltText: `${m.name}'s avatar`,
+                }
+              ))}
+              otherMembers={defaultMembers.map(m => Object.assign(
+                {},
+                m,
+                {
+                  title: (localizer.lang === 'en_CA') ?
+                    m.titleEn : m.titleFr,
+                  avatarAltText: `${m.name}'s avatar`,
+                }
+              ))}
+              refetch={refetch}
+            />
           ));
           return (
             <RowContainer>
@@ -168,51 +266,15 @@ class GQLYouTeamsTab extends React.Component {
                   </div>
                   <div className="member-holder">
                     <Nav vertical>
-                      <NavItem>
-                        <NavLink
-                          href="#!"
-                          onClick={() => { this.toggle('1'); }}
-                          className={
-                            classnames({
-                              active: this.state.activeTab === '1',
-                            })
-                          }
-                        >
-                          <div className="font-weight-bold">
-                            Default Team
-                          </div>
-                          <small>Your teamless people live here</small>
-                        </NavLink>
-                      </NavItem>
                       {teamList}
                     </Nav>
                   </div>
                 </Col>
                 <Col className="pl-0 d-flex">
                   <TabContent
-                    activeTab={this.state.activeTab}
+                    activeTab={currentTab}
                     className="d-flex w-100"
                   >
-                    <TabPane
-                      tabId="1"
-                      className="h-100 w-100"
-                    >
-                      <div className="border-bottom d-flex p-3 tab-head">
-                        <div className="mr-auto font-weight-bold">
-                          People
-                        </div>
-                        <div>
-                          <Button
-                            size="small"
-                          >
-                            Add
-                          </Button>
-                        </div>
-                      </div>
-                      <div className="p-3">
-                        TODO: put the teamless people here!
-                      </div>
-                    </TabPane>
                     {tabPanel}
                   </TabContent>
                 </Col>

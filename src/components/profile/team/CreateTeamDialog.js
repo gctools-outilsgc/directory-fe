@@ -33,7 +33,7 @@ label {
 }
 `;
 
-export class CreateTeam extends Component {
+export class CreateTeamDialog extends Component {
   constructor(props) {
     super(props);
     this.state = initialState;
@@ -161,16 +161,16 @@ export class CreateTeam extends Component {
   }
 }
 
-CreateTeam.defaultProps = {
+CreateTeamDialog.defaultProps = {
   onSave: () => {},
   onCancel: () => {},
   isOpen: false,
 };
 
-CreateTeam.propTypes = {
+CreateTeamDialog.propTypes = {
   onSave: PropTypes.func,
   onCancel: PropTypes.func,
   isOpen: PropTypes.bool,
 };
 
-export default LocalizedComponent(CreateTeam);
+export default LocalizedComponent(CreateTeamDialog);

@@ -25,27 +25,30 @@ const mockProps = {
   titleEn: '',
   titleFr: '',
   team: {
+    owner: {
+      gcID: '2',
+      name: 'Test Supervisor',
+      email: 'test2@test.test',
+      avatar: '',
+      team: {
+
+      },
+    },
     organization: {
       id: '',
       nameEn: '',
       nameFr: '',
     },
   },
-  supervisor: {
-    gcID: '',
-    name: '',
-    titleEn: '',
-    titleFr: '',
-  },
 };
 
 describe('EditProfile', () => {
   it('renders the component', () => {
-    const { queryByText } = render(
-    <MockedProvider mocks={[]}>
-      <EditProfile profile={mockProps} />
-    </MockedProvider>
-    );
+    const { queryByText } = render((
+      <MockedProvider mocks={[]}>
+        <EditProfile profile={mockProps} />
+      </MockedProvider>
+    ));
     const editText = queryByText('Edit Profile');
     expect(editText.innerHTML).toBe('Edit Profile');
   });
