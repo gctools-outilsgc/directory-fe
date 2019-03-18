@@ -1,9 +1,8 @@
 import gql from 'graphql-tag';
 
-export const GET = gql`
-query getProfile($gcID: ID!) {
-  profiles(gcID: $gcID) {
-    gcID
+const FullProfileFragment = gql`
+fragment FullProfile on Profile {
+  gcID
     name
     email
     avatar
@@ -34,8 +33,17 @@ query getProfile($gcID: ID!) {
     }
     titleEn
     titleFr
+}
+`;
+
+export const GET = gql`
+query getProfile($gcID: ID!) {
+  profiles(gcID: $gcID) {
+    ...FullProfile
   }
-}`;
+}
+${FullProfileFragment}
+`;
 
 export const GET_TEAM = gql`
 query getTeam($gcID: ID!) {
@@ -149,27 +157,10 @@ ${teamDataForOrgChart}
 export const EDIT = gql`
 mutation editProfile($gcID: ID!, $data: ModifyProfileInput!) {
   modifyProfile(gcID: $gcID, data: $data) {
-    gcID
-    name
-    email
-    avatar
-    mobilePhone
-    officePhone
-    team {
-      id
-    }
-    address {
-      id
-      streetAddress
-      city
-      province
-      postalCode
-      country
-    }
-    titleEn
-    titleFr
+    ...FullProfile
   }
 }
+${FullProfileFragment}
 `;
 
 export const EDIT_TEAM = gql`

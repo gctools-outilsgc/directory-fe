@@ -43,6 +43,7 @@ export class OnboardStep5 extends Component {
     } = this.state;
     const teamTest = (!userObject) ? '' : userObject.team;
     const supTest = (!teamTest) ? '' : userObject.team.owner;
+
     return (
       <div>
         <h1 className="h3 border-bottom mb-2 pb-2">
@@ -139,7 +140,6 @@ export class OnboardStep5 extends Component {
                   this.setState({
                     teamId: t.id,
                   });
-                  console.log(teamId);
                 }}
               /> :
               <div>
