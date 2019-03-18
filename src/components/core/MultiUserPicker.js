@@ -72,7 +72,6 @@ const PersonCardContainer = (props) => {
             type="checkbox"
             checked={checked}
             onChange={() => { setChecked(!checked); }}
-            aria-label={`Checkbox for ${user.name}`}
             id={checkboxId}
           />
           <img
