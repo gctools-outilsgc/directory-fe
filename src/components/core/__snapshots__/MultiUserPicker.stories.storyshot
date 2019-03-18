@@ -1068,7 +1068,6 @@ exports[`FileProperties MultiUserPicker isOpen=true 1`] = `
                       >
                         <div>
                           <input
-                            aria-label="Checkbox for Mark Phillips"
                             checked={false}
                             className=""
                             id="muser-chk-select-1"
@@ -1110,7 +1109,6 @@ exports[`FileProperties MultiUserPicker isOpen=true 1`] = `
                       >
                         <div>
                           <input
-                            aria-label="Checkbox for Clara MacKinnon"
                             checked={false}
                             className=""
                             id="muser-chk-select-2"
@@ -1152,7 +1150,6 @@ exports[`FileProperties MultiUserPicker isOpen=true 1`] = `
                       >
                         <div>
                           <input
-                            aria-label="Checkbox for Mia Jarrel"
                             checked={false}
                             className=""
                             id="muser-chk-select-3"
@@ -2223,7 +2220,6 @@ exports[`FileProperties MultiUserPicker with click handlers 1`] = `
                       >
                         <div>
                           <input
-                            aria-label="Checkbox for Mark Phillips"
                             checked={false}
                             className=""
                             id="muser-chk-select-1"
@@ -2265,7 +2261,6 @@ exports[`FileProperties MultiUserPicker with click handlers 1`] = `
                       >
                         <div>
                           <input
-                            aria-label="Checkbox for Clara MacKinnon"
                             checked={false}
                             className=""
                             id="muser-chk-select-2"
@@ -2307,7 +2302,6 @@ exports[`FileProperties MultiUserPicker with click handlers 1`] = `
                       >
                         <div>
                           <input
-                            aria-label="Checkbox for Mia Jarrel"
                             checked={false}
                             className=""
                             id="muser-chk-select-3"
@@ -3376,7 +3370,6 @@ exports[`FileProperties MultiUserPicker with custom text 1`] = `
                       >
                         <div>
                           <input
-                            aria-label="Checkbox for Mark Phillips"
                             checked={false}
                             className=""
                             id="muser-chk-select-1"
@@ -3418,7 +3411,6 @@ exports[`FileProperties MultiUserPicker with custom text 1`] = `
                       >
                         <div>
                           <input
-                            aria-label="Checkbox for Clara MacKinnon"
                             checked={false}
                             className=""
                             id="muser-chk-select-2"
@@ -3460,7 +3452,6 @@ exports[`FileProperties MultiUserPicker with custom text 1`] = `
                       >
                         <div>
                           <input
-                            aria-label="Checkbox for Mia Jarrel"
                             checked={false}
                             className=""
                             id="muser-chk-select-3"
