@@ -28,7 +28,7 @@ const mock = [
             organization: {
               id: '',
               nameEn: '',
-              nameFr:'',
+              nameFr: '',
             },
             owner: {
               gcID: '',

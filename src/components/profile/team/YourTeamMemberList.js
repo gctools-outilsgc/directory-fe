@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const YourTeamMemberList = (props) => {
   const { members } = props;
-  const list = (members.length > 1) ?
+  const list = (members.length > 0) ?
     members.map(p => (
       <li key={p.name} className="mb-3">
         <div className="d-flex">
@@ -49,11 +49,11 @@ const YourTeamMemberList = (props) => {
 };
 
 YourTeamMemberList.propTypes = {
-  members: PropTypes.shape({
+  members: PropTypes.arrayOf(PropTypes.shape({
     avatar: PropTypes.string,
     name: PropTypes.string,
     titleEn: PropTypes.string,
-  }).isRequired,
+  })).isRequired,
 };
 
 export default YourTeamMemberList;
