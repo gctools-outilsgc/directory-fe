@@ -14,6 +14,7 @@ import {
   ListGroup,
   ListGroupItem,
   Input,
+  Label
 } from 'reactstrap';
 
 // Fallback for browsers who don't support CSS variables
@@ -33,6 +34,9 @@ const PersonDetails = styled.div`
   display: inline-block;
   vertical-align: middle;
   padding-left: 10px;
+  label {
+    font-weight: bold;
+  }
 `;
 
 const PersonCard = styled.div`
@@ -52,6 +56,7 @@ const PersonCardContainer = (props) => {
     checkCount,
     onChange
   } = props;
+  const checkboxId = `muser-chk-select-${user.gcID}`;
   return (
     <PersonCard checked={checked}>
       <ListGroupItem
@@ -68,6 +73,7 @@ const PersonCardContainer = (props) => {
             checked={checked}
             onChange={() => { setChecked(!checked); }}
             aria-label={`Checkbox for ${user.name}`}
+            id={checkboxId}
           />
           <img
             className="avatar rounded-circle"
@@ -76,7 +82,7 @@ const PersonCardContainer = (props) => {
             alt={(user.avatarAltText || '%s').replace(/%s/g, user.name)}
           />
           <PersonDetails>
-            <strong>{user.name}</strong><br />
+            <Label for={checkboxId}>{user.name}</Label><br />
             {user.title}
           </PersonDetails>
         </div>

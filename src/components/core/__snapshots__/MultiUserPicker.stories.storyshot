@@ -1071,6 +1071,7 @@ exports[`FileProperties MultiUserPicker isOpen=true 1`] = `
                             aria-label="Checkbox for Mark Phillips"
                             checked={false}
                             className=""
+                            id="muser-chk-select-1"
                             onChange={[Function]}
                             type="checkbox"
                           />
@@ -1085,11 +1086,14 @@ exports[`FileProperties MultiUserPicker isOpen=true 1`] = `
                             }
                           />
                           <div
-                            className="sc-bwzfXH hgetGb"
+                            className="sc-bwzfXH eGxWCa"
                           >
-                            <strong>
+                            <label
+                              className=""
+                              htmlFor="muser-chk-select-1"
+                            >
                               Mark Phillips
-                            </strong>
+                            </label>
                             <br />
                             Lawyer
                           </div>
@@ -1109,6 +1113,7 @@ exports[`FileProperties MultiUserPicker isOpen=true 1`] = `
                             aria-label="Checkbox for Clara MacKinnon"
                             checked={false}
                             className=""
+                            id="muser-chk-select-2"
                             onChange={[Function]}
                             type="checkbox"
                           />
@@ -1123,11 +1128,14 @@ exports[`FileProperties MultiUserPicker isOpen=true 1`] = `
                             }
                           />
                           <div
-                            className="sc-bwzfXH hgetGb"
+                            className="sc-bwzfXH eGxWCa"
                           >
-                            <strong>
+                            <label
+                              className=""
+                              htmlFor="muser-chk-select-2"
+                            >
                               Clara MacKinnon
-                            </strong>
+                            </label>
                             <br />
                             Analyst
                           </div>
@@ -1147,6 +1155,7 @@ exports[`FileProperties MultiUserPicker isOpen=true 1`] = `
                             aria-label="Checkbox for Mia Jarrel"
                             checked={false}
                             className=""
+                            id="muser-chk-select-3"
                             onChange={[Function]}
                             type="checkbox"
                           />
@@ -1161,11 +1170,14 @@ exports[`FileProperties MultiUserPicker isOpen=true 1`] = `
                             }
                           />
                           <div
-                            className="sc-bwzfXH hgetGb"
+                            className="sc-bwzfXH eGxWCa"
                           >
-                            <strong>
+                            <label
+                              className=""
+                              htmlFor="muser-chk-select-3"
+                            >
                               Mia Jarrel
-                            </strong>
+                            </label>
                             <br />
                             Director
                           </div>
@@ -2214,6 +2226,7 @@ exports[`FileProperties MultiUserPicker with click handlers 1`] = `
                             aria-label="Checkbox for Mark Phillips"
                             checked={false}
                             className=""
+                            id="muser-chk-select-1"
                             onChange={[Function]}
                             type="checkbox"
                           />
@@ -2228,11 +2241,14 @@ exports[`FileProperties MultiUserPicker with click handlers 1`] = `
                             }
                           />
                           <div
-                            className="sc-bwzfXH hgetGb"
+                            className="sc-bwzfXH eGxWCa"
                           >
-                            <strong>
+                            <label
+                              className=""
+                              htmlFor="muser-chk-select-1"
+                            >
                               Mark Phillips
-                            </strong>
+                            </label>
                             <br />
                             Lawyer
                           </div>
@@ -2252,6 +2268,7 @@ exports[`FileProperties MultiUserPicker with click handlers 1`] = `
                             aria-label="Checkbox for Clara MacKinnon"
                             checked={false}
                             className=""
+                            id="muser-chk-select-2"
                             onChange={[Function]}
                             type="checkbox"
                           />
@@ -2266,11 +2283,14 @@ exports[`FileProperties MultiUserPicker with click handlers 1`] = `
                             }
                           />
                           <div
-                            className="sc-bwzfXH hgetGb"
+                            className="sc-bwzfXH eGxWCa"
                           >
-                            <strong>
+                            <label
+                              className=""
+                              htmlFor="muser-chk-select-2"
+                            >
                               Clara MacKinnon
-                            </strong>
+                            </label>
                             <br />
                             Analyst
                           </div>
@@ -2290,6 +2310,7 @@ exports[`FileProperties MultiUserPicker with click handlers 1`] = `
                             aria-label="Checkbox for Mia Jarrel"
                             checked={false}
                             className=""
+                            id="muser-chk-select-3"
                             onChange={[Function]}
                             type="checkbox"
                           />
@@ -2304,11 +2325,14 @@ exports[`FileProperties MultiUserPicker with click handlers 1`] = `
                             }
                           />
                           <div
-                            className="sc-bwzfXH hgetGb"
+                            className="sc-bwzfXH eGxWCa"
                           >
-                            <strong>
+                            <label
+                              className=""
+                              htmlFor="muser-chk-select-3"
+                            >
                               Mia Jarrel
-                            </strong>
+                            </label>
                             <br />
                             Director
                           </div>
@@ -3355,6 +3379,7 @@ exports[`FileProperties MultiUserPicker with custom text 1`] = `
                             aria-label="Checkbox for Mark Phillips"
                             checked={false}
                             className=""
+                            id="muser-chk-select-1"
                             onChange={[Function]}
                             type="checkbox"
                           />
@@ -3369,11 +3394,14 @@ exports[`FileProperties MultiUserPicker with custom text 1`] = `
                             }
                           />
                           <div
-                            className="sc-bwzfXH hgetGb"
+                            className="sc-bwzfXH eGxWCa"
                           >
-                            <strong>
+                            <label
+                              className=""
+                              htmlFor="muser-chk-select-1"
+                            >
                               Mark Phillips
-                            </strong>
+                            </label>
                             <br />
                             Lawyer
                           </div>
@@ -3393,6 +3421,7 @@ exports[`FileProperties MultiUserPicker with custom text 1`] = `
                             aria-label="Checkbox for Clara MacKinnon"
                             checked={false}
                             className=""
+                            id="muser-chk-select-2"
                             onChange={[Function]}
                             type="checkbox"
                           />
@@ -3407,11 +3436,14 @@ exports[`FileProperties MultiUserPicker with custom text 1`] = `
                             }
                           />
                           <div
-                            className="sc-bwzfXH hgetGb"
+                            className="sc-bwzfXH eGxWCa"
                           >
-                            <strong>
+                            <label
+                              className=""
+                              htmlFor="muser-chk-select-2"
+                            >
                               Clara MacKinnon
-                            </strong>
+                            </label>
                             <br />
                             Analyst
                           </div>
@@ -3431,6 +3463,7 @@ exports[`FileProperties MultiUserPicker with custom text 1`] = `
                             aria-label="Checkbox for Mia Jarrel"
                             checked={false}
                             className=""
+                            id="muser-chk-select-3"
                             onChange={[Function]}
                             type="checkbox"
                           />
@@ -3445,11 +3478,14 @@ exports[`FileProperties MultiUserPicker with custom text 1`] = `
                             }
                           />
                           <div
-                            className="sc-bwzfXH hgetGb"
+                            className="sc-bwzfXH eGxWCa"
                           >
-                            <strong>
+                            <label
+                              className=""
+                              htmlFor="muser-chk-select-3"
+                            >
                               Mia Jarrel
-                            </strong>
+                            </label>
                             <br />
                             Director
                           </div>
