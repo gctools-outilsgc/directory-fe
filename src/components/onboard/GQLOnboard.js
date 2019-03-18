@@ -48,7 +48,7 @@ export const OnboardMod = (props) => {
       {({ loading, error, data }) => {
         if (loading) return 'loading ...';
         if (error) return `Error!: ${error}`;
-        const userInfo = (!data) ? [''] : data.profiles[0];
+        const userInfo = (!data) ? '' : data.profiles[0];
         return (
           <div>
             {canSkip ? (

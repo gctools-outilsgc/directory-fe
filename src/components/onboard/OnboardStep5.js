@@ -8,48 +8,57 @@ import { Query, Mutation } from 'react-apollo';
 
 import { Button, Row, Col } from 'reactstrap';
 
-import { GET, EDIT } from '../../gql/profile';
+import { GET_TEAM, EDIT, prepareEditProfile } from '../../gql/profile';
+import SupervisorPicker from '../core/SupervisorPicker';
+import TeamPicker from '../core/TeamPicker';
 
 export class OnboardStep5 extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      supEdit: true,
-      orgEdit: true,
+      chosenSupervisor: '',
+      teamId: '',
+      editSup: false,
+      editTeam: false,
     };
 
-    this.editSup = this.editSup.bind(this);
-    this.editOrg = this.editOrg.bind(this);
+    this.toggleSup = this.toggleSup.bind(this);
+    this.toggleTeam = this.toggleTeam.bind(this);
   }
 
-  editSup() {
+  toggleSup() {
     this.setState(prevState => ({
-      supEdit: !prevState.supEdit,
+      editSup: !prevState.editSup,
     }));
   }
 
-  editOrg() {
+  toggleTeam() {
     this.setState(prevState => ({
-      orgEdit: !prevState.orgEdit,
+      editTeam: !prevState.editTeam,
     }));
   }
 
   render() {
     const {
       userObject,
-      token,
     } = this.props;
+    const {
+      chosenSupervisor,
+      teamId,
+      editSup,
+      editTeam,
+    } = this.state;
     return (
       <Query
         variables={{ gcID: (String(userObject.gcID)) }}
-        query={GET}
+        query={GET_TEAM}
       >
         {({ loading, error, data }) => {
           if (loading) return 'Loading...';
           if (error) return `Error! ${error.message}`;
-          const [profile] = data.profiles;
-          const orgTest = (profile && profile.org);
-          const supTest = (profile && profile.supervisor);
+          const userInfo = (!data) ? '' : data.profiles[0];
+          const teamTest = (!userInfo) ? '' : userInfo.team;
+          const supTest = (!teamTest) ? '' : userInfo.team.owner;
           return (
             <div>
               <h1 className="h3 border-bottom mb-2 pb-2">
@@ -62,91 +71,97 @@ export class OnboardStep5 extends Component {
                 </Col>
               </Row>
               <Row>
-                <Col md="6" className="mt-2">
-                  {(() => {
-                    if (this.state.supEdit) {
-                      return (
-                        <Mutation
-                          mutation={EDIT}
-                          refetchQueries={[{
-                            query: GET,
-                            variables: { gcID: String(userObject.gcID) },
-                          }]}
-                          context={{
-                            headers: {
-                              Authorization:
-                                `Bearer ${token}`,
-                            },
-                          }
-                          }
-                        >
-                          {() => (
-                            <div className="onboard-profile">
-                              {__('Supervisor')}
+                <Col>
+                  {editSup ?
+                    <SupervisorPicker
+                      onResultSelect={(s) => {
+                        this.setState({
+                          chosenSupervisor: s,
+                          editTeam: true,
+                        });
+                        this.toggleSup(editSup);
+                      }}
+                    /> :
+                    <div className="d-flex">
+                      {!chosenSupervisor ?
+                        <div className="mr-auto d-flex">
+                          <div className="mr-2">
+                            <img
+                              className="avatar"
+                              src={
+                                supTest ? supTest.avatar : ''
+                              }
+                              alt={
+                                supTest ? supTest.name : 'N'
+                              }
+                            />
+                          </div>
+                          <div>
+                            <div
+                              className="font-weight-bold"
+                            >
+                              {supTest
+                                ? supTest.name : 'None'}
                             </div>
-                          )}
-                        </Mutation>
-                      );
-                    }
-                    return (
-                      <div className="d-flex">
-                        <div>
-                          {supTest ? supTest.name : ''}
+                            <small className="text-muted">
+                              {supTest ?
+                                supTest.titleEn : 'No'}
+                            </small>
+                          </div>
+                        </div> :
+                        <div className="mr-auto d-flex">
+                          <div className="mr-2">
+                            <img
+                              className="avatar"
+                              src={
+                                chosenSupervisor.avatar
+                              }
+                              alt={
+                                chosenSupervisor.name
+                              }
+                            />
+                          </div>
+                          <div>
+                            <div
+                              className="font-weight-bold"
+                            >
+                              {chosenSupervisor.name}
+                            </div>
+                            <small className="text-muted">
+                              {chosenSupervisor.titleEn}
+                            </small>
+                          </div>
                         </div>
-                        <div className="ml-auto">
-                          <Button
-                            onClick={this.editSup}
-                          >
-                            Chng
-                          </Button>
-                        </div>
+                      }
+                      <div>
+                        <Button
+                          onClick={this.toggleSup}
+                          color="light"
+                        >
+                          S
+                        </Button>
                       </div>
-                    );
-                  })()}
+                    </div>
+                  }
                 </Col>
-                <Col md="6" className="mt-2">
-                  {(() => {
-                    if (this.state.orgEdit) {
-                      return (
-                        <Mutation
-                          mutation={EDIT}
-                          refetchQueries={[{
-                            query: GET,
-                            variables: { gcID: String(userObject.gcID) },
-                          }]}
-                          context={{
-                            headers: {
-                              Authorization:
-                                `Bearer ${token}`,
-                            },
-                          }
-                          }
-                        >
-                          {() => (
-                            <div>
-                              {__('Teams')}
-                            </div>
-                          )}
-                        </Mutation>
-                      );
-                    }
-                    return (
-                      <div className="d-flex">
-                        <div>
-                          {orgTest ? orgTest.nameEn : ''}
-                        </div>
-                        <div className="ml-auto">
-                          <Button
-                            onClick={this.editOrg}
-                          >
-                            Chng
-                          </Button>
-                        </div>
-                      </div>
-                    );
-                  })()}
-
-
+                <Col>
+                  {editTeam ?
+                    <TeamPicker
+                      editMode
+                      supervisor={chosenSupervisor}
+                      gcID={userInfo.gcID}
+                      selectedOrgTier={teamTest}
+                      onTeamChange={(t) => {
+                        this.setState({
+                          teamId: t.id,
+                        });
+                        console.log(teamId);
+                      }}
+                    /> :
+                    <div>
+                      {teamTest ? teamTest.nameEn : 'None'}
+                    </div>
+                  }
                 </Col>
               </Row>
               <Row className="m-2 border-top">
@@ -157,13 +172,27 @@ export class OnboardStep5 extends Component {
                   >
                     {__('Back')}
                   </Button>
-                  <Button
-                    onClick={this.props.nextStep}
-                    color="primary"
-                    className="ml-3"
+                  <Mutation
+                    mutation={EDIT}
+                    onCompleted={() => {
+                      this.props.nextStep();
+                    }}
                   >
-                    {__('Next')}
-                  </Button>
+                    {modifyProfile => (
+                      <Button
+                        onClick={() => {
+                          modifyProfile(prepareEditProfile({
+                            gcID: userObject.gcID,
+                            teamId,
+                          }));
+                        }}
+                        color="primary"
+                        className="ml-3"
+                      >
+                        {__('Next')}
+                      </Button>
+                    )}
+                  </Mutation>
                 </div>
               </Row>
             </div>
@@ -185,7 +214,6 @@ OnboardStep5.propTypes = {
   userObject: PropTypes.shape({
     gcID: PropTypes.string,
   }),
-  token: PropTypes.string.isRequired,
   nextStep: PropTypes.func,
   previousStep: PropTypes.func,
 };
