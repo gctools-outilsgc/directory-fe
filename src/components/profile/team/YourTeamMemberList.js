@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const YourTeamMemberList = (props) => {
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
+
+
+export const YourTeamMemberList = (props) => {
   const { members } = props;
   const list = (members.length > 0) ?
     members.map(p => (
@@ -26,7 +30,7 @@ const YourTeamMemberList = (props) => {
             <small>
               <ul className="list-inline">
                 <li className="list-inline-item border-right pr-2">
-                  <a href="#!">action</a>
+                  <a href="#!">{__('transfer to new Supervisor')}</a>
                 </li>
                 <li className="list-inline-item">
                   <a href="#!">action</a>
@@ -56,4 +60,4 @@ YourTeamMemberList.propTypes = {
   })).isRequired,
 };
 
-export default YourTeamMemberList;
+export default LocalizedComponent(YourTeamMemberList);
