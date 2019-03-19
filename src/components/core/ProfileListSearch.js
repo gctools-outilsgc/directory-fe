@@ -11,7 +11,6 @@ import {
   InputGroupText,
   InputGroupAddon,
   Input,
-  ListGroup,
   Alert,
   Spinner
 } from 'reactstrap';
@@ -31,6 +30,11 @@ const varTag = (variable) => {
   }
   return `var(${variable})`;
 };
+
+const ListGroup = styled.ul`
+  height: 300px;
+  overflow-y: scroll;
+`;
 
 const ListItemStyle = styled.li`
 :hover {
@@ -75,7 +79,7 @@ export const ProfileListSearch = (props) => {
                 <InputGroupText>SearchIcon</InputGroupText>
               </InputGroupAddon>
             </InputGroup>
-            <ListGroup>
+            <ListGroup className="list-group">
               {error && (
                 <Alert color="danger">{__('Unable to perform search')}</Alert>
               )}

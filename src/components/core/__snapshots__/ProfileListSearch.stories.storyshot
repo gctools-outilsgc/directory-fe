@@ -82,7 +82,7 @@ exports[`FileProperties components/core/ProfileListSearch With default options 1
         </div>
       </div>
       <ul
-        className="list-group"
+        className="list-group sc-bxivhb jaNiSx"
       />
     </div>
   </div>
@@ -414,7 +414,7 @@ exports[`FileProperties components/core/ProfileListSearch With initial search 1`
         </div>
       </div>
       <ul
-        className="list-group"
+        className="list-group sc-bxivhb jaNiSx"
       >
         <div
           className="spinner-border text-primary"
@@ -757,7 +757,7 @@ exports[`FileProperties components/core/ProfileListSearch With onChange 1`] = `
         </div>
       </div>
       <ul
-        className="list-group"
+        className="list-group sc-bxivhb jaNiSx"
       >
         <div
           className="spinner-border text-primary"

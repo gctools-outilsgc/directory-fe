@@ -17,7 +17,7 @@ import {
 
 import { GET_YOUR_TEAM, EDIT_TEAM } from '../../../gql/profile';
 import './css/youTeamStyle.css';
-import YourTeamMemberList from './YourTeamMemberList';
+import I18nYourTeamMemberList from './YourTeamMemberList';
 import GQLCreateTeamDialog from './GQLCreateTeamDialog';
 import MultiUserPicker from '../../core/MultiUserPicker';
 
@@ -83,7 +83,7 @@ const TeamList = (props) => {
         </div>
       </div>
       <div className="vh-100 p-3 member-holder">
-        <YourTeamMemberList members={members} />
+        <I18nYourTeamMemberList members={members} />
       </div>
     </TabPane>
   );

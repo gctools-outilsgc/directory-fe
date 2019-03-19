@@ -1,0 +1,30 @@
+msgid ""
+msgstr ""
+"Language : en\n"
+"Plural-Forms : nplurals=2; plural=(n != 1);\n"
+"MIME-Version : 1.0\n"
+"Content-Type : text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding : 8bit\n"
+
+#: src/components/profile/team/TransferToSupervisorDialog.js 196:11
+msgid "Transfer a team member to a new Supervisor"
+msgstr ""
+
+#: src/components/profile/team/TransferToSupervisorDialog.js 200:17
+msgid "Choose a new Supervisor for this team member"
+msgstr ""
+
+#: src/components/profile/team/TransferToSupervisorDialog.js 205:23
+msgid "%1$s avatar"
+msgid_plural ""
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/components/profile/team/TransferToSupervisorDialog.js 97:13
+msgid "Transfer"
+msgstr ""
+
+#: src/components/profile/team/TransferToSupervisorDialog.js 103:13
+msgid "Cancel"
+msgstr ""
+
