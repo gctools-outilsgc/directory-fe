@@ -34,7 +34,7 @@ const TeamList = (props) => {
     members,
     otherMembers,
     refetch,
-    gcIDOwner,
+    profile,
   } = props;
   return (
     <TabPane tabId={teamId} key={teamId} className="w-100">
@@ -84,14 +84,20 @@ const TeamList = (props) => {
         </div>
       </div>
       <div className="vh-100 p-3 member-holder">
-        <I18nYourTeamMemberList members={members} gcID={gcIDOwner} />
+        <I18nYourTeamMemberList members={members} profile={profile} />
       </div>
     </TabPane>
   );
 };
 
 TeamList.propTypes = {
-  gcIDOwner: PropTypes.string.isRequired,
+  profile: PropTypes.shape({
+    gcID: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    titleEn: PropTypes.string,
+    titleFr: PropTypes.string,
+  }).isRequired,
   members: PropTypes.arrayOf(PropTypes.shape({
     gcID: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
@@ -212,7 +218,7 @@ class GQLYouTeamsTab extends React.Component {
             members,
           }) => (
             <TeamList
-              gcIDOwner={this.props.id}
+              profile={userInfo}
               teamId={id}
               key={`teamlist_${id}`}
               members={members.map(m => Object.assign(

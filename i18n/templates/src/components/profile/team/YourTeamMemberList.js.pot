@@ -18,3 +18,19 @@ msgstr ""
 msgid "no default team"
 msgstr ""
 
+#: src/components/profile/team/YourTeamMemberList.js 72:21
+msgid "Transfer a team member to a new Supervisor"
+msgstr ""
+
+#: src/components/profile/team/YourTeamMemberList.js 73:24
+msgid "Explicit information about the transfer"
+msgstr ""
+
+#: src/components/profile/team/YourTeamMemberList.js 74:33
+msgid "Accept"
+msgstr ""
+
+#: src/components/profile/team/YourTeamMemberList.js 75:35
+msgid "Back"
+msgstr ""
+

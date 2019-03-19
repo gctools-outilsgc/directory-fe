@@ -416,16 +416,20 @@ exports[`FileProperties components/core/ProfileListSearch With initial search 1`
       <ul
         className="list-group sc-bxivhb jaNiSx"
       >
-        <div
-          className="spinner-border text-primary"
-          role="status"
+        <i
+          className="fa fa-spinner fa-spin"
+          style={
+            Object {
+              "fontSize": "24px",
+            }
+          }
         >
           <span
-            className="sr-only"
+            className="sr-only-delete-me"
           >
             Loading...
           </span>
-        </div>
+        </i>
       </ul>
     </div>
   </div>
@@ -759,16 +763,20 @@ exports[`FileProperties components/core/ProfileListSearch With onChange 1`] = `
       <ul
         className="list-group sc-bxivhb jaNiSx"
       >
-        <div
-          className="spinner-border text-primary"
-          role="status"
+        <i
+          className="fa fa-spinner fa-spin"
+          style={
+            Object {
+              "fontSize": "24px",
+            }
+          }
         >
           <span
-            className="sr-only"
+            className="sr-only-delete-me"
           >
             Loading...
           </span>
-        </div>
+        </i>
       </ul>
     </div>
   </div>

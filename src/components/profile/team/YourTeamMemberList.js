@@ -7,14 +7,26 @@ import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
 
 import I18nTransferToSupervisorDialog from './TransferToSupervisorDialog';
+import TransferConfirmation from './TransferConfirmation';
 import ErrorModal, { err } from '../../core/ErrorModal';
 
 import { EDIT_TEAM, GET_TEAM, GET_YOUR_TEAM } from '../../../gql/profile';
 
+const getDefaultTeam = (profile) => {
+  const [defaultTeam] =
+    profile.ownerOfTeams.filter(({ nameEn }) => nameEn === '');
+  return defaultTeam;
+};
+
 const TransferToSupervisorAction = (props) => {
-  const { profile, gcID } = props;
+  const { profile, supervisor } = props;
   const [showDialog, setShowDialog] = useState(false);
   const [error, setError] = useState([]);
+  const [confirm, setConfirm] = useState(undefined);
+  const closeAll = () => {
+    setConfirm(undefined);
+    setShowDialog(false);
+  };
   return (
     <React.Fragment>
       <a
@@ -31,46 +43,69 @@ const TransferToSupervisorAction = (props) => {
           variables: { gcID: profile.gcID },
         }, {
           query: GET_YOUR_TEAM,
-          variables: { gcID },
+          variables: { gcID: supervisor.gcID },
         }]}
         onCompleted={() => {
-          setShowDialog(false);
+          closeAll();
         }}
       >
         {mutate => (
-          <I18nTransferToSupervisorDialog
-            isOpen={showDialog}
-            profile={profile}
-            secondaryButtonClick={() => { setShowDialog(false); }}
-            closeButtonClick={() => { setShowDialog(false); }}
-            primaryButtonClick={(_, supervisor) => {
-              if (supervisor.gcID === gcID) {
-                setError(err(__('already supervisor')));
-                return false;
-              }
-              const [defaultTeam] = supervisor.ownerOfTeams
-                .filter(({ nameEn }) => nameEn === '');
-              if (!defaultTeam) {
-                setError(err(__('no default team')));
-                return false;
-              }
-              mutate({
-                variables: {
-                  gcID: profile.gcID,
-                  data: { team: { id: defaultTeam.id } },
-                },
-              });
-              return true;
-            }}
-          />
+          <React.Fragment>
+            <I18nTransferToSupervisorDialog
+              isOpen={showDialog}
+              profile={profile}
+              secondaryButtonClick={() => { setShowDialog(false); }}
+              closeButtonClick={() => { setShowDialog(false); }}
+              primaryButtonClick={(_, newSupervisor) => {
+                if (newSupervisor.gcID === supervisor.gcID) {
+                  setError(err(__('already supervisor')));
+                  return false;
+                }
+                const defaultTeam = getDefaultTeam(newSupervisor);
+                if (!defaultTeam) {
+                  setError(err(__('no default team')));
+                  return false;
+                }
+                setConfirm(newSupervisor);
+                return true;
+              }}
+            />
+            {confirm && (<TransferConfirmation
+              oldSupervisor={supervisor}
+              transferredUser={profile}
+              newSupervisor={confirm}
+              isOpen={!!confirm}
+              title={__('Transfer a team member to a new Supervisor')}
+              bodyText={__('Explicit information about the transfer')}
+              primaryButtonText={__('Accept')}
+              secondaryButtonText={__('Back')}
+              secondaryButtonClick={() => { setConfirm(undefined); }}
+              closeButtonClick={closeAll}
+              primaryButtonClick={() => {
+                const defaultTeam = getDefaultTeam(confirm);
+                mutate({
+                  variables: {
+                    gcID: profile.gcID,
+                    data: { team: { id: defaultTeam.id } },
+                  },
+                });
+              }}
+            />)}
+          </React.Fragment>
         )}
       </Mutation>
     </React.Fragment>
   );
 };
 TransferToSupervisorAction.propTypes = {
-  /** gcID of current supervisor */
-  gcID: PropTypes.string.isRequired,
+  /** Profile of current supervisor */
+  supervisor: PropTypes.shape({
+    gcID: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    avatar: PropTypes.string,
+    titleEn: PropTypes.string,
+    titleFr: PropTypes.string,
+  }).isRequired,
   /** Profile of user being transferred */
   profile: PropTypes.shape({
     gcID: PropTypes.string.isRequired,
@@ -82,7 +117,7 @@ TransferToSupervisorAction.propTypes = {
 };
 
 export const YourTeamMemberList = (props) => {
-  const { members, gcID } = props;
+  const { members, profile } = props;
   const list = (members.length > 0) ?
     members.map(p => (
       <li key={p.name} className="mb-3">
@@ -108,7 +143,7 @@ export const YourTeamMemberList = (props) => {
                 <li className="list-inline-item border-right pr-2">
                   <TransferToSupervisorAction
                     profile={p}
-                    gcID={gcID}
+                    supervisor={profile}
                   />
                 </li>
                 <li className="list-inline-item">
@@ -132,8 +167,14 @@ export const YourTeamMemberList = (props) => {
 };
 
 YourTeamMemberList.propTypes = {
-  /** gcID of team owner */
-  gcID: PropTypes.string.isRequired,
+  /** profile of team owner */
+  profile: PropTypes.shape({
+    gcID: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    avatar: PropTypes.string,
+    titleEn: PropTypes.string,
+    titleFr: PropTypes.string,
+  }).isRequired,
   /** List of team members */
   members: PropTypes.arrayOf(PropTypes.shape({
     avatar: PropTypes.string,

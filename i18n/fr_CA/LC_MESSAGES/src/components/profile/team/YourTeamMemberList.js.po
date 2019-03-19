@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-03-19 12:53-0300\n"
+"POT-Creation-Date: 2019-03-19 13:22-0300\n"
 "PO-Revision-Date: 2019-03-18 12:50-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr_CA\n"
@@ -25,4 +25,21 @@ msgstr "L'utilisateur sélectionné est déjà le superviseur de cette personne"
 #: 54:29 src/components/profile/team/YourTeamMemberList.js
 msgid "no default team"
 msgstr "L'utilisateur sélectionné n'a pas d'équipe par défaut."
+
+#: 72:21 src/components/profile/team/YourTeamMemberList.js
+#, fuzzy
+msgid "Transfer a team member to a new Supervisor"
+msgstr "transfert à un nouveau superviseur"
+
+#: 73:24 src/components/profile/team/YourTeamMemberList.js
+msgid "Explicit information about the transfer"
+msgstr ""
+
+#: 74:33 src/components/profile/team/YourTeamMemberList.js
+msgid "Accept"
+msgstr ""
+
+#: 75:35 src/components/profile/team/YourTeamMemberList.js
+msgid "Back"
+msgstr ""
 

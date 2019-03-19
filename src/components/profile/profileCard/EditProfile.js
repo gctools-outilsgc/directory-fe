@@ -387,8 +387,8 @@ export class EditProfile extends Component {
             this.setState({ confirmModal: false });
           }}
         >
-          {modifyProfile => (
-            <TransferConfirmation
+          {modifyProfile =>
+            this.state.confirmModal && (<TransferConfirmation
               isOpen={this.state.confirmModal}
               transferredUser={this.props.profile}
               newSupervisor={

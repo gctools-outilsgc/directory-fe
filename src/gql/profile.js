@@ -98,6 +98,10 @@ export const GET_YOUR_TEAM = gql`
 query getProfile($gcID: ID!) {
   profiles(gcID: $gcID) {
     gcID
+    name
+    avatar
+    titleEn
+    titleFr
     team {
       id
       organization {

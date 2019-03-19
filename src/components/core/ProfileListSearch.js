@@ -11,8 +11,7 @@ import {
   InputGroupText,
   InputGroupAddon,
   Input,
-  Alert,
-  Spinner
+  Alert
 } from 'reactstrap';
 import styled from 'styled-components';
 
@@ -85,7 +84,12 @@ export const ProfileListSearch = (props) => {
                 <Alert color="danger">{__('Unable to perform search')}</Alert>
               )}
               {loading && (
-                <Spinner color="primary" />
+                <i
+                  className="fa fa-spinner fa-spin"
+                  style={{ fontSize: '24px' }}
+                >
+                  <span className="sr-only-delete-me">Loading...</span>
+                </i>
               )}
               {!loading && !error && data && data.profiles && (
                 data.profiles.map((profile) => {
