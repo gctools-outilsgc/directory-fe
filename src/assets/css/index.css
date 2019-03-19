@@ -75,7 +75,7 @@ animation: LoadingText 2s ease infinite;
     z-index: 999;
     padding: 8px;
     border-radius: 5px;
-    width: 230px;
+    width: 255px;
 }
 
 .search-results-none {
