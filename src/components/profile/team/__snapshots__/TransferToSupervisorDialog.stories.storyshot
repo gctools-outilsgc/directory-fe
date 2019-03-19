@@ -863,6 +863,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                       className="input-group"
                     >
                       <input
+                        aria-label="en_CA: Search for a new supervisor"
                         className="form-control"
                         onChange={[Function]}
                         placeholder="en_CA: Search for a new supervisor"
@@ -1716,6 +1717,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog with 
                       className="input-group"
                     >
                       <input
+                        aria-label="en_CA: Search for a new supervisor"
                         className="form-control"
                         onChange={[Function]}
                         placeholder="en_CA: Search for a new supervisor"

@@ -74,6 +74,7 @@ export const ProfileListSearch = (props) => {
                 value={search}
                 onChange={({ target: { value } }) => { setSearch(value); }}
                 placeholder={__('Search for a new supervisor')}
+                aria-label={__('Search for a new supervisor')}
               />
               <InputGroupAddon addonType="append">
                 <InputGroupText>SearchIcon</InputGroupText>

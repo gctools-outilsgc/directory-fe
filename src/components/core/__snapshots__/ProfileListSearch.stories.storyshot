@@ -65,6 +65,7 @@ exports[`FileProperties components/core/ProfileListSearch With default options 1
         className="input-group"
       >
         <input
+          aria-label="en_CA: Search for a new supervisor"
           className="form-control"
           onChange={[Function]}
           placeholder="en_CA: Search for a new supervisor"
@@ -397,6 +398,7 @@ exports[`FileProperties components/core/ProfileListSearch With initial search 1`
         className="input-group"
       >
         <input
+          aria-label="en_CA: Search for a new supervisor"
           className="form-control"
           onChange={[Function]}
           placeholder="en_CA: Search for a new supervisor"
@@ -744,6 +746,7 @@ exports[`FileProperties components/core/ProfileListSearch With onChange 1`] = `
         className="input-group"
       >
         <input
+          aria-label="en_CA: Search for a new supervisor"
           className="form-control"
           onChange={[Function]}
           placeholder="en_CA: Search for a new supervisor"
