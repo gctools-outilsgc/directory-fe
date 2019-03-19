@@ -67,7 +67,9 @@ export const OnboardMod = (props) => {
                   userObject={userInfo}
                   token={accessToken}
                 />
-                <LocalizedOnboardStep4 />
+                <LocalizedOnboardStep4
+                  userObject={userInfo}
+                />
                 <LocalizedOnboardStep5
                   userObject={userInfo}
                   token={accessToken}

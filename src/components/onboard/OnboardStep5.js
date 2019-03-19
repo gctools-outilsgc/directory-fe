@@ -57,6 +57,9 @@ export class OnboardStep5 extends Component {
         </Row>
         <Row>
           <Col>
+            <div className="font-weight-bold mb-2">
+              Supervisor
+            </div>
             {editSup ?
               <SupervisorPicker
                 onResultSelect={(s) => {
@@ -72,7 +75,7 @@ export class OnboardStep5 extends Component {
                   <div className="mr-auto d-flex">
                     <div className="mr-2">
                       <img
-                        className="avatar"
+                        className="avatar rounded-circle"
                         src={
                           supTest ? supTest.avatar : ''
                         }
@@ -97,7 +100,7 @@ export class OnboardStep5 extends Component {
                   <div className="mr-auto d-flex">
                     <div className="mr-2">
                       <img
-                        className="avatar"
+                        className="avatar rounded-circle"
                         src={
                           chosenSupervisor.avatar
                         }
@@ -130,6 +133,9 @@ export class OnboardStep5 extends Component {
             }
           </Col>
           <Col>
+            <div className="font-weight-bold mb-2">
+              Team
+            </div>
             {editTeam ?
               <TeamPicker
                 editMode

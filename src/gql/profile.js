@@ -45,38 +45,46 @@ query getProfile($gcID: ID!) {
 ${FullProfileFragment}
 `;
 
+const FullTeamFragment = gql`
+fragment FullTeam on Profile {
+  gcID
+  name
+  avatar
+  titleEn
+  titleFr
+  team {
+    id
+    nameEn
+    nameFr
+    organization {
+      id,
+      nameEn,
+      nameFr
+    }
+    owner {
+      gcID
+      name
+      avatar
+      titleEn
+      titleFr
+    }
+    members {
+      name
+      titleEn
+      avatar
+    }
+  }
+}
+`;
+
 export const GET_TEAM = gql`
 query getTeam($gcID: ID!) {
   profiles(gcID: $gcID) {
-    gcID
-    name
-    avatar
-    titleEn
-    titleFr
-    team {
-      id
-      nameEn
-      nameFr
-      organization {
-        id,
-        nameEn,
-        nameFr
-      }
-      owner {
-        gcID
-        name
-        avatar
-        titleEn
-        titleFr
-      }
-      members {
-        name
-        titleEn
-        avatar
-      }
-    }
+    ...FullTeam
   }
-}`;
+}
+${FullTeamFragment}
+`;
 
 export const GET_YOUR_TEAM = gql`
 query getProfile($gcID: ID!) {
@@ -167,12 +175,10 @@ export const EDIT_TEAM = gql`
 mutation editTeam($gcID: ID!, $data: ModifyProfileInput!)
 {
   modifyProfile(gcID: $gcID, data: $data){
-    gcID
-    team {
-      id
-    }
+    ...FullTeam
   }
 }
+${FullTeamFragment}
 `;
 
 /**
