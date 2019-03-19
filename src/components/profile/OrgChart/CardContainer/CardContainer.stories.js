@@ -13,7 +13,7 @@ assumeLanguage(root, 'en_CA');
 
 const nodeA = getNode(root, '3');
 
-storiesOf('OrgChart/CardContainer', module)
+storiesOf('components/profile/OrgChart/CardContainer', module)
   .addParameters({
     info: { header: true, inline: true, source: false },
   })

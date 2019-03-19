@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FileProperties UserAvatar Authenticated User with avatar and editing 1`] = `
+exports[`FileProperties components/core/UserAvatar Authenticated User with avatar and editing 1`] = `
 <div>
   <div
     style={
@@ -22,7 +22,7 @@ exports[`FileProperties UserAvatar Authenticated User with avatar and editing 1`
           />
         </div>
         <div
-          className="mutate sc-bxivhb ceszzy"
+          className="mutate sc-EHOje QKupb"
         >
           <button
             aria-label={null}
@@ -147,7 +147,7 @@ exports[`FileProperties UserAvatar Authenticated User with avatar and editing 1`
               }
             }
           >
-            UserAvatar
+            components/core/UserAvatar
           </h1>
           <h2
             style={
@@ -916,7 +916,7 @@ exports[`FileProperties UserAvatar Authenticated User with avatar and editing 1`
 </div>
 `;
 
-exports[`FileProperties UserAvatar Authenticated User with no avatar and editing 1`] = `
+exports[`FileProperties components/core/UserAvatar Authenticated User with no avatar and editing 1`] = `
 <div>
   <div
     style={
@@ -938,7 +938,7 @@ exports[`FileProperties UserAvatar Authenticated User with no avatar and editing
           />
         </div>
         <div
-          className="mutate sc-bxivhb ceszzy"
+          className="mutate sc-EHOje QKupb"
         >
           <button
             aria-label={null}
@@ -1063,7 +1063,7 @@ exports[`FileProperties UserAvatar Authenticated User with no avatar and editing
               }
             }
           >
-            UserAvatar
+            components/core/UserAvatar
           </h1>
           <h2
             style={
@@ -1793,7 +1793,7 @@ exports[`FileProperties UserAvatar Authenticated User with no avatar and editing
 </div>
 `;
 
-exports[`FileProperties UserAvatar Authenticated User with no avatar and no editing 1`] = `
+exports[`FileProperties components/core/UserAvatar Authenticated User with no avatar and no editing 1`] = `
 <div>
   <div
     style={
@@ -1914,7 +1914,7 @@ exports[`FileProperties UserAvatar Authenticated User with no avatar and no edit
               }
             }
           >
-            UserAvatar
+            components/core/UserAvatar
           </h1>
           <h2
             style={
@@ -2454,7 +2454,7 @@ exports[`FileProperties UserAvatar Authenticated User with no avatar and no edit
 </div>
 `;
 
-exports[`FileProperties UserAvatar Not logged in not own profile 1`] = `
+exports[`FileProperties components/core/UserAvatar Not logged in not own profile 1`] = `
 <div>
   <div
     style={
@@ -2575,7 +2575,7 @@ exports[`FileProperties UserAvatar Not logged in not own profile 1`] = `
               }
             }
           >
-            UserAvatar
+            components/core/UserAvatar
           </h1>
           <h2
             style={
@@ -3115,7 +3115,7 @@ exports[`FileProperties UserAvatar Not logged in not own profile 1`] = `
 </div>
 `;
 
-exports[`FileProperties UserAvatar With default options 1`] = `
+exports[`FileProperties components/core/UserAvatar With default options 1`] = `
 <div>
   <div
     style={
@@ -3236,7 +3236,7 @@ exports[`FileProperties UserAvatar With default options 1`] = `
               }
             }
           >
-            UserAvatar
+            components/core/UserAvatar
           </h1>
           <h2
             style={

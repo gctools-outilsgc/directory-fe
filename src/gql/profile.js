@@ -37,6 +37,30 @@ query getProfile($gcID: ID!) {
   }
 }`;
 
+export const SEARCH = gql`
+query profileSearchQuery($name: String!) {
+  profiles(name: $name) {
+    gcID
+    name
+    email
+    titleEn
+    titleFr
+    avatar
+    team {
+      id
+      organization {
+        id
+        nameEn
+        nameFr
+      }
+    }
+    ownerOfTeams {
+      id
+      nameEn
+    }
+  }
+}`;
+
 export const GET_TEAM = gql`
 query getTeam($gcID: ID!) {
   profiles(gcID: $gcID) {
@@ -74,6 +98,10 @@ export const GET_YOUR_TEAM = gql`
 query getProfile($gcID: ID!) {
   profiles(gcID: $gcID) {
     gcID
+    name
+    avatar
+    titleEn
+    titleFr
     team {
       id
       organization {

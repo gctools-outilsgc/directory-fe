@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FileProperties CreateTeamDialog isOpen 1`] = `
+exports[`FileProperties components/profile/team/CreateTeamDialog isOpen 1`] = `
 <div>
   <div>
     <div
@@ -39,7 +39,7 @@ exports[`FileProperties CreateTeamDialog isOpen 1`] = `
             }
           }
         >
-          CreateTeamDialog
+          components/profile/team/CreateTeamDialog
         </h1>
         <h2
           style={
@@ -101,7 +101,7 @@ exports[`FileProperties CreateTeamDialog isOpen 1`] = `
                   className=""
                 >
                   <div
-                    className="sc-iwsKbI fzrLKt"
+                    className="sc-gqjmRU kuzixd"
                   >
                     <p>
                       en_CA: What is a team
@@ -540,7 +540,7 @@ exports[`FileProperties CreateTeamDialog isOpen 1`] = `
 </div>
 `;
 
-exports[`FileProperties CreateTeamDialog onCancel 1`] = `
+exports[`FileProperties components/profile/team/CreateTeamDialog onCancel 1`] = `
 <div>
   <div>
     <div
@@ -579,7 +579,7 @@ exports[`FileProperties CreateTeamDialog onCancel 1`] = `
             }
           }
         >
-          CreateTeamDialog
+          components/profile/team/CreateTeamDialog
         </h1>
         <h2
           style={
@@ -641,7 +641,7 @@ exports[`FileProperties CreateTeamDialog onCancel 1`] = `
                   className=""
                 >
                   <div
-                    className="sc-iwsKbI fzrLKt"
+                    className="sc-gqjmRU kuzixd"
                   >
                     <p>
                       en_CA: What is a team
@@ -1080,7 +1080,7 @@ exports[`FileProperties CreateTeamDialog onCancel 1`] = `
 </div>
 `;
 
-exports[`FileProperties CreateTeamDialog onSave 1`] = `
+exports[`FileProperties components/profile/team/CreateTeamDialog onSave 1`] = `
 <div>
   <div>
     <div
@@ -1119,7 +1119,7 @@ exports[`FileProperties CreateTeamDialog onSave 1`] = `
             }
           }
         >
-          CreateTeamDialog
+          components/profile/team/CreateTeamDialog
         </h1>
         <h2
           style={
@@ -1181,7 +1181,7 @@ exports[`FileProperties CreateTeamDialog onSave 1`] = `
                   className=""
                 >
                   <div
-                    className="sc-iwsKbI fzrLKt"
+                    className="sc-gqjmRU kuzixd"
                   >
                     <p>
                       en_CA: What is a team
@@ -1620,7 +1620,7 @@ exports[`FileProperties CreateTeamDialog onSave 1`] = `
 </div>
 `;
 
-exports[`FileProperties CreateTeamDialog with defaults 1`] = `
+exports[`FileProperties components/profile/team/CreateTeamDialog with defaults 1`] = `
 <div>
   <div>
     <div
@@ -1659,7 +1659,7 @@ exports[`FileProperties CreateTeamDialog with defaults 1`] = `
             }
           }
         >
-          CreateTeamDialog
+          components/profile/team/CreateTeamDialog
         </h1>
         <h2
           style={

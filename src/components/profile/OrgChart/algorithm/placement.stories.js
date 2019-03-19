@@ -11,7 +11,7 @@ import '../fixtures/placement.css';
 assumeLanguage(root);
 const nodeA = getNode(root, '4');
 
-storiesOf('OrgChart/Placement Algorithm', module)
+storiesOf('components/profile/OrgChart/Placement Algorithm', module)
   .add(
     'Using sample data',
     () => {

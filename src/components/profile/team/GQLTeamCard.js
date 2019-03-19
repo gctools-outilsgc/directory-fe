@@ -303,7 +303,7 @@ export class GQLTeamCard extends React.Component {
                                 });
                               }}
                             >
-                              {modifyProfile => (
+                              {modifyProfile => this.state.confirmModal && (
                                 <TransferConfirmation
                                   isOpen={this.state.confirmModal}
                                   oldSupervisor={supTest}

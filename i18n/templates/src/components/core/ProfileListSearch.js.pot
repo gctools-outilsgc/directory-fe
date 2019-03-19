@@ -1,0 +1,22 @@
+msgid ""
+msgstr ""
+"Language : en\n"
+"Plural-Forms : nplurals=2; plural=(n != 1);\n"
+"MIME-Version : 1.0\n"
+"Content-Type : text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding : 8bit\n"
+
+#: src/components/core/ProfileListSearch.js 82:39
+msgid "Unable to perform search"
+msgstr ""
+
+#: src/components/core/ProfileListSearch.js 108:33
+msgid "%1$s avatar"
+msgid_plural ""
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/components/core/ProfileListSearch.js 72:29
+msgid "Search for a new supervisor"
+msgstr ""
+

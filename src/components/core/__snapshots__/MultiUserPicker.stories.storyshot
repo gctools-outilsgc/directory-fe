@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FileProperties MultiUserPicker isOpen=false 1`] = `
+exports[`FileProperties components/core/MultiUserPicker isOpen=false 1`] = `
 <div>
   <div>
     <div
@@ -39,7 +39,7 @@ exports[`FileProperties MultiUserPicker isOpen=false 1`] = `
             }
           }
         >
-          MultiUserPicker
+          components/core/MultiUserPicker
         </h1>
         <h2
           style={
@@ -948,7 +948,7 @@ exports[`FileProperties MultiUserPicker isOpen=false 1`] = `
 </div>
 `;
 
-exports[`FileProperties MultiUserPicker isOpen=true 1`] = `
+exports[`FileProperties components/core/MultiUserPicker isOpen=true 1`] = `
 <div>
   <div>
     <div
@@ -987,7 +987,7 @@ exports[`FileProperties MultiUserPicker isOpen=true 1`] = `
             }
           }
         >
-          MultiUserPicker
+          components/core/MultiUserPicker
         </h1>
         <h2
           style={
@@ -2100,7 +2100,7 @@ exports[`FileProperties MultiUserPicker isOpen=true 1`] = `
 </div>
 `;
 
-exports[`FileProperties MultiUserPicker with click handlers 1`] = `
+exports[`FileProperties components/core/MultiUserPicker with click handlers 1`] = `
 <div>
   <div>
     <div
@@ -2139,7 +2139,7 @@ exports[`FileProperties MultiUserPicker with click handlers 1`] = `
             }
           }
         >
-          MultiUserPicker
+          components/core/MultiUserPicker
         </h1>
         <h2
           style={
@@ -3252,7 +3252,7 @@ exports[`FileProperties MultiUserPicker with click handlers 1`] = `
 </div>
 `;
 
-exports[`FileProperties MultiUserPicker with custom text 1`] = `
+exports[`FileProperties components/core/MultiUserPicker with custom text 1`] = `
 <div>
   <div>
     <div
@@ -3291,7 +3291,7 @@ exports[`FileProperties MultiUserPicker with custom text 1`] = `
             }
           }
         >
-          MultiUserPicker
+          components/core/MultiUserPicker
         </h1>
         <h2
           style={

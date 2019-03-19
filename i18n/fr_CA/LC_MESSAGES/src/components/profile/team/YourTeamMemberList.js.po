@@ -1,0 +1,45 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-03-19 13:57-0300\n"
+"PO-Revision-Date: 2019-03-18 12:50-0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr_CA\n"
+"Language-Team: fr_CA <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: 33:32 src/components/profile/team/YourTeamMemberList.js
+msgid "transfer to new Supervisor"
+msgstr "transfert à un nouveau superviseur"
+
+#: 48:29 src/components/profile/team/YourTeamMemberList.js
+msgid "already supervisor"
+msgstr "L'utilisateur sélectionné est déjà le superviseur de cette personne"
+
+#: 54:29 src/components/profile/team/YourTeamMemberList.js
+msgid "no default team"
+msgstr "L'utilisateur sélectionné n'a pas d'équipe par défaut."
+
+#: 72:21 src/components/profile/team/YourTeamMemberList.js
+#, fuzzy
+msgid "Transfer a team member to a new Supervisor"
+msgstr "transfert à un nouveau superviseur"
+
+#: 73:24 src/components/profile/team/YourTeamMemberList.js
+msgid "Explicit information about the transfer"
+msgstr ""
+
+#: 74:33 src/components/profile/team/YourTeamMemberList.js
+msgid "Accept"
+msgstr ""
+
+#: 75:35 src/components/profile/team/YourTeamMemberList.js
+msgid "Back"
+msgstr ""
+

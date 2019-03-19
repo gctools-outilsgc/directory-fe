@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 
 import InputCharacterCount from './InputCharacterCount';
 
-storiesOf('InputCharacterCount', module)
+storiesOf('components/core/InputCharacterCount', module)
   .addParameters({
     info: { header: true, inline: true, source: false },
   })

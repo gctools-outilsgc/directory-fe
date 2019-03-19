@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FileProperties Loading With default options 1`] = `
+exports[`FileProperties components/profile/team/Loading With default options 1`] = `
 <div>
   <div>
     <div
@@ -39,7 +39,7 @@ exports[`FileProperties Loading With default options 1`] = `
             }
           }
         >
-          Loading
+          components/profile/team/Loading
         </h1>
         <h2
           style={

@@ -5,7 +5,7 @@ import { MockedProvider } from 'react-apollo/test-utils';
 
 import { UserAvatar } from './UserAvatar';
 
-storiesOf('UserAvatar', module)
+storiesOf('components/core/UserAvatar', module)
   .add('With default options', () => <UserAvatar />)
   .add('Not logged in not own profile', () => (
     <UserAvatar

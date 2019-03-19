@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FileProperties InputCharacterCount With default options 1`] = `
+exports[`FileProperties components/core/InputCharacterCount With default options 1`] = `
 <div>
   <div>
     <div
@@ -39,7 +39,7 @@ exports[`FileProperties InputCharacterCount With default options 1`] = `
             }
           }
         >
-          InputCharacterCount
+          components/core/InputCharacterCount
         </h1>
         <h2
           style={
@@ -460,7 +460,7 @@ exports[`FileProperties InputCharacterCount With default options 1`] = `
 </div>
 `;
 
-exports[`FileProperties InputCharacterCount with id 1`] = `
+exports[`FileProperties components/core/InputCharacterCount with id 1`] = `
 <div>
   <div>
     <div
@@ -499,7 +499,7 @@ exports[`FileProperties InputCharacterCount with id 1`] = `
             }
           }
         >
-          InputCharacterCount
+          components/core/InputCharacterCount
         </h1>
         <h2
           style={
@@ -921,7 +921,7 @@ exports[`FileProperties InputCharacterCount with id 1`] = `
 </div>
 `;
 
-exports[`FileProperties InputCharacterCount with maxLength 1`] = `
+exports[`FileProperties components/core/InputCharacterCount with maxLength 1`] = `
 <div>
   <div>
     <div
@@ -960,7 +960,7 @@ exports[`FileProperties InputCharacterCount with maxLength 1`] = `
             }
           }
         >
-          InputCharacterCount
+          components/core/InputCharacterCount
         </h1>
         <h2
           style={
@@ -1381,7 +1381,7 @@ exports[`FileProperties InputCharacterCount with maxLength 1`] = `
 </div>
 `;
 
-exports[`FileProperties InputCharacterCount with onChange 1`] = `
+exports[`FileProperties components/core/InputCharacterCount with onChange 1`] = `
 <div>
   <div>
     <div
@@ -1420,7 +1420,7 @@ exports[`FileProperties InputCharacterCount with onChange 1`] = `
             }
           }
         >
-          InputCharacterCount
+          components/core/InputCharacterCount
         </h1>
         <h2
           style={
@@ -1841,7 +1841,7 @@ exports[`FileProperties InputCharacterCount with onChange 1`] = `
 </div>
 `;
 
-exports[`FileProperties InputCharacterCount with placeholder 1`] = `
+exports[`FileProperties components/core/InputCharacterCount with placeholder 1`] = `
 <div>
   <div>
     <div
@@ -1880,7 +1880,7 @@ exports[`FileProperties InputCharacterCount with placeholder 1`] = `
             }
           }
         >
-          InputCharacterCount
+          components/core/InputCharacterCount
         </h1>
         <h2
           style={
@@ -2302,7 +2302,7 @@ exports[`FileProperties InputCharacterCount with placeholder 1`] = `
 </div>
 `;
 
-exports[`FileProperties InputCharacterCount with showCounter=false 1`] = `
+exports[`FileProperties components/core/InputCharacterCount with showCounter=false 1`] = `
 <div>
   <div>
     <div
@@ -2341,7 +2341,7 @@ exports[`FileProperties InputCharacterCount with showCounter=false 1`] = `
             }
           }
         >
-          InputCharacterCount
+          components/core/InputCharacterCount
         </h1>
         <h2
           style={
@@ -2757,7 +2757,7 @@ exports[`FileProperties InputCharacterCount with showCounter=false 1`] = `
 </div>
 `;
 
-exports[`FileProperties InputCharacterCount with showCounter=true 1`] = `
+exports[`FileProperties components/core/InputCharacterCount with showCounter=true 1`] = `
 <div>
   <div>
     <div
@@ -2796,7 +2796,7 @@ exports[`FileProperties InputCharacterCount with showCounter=true 1`] = `
             }
           }
         >
-          InputCharacterCount
+          components/core/InputCharacterCount
         </h1>
         <h2
           style={

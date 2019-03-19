@@ -1,0 +1,30 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-03-18 20:02-0300\n"
+"PO-Revision-Date: 2019-03-18 19:57-0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en_CA\n"
+"Language-Team: en_CA <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: 82:39 src/components/core/ProfileListSearch.js
+msgid "Unable to perform search"
+msgstr ""
+
+#: 108:33 src/components/core/ProfileListSearch.js
+msgid "%1$s avatar"
+msgid_plural ""
+msgstr[0] ""
+msgstr[1] ""
+
+#: 72:29 src/components/core/ProfileListSearch.js
+msgid "Search for a new supervisor"
+msgstr ""
+

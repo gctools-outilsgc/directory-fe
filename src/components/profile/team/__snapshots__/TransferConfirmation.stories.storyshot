@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FileProperties TransferConfirmation isOpen=false 1`] = `
+exports[`FileProperties components/profile/team/TransferConfirmation isOpen=false 1`] = `
 <div>
   <div>
     <div
@@ -39,7 +39,7 @@ exports[`FileProperties TransferConfirmation isOpen=false 1`] = `
             }
           }
         >
-          TransferConfirmation
+          components/profile/team/TransferConfirmation
         </h1>
         <h2
           style={
@@ -1107,7 +1107,7 @@ exports[`FileProperties TransferConfirmation isOpen=false 1`] = `
 </div>
 `;
 
-exports[`FileProperties TransferConfirmation isOpen=true 1`] = `
+exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true 1`] = `
 <div>
   <div>
     <div
@@ -1146,7 +1146,7 @@ exports[`FileProperties TransferConfirmation isOpen=true 1`] = `
             }
           }
         >
-          TransferConfirmation
+          components/profile/team/TransferConfirmation
         </h1>
         <h2
           style={
@@ -1216,10 +1216,10 @@ exports[`FileProperties TransferConfirmation isOpen=true 1`] = `
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu
     porttitor ex. Nam luctus tincidunt dui, sit amet semper mi consequat eu.
                   <div
-                    className="sc-gZMcBi jbhIgY"
+                    className="sc-VigVT fSZwap"
                   />
                   <div
-                    className="sc-gqjmRU jlxiWD"
+                    className="sc-jTzLTM eHUoFd"
                   >
                     <img
                       alt="Avatar of  Mark Phillips"
@@ -2356,7 +2356,7 @@ exports[`FileProperties TransferConfirmation isOpen=true 1`] = `
 </div>
 `;
 
-exports[`FileProperties TransferConfirmation with click handlers 1`] = `
+exports[`FileProperties components/profile/team/TransferConfirmation with click handlers 1`] = `
 <div>
   <div>
     <div
@@ -2395,7 +2395,7 @@ exports[`FileProperties TransferConfirmation with click handlers 1`] = `
             }
           }
         >
-          TransferConfirmation
+          components/profile/team/TransferConfirmation
         </h1>
         <h2
           style={
@@ -2465,10 +2465,10 @@ exports[`FileProperties TransferConfirmation with click handlers 1`] = `
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu
     porttitor ex. Nam luctus tincidunt dui, sit amet semper mi consequat eu.
                   <div
-                    className="sc-gZMcBi jbhIgY"
+                    className="sc-VigVT fSZwap"
                   />
                   <div
-                    className="sc-gqjmRU jlxiWD"
+                    className="sc-jTzLTM eHUoFd"
                   >
                     <img
                       alt="Avatar of  Mark Phillips"
@@ -3605,7 +3605,7 @@ exports[`FileProperties TransferConfirmation with click handlers 1`] = `
 </div>
 `;
 
-exports[`FileProperties TransferConfirmation with custom text 1`] = `
+exports[`FileProperties components/profile/team/TransferConfirmation with custom text 1`] = `
 <div>
   <div>
     <div
@@ -3644,7 +3644,7 @@ exports[`FileProperties TransferConfirmation with custom text 1`] = `
             }
           }
         >
-          TransferConfirmation
+          components/profile/team/TransferConfirmation
         </h1>
         <h2
           style={
@@ -3711,10 +3711,10 @@ exports[`FileProperties TransferConfirmation with custom text 1`] = `
                 >
                   Custom dialog body
                   <div
-                    className="sc-gZMcBi jbhIgY"
+                    className="sc-VigVT fSZwap"
                   />
                   <div
-                    className="sc-gqjmRU jlxiWD"
+                    className="sc-jTzLTM eHUoFd"
                   >
                     <img
                       alt="Avatar of  Mark Phillips"

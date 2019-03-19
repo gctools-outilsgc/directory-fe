@@ -1,0 +1,36 @@
+msgid ""
+msgstr ""
+"Language : en\n"
+"Plural-Forms : nplurals=2; plural=(n != 1);\n"
+"MIME-Version : 1.0\n"
+"Content-Type : text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding : 8bit\n"
+
+#: src/components/profile/team/YourTeamMemberList.js 33:32
+msgid "transfer to new Supervisor"
+msgstr ""
+
+#: src/components/profile/team/YourTeamMemberList.js 48:29
+msgid "already supervisor"
+msgstr ""
+
+#: src/components/profile/team/YourTeamMemberList.js 54:29
+msgid "no default team"
+msgstr ""
+
+#: src/components/profile/team/YourTeamMemberList.js 72:21
+msgid "Transfer a team member to a new Supervisor"
+msgstr ""
+
+#: src/components/profile/team/YourTeamMemberList.js 73:24
+msgid "Explicit information about the transfer"
+msgstr ""
+
+#: src/components/profile/team/YourTeamMemberList.js 74:33
+msgid "Accept"
+msgstr ""
+
+#: src/components/profile/team/YourTeamMemberList.js 75:35
+msgid "Back"
+msgstr ""
+

@@ -17,7 +17,7 @@ import {
 
 import { GET_YOUR_TEAM, EDIT_TEAM } from '../../../gql/profile';
 import './css/youTeamStyle.css';
-import YourTeamMemberList from './YourTeamMemberList';
+import I18nYourTeamMemberList from './YourTeamMemberList';
 import GQLCreateTeamDialog from './GQLCreateTeamDialog';
 import MultiUserPicker from '../../core/MultiUserPicker';
 
@@ -34,6 +34,7 @@ const TeamList = (props) => {
     members,
     otherMembers,
     refetch,
+    profile,
   } = props;
   return (
     <TabPane tabId={teamId} key={teamId} className="w-100">
@@ -83,13 +84,20 @@ const TeamList = (props) => {
         </div>
       </div>
       <div className="vh-100 p-3 member-holder">
-        <YourTeamMemberList members={members} />
+        <I18nYourTeamMemberList members={members} profile={profile} />
       </div>
     </TabPane>
   );
 };
 
 TeamList.propTypes = {
+  profile: PropTypes.shape({
+    gcID: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    titleEn: PropTypes.string,
+    titleFr: PropTypes.string,
+  }).isRequired,
   members: PropTypes.arrayOf(PropTypes.shape({
     gcID: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
@@ -210,6 +218,7 @@ class GQLYouTeamsTab extends React.Component {
             members,
           }) => (
             <TeamList
+              profile={userInfo}
               teamId={id}
               key={`teamlist_${id}`}
               members={members.map(m => Object.assign(

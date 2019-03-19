@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FileProperties OrgChart/Placement Algorithm Using sample data 1`] = `
+exports[`FileProperties components/profile/OrgChart/Placement Algorithm Using sample data 1`] = `
 <div>
   <div
     style={
@@ -477,7 +477,7 @@ exports[`FileProperties OrgChart/Placement Algorithm Using sample data 1`] = `
               }
             }
           >
-            OrgChart/Placement Algorithm
+            components/profile/OrgChart/Placement Algorithm
           </h1>
           <h2
             style={

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FileProperties OrgChart/MiniChart Only required options 1`] = `
+exports[`FileProperties components/profile/OrgChart/MiniChart Only required options 1`] = `
 <div>
   <div>
     <div
@@ -39,7 +39,7 @@ exports[`FileProperties OrgChart/MiniChart Only required options 1`] = `
             }
           }
         >
-          OrgChart/MiniChart
+          components/profile/OrgChart/MiniChart
         </h1>
         <h2
           style={
@@ -798,7 +798,7 @@ exports[`FileProperties OrgChart/MiniChart Only required options 1`] = `
 </div>
 `;
 
-exports[`FileProperties OrgChart/MiniChart Using cards 1`] = `
+exports[`FileProperties components/profile/OrgChart/MiniChart Using cards 1`] = `
 <div>
   <div>
     <div
@@ -837,7 +837,7 @@ exports[`FileProperties OrgChart/MiniChart Using cards 1`] = `
             }
           }
         >
-          OrgChart/MiniChart
+          components/profile/OrgChart/MiniChart
         </h1>
         <h2
           style={
@@ -1752,7 +1752,7 @@ exports[`FileProperties OrgChart/MiniChart Using cards 1`] = `
 </div>
 `;
 
-exports[`FileProperties OrgChart/MiniChart Using cards and lines 1`] = `
+exports[`FileProperties components/profile/OrgChart/MiniChart Using cards and lines 1`] = `
 <div>
   <div>
     <div
@@ -1791,7 +1791,7 @@ exports[`FileProperties OrgChart/MiniChart Using cards and lines 1`] = `
             }
           }
         >
-          OrgChart/MiniChart
+          components/profile/OrgChart/MiniChart
         </h1>
         <h2
           style={
@@ -2755,7 +2755,7 @@ exports[`FileProperties OrgChart/MiniChart Using cards and lines 1`] = `
 </div>
 `;
 
-exports[`FileProperties OrgChart/MiniChart Using cards, lines and overlay 1`] = `
+exports[`FileProperties components/profile/OrgChart/MiniChart Using cards, lines and overlay 1`] = `
 <div>
   <div>
     <div
@@ -2794,7 +2794,7 @@ exports[`FileProperties OrgChart/MiniChart Using cards, lines and overlay 1`] = 
             }
           }
         >
-          OrgChart/MiniChart
+          components/profile/OrgChart/MiniChart
         </h1>
         <h2
           style={

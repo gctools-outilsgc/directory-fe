@@ -35,7 +35,7 @@ const user3 = {
   },
 };
 
-storiesOf('TransferConfirmation', module)
+storiesOf('components/profile/team/TransferConfirmation', module)
   .addParameters({
     info: { header: true, inline: true, source: false },
   })
