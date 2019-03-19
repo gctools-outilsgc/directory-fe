@@ -37,6 +37,10 @@ const mocks = [
               nameFr: 'Organisation 1',
             },
           },
+          ownerOfTeams: [{
+            id: 'myteam1',
+            nameEn: '',
+          }],
         }, {
           gcID: '2',
           name: 'testing 2',
@@ -52,6 +56,10 @@ const mocks = [
               nameFr: 'Organisation 2',
             },
           },
+          ownerOfTeams: [{
+            id: 'myteam2',
+            nameEn: '',
+          }],
         }, {
           gcID: '3',
           name: 'testing 3',
@@ -67,6 +75,10 @@ const mocks = [
               nameFr: 'Organisation 3',
             },
           },
+          ownerOfTeams: [{
+            id: 'myteam3',
+            nameEn: '',
+          }],
         }],
       },
     },

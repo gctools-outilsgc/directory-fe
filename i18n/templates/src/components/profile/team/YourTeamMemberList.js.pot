@@ -10,3 +10,11 @@ msgstr ""
 msgid "transfer to new Supervisor"
 msgstr ""
 
+#: src/components/profile/team/YourTeamMemberList.js 48:29
+msgid "already supervisor"
+msgstr ""
+
+#: src/components/profile/team/YourTeamMemberList.js 54:29
+msgid "no default team"
+msgstr ""
+

@@ -21,6 +21,7 @@ import { SEARCH } from '../../gql/profile';
 // Fallback for browsers who don't support CSS variables
 const cssVariables = {
   '--primary': '#002D42',
+  '--info': '#269abc',
 };
 const styles = getComputedStyle(document.body);
 
@@ -38,7 +39,7 @@ const ListGroup = styled.ul`
 
 const ListItemStyle = styled.li`
 :hover {
-  background-color: ${varTag('--primary')};
+  background-color: ${varTag('--info')};
   color: #fff;
   cursor: pointer;
 }
@@ -87,40 +88,43 @@ export const ProfileListSearch = (props) => {
                 <Spinner color="primary" />
               )}
               {!loading && !error && data && data.profiles && (
-                data.profiles.map(({
-                  gcID,
-                  name,
-                  titleFr,
-                  titleEn,
-                  email,
-                  avatar,
-                }) => (
-                  <ListItemStyle
-                    key={`pdd-profile-${gcID}`}
-                    className={
-                      `list-group-item ${(selected === gcID) && 'active'}`
-                    }
-                    onClick={(e) => {
-                      setSelected(gcID);
-                      onChange(e, gcID);
-                    }}
-                  >
-                    <div>
-                      <img
-                        className="avatar rounded-circle"
-                        style={{ marginLeft: '10px' }}
-                        src={avatar}
-                        alt={___(__('%1$s avatar'), name)}
-                      />
-                    </div>
-                    <div>
-                      <h3>{name}</h3>
-                      {(lang === 'en_CA') ?
-                        titleEn : titleFr}<br />
-                      {email}
-                    </div>
-                  </ListItemStyle>
-                ))
+                data.profiles.map((profile) => {
+                  const {
+                    gcID,
+                    name,
+                    titleFr,
+                    titleEn,
+                    email,
+                    avatar,
+                  } = profile;
+                  return (
+                    <ListItemStyle
+                      key={`pdd-profile-${gcID}`}
+                      className={
+                        `list-group-item ${(selected === gcID) && 'active'}`
+                      }
+                      onClick={(e) => {
+                        setSelected(gcID);
+                        onChange(e, profile);
+                      }}
+                    >
+                      <div>
+                        <img
+                          className="avatar rounded-circle"
+                          style={{ marginLeft: '10px' }}
+                          src={avatar}
+                          alt={___(__('%1$s avatar'), name)}
+                        />
+                      </div>
+                      <div>
+                        <h3>{name}</h3>
+                        {(lang === 'en_CA') ?
+                          titleEn : titleFr}<br />
+                        {email}
+                      </div>
+                    </ListItemStyle>
+                  );
+                })
               )}
             </ListGroup>
           </div>

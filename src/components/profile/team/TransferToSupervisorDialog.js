@@ -96,7 +96,7 @@ export const TransferToSupervisorDialog = (props) => {
         <ModalFooter>
           <Button
             color="primary"
-            onClick={primaryButtonClick}
+            onClick={(e) => { primaryButtonClick(e, supervisor); }}
             disabled={!supervisor}
           >
             {__('Transfer')}

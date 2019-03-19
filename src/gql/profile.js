@@ -54,6 +54,10 @@ query profileSearchQuery($name: String!) {
         nameFr
       }
     }
+    ownerOfTeams {
+      id
+      nameEn
+    }
   }
 }`;
 

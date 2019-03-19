@@ -34,6 +34,7 @@ const TeamList = (props) => {
     members,
     otherMembers,
     refetch,
+    gcIDOwner,
   } = props;
   return (
     <TabPane tabId={teamId} key={teamId} className="w-100">
@@ -83,13 +84,14 @@ const TeamList = (props) => {
         </div>
       </div>
       <div className="vh-100 p-3 member-holder">
-        <I18nYourTeamMemberList members={members} />
+        <I18nYourTeamMemberList members={members} gcID={gcIDOwner} />
       </div>
     </TabPane>
   );
 };
 
 TeamList.propTypes = {
+  gcIDOwner: PropTypes.string.isRequired,
   members: PropTypes.arrayOf(PropTypes.shape({
     gcID: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
@@ -210,6 +212,7 @@ class GQLYouTeamsTab extends React.Component {
             members,
           }) => (
             <TeamList
+              gcIDOwner={this.props.id}
               teamId={id}
               key={`teamlist_${id}`}
               members={members.map(m => Object.assign(
