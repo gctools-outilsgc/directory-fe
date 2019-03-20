@@ -17,18 +17,8 @@ import {
   Label
 } from 'reactstrap';
 
-// Fallback for browsers who don't support CSS variables
-const cssVariables = {
-  '--primary': '#002D42',
-};
-const styles = getComputedStyle(document.body);
+import varTag from '../../utils/cssVarTag';
 
-const varTag = (variable) => {
-  if (!styles.getPropertyValue(variable)) {
-    return cssVariables[variable];
-  }
-  return `var(${variable})`;
-};
 
 const PersonDetails = styled.div`
   display: inline-block;

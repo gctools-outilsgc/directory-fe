@@ -13,20 +13,10 @@ import {
   Button
 } from 'reactstrap';
 
-// Fallback for browsers who don't support CSS variables
-const cssVariables = {
-  '--primary': '#002D42',
-  '--warning': '#f90',
-  '--info': '#269abc',
-};
-const styles = getComputedStyle(document.body);
+import TeamAvatar from './TeamAvatar';
 
-const varTag = (variable) => {
-  if (!styles.getPropertyValue(variable)) {
-    return cssVariables[variable];
-  }
-  return `var(${variable})`;
-};
+import varTag from '../../../utils/cssVarTag';
+
 
 const Arrow = styled.div`
     position: relative;
@@ -82,24 +72,8 @@ const Avatars = styled.div`
   div.team {
     position: absolute;
     display: inline-block;
-    border-radius: 5px;
-    width: 40px;
-    height: 40px;
-    border: 2px solid ${varTag('--info')};
-    color: #fff;
-    background-color: ${varTag('--warning')};
     margin-top: 55px;
     margin-left: -25px;
-  }
-  div.team.new {
-    background-color: ${varTag('--primary')};
-  }
-  div.team>span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
   }
   >div.break {
     margin-left: 25px;
@@ -188,7 +162,7 @@ const TransferConfirmation = (props) => {
               alt={`${avatarAltText} ${user1.name}`}
             />
             <div className="team">
-              <span>{user1.team.avatar}</span>
+              <TeamAvatar name={user1.team.name} />
             </div>
             <div className="name">
               <h2>{user1.name}</h2>
@@ -206,8 +180,8 @@ const TransferConfirmation = (props) => {
               src={user3.avatar}
               alt={`${avatarAltText} ${user3.name}`}
             />
-            <div className="team new">
-              <span>{user3.team.avatar}</span>
+            <div className="team">
+              <TeamAvatar name={user3.team.name} />
             </div>
             <div className="name">
               <h2>{user3.name}</h2>

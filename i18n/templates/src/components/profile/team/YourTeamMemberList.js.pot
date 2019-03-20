@@ -34,3 +34,7 @@ msgstr ""
 msgid "Back"
 msgstr ""
 
+#: src/components/profile/team/YourTeamMemberList.js 134:9
+msgid "transfer to new Team"
+msgstr ""
+

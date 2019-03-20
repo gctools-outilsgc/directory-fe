@@ -95,7 +95,7 @@ query getTeam($gcID: ID!) {
 }`;
 
 export const GET_YOUR_TEAM = gql`
-query getProfile($gcID: ID!) {
+query getYourTeam($gcID: ID!) {
   profiles(gcID: $gcID) {
     gcID
     name

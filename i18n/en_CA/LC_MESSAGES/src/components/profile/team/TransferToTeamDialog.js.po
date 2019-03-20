@@ -1,0 +1,46 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-03-20 13:04-0300\n"
+"PO-Revision-Date: 2019-03-20 09:35-0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en_CA\n"
+"Language-Team: en_CA <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: 77:11 src/components/profile/team/TransferToTeamDialog.js
+msgid "Transfer a team member to a new Supervisor"
+msgstr ""
+
+#: 81:17 src/components/profile/team/TransferToTeamDialog.js
+msgid "Choose a new Supervisor for this team member"
+msgstr ""
+
+#: 86:23 src/components/profile/team/TransferToTeamDialog.js
+msgid "%1$s avatar"
+msgid_plural ""
+msgstr[0] ""
+msgstr[1] ""
+
+#: 102:13 src/components/profile/team/TransferToTeamDialog.js
+msgid "Transfer"
+msgstr ""
+
+#: 108:13 src/components/profile/team/TransferToTeamDialog.js
+msgid "Cancel"
+msgstr ""
+
+#: 77:11 src/components/profile/team/TransferToTeamDialog.js
+msgid "Transfer a team member to a new Team"
+msgstr ""
+
+#: 107:50 src/components/profile/team/TransferToTeamDialog.js
+msgid "Default Team"
+msgstr ""
+

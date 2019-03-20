@@ -1216,10 +1216,10 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu
     porttitor ex. Nam luctus tincidunt dui, sit amet semper mi consequat eu.
                   <div
-                    className="sc-VigVT fSZwap"
+                    className="sc-jTzLTM guEHjM"
                   />
                   <div
-                    className="sc-jTzLTM eHUoFd"
+                    className="sc-fjdhpX cvhRHB"
                   >
                     <img
                       alt="Avatar of  Mark Phillips"
@@ -1228,9 +1228,13 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     <div
                       className="team"
                     >
-                      <span>
-                        GA
-                      </span>
+                      <div
+                        className="sc-VigVT cOSlb"
+                      >
+                        <span>
+                          TA
+                        </span>
+                      </div>
                     </div>
                     <div
                       className="name"
@@ -1263,11 +1267,15 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                       src="3.jpg"
                     />
                     <div
-                      className="team new"
+                      className="team"
                     >
-                      <span>
-                        DT
-                      </span>
+                      <div
+                        className="sc-VigVT fWyYtI"
+                      >
+                        <span>
+                          TD
+                        </span>
+                      </div>
                     </div>
                     <div
                       className="name"
@@ -2465,10 +2473,10 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu
     porttitor ex. Nam luctus tincidunt dui, sit amet semper mi consequat eu.
                   <div
-                    className="sc-VigVT fSZwap"
+                    className="sc-jTzLTM guEHjM"
                   />
                   <div
-                    className="sc-jTzLTM eHUoFd"
+                    className="sc-fjdhpX cvhRHB"
                   >
                     <img
                       alt="Avatar of  Mark Phillips"
@@ -2477,9 +2485,13 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     <div
                       className="team"
                     >
-                      <span>
-                        GA
-                      </span>
+                      <div
+                        className="sc-VigVT cOSlb"
+                      >
+                        <span>
+                          TA
+                        </span>
+                      </div>
                     </div>
                     <div
                       className="name"
@@ -2512,11 +2524,15 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                       src="3.jpg"
                     />
                     <div
-                      className="team new"
+                      className="team"
                     >
-                      <span>
-                        DT
-                      </span>
+                      <div
+                        className="sc-VigVT fWyYtI"
+                      >
+                        <span>
+                          TD
+                        </span>
+                      </div>
                     </div>
                     <div
                       className="name"
@@ -3711,10 +3727,10 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                 >
                   Custom dialog body
                   <div
-                    className="sc-VigVT fSZwap"
+                    className="sc-jTzLTM guEHjM"
                   />
                   <div
-                    className="sc-jTzLTM eHUoFd"
+                    className="sc-fjdhpX cvhRHB"
                   >
                     <img
                       alt="Avatar of  Mark Phillips"
@@ -3723,9 +3739,13 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     <div
                       className="team"
                     >
-                      <span>
-                        GA
-                      </span>
+                      <div
+                        className="sc-VigVT cOSlb"
+                      >
+                        <span>
+                          TA
+                        </span>
+                      </div>
                     </div>
                     <div
                       className="name"
@@ -3758,11 +3778,15 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                       src="3.jpg"
                     />
                     <div
-                      className="team new"
+                      className="team"
                     >
-                      <span>
-                        DT
-                      </span>
+                      <div
+                        className="sc-VigVT fWyYtI"
+                      >
+                        <span>
+                          TD
+                        </span>
+                      </div>
                     </div>
                     <div
                       className="name"

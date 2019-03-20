@@ -116,6 +116,88 @@ TransferToSupervisorAction.propTypes = {
   }).isRequired,
 };
 
+const TransferToNewTeamAction = (props) => {
+  const { profile, supervisor } = props;
+  const [showDialog, setShowDialog] = useState(false);
+  const [error, setError] = useState([]);
+  const [confirm, setConfirm] = useState(undefined);
+  const closeAll = () => {
+    setConfirm(undefined);
+    setShowDialog(false);
+  };
+  console.log(showDialog);
+  console.log(setError);
+  return (
+    <React.Fragment>
+      <a
+        href="#!"
+        onClick={(e) => { setShowDialog(true); e.preventDefault(); }}
+      >
+        {__('transfer to new Team')}
+      </a>
+      <ErrorModal error={error} />
+      <Mutation
+        mutation={EDIT_TEAM}
+        refetchQueries={[{
+          query: GET_TEAM,
+          variables: { gcID: profile.gcID },
+        }, {
+          query: GET_YOUR_TEAM,
+          variables: { gcID: supervisor.gcID },
+        }]}
+        onCompleted={() => {
+          closeAll();
+        }}
+      >
+        {mutate => (
+          <React.Fragment>
+            {confirm && (<TransferConfirmation
+              oldSupervisor={supervisor}
+              transferredUser={profile}
+              newSupervisor={confirm}
+              isOpen={!!confirm}
+              title={__('Transfer a team member to a new Supervisor')}
+              bodyText={__('Explicit information about the transfer')}
+              primaryButtonText={__('Accept')}
+              secondaryButtonText={__('Back')}
+              secondaryButtonClick={() => { setConfirm(undefined); }}
+              closeButtonClick={closeAll}
+              primaryButtonClick={() => {
+                const defaultTeam = getDefaultTeam(confirm);
+                mutate({
+                  variables: {
+                    gcID: profile.gcID,
+                    data: { team: { id: defaultTeam.id } },
+                  },
+                });
+              }}
+            />)}
+          </React.Fragment>
+        )}
+      </Mutation>
+    </React.Fragment>
+  );
+};
+TransferToNewTeamAction.propTypes = {
+  /** Profile of current supervisor */
+  supervisor: PropTypes.shape({
+    gcID: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    avatar: PropTypes.string,
+    titleEn: PropTypes.string,
+    titleFr: PropTypes.string,
+  }).isRequired,
+  /** Profile of user being transferred */
+  profile: PropTypes.shape({
+    gcID: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    avatar: PropTypes.string,
+    titleEn: PropTypes.string,
+    titleFr: PropTypes.string,
+  }).isRequired,
+};
+
+
 export const YourTeamMemberList = (props) => {
   const { members, profile } = props;
   const list = (members.length > 0) ?
