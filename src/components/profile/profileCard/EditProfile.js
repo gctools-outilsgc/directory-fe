@@ -14,6 +14,8 @@ import {
   Row,
   Col
 } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPen } from '@fortawesome/free-solid-svg-icons';
 
 import { EDIT, prepareEditProfile, EDIT_TEAM } from '../../../gql/profile';
 import DepartmentPicker from '../../core/DepartmentPicker';
@@ -79,7 +81,7 @@ export class EditProfile extends Component {
           onClick={this.toggle}
           color="light"
         >
-          Icon
+          <FontAwesomeIcon icon={faPen} />
           <span className="sr-only">Edit Profile</span>
         </Button>
         <Modal

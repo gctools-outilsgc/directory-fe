@@ -14,6 +14,8 @@ import {
   Col,
   Button
 } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 import { GET_YOUR_TEAM, EDIT_TEAM } from '../../../gql/profile';
 import './css/youTeamStyle.css';
@@ -47,7 +49,8 @@ const TeamList = (props) => {
             size="small"
             onClick={() => { setIsOpen(!isOpen); }}
           >
-            Add {teamId}
+            <FontAwesomeIcon icon={faPlus} />
+            <span className="sr-only">Add</span>
           </Button>
           <Mutation
             mutation={EDIT_TEAM}
@@ -257,7 +260,8 @@ class GQLYouTeamsTab extends React.Component {
                           this.setState({ createDialogOpen: true });
                         }}
                       >
-                        Add
+                        <FontAwesomeIcon icon={faPlus} />
+                        <span className="sr-only">Add</span>
                       </Button>
                       <GQLCreateTeamDialog
                         isOpen={this.state.createDialogOpen}

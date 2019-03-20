@@ -82,6 +82,10 @@ animation: LoadingText 2s ease infinite;
   display:none;
 }
 
+.nav-tabs .nav-item:hover{
+  cursor: pointer;
+}
+
 /* Profile Card */
 
 .profile-card-title {
