@@ -6,12 +6,9 @@ exports[`FileProperties components/core/InputCharacterCount With default options
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -80,12 +77,9 @@ exports[`FileProperties components/core/InputCharacterCount With default options
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -110,7 +104,7 @@ exports[`FileProperties components/core/InputCharacterCount With default options
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -120,7 +114,7 @@ exports[`FileProperties components/core/InputCharacterCount With default options
             "
             InputCharacterCount
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -196,7 +190,9 @@ exports[`FileProperties components/core/InputCharacterCount With default options
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -216,13 +212,7 @@ exports[`FileProperties components/core/InputCharacterCount With default options
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     255
                   </span>
                 </td>
@@ -254,7 +244,9 @@ exports[`FileProperties components/core/InputCharacterCount With default options
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -274,13 +266,7 @@ exports[`FileProperties components/core/InputCharacterCount With default options
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     true
                   </span>
                 </td>
@@ -312,7 +298,9 @@ exports[`FileProperties components/core/InputCharacterCount With default options
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -362,7 +350,9 @@ exports[`FileProperties components/core/InputCharacterCount With default options
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -382,13 +372,7 @@ exports[`FileProperties components/core/InputCharacterCount With default options
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onChange
                   </span>
                 </td>
@@ -420,7 +404,9 @@ exports[`FileProperties components/core/InputCharacterCount With default options
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -466,12 +452,9 @@ exports[`FileProperties components/core/InputCharacterCount with id 1`] = `
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -541,12 +524,9 @@ exports[`FileProperties components/core/InputCharacterCount with id 1`] = `
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -571,7 +551,7 @@ exports[`FileProperties components/core/InputCharacterCount with id 1`] = `
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -581,7 +561,7 @@ exports[`FileProperties components/core/InputCharacterCount with id 1`] = `
             "
             InputCharacterCount
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -657,7 +637,9 @@ exports[`FileProperties components/core/InputCharacterCount with id 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -677,13 +659,7 @@ exports[`FileProperties components/core/InputCharacterCount with id 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     255
                   </span>
                 </td>
@@ -715,7 +691,9 @@ exports[`FileProperties components/core/InputCharacterCount with id 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -735,13 +713,7 @@ exports[`FileProperties components/core/InputCharacterCount with id 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     true
                   </span>
                 </td>
@@ -773,7 +745,9 @@ exports[`FileProperties components/core/InputCharacterCount with id 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -823,7 +797,9 @@ exports[`FileProperties components/core/InputCharacterCount with id 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -843,13 +819,7 @@ exports[`FileProperties components/core/InputCharacterCount with id 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onChange
                   </span>
                 </td>
@@ -881,7 +851,9 @@ exports[`FileProperties components/core/InputCharacterCount with id 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -927,12 +899,9 @@ exports[`FileProperties components/core/InputCharacterCount with maxLength 1`] =
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -1001,12 +970,9 @@ exports[`FileProperties components/core/InputCharacterCount with maxLength 1`] =
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -1031,7 +997,7 @@ exports[`FileProperties components/core/InputCharacterCount with maxLength 1`] =
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -1041,7 +1007,7 @@ exports[`FileProperties components/core/InputCharacterCount with maxLength 1`] =
             "
             InputCharacterCount
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -1117,7 +1083,9 @@ exports[`FileProperties components/core/InputCharacterCount with maxLength 1`] =
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -1137,13 +1105,7 @@ exports[`FileProperties components/core/InputCharacterCount with maxLength 1`] =
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     255
                   </span>
                 </td>
@@ -1175,7 +1137,9 @@ exports[`FileProperties components/core/InputCharacterCount with maxLength 1`] =
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -1195,13 +1159,7 @@ exports[`FileProperties components/core/InputCharacterCount with maxLength 1`] =
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     true
                   </span>
                 </td>
@@ -1233,7 +1191,9 @@ exports[`FileProperties components/core/InputCharacterCount with maxLength 1`] =
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -1283,7 +1243,9 @@ exports[`FileProperties components/core/InputCharacterCount with maxLength 1`] =
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1303,13 +1265,7 @@ exports[`FileProperties components/core/InputCharacterCount with maxLength 1`] =
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onChange
                   </span>
                 </td>
@@ -1341,7 +1297,9 @@ exports[`FileProperties components/core/InputCharacterCount with maxLength 1`] =
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -1387,12 +1345,9 @@ exports[`FileProperties components/core/InputCharacterCount with onChange 1`] = 
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -1461,12 +1416,9 @@ exports[`FileProperties components/core/InputCharacterCount with onChange 1`] = 
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -1491,7 +1443,7 @@ exports[`FileProperties components/core/InputCharacterCount with onChange 1`] = 
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -1501,7 +1453,7 @@ exports[`FileProperties components/core/InputCharacterCount with onChange 1`] = 
             "
             InputCharacterCount
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -1577,7 +1529,9 @@ exports[`FileProperties components/core/InputCharacterCount with onChange 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -1597,13 +1551,7 @@ exports[`FileProperties components/core/InputCharacterCount with onChange 1`] = 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     255
                   </span>
                 </td>
@@ -1635,7 +1583,9 @@ exports[`FileProperties components/core/InputCharacterCount with onChange 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -1655,13 +1605,7 @@ exports[`FileProperties components/core/InputCharacterCount with onChange 1`] = 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     true
                   </span>
                 </td>
@@ -1693,7 +1637,9 @@ exports[`FileProperties components/core/InputCharacterCount with onChange 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -1743,7 +1689,9 @@ exports[`FileProperties components/core/InputCharacterCount with onChange 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1763,13 +1711,7 @@ exports[`FileProperties components/core/InputCharacterCount with onChange 1`] = 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onChange
                   </span>
                 </td>
@@ -1801,7 +1743,9 @@ exports[`FileProperties components/core/InputCharacterCount with onChange 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -1847,12 +1791,9 @@ exports[`FileProperties components/core/InputCharacterCount with placeholder 1`]
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -1922,12 +1863,9 @@ exports[`FileProperties components/core/InputCharacterCount with placeholder 1`]
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -1952,7 +1890,7 @@ exports[`FileProperties components/core/InputCharacterCount with placeholder 1`]
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -1962,7 +1900,7 @@ exports[`FileProperties components/core/InputCharacterCount with placeholder 1`]
             "
             InputCharacterCount
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -2038,7 +1976,9 @@ exports[`FileProperties components/core/InputCharacterCount with placeholder 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -2058,13 +1998,7 @@ exports[`FileProperties components/core/InputCharacterCount with placeholder 1`]
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     255
                   </span>
                 </td>
@@ -2096,7 +2030,9 @@ exports[`FileProperties components/core/InputCharacterCount with placeholder 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -2116,13 +2052,7 @@ exports[`FileProperties components/core/InputCharacterCount with placeholder 1`]
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     true
                   </span>
                 </td>
@@ -2154,7 +2084,9 @@ exports[`FileProperties components/core/InputCharacterCount with placeholder 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -2204,7 +2136,9 @@ exports[`FileProperties components/core/InputCharacterCount with placeholder 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -2224,13 +2158,7 @@ exports[`FileProperties components/core/InputCharacterCount with placeholder 1`]
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onChange
                   </span>
                 </td>
@@ -2262,7 +2190,9 @@ exports[`FileProperties components/core/InputCharacterCount with placeholder 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -2308,12 +2238,9 @@ exports[`FileProperties components/core/InputCharacterCount with showCounter=fal
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -2377,12 +2304,9 @@ exports[`FileProperties components/core/InputCharacterCount with showCounter=fal
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -2407,7 +2331,7 @@ exports[`FileProperties components/core/InputCharacterCount with showCounter=fal
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -2417,7 +2341,7 @@ exports[`FileProperties components/core/InputCharacterCount with showCounter=fal
             "
             InputCharacterCount
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -2493,7 +2417,9 @@ exports[`FileProperties components/core/InputCharacterCount with showCounter=fal
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -2513,13 +2439,7 @@ exports[`FileProperties components/core/InputCharacterCount with showCounter=fal
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     255
                   </span>
                 </td>
@@ -2551,7 +2471,9 @@ exports[`FileProperties components/core/InputCharacterCount with showCounter=fal
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -2571,13 +2493,7 @@ exports[`FileProperties components/core/InputCharacterCount with showCounter=fal
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     true
                   </span>
                 </td>
@@ -2609,7 +2525,9 @@ exports[`FileProperties components/core/InputCharacterCount with showCounter=fal
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -2659,7 +2577,9 @@ exports[`FileProperties components/core/InputCharacterCount with showCounter=fal
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -2679,13 +2599,7 @@ exports[`FileProperties components/core/InputCharacterCount with showCounter=fal
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onChange
                   </span>
                 </td>
@@ -2717,7 +2631,9 @@ exports[`FileProperties components/core/InputCharacterCount with showCounter=fal
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -2763,12 +2679,9 @@ exports[`FileProperties components/core/InputCharacterCount with showCounter=tru
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -2837,12 +2750,9 @@ exports[`FileProperties components/core/InputCharacterCount with showCounter=tru
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -2867,7 +2777,7 @@ exports[`FileProperties components/core/InputCharacterCount with showCounter=tru
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -2877,7 +2787,7 @@ exports[`FileProperties components/core/InputCharacterCount with showCounter=tru
             "
             InputCharacterCount
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -2953,7 +2863,9 @@ exports[`FileProperties components/core/InputCharacterCount with showCounter=tru
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -2973,13 +2885,7 @@ exports[`FileProperties components/core/InputCharacterCount with showCounter=tru
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     255
                   </span>
                 </td>
@@ -3011,7 +2917,9 @@ exports[`FileProperties components/core/InputCharacterCount with showCounter=tru
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -3031,13 +2939,7 @@ exports[`FileProperties components/core/InputCharacterCount with showCounter=tru
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     true
                   </span>
                 </td>
@@ -3069,7 +2971,9 @@ exports[`FileProperties components/core/InputCharacterCount with showCounter=tru
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -3119,7 +3023,9 @@ exports[`FileProperties components/core/InputCharacterCount with showCounter=tru
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -3139,13 +3045,7 @@ exports[`FileProperties components/core/InputCharacterCount with showCounter=tru
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onChange
                   </span>
                 </td>
@@ -3177,7 +3077,9 @@ exports[`FileProperties components/core/InputCharacterCount with showCounter=tru
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={

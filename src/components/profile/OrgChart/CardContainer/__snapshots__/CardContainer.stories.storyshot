@@ -6,12 +6,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer Only required 
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -80,12 +77,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer Only required 
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -110,7 +104,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer Only required 
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -120,7 +114,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer Only required 
             "
             CardContainer
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -196,7 +190,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer Only required 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -246,7 +242,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer Only required 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -266,13 +264,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer Only required 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onCardClick
                   </span>
                 </td>
@@ -304,7 +296,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer Only required 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -354,7 +348,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer Only required 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -374,14 +370,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer Only required 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     !name!
                   </span>
                 </td>
@@ -413,7 +402,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer Only required 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -433,13 +424,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer Only required 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onButtonClick
                   </span>
                 </td>
@@ -471,7 +456,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer Only required 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -491,14 +478,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer Only required 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     !name!
                   </span>
                 </td>
@@ -530,7 +510,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer Only required 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -580,7 +562,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer Only required 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -600,13 +584,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer Only required 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -639,7 +617,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer Only required 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -659,13 +639,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer Only required 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -698,7 +672,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer Only required 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -718,13 +694,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer Only required 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     {
                     }
                   </span>
@@ -757,7 +727,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer Only required 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -777,13 +749,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer Only required 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     300
                   </span>
                 </td>
@@ -815,7 +781,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer Only required 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -835,13 +803,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer Only required 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     75
                   </span>
                 </td>
@@ -873,7 +835,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer Only required 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -919,12 +883,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -1735,12 +1696,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -1765,7 +1723,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -1775,7 +1733,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
             "
             CardContainer
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -1851,7 +1809,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -1901,7 +1861,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1921,13 +1883,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onCardClick
                   </span>
                 </td>
@@ -1959,7 +1915,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -2009,7 +1967,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -2029,14 +1989,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     !name!
                   </span>
                 </td>
@@ -2068,7 +2021,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -2088,13 +2043,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onButtonClick
                   </span>
                 </td>
@@ -2126,7 +2075,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -2146,14 +2097,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     !name!
                   </span>
                 </td>
@@ -2185,7 +2129,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -2235,7 +2181,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -2255,13 +2203,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -2294,7 +2236,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -2314,13 +2258,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -2353,7 +2291,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -2373,13 +2313,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     {
                     }
                   </span>
@@ -2412,7 +2346,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -2432,13 +2368,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     300
                   </span>
                 </td>
@@ -2470,7 +2400,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -2490,13 +2422,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     75
                   </span>
                 </td>
@@ -2528,7 +2454,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -2574,12 +2502,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -3386,12 +3311,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -3416,7 +3338,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -3426,7 +3348,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
             "
             CardContainer
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -3502,7 +3424,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -3552,7 +3476,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -3572,13 +3498,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onCardClick
                   </span>
                 </td>
@@ -3610,7 +3530,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -3660,7 +3582,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -3680,14 +3604,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     !name!
                   </span>
                 </td>
@@ -3719,7 +3636,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -3739,13 +3658,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onButtonClick
                   </span>
                 </td>
@@ -3777,7 +3690,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -3797,14 +3712,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     !name!
                   </span>
                 </td>
@@ -3836,7 +3744,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -3886,7 +3796,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -3906,13 +3818,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -3945,7 +3851,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -3965,13 +3873,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -4004,7 +3906,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -4024,13 +3928,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     {
                     }
                   </span>
@@ -4063,7 +3961,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -4083,13 +3983,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     300
                   </span>
                 </td>
@@ -4121,7 +4015,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -4141,13 +4037,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     75
                   </span>
                 </td>
@@ -4179,7 +4069,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -4225,12 +4117,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -5037,12 +4926,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -5067,7 +4953,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -5077,7 +4963,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
             "
             CardContainer
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -5153,7 +5039,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -5203,7 +5091,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -5223,13 +5113,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onCardClick
                   </span>
                 </td>
@@ -5261,7 +5145,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -5311,7 +5197,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -5331,14 +5219,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     !name!
                   </span>
                 </td>
@@ -5370,7 +5251,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -5390,13 +5273,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onButtonClick
                   </span>
                 </td>
@@ -5428,7 +5305,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -5448,14 +5327,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     !name!
                   </span>
                 </td>
@@ -5487,7 +5359,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -5537,7 +5411,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -5557,13 +5433,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -5596,7 +5466,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -5616,13 +5488,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -5655,7 +5521,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -5675,13 +5543,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     {
                     }
                   </span>
@@ -5714,7 +5576,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -5734,13 +5598,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     300
                   </span>
                 </td>
@@ -5772,7 +5630,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -5792,13 +5652,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     75
                   </span>
                 </td>
@@ -5830,7 +5684,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -5876,12 +5732,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -6688,12 +6541,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -6718,7 +6568,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -6728,7 +6578,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
             "
             CardContainer
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -6804,7 +6654,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -6854,7 +6706,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -6874,13 +6728,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onCardClick
                   </span>
                 </td>
@@ -6912,7 +6760,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -6962,7 +6812,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -6982,14 +6834,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     !name!
                   </span>
                 </td>
@@ -7021,7 +6866,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -7041,13 +6888,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onButtonClick
                   </span>
                 </td>
@@ -7079,7 +6920,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -7099,14 +6942,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     !name!
                   </span>
                 </td>
@@ -7138,7 +6974,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -7188,7 +7026,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -7208,13 +7048,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -7247,7 +7081,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -7267,13 +7103,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -7306,7 +7136,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -7326,13 +7158,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     {
                     }
                   </span>
@@ -7365,7 +7191,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -7385,13 +7213,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     300
                   </span>
                 </td>
@@ -7423,7 +7245,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -7443,13 +7267,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     75
                   </span>
                 </td>
@@ -7481,7 +7299,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -7527,12 +7347,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -8343,12 +8160,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -8373,7 +8187,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -8383,7 +8197,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
             "
             CardContainer
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -8459,7 +8273,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -8509,7 +8325,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -8529,13 +8347,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onCardClick
                   </span>
                 </td>
@@ -8567,7 +8379,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -8617,7 +8431,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -8637,14 +8453,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     !name!
                   </span>
                 </td>
@@ -8676,7 +8485,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -8696,13 +8507,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onButtonClick
                   </span>
                 </td>
@@ -8734,7 +8539,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -8754,14 +8561,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     !name!
                   </span>
                 </td>
@@ -8793,7 +8593,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -8843,7 +8645,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -8863,13 +8667,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -8902,7 +8700,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -8922,13 +8722,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -8961,7 +8755,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -8981,13 +8777,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     {
                     }
                   </span>
@@ -9020,7 +8810,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -9040,13 +8832,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     300
                   </span>
                 </td>
@@ -9078,7 +8864,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -9098,13 +8886,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     75
                   </span>
                 </td>
@@ -9136,7 +8918,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -9182,12 +8966,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -9994,12 +9775,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -10024,7 +9802,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -10034,7 +9812,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
             "
             CardContainer
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -10110,7 +9888,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -10160,7 +9940,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -10180,13 +9962,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onCardClick
                   </span>
                 </td>
@@ -10218,7 +9994,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -10268,7 +10046,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -10288,14 +10068,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     !name!
                   </span>
                 </td>
@@ -10327,7 +10100,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -10347,13 +10122,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onButtonClick
                   </span>
                 </td>
@@ -10385,7 +10154,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -10405,14 +10176,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     !name!
                   </span>
                 </td>
@@ -10444,7 +10208,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -10494,7 +10260,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -10514,13 +10282,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -10553,7 +10315,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -10573,13 +10337,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -10612,7 +10370,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -10632,13 +10392,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     {
                     }
                   </span>
@@ -10671,7 +10425,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -10691,13 +10447,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     300
                   </span>
                 </td>
@@ -10729,7 +10479,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -10749,13 +10501,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     75
                   </span>
                 </td>
@@ -10787,7 +10533,9 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={

@@ -381,6 +381,7 @@ exports[`FileProperties components/profile/OrgChart/Placement Algorithm Using sa
     </div>
   </div>
   <button
+    className="info__show-button"
     onClick={[Function]}
     style={
       Object {
@@ -403,11 +404,13 @@ exports[`FileProperties components/profile/OrgChart/Placement Algorithm Using sa
     Show Info
   </button>
   <div
+    className="info__overlay"
     style={
       Object {
         "background": "white",
         "bottom": 0,
         "display": "none",
+        "fontFamily": "Helvetica Neue, Helvetica, Segoe UI, Arial, freesans, sans-serif",
         "left": 0,
         "overflow": "auto",
         "padding": "0 40px",
@@ -419,6 +422,7 @@ exports[`FileProperties components/profile/OrgChart/Placement Algorithm Using sa
     }
   >
     <button
+      className="info__close-button"
       onClick={[Function]}
       style={
         Object {
@@ -444,12 +448,9 @@ exports[`FileProperties components/profile/OrgChart/Placement Algorithm Using sa
       <div
         style={
           Object {
-            "WebkitFontSmoothing": "antialiased",
             "backgroundColor": "#fff",
             "border": "1px solid #eee",
             "borderRadius": "2px",
-            "color": "#444",
-            "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
             "fontSize": "15px",
             "fontWeight": 300,
             "lineHeight": 1.45,

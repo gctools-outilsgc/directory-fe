@@ -6,12 +6,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Only required opti
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -113,12 +110,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Only required opti
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -143,7 +137,7 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Only required opti
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -153,7 +147,7 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Only required opti
             "
             MiniChart
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -229,7 +223,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Only required opti
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    node
+                  </span>
                 </td>
                 <td
                   style={
@@ -279,7 +275,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Only required opti
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -329,7 +327,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Only required opti
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -349,13 +349,7 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Only required opti
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -388,7 +382,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Only required opti
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -408,13 +404,7 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Only required opti
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     {
                     <span>
                       <span>
@@ -422,24 +412,12 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Only required opti
                           
                           
                       </span>
-                      <span
-                        style={
-                          Object {
-                            "color": "#666",
-                          }
-                        }
-                      >
+                      <span>
                         x1
                       </span>
                     </span>
                     : 
-                    <span
-                      style={
-                        Object {
-                          "color": "#a11",
-                        }
-                      }
-                    >
+                    <span>
                       0
                     </span>
                     ,
@@ -449,24 +427,12 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Only required opti
                           
                           
                       </span>
-                      <span
-                        style={
-                          Object {
-                            "color": "#666",
-                          }
-                        }
-                      >
+                      <span>
                         x2
                       </span>
                     </span>
                     : 
-                    <span
-                      style={
-                        Object {
-                          "color": "#a11",
-                        }
-                      }
-                    >
+                    <span>
                       0
                     </span>
                     ,
@@ -476,24 +442,12 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Only required opti
                           
                           
                       </span>
-                      <span
-                        style={
-                          Object {
-                            "color": "#666",
-                          }
-                        }
-                      >
+                      <span>
                         y1
                       </span>
                     </span>
                     : 
-                    <span
-                      style={
-                        Object {
-                          "color": "#a11",
-                        }
-                      }
-                    >
+                    <span>
                       0
                     </span>
                     ,
@@ -540,7 +494,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Only required opti
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -560,13 +516,7 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Only required opti
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -599,7 +549,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Only required opti
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -619,13 +571,7 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Only required opti
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     {
                     }
                   </span>
@@ -658,7 +604,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Only required opti
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -708,7 +656,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Only required opti
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -758,7 +708,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Only required opti
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -804,12 +756,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards 1`] = 
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -1067,12 +1016,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards 1`] = 
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -1097,7 +1043,7 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards 1`] = 
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -1107,7 +1053,7 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards 1`] = 
             "
             MiniChart
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -1183,7 +1129,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    node
+                  </span>
                 </td>
                 <td
                   style={
@@ -1233,7 +1181,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -1283,7 +1233,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -1303,13 +1255,7 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards 1`] = 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -1342,7 +1288,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -1362,13 +1310,7 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards 1`] = 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     {
                     <span>
                       <span>
@@ -1376,24 +1318,12 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards 1`] = 
                           
                           
                       </span>
-                      <span
-                        style={
-                          Object {
-                            "color": "#666",
-                          }
-                        }
-                      >
+                      <span>
                         x1
                       </span>
                     </span>
                     : 
-                    <span
-                      style={
-                        Object {
-                          "color": "#a11",
-                        }
-                      }
-                    >
+                    <span>
                       0
                     </span>
                     ,
@@ -1403,24 +1333,12 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards 1`] = 
                           
                           
                       </span>
-                      <span
-                        style={
-                          Object {
-                            "color": "#666",
-                          }
-                        }
-                      >
+                      <span>
                         x2
                       </span>
                     </span>
                     : 
-                    <span
-                      style={
-                        Object {
-                          "color": "#a11",
-                        }
-                      }
-                    >
+                    <span>
                       0
                     </span>
                     ,
@@ -1430,24 +1348,12 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards 1`] = 
                           
                           
                       </span>
-                      <span
-                        style={
-                          Object {
-                            "color": "#666",
-                          }
-                        }
-                      >
+                      <span>
                         y1
                       </span>
                     </span>
                     : 
-                    <span
-                      style={
-                        Object {
-                          "color": "#a11",
-                        }
-                      }
-                    >
+                    <span>
                       0
                     </span>
                     ,
@@ -1494,7 +1400,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -1514,13 +1422,7 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards 1`] = 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -1553,7 +1455,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -1573,13 +1477,7 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards 1`] = 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     {
                     }
                   </span>
@@ -1612,7 +1510,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1662,7 +1562,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1712,7 +1614,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1758,12 +1662,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards and li
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -2070,12 +1971,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards and li
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -2100,7 +1998,7 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards and li
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -2110,7 +2008,7 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards and li
             "
             MiniChart
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -2186,7 +2084,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards and li
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    node
+                  </span>
                 </td>
                 <td
                   style={
@@ -2236,7 +2136,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards and li
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -2286,7 +2188,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards and li
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -2306,13 +2210,7 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards and li
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -2345,7 +2243,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards and li
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -2365,13 +2265,7 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards and li
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     {
                     <span>
                       <span>
@@ -2379,24 +2273,12 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards and li
                           
                           
                       </span>
-                      <span
-                        style={
-                          Object {
-                            "color": "#666",
-                          }
-                        }
-                      >
+                      <span>
                         x1
                       </span>
                     </span>
                     : 
-                    <span
-                      style={
-                        Object {
-                          "color": "#a11",
-                        }
-                      }
-                    >
+                    <span>
                       0
                     </span>
                     ,
@@ -2406,24 +2288,12 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards and li
                           
                           
                       </span>
-                      <span
-                        style={
-                          Object {
-                            "color": "#666",
-                          }
-                        }
-                      >
+                      <span>
                         x2
                       </span>
                     </span>
                     : 
-                    <span
-                      style={
-                        Object {
-                          "color": "#a11",
-                        }
-                      }
-                    >
+                    <span>
                       0
                     </span>
                     ,
@@ -2433,24 +2303,12 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards and li
                           
                           
                       </span>
-                      <span
-                        style={
-                          Object {
-                            "color": "#666",
-                          }
-                        }
-                      >
+                      <span>
                         y1
                       </span>
                     </span>
                     : 
-                    <span
-                      style={
-                        Object {
-                          "color": "#a11",
-                        }
-                      }
-                    >
+                    <span>
                       0
                     </span>
                     ,
@@ -2497,7 +2355,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards and li
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -2517,13 +2377,7 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards and li
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -2556,7 +2410,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards and li
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -2576,13 +2432,7 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards and li
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     {
                     }
                   </span>
@@ -2615,7 +2465,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards and li
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -2665,7 +2517,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards and li
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -2715,7 +2569,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards and li
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -2761,12 +2617,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards, lines
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -3073,12 +2926,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards, lines
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -3103,7 +2953,7 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards, lines
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -3113,7 +2963,7 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards, lines
             "
             MiniChart
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -3189,7 +3039,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards, lines
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    node
+                  </span>
                 </td>
                 <td
                   style={
@@ -3239,7 +3091,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards, lines
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -3289,7 +3143,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards, lines
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -3309,13 +3165,7 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards, lines
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -3348,7 +3198,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards, lines
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -3368,13 +3220,7 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards, lines
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     {
                     <span>
                       <span>
@@ -3382,24 +3228,12 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards, lines
                           
                           
                       </span>
-                      <span
-                        style={
-                          Object {
-                            "color": "#666",
-                          }
-                        }
-                      >
+                      <span>
                         x1
                       </span>
                     </span>
                     : 
-                    <span
-                      style={
-                        Object {
-                          "color": "#a11",
-                        }
-                      }
-                    >
+                    <span>
                       0
                     </span>
                     ,
@@ -3409,24 +3243,12 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards, lines
                           
                           
                       </span>
-                      <span
-                        style={
-                          Object {
-                            "color": "#666",
-                          }
-                        }
-                      >
+                      <span>
                         x2
                       </span>
                     </span>
                     : 
-                    <span
-                      style={
-                        Object {
-                          "color": "#a11",
-                        }
-                      }
-                    >
+                    <span>
                       0
                     </span>
                     ,
@@ -3436,24 +3258,12 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards, lines
                           
                           
                       </span>
-                      <span
-                        style={
-                          Object {
-                            "color": "#666",
-                          }
-                        }
-                      >
+                      <span>
                         y1
                       </span>
                     </span>
                     : 
-                    <span
-                      style={
-                        Object {
-                          "color": "#a11",
-                        }
-                      }
-                    >
+                    <span>
                       0
                     </span>
                     ,
@@ -3500,7 +3310,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards, lines
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -3520,13 +3332,7 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards, lines
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -3559,7 +3365,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards, lines
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -3579,13 +3387,7 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards, lines
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     {
                     }
                   </span>
@@ -3618,7 +3420,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards, lines
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -3668,7 +3472,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards, lines
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -3718,7 +3524,9 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards, lines
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={

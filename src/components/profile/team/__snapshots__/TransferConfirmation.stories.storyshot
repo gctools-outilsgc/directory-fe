@@ -6,12 +6,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -206,12 +203,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -236,7 +230,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -246,7 +240,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
             "
             TransferConfirmation
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -322,7 +316,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -342,13 +338,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     false
                   </span>
                 </td>
@@ -380,7 +370,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -400,14 +392,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     You will transfer to a new Supervisor (& Team)
                   </span>
                 </td>
@@ -439,7 +424,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -459,14 +446,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     Explicit information about the transfer to include…
                   </span>
                 </td>
@@ -498,7 +478,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -518,14 +500,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     Primary
                   </span>
                 </td>
@@ -557,7 +532,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -577,13 +554,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     primaryButtonClick
                   </span>
                 </td>
@@ -615,7 +586,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -635,14 +608,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     Secondary
                   </span>
                 </td>
@@ -674,7 +640,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -694,13 +662,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     secondaryButtonClick
                   </span>
                 </td>
@@ -732,7 +694,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -752,13 +716,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     closeButtonClick
                   </span>
                 </td>
@@ -790,7 +748,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -840,7 +800,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -890,7 +852,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -940,7 +904,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -990,7 +956,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -1010,13 +978,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     1000
                   </span>
                 </td>
@@ -1048,7 +1010,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -1068,14 +1032,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     Avatar of 
                   </span>
                 </td>
@@ -1107,7 +1064,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -1157,7 +1116,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -1207,7 +1168,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -1257,7 +1220,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -1277,13 +1242,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation delete=true
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     false
                   </span>
                 </td>
@@ -1311,12 +1270,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -1371,12 +1327,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -1401,7 +1354,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -1411,7 +1364,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
             "
             TransferConfirmation
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -1487,7 +1440,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -1507,13 +1462,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     false
                   </span>
                 </td>
@@ -1545,7 +1494,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -1565,14 +1516,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     You will transfer to a new Supervisor (& Team)
                   </span>
                 </td>
@@ -1604,7 +1548,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -1624,14 +1570,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     Explicit information about the transfer to include…
                   </span>
                 </td>
@@ -1663,7 +1602,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -1683,14 +1624,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     Primary
                   </span>
                 </td>
@@ -1722,7 +1656,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1742,13 +1678,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     primaryButtonClick
                   </span>
                 </td>
@@ -1780,7 +1710,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -1800,14 +1732,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     Secondary
                   </span>
                 </td>
@@ -1839,7 +1764,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1859,13 +1786,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     secondaryButtonClick
                   </span>
                 </td>
@@ -1897,7 +1818,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1917,13 +1840,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     closeButtonClick
                   </span>
                 </td>
@@ -1955,7 +1872,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -2005,7 +1924,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -2055,7 +1976,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -2105,7 +2028,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -2155,7 +2080,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -2175,13 +2102,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     1000
                   </span>
                 </td>
@@ -2213,7 +2134,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -2233,14 +2156,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     Avatar of 
                   </span>
                 </td>
@@ -2272,7 +2188,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -2322,7 +2240,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -2372,7 +2292,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -2422,7 +2344,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -2442,13 +2366,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     false
                   </span>
                 </td>
@@ -2476,12 +2394,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -2694,12 +2609,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -2724,7 +2636,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -2734,7 +2646,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
             "
             TransferConfirmation
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -2810,7 +2722,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -2830,13 +2744,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     false
                   </span>
                 </td>
@@ -2868,7 +2776,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -2888,14 +2798,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     You will transfer to a new Supervisor (& Team)
                   </span>
                 </td>
@@ -2927,7 +2830,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -2947,14 +2852,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     Explicit information about the transfer to include…
                   </span>
                 </td>
@@ -2986,7 +2884,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -3006,14 +2906,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     Primary
                   </span>
                 </td>
@@ -3045,7 +2938,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -3065,13 +2960,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     primaryButtonClick
                   </span>
                 </td>
@@ -3103,7 +2992,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -3123,14 +3014,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     Secondary
                   </span>
                 </td>
@@ -3162,7 +3046,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -3182,13 +3068,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     secondaryButtonClick
                   </span>
                 </td>
@@ -3220,7 +3100,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -3240,13 +3122,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     closeButtonClick
                   </span>
                 </td>
@@ -3278,7 +3154,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -3328,7 +3206,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -3378,7 +3258,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -3428,7 +3310,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -3478,7 +3362,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -3498,13 +3384,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     1000
                   </span>
                 </td>
@@ -3536,7 +3416,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -3556,14 +3438,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     Avatar of 
                   </span>
                 </td>
@@ -3595,7 +3470,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -3645,7 +3522,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -3695,7 +3574,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -3745,7 +3626,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -3765,13 +3648,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     false
                   </span>
                 </td>
@@ -3799,12 +3676,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -3995,12 +3869,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -4025,7 +3896,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -4035,7 +3906,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
             "
             TransferConfirmation
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -4111,7 +3982,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -4131,13 +4004,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     false
                   </span>
                 </td>
@@ -4169,7 +4036,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -4189,14 +4058,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     You will transfer to a new Supervisor (& Team)
                   </span>
                 </td>
@@ -4228,7 +4090,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -4248,14 +4112,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     Explicit information about the transfer to include…
                   </span>
                 </td>
@@ -4287,7 +4144,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -4307,14 +4166,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     Primary
                   </span>
                 </td>
@@ -4346,7 +4198,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -4366,13 +4220,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     primaryButtonClick
                   </span>
                 </td>
@@ -4404,7 +4252,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -4424,14 +4274,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     Secondary
                   </span>
                 </td>
@@ -4463,7 +4306,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -4483,13 +4328,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     secondaryButtonClick
                   </span>
                 </td>
@@ -4521,7 +4360,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -4541,13 +4382,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     closeButtonClick
                   </span>
                 </td>
@@ -4579,7 +4414,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -4629,7 +4466,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -4679,7 +4518,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -4729,7 +4570,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -4779,7 +4622,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -4799,13 +4644,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     1000
                   </span>
                 </td>
@@ -4837,7 +4676,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -4857,14 +4698,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     Avatar of 
                   </span>
                 </td>
@@ -4896,7 +4730,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -4946,7 +4782,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -4996,7 +4834,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -5046,7 +4886,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -5066,13 +4908,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation using teams
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     false
                   </span>
                 </td>
@@ -5100,12 +4936,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -5318,12 +5151,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -5348,7 +5178,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -5358,7 +5188,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
             "
             TransferConfirmation
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -5434,7 +5264,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -5454,13 +5286,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     false
                   </span>
                 </td>
@@ -5492,7 +5318,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -5512,14 +5340,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     You will transfer to a new Supervisor (& Team)
                   </span>
                 </td>
@@ -5551,7 +5372,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -5571,14 +5394,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     Explicit information about the transfer to include…
                   </span>
                 </td>
@@ -5610,7 +5426,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -5630,14 +5448,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     Primary
                   </span>
                 </td>
@@ -5669,7 +5480,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -5689,13 +5502,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     primaryButtonClick
                   </span>
                 </td>
@@ -5727,7 +5534,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -5747,14 +5556,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     Secondary
                   </span>
                 </td>
@@ -5786,7 +5588,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -5806,13 +5610,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     secondaryButtonClick
                   </span>
                 </td>
@@ -5844,7 +5642,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -5864,13 +5664,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     closeButtonClick
                   </span>
                 </td>
@@ -5902,7 +5696,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -5952,7 +5748,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -6002,7 +5800,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -6052,7 +5852,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -6102,7 +5904,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -6122,13 +5926,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     1000
                   </span>
                 </td>
@@ -6160,7 +5958,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -6180,14 +5980,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     Avatar of 
                   </span>
                 </td>
@@ -6219,7 +6012,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -6269,7 +6064,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -6319,7 +6116,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -6369,7 +6168,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -6389,13 +6190,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     false
                   </span>
                 </td>
@@ -6423,12 +6218,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -6638,12 +6430,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -6668,7 +6457,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -6678,7 +6467,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
             "
             TransferConfirmation
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -6754,7 +6543,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -6774,13 +6565,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     false
                   </span>
                 </td>
@@ -6812,7 +6597,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -6832,14 +6619,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     You will transfer to a new Supervisor (& Team)
                   </span>
                 </td>
@@ -6871,7 +6651,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -6891,14 +6673,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     Explicit information about the transfer to include…
                   </span>
                 </td>
@@ -6930,7 +6705,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -6950,14 +6727,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     Primary
                   </span>
                 </td>
@@ -6989,7 +6759,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -7009,13 +6781,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     primaryButtonClick
                   </span>
                 </td>
@@ -7047,7 +6813,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -7067,14 +6835,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     Secondary
                   </span>
                 </td>
@@ -7106,7 +6867,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -7126,13 +6889,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     secondaryButtonClick
                   </span>
                 </td>
@@ -7164,7 +6921,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -7184,13 +6943,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     closeButtonClick
                   </span>
                 </td>
@@ -7222,7 +6975,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -7272,7 +7027,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -7322,7 +7079,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -7372,7 +7131,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -7422,7 +7183,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -7442,13 +7205,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     1000
                   </span>
                 </td>
@@ -7480,7 +7237,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -7500,14 +7259,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     Avatar of 
                   </span>
                 </td>
@@ -7539,7 +7291,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -7589,7 +7343,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -7639,7 +7395,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -7689,7 +7447,9 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -7709,13 +7469,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     false
                   </span>
                 </td>

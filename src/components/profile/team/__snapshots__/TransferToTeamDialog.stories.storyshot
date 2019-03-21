@@ -6,12 +6,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=fals
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -64,12 +61,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=fals
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -89,9 +83,6 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=fals
         <div
           style={
             Object {
-              "WebkitFontSmoothing": "antialiased",
-              "color": "#444",
-              "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
               "fontSize": "15px",
             }
           }
@@ -113,7 +104,7 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=fals
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -123,7 +114,7 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=fals
             "
             TransferToTeamDialog
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -199,7 +190,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -219,13 +212,7 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=fals
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     false
                   </span>
                 </td>
@@ -257,7 +244,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -277,13 +266,7 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=fals
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     primaryButtonClick
                   </span>
                 </td>
@@ -315,7 +298,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -335,13 +320,7 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=fals
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     secondaryButtonClick
                   </span>
                 </td>
@@ -373,7 +352,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -393,13 +374,7 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=fals
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     closeButtonClick
                   </span>
                 </td>
@@ -431,7 +406,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -481,7 +458,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -531,7 +510,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -581,7 +562,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -631,7 +614,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -651,13 +636,7 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=fals
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     1000
                   </span>
                 </td>
@@ -689,7 +668,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -739,7 +720,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=fals
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -785,12 +768,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=true
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -858,12 +838,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=true
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -883,9 +860,6 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=true
         <div
           style={
             Object {
-              "WebkitFontSmoothing": "antialiased",
-              "color": "#444",
-              "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
               "fontSize": "15px",
             }
           }
@@ -907,7 +881,7 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=true
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -917,7 +891,7 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=true
             "
             TransferToTeamDialog
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -993,7 +967,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -1013,13 +989,7 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=true
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     false
                   </span>
                 </td>
@@ -1051,7 +1021,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1071,13 +1043,7 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=true
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     primaryButtonClick
                   </span>
                 </td>
@@ -1109,7 +1075,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1129,13 +1097,7 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=true
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     secondaryButtonClick
                   </span>
                 </td>
@@ -1167,7 +1129,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1187,13 +1151,7 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=true
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     closeButtonClick
                   </span>
                 </td>
@@ -1225,7 +1183,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1275,7 +1235,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1325,7 +1287,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1375,7 +1339,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1425,7 +1391,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -1445,13 +1413,7 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=true
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     1000
                   </span>
                 </td>
@@ -1483,7 +1445,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -1533,7 +1497,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=true
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -1579,12 +1545,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog with click 
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -1652,12 +1615,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog with click 
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -1677,9 +1637,6 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog with click 
         <div
           style={
             Object {
-              "WebkitFontSmoothing": "antialiased",
-              "color": "#444",
-              "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
               "fontSize": "15px",
             }
           }
@@ -1701,7 +1658,7 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog with click 
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -1711,7 +1668,7 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog with click 
             "
             TransferToTeamDialog
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -1787,7 +1744,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -1807,13 +1766,7 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog with click 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     false
                   </span>
                 </td>
@@ -1845,7 +1798,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1865,13 +1820,7 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog with click 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     primaryButtonClick
                   </span>
                 </td>
@@ -1903,7 +1852,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1923,13 +1874,7 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog with click 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     secondaryButtonClick
                   </span>
                 </td>
@@ -1961,7 +1906,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1981,13 +1928,7 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog with click 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     closeButtonClick
                   </span>
                 </td>
@@ -2019,7 +1960,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -2069,7 +2012,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -2119,7 +2064,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -2169,7 +2116,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -2219,7 +2168,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -2239,13 +2190,7 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog with click 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     1000
                   </span>
                 </td>
@@ -2277,7 +2222,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -2327,7 +2274,9 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog with click 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
