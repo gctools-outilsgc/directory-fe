@@ -145,7 +145,7 @@ export class OnboardStep2 extends Component {
                   </label>
                 </Col>
               </Row>
-              <Row>
+              <Row className="mt-3">
                 <Col>
                   <DepartmentPicker
                     currentDepart={this.state.team.organization}

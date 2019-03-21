@@ -141,7 +141,7 @@ export class GQLTeamCard extends React.Component {
                           </div>
                         </div>
                         {canEdit ?
-                          <div>
+                          <div className="mt-1">
                             <Button
                               color="light"
                               size="sm"
@@ -198,7 +198,8 @@ export class GQLTeamCard extends React.Component {
                                           <div className="mr-auto d-flex">
                                             <div className="mr-2">
                                               <img
-                                                className="avatar"
+                                          // eslint-disable-next-line max-len
+                                                className="avatar rounded-circle"
                                                 src={
                                                   supTest ? supTest.avatar : ''
                                                 }
@@ -223,7 +224,8 @@ export class GQLTeamCard extends React.Component {
                                           <div className="mr-auto d-flex">
                                             <div className="mr-2">
                                               <img
-                                                className="avatar"
+                                          // eslint-disable-next-line max-len
+                                                className="avatar rounded-circle"
                                                 src={
                                                   chosenSupervisor.avatar
                                                 }

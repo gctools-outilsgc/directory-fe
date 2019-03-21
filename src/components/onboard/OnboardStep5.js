@@ -156,7 +156,8 @@ export class OnboardStep5 extends Component {
                 }}
               /> :
               <div>
-                {teamTest ? teamTest.nameEn : 'None'}
+                {teamTest ? teamTest.nameEn :
+                  'Pick a Supervisor'}
               </div>
             }
           </Col>
