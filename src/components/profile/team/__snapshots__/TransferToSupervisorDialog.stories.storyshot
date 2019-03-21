@@ -6,12 +6,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -66,12 +63,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -91,9 +85,6 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
         <div
           style={
             Object {
-              "WebkitFontSmoothing": "antialiased",
-              "color": "#444",
-              "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
               "fontSize": "15px",
             }
           }
@@ -115,7 +106,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -125,7 +116,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
             "
             TransferToSupervisorDialog
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -201,7 +192,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -221,13 +214,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     false
                   </span>
                 </td>
@@ -259,7 +246,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -279,13 +268,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     primaryButtonClick
                   </span>
                 </td>
@@ -317,7 +300,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -337,13 +322,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     secondaryButtonClick
                   </span>
                 </td>
@@ -375,7 +354,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -395,13 +376,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     closeButtonClick
                   </span>
                 </td>
@@ -433,7 +408,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -483,7 +460,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -533,7 +512,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -583,7 +564,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -633,7 +616,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -653,13 +638,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     1000
                   </span>
                 </td>
@@ -691,7 +670,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -737,12 +718,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -920,12 +898,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -945,9 +920,6 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
         <div
           style={
             Object {
-              "WebkitFontSmoothing": "antialiased",
-              "color": "#444",
-              "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
               "fontSize": "15px",
             }
           }
@@ -969,7 +941,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -979,7 +951,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
             "
             TransferToSupervisorDialog
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -1055,7 +1027,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -1075,13 +1049,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     false
                   </span>
                 </td>
@@ -1113,7 +1081,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1133,13 +1103,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     primaryButtonClick
                   </span>
                 </td>
@@ -1171,7 +1135,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1191,13 +1157,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     secondaryButtonClick
                   </span>
                 </td>
@@ -1229,7 +1189,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1249,13 +1211,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     closeButtonClick
                   </span>
                 </td>
@@ -1287,7 +1243,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1337,7 +1295,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1387,7 +1347,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1437,7 +1399,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1487,7 +1451,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -1507,13 +1473,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     1000
                   </span>
                 </td>
@@ -1545,7 +1505,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -1591,12 +1553,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog with 
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -1774,12 +1733,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog with 
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -1799,9 +1755,6 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog with 
         <div
           style={
             Object {
-              "WebkitFontSmoothing": "antialiased",
-              "color": "#444",
-              "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
               "fontSize": "15px",
             }
           }
@@ -1823,7 +1776,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog with 
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -1833,7 +1786,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog with 
             "
             TransferToSupervisorDialog
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -1909,7 +1862,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog with 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -1929,13 +1884,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog with 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     false
                   </span>
                 </td>
@@ -1967,7 +1916,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog with 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1987,13 +1938,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog with 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     primaryButtonClick
                   </span>
                 </td>
@@ -2025,7 +1970,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog with 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -2045,13 +1992,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog with 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     secondaryButtonClick
                   </span>
                 </td>
@@ -2083,7 +2024,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog with 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -2103,13 +2046,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog with 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     closeButtonClick
                   </span>
                 </td>
@@ -2141,7 +2078,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog with 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -2191,7 +2130,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog with 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -2241,7 +2182,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog with 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -2291,7 +2234,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog with 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -2341,7 +2286,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog with 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -2361,13 +2308,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog with 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     1000
                   </span>
                 </td>
@@ -2399,7 +2340,9 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog with 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={

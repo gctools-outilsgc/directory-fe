@@ -17,6 +17,7 @@ const mock = [
     result: {
       data: {
         profiles: [{
+          __typename: 'Profile',
           gcID: '1',
           name: 'Test Name',
           email: 'test@test.test',
@@ -24,13 +25,16 @@ const mock = [
           mobilePhone: '',
           officePhone: '',
           team: {
+            __typename: 'Team',
             id: '',
             organization: {
+              __typename: 'Organization',
               id: '',
               nameEn: '',
               nameFr: '',
             },
             owner: {
+              __typename: 'Profile',
               gcID: '',
               name: '',
               avatar: '',
@@ -39,6 +43,7 @@ const mock = [
             },
           },
           address: {
+            __typename: 'Address',
             id: '',
             streetAddress: '',
             city: '',
@@ -69,7 +74,7 @@ describe('GQLProfileCard', () => {
 
   it('should render a profile card with data', async () => {
     const { queryByText } = render((
-      <MockedProvider mocks={mock} addTypename={false}>
+      <MockedProvider mocks={mock}>
         <GQLProfileCard id="1" />
       </MockedProvider>
     ));

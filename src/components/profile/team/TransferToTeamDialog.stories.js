@@ -24,7 +24,13 @@ const mocks = [
     result: {
       data: {
         profiles: [{
+          __typename: 'Profile',
           gcID: '1',
+          team: {
+            id: 'teamid',
+            nameEn: 'team name',
+            nameFr: 'nom d\'equipe',
+          },
           ownerOfTeams: [{
             id: 'myteam2',
             nameEn: '',
@@ -55,11 +61,17 @@ const mocks = [
     result: {
       data: {
         profiles: [{
+          __typename: 'Profile',
           gcID: '2',
           name: 'Al Geer',
           titleEn: 'Job Title Here',
           titleFr: 'Titre du poste ici',
           avatar: avatar1,
+          team: {
+            id: 'teamid',
+            nameEn: 'team name',
+            nameFr: 'nom d\'equipe',
+          },
         }],
       },
     },

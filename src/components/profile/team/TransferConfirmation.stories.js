@@ -106,4 +106,18 @@ storiesOf('components/profile/team/TransferConfirmation', module)
         secondaryButtonText="Custom Secondary"
       />
     )
+  )
+  .add(
+    'delete=true',
+    () => (
+      <TransferConfirmation
+        isOpen
+        source={user1.team}
+        transferredUser={user2}
+        destination={user3.team}
+        delete
+        primaryButtonText="Custom Primary"
+        secondaryButtonText="Custom Secondary"
+      />
+    )
   );

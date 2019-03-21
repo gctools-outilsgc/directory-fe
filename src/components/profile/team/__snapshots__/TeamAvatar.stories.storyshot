@@ -6,12 +6,9 @@ exports[`FileProperties components/profile/team/TeamAvatar Default Team 1`] = `
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -72,12 +69,9 @@ exports[`FileProperties components/profile/team/TeamAvatar Default Team 1`] = `
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -102,7 +96,7 @@ exports[`FileProperties components/profile/team/TeamAvatar Default Team 1`] = `
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -112,7 +106,7 @@ exports[`FileProperties components/profile/team/TeamAvatar Default Team 1`] = `
             "
             TeamAvatar
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -188,7 +182,9 @@ exports[`FileProperties components/profile/team/TeamAvatar Default Team 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -238,7 +234,9 @@ exports[`FileProperties components/profile/team/TeamAvatar Default Team 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -284,12 +282,9 @@ exports[`FileProperties components/profile/team/TeamAvatar Letter 1`] = `
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -350,12 +345,9 @@ exports[`FileProperties components/profile/team/TeamAvatar Letter 1`] = `
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -380,7 +372,7 @@ exports[`FileProperties components/profile/team/TeamAvatar Letter 1`] = `
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -390,7 +382,7 @@ exports[`FileProperties components/profile/team/TeamAvatar Letter 1`] = `
             "
             TeamAvatar
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -466,7 +458,9 @@ exports[`FileProperties components/profile/team/TeamAvatar Letter 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -516,7 +510,9 @@ exports[`FileProperties components/profile/team/TeamAvatar Letter 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -562,12 +558,9 @@ exports[`FileProperties components/profile/team/TeamAvatar The very long team na
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -628,12 +621,9 @@ exports[`FileProperties components/profile/team/TeamAvatar The very long team na
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -658,7 +648,7 @@ exports[`FileProperties components/profile/team/TeamAvatar The very long team na
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -668,7 +658,7 @@ exports[`FileProperties components/profile/team/TeamAvatar The very long team na
             "
             TeamAvatar
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -744,7 +734,9 @@ exports[`FileProperties components/profile/team/TeamAvatar The very long team na
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -794,7 +786,9 @@ exports[`FileProperties components/profile/team/TeamAvatar The very long team na
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -840,12 +834,9 @@ exports[`FileProperties components/profile/team/TeamAvatar Word 1`] = `
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -906,12 +897,9 @@ exports[`FileProperties components/profile/team/TeamAvatar Word 1`] = `
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -936,7 +924,7 @@ exports[`FileProperties components/profile/team/TeamAvatar Word 1`] = `
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -946,7 +934,7 @@ exports[`FileProperties components/profile/team/TeamAvatar Word 1`] = `
             "
             TeamAvatar
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -1022,7 +1010,9 @@ exports[`FileProperties components/profile/team/TeamAvatar Word 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -1072,7 +1062,9 @@ exports[`FileProperties components/profile/team/TeamAvatar Word 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -1118,12 +1110,9 @@ exports[`FileProperties components/profile/team/TeamAvatar lower case 1`] = `
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -1184,12 +1173,9 @@ exports[`FileProperties components/profile/team/TeamAvatar lower case 1`] = `
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -1214,7 +1200,7 @@ exports[`FileProperties components/profile/team/TeamAvatar lower case 1`] = `
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -1224,7 +1210,7 @@ exports[`FileProperties components/profile/team/TeamAvatar lower case 1`] = `
             "
             TeamAvatar
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -1300,7 +1286,9 @@ exports[`FileProperties components/profile/team/TeamAvatar lower case 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -1350,285 +1338,9 @@ exports[`FileProperties components/profile/team/TeamAvatar lower case 1`] = `
                     }
                   }
                 >
-                  <span />
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  -
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  -
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                />
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`FileProperties components/profile/team/TeamAvatar undefined 1`] = `
-<div>
-  <div>
-    <div
-      style={
-        Object {
-          "WebkitFontSmoothing": "antialiased",
-          "backgroundColor": "#fff",
-          "border": "1px solid #eee",
-          "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
-          "fontSize": "15px",
-          "fontWeight": 300,
-          "lineHeight": 1.45,
-          "marginBottom": "20px",
-          "marginTop": "20px",
-          "padding": "20px 40px 40px",
-        }
-      }
-    >
-      <div
-        style={
-          Object {
-            "borderBottom": "1px solid #eee",
-            "marginBottom": 10,
-            "paddingTop": 10,
-          }
-        }
-      >
-        <h1
-          style={
-            Object {
-              "fontSize": "35px",
-              "margin": 0,
-              "padding": 0,
-            }
-          }
-        >
-          components/profile/team/TeamAvatar
-        </h1>
-        <h2
-          style={
-            Object {
-              "fontSize": "22px",
-              "fontWeight": 400,
-              "margin": "0 0 10px 0",
-              "padding": 0,
-            }
-          }
-        >
-          undefined
-        </h2>
-      </div>
-    </div>
-  </div>
-  <div
-    id="story-root"
-    style={Object {}}
-  >
-    <div
-      className="sc-VigVT eHkmTw"
-    >
-      <span>
-        N/A
-      </span>
-    </div>
-  </div>
-  <div>
-    <div
-      style={
-        Object {
-          "WebkitFontSmoothing": "antialiased",
-          "backgroundColor": "#fff",
-          "border": "1px solid #eee",
-          "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
-          "fontSize": "15px",
-          "fontWeight": 300,
-          "lineHeight": 1.45,
-          "marginBottom": "20px",
-          "marginTop": "20px",
-          "padding": "20px 40px 40px",
-        }
-      }
-    >
-      
-      <div>
-        <h1
-          style={
-            Object {
-              "borderBottom": "1px solid #EEE",
-              "fontSize": "25px",
-              "margin": "20px 0 0 0",
-              "padding": "0 0 5px 0",
-            }
-          }
-        >
-          Prop Types
-        </h1>
-        <div>
-          <h2
-            style={
-              Object {
-                "margin": "20px 0 0 0",
-              }
-            }
-          >
-            "
-            TeamAvatar
-            " Component
-          </h2>
-          <table>
-            <thead>
-              <tr>
-                <th
-                  style={
-                    Object {
-                      "textAlign": "left",
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  property
-                </th>
-                <th
-                  style={
-                    Object {
-                      "textAlign": "left",
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  propType
-                </th>
-                <th
-                  style={
-                    Object {
-                      "textAlign": "left",
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  required
-                </th>
-                <th
-                  style={
-                    Object {
-                      "textAlign": "left",
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  default
-                </th>
-                <th
-                  style={
-                    Object {
-                      "textAlign": "left",
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  description
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  name
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  <span />
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  yes
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  -
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                />
-              </tr>
-              <tr>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  className
-                </td>
-                <td
-                  style={
-                    Object {
-                      "paddingRight": 10,
-                      "verticalAlign": "top",
-                    }
-                  }
-                >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={

@@ -45,7 +45,7 @@ query getProfile($gcID: ID!) {
 ${FullProfileFragment}
 `;
 
-const FullTeamFragment = gql`
+export const FullTeamFragment = gql`
 fragment FullTeam on Profile {
   gcID
   name

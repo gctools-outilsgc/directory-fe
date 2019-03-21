@@ -45,6 +45,7 @@ const mocks = [
     result: {
       data: {
         profiles: [{
+          __typename: 'Profile',
           gcID: '1',
           ownerOfTeams: [{
             id: 'myteam2',
@@ -76,6 +77,7 @@ const mocks = [
     result: {
       data: {
         profiles: [{
+          __typename: 'Profile',
           gcID: '2',
           name: 'Al Geer',
           titleEn: 'Job Title Here',
@@ -99,7 +101,7 @@ describe('QueryLoader', () => {
   });
   it('passes data using render-prop pattern on success', (done) => {
     render((
-      <MockedProvider mocks={mocks} addTypename={false}>
+      <MockedProvider mocks={mocks}>
         <QueryLoader
           query={GET_BASICS}
           variables={mocks[1].request.variables}
@@ -115,7 +117,7 @@ describe('QueryLoader', () => {
   });
   it('does not execute render-prop while loading', (done) => {
     render((
-      <MockedProvider mocks={mocks} addTypename={false}>
+      <MockedProvider mocks={mocks}>
         <QueryLoader
           query={GET_BASICS}
           variables={mocks[1].request.variables}
@@ -131,7 +133,7 @@ describe('QueryLoader', () => {
   });
   it('does not execute render-prop on error', async () => {
     const { queryByText } = render(
-      <MockedProvider mocks={mocks} addTypename={false}>
+      <MockedProvider mocks={mocks}>
         <QueryLoader
           query={GET_BASICS}
           variables={mocks[0].request.variables}
@@ -146,7 +148,7 @@ describe('QueryLoader', () => {
   });
   it('displays spinner while loading', () => {
     const { queryByText } = render(
-      <MockedProvider mocks={mocks} addTypename={false}>
+      <MockedProvider mocks={mocks}>
         <QueryLoader
           query={GET_BASICS}
           variables={mocks[1].request.variables}
@@ -163,7 +165,7 @@ describe('QueryLoader', () => {
   describe('when displayState is false', () => {
     it('does not show loading', async () => {
       const { queryByText, container } = render(
-        <MockedProvider mocks={mocks} addTypename={false}>
+        <MockedProvider mocks={mocks}>
           <QueryLoader
             query={GET_BASICS}
             variables={mocks[1].request.variables}
@@ -181,7 +183,7 @@ describe('QueryLoader', () => {
     });
     it('does not show errors', (done) => {
       const { queryByText, container } = render(
-        <MockedProvider mocks={mocks} addTypename={false}>
+        <MockedProvider mocks={mocks}>
           <QueryLoader
             query={GET_BASICS}
             variables={mocks[0].request.variables}
