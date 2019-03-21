@@ -45,7 +45,7 @@ class SupervisorPicker extends React.Component {
       <Query
         query={gql`
           query profileSearchQuery($name: String!) {
-            profiles(name: $name) {
+            profiles(name: $name, first:5) {
               gcID
               name
               titleEn
@@ -64,8 +64,29 @@ class SupervisorPicker extends React.Component {
                 <Button
                   onClick={() => this.handleResultClick(a)}
                   color="light"
+                  block
                 >
-                  {a.name}
+                  <div className="d-flex">
+                    <img
+                      className="avatar rounded-circle"
+                      src={
+                        a.avatar
+                      }
+                      alt={
+                        a.name
+                      }
+                    />
+                    <div className="ml-2">
+                      <div
+                        className="font-weight-bold"
+                      >
+                        {a.name}
+                      </div>
+                      <small className="text-muted">
+                        {a.titleEn}
+                      </small>
+                    </div>
+                  </div>
                 </Button>
               </li>
               )) : [];

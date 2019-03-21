@@ -1,9 +1,8 @@
 import gql from 'graphql-tag';
 
-export const GET = gql`
-query getProfile($gcID: ID!) {
-  profiles(gcID: $gcID) {
-    gcID
+const FullProfileFragment = gql`
+fragment FullProfile on Profile {
+  gcID
     name
     email
     avatar
@@ -34,8 +33,49 @@ query getProfile($gcID: ID!) {
     }
     titleEn
     titleFr
+}
+`;
+
+export const GET = gql`
+query getProfile($gcID: ID!) {
+  profiles(gcID: $gcID) {
+    ...FullProfile
   }
-}`;
+}
+${FullProfileFragment}
+`;
+
+const FullTeamFragment = gql`
+fragment FullTeam on Profile {
+  gcID
+  name
+  avatar
+  titleEn
+  titleFr
+  team {
+    id
+    nameEn
+    nameFr
+    organization {
+      id,
+      nameEn,
+      nameFr
+    }
+    owner {
+      gcID
+      name
+      avatar
+      titleEn
+      titleFr
+    }
+    members {
+      name
+      titleEn
+      avatar
+    }
+  }
+}
+`;
 
 export const SEARCH = gql`
 query profileSearchQuery($name: String!) {
@@ -64,35 +104,11 @@ query profileSearchQuery($name: String!) {
 export const GET_TEAM = gql`
 query getTeam($gcID: ID!) {
   profiles(gcID: $gcID) {
-    gcID
-    name
-    avatar
-    titleEn
-    titleFr
-    team {
-      id
-      nameEn
-      nameFr
-      organization {
-        id,
-        nameEn,
-        nameFr
-      }
-      owner {
-        gcID
-        name
-        avatar
-        titleEn
-        titleFr
-      }
-      members {
-        name
-        titleEn
-        avatar
-      }
-    }
+    ...FullTeam
   }
-}`;
+}
+${FullTeamFragment}
+`;
 
 export const GET_YOUR_TEAM = gql`
 query getProfile($gcID: ID!) {
@@ -177,39 +193,20 @@ ${teamDataForOrgChart}
 export const EDIT = gql`
 mutation editProfile($gcID: ID!, $data: ModifyProfileInput!) {
   modifyProfile(gcID: $gcID, data: $data) {
-    gcID
-    name
-    email
-    avatar
-    mobilePhone
-    officePhone
-    team {
-      id
-    }
-    address {
-      id
-      streetAddress
-      city
-      province
-      postalCode
-      country
-    }
-    titleEn
-    titleFr
+    ...FullProfile
   }
 }
+${FullProfileFragment}
 `;
 
 export const EDIT_TEAM = gql`
 mutation editTeam($gcID: ID!, $data: ModifyProfileInput!)
 {
   modifyProfile(gcID: $gcID, data: $data){
-    gcID
-    team {
-      id
-    }
+    ...FullTeam
   }
 }
+${FullTeamFragment}
 `;
 
 /**
