@@ -16,20 +16,8 @@ import {
 import styled from 'styled-components';
 
 import { SEARCH } from '../../gql/profile';
+import varTag from '../../utils/cssVarTag';
 
-// Fallback for browsers who don't support CSS variables
-const cssVariables = {
-  '--primary': '#002D42',
-  '--info': '#269abc',
-};
-const styles = getComputedStyle(document.body);
-
-const varTag = (variable) => {
-  if (!styles.getPropertyValue(variable)) {
-    return cssVariables[variable];
-  }
-  return `var(${variable})`;
-};
 
 const ListGroup = styled.ul`
   height: 300px;

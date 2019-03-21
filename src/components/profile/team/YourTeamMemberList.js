@@ -7,6 +7,7 @@ import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
 
 import I18nTransferToSupervisorDialog from './TransferToSupervisorDialog';
+import I18nTransferToNewTeamDialog from './TransferToTeamDialog';
 import TransferConfirmation from './TransferConfirmation';
 import ErrorModal, { err } from '../../core/ErrorModal';
 
@@ -56,24 +57,30 @@ const TransferToSupervisorAction = (props) => {
               profile={profile}
               secondaryButtonClick={() => { setShowDialog(false); }}
               closeButtonClick={() => { setShowDialog(false); }}
-              primaryButtonClick={(_, newSupervisor) => {
-                if (newSupervisor.gcID === supervisor.gcID) {
+              primaryButtonClick={(_, destination) => {
+                if (destination.gcID === supervisor.gcID) {
                   setError(err(__('already supervisor')));
                   return false;
                 }
-                const defaultTeam = getDefaultTeam(newSupervisor);
+                const defaultTeam = getDefaultTeam(destination);
                 if (!defaultTeam) {
                   setError(err(__('no default team')));
                   return false;
                 }
-                setConfirm(newSupervisor);
+                setConfirm(Object.assign(
+                  {},
+                  destination,
+                  { team: defaultTeam }
+                ));
+                console.log(supervisor);
+                console.log(destination);
                 return true;
               }}
             />
             {confirm && (<TransferConfirmation
-              oldSupervisor={supervisor}
+              source={supervisor}
               transferredUser={profile}
-              newSupervisor={confirm}
+              destination={confirm}
               isOpen={!!confirm}
               title={__('Transfer a team member to a new Supervisor')}
               bodyText={__('Explicit information about the transfer')}
@@ -116,6 +123,94 @@ TransferToSupervisorAction.propTypes = {
   }).isRequired,
 };
 
+const TransferToNewTeamAction = (props) => {
+  const { profile, supervisor } = props;
+  const [showDialog, setShowDialog] = useState(false);
+  const [confirm, setConfirm] = useState(undefined);
+  const closeAll = () => {
+    setConfirm(undefined);
+    setShowDialog(false);
+  };
+  return (
+    <React.Fragment>
+      <a
+        href="#!"
+        onClick={(e) => { setShowDialog(true); e.preventDefault(); }}
+      >
+        {__('transfer to new Team')}
+      </a>
+      <Mutation
+        mutation={EDIT_TEAM}
+        refetchQueries={[{
+          query: GET_TEAM,
+          variables: { gcID: profile.gcID },
+        }, {
+          query: GET_YOUR_TEAM,
+          variables: { gcID: supervisor.gcID },
+        }]}
+        onCompleted={() => {
+          closeAll();
+        }}
+      >
+        {mutate => (
+          <React.Fragment>
+            <I18nTransferToNewTeamDialog
+              user={profile.gcID}
+              supervisor={supervisor.gcID}
+              isOpen={showDialog}
+              secondaryButtonClick={() => { setShowDialog(false); }}
+              closeButtonClick={() => { setShowDialog(false); }}
+              primaryButtonClick={(_, newTeam) => {
+                setConfirm(newTeam);
+                return true;
+              }}
+            />
+            {confirm && (<TransferConfirmation
+              source={profile.team}
+              transferredUser={profile}
+              destination={confirm}
+              isOpen={!!confirm}
+              title={__('Transfer a team member to a new Supervisor')}
+              bodyText={__('Explicit information about the transfer')}
+              primaryButtonText={__('Accept')}
+              secondaryButtonText={__('Back')}
+              secondaryButtonClick={() => { setConfirm(undefined); }}
+              closeButtonClick={closeAll}
+              primaryButtonClick={() => {
+                mutate({
+                  variables: {
+                    gcID: profile.gcID,
+                    data: { team: { id: confirm.id } },
+                  },
+                });
+              }}
+            />)}
+          </React.Fragment>
+        )}
+      </Mutation>
+    </React.Fragment>
+  );
+};
+TransferToNewTeamAction.propTypes = {
+  /** Profile of current supervisor */
+  supervisor: PropTypes.shape({
+    gcID: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    avatar: PropTypes.string,
+    titleEn: PropTypes.string,
+    titleFr: PropTypes.string,
+  }).isRequired,
+  /** Profile of user being transferred */
+  profile: PropTypes.shape({
+    gcID: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    avatar: PropTypes.string,
+    titleEn: PropTypes.string,
+    titleFr: PropTypes.string,
+  }).isRequired,
+};
+
+
 export const YourTeamMemberList = (props) => {
   const { members, profile } = props;
   const list = (members.length > 0) ?
@@ -147,7 +242,10 @@ export const YourTeamMemberList = (props) => {
                   />
                 </li>
                 <li className="list-inline-item">
-                  <a href="#!">action</a>
+                  <TransferToNewTeamAction
+                    profile={p}
+                    supervisor={profile}
+                  />
                 </li>
               </ul>
             </small>

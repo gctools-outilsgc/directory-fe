@@ -391,7 +391,7 @@ export class EditProfile extends Component {
             this.state.confirmModal && (<TransferConfirmation
               isOpen={this.state.confirmModal}
               transferredUser={this.props.profile}
-              newSupervisor={
+              destination={
                 {
                   name: 'Choose a new Supervisor',
                   avatar: 'placeholder icon',
@@ -401,7 +401,7 @@ export class EditProfile extends Component {
                   },
                 }
               }
-              oldSupervisor={this.state.supervisor}
+              source={this.state.supervisor}
               primaryButtonClick={() => {
                 // TODO hotload / apollo cache
                 // TODO remove user's supervisor as well

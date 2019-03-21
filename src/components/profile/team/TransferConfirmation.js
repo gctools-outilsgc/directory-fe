@@ -13,20 +13,10 @@ import {
   Button
 } from 'reactstrap';
 
-// Fallback for browsers who don't support CSS variables
-const cssVariables = {
-  '--primary': '#002D42',
-  '--warning': '#f90',
-  '--info': '#269abc',
-};
-const styles = getComputedStyle(document.body);
+import TeamAvatar from './TeamAvatar';
 
-const varTag = (variable) => {
-  if (!styles.getPropertyValue(variable)) {
-    return cssVariables[variable];
-  }
-  return `var(${variable})`;
-};
+import varTag from '../../../utils/cssVarTag';
+
 
 const Arrow = styled.div`
     position: relative;
@@ -55,16 +45,22 @@ const Avatars = styled.div`
   position: relative;
   margin-top: -95px;
   margin-bottom: 50px;
-  img:first-child {
-    margin-left: 30px;
-  }
-  img {
+  img, .tcd-team-avatar {
     width: 75px;
     max-width: 75px;
     height: 75px;
+    margin-left: 80px;
+    display: inline-block;
+  }
+  img:first-child, .tcd-team-avatar:first-child {
+    margin-left: 30px;
+  }
+  img {
     border-radius: 50%;
     border: 3px solid ${varTag('--primary')};
-    margin-left: 80px;
+  }
+  .tcd-team-avatar + div.name + div.break + img {
+    margin-top: -60px;
   }
   >div.name {
     position: absolute;
@@ -82,24 +78,8 @@ const Avatars = styled.div`
   div.team {
     position: absolute;
     display: inline-block;
-    border-radius: 5px;
-    width: 40px;
-    height: 40px;
-    border: 2px solid ${varTag('--info')};
-    color: #fff;
-    background-color: ${varTag('--warning')};
     margin-top: 55px;
     margin-left: -25px;
-  }
-  div.team.new {
-    background-color: ${varTag('--primary')};
-  }
-  div.team>span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
   }
   >div.break {
     margin-left: 25px;
@@ -123,13 +103,31 @@ const Avatars = styled.div`
 `;
 
 const getProfileDetails = (profile) => {
-  const { name, avatar, team } = profile || {};
-  return {
+  const {
     name,
     avatar,
+    team,
+    titleEn,
+    titleFr,
+  } = profile || {};
+  if (!name && !team) {
+    return {
+      name: ((profile.nameEn === '') && __('Default Team')) ||
+        ((localizer.lang === 'en_CA') ? profile.nameEn : profile.nameFr),
+      isTeam: true,
+    };
+  }
+  return {
+    isTeam: false,
+    name,
+    avatar,
+    title: (localizer.lang === 'en_CA') ? titleEn : titleFr,
     team: {
       id: team && team.id,
-      name: team && team.name,
+      name:
+        team && (
+          ((team.nameEn === '') && __('Default Team')) ||
+          ((localizer.lang === 'en_CA') ? team.nameEn : team.nameFr)),
       avatar: team && team.avatar,
     }
   };
@@ -150,14 +148,14 @@ const TransferConfirmation = (props) => {
     onOpened,
     onClosed,
     zIndex,
-    oldSupervisor,
+    source,
     transferredUser,
-    newSupervisor,
+    destination,
     avatarAltText,
   } = props;
-  const user1 = getProfileDetails(oldSupervisor);
+  const user1 = getProfileDetails(source);
   const user2 = getProfileDetails(transferredUser);
-  const user3 = getProfileDetails(newSupervisor);
+  const user3 = getProfileDetails(destination);
   return (
     <div>
       <Modal
@@ -179,21 +177,33 @@ const TransferConfirmation = (props) => {
         >
           {title}
         </ModalHeader>
-        <ModalBody>
+        <ModalBody style={{ marginBottom: '35px' }}>
           {bodyText}
           <Arrow />
           <Avatars>
-            <img
-              src={user1.avatar}
-              alt={`${avatarAltText} ${user1.name}`}
-            />
-            <div className="team">
-              <span>{user1.team.avatar}</span>
-            </div>
-            <div className="name">
-              <h2>{user1.name}</h2>
-              <span>{user1.team.name}</span>
-            </div>
+            {user1.isTeam && (
+              <React.Fragment>
+                <TeamAvatar className="tcd-team-avatar" name={user1.name} />
+                <div className="name">
+                  <h2>{user1.name}</h2>
+                </div>
+              </React.Fragment>
+            )}
+            {!user1.isTeam && (
+              <React.Fragment>
+                <img
+                  src={user1.avatar}
+                  alt={`${avatarAltText} ${user1.name}`}
+                />
+                <div className="team">
+                  <TeamAvatar name={user1.team.name} />
+                </div>
+                <div className="name">
+                  <h2>{user1.name}</h2>
+                  <span>{user1.team.name}</span>
+                </div>
+              </React.Fragment>
+            )}
             <div className="break"><div /></div>
             <img
               src={user2.avatar}
@@ -201,18 +211,31 @@ const TransferConfirmation = (props) => {
             />
             <div className="name">
               <h2>{user2.name}</h2>
+              <span>{user2.title}</span>
             </div>
-            <img
-              src={user3.avatar}
-              alt={`${avatarAltText} ${user3.name}`}
-            />
-            <div className="team new">
-              <span>{user3.team.avatar}</span>
-            </div>
-            <div className="name">
-              <h2>{user3.name}</h2>
-              <span>{user3.team.name}</span>
-            </div>
+            {user3.isTeam && (
+              <React.Fragment>
+                <TeamAvatar className="tcd-team-avatar" name={user3.name} />
+                <div className="name">
+                  <h2>{user3.name}</h2>
+                </div>
+              </React.Fragment>
+            )}
+            {!user3.isTeam && (
+              <React.Fragment>
+                <img
+                  src={user3.avatar}
+                  alt={`${avatarAltText} ${user3.name}`}
+                />
+                <div className="team">
+                  <TeamAvatar name={user3.team.name} />
+                </div>
+                <div className="name">
+                  <h2>{user3.name}</h2>
+                  <span>{user3.team.name}</span>
+                </div>
+              </React.Fragment>
+            )}
           </Avatars>
         </ModalBody>
         <ModalFooter>
@@ -233,16 +256,7 @@ const TransferConfirmation = (props) => {
     </div>
   );
 };
-/*
-const userProps = PropTypes.shape({
-  name: PropTypes.string.isRequired,
-  avatar: PropTypes.string,
-  team: PropTypes.shape({
-    name: PropTypes.string,
-    avatar: PropTypes.string,
-  }).isRequired,
-});
-*/
+
 TransferConfirmation.defaultProps = {
   isOpen: false,
   title: 'You will transfer to a new Supervisor (& Team)',
@@ -295,29 +309,43 @@ TransferConfirmation.propTypes = {
   ]),
   /** Text to use for avatar alt tag, suffixed by the user's name */
   avatarAltText: PropTypes.string,
-  /** The profile of the old supervisor */
-  oldSupervisor: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    avatar: PropTypes.string,
-    team: PropTypes.shape({
-      name: PropTypes.string,
+  /** The profile or team the user is being transferred out of */
+  source: PropTypes.oneOfType([
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
       avatar: PropTypes.string,
-    }).isRequired,
-  }).isRequired,
+      team: PropTypes.shape({
+        nameEn: PropTypes.string,
+        nameFr: PropTypes.string,
+      }).isRequired,
+    }),
+    PropTypes.shape({
+      nameEn: PropTypes.string,
+      nameFr: PropTypes.string,
+    }),
+  ]).isRequired,
   /** The profile of user being transferred */
   transferredUser: PropTypes.shape({
     name: PropTypes.string.isRequired,
     avatar: PropTypes.string,
+    titleEn: PropTypes.string,
+    titleFr: PropTypes.string,
   }).isRequired,
-  /** The profile of the new supervisor */
-  newSupervisor: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    avatar: PropTypes.string,
-    team: PropTypes.shape({
-      name: PropTypes.string,
+  /** The destination the user is being transferred to */
+  destination: PropTypes.oneOfType([
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
       avatar: PropTypes.string,
-    }).isRequired,
-  }).isRequired,
+      team: PropTypes.shape({
+        nameEn: PropTypes.string,
+        nameFr: PropTypes.string,
+      }).isRequired,
+    }),
+    PropTypes.shape({
+      nameEn: PropTypes.string,
+      nameFr: PropTypes.string,
+    }),
+  ]).isRequired,
 };
 
 export default TransferConfirmation;

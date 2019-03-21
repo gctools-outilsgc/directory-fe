@@ -86,7 +86,6 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "test2": "jest --rootDir . --watchPathIgnorePatterns jest.json --testURL http://localhost --config ./node_modules/@gctools-components/jest-config/index.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint": "eslint ."
@@ -128,6 +127,7 @@
     "not op_mini all"
   ],
   "jest": {
+    "verbose": true,
     "collectCoverage": true,
     "coverageDirectory": "coverage",
     "coverageReporters": [

@@ -13,16 +13,19 @@ const user1 = {
   name: 'Mark Phillips',
   avatar: avatar1,
   team: {
-    name: 'Team: Global Affairs Advocacy',
-    avatar: 'GA',
+    nameEn: 'Team: Global Affairs Advocacy',
+    nameFr: 'Equipe: Plaidoyer d\'affaires mondiales',
   },
 };
 
 const user2 = {
   name: 'Clara MacKinnon',
+  titleEn: 'Job Title Here',
+  titleFr: 'Titre du poste ici',
   avatar: avatar2,
   team: {
-    name: 'Team: Global Affairs Advocacy',
+    nameEn: 'Team: Global Affairs Advocacy',
+    nameFr: 'Equipe: Plaidoyer d\'affaires mondiales',
   },
 };
 
@@ -30,7 +33,8 @@ const user3 = {
   name: 'Mia Jarrel',
   avatar: avatar3,
   team: {
-    name: 'Team: Default',
+    nameEn: 'Team: Default',
+    nameFr: 'Equipe: default',
     avatar: 'DT',
   },
 };
@@ -44,9 +48,9 @@ storiesOf('components/profile/team/TransferConfirmation', module)
     () => (
       <TransferConfirmation
         isOpen
-        oldSupervisor={user1}
+        source={user1}
         transferredUser={user2}
-        newSupervisor={user3}
+        destination={user3}
       />
     )
   )
@@ -55,9 +59,9 @@ storiesOf('components/profile/team/TransferConfirmation', module)
     () => (
       <TransferConfirmation
         isOpen={false}
-        oldSupervisor={user1}
+        source={user1}
         transferredUser={user2}
-        newSupervisor={user3}
+        destination={user3}
       />
     )
   )
@@ -66,9 +70,9 @@ storiesOf('components/profile/team/TransferConfirmation', module)
     () => (
       <TransferConfirmation
         isOpen
-        oldSupervisor={user1}
+        source={user1}
         transferredUser={user2}
-        newSupervisor={user3}
+        destination={user3}
         primaryButtonClick={action('primary')}
         secondaryButtonClick={action('secondary')}
         closeButtonClick={action('close')}
@@ -80,11 +84,24 @@ storiesOf('components/profile/team/TransferConfirmation', module)
     () => (
       <TransferConfirmation
         isOpen
-        oldSupervisor={user1}
+        source={user1}
         transferredUser={user2}
-        newSupervisor={user3}
+        destination={user3}
         title="Custom title"
         bodyText="Custom dialog body"
+        primaryButtonText="Custom Primary"
+        secondaryButtonText="Custom Secondary"
+      />
+    )
+  )
+  .add(
+    'using teams instead of profiles',
+    () => (
+      <TransferConfirmation
+        isOpen
+        source={user1.team}
+        transferredUser={user2}
+        destination={user3.team}
         primaryButtonText="Custom Primary"
         secondaryButtonText="Custom Secondary"
       />

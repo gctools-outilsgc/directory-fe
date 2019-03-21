@@ -957,7 +957,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  oldSupervisor
+                  source
                 </td>
                 <td
                   style={
@@ -1057,7 +1057,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  newSupervisor
+                  destination
                 </td>
                 <td
                   style={
@@ -1210,16 +1210,21 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                 </div>
                 <div
                   className="modal-body"
+                  style={
+                    Object {
+                      "marginBottom": "35px",
+                    }
+                  }
                 >
                   Explicit information about the transfer to include the Person
     being transffered, from what Team and Super, to what team and Supervisor.
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu
     porttitor ex. Nam luctus tincidunt dui, sit amet semper mi consequat eu.
                   <div
-                    className="sc-VigVT fSZwap"
+                    className="sc-jTzLTM guEHjM"
                   />
                   <div
-                    className="sc-jTzLTM eHUoFd"
+                    className="sc-fjdhpX jmVncr"
                   >
                     <img
                       alt="Avatar of  Mark Phillips"
@@ -1228,9 +1233,13 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     <div
                       className="team"
                     >
-                      <span>
-                        GA
-                      </span>
+                      <div
+                        className="sc-VigVT cOSlb"
+                      >
+                        <span>
+                          TA
+                        </span>
+                      </div>
                     </div>
                     <div
                       className="name"
@@ -1257,17 +1266,24 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                       <h2>
                         Clara MacKinnon
                       </h2>
+                      <span>
+                        Job Title Here
+                      </span>
                     </div>
                     <img
                       alt="Avatar of  Mia Jarrel"
                       src="3.jpg"
                     />
                     <div
-                      className="team new"
+                      className="team"
                     >
-                      <span>
-                        DT
-                      </span>
+                      <div
+                        className="sc-VigVT fWyYtI"
+                      >
+                        <span>
+                          TD
+                        </span>
+                      </div>
                     </div>
                     <div
                       className="name"
@@ -2206,7 +2222,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  oldSupervisor
+                  source
                 </td>
                 <td
                   style={
@@ -2306,7 +2322,1250 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  newSupervisor
+                  destination
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span />
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  yes
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FileProperties components/profile/team/TransferConfirmation using teams instead of profiles 1`] = `
+<div>
+  <div>
+    <div
+      style={
+        Object {
+          "WebkitFontSmoothing": "antialiased",
+          "backgroundColor": "#fff",
+          "border": "1px solid #eee",
+          "borderRadius": "2px",
+          "color": "#444",
+          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+          "fontSize": "15px",
+          "fontWeight": 300,
+          "lineHeight": 1.45,
+          "marginBottom": "20px",
+          "marginTop": "20px",
+          "padding": "20px 40px 40px",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "borderBottom": "1px solid #eee",
+            "marginBottom": 10,
+            "paddingTop": 10,
+          }
+        }
+      >
+        <h1
+          style={
+            Object {
+              "fontSize": "35px",
+              "margin": 0,
+              "padding": 0,
+            }
+          }
+        >
+          components/profile/team/TransferConfirmation
+        </h1>
+        <h2
+          style={
+            Object {
+              "fontSize": "22px",
+              "fontWeight": 400,
+              "margin": "0 0 10px 0",
+              "padding": 0,
+            }
+          }
+        >
+          using teams instead of profiles
+        </h2>
+      </div>
+    </div>
+  </div>
+  <div
+    id="story-root"
+    style={Object {}}
+  >
+    <div>
+      <portal-dummy>
+        <div
+          className=""
+        >
+          <div
+            className="modal fade"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            role="dialog"
+            style={
+              Object {
+                "display": "block",
+              }
+            }
+            tabIndex="-1"
+          >
+            <div
+              className="modal-dialog modal-dialog-centered"
+              role="document"
+            >
+              <div
+                className="modal-content"
+              >
+                <div
+                  className="modal-header"
+                >
+                  <h5
+                    className="modal-title"
+                  >
+                    You will transfer to a new Supervisor (& Team)
+                  </h5>
+                  <button
+                    className="close"
+                    onClick={[Function]}
+                  >
+                    ×
+                  </button>
+                </div>
+                <div
+                  className="modal-body"
+                  style={
+                    Object {
+                      "marginBottom": "35px",
+                    }
+                  }
+                >
+                  Explicit information about the transfer to include the Person
+    being transffered, from what Team and Super, to what team and Supervisor.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu
+    porttitor ex. Nam luctus tincidunt dui, sit amet semper mi consequat eu.
+                  <div
+                    className="sc-jTzLTM guEHjM"
+                  />
+                  <div
+                    className="sc-fjdhpX jmVncr"
+                  >
+                    <div
+                      className="tcd-team-avatar sc-VigVT cOSlb"
+                    >
+                      <span>
+                        TA
+                      </span>
+                    </div>
+                    <div
+                      className="name"
+                    >
+                      <h2>
+                        Team: Global Affairs Advocacy
+                      </h2>
+                    </div>
+                    <div
+                      className="break"
+                    >
+                      <div />
+                    </div>
+                    <img
+                      alt="Avatar of  Clara MacKinnon"
+                      src="2.jpg"
+                    />
+                    <div
+                      className="name"
+                    >
+                      <h2>
+                        Clara MacKinnon
+                      </h2>
+                      <span>
+                        Job Title Here
+                      </span>
+                    </div>
+                    <div
+                      className="tcd-team-avatar sc-VigVT fWyYtI"
+                    >
+                      <span>
+                        TD
+                      </span>
+                    </div>
+                    <div
+                      className="name"
+                    >
+                      <h2>
+                        Team: Default
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="modal-footer"
+                >
+                  <button
+                    aria-label={null}
+                    className="btn btn-primary"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    Custom Primary
+                  </button>
+                  <button
+                    aria-label={null}
+                    className="btn btn-secondary"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    Custom Secondary
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="modal-backdrop fade"
+          />
+        </div>
+      </portal-dummy>
+    </div>
+  </div>
+  <div>
+    <div
+      style={
+        Object {
+          "WebkitFontSmoothing": "antialiased",
+          "backgroundColor": "#fff",
+          "border": "1px solid #eee",
+          "borderRadius": "2px",
+          "color": "#444",
+          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+          "fontSize": "15px",
+          "fontWeight": 300,
+          "lineHeight": 1.45,
+          "marginBottom": "20px",
+          "marginTop": "20px",
+          "padding": "20px 40px 40px",
+        }
+      }
+    >
+      
+      <div>
+        <h1
+          style={
+            Object {
+              "borderBottom": "1px solid #EEE",
+              "fontSize": "25px",
+              "margin": "20px 0 0 0",
+              "padding": "0 0 5px 0",
+            }
+          }
+        >
+          Prop Types
+        </h1>
+        <div>
+          <h2
+            style={
+              Object {
+                "margin": "20px 0 0 0",
+              }
+            }
+          >
+            "
+            TransferConfirmation
+            " Component
+          </h2>
+          <table>
+            <thead>
+              <tr>
+                <th
+                  style={
+                    Object {
+                      "textAlign": "left",
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  property
+                </th>
+                <th
+                  style={
+                    Object {
+                      "textAlign": "left",
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  propType
+                </th>
+                <th
+                  style={
+                    Object {
+                      "textAlign": "left",
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  required
+                </th>
+                <th
+                  style={
+                    Object {
+                      "textAlign": "left",
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  default
+                </th>
+                <th
+                  style={
+                    Object {
+                      "textAlign": "left",
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  description
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  isOpen
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span />
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#a11",
+                      }
+                    }
+                  >
+                    false
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  title
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span />
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    You will transfer to a new Supervisor (& Team)
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  bodyText
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span />
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    Explicit information about the transfer to include…
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  primaryButtonText
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span />
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    Primary
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  primaryButtonClick
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span />
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#170",
+                      }
+                    }
+                  >
+                    primaryButtonClick
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  secondaryButtonText
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span />
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    Secondary
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  secondaryButtonClick
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span />
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#170",
+                      }
+                    }
+                  >
+                    secondaryButtonClick
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  closeButtonClick
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span />
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#170",
+                      }
+                    }
+                  >
+                    closeButtonClick
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  onEnter
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span />
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  onExit
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span />
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  onOpened
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span />
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  onClosed
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span />
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  zIndex
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span />
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#a11",
+                      }
+                    }
+                  >
+                    1000
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  avatarAltText
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span />
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span
+                    style={
+                      Object {
+                        "color": "#22a",
+                        "wordBreak": "break-word",
+                      }
+                    }
+                  >
+                    Avatar of 
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  source
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span />
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  yes
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  transferredUser
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span />
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  yes
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  destination
                 </td>
                 <td
                   style={
@@ -2459,16 +3718,21 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                 </div>
                 <div
                   className="modal-body"
+                  style={
+                    Object {
+                      "marginBottom": "35px",
+                    }
+                  }
                 >
                   Explicit information about the transfer to include the Person
     being transffered, from what Team and Super, to what team and Supervisor.
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu
     porttitor ex. Nam luctus tincidunt dui, sit amet semper mi consequat eu.
                   <div
-                    className="sc-VigVT fSZwap"
+                    className="sc-jTzLTM guEHjM"
                   />
                   <div
-                    className="sc-jTzLTM eHUoFd"
+                    className="sc-fjdhpX jmVncr"
                   >
                     <img
                       alt="Avatar of  Mark Phillips"
@@ -2477,9 +3741,13 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     <div
                       className="team"
                     >
-                      <span>
-                        GA
-                      </span>
+                      <div
+                        className="sc-VigVT cOSlb"
+                      >
+                        <span>
+                          TA
+                        </span>
+                      </div>
                     </div>
                     <div
                       className="name"
@@ -2506,17 +3774,24 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                       <h2>
                         Clara MacKinnon
                       </h2>
+                      <span>
+                        Job Title Here
+                      </span>
                     </div>
                     <img
                       alt="Avatar of  Mia Jarrel"
                       src="3.jpg"
                     />
                     <div
-                      className="team new"
+                      className="team"
                     >
-                      <span>
-                        DT
-                      </span>
+                      <div
+                        className="sc-VigVT fWyYtI"
+                      >
+                        <span>
+                          TD
+                        </span>
+                      </div>
                     </div>
                     <div
                       className="name"
@@ -3455,7 +4730,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  oldSupervisor
+                  source
                 </td>
                 <td
                   style={
@@ -3555,7 +4830,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  newSupervisor
+                  destination
                 </td>
                 <td
                   style={
@@ -3708,13 +4983,18 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                 </div>
                 <div
                   className="modal-body"
+                  style={
+                    Object {
+                      "marginBottom": "35px",
+                    }
+                  }
                 >
                   Custom dialog body
                   <div
-                    className="sc-VigVT fSZwap"
+                    className="sc-jTzLTM guEHjM"
                   />
                   <div
-                    className="sc-jTzLTM eHUoFd"
+                    className="sc-fjdhpX jmVncr"
                   >
                     <img
                       alt="Avatar of  Mark Phillips"
@@ -3723,9 +5003,13 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     <div
                       className="team"
                     >
-                      <span>
-                        GA
-                      </span>
+                      <div
+                        className="sc-VigVT cOSlb"
+                      >
+                        <span>
+                          TA
+                        </span>
+                      </div>
                     </div>
                     <div
                       className="name"
@@ -3752,17 +5036,24 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                       <h2>
                         Clara MacKinnon
                       </h2>
+                      <span>
+                        Job Title Here
+                      </span>
                     </div>
                     <img
                       alt="Avatar of  Mia Jarrel"
                       src="3.jpg"
                     />
                     <div
-                      className="team new"
+                      className="team"
                     >
-                      <span>
-                        DT
-                      </span>
+                      <div
+                        className="sc-VigVT fWyYtI"
+                      >
+                        <span>
+                          TD
+                        </span>
+                      </div>
                     </div>
                     <div
                       className="name"
@@ -4701,7 +5992,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  oldSupervisor
+                  source
                 </td>
                 <td
                   style={
@@ -4801,7 +6092,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  newSupervisor
+                  destination
                 </td>
                 <td
                   style={

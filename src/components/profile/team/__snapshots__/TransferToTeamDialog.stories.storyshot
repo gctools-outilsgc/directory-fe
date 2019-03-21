@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpen=false 1`] = `
+exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=false 1`] = `
 <div>
   <div>
     <div
@@ -39,7 +39,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
             }
           }
         >
-          components/profile/team/TransferToSupervisorDialog
+          components/profile/team/TransferToTeamDialog
         </h1>
         <h2
           style={
@@ -59,9 +59,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
   <div
     id="story-root"
     style={Object {}}
-  >
-    <div />
-  </div>
+  />
   <div>
     <div
       style={
@@ -123,7 +121,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
             }
           >
             "
-            TransferToSupervisorDialog
+            TransferToTeamDialog
             " Component
           </h2>
           <table>
@@ -681,7 +679,57 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  profile
+                  user
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span />
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  yes
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  supervisor
                 </td>
                 <td
                   style={
@@ -731,7 +779,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
 </div>
 `;
 
-exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpen=true 1`] = `
+exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=true 1`] = `
 <div>
   <div>
     <div
@@ -770,7 +818,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
             }
           }
         >
-          components/profile/team/TransferToSupervisorDialog
+          components/profile/team/TransferToTeamDialog
         </h1>
         <h2
           style={
@@ -791,130 +839,20 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
     id="story-root"
     style={Object {}}
   >
-    <div>
-      <portal-dummy>
-        <div
-          className=""
-        >
-          <div
-            className="modal fade"
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            role="dialog"
-            style={
-              Object {
-                "display": "block",
-              }
-            }
-            tabIndex="-1"
-          >
-            <div
-              className="modal-dialog modal-dialog-centered"
-              role="document"
-            >
-              <div
-                className="modal-content"
-              >
-                <div
-                  className="modal-header"
-                >
-                  <h5
-                    className="modal-title"
-                  >
-                    en_CA: Transfer a team member to a new Supervisor
-                  </h5>
-                  <button
-                    className="close"
-                    onClick={[Function]}
-                  >
-                    ×
-                  </button>
-                </div>
-                <div
-                  className="modal-body"
-                >
-                  <div
-                    className="sc-jzJRlG jerqWm"
-                  >
-                    <h1>
-                      en_CA: Choose a new Supervisor for this team member
-                    </h1>
-                    <img
-                      alt="en_CA: en_CA: %1$s avatar"
-                      className="avatar rounded-circle avatar-lg"
-                      src="1.jpg"
-                      style={
-                        Object {
-                          "marginLeft": "10px",
-                        }
-                      }
-                    />
-                    <div
-                      className="sc-cSHVUG cnSBrd"
-                    >
-                      Mark Phillips
-                    </div>
-                    Job Title Here
-                  </div>
-                  <div>
-                    <div
-                      className="input-group"
-                    >
-                      <input
-                        aria-label="en_CA: Search for a new supervisor"
-                        className="form-control"
-                        onChange={[Function]}
-                        placeholder="en_CA: Search for a new supervisor"
-                        type="text"
-                        value=""
-                      />
-                      <div
-                        className="input-group-append"
-                      >
-                        <span
-                          className="input-group-text"
-                        >
-                          SearchIcon
-                        </span>
-                      </div>
-                    </div>
-                    <ul
-                      className="list-group sc-bxivhb jaNiSx"
-                    />
-                  </div>
-                </div>
-                <div
-                  className="modal-footer"
-                >
-                  <button
-                    aria-label={null}
-                    className="btn btn-primary disabled"
-                    disabled={true}
-                    onClick={[Function]}
-                    type="button"
-                  >
-                    en_CA: Transfer
-                  </button>
-                  <button
-                    aria-label={null}
-                    className="btn btn-secondary"
-                    onClick={[Function]}
-                    type="button"
-                  >
-                    en_CA: Cancel
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="modal-backdrop fade"
-          />
-        </div>
-      </portal-dummy>
-    </div>
+    <i
+      className="fa fa-spinner fa-spin"
+      style={
+        Object {
+          "fontSize": "24px",
+        }
+      }
+    >
+      <span
+        className="sr-only-delete-me"
+      >
+        Loading...
+      </span>
+    </i>
   </div>
   <div>
     <div
@@ -977,7 +915,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
             }
           >
             "
-            TransferToSupervisorDialog
+            TransferToTeamDialog
             " Component
           </h2>
           <table>
@@ -1535,7 +1473,57 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                     }
                   }
                 >
-                  profile
+                  user
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span />
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  yes
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  supervisor
                 </td>
                 <td
                   style={
@@ -1585,7 +1573,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
 </div>
 `;
 
-exports[`FileProperties components/profile/team/TransferToSupervisorDialog with click handlers 1`] = `
+exports[`FileProperties components/profile/team/TransferToTeamDialog with click handlers 1`] = `
 <div>
   <div>
     <div
@@ -1624,7 +1612,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog with 
             }
           }
         >
-          components/profile/team/TransferToSupervisorDialog
+          components/profile/team/TransferToTeamDialog
         </h1>
         <h2
           style={
@@ -1645,130 +1633,20 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog with 
     id="story-root"
     style={Object {}}
   >
-    <div>
-      <portal-dummy>
-        <div
-          className=""
-        >
-          <div
-            className="modal fade"
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            onKeyUp={[Function]}
-            onMouseDown={[Function]}
-            role="dialog"
-            style={
-              Object {
-                "display": "block",
-              }
-            }
-            tabIndex="-1"
-          >
-            <div
-              className="modal-dialog modal-dialog-centered"
-              role="document"
-            >
-              <div
-                className="modal-content"
-              >
-                <div
-                  className="modal-header"
-                >
-                  <h5
-                    className="modal-title"
-                  >
-                    en_CA: Transfer a team member to a new Supervisor
-                  </h5>
-                  <button
-                    className="close"
-                    onClick={[Function]}
-                  >
-                    ×
-                  </button>
-                </div>
-                <div
-                  className="modal-body"
-                >
-                  <div
-                    className="sc-jzJRlG jerqWm"
-                  >
-                    <h1>
-                      en_CA: Choose a new Supervisor for this team member
-                    </h1>
-                    <img
-                      alt="en_CA: en_CA: %1$s avatar"
-                      className="avatar rounded-circle avatar-lg"
-                      src="1.jpg"
-                      style={
-                        Object {
-                          "marginLeft": "10px",
-                        }
-                      }
-                    />
-                    <div
-                      className="sc-cSHVUG cnSBrd"
-                    >
-                      Mark Phillips
-                    </div>
-                    Job Title Here
-                  </div>
-                  <div>
-                    <div
-                      className="input-group"
-                    >
-                      <input
-                        aria-label="en_CA: Search for a new supervisor"
-                        className="form-control"
-                        onChange={[Function]}
-                        placeholder="en_CA: Search for a new supervisor"
-                        type="text"
-                        value=""
-                      />
-                      <div
-                        className="input-group-append"
-                      >
-                        <span
-                          className="input-group-text"
-                        >
-                          SearchIcon
-                        </span>
-                      </div>
-                    </div>
-                    <ul
-                      className="list-group sc-bxivhb jaNiSx"
-                    />
-                  </div>
-                </div>
-                <div
-                  className="modal-footer"
-                >
-                  <button
-                    aria-label={null}
-                    className="btn btn-primary disabled"
-                    disabled={true}
-                    onClick={[Function]}
-                    type="button"
-                  >
-                    en_CA: Transfer
-                  </button>
-                  <button
-                    aria-label={null}
-                    className="btn btn-secondary"
-                    onClick={[Function]}
-                    type="button"
-                  >
-                    en_CA: Cancel
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            className="modal-backdrop fade"
-          />
-        </div>
-      </portal-dummy>
-    </div>
+    <i
+      className="fa fa-spinner fa-spin"
+      style={
+        Object {
+          "fontSize": "24px",
+        }
+      }
+    >
+      <span
+        className="sr-only-delete-me"
+      >
+        Loading...
+      </span>
+    </i>
   </div>
   <div>
     <div
@@ -1831,7 +1709,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog with 
             }
           >
             "
-            TransferToSupervisorDialog
+            TransferToTeamDialog
             " Component
           </h2>
           <table>
@@ -2389,7 +2267,57 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog with 
                     }
                   }
                 >
-                  profile
+                  user
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span />
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  yes
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  supervisor
                 </td>
                 <td
                   style={

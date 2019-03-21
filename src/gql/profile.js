@@ -111,7 +111,7 @@ ${FullTeamFragment}
 `;
 
 export const GET_YOUR_TEAM = gql`
-query getProfile($gcID: ID!) {
+query getYourTeam($gcID: ID!) {
   profiles(gcID: $gcID) {
     gcID
     name
@@ -120,6 +120,8 @@ query getProfile($gcID: ID!) {
     titleFr
     team {
       id
+      nameEn
+      nameFr
       organization {
         id
       }
@@ -136,6 +138,11 @@ query getProfile($gcID: ID!) {
         avatar
         titleEn
         titleFr
+        team {
+          id
+          nameEn
+          nameFr
+        }
       }
       organization {
         id
