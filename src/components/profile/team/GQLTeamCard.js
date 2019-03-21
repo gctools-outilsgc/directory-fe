@@ -15,12 +15,16 @@ import {
   ModalBody,
   ModalFooter
 } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+
 
 import Loading from './Loading';
 
 import { GET_TEAM, EDIT_TEAM } from '../../../gql/profile';
 import SupervisorPicker from '../../core/SupervisorPicker';
 import TeamPicker from '../../core/TeamPicker';
+import { UserAvatar } from '../../core/UserAvatar';
 import TransferConfirmation from './TransferConfirmation';
 import TeamDisplayMemberList from './TeamDisplayMemberList';
 
@@ -114,7 +118,7 @@ export class GQLTeamCard extends React.Component {
                   <div>
                     <Row>
                       <Col>
-                        <div className="font-weight-bold">
+                        <div className="font-weight-bold mb-2">
                           {__('Supervisor')}
                         </div>
                         <div className="d-flex">
@@ -162,7 +166,10 @@ export class GQLTeamCard extends React.Component {
                                 >
                                   <div className="text-center">
                                     <div>
-                                      Avatar
+                                      <UserAvatar
+                                        avatar={userInfo.avatar}
+                                        name={userInfo.name}
+                                      />
                                     </div>
                                     <div>
                                       <span className="font-weight-bold">
@@ -242,7 +249,12 @@ export class GQLTeamCard extends React.Component {
                                             onClick={this.toggleSup}
                                             color="light"
                                           >
-                                            S
+                                            <FontAwesomeIcon
+                                              icon={faSearch}
+                                            />
+                                            <span className="sr-only">
+                                              Search
+                                            </span>
                                           </Button>
                                         </div>
                                       </div>
@@ -341,7 +353,7 @@ export class GQLTeamCard extends React.Component {
                           : ''}
                       </Col>
                       <Col>
-                        <div className="font-weight-bold">
+                        <div className="font-weight-bold mb-2">
                           {__('Team')}
                         </div>
                         {teamTest ? teamTest.nameEn : 'None'}
