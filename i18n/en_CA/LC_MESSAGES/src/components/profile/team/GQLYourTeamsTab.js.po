@@ -1,0 +1,78 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-03-21 12:28-0300\n"
+"PO-Revision-Date: 2019-03-21 11:35-0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en_CA\n"
+"Language-Team: en_CA <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: 133:44 src/components/profile/team/GQLYourTeamsTab.js
+msgid "and"
+msgstr ""
+
+#: 140:9 src/components/profile/team/GQLYourTeamsTab.js
+msgid "Delete Team"
+msgstr ""
+
+#: 162:19 src/components/profile/team/GQLYourTeamsTab.js
+msgid "Delete/Disband (?) a team"
+msgstr ""
+
+#: 163:26 src/components/profile/team/GQLYourTeamsTab.js
+msgid "Disband %1$s removed."
+msgid_plural ""
+msgstr[0] ""
+msgstr[1] ""
+
+#: 164:31 src/components/profile/team/GQLYourTeamsTab.js
+msgid "Are you sure?"
+msgstr ""
+
+#: 165:33 src/components/profile/team/GQLYourTeamsTab.js
+msgid "Cancel"
+msgstr ""
+
+#: 163:26 src/components/profile/team/GQLYourTeamsTab.js
+#, python-format
+msgid "%dDisband %1$s removed."
+msgid_plural ""
+msgstr[0] ""
+msgstr[1] ""
+
+#: 163:26 src/components/profile/team/GQLYourTeamsTab.js
+#, python-format
+msgid "%dDisband removed."
+msgid_plural ""
+msgstr[0] ""
+msgstr[1] ""
+
+#: 166:16 src/components/profile/team/GQLYourTeamsTab.js
+msgid "You are about to disband this team."
+msgstr "You are about to disband this team.  This team will no longer exist!"
+
+#: 167:25 src/components/profile/team/GQLYourTeamsTab.js
+msgid "These team members will be moved."
+msgstr ""
+"These team members will be moved into your Default Team. You will still "
+"be their Supervisor."
+
+#: 169:16 src/components/profile/team/GQLYourTeamsTab.js
+msgid "%1$s will be moved from %2$s to %3$s"
+msgid_plural ""
+msgstr[0] ""
+"%1$s will be moved from the \"%2$s\" team to your %3$s where they're "
+"reassigned to a different team."
+msgstr[1] ""
+
+#: 172:16 src/components/profile/team/GQLYourTeamsTab.js
+msgid "Default team"
+msgstr ""
+

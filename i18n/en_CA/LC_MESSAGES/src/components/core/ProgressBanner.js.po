@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-03-20 08:08-0400\n"
+"POT-Creation-Date: 2019-03-21 10:35-0300\n"
 "PO-Revision-Date: 2019-03-20 08:08-0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en_CA\n"
@@ -16,4 +16,7 @@ msgstr ""
 
 #: 13:19 src/components/core/ProgressBanner.js
 msgid "mvpBanner"
-msgstr "GCprofile is currently an open proof of concept. The information in this application is randomly generated and does not represent actual users."
+msgstr ""
+"GCprofile is currently an open proof of concept. The information in this "
+"application is randomly generated and does not represent actual users."
+
