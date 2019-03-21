@@ -112,7 +112,21 @@ class TeamPicker extends React.Component {
 }
 
 TeamPicker.propTypes = {
-  selectedOrgTier: PropTypes.number.isRequired,
+  selectedOrgTier: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    organization: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      nameEn: PropTypes.string,
+      nameFr: PropTypes.string,
+    }),
+    owner: PropTypes.shape({
+      gcID: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      avatar: PropTypes.string,
+      titleEn: PropTypes.string,
+      titleFr: PropTypes.string,
+    }),
+  }).isRequired,
   onTeamChange: PropTypes.func.isRequired,
   supervisor: PropTypes.shape({}).isRequired,
 };
