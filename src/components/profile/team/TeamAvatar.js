@@ -70,14 +70,23 @@ const abbreviate = (str) => {
 
 /** Temporary avatar until backend has proper support */
 const TeamAvatar = props => (
-  <TeamAvatarStyle colorIndex={chooseColor(props.name)}>
+  <TeamAvatarStyle
+    colorIndex={chooseColor(props.name)}
+    className={props.className}
+  >
     <span>{abbreviate(props.name)}</span>
   </TeamAvatarStyle>
 );
 
+TeamAvatar.defaultProps = {
+  className: undefined,
+};
+
 TeamAvatar.propTypes = {
   /** Name of team to generate temporary avatar for */
   name: PropTypes.string.isRequired,
+  /** optional css class name */
+  className: PropTypes.string,
 };
 
 export default TeamAvatar;

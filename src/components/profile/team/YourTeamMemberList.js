@@ -166,7 +166,7 @@ const TransferToNewTeamAction = (props) => {
               }}
             />
             {confirm && (<TransferConfirmation
-              source={supervisor}
+              source={profile.team}
               transferredUser={profile}
               destination={confirm}
               isOpen={!!confirm}
@@ -177,11 +177,10 @@ const TransferToNewTeamAction = (props) => {
               secondaryButtonClick={() => { setConfirm(undefined); }}
               closeButtonClick={closeAll}
               primaryButtonClick={() => {
-                const defaultTeam = getDefaultTeam(confirm);
                 mutate({
                   variables: {
                     gcID: profile.gcID,
-                    data: { team: { id: defaultTeam.id } },
+                    data: { team: { id: confirm.id } },
                   },
                 });
               }}

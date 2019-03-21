@@ -44,6 +44,14 @@ const mock = [
               avatar: '',
               titleEn: '',
               titleFr: '',
+              team: {
+                id: '32324',
+                nameEn: 'team 32324',
+                nameFr: 'equipe 32324',
+                organization: {
+                  id: '1213232',
+                },
+              },
             }],
             organization: {
               id: '123',

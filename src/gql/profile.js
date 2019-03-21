@@ -122,6 +122,11 @@ query getYourTeam($gcID: ID!) {
         avatar
         titleEn
         titleFr
+        team {
+          id
+          nameEn
+          nameFr
+        }
       }
       organization {
         id

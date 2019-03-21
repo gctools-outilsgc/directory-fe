@@ -45,16 +45,22 @@ const Avatars = styled.div`
   position: relative;
   margin-top: -95px;
   margin-bottom: 50px;
-  img:first-child {
-    margin-left: 30px;
-  }
-  img {
+  img, .tcd-team-avatar {
     width: 75px;
     max-width: 75px;
     height: 75px;
+    margin-left: 80px;
+    display: inline-block;
+  }
+  img:first-child, .tcd-team-avatar:first-child {
+    margin-left: 30px;
+  }
+  img {
     border-radius: 50%;
     border: 3px solid ${varTag('--primary')};
-    margin-left: 80px;
+  }
+  .tcd-team-avatar + div.name + div.break + img {
+    margin-top: -60px;
   }
   >div.name {
     position: absolute;
@@ -97,10 +103,25 @@ const Avatars = styled.div`
 `;
 
 const getProfileDetails = (profile) => {
-  const { name, avatar, team } = profile || {};
-  return {
+  const {
     name,
     avatar,
+    team,
+    titleEn,
+    titleFr,
+  } = profile || {};
+  if (!name && !team) {
+    return {
+      name: ((profile.nameEn === '') && __('Default Team')) ||
+        ((localizer.lang === 'en_CA') ? profile.nameEn : profile.nameFr),
+      isTeam: true,
+    };
+  }
+  return {
+    isTeam: false,
+    name,
+    avatar,
+    title: (localizer.lang === 'en_CA') ? titleEn : titleFr,
     team: {
       id: team && team.id,
       name:
@@ -160,17 +181,29 @@ const TransferConfirmation = (props) => {
           {bodyText}
           <Arrow />
           <Avatars>
-            <img
-              src={user1.avatar}
-              alt={`${avatarAltText} ${user1.name}`}
-            />
-            <div className="team">
-              <TeamAvatar name={user1.team.name} />
-            </div>
-            <div className="name">
-              <h2>{user1.name}</h2>
-              <span>{user1.team.name}</span>
-            </div>
+            {user1.isTeam && (
+              <React.Fragment>
+                <TeamAvatar className="tcd-team-avatar" name={user1.name} />
+                <div className="name">
+                  <h2>{user1.name}</h2>
+                </div>
+              </React.Fragment>
+            )}
+            {!user1.isTeam && (
+              <React.Fragment>
+                <img
+                  src={user1.avatar}
+                  alt={`${avatarAltText} ${user1.name}`}
+                />
+                <div className="team">
+                  <TeamAvatar name={user1.team.name} />
+                </div>
+                <div className="name">
+                  <h2>{user1.name}</h2>
+                  <span>{user1.team.name}</span>
+                </div>
+              </React.Fragment>
+            )}
             <div className="break"><div /></div>
             <img
               src={user2.avatar}
@@ -178,18 +211,31 @@ const TransferConfirmation = (props) => {
             />
             <div className="name">
               <h2>{user2.name}</h2>
+              <span>{user2.title}</span>
             </div>
-            <img
-              src={user3.avatar}
-              alt={`${avatarAltText} ${user3.name}`}
-            />
-            <div className="team">
-              <TeamAvatar name={user3.team.name} />
-            </div>
-            <div className="name">
-              <h2>{user3.name}</h2>
-              <span>{user3.team.name}</span>
-            </div>
+            {user3.isTeam && (
+              <React.Fragment>
+                <TeamAvatar className="tcd-team-avatar" name={user3.name} />
+                <div className="name">
+                  <h2>{user3.name}</h2>
+                </div>
+              </React.Fragment>
+            )}
+            {!user3.isTeam && (
+              <React.Fragment>
+                <img
+                  src={user3.avatar}
+                  alt={`${avatarAltText} ${user3.name}`}
+                />
+                <div className="team">
+                  <TeamAvatar name={user3.team.name} />
+                </div>
+                <div className="name">
+                  <h2>{user3.name}</h2>
+                  <span>{user3.team.name}</span>
+                </div>
+              </React.Fragment>
+            )}
           </Avatars>
         </ModalBody>
         <ModalFooter>
@@ -264,30 +310,42 @@ TransferConfirmation.propTypes = {
   /** Text to use for avatar alt tag, suffixed by the user's name */
   avatarAltText: PropTypes.string,
   /** The profile or team the user is being transferred out of */
-  source: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    avatar: PropTypes.string,
-    team: PropTypes.shape({
+  source: PropTypes.oneOfType([
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      avatar: PropTypes.string,
+      team: PropTypes.shape({
+        nameEn: PropTypes.string,
+        nameFr: PropTypes.string,
+      }).isRequired,
+    }),
+    PropTypes.shape({
       nameEn: PropTypes.string,
       nameFr: PropTypes.string,
-      avatar: PropTypes.string,
-    }).isRequired,
-  }).isRequired,
+    }),
+  ]).isRequired,
   /** The profile of user being transferred */
   transferredUser: PropTypes.shape({
     name: PropTypes.string.isRequired,
     avatar: PropTypes.string,
+    titleEn: PropTypes.string,
+    titleFr: PropTypes.string,
   }).isRequired,
   /** The destination the user is being transferred to */
-  destination: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    avatar: PropTypes.string,
-    team: PropTypes.shape({
+  destination: PropTypes.oneOfType([
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      avatar: PropTypes.string,
+      team: PropTypes.shape({
+        nameEn: PropTypes.string,
+        nameFr: PropTypes.string,
+      }).isRequired,
+    }),
+    PropTypes.shape({
       nameEn: PropTypes.string,
       nameFr: PropTypes.string,
-      avatar: PropTypes.string,
-    }).isRequired,
-  }).isRequired,
+    }),
+  ]).isRequired,
 };
 
 export default TransferConfirmation;
