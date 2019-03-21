@@ -8,6 +8,7 @@ import { EditProfile } from './EditProfile';
 afterEach(cleanup);
 
 const mockProps = {
+  __typename: 'Profile',
   gcID: '1',
   name: 'Test Name',
   email: 'test@test.test',

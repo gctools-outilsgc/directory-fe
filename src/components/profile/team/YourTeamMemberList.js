@@ -46,9 +46,6 @@ const TransferToSupervisorAction = (props) => {
           query: GET_YOUR_TEAM,
           variables: { gcID: supervisor.gcID },
         }]}
-        onCompleted={() => {
-          closeAll();
-        }}
       >
         {mutate => (
           <React.Fragment>
@@ -72,8 +69,6 @@ const TransferToSupervisorAction = (props) => {
                   destination,
                   { team: defaultTeam }
                 ));
-                console.log(supervisor);
-                console.log(destination);
                 return true;
               }}
             />
@@ -145,12 +140,12 @@ const TransferToNewTeamAction = (props) => {
           query: GET_TEAM,
           variables: { gcID: profile.gcID },
         }, {
+          query: GET_TEAM,
+          variables: { gcID: supervisor.gcID },
+        }, {
           query: GET_YOUR_TEAM,
           variables: { gcID: supervisor.gcID },
         }]}
-        onCompleted={() => {
-          closeAll();
-        }}
       >
         {mutate => (
           <React.Fragment>

@@ -56,6 +56,7 @@ const Avatars = styled.div`
     margin-left: 30px;
   }
   img {
+    background-color: #cecece;
     border-radius: 50%;
     border: 3px solid ${varTag('--primary')};
   }
@@ -87,18 +88,26 @@ const Avatars = styled.div`
     margin-top: 20px;
     position: absolute;
     display: inline-block;
-    background-color: ${varTag('--primary')};
-    background-color: ${varTag('--primary')};
+    ${({ delete: d }) => (!d && (`
+      background-color: ${varTag('--primary')};
+    `))}
     width: 30px;
     height: 35px;
   }
   >div.break>div {
     background-color: #fff;
-    width: 18px;
     height: 50px;
     margin-left: 5px;
     margin-top: -5px;
-    transform: rotate(20deg);
+    ${({ delete: d }) => (d && (`
+      color: green;
+      font-size: 30px;
+      width: 30px;
+      padding-left: 2px;
+      `)) || `
+      width: 18px;
+      transform: rotate(20deg);
+    `}
   }
 `;
 
@@ -180,7 +189,7 @@ const TransferConfirmation = (props) => {
         <ModalBody style={{ marginBottom: '35px' }}>
           {bodyText}
           <Arrow />
-          <Avatars>
+          <Avatars delete={props.delete}>
             {user1.isTeam && (
               <React.Fragment>
                 <TeamAvatar className="tcd-team-avatar" name={user1.name} />
@@ -204,7 +213,11 @@ const TransferConfirmation = (props) => {
                 </div>
               </React.Fragment>
             )}
-            <div className="break"><div /></div>
+            <div className="break">
+              <div>
+                {props.delete && <i className="fas fa-trash-alt" />}
+              </div>
+            </div>
             <img
               src={user2.avatar}
               alt={`${avatarAltText} ${user2.name}`}
@@ -275,6 +288,7 @@ TransferConfirmation.defaultProps = {
   onClosed: undefined,
   zIndex: 1000,
   avatarAltText: 'Avatar of ',
+  delete: false,
 };
 
 TransferConfirmation.propTypes = {
@@ -346,6 +360,8 @@ TransferConfirmation.propTypes = {
       nameFr: PropTypes.string,
     }),
   ]).isRequired,
+  /** Indicate the intention to delete "source" */
+  delete: PropTypes.bool,
 };
 
 export default TransferConfirmation;

@@ -18,21 +18,25 @@ const mock = [
     result: {
       data: {
         profiles: [{
+          __typename: 'Profile',
           gcID: '1',
           name: 'Test User',
           avatar: '',
           titleEn: '',
           titleFr: '',
           team: {
+            __typename: 'Team',
             id: '10',
             nameEn: 'Test Team',
             nameFr: 'Test Team FR',
             organization: {
+              __typename: 'Organization',
               id: '1',
               nameEn: 'Org Name EN',
               nameFr: 'Org Name FR',
             },
             owner: {
+              __typename: 'Profile',
               gcID: '2',
               name: 'Test Supervisor',
               avatar: '',
@@ -40,6 +44,7 @@ const mock = [
               titleFr: '',
             },
             members: [{
+              __typename: 'Profile',
               name: '',
               titleEn: '',
               avatar: '',
@@ -66,7 +71,7 @@ describe('GQLTeamCard', () => {
 
   it('renders GQLTeamCard with data', async () => {
     const { queryByText } = render((
-      <MockedProvider mocks={mock} addTypename={false}>
+      <MockedProvider mocks={mock}>
         <GQLTeamCard id="1" />
       </MockedProvider>
     ));

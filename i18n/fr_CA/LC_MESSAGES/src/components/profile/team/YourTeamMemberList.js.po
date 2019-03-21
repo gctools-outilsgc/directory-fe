@@ -27,7 +27,6 @@ msgid "no default team"
 msgstr "L'utilisateur sélectionné n'a pas d'équipe par défaut."
 
 #: 72:21 src/components/profile/team/YourTeamMemberList.js
-#, fuzzy
 msgid "Transfer a team member to a new Supervisor"
 msgstr "transfert à un nouveau superviseur"
 
@@ -44,7 +43,6 @@ msgid "Back"
 msgstr ""
 
 #: 134:9 src/components/profile/team/YourTeamMemberList.js
-#, fuzzy
 msgid "transfer to new Team"
 msgstr "transfert à un nouveau superviseur"
 
