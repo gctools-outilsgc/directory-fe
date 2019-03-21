@@ -118,7 +118,7 @@ export class GQLTeamCard extends React.Component {
                   <div>
                     <Row>
                       <Col>
-                        <div className="font-weight-bold">
+                        <div className="font-weight-bold mb-2">
                           {__('Supervisor')}
                         </div>
                         <div className="d-flex">
@@ -353,7 +353,7 @@ export class GQLTeamCard extends React.Component {
                           : ''}
                       </Col>
                       <Col>
-                        <div className="font-weight-bold">
+                        <div className="font-weight-bold mb-2">
                           {__('Team')}
                         </div>
                         {teamTest ? teamTest.nameEn : 'None'}
