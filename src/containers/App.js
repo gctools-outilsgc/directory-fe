@@ -25,6 +25,7 @@ import Home from './Home';
 import Onboard from './Onboard';
 
 import ProfileSearch from '../components/core/ProfileSearch';
+import ProgressBanner from '../components/core/ProgressBanner';
 
 import enFip from '../assets/imgs/sig-en-w.png';
 
@@ -55,6 +56,7 @@ export class App extends Component {
     return (
       <BrowserRouter>
         <div>
+          <ProgressBanner />
           <Navbar color="white" className="shadow-sm">
             <div className="h-100 directory-fip">
               <img src={enFip} alt="Government of Canada" />

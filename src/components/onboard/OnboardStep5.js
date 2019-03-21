@@ -4,173 +4,188 @@ import PropTypes from 'prop-types';
 import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
 
-import { Query, Mutation } from 'react-apollo';
+import { Mutation } from 'react-apollo';
 
 import { Button, Row, Col } from 'reactstrap';
 
-import { GET, EDIT } from '../../gql/profile';
+import { EDIT, prepareEditProfile } from '../../gql/profile';
+import SupervisorPicker from '../core/SupervisorPicker';
+import TeamPicker from '../core/TeamPicker';
 
 export class OnboardStep5 extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      supEdit: true,
-      orgEdit: true,
+      chosenSupervisor: '',
+      teamId: '',
+      editSup: false,
+      editTeam: false,
     };
 
-    this.editSup = this.editSup.bind(this);
-    this.editOrg = this.editOrg.bind(this);
+    this.toggleSup = this.toggleSup.bind(this);
   }
 
-  editSup() {
+  toggleSup() {
     this.setState(prevState => ({
-      supEdit: !prevState.supEdit,
-    }));
-  }
-
-  editOrg() {
-    this.setState(prevState => ({
-      orgEdit: !prevState.orgEdit,
+      editSup: !prevState.editSup,
     }));
   }
 
   render() {
     const {
       userObject,
-      token,
     } = this.props;
+    const {
+      chosenSupervisor,
+      teamId,
+      editSup,
+      editTeam,
+    } = this.state;
+    const teamTest = (!userObject) ? '' : userObject.team;
+    const supTest = (!teamTest) ? '' : userObject.team.owner;
+
     return (
-      <Query
-        variables={{ gcID: (String(userObject.gcID)) }}
-        query={GET}
-      >
-        {({ loading, error, data }) => {
-          if (loading) return 'Loading...';
-          if (error) return `Error! ${error.message}`;
-          const [profile] = data.profiles;
-          const orgTest = (profile && profile.org);
-          const supTest = (profile && profile.supervisor);
-          return (
-            <div>
-              <h1 className="h3 border-bottom mb-2 pb-2">
-                {__('Step5T1')}
-              </h1>
-              <Row className="mb-2">
-                <Col>
-                  <p>{__('Step5D1')}</p>
-                  <p>{__('Step5D2')}</p>
-                </Col>
-              </Row>
-              <Row>
-                <Col md="6" className="mt-2">
-                  {(() => {
-                    if (this.state.supEdit) {
-                      return (
-                        <Mutation
-                          mutation={EDIT}
-                          refetchQueries={[{
-                            query: GET,
-                            variables: { gcID: String(userObject.gcID) },
-                          }]}
-                          context={{
-                            headers: {
-                              Authorization:
-                                `Bearer ${token}`,
-                            },
-                          }
-                          }
-                        >
-                          {() => (
-                            <div className="onboard-profile">
-                              {__('Supervisor')}
-                            </div>
-                          )}
-                        </Mutation>
-                      );
-                    }
-                    return (
-                      <div className="d-flex">
-                        <div>
-                          {supTest ? supTest.name : ''}
-                        </div>
-                        <div className="ml-auto">
-                          <Button
-                            onClick={this.editSup}
-                          >
-                            Chng
-                          </Button>
-                        </div>
+      <div>
+        <h1 className="h3 border-bottom mb-2 pb-2">
+          {__('Step5T1')}
+        </h1>
+        <Row className="mb-2">
+          <Col>
+            <p>{__('Step5D1')}</p>
+            <p>{__('Step5D2')}</p>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <div className="font-weight-bold mb-2">
+              Supervisor
+            </div>
+            {editSup ?
+              <SupervisorPicker
+                onResultSelect={(s) => {
+                  this.setState({
+                    chosenSupervisor: s,
+                    editTeam: true,
+                  });
+                  this.toggleSup(editSup);
+                }}
+              /> :
+              <div className="d-flex">
+                {!chosenSupervisor ?
+                  <div className="mr-auto d-flex">
+                    <div className="mr-2">
+                      <img
+                        className="avatar rounded-circle"
+                        src={
+                          supTest ? supTest.avatar : ''
+                        }
+                        alt={
+                          supTest ? supTest.name : 'N'
+                        }
+                      />
+                    </div>
+                    <div>
+                      <div
+                        className="font-weight-bold"
+                      >
+                        {supTest
+                          ? supTest.name : 'None'}
                       </div>
-                    );
-                  })()}
-                </Col>
-                <Col md="6" className="mt-2">
-                  {(() => {
-                    if (this.state.orgEdit) {
-                      return (
-                        <Mutation
-                          mutation={EDIT}
-                          refetchQueries={[{
-                            query: GET,
-                            variables: { gcID: String(userObject.gcID) },
-                          }]}
-                          context={{
-                            headers: {
-                              Authorization:
-                                `Bearer ${token}`,
-                            },
-                          }
-                          }
-                        >
-                          {() => (
-                            <div>
-                              {__('Teams')}
-                            </div>
-                          )}
-                        </Mutation>
-                      );
-                    }
-                    return (
-                      <div className="d-flex">
-                        <div>
-                          {orgTest ? orgTest.nameEn : ''}
-                        </div>
-                        <div className="ml-auto">
-                          <Button
-                            onClick={this.editOrg}
-                          >
-                            Chng
-                          </Button>
-                        </div>
+                      <small className="text-muted">
+                        {supTest ?
+                          supTest.titleEn : 'No'}
+                      </small>
+                    </div>
+                  </div> :
+                  <div className="mr-auto d-flex">
+                    <div className="mr-2">
+                      <img
+                        className="avatar rounded-circle"
+                        src={
+                          chosenSupervisor.avatar
+                        }
+                        alt={
+                          chosenSupervisor.name
+                        }
+                      />
+                    </div>
+                    <div>
+                      <div
+                        className="font-weight-bold"
+                      >
+                        {chosenSupervisor.name}
                       </div>
-                    );
-                  })()}
-
-
-                </Col>
-              </Row>
-              <Row className="m-2 border-top">
-                <div className="ml-auto mt-3">
+                      <small className="text-muted">
+                        {chosenSupervisor.titleEn}
+                      </small>
+                    </div>
+                  </div>
+                }
+                <div>
                   <Button
-                    onClick={this.props.previousStep}
-                    color="primary"
+                    onClick={this.toggleSup}
+                    color="light"
                   >
-                    {__('Back')}
-                  </Button>
-                  <Button
-                    onClick={this.props.nextStep}
-                    color="primary"
-                    className="ml-3"
-                  >
-                    {__('Next')}
+                    S
                   </Button>
                 </div>
-              </Row>
+              </div>
+            }
+          </Col>
+          <Col>
+            <div className="font-weight-bold mb-2">
+              Team
             </div>
-          );
-        }}
-
-      </Query>
+            {editTeam ?
+              <TeamPicker
+                editMode
+                supervisor={chosenSupervisor}
+                gcID={userObject.gcID}
+                selectedOrgTier={teamTest}
+                onTeamChange={(t) => {
+                  this.setState({
+                    teamId: t.id,
+                  });
+                }}
+              /> :
+              <div>
+                {teamTest ? teamTest.nameEn : 'None'}
+              </div>
+            }
+          </Col>
+        </Row>
+        <Row className="m-2 border-top">
+          <div className="ml-auto mt-3">
+            <Button
+              onClick={this.props.previousStep}
+              color="primary"
+            >
+              {__('Back')}
+            </Button>
+            <Mutation
+              mutation={EDIT}
+              onCompleted={() => {
+                this.props.nextStep();
+              }}
+            >
+              {modifyProfile => (
+                <Button
+                  onClick={() => {
+                    modifyProfile(prepareEditProfile({
+                      gcID: userObject.gcID,
+                      teamId,
+                    }));
+                  }}
+                  color="primary"
+                  className="ml-3"
+                >
+                  {__('Next')}
+                </Button>
+              )}
+            </Mutation>
+          </div>
+        </Row>
+      </div>
     );
   }
 }
@@ -185,7 +200,6 @@ OnboardStep5.propTypes = {
   userObject: PropTypes.shape({
     gcID: PropTypes.string,
   }),
-  token: PropTypes.string.isRequired,
   nextStep: PropTypes.func,
   previousStep: PropTypes.func,
 };

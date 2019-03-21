@@ -15,7 +15,6 @@ const OnboardNav = (props) => {
   ];
   for (let i = 1; i <= props.totalSteps; i += 1) {
     const isActive = props.currentStep === i;
-    const displayNum = i - 1;
     switch (i) {
       case 1:
       case 6:
@@ -28,9 +27,6 @@ const OnboardNav = (props) => {
             className={`${isActive ? 'active' : ''}`}
           >
             <div>
-              <div>
-                {displayNum}
-              </div>
               <div>
                 {words[i]}
               </div>
