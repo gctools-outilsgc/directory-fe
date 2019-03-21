@@ -51,6 +51,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with avata
     </div>
   </div>
   <button
+    className="info__show-button"
     onClick={[Function]}
     style={
       Object {
@@ -73,11 +74,13 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with avata
     Show Info
   </button>
   <div
+    className="info__overlay"
     style={
       Object {
         "background": "white",
         "bottom": 0,
         "display": "none",
+        "fontFamily": "Helvetica Neue, Helvetica, Segoe UI, Arial, freesans, sans-serif",
         "left": 0,
         "overflow": "auto",
         "padding": "0 40px",
@@ -89,6 +92,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with avata
     }
   >
     <button
+      className="info__close-button"
       onClick={[Function]}
       style={
         Object {
@@ -114,12 +118,9 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with avata
       <div
         style={
           Object {
-            "WebkitFontSmoothing": "antialiased",
             "backgroundColor": "#fff",
             "border": "1px solid #eee",
             "borderRadius": "2px",
-            "color": "#444",
-            "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
             "fontSize": "15px",
             "fontWeight": 300,
             "lineHeight": 1.45,
@@ -414,7 +415,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with avata
             Prop Types
           </h1>
           <div>
-            <h2
+            <h3
               style={
                 Object {
                   "margin": "20px 0 0 0",
@@ -424,7 +425,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with avata
               "
               MockedProvider
               " Component
-            </h2>
+            </h3>
             <table>
               <thead>
                 <tr>
@@ -522,13 +523,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with avata
                       }
                     }
                   >
-                    <span
-                      style={
-                        Object {
-                          "color": "#a11",
-                        }
-                      }
-                    >
+                    <span>
                       true
                     </span>
                   </td>
@@ -545,7 +540,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with avata
             </table>
           </div>
           <div>
-            <h2
+            <h3
               style={
                 Object {
                   "margin": "20px 0 0 0",
@@ -555,7 +550,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with avata
               "
               UserAvatar
               " Component
-            </h2>
+            </h3>
             <table>
               <thead>
                 <tr>
@@ -631,7 +626,9 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with avata
                       }
                     }
                   >
-                    <span />
+                    <span>
+                      bool
+                    </span>
                   </td>
                   <td
                     style={
@@ -651,13 +648,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with avata
                       }
                     }
                   >
-                    <span
-                      style={
-                        Object {
-                          "color": "#a11",
-                        }
-                      }
-                    >
+                    <span>
                       false
                     </span>
                   </td>
@@ -689,7 +680,9 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with avata
                       }
                     }
                   >
-                    <span />
+                    <span>
+                      string
+                    </span>
                   </td>
                   <td
                     style={
@@ -709,14 +702,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with avata
                       }
                     }
                   >
-                    <span
-                      style={
-                        Object {
-                          "color": "#22a",
-                          "wordBreak": "break-word",
-                        }
-                      }
-                    >
+                    <span>
                       
                     </span>
                   </td>
@@ -748,7 +734,9 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with avata
                       }
                     }
                   >
-                    <span />
+                    <span>
+                      string
+                    </span>
                   </td>
                   <td
                     style={
@@ -768,14 +756,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with avata
                       }
                     }
                   >
-                    <span
-                      style={
-                        Object {
-                          "color": "#22a",
-                          "wordBreak": "break-word",
-                        }
-                      }
-                    >
+                    <span>
                       No photo
                     </span>
                   </td>
@@ -807,7 +788,9 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with avata
                       }
                     }
                   >
-                    <span />
+                    <span>
+                      string
+                    </span>
                   </td>
                   <td
                     style={
@@ -827,14 +810,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with avata
                       }
                     }
                   >
-                    <span
-                      style={
-                        Object {
-                          "color": "#22a",
-                          "wordBreak": "break-word",
-                        }
-                      }
-                    >
+                    <span>
                       
                     </span>
                   </td>
@@ -866,7 +842,9 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with avata
                       }
                     }
                   >
-                    <span />
+                    <span>
+                      string
+                    </span>
                   </td>
                   <td
                     style={
@@ -886,14 +864,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with avata
                       }
                     }
                   >
-                    <span
-                      style={
-                        Object {
-                          "color": "#22a",
-                          "wordBreak": "break-word",
-                        }
-                      }
-                    >
+                    <span>
                       
                     </span>
                   </td>
@@ -967,6 +938,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
     </div>
   </div>
   <button
+    className="info__show-button"
     onClick={[Function]}
     style={
       Object {
@@ -989,11 +961,13 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
     Show Info
   </button>
   <div
+    className="info__overlay"
     style={
       Object {
         "background": "white",
         "bottom": 0,
         "display": "none",
+        "fontFamily": "Helvetica Neue, Helvetica, Segoe UI, Arial, freesans, sans-serif",
         "left": 0,
         "overflow": "auto",
         "padding": "0 40px",
@@ -1005,6 +979,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
     }
   >
     <button
+      className="info__close-button"
       onClick={[Function]}
       style={
         Object {
@@ -1030,12 +1005,9 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
       <div
         style={
           Object {
-            "WebkitFontSmoothing": "antialiased",
             "backgroundColor": "#fff",
             "border": "1px solid #eee",
             "borderRadius": "2px",
-            "color": "#444",
-            "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
             "fontSize": "15px",
             "fontWeight": 300,
             "lineHeight": 1.45,
@@ -1291,7 +1263,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
             Prop Types
           </h1>
           <div>
-            <h2
+            <h3
               style={
                 Object {
                   "margin": "20px 0 0 0",
@@ -1301,7 +1273,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
               "
               MockedProvider
               " Component
-            </h2>
+            </h3>
             <table>
               <thead>
                 <tr>
@@ -1399,13 +1371,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
                       }
                     }
                   >
-                    <span
-                      style={
-                        Object {
-                          "color": "#a11",
-                        }
-                      }
-                    >
+                    <span>
                       true
                     </span>
                   </td>
@@ -1422,7 +1388,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
             </table>
           </div>
           <div>
-            <h2
+            <h3
               style={
                 Object {
                   "margin": "20px 0 0 0",
@@ -1432,7 +1398,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
               "
               UserAvatar
               " Component
-            </h2>
+            </h3>
             <table>
               <thead>
                 <tr>
@@ -1508,7 +1474,9 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
                       }
                     }
                   >
-                    <span />
+                    <span>
+                      bool
+                    </span>
                   </td>
                   <td
                     style={
@@ -1528,13 +1496,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
                       }
                     }
                   >
-                    <span
-                      style={
-                        Object {
-                          "color": "#a11",
-                        }
-                      }
-                    >
+                    <span>
                       false
                     </span>
                   </td>
@@ -1566,7 +1528,9 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
                       }
                     }
                   >
-                    <span />
+                    <span>
+                      string
+                    </span>
                   </td>
                   <td
                     style={
@@ -1586,14 +1550,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
                       }
                     }
                   >
-                    <span
-                      style={
-                        Object {
-                          "color": "#22a",
-                          "wordBreak": "break-word",
-                        }
-                      }
-                    >
+                    <span>
                       
                     </span>
                   </td>
@@ -1625,7 +1582,9 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
                       }
                     }
                   >
-                    <span />
+                    <span>
+                      string
+                    </span>
                   </td>
                   <td
                     style={
@@ -1645,14 +1604,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
                       }
                     }
                   >
-                    <span
-                      style={
-                        Object {
-                          "color": "#22a",
-                          "wordBreak": "break-word",
-                        }
-                      }
-                    >
+                    <span>
                       No photo
                     </span>
                   </td>
@@ -1684,7 +1636,9 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
                       }
                     }
                   >
-                    <span />
+                    <span>
+                      string
+                    </span>
                   </td>
                   <td
                     style={
@@ -1704,14 +1658,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
                       }
                     }
                   >
-                    <span
-                      style={
-                        Object {
-                          "color": "#22a",
-                          "wordBreak": "break-word",
-                        }
-                      }
-                    >
+                    <span>
                       
                     </span>
                   </td>
@@ -1743,7 +1690,9 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
                       }
                     }
                   >
-                    <span />
+                    <span>
+                      string
+                    </span>
                   </td>
                   <td
                     style={
@@ -1763,14 +1712,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
                       }
                     }
                   >
-                    <span
-                      style={
-                        Object {
-                          "color": "#22a",
-                          "wordBreak": "break-word",
-                        }
-                      }
-                    >
+                    <span>
                       
                     </span>
                   </td>
@@ -1818,6 +1760,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
     </div>
   </div>
   <button
+    className="info__show-button"
     onClick={[Function]}
     style={
       Object {
@@ -1840,11 +1783,13 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
     Show Info
   </button>
   <div
+    className="info__overlay"
     style={
       Object {
         "background": "white",
         "bottom": 0,
         "display": "none",
+        "fontFamily": "Helvetica Neue, Helvetica, Segoe UI, Arial, freesans, sans-serif",
         "left": 0,
         "overflow": "auto",
         "padding": "0 40px",
@@ -1856,6 +1801,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
     }
   >
     <button
+      className="info__close-button"
       onClick={[Function]}
       style={
         Object {
@@ -1881,12 +1827,9 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
       <div
         style={
           Object {
-            "WebkitFontSmoothing": "antialiased",
             "backgroundColor": "#fff",
             "border": "1px solid #eee",
             "borderRadius": "2px",
-            "color": "#444",
-            "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
             "fontSize": "15px",
             "fontWeight": 300,
             "lineHeight": 1.45,
@@ -2083,7 +2026,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
             Prop Types
           </h1>
           <div>
-            <h2
+            <h3
               style={
                 Object {
                   "margin": "20px 0 0 0",
@@ -2093,7 +2036,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
               "
               UserAvatar
               " Component
-            </h2>
+            </h3>
             <table>
               <thead>
                 <tr>
@@ -2169,7 +2112,9 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
                       }
                     }
                   >
-                    <span />
+                    <span>
+                      bool
+                    </span>
                   </td>
                   <td
                     style={
@@ -2189,13 +2134,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
                       }
                     }
                   >
-                    <span
-                      style={
-                        Object {
-                          "color": "#a11",
-                        }
-                      }
-                    >
+                    <span>
                       false
                     </span>
                   </td>
@@ -2227,7 +2166,9 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
                       }
                     }
                   >
-                    <span />
+                    <span>
+                      string
+                    </span>
                   </td>
                   <td
                     style={
@@ -2247,14 +2188,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
                       }
                     }
                   >
-                    <span
-                      style={
-                        Object {
-                          "color": "#22a",
-                          "wordBreak": "break-word",
-                        }
-                      }
-                    >
+                    <span>
                       
                     </span>
                   </td>
@@ -2286,7 +2220,9 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
                       }
                     }
                   >
-                    <span />
+                    <span>
+                      string
+                    </span>
                   </td>
                   <td
                     style={
@@ -2306,14 +2242,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
                       }
                     }
                   >
-                    <span
-                      style={
-                        Object {
-                          "color": "#22a",
-                          "wordBreak": "break-word",
-                        }
-                      }
-                    >
+                    <span>
                       No photo
                     </span>
                   </td>
@@ -2345,7 +2274,9 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
                       }
                     }
                   >
-                    <span />
+                    <span>
+                      string
+                    </span>
                   </td>
                   <td
                     style={
@@ -2365,14 +2296,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
                       }
                     }
                   >
-                    <span
-                      style={
-                        Object {
-                          "color": "#22a",
-                          "wordBreak": "break-word",
-                        }
-                      }
-                    >
+                    <span>
                       
                     </span>
                   </td>
@@ -2404,7 +2328,9 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
                       }
                     }
                   >
-                    <span />
+                    <span>
+                      string
+                    </span>
                   </td>
                   <td
                     style={
@@ -2424,14 +2350,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
                       }
                     }
                   >
-                    <span
-                      style={
-                        Object {
-                          "color": "#22a",
-                          "wordBreak": "break-word",
-                        }
-                      }
-                    >
+                    <span>
                       
                     </span>
                   </td>
@@ -2479,6 +2398,7 @@ exports[`FileProperties components/core/UserAvatar Not logged in not own profile
     </div>
   </div>
   <button
+    className="info__show-button"
     onClick={[Function]}
     style={
       Object {
@@ -2501,11 +2421,13 @@ exports[`FileProperties components/core/UserAvatar Not logged in not own profile
     Show Info
   </button>
   <div
+    className="info__overlay"
     style={
       Object {
         "background": "white",
         "bottom": 0,
         "display": "none",
+        "fontFamily": "Helvetica Neue, Helvetica, Segoe UI, Arial, freesans, sans-serif",
         "left": 0,
         "overflow": "auto",
         "padding": "0 40px",
@@ -2517,6 +2439,7 @@ exports[`FileProperties components/core/UserAvatar Not logged in not own profile
     }
   >
     <button
+      className="info__close-button"
       onClick={[Function]}
       style={
         Object {
@@ -2542,12 +2465,9 @@ exports[`FileProperties components/core/UserAvatar Not logged in not own profile
       <div
         style={
           Object {
-            "WebkitFontSmoothing": "antialiased",
             "backgroundColor": "#fff",
             "border": "1px solid #eee",
             "borderRadius": "2px",
-            "color": "#444",
-            "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
             "fontSize": "15px",
             "fontWeight": 300,
             "lineHeight": 1.45,
@@ -2744,7 +2664,7 @@ exports[`FileProperties components/core/UserAvatar Not logged in not own profile
             Prop Types
           </h1>
           <div>
-            <h2
+            <h3
               style={
                 Object {
                   "margin": "20px 0 0 0",
@@ -2754,7 +2674,7 @@ exports[`FileProperties components/core/UserAvatar Not logged in not own profile
               "
               UserAvatar
               " Component
-            </h2>
+            </h3>
             <table>
               <thead>
                 <tr>
@@ -2830,7 +2750,9 @@ exports[`FileProperties components/core/UserAvatar Not logged in not own profile
                       }
                     }
                   >
-                    <span />
+                    <span>
+                      bool
+                    </span>
                   </td>
                   <td
                     style={
@@ -2850,13 +2772,7 @@ exports[`FileProperties components/core/UserAvatar Not logged in not own profile
                       }
                     }
                   >
-                    <span
-                      style={
-                        Object {
-                          "color": "#a11",
-                        }
-                      }
-                    >
+                    <span>
                       false
                     </span>
                   </td>
@@ -2888,7 +2804,9 @@ exports[`FileProperties components/core/UserAvatar Not logged in not own profile
                       }
                     }
                   >
-                    <span />
+                    <span>
+                      string
+                    </span>
                   </td>
                   <td
                     style={
@@ -2908,14 +2826,7 @@ exports[`FileProperties components/core/UserAvatar Not logged in not own profile
                       }
                     }
                   >
-                    <span
-                      style={
-                        Object {
-                          "color": "#22a",
-                          "wordBreak": "break-word",
-                        }
-                      }
-                    >
+                    <span>
                       
                     </span>
                   </td>
@@ -2947,7 +2858,9 @@ exports[`FileProperties components/core/UserAvatar Not logged in not own profile
                       }
                     }
                   >
-                    <span />
+                    <span>
+                      string
+                    </span>
                   </td>
                   <td
                     style={
@@ -2967,14 +2880,7 @@ exports[`FileProperties components/core/UserAvatar Not logged in not own profile
                       }
                     }
                   >
-                    <span
-                      style={
-                        Object {
-                          "color": "#22a",
-                          "wordBreak": "break-word",
-                        }
-                      }
-                    >
+                    <span>
                       No photo
                     </span>
                   </td>
@@ -3006,7 +2912,9 @@ exports[`FileProperties components/core/UserAvatar Not logged in not own profile
                       }
                     }
                   >
-                    <span />
+                    <span>
+                      string
+                    </span>
                   </td>
                   <td
                     style={
@@ -3026,14 +2934,7 @@ exports[`FileProperties components/core/UserAvatar Not logged in not own profile
                       }
                     }
                   >
-                    <span
-                      style={
-                        Object {
-                          "color": "#22a",
-                          "wordBreak": "break-word",
-                        }
-                      }
-                    >
+                    <span>
                       
                     </span>
                   </td>
@@ -3065,7 +2966,9 @@ exports[`FileProperties components/core/UserAvatar Not logged in not own profile
                       }
                     }
                   >
-                    <span />
+                    <span>
+                      string
+                    </span>
                   </td>
                   <td
                     style={
@@ -3085,14 +2988,7 @@ exports[`FileProperties components/core/UserAvatar Not logged in not own profile
                       }
                     }
                   >
-                    <span
-                      style={
-                        Object {
-                          "color": "#22a",
-                          "wordBreak": "break-word",
-                        }
-                      }
-                    >
+                    <span>
                       
                     </span>
                   </td>
@@ -3140,6 +3036,7 @@ exports[`FileProperties components/core/UserAvatar With default options 1`] = `
     </div>
   </div>
   <button
+    className="info__show-button"
     onClick={[Function]}
     style={
       Object {
@@ -3162,11 +3059,13 @@ exports[`FileProperties components/core/UserAvatar With default options 1`] = `
     Show Info
   </button>
   <div
+    className="info__overlay"
     style={
       Object {
         "background": "white",
         "bottom": 0,
         "display": "none",
+        "fontFamily": "Helvetica Neue, Helvetica, Segoe UI, Arial, freesans, sans-serif",
         "left": 0,
         "overflow": "auto",
         "padding": "0 40px",
@@ -3178,6 +3077,7 @@ exports[`FileProperties components/core/UserAvatar With default options 1`] = `
     }
   >
     <button
+      className="info__close-button"
       onClick={[Function]}
       style={
         Object {
@@ -3203,12 +3103,9 @@ exports[`FileProperties components/core/UserAvatar With default options 1`] = `
       <div
         style={
           Object {
-            "WebkitFontSmoothing": "antialiased",
             "backgroundColor": "#fff",
             "border": "1px solid #eee",
             "borderRadius": "2px",
-            "color": "#444",
-            "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
             "fontSize": "15px",
             "fontWeight": 300,
             "lineHeight": 1.45,
@@ -3349,7 +3246,7 @@ exports[`FileProperties components/core/UserAvatar With default options 1`] = `
             Prop Types
           </h1>
           <div>
-            <h2
+            <h3
               style={
                 Object {
                   "margin": "20px 0 0 0",
@@ -3359,7 +3256,7 @@ exports[`FileProperties components/core/UserAvatar With default options 1`] = `
               "
               UserAvatar
               " Component
-            </h2>
+            </h3>
             <table>
               <thead>
                 <tr>
@@ -3435,7 +3332,9 @@ exports[`FileProperties components/core/UserAvatar With default options 1`] = `
                       }
                     }
                   >
-                    <span />
+                    <span>
+                      bool
+                    </span>
                   </td>
                   <td
                     style={
@@ -3455,13 +3354,7 @@ exports[`FileProperties components/core/UserAvatar With default options 1`] = `
                       }
                     }
                   >
-                    <span
-                      style={
-                        Object {
-                          "color": "#a11",
-                        }
-                      }
-                    >
+                    <span>
                       false
                     </span>
                   </td>
@@ -3493,7 +3386,9 @@ exports[`FileProperties components/core/UserAvatar With default options 1`] = `
                       }
                     }
                   >
-                    <span />
+                    <span>
+                      string
+                    </span>
                   </td>
                   <td
                     style={
@@ -3513,14 +3408,7 @@ exports[`FileProperties components/core/UserAvatar With default options 1`] = `
                       }
                     }
                   >
-                    <span
-                      style={
-                        Object {
-                          "color": "#22a",
-                          "wordBreak": "break-word",
-                        }
-                      }
-                    >
+                    <span>
                       
                     </span>
                   </td>
@@ -3552,7 +3440,9 @@ exports[`FileProperties components/core/UserAvatar With default options 1`] = `
                       }
                     }
                   >
-                    <span />
+                    <span>
+                      string
+                    </span>
                   </td>
                   <td
                     style={
@@ -3572,14 +3462,7 @@ exports[`FileProperties components/core/UserAvatar With default options 1`] = `
                       }
                     }
                   >
-                    <span
-                      style={
-                        Object {
-                          "color": "#22a",
-                          "wordBreak": "break-word",
-                        }
-                      }
-                    >
+                    <span>
                       No photo
                     </span>
                   </td>
@@ -3611,7 +3494,9 @@ exports[`FileProperties components/core/UserAvatar With default options 1`] = `
                       }
                     }
                   >
-                    <span />
+                    <span>
+                      string
+                    </span>
                   </td>
                   <td
                     style={
@@ -3631,14 +3516,7 @@ exports[`FileProperties components/core/UserAvatar With default options 1`] = `
                       }
                     }
                   >
-                    <span
-                      style={
-                        Object {
-                          "color": "#22a",
-                          "wordBreak": "break-word",
-                        }
-                      }
-                    >
+                    <span>
                       
                     </span>
                   </td>
@@ -3670,7 +3548,9 @@ exports[`FileProperties components/core/UserAvatar With default options 1`] = `
                       }
                     }
                   >
-                    <span />
+                    <span>
+                      string
+                    </span>
                   </td>
                   <td
                     style={
@@ -3690,14 +3570,7 @@ exports[`FileProperties components/core/UserAvatar With default options 1`] = `
                       }
                     }
                   >
-                    <span
-                      style={
-                        Object {
-                          "color": "#22a",
-                          "wordBreak": "break-word",
-                        }
-                      }
-                    >
+                    <span>
                       
                     </span>
                   </td>

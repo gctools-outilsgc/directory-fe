@@ -6,12 +6,9 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -150,12 +147,9 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -180,7 +174,7 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -190,7 +184,7 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
             "
             OrgChart
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -266,7 +260,9 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -316,7 +312,9 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -336,13 +334,7 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onCardClick
                   </span>
                 </td>
@@ -374,7 +366,9 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -424,7 +418,9 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -444,14 +440,7 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     !name!
                   </span>
                 </td>
@@ -483,7 +472,9 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -503,14 +494,7 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     !name!
                   </span>
                 </td>
@@ -542,7 +526,9 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -562,13 +548,7 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onButtonClick
                   </span>
                 </td>
@@ -600,7 +580,9 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -620,13 +602,7 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -659,7 +635,9 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -679,13 +657,7 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -718,7 +690,9 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -738,13 +712,7 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     {
                     }
                   </span>
@@ -777,7 +745,9 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -797,13 +767,7 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     300
                   </span>
                 </td>
@@ -835,7 +799,9 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -855,13 +821,7 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     75
                   </span>
                 </td>
@@ -893,7 +853,9 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -943,7 +905,9 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -963,13 +927,7 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     true
                   </span>
                 </td>
@@ -1001,7 +959,9 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    node
+                  </span>
                 </td>
                 <td
                   style={
@@ -1051,7 +1011,9 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -1101,7 +1063,9 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -1121,13 +1085,7 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -1160,7 +1118,9 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -1210,7 +1170,9 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -1230,13 +1192,7 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -1269,7 +1225,9 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -1289,13 +1247,7 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     {
                     }
                   </span>
@@ -1328,7 +1280,9 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    node
+                  </span>
                 </td>
                 <td
                   style={
@@ -1378,7 +1332,9 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1428,7 +1384,9 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -1448,14 +1406,7 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     Go to me
                   </span>
                 </td>
@@ -1487,7 +1438,9 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1537,7 +1490,9 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -1583,12 +1538,9 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -1671,6 +1623,10 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
               >
                 <path
                   className=""
+                  d="M 137.5 10 v 5 h -28.5 V 33.333333333333336 H 23.5 V 40"
+                />
+                <path
+                  className=""
                   d="M 137.5 10 v 5 H 23.5 V 20"
                 />
                 <path
@@ -1691,7 +1647,7 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                 />
                 <path
                   className=""
-                  d="M 137.5 10 v 5 h -28.5 V 33.333333333333336 H 23.5 V 40"
+                  d="M 137.5 10 v 5 h -28.5 V 33.333333333333336 H 251.5 V 40"
                 />
                 <path
                   className=""
@@ -1704,10 +1660,6 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                 <path
                   className=""
                   d="M 137.5 10 v 5 h -28.5 V 33.333333333333336 H 194.5 V 40"
-                />
-                <path
-                  className=""
-                  d="M 137.5 10 v 5 h -28.5 V 33.333333333333336 H 251.5 V 40"
                 />
                 <path
                   className=""
@@ -1935,6 +1887,10 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
             >
               <path
                 className=""
+                d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+              />
+              <path
+                className=""
                 d="M 995 75 v 30 H 175 V 135"
               />
               <path
@@ -1955,7 +1911,7 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
               />
               <path
                 className=""
-                d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+                d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
               />
               <path
                 className=""
@@ -1968,10 +1924,6 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
               <path
                 className=""
                 d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
-              />
-              <path
-                className=""
-                d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
               />
               <path
                 className=""
@@ -2680,12 +2632,9 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -2710,7 +2659,7 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -2720,7 +2669,7 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
             "
             OrgChart
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -2796,7 +2745,9 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -2846,7 +2797,9 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -2866,13 +2819,7 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onCardClick
                   </span>
                 </td>
@@ -2904,7 +2851,9 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -2954,7 +2903,9 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -2974,14 +2925,7 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     !name!
                   </span>
                 </td>
@@ -3013,7 +2957,9 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -3033,14 +2979,7 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     !name!
                   </span>
                 </td>
@@ -3072,7 +3011,9 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -3092,13 +3033,7 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onButtonClick
                   </span>
                 </td>
@@ -3130,7 +3065,9 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -3150,13 +3087,7 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -3189,7 +3120,9 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -3209,13 +3142,7 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -3248,7 +3175,9 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -3268,13 +3197,7 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     {
                     }
                   </span>
@@ -3307,7 +3230,9 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -3327,13 +3252,7 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     300
                   </span>
                 </td>
@@ -3365,7 +3284,9 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -3385,13 +3306,7 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     75
                   </span>
                 </td>
@@ -3423,7 +3338,9 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -3473,7 +3390,9 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -3493,13 +3412,7 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     true
                   </span>
                 </td>
@@ -3531,7 +3444,9 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    node
+                  </span>
                 </td>
                 <td
                   style={
@@ -3581,7 +3496,9 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -3631,7 +3548,9 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -3651,13 +3570,7 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -3690,7 +3603,9 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -3740,7 +3655,9 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -3760,13 +3677,7 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -3799,7 +3710,9 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -3819,13 +3732,7 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     {
                     }
                   </span>
@@ -3858,7 +3765,9 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    node
+                  </span>
                 </td>
                 <td
                   style={
@@ -3908,7 +3817,9 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -3958,7 +3869,9 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -3978,14 +3891,7 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     Go to me
                   </span>
                 </td>
@@ -4017,7 +3923,9 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -4067,7 +3975,9 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -4113,12 +4023,9 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -4260,6 +4167,10 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
             >
               <path
                 className=""
+                d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+              />
+              <path
+                className=""
                 d="M 995 75 v 30 H 175 V 135"
               />
               <path
@@ -4280,7 +4191,7 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
               />
               <path
                 className=""
-                d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+                d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
               />
               <path
                 className=""
@@ -4293,10 +4204,6 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
               <path
                 className=""
                 d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
-              />
-              <path
-                className=""
-                d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
               />
               <path
                 className=""
@@ -5005,12 +4912,9 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -5035,7 +4939,7 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -5045,7 +4949,7 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
             "
             OrgChart
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -5121,7 +5025,9 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -5171,7 +5077,9 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -5191,13 +5099,7 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onCardClick
                   </span>
                 </td>
@@ -5229,7 +5131,9 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -5279,7 +5183,9 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -5299,14 +5205,7 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     !name!
                   </span>
                 </td>
@@ -5338,7 +5237,9 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -5358,14 +5259,7 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     !name!
                   </span>
                 </td>
@@ -5397,7 +5291,9 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -5417,13 +5313,7 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onButtonClick
                   </span>
                 </td>
@@ -5455,7 +5345,9 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -5475,13 +5367,7 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -5514,7 +5400,9 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -5534,13 +5422,7 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -5573,7 +5455,9 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -5593,13 +5477,7 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     {
                     }
                   </span>
@@ -5632,7 +5510,9 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -5652,13 +5532,7 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     300
                   </span>
                 </td>
@@ -5690,7 +5564,9 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -5710,13 +5586,7 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     75
                   </span>
                 </td>
@@ -5748,7 +5618,9 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -5798,7 +5670,9 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -5818,13 +5692,7 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     true
                   </span>
                 </td>
@@ -5856,7 +5724,9 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    node
+                  </span>
                 </td>
                 <td
                   style={
@@ -5906,7 +5776,9 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -5956,7 +5828,9 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -5976,13 +5850,7 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -6015,7 +5883,9 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -6065,7 +5935,9 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -6085,13 +5957,7 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -6124,7 +5990,9 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -6144,13 +6012,7 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     {
                     }
                   </span>
@@ -6183,7 +6045,9 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    node
+                  </span>
                 </td>
                 <td
                   style={
@@ -6233,7 +6097,9 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -6283,7 +6149,9 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -6303,14 +6171,7 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     Go to me
                   </span>
                 </td>
@@ -6342,7 +6203,9 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -6392,7 +6255,9 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -6438,12 +6303,9 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -6585,6 +6447,10 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
             >
               <path
                 className=""
+                d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+              />
+              <path
+                className=""
                 d="M 995 75 v 30 H 175 V 135"
               />
               <path
@@ -6605,7 +6471,7 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
               />
               <path
                 className=""
-                d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+                d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
               />
               <path
                 className=""
@@ -6618,10 +6484,6 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
               <path
                 className=""
                 d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
-              />
-              <path
-                className=""
-                d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
               />
               <path
                 className=""
@@ -7330,12 +7192,9 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -7360,7 +7219,7 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -7370,7 +7229,7 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
             "
             OrgChart
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -7446,7 +7305,9 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -7496,7 +7357,9 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -7516,13 +7379,7 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onCardClick
                   </span>
                 </td>
@@ -7554,7 +7411,9 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -7604,7 +7463,9 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -7624,14 +7485,7 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     !name!
                   </span>
                 </td>
@@ -7663,7 +7517,9 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -7683,14 +7539,7 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     !name!
                   </span>
                 </td>
@@ -7722,7 +7571,9 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -7742,13 +7593,7 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onButtonClick
                   </span>
                 </td>
@@ -7780,7 +7625,9 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -7800,13 +7647,7 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -7839,7 +7680,9 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -7859,13 +7702,7 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -7898,7 +7735,9 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -7918,13 +7757,7 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     {
                     }
                   </span>
@@ -7957,7 +7790,9 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -7977,13 +7812,7 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     300
                   </span>
                 </td>
@@ -8015,7 +7844,9 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    number
+                  </span>
                 </td>
                 <td
                   style={
@@ -8035,13 +7866,7 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     75
                   </span>
                 </td>
@@ -8073,7 +7898,9 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -8123,7 +7950,9 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    bool
+                  </span>
                 </td>
                 <td
                   style={
@@ -8143,13 +7972,7 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#a11",
-                      }
-                    }
-                  >
+                  <span>
                     true
                   </span>
                 </td>
@@ -8181,7 +8004,9 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    node
+                  </span>
                 </td>
                 <td
                   style={
@@ -8231,7 +8056,9 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -8281,7 +8108,9 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -8301,13 +8130,7 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -8340,7 +8163,9 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -8390,7 +8215,9 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -8410,13 +8237,7 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     [
                     ]
                   </span>
@@ -8449,7 +8270,9 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    other
+                  </span>
                 </td>
                 <td
                   style={
@@ -8469,13 +8292,7 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#666",
-                      }
-                    }
-                  >
+                  <span>
                     {
                     }
                   </span>
@@ -8508,7 +8325,9 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    node
+                  </span>
                 </td>
                 <td
                   style={
@@ -8558,7 +8377,9 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -8608,7 +8429,9 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -8628,14 +8451,7 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     Go to me
                   </span>
                 </td>
@@ -8667,7 +8483,9 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -8717,7 +8535,9 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={

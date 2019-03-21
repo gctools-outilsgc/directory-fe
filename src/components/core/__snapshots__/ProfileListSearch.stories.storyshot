@@ -6,12 +6,9 @@ exports[`FileProperties components/core/ProfileListSearch With default options 1
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -91,12 +88,9 @@ exports[`FileProperties components/core/ProfileListSearch With default options 1
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -116,9 +110,6 @@ exports[`FileProperties components/core/ProfileListSearch With default options 1
         <div
           style={
             Object {
-              "WebkitFontSmoothing": "antialiased",
-              "color": "#444",
-              "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
               "fontSize": "15px",
             }
           }
@@ -140,7 +131,7 @@ exports[`FileProperties components/core/ProfileListSearch With default options 1
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -150,7 +141,7 @@ exports[`FileProperties components/core/ProfileListSearch With default options 1
             "
             ProfileListSearch
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -226,7 +217,9 @@ exports[`FileProperties components/core/ProfileListSearch With default options 1
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -246,13 +239,7 @@ exports[`FileProperties components/core/ProfileListSearch With default options 1
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onChange
                   </span>
                 </td>
@@ -284,7 +271,9 @@ exports[`FileProperties components/core/ProfileListSearch With default options 1
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -304,14 +293,7 @@ exports[`FileProperties components/core/ProfileListSearch With default options 1
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     
                   </span>
                 </td>
@@ -339,12 +321,9 @@ exports[`FileProperties components/core/ProfileListSearch With initial search 1`
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -439,12 +418,9 @@ exports[`FileProperties components/core/ProfileListSearch With initial search 1`
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -464,9 +440,6 @@ exports[`FileProperties components/core/ProfileListSearch With initial search 1`
         <div
           style={
             Object {
-              "WebkitFontSmoothing": "antialiased",
-              "color": "#444",
-              "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
               "fontSize": "15px",
             }
           }
@@ -488,7 +461,7 @@ exports[`FileProperties components/core/ProfileListSearch With initial search 1`
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -498,7 +471,7 @@ exports[`FileProperties components/core/ProfileListSearch With initial search 1`
             "
             ProfileListSearch
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -574,7 +547,9 @@ exports[`FileProperties components/core/ProfileListSearch With initial search 1`
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -594,13 +569,7 @@ exports[`FileProperties components/core/ProfileListSearch With initial search 1`
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onChange
                   </span>
                 </td>
@@ -632,7 +601,9 @@ exports[`FileProperties components/core/ProfileListSearch With initial search 1`
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -652,14 +623,7 @@ exports[`FileProperties components/core/ProfileListSearch With initial search 1`
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     
                   </span>
                 </td>
@@ -687,12 +651,9 @@ exports[`FileProperties components/core/ProfileListSearch With onChange 1`] = `
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -787,12 +748,9 @@ exports[`FileProperties components/core/ProfileListSearch With onChange 1`] = `
     <div
       style={
         Object {
-          "WebkitFontSmoothing": "antialiased",
           "backgroundColor": "#fff",
           "border": "1px solid #eee",
           "borderRadius": "2px",
-          "color": "#444",
-          "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
           "fontSize": "15px",
           "fontWeight": 300,
           "lineHeight": 1.45,
@@ -812,9 +770,6 @@ exports[`FileProperties components/core/ProfileListSearch With onChange 1`] = `
         <div
           style={
             Object {
-              "WebkitFontSmoothing": "antialiased",
-              "color": "#444",
-              "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
               "fontSize": "15px",
             }
           }
@@ -836,7 +791,7 @@ exports[`FileProperties components/core/ProfileListSearch With onChange 1`] = `
           Prop Types
         </h1>
         <div>
-          <h2
+          <h3
             style={
               Object {
                 "margin": "20px 0 0 0",
@@ -846,7 +801,7 @@ exports[`FileProperties components/core/ProfileListSearch With onChange 1`] = `
             "
             ProfileListSearch
             " Component
-          </h2>
+          </h3>
           <table>
             <thead>
               <tr>
@@ -922,7 +877,9 @@ exports[`FileProperties components/core/ProfileListSearch With onChange 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    func
+                  </span>
                 </td>
                 <td
                   style={
@@ -942,13 +899,7 @@ exports[`FileProperties components/core/ProfileListSearch With onChange 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#170",
-                      }
-                    }
-                  >
+                  <span>
                     onChange
                   </span>
                 </td>
@@ -980,7 +931,9 @@ exports[`FileProperties components/core/ProfileListSearch With onChange 1`] = `
                     }
                   }
                 >
-                  <span />
+                  <span>
+                    string
+                  </span>
                 </td>
                 <td
                   style={
@@ -1000,14 +953,7 @@ exports[`FileProperties components/core/ProfileListSearch With onChange 1`] = `
                     }
                   }
                 >
-                  <span
-                    style={
-                      Object {
-                        "color": "#22a",
-                        "wordBreak": "break-word",
-                      }
-                    }
-                  >
+                  <span>
                     
                   </span>
                 </td>
