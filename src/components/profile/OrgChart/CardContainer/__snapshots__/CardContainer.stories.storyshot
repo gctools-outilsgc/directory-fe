@@ -953,6 +953,10 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
         >
           <path
             className=""
+            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+          />
+          <path
+            className=""
             d="M 995 75 v 30 H 175 V 135"
           />
           <path
@@ -973,7 +977,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
           />
           <path
             className=""
-            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
           />
           <path
             className=""
@@ -986,10 +990,6 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
           <path
             className=""
             d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
-          />
-          <path
-            className=""
-            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
           />
           <path
             className=""
@@ -2568,6 +2568,10 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
         >
           <path
             className=""
+            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+          />
+          <path
+            className=""
             d="M 995 75 v 30 H 175 V 135"
           />
           <path
@@ -2588,7 +2592,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
           />
           <path
             className=""
-            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
           />
           <path
             className=""
@@ -2601,10 +2605,6 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
           <path
             className=""
             d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
-          />
-          <path
-            className=""
-            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
           />
           <path
             className=""
@@ -4183,6 +4183,10 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
         >
           <path
             className=""
+            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+          />
+          <path
+            className=""
             d="M 995 75 v 30 H 175 V 135"
           />
           <path
@@ -4203,7 +4207,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
           />
           <path
             className=""
-            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
           />
           <path
             className=""
@@ -4216,10 +4220,6 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
           <path
             className=""
             d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
-          />
-          <path
-            className=""
-            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
           />
           <path
             className=""
@@ -5798,6 +5798,10 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
         >
           <path
             className=""
+            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+          />
+          <path
+            className=""
             d="M 995 75 v 30 H 175 V 135"
           />
           <path
@@ -5818,7 +5822,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
           />
           <path
             className=""
-            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
           />
           <path
             className=""
@@ -5831,10 +5835,6 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
           <path
             className=""
             d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
-          />
-          <path
-            className=""
-            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
           />
           <path
             className=""
@@ -7417,6 +7417,10 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
         >
           <path
             className=""
+            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+          />
+          <path
+            className=""
             d="M 995 75 v 30 H 175 V 135"
           />
           <path
@@ -7437,7 +7441,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
           />
           <path
             className=""
-            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
           />
           <path
             className=""
@@ -7450,10 +7454,6 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
           <path
             className=""
             d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
-          />
-          <path
-            className=""
-            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
           />
           <path
             className=""
@@ -9032,6 +9032,10 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
         >
           <path
             className=""
+            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+          />
+          <path
+            className=""
             d="M 995 75 v 30 H 175 V 135"
           />
           <path
@@ -9052,7 +9056,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
           />
           <path
             className=""
-            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
           />
           <path
             className=""
@@ -9065,10 +9069,6 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
           <path
             className=""
             d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
-          />
-          <path
-            className=""
-            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
           />
           <path
             className=""

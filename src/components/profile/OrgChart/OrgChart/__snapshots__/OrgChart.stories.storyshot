@@ -1623,6 +1623,10 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
               >
                 <path
                   className=""
+                  d="M 137.5 10 v 5 h -28.5 V 33.333333333333336 H 23.5 V 40"
+                />
+                <path
+                  className=""
                   d="M 137.5 10 v 5 H 23.5 V 20"
                 />
                 <path
@@ -1643,7 +1647,7 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                 />
                 <path
                   className=""
-                  d="M 137.5 10 v 5 h -28.5 V 33.333333333333336 H 23.5 V 40"
+                  d="M 137.5 10 v 5 h -28.5 V 33.333333333333336 H 251.5 V 40"
                 />
                 <path
                   className=""
@@ -1656,10 +1660,6 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                 <path
                   className=""
                   d="M 137.5 10 v 5 h -28.5 V 33.333333333333336 H 194.5 V 40"
-                />
-                <path
-                  className=""
-                  d="M 137.5 10 v 5 h -28.5 V 33.333333333333336 H 251.5 V 40"
                 />
                 <path
                   className=""
@@ -1887,6 +1887,10 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
             >
               <path
                 className=""
+                d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+              />
+              <path
+                className=""
                 d="M 995 75 v 30 H 175 V 135"
               />
               <path
@@ -1907,7 +1911,7 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
               />
               <path
                 className=""
-                d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+                d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
               />
               <path
                 className=""
@@ -1920,10 +1924,6 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
               <path
                 className=""
                 d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
-              />
-              <path
-                className=""
-                d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
               />
               <path
                 className=""
@@ -4167,6 +4167,10 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
             >
               <path
                 className=""
+                d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+              />
+              <path
+                className=""
                 d="M 995 75 v 30 H 175 V 135"
               />
               <path
@@ -4187,7 +4191,7 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
               />
               <path
                 className=""
-                d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+                d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
               />
               <path
                 className=""
@@ -4200,10 +4204,6 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
               <path
                 className=""
                 d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
-              />
-              <path
-                className=""
-                d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
               />
               <path
                 className=""
@@ -6447,6 +6447,10 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
             >
               <path
                 className=""
+                d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+              />
+              <path
+                className=""
                 d="M 995 75 v 30 H 175 V 135"
               />
               <path
@@ -6467,7 +6471,7 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
               />
               <path
                 className=""
-                d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+                d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
               />
               <path
                 className=""
@@ -6480,10 +6484,6 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
               <path
                 className=""
                 d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
-              />
-              <path
-                className=""
-                d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
               />
               <path
                 className=""
