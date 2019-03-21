@@ -957,7 +957,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  oldSupervisor
+                  source
                 </td>
                 <td
                   style={
@@ -1057,7 +1057,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=fals
                     }
                   }
                 >
-                  newSupervisor
+                  destination
                 </td>
                 <td
                   style={
@@ -1210,6 +1210,11 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                 </div>
                 <div
                   className="modal-body"
+                  style={
+                    Object {
+                      "marginBottom": "35px",
+                    }
+                  }
                 >
                   Explicit information about the transfer to include the Person
     being transffered, from what Team and Super, to what team and Supervisor.
@@ -2214,7 +2219,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  oldSupervisor
+                  source
                 </td>
                 <td
                   style={
@@ -2314,7 +2319,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation isOpen=true
                     }
                   }
                 >
-                  newSupervisor
+                  destination
                 </td>
                 <td
                   style={
@@ -2467,6 +2472,11 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                 </div>
                 <div
                   className="modal-body"
+                  style={
+                    Object {
+                      "marginBottom": "35px",
+                    }
+                  }
                 >
                   Explicit information about the transfer to include the Person
     being transffered, from what Team and Super, to what team and Supervisor.
@@ -3471,7 +3481,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  oldSupervisor
+                  source
                 </td>
                 <td
                   style={
@@ -3571,7 +3581,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with click 
                     }
                   }
                 >
-                  newSupervisor
+                  destination
                 </td>
                 <td
                   style={
@@ -3724,6 +3734,11 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                 </div>
                 <div
                   className="modal-body"
+                  style={
+                    Object {
+                      "marginBottom": "35px",
+                    }
+                  }
                 >
                   Custom dialog body
                   <div
@@ -4725,7 +4740,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  oldSupervisor
+                  source
                 </td>
                 <td
                   style={
@@ -4825,7 +4840,7 @@ exports[`FileProperties components/profile/team/TransferConfirmation with custom
                     }
                   }
                 >
-                  newSupervisor
+                  destination
                 </td>
                 <td
                   style={

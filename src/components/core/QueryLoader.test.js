@@ -89,6 +89,14 @@ const mocks = [
 
 
 describe('QueryLoader', () => {
+  const err = console.error;
+  afterEach(cleanup);
+  beforeAll(() => {
+    console.error = () => {};
+  });
+  afterAll(() => {
+    console.error = err;
+  });
   it('passes data using render-prop pattern on success', (done) => {
     render((
       <MockedProvider mocks={mocks} addTypename={false}>
@@ -122,9 +130,7 @@ describe('QueryLoader', () => {
     ));
   });
   it('does not execute render-prop on error', async () => {
-    const err = console.error;
-    console.error = () => {};
-    const { queryByText, unmount } = render(
+    const { queryByText } = render(
       <MockedProvider mocks={mocks} addTypename={false}>
         <QueryLoader
           query={GET_BASICS}
@@ -137,13 +143,9 @@ describe('QueryLoader', () => {
     );
     await waitForElement(() => queryByText('Error'));
     expect(queryByText('THIS SHOULD NOT')).toBe(null);
-    unmount();
-    console.error = err;
   });
   it('displays spinner while loading', () => {
-    const err = console.error;
-    console.error = () => {};
-    const { queryByText, unmount } = render(
+    const { queryByText } = render(
       <MockedProvider mocks={mocks} addTypename={false}>
         <QueryLoader
           query={GET_BASICS}
@@ -157,8 +159,47 @@ describe('QueryLoader', () => {
     const loading = queryByText('Loading...');
     expect(loading).not.toBeNull();
     expect(loading.innerHTML).toBe('Loading...');
-    unmount();
-    console.error = err;
+  });
+  describe('when displayState is false', () => {
+    it('does not show loading', async () => {
+      const { queryByText, container } = render(
+        <MockedProvider mocks={mocks} addTypename={false}>
+          <QueryLoader
+            query={GET_BASICS}
+            variables={mocks[1].request.variables}
+            displayState={false}
+          >
+            {() => <span>testing 123</span> }
+          </QueryLoader>
+        </MockedProvider>
+        , { container: document.body }
+      );
+      const loading = queryByText('Loading...');
+      expect(loading).toBeNull();
+      expect(container.firstChild).toBeNull();
+      await waitForElement(() => queryByText('testing 123'));
+    });
+    it('does not show errors', (done) => {
+      const { queryByText, container } = render(
+        <MockedProvider mocks={mocks} addTypename={false}>
+          <QueryLoader
+            query={GET_BASICS}
+            variables={mocks[0].request.variables}
+            displayState={false}
+          >
+            {() => <span>testing 123</span> }
+          </QueryLoader>
+        </MockedProvider>
+        , { container: document.body }
+      );
+      const loading = queryByText('Loading...');
+      expect(loading).toBeNull();
+      expect(container.firstChild).toBeNull();
+      setTimeout(() => {
+        expect(queryByText('Error')).toBeNull();
+        done();
+      }, 0);
+    });
   });
 });
 

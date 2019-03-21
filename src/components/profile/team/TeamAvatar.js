@@ -23,6 +23,7 @@ const colours = [
 ];
 
 const chooseColor = (str) => {
+  if (!str) return 1;
   const trimmed = str.trim();
   const sum =
     [...trimmed].map(c => c.charCodeAt(0)).reduce((a, s) => a + s, 0);
@@ -57,6 +58,7 @@ const TeamAvatarStyle = styled.div`
 
 /** Abreviate strings down to 2 letters */
 const abbreviate = (str) => {
+  if (!str) return 'N/A';
   const trimmed = str.trim();
   let li = trimmed.lastIndexOf(' ');
   if (li < 0) li = trimmed.length - 2;

@@ -31,11 +31,15 @@ exports[`FileProperties components/profile/OrgChart/Placement Algorithm Using sa
         >
           <path
             className=""
+            d="M 495 50 v 30 h -105 V 180 H 75 V 220"
+          />
+          <path
+            className=""
             d="M 495 50 v 30 H 75 V 110"
           />
           <path
             className=""
-            d="M 495 50 v 30 H 285 V 110"
+            d="M 495 50 v 30 h -105 V 180 H 915 V 220"
           />
           <path
             className=""
@@ -51,7 +55,7 @@ exports[`FileProperties components/profile/OrgChart/Placement Algorithm Using sa
           />
           <path
             className=""
-            d="M 495 50 v 30 h -105 V 180 H 75 V 220"
+            d="M 495 50 v 30 H 285 V 110"
           />
           <path
             className=""
@@ -64,10 +68,6 @@ exports[`FileProperties components/profile/OrgChart/Placement Algorithm Using sa
           <path
             className=""
             d="M 495 50 v 30 h -105 V 180 H 705 V 220"
-          />
-          <path
-            className=""
-            d="M 495 50 v 30 h -105 V 180 H 915 V 220"
           />
           <path
             className=""
@@ -831,6 +831,91 @@ exports[`FileProperties components/profile/OrgChart/Placement Algorithm Using sa
                                   }
                                 }
                               >
+                                M 495 50 v 30 h -105 V 180 H 75 V 220
+                              </span>
+                              "
+                            </span>
+                          </span>
+                        </span>
+                        <span>
+                           
+                          <span
+                            style={Object {}}
+                          >
+                            className
+                          </span>
+                          <span>
+                            =
+                            <span
+                              style={Object {}}
+                            >
+                              "
+                              <span
+                                style={
+                                  Object {
+                                    "color": "#22a",
+                                    "wordBreak": "break-word",
+                                  }
+                                }
+                              >
+                                
+                              </span>
+                              "
+                            </span>
+                          </span>
+                           
+                        </span>
+                      </span>
+                      <span
+                        style={
+                          Object {
+                            "color": "#444",
+                          }
+                        }
+                      >
+                        /&gt;
+                      </span>
+                    </div>
+                    <div
+                      style={
+                        Object {
+                          "paddingLeft": 63,
+                          "paddingRight": 3,
+                        }
+                      }
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#444",
+                          }
+                        }
+                      >
+                        &lt;
+                        path
+                      </span>
+                      <span>
+                        <span>
+                           
+                          <span
+                            style={Object {}}
+                          >
+                            d
+                          </span>
+                          <span>
+                            =
+                            <span
+                              style={Object {}}
+                            >
+                              "
+                              <span
+                                style={
+                                  Object {
+                                    "color": "#22a",
+                                    "wordBreak": "break-word",
+                                  }
+                                }
+                              >
                                 M 495 50 v 30 H 75 V 110
                               </span>
                               "
@@ -916,7 +1001,7 @@ exports[`FileProperties components/profile/OrgChart/Placement Algorithm Using sa
                                   }
                                 }
                               >
-                                M 495 50 v 30 H 285 V 110
+                                M 495 50 v 30 h -105 V 180 H 915 V 220
                               </span>
                               "
                             </span>
@@ -1256,7 +1341,7 @@ exports[`FileProperties components/profile/OrgChart/Placement Algorithm Using sa
                                   }
                                 }
                               >
-                                M 495 50 v 30 h -105 V 180 H 75 V 220
+                                M 495 50 v 30 H 285 V 110
                               </span>
                               "
                             </span>
@@ -1512,91 +1597,6 @@ exports[`FileProperties components/profile/OrgChart/Placement Algorithm Using sa
                                 }
                               >
                                 M 495 50 v 30 h -105 V 180 H 705 V 220
-                              </span>
-                              "
-                            </span>
-                          </span>
-                        </span>
-                        <span>
-                           
-                          <span
-                            style={Object {}}
-                          >
-                            className
-                          </span>
-                          <span>
-                            =
-                            <span
-                              style={Object {}}
-                            >
-                              "
-                              <span
-                                style={
-                                  Object {
-                                    "color": "#22a",
-                                    "wordBreak": "break-word",
-                                  }
-                                }
-                              >
-                                
-                              </span>
-                              "
-                            </span>
-                          </span>
-                           
-                        </span>
-                      </span>
-                      <span
-                        style={
-                          Object {
-                            "color": "#444",
-                          }
-                        }
-                      >
-                        /&gt;
-                      </span>
-                    </div>
-                    <div
-                      style={
-                        Object {
-                          "paddingLeft": 63,
-                          "paddingRight": 3,
-                        }
-                      }
-                    >
-                      <span
-                        style={
-                          Object {
-                            "color": "#444",
-                          }
-                        }
-                      >
-                        &lt;
-                        path
-                      </span>
-                      <span>
-                        <span>
-                           
-                          <span
-                            style={Object {}}
-                          >
-                            d
-                          </span>
-                          <span>
-                            =
-                            <span
-                              style={Object {}}
-                            >
-                              "
-                              <span
-                                style={
-                                  Object {
-                                    "color": "#22a",
-                                    "wordBreak": "break-word",
-                                  }
-                                }
-                              >
-                                M 495 50 v 30 h -105 V 180 H 915 V 220
                               </span>
                               "
                             </span>

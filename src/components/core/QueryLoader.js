@@ -15,23 +15,35 @@ import ErrorModal, { err } from './ErrorModal';
 const QueryLoader = props => (
   <Query {...props}>
     {queryResult => (
-      (queryResult.loading && (
+      (queryResult.loading && props.displayState && (
         <i
           className="fa fa-spinner fa-spin"
           style={{ fontSize: '24px' }}
         >
           <span className="sr-only-delete-me">Loading...</span>
         </i>
-      )) || (queryResult.error && (
+      )) || (queryResult.error && props.displayState && (
         <ErrorModal error={err(queryResult.error)} />
-      )) || ((Object.keys(queryResult.data).length === 0) && (
+      )) || (
+        queryResult.data &&
+        (Object.keys(queryResult.data).length === 0) &&
+        props.displayState && (
         <ErrorModal error={err('Received empty response from server.')} />
-      )) || props.children(queryResult))}
+      )) || (
+        !queryResult.loading &&
+        !queryResult.error &&
+        props.children(queryResult)
+      )) || null}
   </Query>
 );
 
+QueryLoader.defaultProps = {
+  displayState: true,
+};
+
 QueryLoader.propTypes = {
   children: PropTypes.func.isRequired,
+  displayState: PropTypes.bool,
 };
 
 export default QueryLoader;

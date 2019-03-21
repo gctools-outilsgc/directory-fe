@@ -89,9 +89,18 @@ export const TransferToTeamDialog = (props) => {
   const { user, supervisor } = props;
 
   const [team, setTeam] = useState(undefined);
-
+  const basicQuery = {
+    query: GET_BASICS,
+    variables: { gcID: user },
+    displayState: isOpen,
+  };
+  const teamListQuery = {
+    query: GET_TEAM_LIST,
+    variables: { gcID: supervisor },
+    displayState: isOpen,
+  };
   return (
-    <QueryLoader query={GET_BASICS} variables={{ gcID: user }}>
+    <QueryLoader {...basicQuery} >
       {({
         data: {
           profiles: [{
@@ -102,7 +111,7 @@ export const TransferToTeamDialog = (props) => {
           }],
         },
       }) => (
-        <QueryLoader query={GET_TEAM_LIST} variables={{ gcID: supervisor }}>
+        <QueryLoader {...teamListQuery}>
           {({
             data: {
               profiles: [{

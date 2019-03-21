@@ -13,7 +13,7 @@ const user1 = {
   name: 'Mark Phillips',
   avatar: avatar1,
   team: {
-    name: 'Team: Global Affairs Advocacy',
+    nameEn: 'Team: Global Affairs Advocacy',
     avatar: 'GA',
   },
 };
@@ -22,7 +22,7 @@ const user2 = {
   name: 'Clara MacKinnon',
   avatar: avatar2,
   team: {
-    name: 'Team: Global Affairs Advocacy',
+    nameEn: 'Team: Global Affairs Advocacy',
   },
 };
 
@@ -30,7 +30,7 @@ const user3 = {
   name: 'Mia Jarrel',
   avatar: avatar3,
   team: {
-    name: 'Team: Default',
+    nameEn: 'Team: Default',
     avatar: 'DT',
   },
 };
@@ -44,9 +44,9 @@ storiesOf('components/profile/team/TransferConfirmation', module)
     () => (
       <TransferConfirmation
         isOpen
-        oldSupervisor={user1}
+        source={user1}
         transferredUser={user2}
-        newSupervisor={user3}
+        destination={user3}
       />
     )
   )
@@ -55,9 +55,9 @@ storiesOf('components/profile/team/TransferConfirmation', module)
     () => (
       <TransferConfirmation
         isOpen={false}
-        oldSupervisor={user1}
+        source={user1}
         transferredUser={user2}
-        newSupervisor={user3}
+        destination={user3}
       />
     )
   )
@@ -66,9 +66,9 @@ storiesOf('components/profile/team/TransferConfirmation', module)
     () => (
       <TransferConfirmation
         isOpen
-        oldSupervisor={user1}
+        source={user1}
         transferredUser={user2}
-        newSupervisor={user3}
+        destination={user3}
         primaryButtonClick={action('primary')}
         secondaryButtonClick={action('secondary')}
         closeButtonClick={action('close')}
@@ -80,9 +80,9 @@ storiesOf('components/profile/team/TransferConfirmation', module)
     () => (
       <TransferConfirmation
         isOpen
-        oldSupervisor={user1}
+        source={user1}
         transferredUser={user2}
-        newSupervisor={user3}
+        destination={user3}
         title="Custom title"
         bodyText="Custom dialog body"
         primaryButtonText="Custom Primary"

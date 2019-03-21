@@ -103,7 +103,10 @@ const getProfileDetails = (profile) => {
     avatar,
     team: {
       id: team && team.id,
-      name: team && team.name,
+      name:
+        team && (
+          ((team.nameEn === '') && __('Default Team')) ||
+          ((localizer.lang === 'en_CA') ? team.nameEn : team.nameFr)),
       avatar: team && team.avatar,
     }
   };
@@ -124,14 +127,14 @@ const TransferConfirmation = (props) => {
     onOpened,
     onClosed,
     zIndex,
-    oldSupervisor,
+    source,
     transferredUser,
-    newSupervisor,
+    destination,
     avatarAltText,
   } = props;
-  const user1 = getProfileDetails(oldSupervisor);
+  const user1 = getProfileDetails(source);
   const user2 = getProfileDetails(transferredUser);
-  const user3 = getProfileDetails(newSupervisor);
+  const user3 = getProfileDetails(destination);
   return (
     <div>
       <Modal
@@ -153,7 +156,7 @@ const TransferConfirmation = (props) => {
         >
           {title}
         </ModalHeader>
-        <ModalBody>
+        <ModalBody style={{ marginBottom: '35px' }}>
           {bodyText}
           <Arrow />
           <Avatars>
@@ -207,16 +210,7 @@ const TransferConfirmation = (props) => {
     </div>
   );
 };
-/*
-const userProps = PropTypes.shape({
-  name: PropTypes.string.isRequired,
-  avatar: PropTypes.string,
-  team: PropTypes.shape({
-    name: PropTypes.string,
-    avatar: PropTypes.string,
-  }).isRequired,
-});
-*/
+
 TransferConfirmation.defaultProps = {
   isOpen: false,
   title: 'You will transfer to a new Supervisor (& Team)',
@@ -269,12 +263,13 @@ TransferConfirmation.propTypes = {
   ]),
   /** Text to use for avatar alt tag, suffixed by the user's name */
   avatarAltText: PropTypes.string,
-  /** The profile of the old supervisor */
-  oldSupervisor: PropTypes.shape({
+  /** The profile or team the user is being transferred out of */
+  source: PropTypes.shape({
     name: PropTypes.string.isRequired,
     avatar: PropTypes.string,
     team: PropTypes.shape({
-      name: PropTypes.string,
+      nameEn: PropTypes.string,
+      nameFr: PropTypes.string,
       avatar: PropTypes.string,
     }).isRequired,
   }).isRequired,
@@ -283,12 +278,13 @@ TransferConfirmation.propTypes = {
     name: PropTypes.string.isRequired,
     avatar: PropTypes.string,
   }).isRequired,
-  /** The profile of the new supervisor */
-  newSupervisor: PropTypes.shape({
+  /** The destination the user is being transferred to */
+  destination: PropTypes.shape({
     name: PropTypes.string.isRequired,
     avatar: PropTypes.string,
     team: PropTypes.shape({
-      name: PropTypes.string,
+      nameEn: PropTypes.string,
+      nameFr: PropTypes.string,
       avatar: PropTypes.string,
     }).isRequired,
   }).isRequired,

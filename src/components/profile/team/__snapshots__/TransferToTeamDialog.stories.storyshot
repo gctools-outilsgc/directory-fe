@@ -59,22 +59,7 @@ exports[`FileProperties components/profile/team/TransferToTeamDialog isOpen=fals
   <div
     id="story-root"
     style={Object {}}
-  >
-    <i
-      className="fa fa-spinner fa-spin"
-      style={
-        Object {
-          "fontSize": "24px",
-        }
-      }
-    >
-      <span
-        className="sr-only-delete-me"
-      >
-        Loading...
-      </span>
-    </i>
-  </div>
+  />
   <div>
     <div
       style={

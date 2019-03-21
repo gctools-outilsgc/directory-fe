@@ -306,9 +306,9 @@ export class GQLTeamCard extends React.Component {
                               {modifyProfile => this.state.confirmModal && (
                                 <TransferConfirmation
                                   isOpen={this.state.confirmModal}
-                                  oldSupervisor={supTest}
+                                  source={supTest}
                                   transferredUser={userInfo}
-                                  newSupervisor={
+                                  destination={
                                     {
                                       name: chosenSupervisor.name,
                                       avatar: chosenSupervisor.avatar,

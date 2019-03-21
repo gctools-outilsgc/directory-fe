@@ -7,6 +7,7 @@ import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
 
 import I18nTransferToSupervisorDialog from './TransferToSupervisorDialog';
+import I18nTransferToNewTeamDialog from './TransferToTeamDialog';
 import TransferConfirmation from './TransferConfirmation';
 import ErrorModal, { err } from '../../core/ErrorModal';
 
@@ -56,24 +57,30 @@ const TransferToSupervisorAction = (props) => {
               profile={profile}
               secondaryButtonClick={() => { setShowDialog(false); }}
               closeButtonClick={() => { setShowDialog(false); }}
-              primaryButtonClick={(_, newSupervisor) => {
-                if (newSupervisor.gcID === supervisor.gcID) {
+              primaryButtonClick={(_, destination) => {
+                if (destination.gcID === supervisor.gcID) {
                   setError(err(__('already supervisor')));
                   return false;
                 }
-                const defaultTeam = getDefaultTeam(newSupervisor);
+                const defaultTeam = getDefaultTeam(destination);
                 if (!defaultTeam) {
                   setError(err(__('no default team')));
                   return false;
                 }
-                setConfirm(newSupervisor);
+                setConfirm(Object.assign(
+                  {},
+                  destination,
+                  { team: defaultTeam }
+                ));
+                console.log(supervisor);
+                console.log(destination);
                 return true;
               }}
             />
             {confirm && (<TransferConfirmation
-              oldSupervisor={supervisor}
+              source={supervisor}
               transferredUser={profile}
-              newSupervisor={confirm}
+              destination={confirm}
               isOpen={!!confirm}
               title={__('Transfer a team member to a new Supervisor')}
               bodyText={__('Explicit information about the transfer')}
@@ -119,14 +126,11 @@ TransferToSupervisorAction.propTypes = {
 const TransferToNewTeamAction = (props) => {
   const { profile, supervisor } = props;
   const [showDialog, setShowDialog] = useState(false);
-  const [error, setError] = useState([]);
   const [confirm, setConfirm] = useState(undefined);
   const closeAll = () => {
     setConfirm(undefined);
     setShowDialog(false);
   };
-  console.log(showDialog);
-  console.log(setError);
   return (
     <React.Fragment>
       <a
@@ -135,7 +139,6 @@ const TransferToNewTeamAction = (props) => {
       >
         {__('transfer to new Team')}
       </a>
-      <ErrorModal error={error} />
       <Mutation
         mutation={EDIT_TEAM}
         refetchQueries={[{
@@ -151,10 +154,21 @@ const TransferToNewTeamAction = (props) => {
       >
         {mutate => (
           <React.Fragment>
+            <I18nTransferToNewTeamDialog
+              user={profile.gcID}
+              supervisor={supervisor.gcID}
+              isOpen={showDialog}
+              secondaryButtonClick={() => { setShowDialog(false); }}
+              closeButtonClick={() => { setShowDialog(false); }}
+              primaryButtonClick={(_, newTeam) => {
+                setConfirm(newTeam);
+                return true;
+              }}
+            />
             {confirm && (<TransferConfirmation
-              oldSupervisor={supervisor}
+              source={supervisor}
               transferredUser={profile}
-              newSupervisor={confirm}
+              destination={confirm}
               isOpen={!!confirm}
               title={__('Transfer a team member to a new Supervisor')}
               bodyText={__('Explicit information about the transfer')}
@@ -229,7 +243,10 @@ export const YourTeamMemberList = (props) => {
                   />
                 </li>
                 <li className="list-inline-item">
-                  <a href="#!">action</a>
+                  <TransferToNewTeamAction
+                    profile={p}
+                    supervisor={profile}
+                  />
                 </li>
               </ul>
             </small>

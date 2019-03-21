@@ -104,6 +104,8 @@ query getYourTeam($gcID: ID!) {
     titleFr
     team {
       id
+      nameEn
+      nameFr
       organization {
         id
       }
