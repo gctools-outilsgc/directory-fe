@@ -12,7 +12,7 @@ const Profile = ({ match }) => (
     <Row>
       <ConnectedGQLProfileCard id={match.params.id} />
     </Row>
-    <Row className="mt-3">
+    <Row className="mt-3 mb-5">
       <ConnectedTeamCardHolder id={match.params.id} />
     </Row>
   </Container>

@@ -11,7 +11,7 @@ export const ProfileCardDisplay = (props) => {
   const { user, edit } = props;
   const { address: userAddress } = user;
   return (
-    <Row>
+    <Row className="mb-3">
       <Col xs="2">
         <UserAvatar
           gcID={user.gcID}

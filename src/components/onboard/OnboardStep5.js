@@ -7,6 +7,8 @@ import LocalizedComponent
 import { Mutation } from 'react-apollo';
 
 import { Button, Row, Col } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 import { EDIT, prepareEditProfile } from '../../gql/profile';
 import SupervisorPicker from '../core/SupervisorPicker';
@@ -124,9 +126,14 @@ export class OnboardStep5 extends Component {
                 <div>
                   <Button
                     onClick={this.toggleSup}
-                    color="light"
+                    color="link"
                   >
-                    S
+                    <FontAwesomeIcon
+                      icon={faSearch}
+                    />
+                    <span className="sr-only">
+                      Search
+                    </span>
                   </Button>
                 </div>
               </div>
@@ -149,7 +156,8 @@ export class OnboardStep5 extends Component {
                 }}
               /> :
               <div>
-                {teamTest ? teamTest.nameEn : 'None'}
+                {teamTest ? teamTest.nameEn :
+                  'Pick a Supervisor'}
               </div>
             }
           </Col>
