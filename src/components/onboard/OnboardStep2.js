@@ -6,7 +6,16 @@ import LocalizedComponent
 
 import { Mutation } from 'react-apollo';
 
-import { Button, Form, Row, Col } from 'reactstrap';
+import {
+  Button,
+  Form,
+  FormGroup,
+  InputGroup,
+  InputGroupAddon,
+  Label,
+  Row,
+  Col
+} from 'reactstrap';
 
 import { EDIT, prepareEditProfile } from '../../gql/profile';
 import DepartmentPicker from '../core/DepartmentPicker';
@@ -109,40 +118,50 @@ export class OnboardStep2 extends Component {
               </Row>
               <Row>
                 <Col md="6">
-                  <label htmlFor="titleEn">
-                    <span className="font-weight-bold">
-                      {__('English job title')}
-                    </span>
-                    <input
-                      id="titleEn"
-                      type="text"
-                      className="form-control"
-                      value={this.state.titleEn || ''}
-                      onChange={(e) => {
-                        this.setState({
-                          titleEn: e.target.value,
-                        });
-                      }}
-                    />
-                  </label>
+                  <FormGroup>
+                    <InputGroup>
+                      <Label for="titleEn" className="font-weight-bold">
+                        {__('English job title')}
+                      </Label>
+                      <InputGroupAddon addonType="prepend">
+                        EN
+                      </InputGroupAddon>
+                      <input
+                        id="titleEn"
+                        type="text"
+                        className="form-control"
+                        value={this.state.titleEn || ''}
+                        onChange={(e) => {
+                          this.setState({
+                            titleEn: e.target.value,
+                          });
+                        }}
+                      />
+                    </InputGroup>
+                  </FormGroup>
                 </Col>
                 <Col md="6">
-                  <label htmlFor="titleFr">
-                    <span className="font-weight-bold">
-                      {__('French job title')}
-                    </span>
-                    <input
-                      id="titleFr"
-                      type="text"
-                      className="form-control"
-                      value={this.state.titleFr || ''}
-                      onChange={(e) => {
-                        this.setState({
-                          titleFr: e.target.value,
-                        });
-                      }}
-                    />
-                  </label>
+                  <FormGroup>
+                    <InputGroup>
+                      <Label for="titleFr" className="font-weight-bold">
+                        {__('French job title')}
+                      </Label>
+                      <InputGroupAddon addonType="prepend">
+                        FR
+                      </InputGroupAddon>
+                      <input
+                        id="titleFr"
+                        type="text"
+                        className="form-control"
+                        value={this.state.titleFr || ''}
+                        onChange={(e) => {
+                          this.setState({
+                            titleFr: e.target.value,
+                          });
+                        }}
+                      />
+                    </InputGroup>
+                  </FormGroup>
                 </Col>
               </Row>
               <Row className="mt-3">

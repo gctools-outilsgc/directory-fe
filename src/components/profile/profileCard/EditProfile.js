@@ -11,8 +11,12 @@ import {
   ModalBody,
   ModalHeader,
   Form,
+  FormGroup,
   Row,
-  Col
+  Col,
+  InputGroup,
+  InputGroupAddon,
+  Label
 } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
@@ -190,40 +194,50 @@ export class EditProfile extends Component {
                   <hr />
                   <Row>
                     <Col>
-                      <label htmlFor="titleEn">
-                        <span className="font-weight-bold">
-                          {__('English job title')}
-                        </span>
-                        <input
-                          id="titleEn"
-                          type="text"
-                          className="form-control"
-                          value={this.state.titleEn || ''}
-                          onChange={(e) => {
-                            this.setState({
-                              titleEn: e.target.value,
-                            });
-                          }}
-                        />
-                      </label>
+                      <FormGroup>
+                        <InputGroup>
+                          <Label for="titleEn" className="font-weight-bold">
+                            {__('English job title')}
+                          </Label>
+                          <InputGroupAddon addonType="prepend">
+                            EN
+                          </InputGroupAddon>
+                          <input
+                            id="titleEn"
+                            type="text"
+                            className="form-control"
+                            value={this.state.titleEn || ''}
+                            onChange={(e) => {
+                              this.setState({
+                                titleEn: e.target.value,
+                              });
+                            }}
+                          />
+                        </InputGroup>
+                      </FormGroup>
                     </Col>
                     <Col>
-                      <label htmlFor="titleFr">
-                        <span className="font-weight-bold">
-                          {__('French job title')}
-                        </span>
-                        <input
-                          id="titleFr"
-                          type="text"
-                          className="form-control"
-                          value={this.state.titleFr || ''}
-                          onChange={(e) => {
-                            this.setState({
-                              titleFr: e.target.value,
-                            });
-                          }}
-                        />
-                      </label>
+                      <FormGroup>
+                        <InputGroup>
+                          <Label for="titleFr" className="font-weight-bold">
+                            {__('French job title')}
+                          </Label>
+                          <InputGroupAddon addonType="prepend">
+                            FR
+                          </InputGroupAddon>
+                          <input
+                            id="titleFr"
+                            type="text"
+                            className="form-control"
+                            value={this.state.titleFr || ''}
+                            onChange={(e) => {
+                              this.setState({
+                                titleFr: e.target.value,
+                              });
+                            }}
+                          />
+                        </InputGroup>
+                      </FormGroup>
                     </Col>
                   </Row>
                   <hr />
