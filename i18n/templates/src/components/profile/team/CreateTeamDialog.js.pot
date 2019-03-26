@@ -26,3 +26,27 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
+#: src/components/profile/team/CreateTeamDialog.js 62:37
+msgid "Team_name_en"
+msgstr ""
+
+#: src/components/profile/team/CreateTeamDialog.js 68:33
+msgid "Enter_Team_name_en"
+msgstr ""
+
+#: src/components/profile/team/CreateTeamDialog.js 82:37
+msgid "Team_name_fr"
+msgstr ""
+
+#: src/components/profile/team/CreateTeamDialog.js 88:33
+msgid "Enter_Team_name_fr"
+msgstr ""
+
+#: src/components/profile/team/CreateTeamDialog.js 102:44
+msgid "Enter_Team_description_en"
+msgstr ""
+
+#: src/components/profile/team/CreateTeamDialog.js 118:19
+msgid "Enter_Team_description_fr"
+msgstr ""
+

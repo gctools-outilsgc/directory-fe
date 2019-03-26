@@ -18,3 +18,27 @@ msgstr ""
 msgid "Cannot find GCID"
 msgstr ""
 
+#: src/components/profile/team/GQLTeamCard.js 150:31
+msgid "Changesup/team"
+msgstr ""
+
+#: src/components/profile/team/GQLTeamCard.js 161:33
+msgid "edit_team"
+msgstr ""
+
+#: src/components/profile/team/GQLTeamCard.js 258:45
+msgid "search"
+msgstr ""
+
+#: src/components/profile/team/GQLTeamCard.js 293:35
+msgid "next"
+msgstr ""
+
+#: src/components/profile/team/GQLTeamCard.js 304:35
+msgid "cancel"
+msgstr ""
+
+#: src/components/profile/team/GQLTeamCard.js 366:23
+msgid "people"
+msgstr ""
+

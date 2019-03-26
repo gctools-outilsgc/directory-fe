@@ -79,7 +79,7 @@ class TeamCardHolder extends React.Component {
                   }
                   onClick={() => { this.toggle('1'); }}
                 >
-                  Team
+                  {__('imin')}
                 </NavLink>
               </NavItem>
               {canEdit ?
@@ -90,7 +90,7 @@ class TeamCardHolder extends React.Component {
                     }
                     onClick={() => { this.toggle('2'); }}
                   >
-                    Your Teams
+                    {__('your_teams')}
                   </NavLink>
                 </NavItem>
               :
@@ -103,7 +103,7 @@ class TeamCardHolder extends React.Component {
                   }
                   onClick={() => { this.toggle('3'); }}
                 >
-                  Org Chart
+                  {__('Org Chart')}
                 </NavLink>
               </NavItem>
             </Nav>

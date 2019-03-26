@@ -62,3 +62,23 @@ msgstr[1] ""
 msgid "Default team"
 msgstr ""
 
+#: src/components/profile/team/GQLYourTeamsTab.js 53:9
+msgid "people"
+msgstr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 61:39
+msgid "Add"
+msgstr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 311:29
+msgid "Tranfer"
+msgstr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 319:29
+msgid "edit"
+msgstr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 372:21
+msgid "team"
+msgstr ""
+

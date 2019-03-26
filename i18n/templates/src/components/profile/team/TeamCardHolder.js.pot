@@ -9,3 +9,16 @@ msgstr ""
 #: src/components/profile/team/TeamCardHolder.js 52:13
 msgid "Teams"
 msgstr ""
+
+#: src/components/profile/team/TeamCardHolder.js 93:21
+msgid "your_teams"
+msgstr ""
+
+#: src/components/profile/team/TeamCardHolder.js 106:17
+msgid "Org Chart"
+msgstr ""
+
+#: src/components/profile/team/TeamCardHolder.js 82:19
+msgid "imin"
+msgstr ""
+
