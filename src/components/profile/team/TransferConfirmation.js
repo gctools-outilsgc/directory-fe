@@ -3,6 +3,9 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
+
 import styled from 'styled-components';
 
 import {
@@ -16,7 +19,6 @@ import {
 import TeamAvatar from './TeamAvatar';
 
 import varTag from '../../../utils/cssVarTag';
-
 
 const Arrow = styled.div`
     position: relative;
@@ -272,14 +274,11 @@ const TransferConfirmation = (props) => {
 
 TransferConfirmation.defaultProps = {
   isOpen: false,
-  title: 'You will transfer to a new Supervisor (& Team)',
-  bodyText: `Explicit information about the transfer to include the Person
-    being transffered, from what Team and Super, to what team and Supervisor.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu
-    porttitor ex. Nam luctus tincidunt dui, sit amet semper mi consequat eu.`,
-  primaryButtonText: 'Primary',
+  title: '',
+  bodyText: __('transfere_description'),
+  primaryButtonText: __('confirm'),
   primaryButtonClick: () => {},
-  secondaryButtonText: 'Secondary',
+  secondaryButtonText: __('cancel'),
   secondaryButtonClick: () => {},
   closeButtonClick: () => {},
   onEnter: undefined,
@@ -287,7 +286,7 @@ TransferConfirmation.defaultProps = {
   onOpened: undefined,
   onClosed: undefined,
   zIndex: 1000,
-  avatarAltText: 'Avatar of ',
+  avatarAltText: __('avatar_of'),
   delete: false,
 };
 
@@ -364,4 +363,4 @@ TransferConfirmation.propTypes = {
   delete: PropTypes.bool,
 };
 
-export default TransferConfirmation;
+export default LocalizedComponent(TransferConfirmation);

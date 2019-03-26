@@ -59,15 +59,15 @@ export class CreateTeamDialog extends Component {
             <FormBody>
               <p>{__('What is a team')}</p>
               <FormGroup>
-                <Label for="nameEn">Team Name</Label>
+                <Label for="nameEn">{__('Team_name_en')}</Label>
                 <InputGroup>
                   <InputGroupAddon addonType="prepend">
                     EN
                   </InputGroupAddon>
                   <Input
-                    placeholder="Enter team name"
+                    placeholder={__('Enter_Team_name_en')}
                     id="nameEn"
-                    aria-label="Enter team name"
+                    aria-label={__('Enter_Team_name_en')}
                     type="text"
                     value={this.state.nameEn || ''}
                     onChange={(e) => {
@@ -79,15 +79,15 @@ export class CreateTeamDialog extends Component {
                 </InputGroup>
               </FormGroup>
               <FormGroup>
-                <Label for="nameFr">{'Titre d\'\u00E9quipe'}</Label>
+                <Label for="nameFr">{__('Team_name_fr')}</Label>
                 <InputGroup>
                   <InputGroupAddon addonType="prepend">
                     FR
                   </InputGroupAddon>
                   <Input
-                    placeholder={'Entrez titre d\'\u00E9quipe'}
+                    placeholder={__('Enter_Team_name_fr')}
                     id="nameFr"
-                    aria-label="Entrez titre d\'\u00E9quipe"
+                    aria-label={__('Enter_Team_name_fr')}
                     type="text"
                     value={this.state.nameFr || ''}
                     onChange={(e) => {
@@ -99,10 +99,13 @@ export class CreateTeamDialog extends Component {
                 </InputGroup>
               </FormGroup>
               <FormGroup>
-                <Label for="descriptionEn">Description (English)</Label>
+                <Label for="descriptionEn">{
+                  __('Enter_Team_description_en')
+                  }
+                </Label>
                 <InputCharacterCount
                   maxLength={280}
-                  placeholder="Describe your team..."
+                  placeholder={__('Enter_Team_description_en')}
                   id="descriptionEn"
                   type="textarea"
                   value={this.state.descriptionEn || ''}
@@ -115,12 +118,11 @@ export class CreateTeamDialog extends Component {
               </FormGroup>
               <FormGroup>
                 <Label for="descriptionFr">
-                  La description (Fran&ccedil;ais)
+                  {__('Enter_Team_description_fr')}
                 </Label>
                 <InputCharacterCount
                   maxLength={280}
-                  placeholder={
-                    'd\'\u00E9cris ton \u00E9quipe...'}
+                  placeholder={__('Enter_Team_description_fr')}
                   id="descriptionFr"
                   type="textarea"
                   value={this.state.descriptionFr || ''}

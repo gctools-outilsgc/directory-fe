@@ -50,7 +50,7 @@ const TeamList = (props) => {
     <TabPane tabId={teamId} key={teamId} className="w-100">
       <div className="border-bottom d-flex p-3 tab-head">
         <div className="mr-auto font-weight-bold">
-          People
+          {__('people')}
         </div>
         <div>
           <Button
@@ -58,7 +58,7 @@ const TeamList = (props) => {
             onClick={() => { setIsOpen(!isOpen); }}
           >
             <FontAwesomeIcon icon={faPlus} />
-            <span className="sr-only">Add</span>
+            <span className="sr-only">{__('Add')}</span>
           </Button>
           <Mutation
             mutation={EDIT_TEAM}
@@ -308,7 +308,7 @@ class GQLYouTeamsTab extends React.Component {
                             color="link"
                             size="small"
                           >
-                            Transfer
+                            {__('Tranfer')}
                           </Button>
                         </li>
                         <li className="list-inline-item">
@@ -316,7 +316,7 @@ class GQLYouTeamsTab extends React.Component {
                             color="link"
                             size="small"
                           >
-                            Edit
+                            {__('edit')}
                           </Button>
                         </li>
                         {nameEn !== '' && (
@@ -369,7 +369,7 @@ class GQLYouTeamsTab extends React.Component {
                 <Col className="pr-0">
                   <div className="border-bottom d-flex p-3">
                     <div className="mr-auto font-weight-bold">
-                      Teams
+                      {__('team')}
                     </div>
                     <div>
                       <Button
@@ -379,7 +379,7 @@ class GQLYouTeamsTab extends React.Component {
                         }}
                       >
                         <FontAwesomeIcon icon={faPlus} />
-                        <span className="sr-only">Add</span>
+                        <span className="sr-only">{__('Add')}</span>
                       </Button>
                       <GQLCreateTeamDialog
                         isOpen={this.state.createDialogOpen}

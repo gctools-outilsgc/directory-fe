@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-03-12 08:41-0300\n"
+"POT-Creation-Date: 2019-03-26 10:29-0400\n"
 "PO-Revision-Date: 2019-02-21 14:05-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr_CA\n"
@@ -17,4 +17,16 @@ msgstr ""
 #: 52:13 src/components/profile/team/TeamCardHolder.js
 msgid "Teams"
 msgstr "Équipes"
+
+#: 93:21 src/components/profile/team/TeamCardHolder.js
+msgid "your_teams"
+msgstr ""
+
+#: 106:17 src/components/profile/team/TeamCardHolder.js
+msgid "Org Chart"
+msgstr ""
+
+#: 82:19 src/components/profile/team/TeamCardHolder.js
+msgid "imin"
+msgstr ""
 

@@ -25,7 +25,7 @@ import { GET_TEAM, EDIT_TEAM } from '../../../gql/profile';
 import SupervisorPicker from '../../core/SupervisorPicker';
 import TeamPicker from '../../core/TeamPicker';
 import { UserAvatar } from '../../core/UserAvatar';
-import TransferConfirmation from './TransferConfirmation';
+import LocalizedTransferConfirmation from './TransferConfirmation';
 import TeamDisplayMemberList from './TeamDisplayMemberList';
 
 const mapStateToProps = ({ user }) => {
@@ -147,7 +147,7 @@ export class GQLTeamCard extends React.Component {
                               size="sm"
                               onClick={this.toggle}
                             >
-                              Change supervisor / team
+                              {__('Changesup/team')}
                             </Button>
                             <Modal
                               isOpen={this.state.modal}
@@ -158,7 +158,7 @@ export class GQLTeamCard extends React.Component {
                                 toggle={this.toggle}
                                 className="border-bottom"
                               >
-                                Edit Team
+                                {__('edit_team')}
                               </ModalHeader>
                               <ModalBody>
                                 <Row
@@ -255,7 +255,7 @@ export class GQLTeamCard extends React.Component {
                                               icon={faSearch}
                                             />
                                             <span className="sr-only">
-                                              Search
+                                              {__('search')}
                                             </span>
                                           </Button>
                                         </div>
@@ -290,7 +290,7 @@ export class GQLTeamCard extends React.Component {
                                     this.toggleConfirm();
                                   }}
                                 >
-                                  Next
+                                  {__('next')}
                                 </Button>
                                 <Button
                                   onClick={() => {
@@ -301,7 +301,7 @@ export class GQLTeamCard extends React.Component {
                                     });
                                   }}
                                 >
-                                  Cancel
+                                  {__('cancel')}
                                 </Button>
                               </ModalFooter>
                             </Modal>
@@ -318,7 +318,7 @@ export class GQLTeamCard extends React.Component {
                               }}
                             >
                               {modifyProfile => this.state.confirmModal && (
-                                <TransferConfirmation
+                                <LocalizedTransferConfirmation
                                   isOpen={this.state.confirmModal}
                                   source={supTest}
                                   transferredUser={userInfo}
@@ -363,7 +363,7 @@ export class GQLTeamCard extends React.Component {
                     </Row>
                     <hr />
                     <div className="font-weight-bold">
-                      People
+                      {__('people')}
                     </div>
                     <TeamDisplayMemberList
                       members={memberTest}

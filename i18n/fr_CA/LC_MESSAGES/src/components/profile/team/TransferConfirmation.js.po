@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-03-20 23:25-0300\n"
+"POT-Creation-Date: 2019-03-26 11:17-0400\n"
 "PO-Revision-Date: 2019-03-20 23:25-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr_CA\n"
@@ -16,5 +16,25 @@ msgstr ""
 
 #: 108:35 src/components/profile/team/TransferConfirmation.js
 msgid "Default Team"
+msgstr ""
+
+#: 275:8 src/components/profile/team/TransferConfirmation.js
+msgid "transfere_title"
+msgstr ""
+
+#: 276:12 src/components/profile/team/TransferConfirmation.js
+msgid "transfere_description"
+msgstr ""
+
+#: 277:21 src/components/profile/team/TransferConfirmation.js
+msgid "confirm"
+msgstr ""
+
+#: 279:23 src/components/profile/team/TransferConfirmation.js
+msgid "cancel"
+msgstr ""
+
+#: 287:17 src/components/profile/team/TransferConfirmation.js
+msgid "avatar_of"
 msgstr ""
 
