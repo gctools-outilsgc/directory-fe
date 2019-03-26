@@ -28,6 +28,7 @@ import {
 import './css/youTeamStyle.css';
 import I18nYourTeamMemberList from './YourTeamMemberList';
 import GQLCreateTeamDialog from './GQLCreateTeamDialog';
+import GQLEditTeamDialog from './GQLEditTeamDialog';
 import MultiUserPicker from '../../core/MultiUserPicker';
 import TransferConfirmation from './TransferConfirmation';
 
@@ -240,6 +241,8 @@ class GQLYouTeamsTab extends React.Component {
     this.state = {
       activeTab: undefined,
       createDialogOpen: false,
+      editDialogOpen: false,
+      editTeam: '',
     };
   }
 
@@ -315,6 +318,12 @@ class GQLYouTeamsTab extends React.Component {
                           <Button
                             color="link"
                             size="small"
+                            onClick={() => {
+                              this.setState({
+                                editDialogOpen: true,
+                                editTeam: team,
+                              });
+                            }}
                           >
                             Edit
                           </Button>
@@ -409,6 +418,18 @@ class GQLYouTeamsTab extends React.Component {
                     {tabPanel}
                   </TabContent>
                 </Col>
+                <GQLEditTeamDialog
+                  isOpen={this.state.editDialogOpen}
+                  onSave={() => {
+                    this.setState({ editDialogOpen: false });
+                    refetch();
+                  }}
+                  onCancel={() => {
+                    this.setState({ editDialogOpen: false });
+                  }}
+                  team={this.state.editTeam}
+                  gcID={userInfo.gcID}
+                />
               </Row>
             </RowContainer>
           );
