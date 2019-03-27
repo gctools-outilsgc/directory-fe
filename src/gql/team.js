@@ -33,7 +33,7 @@ mutation createTeam(
   }
 }`;
 
-export const EDIT_TEAM = gql`
+export const EDIT_A_TEAM = gql`
 mutation modifyTeam(
   $id: ID!,
   $data: ModifyTeamInput!

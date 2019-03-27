@@ -64,8 +64,6 @@ export class EditTeamDialog extends Component {
           Edit this Team
         </ModalHeader>
         <ModalBody>
-          {this.state.nameEn}
-          {this.props.team.nameEn}
           <Form>
             <FormBody>
               <p>{__('What is a team')}</p>

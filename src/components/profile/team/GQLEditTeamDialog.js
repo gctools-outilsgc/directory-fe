@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Mutation } from 'react-apollo';
 
 import LocalizedEditTeam from './EditTeamDialog';
-import { EDIT_TEAM } from '../../../gql/team';
+import { EDIT_A_TEAM } from '../../../gql/team';
 
 const GQLEditTeamDialog = (props) => {
   const {
@@ -15,7 +15,7 @@ const GQLEditTeamDialog = (props) => {
   } = props;
   return (
     <Mutation
-      mutation={EDIT_TEAM}
+      mutation={EDIT_A_TEAM}
       onCompleted={(e) => {
         onSave(e);
       }}
