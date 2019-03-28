@@ -86,14 +86,14 @@ export class EditProfile extends Component {
           color="light"
         >
           <FontAwesomeIcon icon={faPen} />
-          <span className="sr-only">Edit Profile</span>
+          <span className="sr-only">{__('Edit Profile')}</span>
         </Button>
         <Modal
           isOpen={this.state.modal}
           toggle={this.toggle}
           className="modal-lg edit-profile-modal"
         >
-          <ModalHeader toggle={this.toggle}>Edit Profile</ModalHeader>
+          <ModalHeader toggle={this.toggle}>{__('Edit Profile')}</ModalHeader>
           <ModalBody>
             <Mutation
               mutation={EDIT}
