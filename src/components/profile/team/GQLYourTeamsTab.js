@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
 
 import classnames from 'classnames';
 import styled from 'styled-components';
@@ -442,4 +444,4 @@ GQLYouTeamsTab.propTypes = {
   id: PropTypes.string.isRequired,
 };
 
-export default GQLYouTeamsTab;
+export default LocalizedComponent(GQLYouTeamsTab);

@@ -245,7 +245,7 @@ export const YourTeamMemberList = (props) => {
       </li>
     )) : (
       <li>
-        There are no members in this team
+        {__('There are no members in this team')}
       </li>
     );
   return (

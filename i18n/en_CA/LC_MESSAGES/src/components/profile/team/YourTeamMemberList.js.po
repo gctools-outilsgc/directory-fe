@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-03-20 09:30-0300\n"
+"POT-Creation-Date: 2019-03-28 07:56-0400\n"
 "PO-Revision-Date: 2019-03-18 12:50-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en_CA\n"
@@ -44,5 +44,9 @@ msgstr ""
 
 #: 134:9 src/components/profile/team/YourTeamMemberList.js
 msgid "transfer to new Team"
+msgstr ""
+
+#: 252:9 src/components/profile/team/YourTeamMemberList.js
+msgid "There are no members in this team"
 msgstr ""
 

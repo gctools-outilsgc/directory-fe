@@ -38,3 +38,7 @@ msgstr ""
 msgid "transfer to new Team"
 msgstr ""
 
+#: src/components/profile/team/YourTeamMemberList.js 252:9
+msgid "There are no members in this team"
+msgstr ""
+

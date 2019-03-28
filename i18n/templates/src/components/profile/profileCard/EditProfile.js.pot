@@ -54,3 +54,7 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
+#: src/components/profile/profileCard/EditProfile.js 89:37
+msgid "Edit Profile"
+msgstr ""
+
