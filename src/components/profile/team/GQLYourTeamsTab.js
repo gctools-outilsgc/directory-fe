@@ -421,7 +421,6 @@ class GQLYouTeamsTab extends React.Component {
                   isOpen={this.state.editDialogOpen}
                   onSave={() => {
                     this.setState({ editDialogOpen: false });
-                    refetch();
                   }}
                   onCancel={() => {
                     this.setState({ editDialogOpen: false });
