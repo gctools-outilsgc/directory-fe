@@ -35,6 +35,7 @@ const GQLEditTeamDialog = (props) => {
                   nameFr: data.nameFr,
                   descriptionEn: data.descriptionEn,
                   descriptionFr: data.descriptionFr,
+                  owner: { gcID },
                 },
               },
             });
