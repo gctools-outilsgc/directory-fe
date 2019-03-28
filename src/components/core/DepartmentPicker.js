@@ -9,8 +9,9 @@ import { Input, Button } from 'reactstrap';
 class DepartmentPicker extends React.Component {
   constructor(props) {
     super(props);
+    const { nameEn } = props.currentDepart;
     this.state = {
-      value: props.currentDepart.nameEn || '',
+      value: (nameEn) ? nameEn || '' : '',
       skip: true,
       wasChanged: false,
     };

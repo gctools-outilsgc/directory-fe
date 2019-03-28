@@ -22,6 +22,7 @@ export const UserAvatar = (props) => {
     name,
     avatar: profileAvatar,
     gcID,
+    size,
   } = props;
   const canEdit = edit && (gcID === myGcID);
   const avatar = profileAvatar || GenericAvatar;
@@ -31,7 +32,7 @@ export const UserAvatar = (props) => {
       <div className="query">
         <div>
           <img
-            className="avatar avatar-lg rounded-circle"
+            className={`avatar rounded-circle avatar-${size}`}
             src={avatar}
             alt={name}
           />
@@ -78,6 +79,7 @@ UserAvatar.defaultProps = {
   gcID: '',
   myGcID: '',
   avatar: '',
+  size: '',
 };
 
 UserAvatar.propTypes = {
@@ -86,6 +88,7 @@ UserAvatar.propTypes = {
   name: PropTypes.string,
   avatar: PropTypes.string,
   myGcID: PropTypes.string,
+  size: PropTypes.string,
 };
 
 export default UserAvatar;

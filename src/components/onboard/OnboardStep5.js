@@ -13,6 +13,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { EDIT, prepareEditProfile } from '../../gql/profile';
 import SupervisorPicker from '../core/SupervisorPicker';
 import TeamPicker from '../core/TeamPicker';
+import { UserAvatar } from '../core/UserAvatar';
 
 export class OnboardStep5 extends Component {
   constructor(props) {
@@ -76,14 +77,11 @@ export class OnboardStep5 extends Component {
                 {!chosenSupervisor ?
                   <div className="mr-auto d-flex">
                     <div className="mr-2">
-                      <img
-                        className="avatar rounded-circle"
-                        src={
-                          supTest ? supTest.avatar : ''
-                        }
-                        alt={
-                          supTest ? supTest.name : 'N'
-                        }
+                      <UserAvatar
+                        avatar={supTest ?
+                          supTest.avatar : ''}
+                        name={supTest ?
+                          supTest.name : ''}
                       />
                     </div>
                     <div>
@@ -101,14 +99,11 @@ export class OnboardStep5 extends Component {
                   </div> :
                   <div className="mr-auto d-flex">
                     <div className="mr-2">
-                      <img
-                        className="avatar rounded-circle"
-                        src={
-                          chosenSupervisor.avatar
-                        }
-                        alt={
-                          chosenSupervisor.name
-                        }
+                      <UserAvatar
+                        avatar={chosenSupervisor ?
+                          chosenSupervisor.avatar : ''}
+                        name={chosenSupervisor ?
+                          chosenSupervisor.name : ''}
                       />
                     </div>
                     <div>
