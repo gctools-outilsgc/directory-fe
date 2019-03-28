@@ -15,7 +15,7 @@ import { EDIT_TEAM, GET_TEAM, GET_YOUR_TEAM } from '../../../gql/profile';
 
 const getDefaultTeam = (profile) => {
   const [defaultTeam] =
-    profile.ownerOfTeams.filter(({ nameEn }) => nameEn === '');
+    profile.ownerOfTeams.filter(({ nameEn }) => nameEn === 'Default Team');
   return defaultTeam;
 };
 
