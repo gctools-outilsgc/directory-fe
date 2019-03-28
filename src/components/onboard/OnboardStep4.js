@@ -25,6 +25,7 @@ export class OnboardStep4 extends Component {
               myGcID={userObject.gcID}
               avatar={userObject.avatar}
               edit
+              size="lg"
             />
           </Col>
           <Col xs="10">

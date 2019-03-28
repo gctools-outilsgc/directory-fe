@@ -3,20 +3,17 @@ import PropTypes from 'prop-types';
 
 import { Col, Row } from 'reactstrap';
 
+import { UserAvatar } from '../../core/UserAvatar';
+
 const TeamDisplayMemberList = (props) => {
   const { members } = props;
   const list = (members) ?
     members.map(p => (
       <Col sm="4" className="mb-3" key={p.name}>
         <div className="d-flex">
-          <img
-            className="rounded-circle avatar"
-            src={
-              p ? p.avatar : ''
-            }
-            alt={
-              p ? p.name : 'None'
-            }
+          <UserAvatar
+            avatar={p ? p.avatar : ''}
+            name={p ? p.name : ''}
           />
           <div className="ml-2 font-weight-bold">
             <div>

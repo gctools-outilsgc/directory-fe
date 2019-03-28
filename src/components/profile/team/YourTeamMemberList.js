@@ -10,6 +10,7 @@ import I18nTransferToSupervisorDialog from './TransferToSupervisorDialog';
 import I18nTransferToNewTeamDialog from './TransferToTeamDialog';
 import TransferConfirmation from './TransferConfirmation';
 import ErrorModal, { err } from '../../core/ErrorModal';
+import { UserAvatar } from '../../core/UserAvatar';
 
 import { EDIT_TEAM, GET_TEAM, GET_YOUR_TEAM } from '../../../gql/profile';
 
@@ -212,14 +213,9 @@ export const YourTeamMemberList = (props) => {
     members.map(p => (
       <li key={p.name} className="mb-3">
         <div className="d-flex">
-          <img
-            className="rounded-circle avatar"
-            src={
-              p ? p.avatar : ''
-            }
-            alt={
-              p ? p.name : 'None'
-            }
+          <UserAvatar
+            avatar={p ? p.avatar : ''}
+            name={p ? p.name : ''}
           />
           <div className="ml-3">
             <div className="font-weight-bold member-name">

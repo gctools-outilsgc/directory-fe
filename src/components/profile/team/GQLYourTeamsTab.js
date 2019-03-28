@@ -242,7 +242,7 @@ class GQLYouTeamsTab extends React.Component {
       activeTab: undefined,
       createDialogOpen: false,
       editDialogOpen: false,
-      editTeam: '',
+      editTeam: {},
     };
   }
 

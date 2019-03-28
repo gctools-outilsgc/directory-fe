@@ -41,6 +41,7 @@ class TeamPicker extends React.Component {
             query={gql`
           query organizationQuery($gcID: ID!) {
             profiles(gcID: $gcID) {
+              gcID
               ownerOfTeams {
                 id
                 nameEn
