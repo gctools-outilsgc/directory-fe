@@ -13,7 +13,7 @@ div {
 
 /** Display a text input box with a character count and maximum */
 const InputCharacterCount = (props) => {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState(props.value);
   const {
     placeholder,
     onChange,
@@ -49,6 +49,7 @@ InputCharacterCount.defaultProps = {
   placeholder: undefined,
   onChange: () => {},
   id: undefined,
+  value: '',
 };
 
 InputCharacterCount.propTypes = {
@@ -62,6 +63,8 @@ InputCharacterCount.propTypes = {
   onChange: PropTypes.func,
   /** Id to use for input */
   id: PropTypes.string,
+  /** Existing value of the input for edit */
+  value: PropTypes.string,
 };
 
 export default InputCharacterCount;

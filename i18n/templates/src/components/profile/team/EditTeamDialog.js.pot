@@ -1,0 +1,24 @@
+msgid ""
+msgstr ""
+"Language : en\n"
+"Plural-Forms : nplurals=2; plural=(n != 1);\n"
+"MIME-Version : 1.0\n"
+"Content-Type : text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding : 8bit\n"
+
+#: src/components/profile/team/EditTeamDialog.js 55:11
+msgid "Create a Team"
+msgstr ""
+
+#: src/components/profile/team/EditTeamDialog.js 60:18
+msgid "What is a team"
+msgstr ""
+
+#: src/components/profile/team/EditTeamDialog.js 155:13
+msgid "Save"
+msgstr ""
+
+#: src/components/profile/team/EditTeamDialog.js 157:56
+msgid "Cancel"
+msgstr ""
+
