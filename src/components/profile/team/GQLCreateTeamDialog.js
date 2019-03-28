@@ -5,6 +5,8 @@ import { Mutation } from 'react-apollo';
 import LocalizedCreateTeam from './CreateTeamDialog';
 import { CREATE_TEAM } from '../../../gql/team';
 
+import refetchMutated from '../../../utils/refetchMutated';
+
 const GQLCreateTeamDialog = (props) => {
   const {
     isOpen,
@@ -16,6 +18,7 @@ const GQLCreateTeamDialog = (props) => {
   return (
     <Mutation
       mutation={CREATE_TEAM}
+      update={refetchMutated}
       onCompleted={(e) => {
         onSave(e);
       }}
