@@ -33,4 +33,29 @@ mutation createTeam(
   }
 }`;
 
+export const EDIT_A_TEAM = gql`
+mutation modifyTeam(
+  $id: ID!,
+  $data: ModifyTeamInput!
+)
+{
+  modifyTeam (
+    id: $id,
+    data: $data,
+  ) {
+    id
+    nameEn
+    nameFr
+    descriptionEn
+    descriptionFr
+    organization {
+      id
+    }
+    owner {
+      gcID
+      name
+    }
+  }
+}`;
+
 export default CREATE_TEAM;

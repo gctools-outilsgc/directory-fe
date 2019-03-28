@@ -854,7 +854,7 @@ export const profileToNode = (profile, team) => ({
   name: profile.name,
   avatar: profile.avatar,
   titleEn: profile.titleEn,
-  titleFt: profile.titleFr,
+  titleFr: profile.titleFr,
   department: {
     en_CA: team.nameEn,
     fr_CA: team.nameFr,

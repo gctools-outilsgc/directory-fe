@@ -69,6 +69,7 @@ fragment FullTeam on Profile {
       titleFr
     }
     members {
+      gcID
       name
       titleEn
       avatar
