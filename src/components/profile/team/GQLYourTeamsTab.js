@@ -32,6 +32,8 @@ import GQLEditTeamDialog from './GQLEditTeamDialog';
 import MultiUserPicker from '../../core/MultiUserPicker';
 import TransferConfirmation from './TransferConfirmation';
 
+import refetchMutated from '../../../utils/refetchMutated';
+
 const RowContainer = styled.div`
 background-color: #F4F8F9;
 height: 430px;
@@ -44,7 +46,6 @@ const TeamList = (props) => {
     teamId,
     members,
     otherMembers,
-    refetch,
     profile,
   } = props;
   return (
@@ -63,7 +64,7 @@ const TeamList = (props) => {
           </Button>
           <Mutation
             mutation={EDIT_TEAM}
-            onCompleted={refetch}
+            update={refetchMutated}
           >
             {updateTeam => (
               <MultiUserPicker
@@ -123,7 +124,6 @@ TeamList.propTypes = {
     title: PropTypes.string.isRequired,
   })).isRequired,
   teamId: PropTypes.string.isRequired,
-  refetch: PropTypes.func.isRequired,
 };
 
 // eslint-disable-next-line max-len
@@ -396,7 +396,6 @@ class GQLYouTeamsTab extends React.Component {
                         gcID={userInfo.gcID}
                         onSave={() => {
                           this.setState({ createDialogOpen: false });
-                          refetch();
                         }}
                         onCancel={() => {
                           this.setState({ createDialogOpen: false });
@@ -422,7 +421,6 @@ class GQLYouTeamsTab extends React.Component {
                   isOpen={this.state.editDialogOpen}
                   onSave={() => {
                     this.setState({ editDialogOpen: false });
-                    refetch();
                   }}
                   onCancel={() => {
                     this.setState({ editDialogOpen: false });

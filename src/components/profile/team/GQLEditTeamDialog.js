@@ -5,6 +5,8 @@ import { Mutation } from 'react-apollo';
 import LocalizedEditTeam from './EditTeamDialog';
 import { EDIT_A_TEAM } from '../../../gql/team';
 
+import refetchMutated from '../../../utils/refetchMutated';
+
 const GQLEditTeamDialog = (props) => {
   const {
     isOpen,
@@ -16,6 +18,7 @@ const GQLEditTeamDialog = (props) => {
   return (
     <Mutation
       mutation={EDIT_A_TEAM}
+      update={refetchMutated}
       onCompleted={(e) => {
         onSave(e);
       }}
