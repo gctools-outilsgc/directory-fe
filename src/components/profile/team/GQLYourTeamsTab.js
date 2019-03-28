@@ -130,7 +130,8 @@ const peopleAvatar = 'data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIg
 
 const getDefaultTeam = (profile) => {
   const [defaultTeam] =
-    profile.ownerOfTeams.filter(({ nameEn }) => nameEn === '');
+  // eslint-disable-next-line max-len
+    profile.ownerOfTeams.filter(({ nameEn }) => nameEn === 'Default Team');
   return defaultTeam;
 };
 
