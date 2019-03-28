@@ -1734,10 +1734,6 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards and li
         >
           <path
             className=""
-            d="M 45 10 v 5 h -10 V 33.333333333333336 H 5 V 40"
-          />
-          <path
-            className=""
             d="M 45 10 v 5 H 5 V 20"
           />
           <path
@@ -1758,7 +1754,7 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards and li
           />
           <path
             className=""
-            d="M 45 10 v 5 h -10 V 33.333333333333336 H 85 V 40"
+            d="M 45 10 v 5 h -10 V 33.333333333333336 H 5 V 40"
           />
           <path
             className=""
@@ -1771,6 +1767,10 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards and li
           <path
             className=""
             d="M 45 10 v 5 h -10 V 33.333333333333336 H 65 V 40"
+          />
+          <path
+            className=""
+            d="M 45 10 v 5 h -10 V 33.333333333333336 H 85 V 40"
           />
           <path
             className=""
@@ -2689,10 +2689,6 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards, lines
         >
           <path
             className=""
-            d="M 45 10 v 5 h -10 V 33.333333333333336 H 5 V 40"
-          />
-          <path
-            className=""
             d="M 45 10 v 5 H 5 V 20"
           />
           <path
@@ -2713,7 +2709,7 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards, lines
           />
           <path
             className=""
-            d="M 45 10 v 5 h -10 V 33.333333333333336 H 85 V 40"
+            d="M 45 10 v 5 h -10 V 33.333333333333336 H 5 V 40"
           />
           <path
             className=""
@@ -2726,6 +2722,10 @@ exports[`FileProperties components/profile/OrgChart/MiniChart Using cards, lines
           <path
             className=""
             d="M 45 10 v 5 h -10 V 33.333333333333336 H 65 V 40"
+          />
+          <path
+            className=""
+            d="M 45 10 v 5 h -10 V 33.333333333333336 H 85 V 40"
           />
           <path
             className=""
