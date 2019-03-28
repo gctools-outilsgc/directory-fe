@@ -122,14 +122,9 @@ export class GQLTeamCard extends React.Component {
                           {__('Supervisor')}
                         </div>
                         <div className="d-flex">
-                          <img
-                            className="rounded-circle avatar"
-                            src={
-                              supTest ? supTest.avatar : ''
-                            }
-                            alt={
-                              supTest ? supTest.name : 'None'
-                            }
+                          <UserAvatar
+                            avatar={supTest ? supTest.avatar : ''}
+                            name={supTest ? supTest.name : ''}
                           />
                           <div className="ml-2">
                             <div>
@@ -197,15 +192,11 @@ export class GQLTeamCard extends React.Component {
                                         {!chosenSupervisor ?
                                           <div className="mr-auto d-flex">
                                             <div className="mr-2">
-                                              <img
-                                          // eslint-disable-next-line max-len
-                                                className="avatar rounded-circle"
-                                                src={
-                                                  supTest ? supTest.avatar : ''
-                                                }
-                                                alt={
-                                                  supTest ? supTest.name : 'N'
-                                                }
+                                              <UserAvatar
+                                                avatar={supTest ?
+                                                  supTest.avatar : ''}
+                                                name={supTest ?
+                                                  supTest.name : ''}
                                               />
                                             </div>
                                             <div>
@@ -223,15 +214,11 @@ export class GQLTeamCard extends React.Component {
                                           </div> :
                                           <div className="mr-auto d-flex">
                                             <div className="mr-2">
-                                              <img
-                                          // eslint-disable-next-line max-len
-                                                className="avatar rounded-circle"
-                                                src={
-                                                  chosenSupervisor.avatar
-                                                }
-                                                alt={
-                                                  chosenSupervisor.name
-                                                }
+                                              <UserAvatar
+                                                avatar={chosenSupervisor ?
+                                                  chosenSupervisor.avatar : ''}
+                                                name={chosenSupervisor ?
+                                                  chosenSupervisor.name : ''}
                                               />
                                             </div>
                                             <div>
