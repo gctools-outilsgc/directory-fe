@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import {
-  Container,
   Button,
   Navbar,
   NavbarBrand,
@@ -99,7 +98,7 @@ export class App extends Component {
               </NavItem>
             </Nav>
           </Navbar>
-          <Container className="mt-3">
+          <div>
             <Switch>
               <Fragment>
                 <Route
@@ -111,7 +110,7 @@ export class App extends Component {
                 <Route path="/onboard" component={Onboard} />
               </Fragment>
             </Switch>
-          </Container>
+          </div>
         </div>
       </BrowserRouter>
     );
