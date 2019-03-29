@@ -16,6 +16,7 @@ import {
 import TeamAvatar from './TeamAvatar';
 
 import varTag from '../../../utils/cssVarTag';
+import GenericAvatar from '../../profile/OrgChart/Card/img/user.gif';
 
 
 const Arrow = styled.div`
@@ -114,11 +115,12 @@ const Avatars = styled.div`
 const getProfileDetails = (profile) => {
   const {
     name,
-    avatar,
+    avatar: profileAvatar,
     team,
     titleEn,
     titleFr,
   } = profile || {};
+  const avatar = profileAvatar || GenericAvatar;
   if (!name && !team) {
     return {
       name: ((profile.nameEn === '') && __('Default Team')) ||
