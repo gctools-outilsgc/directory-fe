@@ -26,7 +26,7 @@ export const ProfileCardDisplay = (props) => {
           {user.name ? user.name : ''}
         </div>
         <div className="profile-title">
-          {user.titleEn ? user.titleEn : 'No Title'}
+          {user.titleEn ? user.titleEn : __('No title')}
         </div>
         <div className="profile-title">
           {user.team ?
@@ -45,7 +45,7 @@ export const ProfileCardDisplay = (props) => {
             <div>
               <div className="font-weight-bold">{__('Work')}</div>
               <span className="list-desc-ph">
-                {user.officePhone ? user.officePhone : 'No Offce Phone'}
+                {user.officePhone ? user.officePhone : __('No Offce Phone')}
               </span>
             </div>
           </li>
@@ -53,7 +53,7 @@ export const ProfileCardDisplay = (props) => {
             <div>
               <div className="font-weight-bold">{__('Mobile')}</div>
               <span className="list-desc-ph">
-                {user.mobilePhone ? user.mobilePhone : 'No Mobile Phone'}
+                {user.mobilePhone ? user.mobilePhone : __('No Mobile Phone')}
               </span>
             </div>
           </li>
