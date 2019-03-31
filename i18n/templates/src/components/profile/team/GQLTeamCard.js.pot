@@ -18,3 +18,7 @@ msgstr ""
 msgid "Cannot find GCID"
 msgstr ""
 
+#: src/components/profile/team/GQLTeamCard.js 313:45
+msgid "None"
+msgstr ""
+
