@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
+
 import { Row, Col } from 'reactstrap';
 
 const ProductFeatures = (props) => {
@@ -70,4 +73,4 @@ ProductFeatures.propTypes = {
   })),
 };
 
-export default ProductFeatures;
+export default LocalizedComponent(ProductFeatures);

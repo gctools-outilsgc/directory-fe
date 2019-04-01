@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 
 import { Container, Row } from 'reactstrap';
 
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
+
 import ProductJumbo from '../components/home/ProductJumbo';
 import InfoText from '../components/home/InfoText';
 import ProductFeatures from '../components/home/ProductFeatures';
@@ -79,20 +82,20 @@ class Home extends Component {
     return (
       <div>
         <ProductJumbo
-          appName="Search for anyone"
+          appName={__('Search for anyone')}
           // eslint-disable-next-line max-len
-          appDescription="Type a person's name to find their profile! Note that search is case sensitive."
+          appDescription={__('Type in a name')}
         />
         <Container>
           <Row>
             <InfoText
-              heading={__('Get started with the new Directory!')}
+              heading={__('This has no exclamation marks')}
             />
           </Row>
           <CallToActionLinks />
           <ProductFeatures
             features={featureList}
-            heading={__('Key features')}
+            heading="{__('Key features')}"
           />
           <Row>
             <InfoText
@@ -115,4 +118,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default LocalizedComponent(Home);

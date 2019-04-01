@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
+
 import { Jumbotron, Row, Col } from 'reactstrap';
 import ProfileSearch from '../core/ProfileSearch';
 
@@ -44,4 +47,4 @@ ProductJumbo.propTypes = {
   appDescription: PropTypes.string,
 };
 
-export default ProductJumbo;
+export default LocalizedComponent(ProductJumbo);

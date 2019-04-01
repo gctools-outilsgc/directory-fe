@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-04-01 17:05-0400\n"
-"PO-Revision-Date: 2019-04-01 17:05-0400\n"
+"POT-Creation-Date: 2019-04-01 16:50-0400\n"
+"PO-Revision-Date: 2019-04-01 16:50-0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr_CA\n"
 "Language-Team: fr_CA <LL@li.org>\n"
@@ -14,15 +14,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: 85:19 src/containers/Home.js
-msgid "Search for anyone"
-msgstr ""
-
-#: 87:26 src/containers/Home.js
-msgid "Type in a name"
-msgstr ""
-
-#: 92:23 src/containers/Home.js
-msgid "This has no exclamation marks"
+#: 92:23 src/components/home/HomeComponent.js
+msgid "Get started with the new Directory!"
 msgstr ""
 

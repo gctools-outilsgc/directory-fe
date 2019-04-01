@@ -6,11 +6,15 @@ msgstr ""
 "Content-Type : text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding : 8bit\n"
 
-#: src/containers/Home.js 89:23
-msgid "Get started with the new Directory!"
+#: src/containers/Home.js 85:19
+msgid "Search for anyone"
 msgstr ""
 
-#: src/containers/Home.js 95:21
-msgid "Key features"
+#: src/containers/Home.js 87:26
+msgid "Type in a name"
+msgstr ""
+
+#: src/containers/Home.js 92:23
+msgid "This has no exclamation marks"
 msgstr ""
 

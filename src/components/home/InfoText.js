@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
+
 const InfoText = (props) => {
   const { heading, body } = props;
   return (
@@ -26,4 +29,4 @@ InfoText.propTypes = {
   body: PropTypes.string,
 };
 
-export default InfoText;
+export default LocalizedComponent(InfoText);
