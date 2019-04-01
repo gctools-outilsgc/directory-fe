@@ -7,8 +7,10 @@
  * Her Majesty the Queen inRight of Canada, as represented by the
  * Minister of National Research Council, 2018.
  */
-
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
 import { getSize, getSortingNumber, getBounds } from './func';
+
 
 /**
  *
@@ -848,21 +850,36 @@ export const calculateTree = (options) => {
  * @param {} profile GraphQL Profile object
  * @param {*} team GraphQL Team object
  */
-export const profileToNode = (profile, team) => ({
-  uuid: profile.gcID,
-  gcID: profile.gcID,
-  name: profile.name,
-  avatar: profile.avatar,
-  titleEn: profile.titleEn,
-  titleFr: profile.titleFr,
-  department: {
-    en_CA: team.nameEn,
-    fr_CA: team.nameFr,
-    id: team.id,
-  },
-  direct_reports: [],
-  root: false,
-});
+export const profileToNode = (profile, team) => (
+  profile ?
+    {
+      uuid: profile.gcID,
+      gcID: profile.gcID,
+      name: profile.name,
+      avatar: profile.avatar,
+      titleEn: profile.titleEn,
+      titleFr: profile.titleFr,
+      department: {
+        en_CA: team.nameEn,
+        fr_CA: team.nameFr,
+        id: team.id,
+      },
+      direct_reports: [],
+      root: false,
+    } :
+    {
+      uuid: team.id,
+      gcID: team.id,
+      name: (localizer.lang === 'en_CA') ? team.nameEn : team.nameFr,
+      department: {
+        en_CA: team.nameEn,
+        fr_CA: team.nameFr,
+        id: team.id,
+      },
+      direct_reports: [],
+      root: false,
+    }
+);
 
 /**
  * Given a team convert to a profile node suitable for placement.
@@ -942,4 +959,4 @@ export const graphQLToNode = (profile) => {
   return root;
 };
 
-export default computePositions;
+export default LocalizedComponent(computePositions);
