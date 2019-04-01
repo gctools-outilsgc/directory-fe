@@ -148,10 +148,7 @@ const TransferConfirmation = (props) => {
   const {
     isOpen,
     title,
-    bodyText,
-    primaryButtonText,
     primaryButtonClick,
-    secondaryButtonText,
     secondaryButtonClick,
     closeButtonClick,
     onEnter,
@@ -162,8 +159,12 @@ const TransferConfirmation = (props) => {
     source,
     transferredUser,
     destination,
-    avatarAltText,
   } = props;
+
+  const bodyText = props.bodyText || __('transfere_description');
+  const primaryButtonText = props.primaryButtonText || __('confirm');
+  const secondaryButtonText = props.secondaryButtonText || __('cancel');
+  const avatarAltText = props.avatarAltText || __('avatar_of');
   const user1 = getProfileDetails(source);
   const user2 = getProfileDetails(transferredUser);
   const user3 = getProfileDetails(destination);
@@ -275,10 +276,11 @@ const TransferConfirmation = (props) => {
 TransferConfirmation.defaultProps = {
   isOpen: false,
   title: '',
-  bodyText: __('transfere_description'),
-  primaryButtonText: __('confirm'),
+  bodyText: '',
+  primaryButtonText: '',
+  secondaryButtonText: '',
+  avatarAltText: '',
   primaryButtonClick: () => {},
-  secondaryButtonText: __('cancel'),
   secondaryButtonClick: () => {},
   closeButtonClick: () => {},
   onEnter: undefined,
@@ -286,7 +288,6 @@ TransferConfirmation.defaultProps = {
   onOpened: undefined,
   onClosed: undefined,
   zIndex: 1000,
-  avatarAltText: __('avatar_of'),
   delete: false,
 };
 
