@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 
 import { Container, Row } from 'reactstrap';
 
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
+
 import ProductJumbo from '../components/home/ProductJumbo';
 import InfoText from '../components/home/InfoText';
 import ProductFeatures from '../components/home/ProductFeatures';
@@ -115,4 +118,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default LocalizedComponent(Home);
