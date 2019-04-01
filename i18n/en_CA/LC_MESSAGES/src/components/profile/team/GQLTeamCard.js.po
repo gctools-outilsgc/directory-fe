@@ -32,7 +32,7 @@ msgstr "Change supervisor / team"
 
 #: 161:33 src/components/profile/team/GQLTeamCard.js
 msgid "edit_team"
-msgstr "Edit Team"
+msgstr "Transfer supervisor "
 
 #: 258:45 src/components/profile/team/GQLTeamCard.js
 msgid "search"

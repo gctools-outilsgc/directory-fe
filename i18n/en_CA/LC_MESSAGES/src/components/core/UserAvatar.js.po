@@ -16,5 +16,4 @@ msgstr ""
 
 #: 48:19 src/components/core/UserAvatar.js
 msgid "Upload"
-msgstr ""
-
+msgstr "Edit image"
