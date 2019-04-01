@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-02-25 15:14-0500\n"
+"POT-Creation-Date: 2019-03-31 15:47-0400\n"
 "PO-Revision-Date: 2019-02-21 14:05-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr_CA\n"
@@ -24,5 +24,9 @@ msgstr "Équipes"
 
 #: 92:22 src/components/profile/team/GQLTeamCard.js
 msgid "Cannot find GCID"
+msgstr ""
+
+#: 313:45 src/components/profile/team/GQLTeamCard.js
+msgid "None"
 msgstr ""
 

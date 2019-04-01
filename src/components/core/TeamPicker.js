@@ -5,6 +5,8 @@ import { Input } from 'reactstrap';
 
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
 
 
 class TeamPicker extends React.Component {
@@ -16,10 +18,8 @@ class TeamPicker extends React.Component {
     this.handleTeamChange = this.handleTeamChange.bind(this);
   }
 
-  handleTeamChange(e) {
-    const teamObj = [];
-    teamObj.id = e.target.value;
-    teamObj.name = e.target.innerText;
+  handleTeamChange(e, teams) {
+    const teamObj = teams.find(team => team.id === e.target.value);
     this.props.onTeamChange(teamObj);
     this.setState({
       newTeamVal: teamObj.id,
@@ -71,7 +71,6 @@ class TeamPicker extends React.Component {
               ownerOfTeams = []
                 .concat([data.profiles[0].org], ownerOfTeams);
           }
-
           const tierOptions = [];
           tierOptions.push({
             key: 'orgtier-undefined',
@@ -83,7 +82,8 @@ class TeamPicker extends React.Component {
             .forEach(tier =>
               tierOptions.push({
                 key: `orgtier-${tier.id}`,
-                text: tier.nameEn, // Localize later
+                nameEn: tier.nameEn,
+                nameFr: tier.nameFr,
                 value: tier.id,
                 data: tier,
               }));
@@ -92,12 +92,14 @@ class TeamPicker extends React.Component {
             <div>
               <Input
                 type="select"
-                onChange={this.handleTeamChange}
+                onChange={evt => this.handleTeamChange(evt, ownerOfTeams)}
                 disabled={!supervisor || loading}
                 value={(this.state.newTeamVal) ? this.state.newTeamVal.id : ''}
               >
                 {tierOptions.map(x => (
-                  <option key={x.value} value={x.value}>{x.text}</option>
+                  <option key={x.value} value={x.value}>
+                    {(localizer.lang === 'en_CA') ? x.nameEn : x.nameFr}
+                  </option>
               ))}
               </Input>
             </div>
@@ -132,4 +134,4 @@ TeamPicker.propTypes = {
   supervisor: PropTypes.shape({}).isRequired,
 };
 
-export default TeamPicker;
+export default LocalizedComponent(TeamPicker);
