@@ -16,11 +16,11 @@ msgstr ""
 
 #: 102:84 src/components/profile/profileCard/EditProfile.js
 msgid "Full name"
-msgstr ""
+msgstr "Name"
 
 #: 119:80 src/components/profile/profileCard/EditProfile.js
 msgid "Work email"
-msgstr ""
+msgstr "Email"
 
 #: 139:80 src/components/profile/profileCard/EditProfile.js
 msgid "English job title"
@@ -32,7 +32,7 @@ msgstr ""
 
 #: 174:80 src/components/profile/profileCard/EditProfile.js
 msgid "Address"
-msgstr ""
+msgstr "Work address"
 
 #: 190:80 src/components/profile/profileCard/EditProfile.js
 msgid "City"
@@ -52,15 +52,15 @@ msgstr ""
 
 #: 257:84 src/components/profile/profileCard/EditProfile.js
 msgid "Office Phone Number"
-msgstr ""
+msgstr "Phone number"
 
 #: 278:80 src/components/profile/profileCard/EditProfile.js
 msgid "Mobile Phone Number"
-msgstr ""
+msgstr "Mobile number"
 
 #: 307:45 src/components/profile/profileCard/EditProfile.js
 msgid "Save"
-msgstr ""
+msgstr "Save changes"
 
 #: 89:37 src/components/profile/profileCard/EditProfile.js
 msgid "Edit Profile"

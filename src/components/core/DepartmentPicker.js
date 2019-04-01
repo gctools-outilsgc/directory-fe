@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
 
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
@@ -79,7 +81,7 @@ class DepartmentPicker extends React.Component {
             <div>
               <label>
                 <span className="font-weight-bold">
-                  Department
+                  {__('Department')}
                 </span>
                 <Input
                   type="text"
@@ -110,4 +112,4 @@ DepartmentPicker.propTypes = {
   }),
 };
 
-export default DepartmentPicker;
+export default LocalizedComponent(DepartmentPicker);
