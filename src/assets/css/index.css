@@ -78,6 +78,20 @@ animation: LoadingText 2s ease infinite;
     width: 255px;
 }
 
+.jumbotron .search-form {
+  position: relative !important;
+}
+
+.jumbotron .search-results {
+  text-align: left !important;
+  width: 100% !important;
+  padding: 15px !important;
+}
+
+.jumbotron .search-form label {
+  width: 100% !important;
+}
+
 .search-results-none {
   display:none;
 }

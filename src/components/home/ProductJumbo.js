@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Container, Jumbotron } from 'reactstrap';
+import { Jumbotron, Row, Col } from 'reactstrap';
 import ProfileSearch from '../core/ProfileSearch';
 
 const ProductJumbo = (props) => {
@@ -14,17 +14,21 @@ const ProductJumbo = (props) => {
   };
   return (
     <Jumbotron fluid style={style}>
-      <Container className="text-center">
-        <div>
-          <h1>{appName}</h1>
-        </div>
-        <p>
-          {appDescription}
-        </p>
-        <div>
-          <ProfileSearch />
-        </div>
-      </Container>
+      <Row>
+        <Col />
+        <Col className="text-center">
+          <div>
+            <h1>{appName}</h1>
+          </div>
+          <p>
+            {appDescription}
+          </p>
+          <div>
+            <ProfileSearch />
+          </div>
+        </Col>
+        <Col />
+      </Row>
     </Jumbotron>
   );
 };

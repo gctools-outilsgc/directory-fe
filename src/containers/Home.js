@@ -5,6 +5,7 @@ import { Container, Row } from 'reactstrap';
 import ProductJumbo from '../components/home/ProductJumbo';
 import InfoText from '../components/home/InfoText';
 import ProductFeatures from '../components/home/ProductFeatures';
+import CallToActionLinks from '../components/home/CallToActionLinks';
 
 const featureList = [
   {
@@ -88,16 +89,7 @@ class Home extends Component {
               heading="Get Started with the new Directory!"
             />
           </Row>
-          <div>
-            <ul>
-              <li>
-                <a href="/onboard">Onboard</a>
-              </li>
-              <li>
-                <a href="/p/22">A Profile</a>
-              </li>
-            </ul>
-          </div>
+          <CallToActionLinks />
           <ProductFeatures
             features={featureList}
             heading="Key features"
