@@ -16,7 +16,7 @@ msgstr ""
 
 #: 52:13 src/components/profile/team/TeamCardHolder.js
 msgid "Teams"
-msgstr "Teams"
+msgstr "Team"
 
 #: 93:21 src/components/profile/team/TeamCardHolder.js
 msgid "your_teams"
@@ -24,7 +24,7 @@ msgstr "Yours teams"
 
 #: 106:17 src/components/profile/team/TeamCardHolder.js
 msgid "Org Chart"
-msgstr "Org Chart"
+msgstr "Organization chart"
 
 #: 82:19 src/components/profile/team/TeamCardHolder.js
 msgid "imin"

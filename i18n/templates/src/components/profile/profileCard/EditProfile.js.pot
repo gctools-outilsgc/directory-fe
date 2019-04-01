@@ -58,3 +58,35 @@ msgstr ""
 msgid "Edit Profile"
 msgstr ""
 
+#: src/components/profile/profileCard/EditProfile.js 410:21
+msgid "Update department title"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 411:24
+msgid "department changing"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 412:33
+msgid "Comfirm"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 413:35
+msgid "Back"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 412:73
+msgid "to"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 414:18
+msgid "no longuer sup"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 415:18
+msgid "team"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 415:31
+msgid "undo"
+msgstr ""
+

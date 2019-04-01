@@ -48,5 +48,5 @@ msgstr "Cancel"
 
 #: 366:23 src/components/profile/team/GQLTeamCard.js
 msgid "people"
-msgstr "People"
+msgstr "Teammates"
 

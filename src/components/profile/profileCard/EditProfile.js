@@ -397,6 +397,7 @@ export class EditProfile extends Component {
             </Mutation>
           </ModalBody>
         </Modal>
+        {console.log(this.state.supervisor)}
         <Mutation
           mutation={EDIT_TEAM}
           onCompleted={() => {
@@ -407,6 +408,16 @@ export class EditProfile extends Component {
             this.state.confirmModal && (<TransferConfirmation
               isOpen={this.state.confirmModal}
               transferredUser={this.props.profile}
+              title={__('Update department title')}
+              bodyText={`
+                ${__('department changing')}
+                ${this.state.organization.nameEn} ${__('to')}
+                ${this.state.newTeamId}${this.state.supervisor}
+                ${__('no longuer sup')}${this.state.organization.nameEn}
+               ${__('team')}${__('undo')}
+              `}
+              primaryButtonText={__('Comfirm')}
+              secondaryButtonText={__('Back')}
               destination={
                 {
                   name: 'Choose a new Supervisor',
