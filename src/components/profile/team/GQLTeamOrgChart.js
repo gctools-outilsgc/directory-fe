@@ -61,6 +61,7 @@ export class GQLTeamOrgChart extends React.Component {
   navigateToProfile(card) {
     const { history } = this.props;
     history.push(`/p/${card.id}`);
+    this.setState({ selected: card.id });
   }
   moveToLoggedInUser() {
     this.setState({ selected: this.props.myGcID });
@@ -113,8 +114,8 @@ export class GQLTeamOrgChart extends React.Component {
             <OrgChartLoading loading={loading}>
               <OrgChart
                 ref={this.OrgChart}
-                onCardClick={this.changeSelectedCard}
-                onButtonClick={this.navigateToProfile}
+                onCardClick={this.navigateToProfile}
+                onButtonClick={this.changeSelectedCard}
                 cards={cards}
                 lines={lines}
                 selectedCard={selectedCard && selectedCard.node}
