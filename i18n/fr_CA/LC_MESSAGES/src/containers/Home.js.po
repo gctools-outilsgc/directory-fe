@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-04-01 17:05-0400\n"
+"POT-Creation-Date: 2019-04-02 11:04-0400\n"
 "PO-Revision-Date: 2019-04-01 17:05-0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr_CA\n"
@@ -24,5 +24,185 @@ msgstr ""
 
 #: 92:23 src/containers/Home.js
 msgid "This has no exclamation marks"
-msgstr ""
+msgstr "Commencez à vous servir du nouvel Annuaire!"
+
+#: 20:20 src/containers/Home.js
+msgid "Self-serve contact information"
+msgstr "Mise à jour en libre-service de vos coordonnées"
+
+#: 22:17 src/containers/Home.js
+msgid ""
+"Easily update your contact information so that it is always accurate. You"
+" can make changes yourself and they will show up immediately."
+msgstr "Vous pouvez facilement mettre à jour vos coordonnées afin de veiller à ce qu’elles demeurent exactes! Vous pouvez apporter les changements vous-même, et ils seront immédiatement affichés dans votre profil."
+
+#: 28:20 src/containers/Home.js
+msgid "Easy to search"
+msgstr "Recherche facile"
+
+#: 30:17 src/containers/Home.js
+msgid "Looking for someone? Quickly find other members and start collaborating."
+msgstr "Vous cherchez quelqu’un? Trouvez facilement d’autres employés pour commencer à collaborer avec eux."
+
+#: 36:20 src/containers/Home.js
+msgid "Clean and simple profile"
+msgstr "Profil simple et soigné"
+
+#: 38:17 src/containers/Home.js
+msgid ""
+"Your profile is yours to complete. Add a profile photo to make it "
+"personal."
+msgstr "Créez votre propre profil et ajoutez une photo de profil pour y mettre votre touche personnelle!"
+
+#: 44:20 src/containers/Home.js
+msgid "Create teams"
+msgstr "Création d’équipes"
+
+#: 46:17 src/containers/Home.js
+msgid "Supervisors can create teams and self-manage members."
+msgstr "Les superviseurs peuvent créer des équipes et en gérer les membres."
+
+#: 52:20 src/containers/Home.js
+msgid "Organizational chart"
+msgstr "Organigramme"
+
+#: 54:17 src/containers/Home.js
+msgid "Explore an entire team and find the exact person you need to talk to."
+msgstr "Examinez l’organisation d’une équipe entière et trouvez la personne à qui il vous faut parler."
+
+#: 60:20 src/containers/Home.js
+msgid "New interface design"
+msgstr "Nouvelle apparence de l’interface"
+
+#: 62:17 src/containers/Home.js
+msgid ""
+"A bright-blue colour scheme, rounded elements and minimalist look make "
+"the application just a little more fun to use."
+msgstr "La palette de couleurs axée sur le bleu vif, l’équilibre des éléments visuels et l’aspect sobre et minimaliste rendent l’application un peu plus plaisante à utiliser."
+
+#: 84:20 src/containers/Home.js
+msgid ""
+"Welcome. You’re one of the first to try out the new Directory application"
+" proof of concept. Click one of the options below to jump right in and "
+"explore, or, if you want to learn more, keep reading."
+msgstr "Bienvenue! Vous faites partie des premiers participants à la validation de principe de la nouvelle application Annuaire. Veuillez cliquer sur l’une des options suivantes afin de commencer directement à explorer l’Annuaire, ou continuez à lire pour en savoir plus sur l’application."
+
+#: 90:21 src/containers/Home.js
+msgid "Key features"
+msgstr "Principaux éléments"
+
+#: 94:23 src/containers/Home.js
+msgid "What’s coming next?"
+msgstr "À venir prochainement…"
+
+#: 96:18 src/containers/Home.js
+msgid ""
+"This is the first version of the Directory but we have big plans for the "
+"future. Below is a list of some features we have planned for development."
+msgstr "Il ne s’agit là que de la première itération d’Annuaire – nous avons de grands desseins pour l’application. Vous trouverez ci-dessous une liste de fonctionnalités dont la conception est prévue pour l’avenir."
+
+#: 98:18 src/containers/Home.js
+msgid ""
+"Please note that all these features are subject to change, as future "
+"features and improvements will depend on your feedback."
+msgstr "Veuillez noter que ces fonctionnalités pourraient être modifiées, car les fonctionnalités et les améliorations mises en oeuvre à l’avenir dépendront de vos commentaires!"
+
+#: 104:23 src/containers/Home.js
+msgid "How to provide your feedback"
+msgstr "Pour fournir vos commentaires"
+
+#: 106:18 src/containers/Home.js
+msgid ""
+"We want your feedback to help us improve Directory and priorities new "
+"features to be developed. Before telling us what you think, play around "
+"and test out the new design and functionality of Directory. Take note of "
+"what you like, don’t like, and suggestions for improvement."
+msgstr "Nous avons besoin de vos commentaires pour nous aider à améliorer l’Annuaire et à établir le degré de priorité des nouvelles fonctionnalités à mettre sur pied. Avant de nous faire part de vos commentaires, examinez la nouvelle esthétique d’Annuaire et mettez à l’essai ses fonctions. Relevez ce qui vous plaît et ce qui vous déplaît, et prenez en note vos suggestions pour améliorer l’Annuaire."
+
+#: 108:18 src/containers/Home.js
+msgid ""
+"We will be hosting user testing and feedback sessions where you can share"
+" what you’ve discovered. Join the (x) GCcollab group and keep an eye out "
+"for the next research session on Directory."
+msgstr "Nous organiserons des séances d’essai et de rétroaction auprès des utilisateurs où vous pourrez faire part de vos découvertes. Joignez-vous au groupe (x) dans GCcollab et ne manquez surtout pas la prochaine séance de recherche sur l’Annuaire."
+
+#: 114:23 src/containers/Home.js
+msgid "All about the details"
+msgstr "Tout est dans les détails"
+
+#: 116:18 src/containers/Home.js
+msgid ""
+"This application is in its early stages. As a proof of concept, this "
+"application is not a finalized product ready for full use. It’s meant to "
+"be a first version with base features so that you can add your contact "
+"info, explore, and provide your feedback."
+msgstr "Cette application n’en est encore qu’à ses débuts! Étant à l’étape de validation de principe, cette application n’est pas un produit fini prêt à être utilisé pleinement. Il s’agit plutôt d’une première itération munie des fonctions de base où vous pouvez fournir vos coordonnées. Vous pouvez l’explorer et fournir vos commentaires."
+
+#: 118:18 src/containers/Home.js
+msgid ""
+"As a functional prototype, this application is set for user testing and "
+"exploration. We will be running user testing and feedback sessions soon, "
+"so play around and take note of what you like, what you don’t, and "
+"suggestions for improvement. See below for more information on how you "
+"can provide your feedback."
+msgstr "Étant un prototype fonctionnel, l’application est destinée à la mise à l’essai et à l’exploration par les utilisateurs. Nous organiserons bientôt des séances d’essai et de rétroaction auprès des utilisateurs. Entre-temps, examinez les fonctionnalités de l’application, relevez ce qui vous plaît et ce qui vous déplaît, et prenez en note vos suggestions pour améliorer l’Annuaire. Vous trouverez ci-dessous des renseignements sur la manière de fournir vos commentaires."
+
+#: 120:18 src/containers/Home.js
+msgid ""
+"Because this is a proof of concept, there will be bugs in the system. If "
+"you come across a bug, don’t worry. We’ll be fixing bugs on a regular "
+"basis as we develop new features and improvements."
+msgstr "Puisqu’il ne s’agit que d’une validation de principe, le système comprendra des erreurs. Si vous en rencontrez un, ne vous inquiétez pas! Nous réparerons régulièrement ces erreurs au fur et à mesure que nous développerons de nouvelles fonctionnalités et améliorations."
+
+#: 122:18 src/containers/Home.js
+msgid "NOTE:"
+msgstr "REMARQUE :"
+
+#: 124:18 src/containers/Home.js
+msgid ""
+"This application currently uses fake content so that we could accurately "
+"display certain features, such as the organizational chart. Approximately"
+" 12,000 users were randomly generated to add data to the application and "
+"show a realistic sample."
+msgstr "À l’heure actuelle, l’application contient de « faux profils » de remplissage qui ne correspondent à aucun utilisateur réel. Nous les avons ajoutés afin de pouvoir bien présenter certaines fonctionnalités, telles que les organigrammes. Environ 12 000 faux profils d’utilisateurs ont été générés de manière aléatoire afin de remplir l’application de données et afficher un échantillon représentatif du nombre réel d’employés."
+
+#: 126:18 src/containers/Home.js
+msgid ""
+"As we onboard more departments, and more public servants complete their "
+"profile, we will remove the fake content."
+msgstr "Au fur et à mesure que davantage de ministères participent au projet et que de plus en plus de fonctionnaires créent des profils, nous éliminerons les faux profils. Commented [A5]: Link to group here"
+
+#: 114:17 src/containers/Home.js
+msgid ""
+"Automatic profile creation when you register for GCaccount, which "
+"includes your name and email address."
+msgstr "Création automatique d’un profil contenant votre nom et votre adresse courriel au moment où vous vous inscrivez à GCcompte."
+
+#: 117:17 src/containers/Home.js
+msgid ""
+"Approval workflow that allows supervisors to approve requests for team "
+"members and employees."
+msgstr "Flux d’approbation qui permet aux superviseurs d’approuver les demandes des membres de leurs équipes et de leurs employés."
+
+#: 120:17 src/containers/Home.js
+msgid ""
+"In-app notifications for items that require your attention (approvals, "
+"change requests, etc.)"
+msgstr "Avis envoyé par l’application au sujet des activités qui requièrent votre attention (approbations, demandes de modification, etc.)."
+
+#: 123:17 src/containers/Home.js
+msgid "Ability to choose team avatars and colours"
+msgstr "Capacité de choisir un avatar et une couleur pour représenter une équipe entière."
+
+#: 126:17 src/containers/Home.js
+msgid "Enhanced search functionality"
+msgstr "Fonction de recherche améliorée."
+
+#: 129:17 src/containers/Home.js
+msgid "One-time profile transfer from GCcollab to Directory"
+msgstr "Migration ponctuelle des profils de GCcollab à l’Annuaire."
+
+#: 132:17 src/containers/Home.js
+msgid "Integrating non-government accounts and users into Directory"
+msgstr "Intégration des comptes et des utilisateurs de l’extérieur du gouvernement à l’Annuaire."
 

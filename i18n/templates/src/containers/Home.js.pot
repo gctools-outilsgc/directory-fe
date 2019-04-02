@@ -18,3 +18,139 @@ msgstr ""
 msgid "This has no exclamation marks"
 msgstr ""
 
+#: src/containers/Home.js 20:20
+msgid "Self-serve contact information"
+msgstr ""
+
+#: src/containers/Home.js 22:17
+msgid "Easily update your contact information so that it is always accurate. You can make changes yourself and they will show up immediately."
+msgstr ""
+
+#: src/containers/Home.js 28:20
+msgid "Easy to search"
+msgstr ""
+
+#: src/containers/Home.js 30:17
+msgid "Looking for someone? Quickly find other members and start collaborating."
+msgstr ""
+
+#: src/containers/Home.js 36:20
+msgid "Clean and simple profile"
+msgstr ""
+
+#: src/containers/Home.js 38:17
+msgid "Your profile is yours to complete. Add a profile photo to make it personal."
+msgstr ""
+
+#: src/containers/Home.js 44:20
+msgid "Create teams"
+msgstr ""
+
+#: src/containers/Home.js 46:17
+msgid "Supervisors can create teams and self-manage members."
+msgstr ""
+
+#: src/containers/Home.js 52:20
+msgid "Organizational chart"
+msgstr ""
+
+#: src/containers/Home.js 54:17
+msgid "Explore an entire team and find the exact person you need to talk to."
+msgstr ""
+
+#: src/containers/Home.js 60:20
+msgid "New interface design"
+msgstr ""
+
+#: src/containers/Home.js 62:17
+msgid "A bright-blue colour scheme, rounded elements and minimalist look make the application just a little more fun to use."
+msgstr ""
+
+#: src/containers/Home.js 84:20
+msgid "Welcome. You’re one of the first to try out the new Directory application proof of concept. Click one of the options below to jump right in and explore, or, if you want to learn more, keep reading."
+msgstr ""
+
+#: src/containers/Home.js 90:21
+msgid "Key features"
+msgstr ""
+
+#: src/containers/Home.js 94:23
+msgid "What’s coming next?"
+msgstr ""
+
+#: src/containers/Home.js 96:18
+msgid "This is the first version of the Directory but we have big plans for the future. Below is a list of some features we have planned for development."
+msgstr ""
+
+#: src/containers/Home.js 98:18
+msgid "Please note that all these features are subject to change, as future features and improvements will depend on your feedback."
+msgstr ""
+
+#: src/containers/Home.js 104:23
+msgid "How to provide your feedback"
+msgstr ""
+
+#: src/containers/Home.js 106:18
+msgid "We want your feedback to help us improve Directory and priorities new features to be developed. Before telling us what you think, play around and test out the new design and functionality of Directory. Take note of what you like, don’t like, and suggestions for improvement."
+msgstr ""
+
+#: src/containers/Home.js 108:18
+msgid "We will be hosting user testing and feedback sessions where you can share what you’ve discovered. Join the (x) GCcollab group and keep an eye out for the next research session on Directory."
+msgstr ""
+
+#: src/containers/Home.js 114:23
+msgid "All about the details"
+msgstr ""
+
+#: src/containers/Home.js 116:18
+msgid "This application is in its early stages. As a proof of concept, this application is not a finalized product ready for full use. It’s meant to be a first version with base features so that you can add your contact info, explore, and provide your feedback."
+msgstr ""
+
+#: src/containers/Home.js 118:18
+msgid "As a functional prototype, this application is set for user testing and exploration. We will be running user testing and feedback sessions soon, so play around and take note of what you like, what you don’t, and suggestions for improvement. See below for more information on how you can provide your feedback."
+msgstr ""
+
+#: src/containers/Home.js 120:18
+msgid "Because this is a proof of concept, there will be bugs in the system. If you come across a bug, don’t worry. We’ll be fixing bugs on a regular basis as we develop new features and improvements."
+msgstr ""
+
+#: src/containers/Home.js 122:18
+msgid "NOTE:"
+msgstr ""
+
+#: src/containers/Home.js 124:18
+msgid "This application currently uses fake content so that we could accurately display certain features, such as the organizational chart. Approximately 12,000 users were randomly generated to add data to the application and show a realistic sample."
+msgstr ""
+
+#: src/containers/Home.js 126:18
+msgid "As we onboard more departments, and more public servants complete their profile, we will remove the fake content."
+msgstr ""
+
+#: src/containers/Home.js 114:17
+msgid "Automatic profile creation when you register for GCaccount, which includes your name and email address."
+msgstr ""
+
+#: src/containers/Home.js 117:17
+msgid "Approval workflow that allows supervisors to approve requests for team members and employees."
+msgstr ""
+
+#: src/containers/Home.js 120:17
+msgid "In-app notifications for items that require your attention (approvals, change requests, etc.)"
+msgstr ""
+
+#: src/containers/Home.js 123:17
+msgid "Ability to choose team avatars and colours"
+msgstr ""
+
+#: src/containers/Home.js 126:17
+msgid "Enhanced search functionality"
+msgstr ""
+
+#: src/containers/Home.js 129:17
+msgid "One-time profile transfer from GCcollab to Directory"
+msgstr ""
+
+#: src/containers/Home.js 132:17
+msgid "Integrating non-government accounts and users into Directory"
+msgstr ""
+
