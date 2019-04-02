@@ -9,6 +9,9 @@ import ProductJumbo from '../components/home/ProductJumbo';
 import InfoText from '../components/home/InfoText';
 import ProductFeatures from '../components/home/ProductFeatures';
 import CallToActionLinks from '../components/home/CallToActionLinks';
+import BlockCta from '../components/home/BlockCta';
+
+import WaterMark from '../assets/imgs/wmms-alt.png';
 
 /* eslint max-len: 0 */
 
@@ -95,7 +98,7 @@ class Home extends Component {
                 ]
               }
             />
-            <div className="d-flex justify-content-center w-100">
+            <div className="d-flex justify-content-center w-100 mb-4">
               <ul className="w-75 ml-3 mr-3">
                 <li>
                   {__('Automatic profile creation when you register for GCaccount, which includes your name and email address.')}
@@ -121,21 +124,22 @@ class Home extends Component {
               </ul>
             </div>
           </Row>
-          <Row>
-            <InfoText
-              heading={__('How to provide your feedback')}
-              body={
-                [
-                  {
-                    text: __('We want your feedback to help us improve Directory and priorities new features to be developed. Before telling us what you think, play around and test out the new design and functionality of Directory. Take note of what you like, don’t like, and suggestions for improvement.'),
-                  },
-                  {
-                    text: __('We will be hosting user testing and feedback sessions where you can share what you’ve discovered. Join the (x) GCcollab group and keep an eye out for the next research session on Directory.'),
-                  },
-                ]
-              }
-            />
-          </Row>
+        </Container>
+        <BlockCta
+          heading={__('How to provide your feedback')}
+          body={
+            [
+              {
+                text: __('We want your feedback to help us improve Directory and priorities new features to be developed. Before telling us what you think, play around and test out the new design and functionality of Directory. Take note of what you like, don’t like, and suggestions for improvement.'),
+              },
+              {
+                text: __('We will be hosting user testing and feedback sessions where you can share what you’ve discovered. Join the (x) GCcollab group and keep an eye out for the next research session on Directory.'),
+              },
+            ]
+          }
+          actionText="Give us your Feedback"
+        />
+        <Container>
           <Row>
             <InfoText
               heading={__('All about the details')}
@@ -164,6 +168,20 @@ class Home extends Component {
             />
           </Row>
         </Container>
+        <div className="bg-dark text-white p-4">
+          <Container>
+            I am the footer. I will contain links and stuff and you should fear me.
+          </Container>
+        </div>
+        <div>
+          <Container className="pt-4">
+            <img
+              src={WaterMark}
+              alt=""
+              className="float-right mb-4"
+            />
+          </Container>
+        </div>
       </div>
     );
   }
