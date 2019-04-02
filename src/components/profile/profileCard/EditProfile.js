@@ -251,6 +251,7 @@ export class EditProfile extends Component {
                           id="streetAddress"
                           type="text"
                           className="form-control"
+                          placeholder={__('123 Workplace St.')}
                           value={this.state.streetAddress || ''}
                           onChange={(e) => {
                             this.setState({
@@ -302,6 +303,7 @@ export class EditProfile extends Component {
                         <input
                           id="postalCode"
                           type="text"
+                          placeholder={__('A1B2C3')}
                           className="form-control"
                           value={this.state.postalCode || ''}
                           onChange={(e) => {
@@ -397,7 +399,6 @@ export class EditProfile extends Component {
             </Mutation>
           </ModalBody>
         </Modal>
-        {console.log(this.state.supervisor)}
         <Mutation
           mutation={EDIT_TEAM}
           onCompleted={() => {
@@ -410,11 +411,13 @@ export class EditProfile extends Component {
               transferredUser={this.props.profile}
               title={__('Update department title')}
               bodyText={`
-                ${__('department changing')}
-                ${this.state.organization.nameEn} ${__('to')}
-                ${this.state.newTeamId}${this.state.supervisor}
-                ${__('no longuer sup')}${this.state.organization.nameEn}
-               ${__('team')}${__('undo')}
+                ${___(
+                  __('department changing'),
+                this.state.organization.nameEn,
+                this.state.newTeamId,
+                this.state.supervisor.name,
+                this.state.organization.nameEn
+              )}
               `}
               primaryButtonText={__('Comfirm')}
               secondaryButtonText={__('Back')}

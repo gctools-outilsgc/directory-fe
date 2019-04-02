@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-04-01 13:43-0400\n"
+"POT-Creation-Date: 2019-04-02 12:59-0400\n"
 "PO-Revision-Date: 2019-02-13 11:10-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en_CA\n"
@@ -72,7 +72,7 @@ msgstr "Confirm department change"
 
 #: 411:24 src/components/profile/profileCard/EditProfile.js
 msgid "department changing"
-msgstr "You are changing your department from "
+msgstr "You are changing your department from %1$s to %2$s. %3$s will no longer appear as your supervisor and you will be removed from the %4$s team."
 
 #: 412:33 src/components/profile/profileCard/EditProfile.js
 msgid "Comfirm"
@@ -88,7 +88,9 @@ msgstr ""
 
 #: 414:18 src/components/profile/profileCard/EditProfile.js
 msgid "no longuer sup"
-msgstr " will no longer appear as your supervisor and you will be removed from the "
+msgstr ""
+" will no longer appear as your supervisor and you will be removed from "
+"the "
 
 #: 415:18 src/components/profile/profileCard/EditProfile.js
 msgid "team"
@@ -97,3 +99,16 @@ msgstr " team."
 #: 415:31 src/components/profile/profileCard/EditProfile.js
 msgid "undo"
 msgstr "You cannot undo this action."
+
+#: 254:39 src/components/profile/profileCard/EditProfile.js
+msgid "123 Workplace St."
+msgstr ""
+
+#: 306:39 src/components/profile/profileCard/EditProfile.js
+msgid "A1B2C3"
+msgstr ""
+
+#: 402:23 src/components/profile/profileCard/EditProfile.js
+msgid "Cancel"
+msgstr ""
+

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-04-01 13:43-0400\n"
+"POT-Creation-Date: 2019-04-02 12:59-0400\n"
 "PO-Revision-Date: 2019-02-13 11:10-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr_CA\n"
@@ -96,5 +96,17 @@ msgstr ""
 
 #: 415:31 src/components/profile/profileCard/EditProfile.js
 msgid "undo"
+msgstr ""
+
+#: 254:39 src/components/profile/profileCard/EditProfile.js
+msgid "123 Workplace St."
+msgstr ""
+
+#: 306:39 src/components/profile/profileCard/EditProfile.js
+msgid "A1B2C3"
+msgstr ""
+
+#: 402:23 src/components/profile/profileCard/EditProfile.js
+msgid "Cancel"
 msgstr ""
 

@@ -90,3 +90,15 @@ msgstr ""
 msgid "undo"
 msgstr ""
 
+#: src/components/profile/profileCard/EditProfile.js 254:39
+msgid "123 Workplace St."
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 306:39
+msgid "A1B2C3"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 402:23
+msgid "Cancel"
+msgstr ""
+

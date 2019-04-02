@@ -1,3 +1,4 @@
+/*eslint-disable */
 import React from 'react';
 import PropTypes from 'prop-types';
 import LocalizedComponent
@@ -317,6 +318,15 @@ export class GQLTeamCard extends React.Component {
                                        },
                                     }}
                                   transferredUser={userInfo}
+                                  title={__('Confirm supervisor transfer')}
+                                  secondaryButtonText={__('cancel')}
+                                  primaryButtonText={__('Confirm')}
+                                  bodyText={`${___(__('You are transferring %1$s %2$s %3$s %4$s.'), // eslint-disable-line
+                                            supTest.name,
+                                            chosenSupervisor.name,
+                                            teamTest.nameEn,
+                                            chosenTeam.nameEn
+                                          )}`}
                                   destination={
                                     {
                                       name: chosenSupervisor.name,

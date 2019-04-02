@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-03-26 11:17-0400\n"
+"POT-Creation-Date: 2019-04-02 10:29-0400\n"
 "PO-Revision-Date: 2019-03-20 23:25-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en_CA\n"
@@ -24,10 +24,7 @@ msgstr "You will transfer to a new Supervisor (& Team)"
 
 #: 276:12 src/components/profile/team/TransferConfirmation.js
 msgid "transfere_description"
-msgstr "Explicit information about the transfer to include the Person
-    being transffered, from what Team and Super, to what team and Supervisor.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu
-    porttitor ex. Nam luctus tincidunt dui, sit amet semper mi consequat eu."
+msgstr "Explicit information about the transfer to include the Perso"
 
 #: 277:21 src/components/profile/team/TransferConfirmation.js
 msgid "confirm"
@@ -40,4 +37,9 @@ msgstr "Secondary"
 #: 287:17 src/components/profile/team/TransferConfirmation.js
 msgid "avatar_of"
 msgstr "Avatar of "
+
+#: 161:37 src/components/profile/team/TransferConfirmation.js
+#, fuzzy
+msgid "transfere_description2"
+msgstr "Explicit information about the transfer to include the Perso"
 

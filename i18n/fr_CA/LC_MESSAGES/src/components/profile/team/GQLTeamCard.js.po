@@ -52,3 +52,20 @@ msgid "people"
 msgid "None"
 msgstr ""
 
+
+#: src/components/profile/team/GQLTeamCard.js 321:41
+msgid "Confirm supervisor transfer"
+msgstr ""
+
+#: src/components/profile/team/GQLTeamCard.js 321:51
+msgid "You are transferring %1$s %2$s %3$s %4$s."
+msgid_plural ""
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/components/profile/team/GQLTeamCard.js 323:53
+msgid "Confirm"
+msgstr ""
+
+
+

@@ -3,11 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-<<<<<<< HEAD
-"POT-Creation-Date: 2019-03-26 11:05-0400\n"
-=======
 "POT-Creation-Date: 2019-03-31 15:47-0400\n"
->>>>>>> origin/master
 "PO-Revision-Date: 2019-02-21 14:05-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en_CA\n"
@@ -32,7 +28,7 @@ msgstr ""
 
 #: 150:31 src/components/profile/team/GQLTeamCard.js
 msgid "Changesup/team"
-msgstr "Change supervisor / team"
+msgstr "Supervisor transfer"
 
 #: 161:33 src/components/profile/team/GQLTeamCard.js
 msgid "edit_team"
@@ -53,6 +49,23 @@ msgstr "Cancel"
 #: 366:23 src/components/profile/team/GQLTeamCard.js
 msgid "people"
 msgstr "Teammates"
+
 #: 313:45 src/components/profile/team/GQLTeamCard.js
 msgid "None"
 msgstr ""
+
+#: src/components/profile/team/GQLTeamCard.js 321:41
+msgid "Confirm supervisor transfer"
+msgstr ""
+
+#: src/components/profile/team/GQLTeamCard.js 321:51
+msgid "You are transferring %1$s %2$s %3$s %4$s."
+msgid_plural ""
+msgstr[0] "You are transferring your supervisor from %1$s to %2$s. You will be removed from the %3$s team and be placed in %2$s’s %4$s team."
+msgstr[1] ""
+
+#: src/components/profile/team/GQLTeamCard.js 323:53
+msgid "Confirm"
+msgstr ""
+
+

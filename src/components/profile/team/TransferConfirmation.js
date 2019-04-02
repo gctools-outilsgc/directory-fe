@@ -3,9 +3,6 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-import LocalizedComponent
-  from '@gctools-components/react-i18n-translation-webpack';
-
 import styled from 'styled-components';
 
 import LocalizedComponent

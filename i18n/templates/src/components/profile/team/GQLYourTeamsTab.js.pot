@@ -66,10 +66,6 @@ msgstr ""
 msgid "people"
 msgstr ""
 
-#: src/components/profile/team/GQLYourTeamsTab.js 61:39
-msgid "Add"
-msgstr ""
-
 #: src/components/profile/team/GQLYourTeamsTab.js 311:29
 msgid "Tranfer"
 msgstr ""
@@ -80,5 +76,13 @@ msgstr ""
 
 #: src/components/profile/team/GQLYourTeamsTab.js 372:21
 msgid "team"
+msgstr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 65:39
+msgid "Add member"
+msgstr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 394:51
+msgid "Add team"
 msgstr ""
 

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-03-26 14:26-0400\n"
+"POT-Creation-Date: 2019-04-02 12:59-0400\n"
 "PO-Revision-Date: 2019-03-21 11:35-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en_CA\n"
@@ -78,21 +78,25 @@ msgstr ""
 
 #: 53:9 src/components/profile/team/GQLYourTeamsTab.js
 msgid "people"
-msgstr "People"
-
-#: 61:39 src/components/profile/team/GQLYourTeamsTab.js
-msgid "Add"
-msgstr ""
+msgstr "Team members"
 
 #: 311:29 src/components/profile/team/GQLYourTeamsTab.js
 msgid "Tranfer"
-msgstr ""
+msgstr "Transfer supervisor"
 
 #: 319:29 src/components/profile/team/GQLYourTeamsTab.js
 msgid "edit"
-msgstr "Edit"
+msgstr "Edit team"
 
 #: 372:21 src/components/profile/team/GQLYourTeamsTab.js
 msgid "team"
-msgstr "Team"
+msgstr "Teams"
+
+#: 65:39 src/components/profile/team/GQLYourTeamsTab.js
+msgid "Add member"
+msgstr "Add team members"
+
+#: 394:51 src/components/profile/team/GQLYourTeamsTab.js
+msgid "Add team"
+msgstr "Create new team"
 

@@ -16,7 +16,7 @@ msgstr ""
 
 #: 33:32 src/components/profile/team/YourTeamMemberList.js
 msgid "transfer to new Supervisor"
-msgstr ""
+msgstr "Transfer supervisor"
 
 #: 48:29 src/components/profile/team/YourTeamMemberList.js
 msgid "already supervisor"
@@ -44,7 +44,7 @@ msgstr ""
 
 #: 134:9 src/components/profile/team/YourTeamMemberList.js
 msgid "transfer to new Team"
-msgstr ""
+msgstr "Change team"
 
 #: 252:9 src/components/profile/team/YourTeamMemberList.js
 msgid "There are no members in this team"

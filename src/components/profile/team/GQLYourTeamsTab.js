@@ -62,7 +62,7 @@ const TeamList = (props) => {
             onClick={() => { setIsOpen(!isOpen); }}
           >
             <FontAwesomeIcon icon={faPlus} />
-            <span className="sr-only">{__('Add')}</span>
+            <span className="sr-only">{__('Add member')}</span>
           </Button>
           <Mutation
             mutation={EDIT_TEAM}
@@ -391,7 +391,7 @@ class GQLYouTeamsTab extends React.Component {
                         }}
                       >
                         <FontAwesomeIcon icon={faPlus} />
-                        <span className="sr-only">{__('Add')}</span>
+                        <span className="sr-only">{__('Add team')}</span>
                       </Button>
                       <GQLCreateTeamDialog
                         isOpen={this.state.createDialogOpen}
