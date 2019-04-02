@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { Button } from 'reactstrap';
 import './css/org_chart.css';
 
 import CardContainer from '../CardContainer/CardContainer';
@@ -294,7 +294,7 @@ class OrgChart extends React.Component {
   render() {
     const UseMenu = this.props.menuComponent || Menu;
     const MoveToActive = this.props.moveToActiveComponent || (props => (
-      <button {...props}>{this.props.moveToActiveText}</button>
+      <Button {...props}>{this.props.moveToActiveText}</Button>
     ));
     const searchComponent =
       (this.props.searchComponent) ? this.props.searchComponent : undefined;

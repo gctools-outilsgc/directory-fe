@@ -18,7 +18,6 @@
 }
 
 .react-gc-orgchart-wrapper-menu {
-  height: 40px;
   border-bottom: 1px solid #ccc;
-  padding: 10px 0 0 10px;
+  padding: 10px 0 5px 10px;
 }
