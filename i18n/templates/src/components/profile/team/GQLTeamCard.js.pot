@@ -40,5 +40,7 @@ msgstr ""
 
 #: src/components/profile/team/GQLTeamCard.js 366:23
 msgid "people"
+#: src/components/profile/team/GQLTeamCard.js 313:45
+msgid "None"
 msgstr ""
 

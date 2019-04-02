@@ -8,6 +8,9 @@ import LocalizedComponent
 
 import styled from 'styled-components';
 
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
+
 import {
   Modal,
   ModalHeader,
@@ -19,6 +22,7 @@ import {
 import TeamAvatar from './TeamAvatar';
 
 import varTag from '../../../utils/cssVarTag';
+import GenericAvatar from '../../profile/OrgChart/Card/img/user.gif';
 
 const Arrow = styled.div`
     position: relative;
@@ -121,24 +125,20 @@ const getProfileDetails = (profile) => {
     titleEn,
     titleFr,
   } = profile || {};
-  if (!name && !team) {
+  if (!name) {
     return {
-      name: ((profile.nameEn === '') && __('Default Team')) ||
-        ((localizer.lang === 'en_CA') ? profile.nameEn : profile.nameFr),
+      name: (localizer.lang === 'en_CA') ? profile.nameEn : profile.nameFr,
       isTeam: true,
     };
   }
   return {
     isTeam: false,
     name,
-    avatar,
+    avatar: avatar || GenericAvatar,
     title: (localizer.lang === 'en_CA') ? titleEn : titleFr,
     team: {
       id: team && team.id,
-      name:
-        team && (
-          ((team.nameEn === '') && __('Default Team')) ||
-          ((localizer.lang === 'en_CA') ? team.nameEn : team.nameFr)),
+      name: team && ((localizer.lang === 'en_CA') ? team.nameEn : team.nameFr),
       avatar: team && team.avatar,
     }
   };
@@ -195,7 +195,10 @@ const TransferConfirmation = (props) => {
           <Avatars delete={props.delete}>
             {user1.isTeam && (
               <React.Fragment>
-                <TeamAvatar className="tcd-team-avatar" name={user1.name} />
+                <TeamAvatar
+                  className="tcd-team-avatar"
+                  name={user1.name}
+                />
                 <div className="name">
                   <h2>{user1.name}</h2>
                 </div>
@@ -208,11 +211,11 @@ const TransferConfirmation = (props) => {
                   alt={`${avatarAltText} ${user1.name}`}
                 />
                 <div className="team">
-                  <TeamAvatar name={user1.team.name} />
+                  <TeamAvatar name={user2.team.name} />
                 </div>
                 <div className="name">
                   <h2>{user1.name}</h2>
-                  <span>{user1.team.name}</span>
+                  <span>{user2.team.name}</span>
                 </div>
               </React.Fragment>
             )}

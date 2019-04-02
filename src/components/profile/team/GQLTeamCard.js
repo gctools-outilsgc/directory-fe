@@ -307,14 +307,23 @@ export class GQLTeamCard extends React.Component {
                               {modifyProfile => this.state.confirmModal && (
                                 <LocalizedTransferConfirmation
                                   isOpen={this.state.confirmModal}
-                                  source={supTest}
+                                  source={
+                                    (supTest !== null) ? supTest :
+                                    {
+                                       name: __('None'),
+                                       team: {
+                                         nameEn: teamTest.nameEn,
+                                         nameFr: teamTest.nameFr,
+                                       },
+                                    }}
                                   transferredUser={userInfo}
                                   destination={
                                     {
                                       name: chosenSupervisor.name,
                                       avatar: chosenSupervisor.avatar,
                                       team: {
-                                        name: chosenTeam.name,
+                                        nameEn: chosenTeam.nameEn,
+                                        nameFr: chosenTeam.nameFr,
                                         avatar: chosenTeam.avatar,
                                       },
                                     }

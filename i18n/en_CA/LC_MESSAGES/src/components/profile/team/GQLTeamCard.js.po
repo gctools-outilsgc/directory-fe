@@ -3,7 +3,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2019-03-26 11:05-0400\n"
+=======
+"POT-Creation-Date: 2019-03-31 15:47-0400\n"
+>>>>>>> origin/master
 "PO-Revision-Date: 2019-02-21 14:05-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en_CA\n"
@@ -49,4 +53,6 @@ msgstr "Cancel"
 #: 366:23 src/components/profile/team/GQLTeamCard.js
 msgid "people"
 msgstr "Teammates"
-
+#: 313:45 src/components/profile/team/GQLTeamCard.js
+msgid "None"
+msgstr ""
