@@ -3,7 +3,13 @@ import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
 
-import { Card, CardBody } from 'reactstrap';
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
+
+import { Row, Col, Card, CardBody } from 'reactstrap';
+
+import fillOut from '../../assets/imgs/home/fill-out.png';
+import takeToProfile from '../../assets/imgs/home/take-to-profile.png';
 
 const mapStateToProps = ({ user }) => {
   const props = {};
@@ -19,31 +25,45 @@ const CallToActionLinks = (props) => {
   } = props;
 
   return (
-    <div className="d-flex justify-content-center">
+    <div>
       {myGcID && (
-        <ul className="list-unstyled w-50">
-          <li className="mb-3">
+        <Row>
+          <Col>
             <a href="/onboard" className="stretched-link">
               <Card>
-                <CardBody>
-                  Go To Onboarding
+                <CardBody className="d-flex align-items-center">
+                  <img
+                    src={fillOut}
+                    alt=""
+                    style={{ width: '140px', height: '140px' }}
+                  />
+                  <div className="mx-auto h5">
+                    {__('Fill out your profile.')}
+                  </div>
                 </CardBody>
               </Card>
             </a>
-          </li>
-          <li>
+          </Col>
+          <Col>
             <a
               href={`/p/${myGcID}`}
               className="stretched-link"
             >
               <Card>
-                <CardBody>
-                  Visit your profile
+                <CardBody className="d-flex align-items-center">
+                  <img
+                    src={takeToProfile}
+                    alt=""
+                    style={{ width: '140px', height: '140px' }}
+                  />
+                  <div className="mx-auto h5">
+                    {__('View your new profile')}
+                  </div>
                 </CardBody>
               </Card>
             </a>
-          </li>
-        </ul>
+          </Col>
+        </Row>
       )}
     </div>
   );
@@ -57,4 +77,4 @@ CallToActionLinks.propTypes = {
   myGcID: PropTypes.string,
 };
 
-export default connect(mapStateToProps)(CallToActionLinks);
+export default connect(mapStateToProps)(LocalizedComponent(CallToActionLinks));

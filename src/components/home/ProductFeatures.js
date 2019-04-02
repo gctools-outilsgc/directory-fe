@@ -24,7 +24,7 @@ const ProductFeatures = (props) => {
   ));
 
   return (
-    <div className="mt-5 mb-5">
+    <div className="mt-5 mb-2">
       <h2 className="text-center m-5">{heading}</h2>
       <Row>
         {featureList}
