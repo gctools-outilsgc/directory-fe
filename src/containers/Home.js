@@ -46,37 +46,37 @@ class Home extends Component {
               [
                 {
                   img: 'https://images.pexels.com/photos/908284/pexels-photo-908284.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-                  imgAlt: 'this is an exmaple',
+                  imgAlt: '',
                   featureHeading: __('Self-serve contact information'),
                   description: __('Easily update your contact information so that it is always accurate. You can make changes yourself and they will show up immediately.'),
                 },
                 {
                   img: 'https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-                  imgAlt: 'this is an example',
+                  imgAlt: '',
                   featureHeading: __('Easy to search'),
                   description: __('Looking for someone? Quickly find other members and start collaborating.'),
                 },
                 {
                   img: 'https://images.pexels.com/photos/834949/pexels-photo-834949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-                  imgAlt: 'this is an example',
+                  imgAlt: '',
                   featureHeading: __('Clean and simple profile'),
                   description: __('Your profile is yours to complete. Add a profile photo to make it personal.'),
                 },
                 {
                   img: 'https://images.pexels.com/photos/908284/pexels-photo-908284.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-                  imgAlt: 'this is an exmaple',
+                  imgAlt: '',
                   featureHeading: __('Create teams'),
                   description: __('Supervisors can create teams and self-manage members.'),
                 },
                 {
                   img: 'https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-                  imgAlt: 'this is an example',
+                  imgAlt: '',
                   featureHeading: __('Organizational chart'),
                   description: __('Explore an entire team and find the exact person you need to talk to.'),
                 },
                 {
                   img: 'https://images.pexels.com/photos/834949/pexels-photo-834949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-                  imgAlt: 'this is an example',
+                  imgAlt: '',
                   featureHeading: __('New interface design'),
                   description: __('A bright-blue colour scheme, rounded elements and minimalist look make the application just a little more fun to use.'),
                 },
@@ -170,7 +170,27 @@ class Home extends Component {
         </Container>
         <div className="bg-dark text-white p-4">
           <Container>
-            I am the footer. I will contain links and stuff and you should fear me.
+            <ul className="list-inline mb-0">
+              <li className="list-inline-item pr-2">
+                <a
+                  href="https://design.gccollab.ca/"
+                  className="text-white"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Made with Aurora
+                </a>
+              </li>
+              <li className="list-inline-item pr-2">
+                <a href="!#" className="text-white">About the OADW</a>
+              </li>
+              <li className="list-inline-item pr-2">
+                <a href="!#" className="text-white">FAQ</a>
+              </li>
+              <li className="list-inline-item pr-2">
+                <a href="!#" className="text-white">Twitter</a>
+              </li>
+            </ul>
           </Container>
         </div>
         <div>

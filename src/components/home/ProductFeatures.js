@@ -24,7 +24,7 @@ const ProductFeatures = (props) => {
   ));
 
   return (
-    <div className="mt-5 mb-2">
+    <div className="mt-5 mb-2 product-feature-holder">
       <h2 className="text-center m-5">{heading}</h2>
       <Row>
         {featureList}
@@ -39,7 +39,7 @@ ProductFeatures.defaultProps = {
     {
       // eslint-disable-next-line max-len
       img: 'https://images.pexels.com/photos/908284/pexels-photo-908284.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-      imgAlt: 'this is an exmaple',
+      imgAlt: '',
       featureHeading: 'GCcollab',
       // eslint-disable-next-line max-len
       description: 'Chocolate bar sugar plum jujubes cookie gingerbread cupcake cupcake.',
@@ -47,7 +47,7 @@ ProductFeatures.defaultProps = {
     {
       // eslint-disable-next-line max-len
       img: 'https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-      imgAlt: 'this is an example',
+      imgAlt: '',
       featureHeading: 'GCMessage',
       // eslint-disable-next-line max-len
       description: 'Cookie fruitcake jujubes halvah muffin.',
@@ -55,7 +55,7 @@ ProductFeatures.defaultProps = {
     {
       // eslint-disable-next-line max-len
       img: 'https://images.pexels.com/photos/834949/pexels-photo-834949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-      imgAlt: 'this is an example',
+      imgAlt: '',
       featureHeading: 'GCcareer',
       // eslint-disable-next-line max-len
       description: 'Cake pie liquorice ice cream candy donut.',

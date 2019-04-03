@@ -100,6 +100,17 @@ animation: LoadingText 2s ease infinite;
   cursor: pointer;
 }
 
+.bg-gradient {
+  background: #0d727a; /* Old browsers */
+  background: -moz-linear-gradient(left, #0d727a 0%, #0d84b9 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #0d727a 0%,#0d84b9 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #0d727a 0%,#0d84b9 100%);
+}
+
+.product-feature-holder .text-muted {
+  color: #5e666c !important;
+}
+
 /* Profile Card */
 
 .profile-card-title {

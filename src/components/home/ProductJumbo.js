@@ -19,7 +19,7 @@ const ProductJumbo = (props) => {
   return (
     <Jumbotron fluid style={style}>
       <Row>
-        <Col />
+        <Col className=".d-none .d-sm-block" />
         <Col className="text-center">
           <div>
             <h1>{appName}</h1>
@@ -31,7 +31,7 @@ const ProductJumbo = (props) => {
             <ProfileSearch />
           </div>
         </Col>
-        <Col />
+        <Col className=".d-none .d-sm-block" />
       </Row>
     </Jumbotron>
   );

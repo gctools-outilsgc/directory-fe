@@ -17,7 +17,7 @@ const BlockCta = (props) => {
     </p>
   ));
   return (
-    <div className="bg-primary text-light p-5">
+    <div className="bg-gradient text-light p-5">
       <Container>
         <Row className="flex">
           <Col sm="8" className="align-self-center">
@@ -29,6 +29,7 @@ const BlockCta = (props) => {
               href={actionLink}
               color="light"
               block
+              size="lg"
             >
               {actionText}
             </Button>
