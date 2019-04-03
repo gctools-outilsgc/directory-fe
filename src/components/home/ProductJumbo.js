@@ -15,6 +15,7 @@ const ProductJumbo = (props) => {
   const style = {
     padding: '6rem 2rem',
     marginBottom: '0px',
+    backgroundColor: '#DFEBEF',
   };
   return (
     <Jumbotron fluid style={style}>
