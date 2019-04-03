@@ -124,6 +124,7 @@ export class GQLTeamOrgChart extends React.Component {
                 miniSelectedNode={mSelectedCard && mSelectedCard.node}
                 style={{ height: '500px' }}
                 onMoveToActiveClick={this.moveToLoggedInUser}
+                hideMenuComponent
               />
             </OrgChartLoading>
           );
