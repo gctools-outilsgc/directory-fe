@@ -99,6 +99,8 @@ export class GQLTeamCard extends React.Component {
       editSup,
       editTeam,
     } = this.state;
+
+    const ChangeSup = __('Changesup/team');
     const canEdit = (accessToken !== '') && (id === myGcID);
     return (
       <Query
@@ -143,7 +145,7 @@ export class GQLTeamCard extends React.Component {
                               size="sm"
                               onClick={this.toggle}
                             >
-                              {__('Changesup/team')}
+                              {ChangeSup}
                             </Button>
                             <Modal
                               isOpen={this.state.modal}
