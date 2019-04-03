@@ -324,10 +324,10 @@ export class GQLTeamCard extends React.Component {
                                   secondaryButtonText={__('cancel')}
                                   primaryButtonText={__('Confirm')}
                                   bodyText={`${___(__('You are transferring %1$s %2$s %3$s %4$s.'), // eslint-disable-line
-                                            (supTest !== null) ? supTest : __('None'),
+                                            (supTest !== null) ? supTest.name : __('None'),
                                             chosenSupervisor.name,
-                                            teamTest.nameEn,
-                                            chosenTeam.nameEn
+                                            (localizer.lang == 'en_CA') ? teamTest.nameEn : teamTest.nameFr,
+                                            (localizer.lang == 'en_CA') ? chosenTeam.nameEn : chosenTeam.nameFr
                                           )}`}
                                   destination={
                                     {
