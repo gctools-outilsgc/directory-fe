@@ -13,6 +13,13 @@ import BlockCta from '../components/home/BlockCta';
 
 import WaterMark from '../assets/imgs/wmms-alt.png';
 
+import selfService from '../assets/imgs/home/self-service.png';
+import search from '../assets/imgs/home/search.png';
+import simpleProfile from '../assets/imgs/home/simple-profile.png';
+import teams from '../assets/imgs/home/teams.png';
+import orgChart from '../assets/imgs/home/org-chart.png';
+import newUi from '../assets/imgs/home/new-ui.png';
+
 /* eslint max-len: 0 */
 
 class Home extends Component {
@@ -45,37 +52,37 @@ class Home extends Component {
             features={
               [
                 {
-                  img: 'https://images.pexels.com/photos/908284/pexels-photo-908284.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+                  img: selfService,
                   imgAlt: '',
                   featureHeading: __('Self-serve contact information'),
                   description: __('Easily update your contact information so that it is always accurate. You can make changes yourself and they will show up immediately.'),
                 },
                 {
-                  img: 'https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+                  img: search,
                   imgAlt: '',
                   featureHeading: __('Easy to search'),
                   description: __('Looking for someone? Quickly find other members and start collaborating.'),
                 },
                 {
-                  img: 'https://images.pexels.com/photos/834949/pexels-photo-834949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+                  img: simpleProfile,
                   imgAlt: '',
                   featureHeading: __('Clean and simple profile'),
                   description: __('Your profile is yours to complete. Add a profile photo to make it personal.'),
                 },
                 {
-                  img: 'https://images.pexels.com/photos/908284/pexels-photo-908284.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+                  img: teams,
                   imgAlt: '',
                   featureHeading: __('Create teams'),
                   description: __('Supervisors can create teams and self-manage members.'),
                 },
                 {
-                  img: 'https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+                  img: orgChart,
                   imgAlt: '',
                   featureHeading: __('Organizational chart'),
                   description: __('Explore an entire team and find the exact person you need to talk to.'),
                 },
                 {
-                  img: 'https://images.pexels.com/photos/834949/pexels-photo-834949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+                  img: newUi,
                   imgAlt: '',
                   featureHeading: __('New interface design'),
                   description: __('A bright-blue colour scheme, rounded elements and minimalist look make the application just a little more fun to use.'),
