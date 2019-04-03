@@ -324,7 +324,7 @@ export class GQLTeamCard extends React.Component {
                                   secondaryButtonText={__('cancel')}
                                   primaryButtonText={__('Confirm')}
                                   bodyText={`${___(__('You are transferring %1$s %2$s %3$s %4$s.'), // eslint-disable-line
-                                            supTest.name,
+                                            (supTest !== null) ? supTest : __('None'),
                                             chosenSupervisor.name,
                                             teamTest.nameEn,
                                             chosenTeam.nameEn
