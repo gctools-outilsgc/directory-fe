@@ -814,7 +814,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                   className="modal-body"
                 >
                   <div
-                    className="sc-jzJRlG jerqWm"
+                    className="sc-cSHVUG eYwjDv"
                   >
                     <h1>
                       en_CA: Choose a new Supervisor for this team member
@@ -830,7 +830,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog isOpe
                       }
                     />
                     <div
-                      className="sc-cSHVUG cnSBrd"
+                      className="sc-kAzzGY iibZsE"
                     >
                       Mark Phillips
                     </div>
@@ -1649,7 +1649,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog with 
                   className="modal-body"
                 >
                   <div
-                    className="sc-jzJRlG jerqWm"
+                    className="sc-cSHVUG eYwjDv"
                   >
                     <h1>
                       en_CA: Choose a new Supervisor for this team member
@@ -1665,7 +1665,7 @@ exports[`FileProperties components/profile/team/TransferToSupervisorDialog with 
                       }
                     />
                     <div
-                      className="sc-cSHVUG cnSBrd"
+                      className="sc-kAzzGY iibZsE"
                     >
                       Mark Phillips
                     </div>
