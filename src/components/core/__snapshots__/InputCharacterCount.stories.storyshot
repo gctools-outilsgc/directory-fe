@@ -437,6 +437,60 @@ exports[`FileProperties components/core/InputCharacterCount With default options
                   }
                 />
               </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  value
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
             </tbody>
           </table>
         </div>
@@ -874,6 +928,60 @@ exports[`FileProperties components/core/InputCharacterCount with id 1`] = `
                   }
                 >
                   -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  value
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    
+                  </span>
                 </td>
                 <td
                   style={
@@ -1330,6 +1438,60 @@ exports[`FileProperties components/core/InputCharacterCount with maxLength 1`] =
                   }
                 />
               </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  value
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
             </tbody>
           </table>
         </div>
@@ -1766,6 +1928,60 @@ exports[`FileProperties components/core/InputCharacterCount with onChange 1`] = 
                   }
                 >
                   -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  value
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    
+                  </span>
                 </td>
                 <td
                   style={
@@ -2223,6 +2439,60 @@ exports[`FileProperties components/core/InputCharacterCount with placeholder 1`]
                   }
                 />
               </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  value
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
             </tbody>
           </table>
         </div>
@@ -2654,6 +2924,60 @@ exports[`FileProperties components/core/InputCharacterCount with showCounter=fal
                   }
                 >
                   -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  value
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    
+                  </span>
                 </td>
                 <td
                   style={
@@ -3100,6 +3424,60 @@ exports[`FileProperties components/core/InputCharacterCount with showCounter=tru
                   }
                 >
                   -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  value
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    
+                  </span>
                 </td>
                 <td
                   style={

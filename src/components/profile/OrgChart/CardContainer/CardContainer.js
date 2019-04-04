@@ -2,6 +2,8 @@
 import React from 'react';
 
 import PropTypes from 'prop-types';
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
 
 import Card from '../Card/Card';
 
@@ -182,7 +184,10 @@ class CardContainer extends React.Component {
           }
           avatarText={evaluateString(this.props.avatarText, card)}
           name={card.node.name}
-          title={card.node.title}
+          title={(localizer.lang === 'en_CA') ? card.node.titleEn :
+           card.node.titleFr}
+          team={(localizer.lang === 'en_CA') ? card.node.department.en_CA :
+            card.node.department.fr_CA}
           blurred={!card.on_path}
           active={activeCard}
           dragging={this.state.dragging}
@@ -278,4 +283,4 @@ CardContainer.propTypes = {
   }),
 };
 
-export default CardContainer;
+export default LocalizedComponent(CardContainer);

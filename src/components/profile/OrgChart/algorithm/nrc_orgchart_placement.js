@@ -938,9 +938,9 @@ export const calculateOrgChart = ({
     cardHeight: miniCardHeight || defaultMiniCardHeight,
     cardWidth: miniWidth,
     cardPadding: miniCardPadding || defaultMiniCardHeight,
-    leftGutter:
-      (miniWidth / (cardWidth || defaultCardWidth)) *
-      (leftGutter || defaultLeftGutter),
+    leftGutter: 0,
+    //  (miniWidth / (cardWidth || defaultCardWidth)) *
+    //  (leftGutter || defaultLeftGutter),
     withPath,
   });
   return {

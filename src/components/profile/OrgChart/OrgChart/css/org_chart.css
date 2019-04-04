@@ -1,7 +1,7 @@
 
 .react-gc-orgchart-wrapper-minichart-wrapper {
   position: absolute;
-  margin: 70px 0 0 5px;
+  margin: 5px 0 0 5px;
   padding: 10px;
   border: 1px solid transparent;
   background: #fff;
@@ -15,10 +15,10 @@
   overflow: hidden;
   max-height: 450px;
   max-width: 300px;
+  min-width: 100px;
 }
 
 .react-gc-orgchart-wrapper-menu {
-  height: 40px;
   border-bottom: 1px solid #ccc;
-  padding: 10px 0 0 10px;
+  padding: 10px 0 5px 10px;
 }

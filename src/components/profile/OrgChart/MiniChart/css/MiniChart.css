@@ -1,7 +1,7 @@
 .react-gc-orgchart-minichart-container {
   position: relative;
   overflow: none;
-  min-height: 200px;
+  min-height: 125px;
   width: calc(100% + 2px);
   margin-left: -1px;
 }
