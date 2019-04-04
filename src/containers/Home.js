@@ -12,6 +12,7 @@ import CallToActionLinks from '../components/home/CallToActionLinks';
 import BlockCta from '../components/home/BlockCta';
 
 import WaterMark from '../assets/imgs/wmms-alt.png';
+import auroraStamp from '../assets/imgs/aurora-stamp.png';
 
 import selfService from '../assets/imgs/home/self-service.png';
 import search from '../assets/imgs/home/search.png';
@@ -145,7 +146,7 @@ class Home extends Component {
                 },
               ]
             }
-            actionText="Give us your Feedback"
+            actionText={__('Give us your Feedback')}
           />
           <Container>
             <Row>
@@ -188,14 +189,13 @@ class Home extends Component {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Made with Aurora
+                    <img
+                      src={auroraStamp}
+                      alt=""
+                      className="mr-2"
+                    />
+                    {__('Made with Aurora')}
                   </a>
-                </li>
-                <li className="list-inline-item pr-2">
-                  <a href="!#" className="text-white">About the OADW</a>
-                </li>
-                <li className="list-inline-item pr-2">
-                  <a href="!#" className="text-white">FAQ</a>
                 </li>
                 <li className="list-inline-item pr-2">
                   <a

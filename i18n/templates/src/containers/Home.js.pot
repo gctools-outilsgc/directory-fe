@@ -154,3 +154,11 @@ msgstr ""
 msgid "Integrating non-government accounts and users into Directory"
 msgstr ""
 
+#: src/containers/Home.js 148:24
+msgid "Give us your Feedback"
+msgstr ""
+
+#: src/containers/Home.js 191:21
+msgid "Made with Aurora"
+msgstr ""
+
