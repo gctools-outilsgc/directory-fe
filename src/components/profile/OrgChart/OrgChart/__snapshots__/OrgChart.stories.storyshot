@@ -118,7 +118,10 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
           className="react-gc-orgchart-wrapper-menu"
         >
           <button
+            aria-label={null}
+            className="btn btn-secondary"
             onClick={[Function]}
+            type="button"
           >
             Go to me
           </button>
@@ -1322,6 +1325,60 @@ exports[`FileProperties components/profile/OrgChart Only required options 1`] = 
                     }
                   }
                 >
+                  hideMenuComponent
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    bool
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    false
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
                   menuComponent
                 </td>
                 <td
@@ -1623,6 +1680,10 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
               >
                 <path
                   className=""
+                  d="M 137.5 10 v 5 h -28.5 V 33.333333333333336 H 23.5 V 40"
+                />
+                <path
+                  className=""
                   d="M 137.5 10 v 5 H 23.5 V 20"
                 />
                 <path
@@ -1643,7 +1704,7 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                 />
                 <path
                   className=""
-                  d="M 137.5 10 v 5 h -28.5 V 33.333333333333336 H 23.5 V 40"
+                  d="M 137.5 10 v 5 h -28.5 V 33.333333333333336 H 251.5 V 40"
                 />
                 <path
                   className=""
@@ -1656,10 +1717,6 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                 <path
                   className=""
                   d="M 137.5 10 v 5 h -28.5 V 33.333333333333336 H 194.5 V 40"
-                />
-                <path
-                  className=""
-                  d="M 137.5 10 v 5 h -28.5 V 33.333333333333336 H 251.5 V 40"
                 />
                 <path
                   className=""
@@ -1861,7 +1918,10 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
           className="react-gc-orgchart-wrapper-menu"
         >
           <button
+            aria-label={null}
+            className="btn btn-secondary"
             onClick={[Function]}
+            type="button"
           >
             Go to me
           </button>
@@ -1887,6 +1947,10 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
             >
               <path
                 className=""
+                d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+              />
+              <path
+                className=""
                 d="M 995 75 v 30 H 175 V 135"
               />
               <path
@@ -1907,7 +1971,7 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
               />
               <path
                 className=""
-                d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+                d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
               />
               <path
                 className=""
@@ -1920,10 +1984,6 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
               <path
                 className=""
                 d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
-              />
-              <path
-                className=""
-                d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
               />
               <path
                 className=""
@@ -1965,14 +2025,21 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  President - NRC
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -2018,14 +2085,21 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  Vice President, Corporate Services and Chief Financial Officer
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -2071,14 +2145,21 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  Departmental Science Advisor
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -2124,14 +2205,21 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  Vice President, IRAP
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -2177,14 +2265,21 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  Vice-President, HRB
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -2230,14 +2325,21 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  VP, Transportation and Manufacturing
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -2283,14 +2385,21 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  Vice-President, Emerging Technologies
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -2336,14 +2445,21 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  Chief of Staff, Office of the President
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -2389,14 +2505,21 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  VP, Business and Professional Services
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -2442,14 +2565,21 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  Vice-President, Engineering
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -2495,14 +2625,21 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  Secretary General
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -2548,14 +2685,21 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  VP, Life Sciences
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -2601,14 +2745,21 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  Special Advisor, Group of Head of Federal Agencies
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -3788,6 +3939,60 @@ exports[`FileProperties components/profile/OrgChart using minichart 1`] = `
                   }
                 >
                   -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  hideMenuComponent
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    bool
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    false
+                  </span>
                 </td>
                 <td
                   style={
@@ -4141,7 +4346,10 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
           className="react-gc-orgchart-wrapper-menu"
         >
           <button
+            aria-label={null}
+            className="btn btn-secondary"
             onClick={[Function]}
+            type="button"
           >
             Go to me
           </button>
@@ -4167,6 +4375,10 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
             >
               <path
                 className=""
+                d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+              />
+              <path
+                className=""
                 d="M 995 75 v 30 H 175 V 135"
               />
               <path
@@ -4187,7 +4399,7 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
               />
               <path
                 className=""
-                d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+                d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
               />
               <path
                 className=""
@@ -4200,10 +4412,6 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
               <path
                 className=""
                 d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
-              />
-              <path
-                className=""
-                d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
               />
               <path
                 className=""
@@ -4245,14 +4453,21 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  President - NRC
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -4298,14 +4513,21 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  Vice President, Corporate Services and Chief Financial Officer
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -4351,14 +4573,21 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  Departmental Science Advisor
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -4404,14 +4633,21 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  Vice President, IRAP
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -4457,14 +4693,21 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  Vice-President, HRB
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -4510,14 +4753,21 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  VP, Transportation and Manufacturing
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -4563,14 +4813,21 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  Vice-President, Emerging Technologies
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -4616,14 +4873,21 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  Chief of Staff, Office of the President
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -4669,14 +4933,21 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  VP, Business and Professional Services
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -4722,14 +4993,21 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  Vice-President, Engineering
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -4775,14 +5053,21 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  Secretary General
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -4828,14 +5113,21 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  VP, Life Sciences
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -4881,14 +5173,21 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  Special Advisor, Group of Head of Federal Agencies
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -6068,6 +6367,60 @@ exports[`FileProperties components/profile/OrgChart with onMoveToActiveClick 1`]
                   }
                 >
                   -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  hideMenuComponent
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    bool
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    false
+                  </span>
                 </td>
                 <td
                   style={
@@ -6421,7 +6774,10 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
           className="react-gc-orgchart-wrapper-menu"
         >
           <button
+            aria-label={null}
+            className="btn btn-secondary"
             onClick={[Function]}
+            type="button"
           >
             Go to me
           </button>
@@ -6447,6 +6803,10 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
             >
               <path
                 className=""
+                d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+              />
+              <path
+                className=""
                 d="M 995 75 v 30 H 175 V 135"
               />
               <path
@@ -6467,7 +6827,7 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
               />
               <path
                 className=""
-                d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+                d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
               />
               <path
                 className=""
@@ -6480,10 +6840,6 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
               <path
                 className=""
                 d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
-              />
-              <path
-                className=""
-                d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
               />
               <path
                 className=""
@@ -6525,14 +6881,21 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  President - NRC
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -6578,14 +6941,21 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  Vice President, Corporate Services and Chief Financial Officer
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -6631,14 +7001,21 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  Departmental Science Advisor
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -6684,14 +7061,21 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  Vice President, IRAP
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -6737,14 +7121,21 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  Vice-President, HRB
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -6790,14 +7181,21 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  VP, Transportation and Manufacturing
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -6843,14 +7241,21 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  Vice-President, Emerging Technologies
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -6896,14 +7301,21 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  Chief of Staff, Office of the President
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -6949,14 +7361,21 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  VP, Business and Professional Services
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -7002,14 +7421,21 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  Vice-President, Engineering
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -7055,14 +7481,21 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  Secretary General
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -7108,14 +7541,21 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  VP, Life Sciences
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -7161,14 +7601,21 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                 </div>
                 <div
                   aria-level={2}
-                  className="sc-iwsKbI eZPJBj"
+                  className="sc-iwsKbI jnfQQA"
                   role="heading"
                 >
-                  Special Advisor, Group of Head of Federal Agencies
+                  
+                </div>
+                <div
+                  aria-level={2}
+                  className="sc-gZMcBi gIcnYQ"
+                  role="heading"
+                >
+                  
                 </div>
               </div>
               <div
-                className="sc-gZMcBi hjoVMZ"
+                className="sc-gqjmRU eVucs"
               >
                 <button
                   aria-label={null}
@@ -8348,6 +8795,60 @@ exports[`FileProperties components/profile/OrgChart with selectedCard 1`] = `
                   }
                 >
                   -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  hideMenuComponent
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    bool
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    false
+                  </span>
                 </td>
                 <td
                   style={
