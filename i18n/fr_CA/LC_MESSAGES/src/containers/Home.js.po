@@ -20,7 +20,7 @@ msgstr "Recherche quelqu’un "
 
 #: 87:26 src/containers/Home.js
 msgid "Type in a name"
-msgstr "Tappez le nom d’une personne pour le trouver."
+msgstr "Tappez le nom d’une personne pour la trouver."
 
 #: 92:23 src/containers/Home.js
 msgid "This has no exclamation marks"
