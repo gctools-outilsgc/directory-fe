@@ -227,7 +227,7 @@ msgid ""
 msgstr ""
 "Au fur et à mesure que davantage de ministères participent au projet et "
 "que de plus en plus de fonctionnaires créent des profils, nous "
-"éliminerons les faux profils. Commented [A5]: Link to group here"
+"éliminerons les faux profils."
 
 #: 114:17 src/containers/Home.js
 msgid ""
