@@ -42,3 +42,11 @@ msgstr ""
 msgid "Enter_Team_description_fr"
 msgstr ""
 
+#: src/components/profile/team/CreateTeamDialog.js 105:31
+msgid "placeholder_description_en"
+msgstr ""
+
+#: src/components/profile/team/CreateTeamDialog.js 122:31
+msgid "placeholder_description_fr"
+msgstr ""
+

@@ -102,6 +102,7 @@ export class CreateTeamDialog extends Component {
                   }
                 </Label>
                 <InputCharacterCount
+                  placeholder={__('placeholder_description_en')}
                   maxLength={280}
                   id="descriptionEn"
                   type="textarea"
@@ -118,6 +119,7 @@ export class CreateTeamDialog extends Component {
                   {__('Enter_Team_description_fr')}
                 </Label>
                 <InputCharacterCount
+                  placeholder={__('placeholder_description_fr')}
                   maxLength={280}
                   id="descriptionFr"
                   type="textarea"

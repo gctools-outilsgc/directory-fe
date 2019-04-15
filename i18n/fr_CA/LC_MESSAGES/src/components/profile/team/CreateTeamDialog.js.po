@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-03-26 14:37-0400\n"
+"POT-Creation-Date: 2019-04-15 11:45-0400\n"
 "PO-Revision-Date: 2019-03-14 14:44-0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr_CA\n"
@@ -24,7 +24,12 @@ msgstr "Créer une équipe"
 
 #: 107:25 src/components/profile/team/CreateTeamDialog.js
 msgid "What is a team"
-msgstr "Une équipe est un groupe de personnes qui travaillent en étroite collaboration, au même niveau, ou qui exécutent des tâches précises. Tous les membres de l’équipe dont vous êtes le superviseur figureront ensemble sous votre nom dans l’organigramme pour montrer la structure hiérarchique."
+msgstr ""
+"Une équipe est un groupe de personnes qui travaillent en étroite "
+"collaboration, au même niveau, ou qui exécutent des tâches précises. Tous"
+" les membres de l’équipe dont vous êtes le superviseur figureront "
+"ensemble sous votre nom dans l’organigramme pour montrer la structure "
+"hiérarchique."
 
 #: 214:27 src/components/profile/team/CreateTeamDialog.js
 msgid "Save"
@@ -49,4 +54,12 @@ msgstr "Description de l’équipe en anglais"
 #: 118:19 src/components/profile/team/CreateTeamDialog.js
 msgid "Enter_Team_description_fr"
 msgstr "Description de l’équipe en français"
+
+#: 105:31 src/components/profile/team/CreateTeamDialog.js
+msgid "placeholder_description_en"
+msgstr "Rédigez une description en anglais de ce que fait votre équipe."
+
+#: 122:31 src/components/profile/team/CreateTeamDialog.js
+msgid "placeholder_description_fr"
+msgstr "Rédigez une description en français de ce que fait votre équipe."
 
