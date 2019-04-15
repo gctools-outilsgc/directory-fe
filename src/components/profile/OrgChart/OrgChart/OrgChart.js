@@ -294,13 +294,9 @@ class OrgChart extends React.Component {
   render() {
     const UseMenu = this.props.menuComponent || Menu;
     const MoveToActive = this.props.moveToActiveComponent || (props => (
-<<<<<<< HEAD
-      <button {...props}>{
+      <Button {...props}>{
         this.props.moveToActiveText || __('Go to me')}
-      </button>
-=======
-      <Button {...props}>{this.props.moveToActiveText}</Button>
->>>>>>> origin/master
+      </Button>
     ));
     const searchComponent =
       (this.props.searchComponent) ? this.props.searchComponent : undefined;
@@ -357,15 +353,11 @@ OrgChart.defaultProps = {
   miniCardComponent: undefined,
   miniSelectedNode: undefined,
   miniOverlayStyle: undefined,
-<<<<<<< HEAD
-=======
-  moveToActiveText: 'Go to me',
-  hideMenuComponent: false,
->>>>>>> origin/master
   menuComponent: undefined,
   moveToActiveComponent: undefined,
   onMoveToActiveClick: undefined,
   moveToActiveText: '',
+  hideMenuComponent: false,
 };
 
 const nodeShape = PropTypes.shape({
