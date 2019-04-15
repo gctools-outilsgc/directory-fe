@@ -16,7 +16,7 @@ msgstr ""
 
 #: 33:32 src/components/profile/team/YourTeamMemberList.js
 msgid "transfer to new Supervisor"
-msgstr "Transfer supervisor"
+msgstr "Change supervisor"
 
 #: 48:29 src/components/profile/team/YourTeamMemberList.js
 msgid "already supervisor"

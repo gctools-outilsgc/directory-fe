@@ -82,11 +82,11 @@ msgstr "Team members"
 
 #: 311:29 src/components/profile/team/GQLYourTeamsTab.js
 msgid "Tranfer"
-msgstr "Transfer supervisor"
+msgstr "Transfer to other supervisor"
 
 #: 319:29 src/components/profile/team/GQLYourTeamsTab.js
 msgid "edit"
-msgstr "Edit team"
+msgstr "Edit"
 
 #: 372:21 src/components/profile/team/GQLYourTeamsTab.js
 msgid "team"

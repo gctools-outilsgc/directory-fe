@@ -65,9 +65,8 @@ export class CreateTeamDialog extends Component {
                     EN
                   </InputGroupAddon>
                   <Input
-                    placeholder={__('Enter_Team_name_en')}
                     id="nameEn"
-                    aria-label={__('Enter_Team_name_en')}
+                    aria-label={__('Team_name_en')}
                     type="text"
                     value={this.state.nameEn || ''}
                     onChange={(e) => {
@@ -85,9 +84,8 @@ export class CreateTeamDialog extends Component {
                     FR
                   </InputGroupAddon>
                   <Input
-                    placeholder={__('Enter_Team_name_fr')}
                     id="nameFr"
-                    aria-label={__('Enter_Team_name_fr')}
+                    aria-label={__('Team_name_fr')}
                     type="text"
                     value={this.state.nameFr || ''}
                     onChange={(e) => {
@@ -105,7 +103,6 @@ export class CreateTeamDialog extends Component {
                 </Label>
                 <InputCharacterCount
                   maxLength={280}
-                  placeholder={__('Enter_Team_description_en')}
                   id="descriptionEn"
                   type="textarea"
                   value={this.state.descriptionEn || ''}
@@ -122,7 +119,6 @@ export class CreateTeamDialog extends Component {
                 </Label>
                 <InputCharacterCount
                   maxLength={280}
-                  placeholder={__('Enter_Team_description_fr')}
                   id="descriptionFr"
                   type="textarea"
                   value={this.state.descriptionFr || ''}
