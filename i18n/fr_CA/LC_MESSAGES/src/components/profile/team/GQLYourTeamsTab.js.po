@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-04-02 12:59-0400\n"
+"POT-Creation-Date: 2019-04-15 08:26-0400\n"
 "PO-Revision-Date: 2019-03-21 11:35-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr_CA\n"
@@ -20,11 +20,11 @@ msgstr ""
 
 #: 140:9 src/components/profile/team/GQLYourTeamsTab.js
 msgid "Delete Team"
-msgstr ""
+msgstr "Supprimer"
 
 #: 162:19 src/components/profile/team/GQLYourTeamsTab.js
 msgid "Delete/Disband (?) a team"
-msgstr ""
+msgstr "Supprimer l’équipe"
 
 #: 163:26 src/components/profile/team/GQLYourTeamsTab.js
 msgid "Disband %1$s removed."
@@ -34,11 +34,11 @@ msgstr[1] "blo"
 
 #: 164:31 src/components/profile/team/GQLYourTeamsTab.js
 msgid "Are you sure?"
-msgstr ""
+msgstr "Supprimer l’équipe"
 
 #: 165:33 src/components/profile/team/GQLYourTeamsTab.js
 msgid "Cancel"
-msgstr ""
+msgstr "Annuler"
 
 #: 163:26 src/components/profile/team/GQLYourTeamsTab.js
 #, fuzzy, python-format
@@ -56,7 +56,7 @@ msgstr[1] "blo"
 
 #: 166:16 src/components/profile/team/GQLYourTeamsTab.js
 msgid "You are about to disband this team."
-msgstr ""
+msgstr "Vous êtes sur le point de supprimer définitivement l’équipe (nom de l’équipe). Les membres de l’équipe (nom), (nom), (etc.) seront déplacés sous l’équipe Non assigné. Vous serez toujours leur superviseur. Vous ne pouvez pas annuler cette action."
 
 #: 167:25 src/components/profile/team/GQLYourTeamsTab.js
 msgid "These team members will be moved."
@@ -74,25 +74,25 @@ msgstr ""
 
 #: 53:9 src/components/profile/team/GQLYourTeamsTab.js
 msgid "people"
-msgstr ""
+msgstr "Membres de l’équipe"
 
 #: 311:29 src/components/profile/team/GQLYourTeamsTab.js
 msgid "Tranfer"
-msgstr ""
+msgstr "Transférer à un autre superviseur"
 
 #: 319:29 src/components/profile/team/GQLYourTeamsTab.js
 msgid "edit"
-msgstr ""
+msgstr "Modifier"
 
 #: 372:21 src/components/profile/team/GQLYourTeamsTab.js
 msgid "team"
-msgstr ""
+msgstr "Équipes"
 
 #: 65:39 src/components/profile/team/GQLYourTeamsTab.js
 msgid "Add member"
-msgstr ""
+msgstr "Ajouter des membres à l’équipe"
 
 #: 394:51 src/components/profile/team/GQLYourTeamsTab.js
 msgid "Add team"
-msgstr ""
+msgstr "Créer une équipe"
 

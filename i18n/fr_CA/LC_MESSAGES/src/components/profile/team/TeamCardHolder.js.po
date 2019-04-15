@@ -20,13 +20,13 @@ msgstr "Équipes"
 
 #: 93:21 src/components/profile/team/TeamCardHolder.js
 msgid "your_teams"
-msgstr ""
+msgstr "Équipes que je supervise"
 
 #: 106:17 src/components/profile/team/TeamCardHolder.js
 msgid "Org Chart"
-msgstr ""
+msgstr "Organigramme"
 
 #: 82:19 src/components/profile/team/TeamCardHolder.js
 msgid "imin"
-msgstr ""
+msgstr "Équipe"
 

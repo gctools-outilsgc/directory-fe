@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-04-02 12:59-0400\n"
+"POT-Creation-Date: 2019-04-15 08:26-0400\n"
 "PO-Revision-Date: 2019-02-13 11:10-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr_CA\n"
@@ -16,11 +16,11 @@ msgstr ""
 
 #: 102:84 src/components/profile/profileCard/EditProfile.js
 msgid "Full name"
-msgstr "Nom complet"
+msgstr "Nom"
 
 #: 119:80 src/components/profile/profileCard/EditProfile.js
 msgid "Work email"
-msgstr "Courriel de travail"
+msgstr "Courriel"
 
 #: 139:80 src/components/profile/profileCard/EditProfile.js
 msgid "English job title"
@@ -32,7 +32,7 @@ msgstr "Titre du poste en français"
 
 #: 174:80 src/components/profile/profileCard/EditProfile.js
 msgid "Address"
-msgstr "Numéro et nom de rue"
+msgstr "Adresse au travail"
 
 #: 190:80 src/components/profile/profileCard/EditProfile.js
 msgid "City"
@@ -52,35 +52,35 @@ msgstr "Pays"
 
 #: 257:84 src/components/profile/profileCard/EditProfile.js
 msgid "Office Phone Number"
-msgstr "Numéro de téléphone au travail"
+msgstr "Téléphone"
 
 #: 278:80 src/components/profile/profileCard/EditProfile.js
 msgid "Mobile Phone Number"
-msgstr "Numéro de téléphone cellulaire"
+msgstr "Cellulaire"
 
 #: 307:45 src/components/profile/profileCard/EditProfile.js
 msgid "Save"
-msgstr "Enregistrer"
+msgstr "Sauvegarder les changements"
 
 #: 89:37 src/components/profile/profileCard/EditProfile.js
 msgid "Edit Profile"
-msgstr ""
+msgstr "Modifier votre profil"
 
 #: 410:21 src/components/profile/profileCard/EditProfile.js
 msgid "Update department title"
-msgstr ""
+msgstr "Confirmer le changement de ministère"
 
 #: 411:24 src/components/profile/profileCard/EditProfile.js
 msgid "department changing"
-msgstr ""
+msgstr "Vous passerez du %1$s au %2$s. %3$s n’apparaîtra plus comme votre superviseur et vous serez retiré(e) de l’équipe %4$s."
 
 #: 412:33 src/components/profile/profileCard/EditProfile.js
 msgid "Comfirm"
-msgstr ""
+msgstr "Confirmer"
 
 #: 413:35 src/components/profile/profileCard/EditProfile.js
 msgid "Back"
-msgstr ""
+msgstr "Retour"
 
 #: 412:73 src/components/profile/profileCard/EditProfile.js
 msgid "to"
@@ -96,11 +96,11 @@ msgstr ""
 
 #: 415:31 src/components/profile/profileCard/EditProfile.js
 msgid "undo"
-msgstr ""
+msgstr "Vous ne pouvez pas annuler cette action."
 
 #: 254:39 src/components/profile/profileCard/EditProfile.js
 msgid "123 Workplace St."
-msgstr ""
+msgstr "123, rue du Milieu de travail"
 
 #: 306:39 src/components/profile/profileCard/EditProfile.js
 msgid "A1B2C3"

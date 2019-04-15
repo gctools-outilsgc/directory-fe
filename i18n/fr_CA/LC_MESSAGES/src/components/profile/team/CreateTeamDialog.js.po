@@ -16,27 +16,27 @@ msgstr ""
 
 #: 56:13 src/components/profile/team/CreateTeamDialog.js
 msgid "+ Create Team"
-msgstr ""
+msgstr "Créer une équipe"
 
 #: 64:15 src/components/profile/team/CreateTeamDialog.js
 msgid "Create a Team"
-msgstr ""
+msgstr "Créer une équipe"
 
 #: 107:25 src/components/profile/team/CreateTeamDialog.js
 msgid "What is a team"
-msgstr ""
+msgstr "Une équipe est un groupe de personnes qui travaillent en étroite collaboration, au même niveau, ou qui exécutent des tâches précises. Tous les membres de l’équipe dont vous êtes le superviseur figureront ensemble sous votre nom dans l’organigramme pour montrer la structure hiérarchique."
 
 #: 214:27 src/components/profile/team/CreateTeamDialog.js
 msgid "Save"
-msgstr ""
+msgstr "Créer une équipe"
 
 #: 220:27 src/components/profile/team/CreateTeamDialog.js
 msgid "Cancel"
-msgstr ""
+msgstr "Annuler"
 
 #: 62:37 src/components/profile/team/CreateTeamDialog.js
 msgid "Team_name_en"
-msgstr ""
+msgstr "Nom de l’équipe en anglais"
 
 #: 68:33 src/components/profile/team/CreateTeamDialog.js
 msgid "Enter_Team_name_en"
@@ -44,7 +44,7 @@ msgstr ""
 
 #: 82:37 src/components/profile/team/CreateTeamDialog.js
 msgid "Team_name_fr"
-msgstr ""
+msgstr "Nom de l’équipe en français"
 
 #: 88:33 src/components/profile/team/CreateTeamDialog.js
 msgid "Enter_Team_name_fr"
@@ -52,9 +52,9 @@ msgstr ""
 
 #: 102:44 src/components/profile/team/CreateTeamDialog.js
 msgid "Enter_Team_description_en"
-msgstr ""
+msgstr "Description de l’équipe en anglais"
 
 #: 118:19 src/components/profile/team/CreateTeamDialog.js
 msgid "Enter_Team_description_fr"
-msgstr ""
+msgstr "Description de l’équipe en français"
 
