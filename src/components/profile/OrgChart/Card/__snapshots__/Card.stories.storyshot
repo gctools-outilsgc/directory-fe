@@ -96,14 +96,21 @@ exports[`FileProperties components/profile/OrgChart/Card Only required options 1
           </div>
           <div
             aria-level={2}
-            className="sc-iwsKbI eZPJBj"
+            className="sc-iwsKbI jnfQQA"
             role="heading"
           >
             President - NRC
           </div>
+          <div
+            aria-level={2}
+            className="sc-gZMcBi gIcnYQ"
+            role="heading"
+          >
+            
+          </div>
         </div>
         <div
-          className="sc-gZMcBi hjoVMZ"
+          className="sc-gqjmRU eVucs"
         >
           <button
             aria-label={null}
@@ -652,6 +659,60 @@ exports[`FileProperties components/profile/OrgChart/Card Only required options 1
                   }
                 >
                   title
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  team
                 </td>
                 <td
                   style={
@@ -1018,14 +1079,21 @@ exports[`FileProperties components/profile/OrgChart/Card active 1`] = `
           </div>
           <div
             aria-level={2}
-            className="sc-iwsKbI eZPJBj"
+            className="sc-iwsKbI jnfQQA"
             role="heading"
           >
             President - NRC
           </div>
+          <div
+            aria-level={2}
+            className="sc-gZMcBi gIcnYQ"
+            role="heading"
+          >
+            
+          </div>
         </div>
         <div
-          className="sc-gZMcBi hjoVMZ"
+          className="sc-gqjmRU eVucs"
         >
           <button
             aria-label={null}
@@ -1574,6 +1642,60 @@ exports[`FileProperties components/profile/OrgChart/Card active 1`] = `
                   }
                 >
                   title
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  team
                 </td>
                 <td
                   style={
@@ -1940,14 +2062,21 @@ exports[`FileProperties components/profile/OrgChart/Card at position x=150, y=22
           </div>
           <div
             aria-level={2}
-            className="sc-iwsKbI eZPJBj"
+            className="sc-iwsKbI jnfQQA"
             role="heading"
           >
             President - NRC
           </div>
+          <div
+            aria-level={2}
+            className="sc-gZMcBi gIcnYQ"
+            role="heading"
+          >
+            
+          </div>
         </div>
         <div
-          className="sc-gZMcBi hjoVMZ"
+          className="sc-gqjmRU eVucs"
         >
           <button
             aria-label={null}
@@ -2496,6 +2625,60 @@ exports[`FileProperties components/profile/OrgChart/Card at position x=150, y=22
                   }
                 >
                   title
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  team
                 </td>
                 <td
                   style={
@@ -2862,14 +3045,21 @@ exports[`FileProperties components/profile/OrgChart/Card blurred 1`] = `
           </div>
           <div
             aria-level={2}
-            className="sc-iwsKbI eZPJBj"
+            className="sc-iwsKbI jnfQQA"
             role="heading"
           >
             President - NRC
           </div>
+          <div
+            aria-level={2}
+            className="sc-gZMcBi gIcnYQ"
+            role="heading"
+          >
+            
+          </div>
         </div>
         <div
-          className="sc-gZMcBi hjoVMZ"
+          className="sc-gqjmRU eVucs"
         >
           <button
             aria-label={null}
@@ -3418,6 +3608,60 @@ exports[`FileProperties components/profile/OrgChart/Card blurred 1`] = `
                   }
                 >
                   title
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  team
                 </td>
                 <td
                   style={
@@ -3784,14 +4028,21 @@ exports[`FileProperties components/profile/OrgChart/Card blurred and active 1`] 
           </div>
           <div
             aria-level={2}
-            className="sc-iwsKbI eZPJBj"
+            className="sc-iwsKbI jnfQQA"
             role="heading"
           >
             President - NRC
           </div>
+          <div
+            aria-level={2}
+            className="sc-gZMcBi gIcnYQ"
+            role="heading"
+          >
+            
+          </div>
         </div>
         <div
-          className="sc-gZMcBi hjoVMZ"
+          className="sc-gqjmRU eVucs"
         >
           <button
             aria-label={null}
@@ -4340,6 +4591,60 @@ exports[`FileProperties components/profile/OrgChart/Card blurred and active 1`] 
                   }
                 >
                   title
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  team
                 </td>
                 <td
                   style={
@@ -4706,14 +5011,21 @@ exports[`FileProperties components/profile/OrgChart/Card blurred and dragging 1`
           </div>
           <div
             aria-level={2}
-            className="sc-iwsKbI eZPJBj"
+            className="sc-iwsKbI jnfQQA"
             role="heading"
           >
             President - NRC
           </div>
+          <div
+            aria-level={2}
+            className="sc-gZMcBi gIcnYQ"
+            role="heading"
+          >
+            
+          </div>
         </div>
         <div
-          className="sc-gZMcBi hjoVMZ"
+          className="sc-gqjmRU eVucs"
         >
           <button
             aria-label={null}
@@ -5262,6 +5574,60 @@ exports[`FileProperties components/profile/OrgChart/Card blurred and dragging 1`
                   }
                 >
                   title
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  team
                 </td>
                 <td
                   style={
@@ -5628,14 +5994,21 @@ exports[`FileProperties components/profile/OrgChart/Card blurred, active and dra
           </div>
           <div
             aria-level={2}
-            className="sc-iwsKbI eZPJBj"
+            className="sc-iwsKbI jnfQQA"
             role="heading"
           >
             President - NRC
           </div>
+          <div
+            aria-level={2}
+            className="sc-gZMcBi gIcnYQ"
+            role="heading"
+          >
+            
+          </div>
         </div>
         <div
-          className="sc-gZMcBi hjoVMZ"
+          className="sc-gqjmRU eVucs"
         >
           <button
             aria-label={null}
@@ -6184,6 +6557,60 @@ exports[`FileProperties components/profile/OrgChart/Card blurred, active and dra
                   }
                 >
                   title
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  team
                 </td>
                 <td
                   style={
@@ -6550,14 +6977,21 @@ exports[`FileProperties components/profile/OrgChart/Card dragging 1`] = `
           </div>
           <div
             aria-level={2}
-            className="sc-iwsKbI eZPJBj"
+            className="sc-iwsKbI jnfQQA"
             role="heading"
           >
             President - NRC
           </div>
+          <div
+            aria-level={2}
+            className="sc-gZMcBi gIcnYQ"
+            role="heading"
+          >
+            
+          </div>
         </div>
         <div
-          className="sc-gZMcBi hjoVMZ"
+          className="sc-gqjmRU eVucs"
         >
           <button
             aria-label={null}
@@ -7106,6 +7540,60 @@ exports[`FileProperties components/profile/OrgChart/Card dragging 1`] = `
                   }
                 >
                   title
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  team
                 </td>
                 <td
                   style={
@@ -7472,14 +7960,21 @@ exports[`FileProperties components/profile/OrgChart/Card dragging and active 1`]
           </div>
           <div
             aria-level={2}
-            className="sc-iwsKbI eZPJBj"
+            className="sc-iwsKbI jnfQQA"
             role="heading"
           >
             President - NRC
           </div>
+          <div
+            aria-level={2}
+            className="sc-gZMcBi gIcnYQ"
+            role="heading"
+          >
+            
+          </div>
         </div>
         <div
-          className="sc-gZMcBi hjoVMZ"
+          className="sc-gqjmRU eVucs"
         >
           <button
             aria-label={null}
@@ -8028,6 +8523,60 @@ exports[`FileProperties components/profile/OrgChart/Card dragging and active 1`]
                   }
                 >
                   title
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  team
                 </td>
                 <td
                   style={
@@ -8394,14 +8943,21 @@ exports[`FileProperties components/profile/OrgChart/Card with a card click url 1
           </div>
           <div
             aria-level={2}
-            className="sc-iwsKbI eZPJBj"
+            className="sc-iwsKbI jnfQQA"
             role="heading"
           >
             President - NRC
           </div>
+          <div
+            aria-level={2}
+            className="sc-gZMcBi gIcnYQ"
+            role="heading"
+          >
+            
+          </div>
         </div>
         <div
-          className="sc-gZMcBi hjoVMZ"
+          className="sc-gqjmRU eVucs"
         >
           <button
             aria-label={null}
@@ -9003,6 +9559,60 @@ exports[`FileProperties components/profile/OrgChart/Card with a card click url 1
                     }
                   }
                 >
+                  team
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
                   blurred
                 </td>
                 <td
@@ -9316,14 +9926,21 @@ exports[`FileProperties components/profile/OrgChart/Card with click handlers 1`]
           </div>
           <div
             aria-level={2}
-            className="sc-iwsKbI eZPJBj"
+            className="sc-iwsKbI jnfQQA"
             role="heading"
           >
             President - NRC
           </div>
+          <div
+            aria-level={2}
+            className="sc-gZMcBi gIcnYQ"
+            role="heading"
+          >
+            
+          </div>
         </div>
         <div
-          className="sc-gZMcBi hjoVMZ"
+          className="sc-gqjmRU eVucs"
         >
           <button
             aria-label={null}
@@ -9872,6 +10489,60 @@ exports[`FileProperties components/profile/OrgChart/Card with click handlers 1`]
                   }
                 >
                   title
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    string
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  -
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  <span>
+                    
+                  </span>
+                </td>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                />
+              </tr>
+              <tr>
+                <td
+                  style={
+                    Object {
+                      "paddingRight": 10,
+                      "verticalAlign": "top",
+                    }
+                  }
+                >
+                  team
                 </td>
                 <td
                   style={

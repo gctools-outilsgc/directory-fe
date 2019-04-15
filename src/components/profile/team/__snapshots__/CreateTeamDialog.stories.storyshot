@@ -98,7 +98,7 @@ exports[`FileProperties components/profile/team/CreateTeamDialog isOpen 1`] = `
                   className=""
                 >
                   <div
-                    className="sc-gqjmRU kuzixd"
+                    className="sc-VigVT bcUXaY"
                   >
                     <p>
                       en_CA: What is a team
@@ -620,7 +620,7 @@ exports[`FileProperties components/profile/team/CreateTeamDialog onCancel 1`] = 
                   className=""
                 >
                   <div
-                    className="sc-gqjmRU kuzixd"
+                    className="sc-VigVT bcUXaY"
                   >
                     <p>
                       en_CA: What is a team
@@ -1142,7 +1142,7 @@ exports[`FileProperties components/profile/team/CreateTeamDialog onSave 1`] = `
                   className=""
                 >
                   <div
-                    className="sc-gqjmRU kuzixd"
+                    className="sc-VigVT bcUXaY"
                   >
                     <p>
                       en_CA: What is a team

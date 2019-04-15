@@ -58,7 +58,7 @@ exports[`FileProperties components/profile/team/TeamAvatar Default Team 1`] = `
     style={Object {}}
   >
     <div
-      className="sc-VigVT cRoXhp"
+      className="sc-jTzLTM cFySku"
     >
       <span>
         DT
@@ -334,7 +334,7 @@ exports[`FileProperties components/profile/team/TeamAvatar Letter 1`] = `
     style={Object {}}
   >
     <div
-      className="sc-VigVT cRoXhp"
+      className="sc-jTzLTM cFySku"
     >
       <span>
         LL
@@ -610,7 +610,7 @@ exports[`FileProperties components/profile/team/TeamAvatar The very long team na
     style={Object {}}
   >
     <div
-      className="sc-VigVT eHkmTw"
+      className="sc-jTzLTM cTddiT"
     >
       <span>
         TN
@@ -886,7 +886,7 @@ exports[`FileProperties components/profile/team/TeamAvatar Word 1`] = `
     style={Object {}}
   >
     <div
-      className="sc-VigVT cRoXhp"
+      className="sc-jTzLTM cFySku"
     >
       <span>
         WD
@@ -1162,7 +1162,7 @@ exports[`FileProperties components/profile/team/TeamAvatar lower case 1`] = `
     style={Object {}}
   >
     <div
-      className="sc-VigVT eHkmTw"
+      className="sc-jTzLTM cTddiT"
     >
       <span>
         LC

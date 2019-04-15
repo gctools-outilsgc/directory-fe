@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { Button } from 'reactstrap';
 import './css/org_chart.css';
 
 import CardContainer from '../CardContainer/CardContainer';
@@ -294,9 +294,13 @@ class OrgChart extends React.Component {
   render() {
     const UseMenu = this.props.menuComponent || Menu;
     const MoveToActive = this.props.moveToActiveComponent || (props => (
+<<<<<<< HEAD
       <button {...props}>{
         this.props.moveToActiveText || __('Go to me')}
       </button>
+=======
+      <Button {...props}>{this.props.moveToActiveText}</Button>
+>>>>>>> origin/master
     ));
     const searchComponent =
       (this.props.searchComponent) ? this.props.searchComponent : undefined;
@@ -304,10 +308,11 @@ class OrgChart extends React.Component {
     return (
       <div>
         {this.renderMiniChart()}
+        {!this.props.hideMenuComponent &&
         <UseMenu>
           <MoveToActive onClick={this.handleCentreClick} />
           {searchComponent}
-        </UseMenu>
+        </UseMenu>}
         <div className={`${cssPrefix}-chart`}>
           <CardContainer
             selectedCard={this.props.selectedCard}
@@ -352,6 +357,11 @@ OrgChart.defaultProps = {
   miniCardComponent: undefined,
   miniSelectedNode: undefined,
   miniOverlayStyle: undefined,
+<<<<<<< HEAD
+=======
+  moveToActiveText: 'Go to me',
+  hideMenuComponent: false,
+>>>>>>> origin/master
   menuComponent: undefined,
   moveToActiveComponent: undefined,
   onMoveToActiveClick: undefined,
@@ -430,6 +440,8 @@ OrgChart.propTypes = {
   miniStyle: PropTypes.shape({}),
   /** search component */
   searchComponent: PropTypes.node,
+  /** Hide built-in menu */
+  hideMenuComponent: PropTypes.bool,
   /** Custom component to alter the built-in menu */
   menuComponent: PropTypes.func,
   /** Text for built-in "move to active" button  */

@@ -112,7 +112,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer Only required 
             }
           >
             "
-            CardContainer
+            LocalizedCardContainer
             " Component
           </h3>
           <table>
@@ -953,6 +953,10 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
         >
           <path
             className=""
+            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+          />
+          <path
+            className=""
             d="M 995 75 v 30 H 175 V 135"
           />
           <path
@@ -973,7 +977,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
           />
           <path
             className=""
-            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
           />
           <path
             className=""
@@ -986,10 +990,6 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
           <path
             className=""
             d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
-          />
-          <path
-            className=""
-            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
           />
           <path
             className=""
@@ -1031,14 +1031,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              President - NRC
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -1084,14 +1091,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice President, Corporate Services and Chief Financial Officer
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -1137,14 +1151,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Departmental Science Advisor
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -1190,14 +1211,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice President, IRAP
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -1243,14 +1271,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice-President, HRB
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -1296,14 +1331,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              VP, Transportation and Manufacturing
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -1349,14 +1391,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice-President, Emerging Technologies
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -1402,14 +1451,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Chief of Staff, Office of the President
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -1455,14 +1511,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              VP, Business and Professional Services
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -1508,14 +1571,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice-President, Engineering
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -1561,14 +1631,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Secretary General
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -1614,14 +1691,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              VP, Life Sciences
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -1667,14 +1751,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Special Advisor, Group of Head of Federal Agencies
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -1731,7 +1822,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer With no select
             }
           >
             "
-            CardContainer
+            LocalizedCardContainer
             " Component
           </h3>
           <table>
@@ -2568,6 +2659,10 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
         >
           <path
             className=""
+            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+          />
+          <path
+            className=""
             d="M 995 75 v 30 H 175 V 135"
           />
           <path
@@ -2588,7 +2683,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
           />
           <path
             className=""
-            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
           />
           <path
             className=""
@@ -2601,10 +2696,6 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
           <path
             className=""
             d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
-          />
-          <path
-            className=""
-            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
           />
           <path
             className=""
@@ -2646,14 +2737,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              President - NRC
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -2699,14 +2797,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice President, Corporate Services and Chief Financial Officer
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -2752,14 +2857,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Departmental Science Advisor
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -2805,14 +2917,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice President, IRAP
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -2858,14 +2977,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice-President, HRB
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -2911,14 +3037,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              VP, Transportation and Manufacturing
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -2964,14 +3097,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice-President, Emerging Technologies
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -3017,14 +3157,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Chief of Staff, Office of the President
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -3070,14 +3217,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              VP, Business and Professional Services
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -3123,14 +3277,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice-President, Engineering
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -3176,14 +3337,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Secretary General
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -3229,14 +3397,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              VP, Life Sciences
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -3282,14 +3457,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Special Advisor, Group of Head of Federal Agencies
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -3346,7 +3528,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with button ti
             }
           >
             "
-            CardContainer
+            LocalizedCardContainer
             " Component
           </h3>
           <table>
@@ -4183,6 +4365,10 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
         >
           <path
             className=""
+            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+          />
+          <path
+            className=""
             d="M 995 75 v 30 H 175 V 135"
           />
           <path
@@ -4203,7 +4389,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
           />
           <path
             className=""
-            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
           />
           <path
             className=""
@@ -4216,10 +4402,6 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
           <path
             className=""
             d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
-          />
-          <path
-            className=""
-            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
           />
           <path
             className=""
@@ -4261,14 +4443,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              President - NRC
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -4314,14 +4503,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice President, Corporate Services and Chief Financial Officer
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -4367,14 +4563,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Departmental Science Advisor
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -4420,14 +4623,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice President, IRAP
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -4473,14 +4683,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice-President, HRB
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -4526,14 +4743,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              VP, Transportation and Manufacturing
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -4579,14 +4803,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice-President, Emerging Technologies
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -4632,14 +4863,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Chief of Staff, Office of the President
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -4685,14 +4923,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              VP, Business and Professional Services
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -4738,14 +4983,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice-President, Engineering
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -4791,14 +5043,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Secretary General
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -4844,14 +5103,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              VP, Life Sciences
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -4897,14 +5163,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Special Advisor, Group of Head of Federal Agencies
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -4961,7 +5234,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with cardClick
             }
           >
             "
-            CardContainer
+            LocalizedCardContainer
             " Component
           </h3>
           <table>
@@ -5798,6 +6071,10 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
         >
           <path
             className=""
+            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+          />
+          <path
+            className=""
             d="M 995 75 v 30 H 175 V 135"
           />
           <path
@@ -5818,7 +6095,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
           />
           <path
             className=""
-            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
           />
           <path
             className=""
@@ -5831,10 +6108,6 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
           <path
             className=""
             d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
-          />
-          <path
-            className=""
-            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
           />
           <path
             className=""
@@ -5876,14 +6149,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              President - NRC
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -5929,14 +6209,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice President, Corporate Services and Chief Financial Officer
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -5982,14 +6269,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Departmental Science Advisor
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -6035,14 +6329,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice President, IRAP
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -6088,14 +6389,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice-President, HRB
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -6141,14 +6449,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              VP, Transportation and Manufacturing
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -6194,14 +6509,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice-President, Emerging Technologies
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -6247,14 +6569,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Chief of Staff, Office of the President
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -6300,14 +6629,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              VP, Business and Professional Services
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -6353,14 +6689,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice-President, Engineering
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -6406,14 +6749,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Secretary General
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -6459,14 +6809,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              VP, Life Sciences
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -6512,14 +6869,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Special Advisor, Group of Head of Federal Agencies
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -6576,7 +6940,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with click han
             }
           >
             "
-            CardContainer
+            LocalizedCardContainer
             " Component
           </h3>
           <table>
@@ -7417,6 +7781,10 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
         >
           <path
             className=""
+            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+          />
+          <path
+            className=""
             d="M 995 75 v 30 H 175 V 135"
           />
           <path
@@ -7437,7 +7805,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
           />
           <path
             className=""
-            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
           />
           <path
             className=""
@@ -7450,10 +7818,6 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
           <path
             className=""
             d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
-          />
-          <path
-            className=""
-            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
           />
           <path
             className=""
@@ -7495,14 +7859,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              President - NRC
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -7548,14 +7919,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice President, Corporate Services and Chief Financial Officer
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -7601,14 +7979,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Departmental Science Advisor
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -7654,14 +8039,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice President, IRAP
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -7707,14 +8099,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice-President, HRB
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -7760,14 +8159,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              VP, Transportation and Manufacturing
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -7813,14 +8219,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice-President, Emerging Technologies
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -7866,14 +8279,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Chief of Staff, Office of the President
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -7919,14 +8339,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              VP, Business and Professional Services
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -7972,14 +8399,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice-President, Engineering
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -8025,14 +8459,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Secretary General
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -8078,14 +8519,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              VP, Life Sciences
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -8131,14 +8579,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Special Advisor, Group of Head of Federal Agencies
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -8195,7 +8650,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with custom st
             }
           >
             "
-            CardContainer
+            LocalizedCardContainer
             " Component
           </h3>
           <table>
@@ -9032,6 +9487,10 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
         >
           <path
             className=""
+            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+          />
+          <path
+            className=""
             d="M 995 75 v 30 H 175 V 135"
           />
           <path
@@ -9052,7 +9511,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
           />
           <path
             className=""
-            d="M 995 75 v 30 h -205 V 230 H 175 V 270"
+            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
           />
           <path
             className=""
@@ -9065,10 +9524,6 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
           <path
             className=""
             d="M 995 75 v 30 h -205 V 230 H 1405 V 270"
-          />
-          <path
-            className=""
-            d="M 995 75 v 30 h -205 V 230 H 1815 V 270"
           />
           <path
             className=""
@@ -9110,14 +9565,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              President - NRC
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -9163,14 +9625,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice President, Corporate Services and Chief Financial Officer
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -9216,14 +9685,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Departmental Science Advisor
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -9269,14 +9745,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice President, IRAP
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -9322,14 +9805,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice-President, HRB
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -9375,14 +9865,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              VP, Transportation and Manufacturing
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -9428,14 +9925,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice-President, Emerging Technologies
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -9481,14 +9985,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Chief of Staff, Office of the President
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -9534,14 +10045,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              VP, Business and Professional Services
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -9587,14 +10105,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Vice-President, Engineering
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -9640,14 +10165,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Secretary General
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -9693,14 +10225,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              VP, Life Sciences
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -9746,14 +10285,21 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
             </div>
             <div
               aria-level={2}
-              className="sc-iwsKbI eZPJBj"
+              className="sc-iwsKbI jnfQQA"
               role="heading"
             >
-              Special Advisor, Group of Head of Federal Agencies
+              
+            </div>
+            <div
+              aria-level={2}
+              className="sc-gZMcBi gIcnYQ"
+              role="heading"
+            >
+              
             </div>
           </div>
           <div
-            className="sc-gZMcBi hjoVMZ"
+            className="sc-gqjmRU eVucs"
           >
             <button
               aria-label={null}
@@ -9810,7 +10356,7 @@ exports[`FileProperties components/profile/OrgChart/CardContainer with selectedC
             }
           >
             "
-            CardContainer
+            LocalizedCardContainer
             " Component
           </h3>
           <table>

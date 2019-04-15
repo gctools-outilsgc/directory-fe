@@ -17,7 +17,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with avata
         <div>
           <img
             alt="No photo"
-            className="avatar avatar-lg rounded-circle"
+            className="avatar rounded-circle avatar-"
             src="https://avatars0.githubusercontent.com/u/7603237?s=460&v=4"
           />
         </div>
@@ -877,6 +877,60 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with avata
                     }
                   />
                 </tr>
+                <tr>
+                  <td
+                    style={
+                      Object {
+                        "paddingRight": 10,
+                        "verticalAlign": "top",
+                      }
+                    }
+                  >
+                    size
+                  </td>
+                  <td
+                    style={
+                      Object {
+                        "paddingRight": 10,
+                        "verticalAlign": "top",
+                      }
+                    }
+                  >
+                    <span>
+                      string
+                    </span>
+                  </td>
+                  <td
+                    style={
+                      Object {
+                        "paddingRight": 10,
+                        "verticalAlign": "top",
+                      }
+                    }
+                  >
+                    -
+                  </td>
+                  <td
+                    style={
+                      Object {
+                        "paddingRight": 10,
+                        "verticalAlign": "top",
+                      }
+                    }
+                  >
+                    <span>
+                      
+                    </span>
+                  </td>
+                  <td
+                    style={
+                      Object {
+                        "paddingRight": 10,
+                        "verticalAlign": "top",
+                      }
+                    }
+                  />
+                </tr>
               </tbody>
             </table>
           </div>
@@ -904,7 +958,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
         <div>
           <img
             alt="No photo"
-            className="avatar avatar-lg rounded-circle"
+            className="avatar rounded-circle avatar-"
             src="user.gif"
           />
         </div>
@@ -1725,6 +1779,60 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
                     }
                   />
                 </tr>
+                <tr>
+                  <td
+                    style={
+                      Object {
+                        "paddingRight": 10,
+                        "verticalAlign": "top",
+                      }
+                    }
+                  >
+                    size
+                  </td>
+                  <td
+                    style={
+                      Object {
+                        "paddingRight": 10,
+                        "verticalAlign": "top",
+                      }
+                    }
+                  >
+                    <span>
+                      string
+                    </span>
+                  </td>
+                  <td
+                    style={
+                      Object {
+                        "paddingRight": 10,
+                        "verticalAlign": "top",
+                      }
+                    }
+                  >
+                    -
+                  </td>
+                  <td
+                    style={
+                      Object {
+                        "paddingRight": 10,
+                        "verticalAlign": "top",
+                      }
+                    }
+                  >
+                    <span>
+                      
+                    </span>
+                  </td>
+                  <td
+                    style={
+                      Object {
+                        "paddingRight": 10,
+                        "verticalAlign": "top",
+                      }
+                    }
+                  />
+                </tr>
               </tbody>
             </table>
           </div>
@@ -1752,7 +1860,7 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
         <div>
           <img
             alt="No photo"
-            className="avatar avatar-lg rounded-circle"
+            className="avatar rounded-circle avatar-"
             src="user.gif"
           />
         </div>
@@ -2363,6 +2471,60 @@ exports[`FileProperties components/core/UserAvatar Authenticated User with no av
                     }
                   />
                 </tr>
+                <tr>
+                  <td
+                    style={
+                      Object {
+                        "paddingRight": 10,
+                        "verticalAlign": "top",
+                      }
+                    }
+                  >
+                    size
+                  </td>
+                  <td
+                    style={
+                      Object {
+                        "paddingRight": 10,
+                        "verticalAlign": "top",
+                      }
+                    }
+                  >
+                    <span>
+                      string
+                    </span>
+                  </td>
+                  <td
+                    style={
+                      Object {
+                        "paddingRight": 10,
+                        "verticalAlign": "top",
+                      }
+                    }
+                  >
+                    -
+                  </td>
+                  <td
+                    style={
+                      Object {
+                        "paddingRight": 10,
+                        "verticalAlign": "top",
+                      }
+                    }
+                  >
+                    <span>
+                      
+                    </span>
+                  </td>
+                  <td
+                    style={
+                      Object {
+                        "paddingRight": 10,
+                        "verticalAlign": "top",
+                      }
+                    }
+                  />
+                </tr>
               </tbody>
             </table>
           </div>
@@ -2390,7 +2552,7 @@ exports[`FileProperties components/core/UserAvatar Not logged in not own profile
         <div>
           <img
             alt="No photo"
-            className="avatar avatar-lg rounded-circle"
+            className="avatar rounded-circle avatar-"
             src="user.gif"
           />
         </div>
@@ -3001,6 +3163,60 @@ exports[`FileProperties components/core/UserAvatar Not logged in not own profile
                     }
                   />
                 </tr>
+                <tr>
+                  <td
+                    style={
+                      Object {
+                        "paddingRight": 10,
+                        "verticalAlign": "top",
+                      }
+                    }
+                  >
+                    size
+                  </td>
+                  <td
+                    style={
+                      Object {
+                        "paddingRight": 10,
+                        "verticalAlign": "top",
+                      }
+                    }
+                  >
+                    <span>
+                      string
+                    </span>
+                  </td>
+                  <td
+                    style={
+                      Object {
+                        "paddingRight": 10,
+                        "verticalAlign": "top",
+                      }
+                    }
+                  >
+                    -
+                  </td>
+                  <td
+                    style={
+                      Object {
+                        "paddingRight": 10,
+                        "verticalAlign": "top",
+                      }
+                    }
+                  >
+                    <span>
+                      
+                    </span>
+                  </td>
+                  <td
+                    style={
+                      Object {
+                        "paddingRight": 10,
+                        "verticalAlign": "top",
+                      }
+                    }
+                  />
+                </tr>
               </tbody>
             </table>
           </div>
@@ -3028,7 +3244,7 @@ exports[`FileProperties components/core/UserAvatar With default options 1`] = `
         <div>
           <img
             alt="No photo"
-            className="avatar avatar-lg rounded-circle"
+            className="avatar rounded-circle avatar-"
             src="user.gif"
           />
         </div>
@@ -3539,6 +3755,60 @@ exports[`FileProperties components/core/UserAvatar With default options 1`] = `
                     }
                   >
                     myGcID
+                  </td>
+                  <td
+                    style={
+                      Object {
+                        "paddingRight": 10,
+                        "verticalAlign": "top",
+                      }
+                    }
+                  >
+                    <span>
+                      string
+                    </span>
+                  </td>
+                  <td
+                    style={
+                      Object {
+                        "paddingRight": 10,
+                        "verticalAlign": "top",
+                      }
+                    }
+                  >
+                    -
+                  </td>
+                  <td
+                    style={
+                      Object {
+                        "paddingRight": 10,
+                        "verticalAlign": "top",
+                      }
+                    }
+                  >
+                    <span>
+                      
+                    </span>
+                  </td>
+                  <td
+                    style={
+                      Object {
+                        "paddingRight": 10,
+                        "verticalAlign": "top",
+                      }
+                    }
+                  />
+                </tr>
+                <tr>
+                  <td
+                    style={
+                      Object {
+                        "paddingRight": 10,
+                        "verticalAlign": "top",
+                      }
+                    }
+                  >
+                    size
                   </td>
                   <td
                     style={

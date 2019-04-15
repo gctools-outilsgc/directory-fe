@@ -60,6 +60,13 @@ const CardName = styled.div`
 
 const CardTitle = styled.div`
   font-family: "nunito", sans-serif;
+  font-size: 90%;
+  color: #6c757d!important;
+  font-weight: 800;
+`;
+
+const CardTeam = styled.div`
+  font-family: "nunito", sans-serif;
   font-size: 80%;
   color: #6c757d!important;
   font-weight: 400;
@@ -153,6 +160,12 @@ class Card extends React.PureComponent {
           >
             {this.props.title}
           </CardTitle>
+          <CardTeam
+            role="heading"
+            aria-level={2}
+          >
+            {this.props.team}
+          </CardTeam>
         </CardInfo>
         <CardButton>
           <Button
@@ -180,6 +193,7 @@ Card.defaultProps = {
   position: { },
   avatar: GenericAvatar,
   title: '',
+  team: '',
 };
 
 Card.propTypes = {
@@ -201,6 +215,8 @@ Card.propTypes = {
   name: PropTypes.string.isRequired,
   /** User's title */
   title: PropTypes.string,
+  /** User's team name */
+  team: PropTypes.string,
   /** true if the card should be blurred */
   blurred: PropTypes.bool,
   /** true if the card should be displayed as "active" */
