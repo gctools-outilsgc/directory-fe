@@ -20,7 +20,7 @@ msgstr ""
 
 #: 140:9 src/components/profile/team/GQLYourTeamsTab.js
 msgid "Delete Team"
-msgstr ""
+msgstr "Delete"
 
 #: 162:19 src/components/profile/team/GQLYourTeamsTab.js
 msgid "Delete/Disband (?) a team"
