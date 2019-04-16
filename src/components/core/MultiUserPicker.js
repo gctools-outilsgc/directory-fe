@@ -105,11 +105,11 @@ const MultiUserPicker = (props) => {
   const [selectedIds, setSelectedIds] = useState([]);
   const {
     isOpen,
-    title,
-    bodyText,
-    primaryButtonText,
+    // title,
+    // bodyText,
+    // primaryButtonText,
     primaryButtonClick,
-    secondaryButtonText,
+    // secondaryButtonText,
     secondaryButtonClick,
     closeButtonClick,
     onEnter,
@@ -138,6 +138,12 @@ const MultiUserPicker = (props) => {
       resetState();
     }
   };
+  const title = props.title || __('title');
+  const bodyText = props.bodyText || __('bodyText');
+  const primaryButtonText = props.primaryButtonText || __('primaryButtonText');
+  const secondaryButtonText = props.secondaryButtonText
+    || __('secondaryButtonText');
+
   return (
     <div>
       <Modal
@@ -202,13 +208,11 @@ const MultiUserPicker = (props) => {
 
 MultiUserPicker.defaultProps = {
   isOpen: false,
-  title: '1. Title',
-  bodyText: `2. Paragraph text.  Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit. Aenean eu porttitor ex. Nam luctus tincidunt dui, sit
-    amet semper mi consequat euser.`,
-  primaryButtonText: '4. Primary action',
+  title: '',
+  bodyText: '',
+  primaryButtonText: '',
   primaryButtonClick: () => {},
-  secondaryButtonText: 'Cancel',
+  secondaryButtonText: '',
   secondaryButtonClick: () => {},
   closeButtonClick: () => {},
   onEnter: undefined,

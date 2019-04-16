@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-04-15 08:26-0400\n"
+"POT-Creation-Date: 2019-04-16 08:36-0400\n"
 "PO-Revision-Date: 2019-03-18 12:50-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr_CA\n"
@@ -28,19 +28,19 @@ msgstr "L'utilisateur sélectionné n'a pas d'équipe par défaut."
 
 #: 72:21 src/components/profile/team/YourTeamMemberList.js
 msgid "Transfer a team member to a new Supervisor"
-msgstr "transfert à un nouveau superviseur"
+msgstr "Confirmer le transfert au nouveau superviseur"
 
 #: 73:24 src/components/profile/team/YourTeamMemberList.js
 msgid "Explicit information about the transfer"
-msgstr ""
+msgstr "Vous transférez (nom de l’employé(e)) à l’équipe de (nom du nouveau superviseur). Vous ne serez plus le superviseur de (nom de l’employé(e)). Une fois que vous aurez confirmé ce transfert, vous ne pourrez plus déplacer cette personne vers une autre équipe ou un autre superviseur."
 
 #: 74:33 src/components/profile/team/YourTeamMemberList.js
 msgid "Accept"
-msgstr ""
+msgstr "Confirmer"
 
 #: 75:35 src/components/profile/team/YourTeamMemberList.js
 msgid "Back"
-msgstr ""
+msgstr "Retour"
 
 #: 134:9 src/components/profile/team/YourTeamMemberList.js
 msgid "transfer to new Team"
@@ -49,4 +49,12 @@ msgstr "Changer d’équipe"
 #: 252:9 src/components/profile/team/YourTeamMemberList.js
 msgid "There are no members in this team"
 msgstr "Ajoutez des membres à votre équipe."
+
+#: 169:21 src/components/profile/team/YourTeamMemberList.js
+msgid "Transfer a team member to a new team"
+msgstr "Confirmer le changement d’équipe"
+
+#: 170:24 src/components/profile/team/YourTeamMemberList.js
+msgid "Explicit information about the transfer team"
+msgstr "Vous changez (nom de l’employé(e)) de l’équipe (nom de l’équipe actuelle) à l’équipe (nouveau nom de l’équipe). Vous pouvez changer l’équipe à laquelle un membre appartient en tout temps."
 

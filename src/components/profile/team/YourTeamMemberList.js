@@ -166,8 +166,8 @@ const TransferToNewTeamAction = (props) => {
               transferredUser={profile}
               destination={confirm}
               isOpen={!!confirm}
-              title={__('Transfer a team member to a new Supervisor')}
-              bodyText={__('Explicit information about the transfer')}
+              title={__('Transfer a team member to a new team')}
+              bodyText={__('Explicit information about the transfer team')}
               primaryButtonText={__('Accept')}
               secondaryButtonText={__('Back')}
               secondaryButtonClick={() => { setConfirm(undefined); }}

@@ -1,0 +1,32 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-04-16 07:41-0400\n"
+"PO-Revision-Date: 2019-04-16 07:41-0400\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en_CA\n"
+"Language-Team: en_CA <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: 141:31 src/components/core/MultiUserPicker.js
+msgid "title"
+msgstr "Add team members"
+
+#: 142:37 src/components/core/MultiUserPicker.js
+msgid "bodyText"
+msgstr "Select at least one person to join the (team name) team."
+
+#: 143:55 src/components/core/MultiUserPicker.js
+msgid "primaryButtonText"
+msgstr "Add to team"
+
+#: 144:59 src/components/core/MultiUserPicker.js
+msgid "secondaryButtonText"
+msgstr "Cancel"
+
