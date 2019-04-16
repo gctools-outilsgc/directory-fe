@@ -105,6 +105,7 @@ const MultiUserPicker = (props) => {
   const [selectedIds, setSelectedIds] = useState([]);
   const {
     isOpen,
+    teamName,
     // title,
     // bodyText,
     // primaryButtonText,
@@ -139,7 +140,7 @@ const MultiUserPicker = (props) => {
     }
   };
   const title = props.title || __('title');
-  const bodyText = props.bodyText || __('bodyText');
+  const bodyText = props.bodyText || ___(__('bodyText'), teamName);
   const primaryButtonText = props.primaryButtonText || __('primaryButtonText');
   const secondaryButtonText = props.secondaryButtonText
     || __('secondaryButtonText');
@@ -208,6 +209,7 @@ const MultiUserPicker = (props) => {
 
 MultiUserPicker.defaultProps = {
   isOpen: false,
+  teamName: '',
   title: '',
   bodyText: '',
   primaryButtonText: '',
@@ -225,6 +227,7 @@ MultiUserPicker.defaultProps = {
 MultiUserPicker.propTypes = {
   /** Boolean to control the state of the modal */
   isOpen: PropTypes.bool,
+  teamName: PropTypes.string,
   /** Title of dialog */
   title: PropTypes.string,
   /** Body text of dialog */

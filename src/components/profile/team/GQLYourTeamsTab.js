@@ -46,6 +46,7 @@ const TeamList = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const {
     teamId,
+    teamName,
     members,
     otherMembers,
     profile,
@@ -71,6 +72,7 @@ const TeamList = (props) => {
             {updateTeam => (
               <MultiUserPicker
                 isOpen={isOpen}
+                teamName={teamName}
                 users={otherMembers.map(m => Object.assign(
                   {},
                   m,
@@ -126,6 +128,7 @@ TeamList.propTypes = {
     title: PropTypes.string.isRequired,
   })).isRequired,
   teamId: PropTypes.string.isRequired,
+  teamName: PropTypes.string.isRequired,
 };
 
 // eslint-disable-next-line max-len
@@ -350,11 +353,13 @@ class GQLYouTeamsTab extends React.Component {
           });
           const tabPanel = sortedTeams.map(({
             id,
+            nameEn,
             members,
           }) => (
             <TeamList
               profile={userInfo}
               teamId={id}
+              teamName={nameEn}
               key={`teamlist_${id}`}
               members={members.map(m => Object.assign(
                 {},

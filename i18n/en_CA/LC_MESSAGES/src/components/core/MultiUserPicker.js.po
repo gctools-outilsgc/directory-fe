@@ -20,7 +20,7 @@ msgstr "Add team members"
 
 #: 142:37 src/components/core/MultiUserPicker.js
 msgid "bodyText"
-msgstr "Select at least one person to join the (team name) team."
+msgstr "Select at least one person to join the %1$s team."
 
 #: 143:55 src/components/core/MultiUserPicker.js
 msgid "primaryButtonText"
