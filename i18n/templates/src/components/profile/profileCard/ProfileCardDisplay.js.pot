@@ -21,16 +21,3 @@ msgstr ""
 #: src/components/profile/profileCard/ProfileCardDisplay.js 52:67
 msgid "Address"
 msgstr ""
-
-#: src/components/profile/profileCard/ProfileCardDisplay.js 29:41
-msgid "No title"
-msgstr ""
-
-#: src/components/profile/profileCard/ProfileCardDisplay.js 48:55
-msgid "No Offce Phone"
-msgstr ""
-
-#: src/components/profile/profileCard/ProfileCardDisplay.js 56:55
-msgid "No Mobile Phone"
-msgstr ""
-
