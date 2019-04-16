@@ -32,7 +32,7 @@ msgstr "Confirmer le transfert au nouveau superviseur"
 
 #: 73:24 src/components/profile/team/YourTeamMemberList.js
 msgid "Explicit information about the transfer"
-msgstr "Vous transférez (nom de l’employé(e)) à l’équipe de (nom du nouveau superviseur). Vous ne serez plus le superviseur de (nom de l’employé(e)). Une fois que vous aurez confirmé ce transfert, vous ne pourrez plus déplacer cette personne vers une autre équipe ou un autre superviseur."
+msgstr "Vous transférez %1$s à l’équipe de %2$s. Vous ne serez plus le superviseur de %1$s. Une fois que vous aurez confirmé ce transfert, vous ne pourrez plus déplacer cette personne vers une autre équipe ou un autre superviseur."
 
 #: 74:33 src/components/profile/team/YourTeamMemberList.js
 msgid "Accept"

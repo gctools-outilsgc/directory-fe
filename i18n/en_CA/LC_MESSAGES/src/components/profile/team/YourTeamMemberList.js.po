@@ -32,7 +32,7 @@ msgstr "Confirm transfer to new supervisor"
 
 #: 73:24 src/components/profile/team/YourTeamMemberList.js
 msgid "Explicit information about the transfer"
-msgstr "You are transferring (employee's name)  to (new supers name)'s team. You will no longer be (employee’s name)’s supervisor. Once you confirm this transfer, you will no longer be able to move this person to another team or supervisor."
+msgstr "You are transferring %1$s  to %2$s's team. You will no longer be %1$s’s supervisor. Once you confirm this transfer, you will no longer be able to move this person to another team or supervisor."
 
 #: 74:33 src/components/profile/team/YourTeamMemberList.js
 msgid "Accept"
