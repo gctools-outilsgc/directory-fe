@@ -171,7 +171,12 @@ const TransferToNewTeamAction = (props) => {
               destination={confirm}
               isOpen={!!confirm}
               title={__('Transfer a team member to a new team')}
-              bodyText={__('Explicit information about the transfer team')}
+              bodyText={___(
+                __('Explicit information about the transfer team'),
+                profile.name,
+                profile.team.nameEn,
+                confirm.nameEn
+              )}
               primaryButtonText={__('Accept')}
               secondaryButtonText={__('Back')}
               secondaryButtonClick={() => { setConfirm(undefined); }}
@@ -185,6 +190,7 @@ const TransferToNewTeamAction = (props) => {
                 });
               }}
             />)}
+            {console.log(profile.team)}
           </React.Fragment>
         )}
       </Mutation>

@@ -56,5 +56,5 @@ msgstr "Confirmer le changement d’équipe"
 
 #: 170:24 src/components/profile/team/YourTeamMemberList.js
 msgid "Explicit information about the transfer team"
-msgstr "Vous changez (nom de l’employé(e)) de l’équipe (nom de l’équipe actuelle) à l’équipe (nouveau nom de l’équipe). Vous pouvez changer l’équipe à laquelle un membre appartient en tout temps."
+msgstr "Vous changez %1$s de l’équipe %2$s à l’équipe %3$s. Vous pouvez changer l’équipe à laquelle un membre appartient en tout temps."
 
