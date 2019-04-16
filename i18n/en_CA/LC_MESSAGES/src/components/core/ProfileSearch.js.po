@@ -20,5 +20,5 @@ msgstr ""
 
 #: 67:31 src/components/core/ProfileSearch.js
 msgid "Search Profiles"
-msgstr ""
+msgstr "Search Directory"
 
