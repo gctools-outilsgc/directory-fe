@@ -56,16 +56,12 @@ msgstr[1] "blo"
 
 #: 166:16 src/components/profile/team/GQLYourTeamsTab.js
 msgid "You are about to disband this team."
-msgstr "Vous êtes sur le point de supprimer définitivement l’équipe (nom de l’équipe). Les membres de l’équipe (nom), (nom), (etc.) seront déplacés sous l’équipe Non assigné. Vous serez toujours leur superviseur. Vous ne pouvez pas annuler cette action."
-
-#: 167:25 src/components/profile/team/GQLYourTeamsTab.js
-msgid "These team members will be moved."
-msgstr ""
+msgstr "Vous êtes sur le point de supprimer définitivement l’équipe %1$s."
 
 #: 169:16 src/components/profile/team/GQLYourTeamsTab.js
 msgid "%1$s will be moved from %2$s to %3$s"
 msgid_plural ""
-msgstr[0] ""
+msgstr[0] "Les membres de l’équipe %1$s seront déplacés sous l’équipe Non assigné. Vous serez toujours leur superviseur. Vous ne pouvez pas annuler cette action."
 msgstr[1] ""
 
 #: 172:16 src/components/profile/team/GQLYourTeamsTab.js

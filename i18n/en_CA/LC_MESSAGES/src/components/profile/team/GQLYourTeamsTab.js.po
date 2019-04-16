@@ -24,7 +24,7 @@ msgstr "Delete"
 
 #: 162:19 src/components/profile/team/GQLYourTeamsTab.js
 msgid "Delete/Disband (?) a team"
-msgstr ""
+msgstr "Delete team"
 
 #: 163:26 src/components/profile/team/GQLYourTeamsTab.js
 msgid "Disband %1$s removed."
@@ -34,7 +34,7 @@ msgstr[1] ""
 
 #: 164:31 src/components/profile/team/GQLYourTeamsTab.js
 msgid "Are you sure?"
-msgstr ""
+msgstr "Delete team"
 
 #: 165:33 src/components/profile/team/GQLYourTeamsTab.js
 msgid "Cancel"
@@ -56,20 +56,12 @@ msgstr[1] ""
 
 #: 166:16 src/components/profile/team/GQLYourTeamsTab.js
 msgid "You are about to disband this team."
-msgstr "You are about to disband this team.  This team will no longer exist!"
-
-#: 167:25 src/components/profile/team/GQLYourTeamsTab.js
-msgid "These team members will be moved."
-msgstr ""
-"These team members will be moved into your Default Team. You will still "
-"be their Supervisor."
+msgstr "You are about to permanently delete the %1$s team."
 
 #: 169:16 src/components/profile/team/GQLYourTeamsTab.js
 msgid "%1$s will be moved from %2$s to %3$s"
 msgid_plural ""
-msgstr[0] ""
-"%1$s will be moved from the \"%2$s\" team to your %3$s where they're "
-"reassigned to a different team."
+msgstr[0] "Team members %1$s will be moved to the team Unassigned. You will still be their supervisor. You cannot undo this action."
 msgstr[1] ""
 
 #: 172:16 src/components/profile/team/GQLYourTeamsTab.js

@@ -190,7 +190,6 @@ const TransferToNewTeamAction = (props) => {
                 });
               }}
             />)}
-            {console.log(profile.team)}
           </React.Fragment>
         )}
       </Mutation>

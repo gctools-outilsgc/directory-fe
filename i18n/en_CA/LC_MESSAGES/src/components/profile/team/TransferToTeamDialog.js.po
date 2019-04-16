@@ -30,7 +30,7 @@ msgstr[1] ""
 
 #: 102:13 src/components/profile/team/TransferToTeamDialog.js
 msgid "Transfer"
-msgstr ""
+msgstr "Change team"
 
 #: 108:13 src/components/profile/team/TransferToTeamDialog.js
 msgid "Cancel"
@@ -38,9 +38,8 @@ msgstr ""
 
 #: 77:11 src/components/profile/team/TransferToTeamDialog.js
 msgid "Transfer a team member to a new Team"
-msgstr ""
+msgstr "Move team member to another team"
 
 #: 107:50 src/components/profile/team/TransferToTeamDialog.js
 msgid "Default Team"
 msgstr ""
-

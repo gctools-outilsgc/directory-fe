@@ -198,8 +198,10 @@ const DeleteTeamAction = (props) => {
             isOpen={showDialog}
             title={__('Delete/Disband (?) a team')}
             bodyText={`
-              ${__('You are about to disband this team.')}
-              ${mList && __('These team members will be moved.')}
+              ${___(
+                __('You are about to disband this team.'),
+                team.nameEn
+              )}
               ${mList && ___(
                 __('%1$s will be moved from %2$s to %3$s'),
                 mList,
