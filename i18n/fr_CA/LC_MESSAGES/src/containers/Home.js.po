@@ -279,5 +279,4 @@ msgstr "Donnez-nous vos commentaires"
 
 #: 191:21 src/containers/Home.js
 msgid "Made with Aurora"
-msgstr "Creé en utilisant Aurora"
-
+msgstr "Créé en utilisant Aurora"
