@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-03-20 23:25-0300\n"
+"POT-Creation-Date: 2019-04-15 08:26-0400\n"
 "PO-Revision-Date: 2019-03-20 23:25-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en_CA\n"
@@ -17,4 +17,29 @@ msgstr ""
 #: 108:35 src/components/profile/team/TransferConfirmation.js
 msgid "Default Team"
 msgstr ""
+
+#: 275:8 src/components/profile/team/TransferConfirmation.js
+msgid "transfere_title"
+msgstr "You will transfer to a new Supervisor (& Team)"
+
+#: 276:12 src/components/profile/team/TransferConfirmation.js
+msgid "transfere_description"
+msgstr "Explicit information about the transfer to include the Perso"
+
+#: 277:21 src/components/profile/team/TransferConfirmation.js
+msgid "confirm"
+msgstr "Primary"
+
+#: 279:23 src/components/profile/team/TransferConfirmation.js
+msgid "cancel"
+msgstr "Secondary"
+
+#: 287:17 src/components/profile/team/TransferConfirmation.js
+msgid "avatar_of"
+msgstr "Avatar of "
+
+#: 161:37 src/components/profile/team/TransferConfirmation.js
+#, fuzzy
+msgid "transfere_description2"
+msgstr "Explicit information about the transfer to include the Perso"
 

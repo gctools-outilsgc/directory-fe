@@ -21,7 +21,6 @@ import TeamAvatar from './TeamAvatar';
 import varTag from '../../../utils/cssVarTag';
 import GenericAvatar from '../../profile/OrgChart/Card/img/user.gif';
 
-
 const Arrow = styled.div`
     position: relative;
     background: ${varTag('--primary')};
@@ -146,10 +145,7 @@ const TransferConfirmation = (props) => {
   const {
     isOpen,
     title,
-    bodyText,
-    primaryButtonText,
     primaryButtonClick,
-    secondaryButtonText,
     secondaryButtonClick,
     closeButtonClick,
     onEnter,
@@ -160,8 +156,12 @@ const TransferConfirmation = (props) => {
     source,
     transferredUser,
     destination,
-    avatarAltText,
   } = props;
+
+  const bodyText = props.bodyText || __('transfere_description');
+  const primaryButtonText = props.primaryButtonText || __('confirm');
+  const secondaryButtonText = props.secondaryButtonText || __('cancel');
+  const avatarAltText = props.avatarAltText || __('avatar_of');
   const user1 = getProfileDetails(source);
   const user2 = getProfileDetails(transferredUser);
   const user3 = getProfileDetails(destination);
@@ -275,14 +275,12 @@ const TransferConfirmation = (props) => {
 
 TransferConfirmation.defaultProps = {
   isOpen: false,
-  title: 'You will transfer to a new Supervisor (& Team)',
-  bodyText: `Explicit information about the transfer to include the Person
-    being transffered, from what Team and Super, to what team and Supervisor.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu
-    porttitor ex. Nam luctus tincidunt dui, sit amet semper mi consequat eu.`,
-  primaryButtonText: 'Primary',
+  title: '',
+  bodyText: '',
+  primaryButtonText: '',
+  secondaryButtonText: '',
+  avatarAltText: '',
   primaryButtonClick: () => {},
-  secondaryButtonText: 'Secondary',
   secondaryButtonClick: () => {},
   closeButtonClick: () => {},
   onEnter: undefined,
@@ -290,7 +288,6 @@ TransferConfirmation.defaultProps = {
   onOpened: undefined,
   onClosed: undefined,
   zIndex: 1000,
-  avatarAltText: 'Avatar of ',
   delete: false,
 };
 

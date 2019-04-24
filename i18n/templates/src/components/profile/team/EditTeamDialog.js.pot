@@ -22,3 +22,31 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
+#: src/components/profile/team/EditTeamDialog.js 64:9
+msgid "Edit team"
+msgstr ""
+
+#: src/components/profile/team/EditTeamDialog.js 70:37
+msgid "English team Name"
+msgstr ""
+
+#: src/components/profile/team/EditTeamDialog.js 89:37
+msgid "French team Name"
+msgstr ""
+
+#: src/components/profile/team/EditTeamDialog.js 108:44
+msgid "English team description"
+msgstr ""
+
+#: src/components/profile/team/EditTeamDialog.js 124:17
+msgid "French team description"
+msgstr ""
+
+#: src/components/profile/team/EditTeamDialog.js 113:31
+msgid "Write a English description"
+msgstr ""
+
+#: src/components/profile/team/EditTeamDialog.js 130:31
+msgid "Write a French description"
+msgstr ""
+

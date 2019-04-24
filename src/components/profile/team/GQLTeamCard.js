@@ -1,3 +1,4 @@
+/*eslint-disable */
 import React from 'react';
 import PropTypes from 'prop-types';
 import LocalizedComponent
@@ -25,7 +26,7 @@ import { GET_TEAM, EDIT_TEAM } from '../../../gql/profile';
 import SupervisorPicker from '../../core/SupervisorPicker';
 import TeamPicker from '../../core/TeamPicker';
 import { UserAvatar } from '../../core/UserAvatar';
-import TransferConfirmation from './TransferConfirmation';
+import LocalizedTransferConfirmation from './TransferConfirmation';
 import TeamDisplayMemberList from './TeamDisplayMemberList';
 
 const mapStateToProps = ({ user }) => {
@@ -98,6 +99,8 @@ export class GQLTeamCard extends React.Component {
       editSup,
       editTeam,
     } = this.state;
+
+    const ChangeSup = __('Changesup/team');
     const canEdit = (accessToken !== '') && (id === myGcID);
     return (
       <Query
@@ -142,7 +145,7 @@ export class GQLTeamCard extends React.Component {
                               size="sm"
                               onClick={this.toggle}
                             >
-                              Change supervisor / team
+                              {ChangeSup}
                             </Button>
                             <Modal
                               isOpen={this.state.modal}
@@ -153,7 +156,7 @@ export class GQLTeamCard extends React.Component {
                                 toggle={this.toggle}
                                 className="border-bottom"
                               >
-                                Edit Team
+                                {__('edit_team')}
                               </ModalHeader>
                               <ModalBody>
                                 <Row
@@ -242,7 +245,7 @@ export class GQLTeamCard extends React.Component {
                                               icon={faSearch}
                                             />
                                             <span className="sr-only">
-                                              Search
+                                              {__('search')}
                                             </span>
                                           </Button>
                                         </div>
@@ -277,7 +280,7 @@ export class GQLTeamCard extends React.Component {
                                     this.toggleConfirm();
                                   }}
                                 >
-                                  Next
+                                  {__('next')}
                                 </Button>
                                 <Button
                                   onClick={() => {
@@ -288,7 +291,7 @@ export class GQLTeamCard extends React.Component {
                                     });
                                   }}
                                 >
-                                  Cancel
+                                  {__('cancel')}
                                 </Button>
                               </ModalFooter>
                             </Modal>
@@ -305,7 +308,7 @@ export class GQLTeamCard extends React.Component {
                               }}
                             >
                               {modifyProfile => this.state.confirmModal && (
-                                <TransferConfirmation
+                                <LocalizedTransferConfirmation
                                   isOpen={this.state.confirmModal}
                                   source={
                                     (supTest !== null) ? supTest :
@@ -317,6 +320,15 @@ export class GQLTeamCard extends React.Component {
                                        },
                                     }}
                                   transferredUser={userInfo}
+                                  title={__('Confirm supervisor transfer')}
+                                  secondaryButtonText={__('cancel')}
+                                  primaryButtonText={__('Confirm')}
+                                  bodyText={`${___(__('You are transferring %1$s %2$s %3$s %4$s.'), // eslint-disable-line
+                                            (supTest !== null) ? supTest.name : __('None'),
+                                            chosenSupervisor.name,
+                                            (localizer.lang == 'en_CA') ? teamTest.nameEn : teamTest.nameFr,
+                                            (localizer.lang == 'en_CA') ? chosenTeam.nameEn : chosenTeam.nameFr
+                                          )}`}
                                   destination={
                                     {
                                       name: chosenSupervisor.name,
@@ -359,7 +371,7 @@ export class GQLTeamCard extends React.Component {
                     </Row>
                     <hr />
                     <div className="font-weight-bold">
-                      People
+                      {__('people')}
                     </div>
                     <TeamDisplayMemberList
                       members={memberTest}

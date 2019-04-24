@@ -1,0 +1,28 @@
+msgid ""
+msgstr ""
+"Language : en\n"
+"Plural-Forms : nplurals=2; plural=(n != 1);\n"
+"MIME-Version : 1.0\n"
+"Content-Type : text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding : 8bit\n"
+
+#: src/components/onboard/OnboardNav.js 10:4
+msgid "personnal_info"
+msgstr ""
+
+#: src/components/onboard/OnboardNav.js 11:4
+msgid "step1"
+msgstr ""
+
+#: src/components/onboard/OnboardNav.js 12:4
+msgid "step2"
+msgstr ""
+
+#: src/components/onboard/OnboardNav.js 13:4
+msgid "step3"
+msgstr ""
+
+#: src/components/onboard/OnboardNav.js 14:4
+msgid "step4"
+msgstr ""
+

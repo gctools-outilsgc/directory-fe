@@ -1,5 +1,7 @@
 import React from 'react';
 
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
 // import { Button } from 'reactstrap';
 /* eslint react/prop-types: 0 */
 
@@ -7,11 +9,11 @@ const OnboardNav = (props) => {
   const dots = [];
   const words = [
     '',
-    'personal info',
-    'personal',
-    'contact',
-    'avatar',
-    'team',
+    __('personnal_info'),
+    __('step1'),
+    __('step2'),
+    __('step3'),
+    __('step4'),
   ];
   for (let i = 1; i <= props.totalSteps; i += 1) {
     const isActive = props.currentStep === i;
@@ -45,4 +47,4 @@ const OnboardNav = (props) => {
   );
 };
 
-export default OnboardNav;
+export default LocalizedComponent(OnboardNav);

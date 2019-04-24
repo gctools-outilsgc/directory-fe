@@ -54,3 +54,51 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
+#: src/components/profile/profileCard/EditProfile.js 89:37
+msgid "Edit Profile"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 410:21
+msgid "Update department title"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 411:24
+msgid "department changing"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 412:33
+msgid "Comfirm"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 413:35
+msgid "Back"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 412:73
+msgid "to"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 414:18
+msgid "no longuer sup"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 415:18
+msgid "team"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 415:31
+msgid "undo"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 254:39
+msgid "123 Workplace St."
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 306:39
+msgid "A1B2C3"
+msgstr ""
+
+#: src/components/profile/profileCard/EditProfile.js 402:23
+msgid "Cancel"
+msgstr ""
+
