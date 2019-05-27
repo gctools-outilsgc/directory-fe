@@ -20,6 +20,7 @@ import classnames from 'classnames';
 import LocalizedGQLTeamCard from './GQLTeamCard';
 import LocalizedGQLTeamOrgChart from './GQLTeamOrgChart';
 import GQLYourTeamsTab from './GQLYourTeamsTab';
+import GQLYourApprovals from './GQLYourApprovals';
 
 const mapStateToProps = ({ user }) => {
   const props = {};
@@ -96,6 +97,20 @@ class TeamCardHolder extends React.Component {
               :
               ''
               }
+              {canEdit ?
+                <NavItem>
+                  <NavLink
+                    className={
+                      classnames({ active: this.state.activeTab === '4' })
+                    }
+                    onClick={() => { this.toggle('4'); }}
+                  >
+                    Approvals
+                  </NavLink>
+                </NavItem>
+              :
+              ''
+              }
               <NavItem>
                 <NavLink
                   className={
@@ -125,6 +140,12 @@ class TeamCardHolder extends React.Component {
                 />
               )}
               </TabPane>
+              {canEdit ?
+                <TabPane tabId="4">
+                  <GQLYourApprovals gcID={id} />
+                </TabPane> :
+                ''
+              }
             </TabContent>
           </div>
         </CardBody>
