@@ -16,6 +16,8 @@ import {
   Col
 } from 'reactstrap';
 
+import { UserAvatar } from '../../core/UserAvatar';
+
 const RowContainer = styled.div`
 background-color: #F4F8F9;
 height: 345px;
@@ -23,6 +25,68 @@ overflow: hidden;
 `;
 
 // TODO: Add an approval object query to this component then map the approvals
+
+const ApprovalList = (props) => {
+  const {
+    user,
+  } = props;
+
+  return (
+    <NavItem>
+      <NavLink>
+        <div className="d-flex">
+          <UserAvatar
+            avatar={user ? user.avatar : ''}
+            name={user ? user.name : ''}
+          />
+          <div className="ml-3">
+            <div className="font-weight-bold member-name">
+              {user.name}
+            </div>
+            <small className="text-muted">
+              {user.title}
+            </small>
+          </div>
+        </div>
+      </NavLink>
+    </NavItem>
+  );
+};
+
+ApprovalList.propTypes = {
+  user: PropTypes.shape({
+    avatar: PropTypes.string,
+    name: PropTypes.string,
+    title: PropTypes.string,
+  }).isRequired,
+};
+
+const ApprovalPane = (props) => {
+  const {
+    approval,
+  } = props;
+
+  return (
+    <TabPane>
+      I am the approval content.
+      {approval.id}
+      <div>
+        There will be a form in here.
+      </div>
+    </TabPane>
+  );
+};
+
+ApprovalPane.propTypes = {
+  approval: PropTypes.shape({
+    id: PropTypes.string,
+    user: PropTypes.shape({
+      gcID: PropTypes.string,
+      name: PropTypes.string,
+    }),
+  }).isRequired,
+};
+
 class GQLYourApprovals extends React.Component {
   constructor(props) {
     super(props);
@@ -72,6 +136,15 @@ class GQLYourApprovals extends React.Component {
                       I am approval 2 oh yeah!
                   </NavLink>
                 </NavItem>
+                {/* TODO Map this */}
+                <ApprovalList
+                  user={
+                    {
+                      name: 'Jonald',
+                      title: 'Just testing',
+                    }
+                  }
+                />
               </Nav>
             </div>
           </Col>
@@ -87,6 +160,18 @@ class GQLYourApprovals extends React.Component {
                   Wow I will map this later as well
                 </div>
               </TabPane>
+              {/* TODO Map this */}
+              <ApprovalPane
+                approval={
+                  {
+                    id: '3',
+                    user: {
+                      gcID: '21',
+                      name: 'Jonald',
+                    },
+                  }
+                }
+              />
             </TabContent>
           </Col>
         </Row>
