@@ -75,6 +75,7 @@ class TeamCardHolder extends React.Component {
             <Nav tabs>
               <NavItem>
                 <NavLink
+                  href="#!"
                   className={
                     classnames({ active: this.state.activeTab === '1' })
                   }
@@ -86,6 +87,7 @@ class TeamCardHolder extends React.Component {
               {canEdit ?
                 <NavItem>
                   <NavLink
+                    href="#!"
                     className={
                       classnames({ active: this.state.activeTab === '2' })
                     }
@@ -100,6 +102,7 @@ class TeamCardHolder extends React.Component {
               {canEdit ?
                 <NavItem>
                   <NavLink
+                    href="#!"
                     className={
                       classnames({ active: this.state.activeTab === '4' })
                     }
@@ -113,6 +116,7 @@ class TeamCardHolder extends React.Component {
               }
               <NavItem>
                 <NavLink
+                  href="#!"
                   className={
                     classnames({ active: this.state.activeTab === '3' })
                   }

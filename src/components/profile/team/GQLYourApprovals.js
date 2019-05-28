@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
@@ -13,10 +13,14 @@ import {
   NavItem,
   NavLink,
   Row,
-  Col
+  Col,
+  Button,
+  Form,
+  FormGroup
 } from 'reactstrap';
 
 import { UserAvatar } from '../../core/UserAvatar';
+import InputCharacterCount from '../../core/InputCharacterCount';
 
 const RowContainer = styled.div`
 background-color: #F4F8F9;
@@ -29,11 +33,22 @@ overflow: hidden;
 const ApprovalList = (props) => {
   const {
     user,
+    approvalID,
+    toggle,
+    activeTab,
   } = props;
 
   return (
     <NavItem>
-      <NavLink>
+      <NavLink
+        href="#!"
+        className={
+          classnames({
+            active: activeTab === approvalID,
+          })
+        }
+        onClick={() => { toggle(approvalID); }}
+      >
         <div className="d-flex">
           <UserAvatar
             avatar={user ? user.avatar : ''}
@@ -59,19 +74,46 @@ ApprovalList.propTypes = {
     name: PropTypes.string,
     title: PropTypes.string,
   }).isRequired,
+  approvalID: PropTypes.string.isRequired,
+  toggle: PropTypes.func.isRequired,
+  activeTab: PropTypes.string.isRequired,
 };
 
+// TODO: Make this form nicer and make it work.
 const ApprovalPane = (props) => {
   const {
     approval,
   } = props;
 
+  const [deny, setDeny] = useState(true);
   return (
-    <TabPane>
-      I am the approval content.
-      {approval.id}
-      <div>
-        There will be a form in here.
+    <TabPane tabId={approval.id}>
+      <div
+        className="vh-100 p-3 member-holder d-flex flex-column"
+      >
+        <div className="mb-auto">
+          <strong>{approval.user.name} </strong>
+          wants to do a thing.
+        </div>
+        <Form>
+          <FormGroup>
+            <label htmlFor={`comments-${approval.id}`}>
+              Comments
+            </label>
+            <InputCharacterCount
+              onChange={() => {
+                setDeny(false);
+              }}
+              id={`comments-${approval.id}`}
+            />
+          </FormGroup>
+          <div className="float-right">
+            <Button color="primary" className="mr-2">
+              Approve
+            </Button>
+            <Button disabled={deny}>Deny</Button>
+          </div>
+        </Form>
       </div>
     </TabPane>
   );
@@ -110,33 +152,10 @@ class GQLYourApprovals extends React.Component {
       <RowContainer>
         <Row className="mt-3 your-teams-container">
           <Col sm="4" className="pr-0">
+            A Query for this ID: {this.props.gcID} will go here!
             <div className="member-holder">
               <Nav vertical>
-                <NavItem>
-                  <NavLink
-                    className={
-                      classnames({
-                        active: this.state.activeTab === '1',
-                      })
-                    }
-                    onClick={() => { this.toggle('1'); }}
-                  >
-                    I am approval 1 Map later
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink
-                    className={
-                      classnames({
-                        active: this.state.activeTab === '2',
-                      })
-                    }
-                    onClick={() => { this.toggle('2'); }}
-                  >
-                      I am approval 2 oh yeah!
-                  </NavLink>
-                </NavItem>
-                {/* TODO Map this */}
+                {/* TODO Map these / props may change based on schema */}
                 <ApprovalList
                   user={
                     {
@@ -144,23 +163,27 @@ class GQLYourApprovals extends React.Component {
                       title: 'Just testing',
                     }
                   }
+                  approvalID="3"
+                  toggle={(e) => { this.toggle(e); }}
+                  activeTab={this.state.activeTab}
+                />
+                <ApprovalList
+                  user={
+                    {
+                      name: 'Jonaldina',
+                      title: 'Another user',
+                    }
+                  }
+                  approvalID="4"
+                  toggle={(e) => { this.toggle(e); }}
+                  activeTab={this.state.activeTab}
                 />
               </Nav>
             </div>
           </Col>
           <Col sm="8" className="pl-0">
             <TabContent activeTab={this.state.activeTab}>
-              <TabPane tabId="1">
-                <div className="vh-100 p-3 member-holder">
-                  Wow I am tab pane 1 id = {this.props.gcID}
-                </div>
-              </TabPane>
-              <TabPane tabId="2">
-                <div className="vh-100 p-3 member-holder">
-                  Wow I will map this later as well
-                </div>
-              </TabPane>
-              {/* TODO Map this */}
+              {/* TODO Map these */}
               <ApprovalPane
                 approval={
                   {
@@ -168,6 +191,17 @@ class GQLYourApprovals extends React.Component {
                     user: {
                       gcID: '21',
                       name: 'Jonald',
+                    },
+                  }
+                }
+              />
+              <ApprovalPane
+                approval={
+                  {
+                    id: '4',
+                    user: {
+                      gcID: '120',
+                      name: 'Jonaldina',
                     },
                   }
                 }
