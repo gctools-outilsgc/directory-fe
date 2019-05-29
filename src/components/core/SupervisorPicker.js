@@ -45,7 +45,7 @@ class SupervisorPicker extends React.Component {
       <Query
         query={gql`
           query profileSearchQuery($name: String!) {
-            profiles(name: $name, first:5) {
+            search(partialName: $name) {
               gcID
               name
               titleEn
@@ -58,8 +58,8 @@ class SupervisorPicker extends React.Component {
       >
         {({ data }) => {
           const checkResult = (!data) ? [''] : data;
-          const results = (checkResult.profiles) ?
-            checkResult.profiles.map(a => (
+          const results = (checkResult.search) ?
+            checkResult.search.map(a => (
               <li key={a.gcID}>
                 <Button
                   onClick={() => this.handleResultClick(a)}
