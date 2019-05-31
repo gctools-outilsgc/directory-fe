@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import gql from 'graphql-tag';
 
 import { Query } from 'react-apollo';
 
@@ -15,7 +16,7 @@ import {
 } from 'reactstrap';
 import styled from 'styled-components';
 
-import { SEARCH } from '../../gql/profile';
+
 import varTag from '../../utils/cssVarTag';
 
 
@@ -49,7 +50,13 @@ export const ProfileListSearch = (props) => {
   const [selected, setSelected] = useState(false);
   return (
     <Query
-      query={SEARCH}
+      query={gql`
+        query profileSearchQuery($name: String!) {
+          search(partialName: $name) {
+            gcID
+            name
+            avatar
+          }          }`}
       variables={{ name: search }}
       skip={search.length < 2}
     >
@@ -80,8 +87,8 @@ export const ProfileListSearch = (props) => {
                   <span className="sr-only-delete-me">Loading...</span>
                 </i>
               )}
-              {!loading && !error && data && data.profiles && (
-                data.profiles.map((profile) => {
+              {!loading && !error && data && data.search && (
+                data.search.map((profile) => {
                   const {
                     gcID,
                     name,
