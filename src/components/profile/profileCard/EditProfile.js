@@ -86,14 +86,14 @@ export class EditProfile extends Component {
           color="light"
         >
           <FontAwesomeIcon icon={faPen} />
-          <span className="sr-only">Edit Profile</span>
+          <span className="sr-only">{__('Edit Profile')}</span>
         </Button>
         <Modal
           isOpen={this.state.modal}
           toggle={this.toggle}
           className="modal-lg edit-profile-modal"
         >
-          <ModalHeader toggle={this.toggle}>Edit Profile</ModalHeader>
+          <ModalHeader toggle={this.toggle}>{__('Edit Profile')}</ModalHeader>
           <ModalBody>
             <Mutation
               mutation={EDIT}
@@ -251,6 +251,7 @@ export class EditProfile extends Component {
                           id="streetAddress"
                           type="text"
                           className="form-control"
+                          placeholder={__('123 Workplace St.')}
                           value={this.state.streetAddress || ''}
                           onChange={(e) => {
                             this.setState({
@@ -302,6 +303,7 @@ export class EditProfile extends Component {
                         <input
                           id="postalCode"
                           type="text"
+                          placeholder={__('A1B2C3')}
                           className="form-control"
                           value={this.state.postalCode || ''}
                           onChange={(e) => {
@@ -407,6 +409,18 @@ export class EditProfile extends Component {
             this.state.confirmModal && (<TransferConfirmation
               isOpen={this.state.confirmModal}
               transferredUser={this.props.profile}
+              title={__('Update department title')}
+              bodyText={`
+                ${___(
+                  __('department changing'),
+                this.state.organization.nameEn,
+                this.state.newTeamId,
+                this.state.supervisor.name,
+                this.state.organization.nameEn
+              )}
+              `}
+              primaryButtonText={__('Comfirm')}
+              secondaryButtonText={__('Back')}
               destination={
                 {
                   name: 'Choose a new Supervisor',

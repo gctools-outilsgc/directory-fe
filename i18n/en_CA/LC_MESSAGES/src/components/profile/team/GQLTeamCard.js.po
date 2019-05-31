@@ -26,7 +26,46 @@ msgstr ""
 msgid "Cannot find GCID"
 msgstr ""
 
+#: 150:31 src/components/profile/team/GQLTeamCard.js
+msgid "Changesup/team"
+msgstr "Change supervisor"
+
+#: 161:33 src/components/profile/team/GQLTeamCard.js
+msgid "edit_team"
+msgstr "Change supervisor "
+
+#: 258:45 src/components/profile/team/GQLTeamCard.js
+msgid "search"
+msgstr "Search"
+
+#: 293:35 src/components/profile/team/GQLTeamCard.js
+msgid "next"
+msgstr "Change supervisor"
+
+#: 304:35 src/components/profile/team/GQLTeamCard.js
+msgid "cancel"
+msgstr "Cancel"
+
+#: 366:23 src/components/profile/team/GQLTeamCard.js
+msgid "people"
+msgstr "Teammates"
+
 #: 313:45 src/components/profile/team/GQLTeamCard.js
 msgid "None"
 msgstr ""
+
+#: src/components/profile/team/GQLTeamCard.js 321:41
+msgid "Confirm supervisor transfer"
+msgstr "Confirm transfer to new supervisor"
+
+#: src/components/profile/team/GQLTeamCard.js 321:51
+msgid "You are transferring %1$s %2$s %3$s %4$s."
+msgid_plural ""
+msgstr[0] "You are transferring your supervisor from %1$s to %2$s. You will be removed from the %3$s team and be placed in %2$s’s %4$s team."
+msgstr[1] ""
+
+#: src/components/profile/team/GQLTeamCard.js 323:53
+msgid "Confirm"
+msgstr ""
+
 

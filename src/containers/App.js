@@ -31,12 +31,27 @@ import enFip from '../assets/imgs/sig-en-w.png';
 export class App extends Component {
   static toggleLanguage(e) {
     if (e) e.preventDefault();
-    localizer.setLanguage(((localizer.lang === 'en_CA') ? 'fr_CA' : 'en_CA'));
+    const lang = (localizer.lang === 'en_CA') ? 'fr_CA' : 'en_CA';
+    localizer.setLanguage(lang);
+    document.cookie = `lang=${lang};path=/`;
   }
   constructor(props) {
     super(props);
     this.state = { name: false };
   }
+
+  componentWillMount() {
+    const cookies = decodeURIComponent(document.cookie).split(';');
+    cookies
+      .filter(c => c.trim().indexOf('lang=') === 0)
+      .forEach((c) => {
+        const lang = c.split('=', 2)[1];
+        if (localizer.hasLanguage(lang)) {
+          localizer.setLanguage(lang);
+        }
+      });
+  }
+
   render() {
     const {
       onLogin,

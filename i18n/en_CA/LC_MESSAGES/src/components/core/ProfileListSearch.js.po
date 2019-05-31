@@ -26,5 +26,5 @@ msgstr[1] ""
 
 #: 72:29 src/components/core/ProfileListSearch.js
 msgid "Search for a new supervisor"
-msgstr ""
+msgstr "Search supervisors"
 

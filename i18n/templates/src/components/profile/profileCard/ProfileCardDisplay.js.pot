@@ -21,4 +21,3 @@ msgstr ""
 #: src/components/profile/profileCard/ProfileCardDisplay.js 52:67
 msgid "Address"
 msgstr ""
-

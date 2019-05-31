@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
 
 import classnames from 'classnames';
 import styled from 'styled-components';
@@ -44,6 +46,7 @@ const TeamList = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const {
     teamId,
+    teamName,
     members,
     otherMembers,
     profile,
@@ -52,7 +55,7 @@ const TeamList = (props) => {
     <TabPane tabId={teamId} key={teamId} className="w-100">
       <div className="border-bottom d-flex p-3 tab-head">
         <div className="mr-auto font-weight-bold">
-          People
+          {__('people')}
         </div>
         <div>
           <Button
@@ -60,7 +63,7 @@ const TeamList = (props) => {
             onClick={() => { setIsOpen(!isOpen); }}
           >
             <FontAwesomeIcon icon={faPlus} />
-            <span className="sr-only">Add</span>
+            <span className="sr-only">{__('Add member')}</span>
           </Button>
           <Mutation
             mutation={EDIT_TEAM}
@@ -69,6 +72,7 @@ const TeamList = (props) => {
             {updateTeam => (
               <MultiUserPicker
                 isOpen={isOpen}
+                teamName={teamName}
                 users={otherMembers.map(m => Object.assign(
                   {},
                   m,
@@ -124,6 +128,7 @@ TeamList.propTypes = {
     title: PropTypes.string.isRequired,
   })).isRequired,
   teamId: PropTypes.string.isRequired,
+  teamName: PropTypes.string.isRequired,
 };
 
 // eslint-disable-next-line max-len
@@ -196,8 +201,10 @@ const DeleteTeamAction = (props) => {
             isOpen={showDialog}
             title={__('Delete/Disband (?) a team')}
             bodyText={`
-              ${__('You are about to disband this team.')}
-              ${mList && __('These team members will be moved.')}
+              ${___(
+                __('You are about to disband this team.'),
+                team.nameEn
+              )}
               ${mList && ___(
                 __('%1$s will be moved from %2$s to %3$s'),
                 mList,
@@ -312,7 +319,7 @@ class GQLYouTeamsTab extends React.Component {
                             color="link"
                             size="small"
                           >
-                            Transfer
+                            {__('Tranfer')}
                           </Button>
                         </li>
                         <li className="list-inline-item">
@@ -326,7 +333,7 @@ class GQLYouTeamsTab extends React.Component {
                               });
                             }}
                           >
-                            Edit
+                            {__('edit')}
                           </Button>
                         </li>
                         {nameEn !== '' && (
@@ -346,11 +353,13 @@ class GQLYouTeamsTab extends React.Component {
           });
           const tabPanel = sortedTeams.map(({
             id,
+            nameEn,
             members,
           }) => (
             <TeamList
               profile={userInfo}
               teamId={id}
+              teamName={nameEn}
               key={`teamlist_${id}`}
               members={members.map(m => Object.assign(
                 {},
@@ -379,7 +388,7 @@ class GQLYouTeamsTab extends React.Component {
                 <Col className="pr-0">
                   <div className="border-bottom d-flex p-3">
                     <div className="mr-auto font-weight-bold">
-                      Teams
+                      {__('team')}
                     </div>
                     <div>
                       <Button
@@ -389,7 +398,7 @@ class GQLYouTeamsTab extends React.Component {
                         }}
                       >
                         <FontAwesomeIcon icon={faPlus} />
-                        <span className="sr-only">Add</span>
+                        <span className="sr-only">{__('Add team')}</span>
                       </Button>
                       <GQLCreateTeamDialog
                         isOpen={this.state.createDialogOpen}
@@ -442,4 +451,4 @@ GQLYouTeamsTab.propTypes = {
   id: PropTypes.string.isRequired,
 };
 
-export default GQLYouTeamsTab;
+export default LocalizedComponent(GQLYouTeamsTab);

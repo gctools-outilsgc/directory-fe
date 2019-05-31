@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-03-14 15:31-0400\n"
+"POT-Creation-Date: 2019-04-15 11:45-0400\n"
 "PO-Revision-Date: 2019-03-14 14:44-0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en_CA\n"
@@ -25,12 +25,39 @@ msgstr ""
 #: 107:25 src/components/profile/team/CreateTeamDialog.js
 msgid "What is a team"
 msgstr ""
+"A team is a group of people who work closely together, at the same level "
+"or that perform specific job functions. All team members will appear "
+"together under you, as their supervisor, in the organization chart to "
+"show the reporting structure."
 
 #: 214:27 src/components/profile/team/CreateTeamDialog.js
 msgid "Save"
-msgstr ""
+msgstr "Create team"
 
 #: 220:27 src/components/profile/team/CreateTeamDialog.js
 msgid "Cancel"
 msgstr ""
 
+#: 62:37 src/components/profile/team/CreateTeamDialog.js
+msgid "Team_name_en"
+msgstr "English team name"
+
+#: 82:37 src/components/profile/team/CreateTeamDialog.js
+msgid "Team_name_fr"
+msgstr "French team name"
+
+#: 102:44 src/components/profile/team/CreateTeamDialog.js
+msgid "Enter_Team_description_en"
+msgstr "English team description"
+
+#: 118:19 src/components/profile/team/CreateTeamDialog.js
+msgid "Enter_Team_description_fr"
+msgstr "French team description"
+
+#: 105:31 src/components/profile/team/CreateTeamDialog.js
+msgid "placeholder_description_en"
+msgstr "Write an English description of what your team does. "
+
+#: 122:31 src/components/profile/team/CreateTeamDialog.js
+msgid "placeholder_description_fr"
+msgstr "Write a French description of what your team does."

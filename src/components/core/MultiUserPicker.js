@@ -105,11 +105,12 @@ const MultiUserPicker = (props) => {
   const [selectedIds, setSelectedIds] = useState([]);
   const {
     isOpen,
-    title,
-    bodyText,
-    primaryButtonText,
+    teamName,
+    // title,
+    // bodyText,
+    // primaryButtonText,
     primaryButtonClick,
-    secondaryButtonText,
+    // secondaryButtonText,
     secondaryButtonClick,
     closeButtonClick,
     onEnter,
@@ -138,6 +139,12 @@ const MultiUserPicker = (props) => {
       resetState();
     }
   };
+  const title = props.title || __('title');
+  const bodyText = props.bodyText || ___(__('bodyText'), teamName);
+  const primaryButtonText = props.primaryButtonText || __('primaryButtonText');
+  const secondaryButtonText = props.secondaryButtonText
+    || __('secondaryButtonText');
+
   return (
     <div>
       <Modal
@@ -202,13 +209,12 @@ const MultiUserPicker = (props) => {
 
 MultiUserPicker.defaultProps = {
   isOpen: false,
-  title: '1. Title',
-  bodyText: `2. Paragraph text.  Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit. Aenean eu porttitor ex. Nam luctus tincidunt dui, sit
-    amet semper mi consequat euser.`,
-  primaryButtonText: '4. Primary action',
+  teamName: '',
+  title: '',
+  bodyText: '',
+  primaryButtonText: '',
   primaryButtonClick: () => {},
-  secondaryButtonText: 'Cancel',
+  secondaryButtonText: '',
   secondaryButtonClick: () => {},
   closeButtonClick: () => {},
   onEnter: undefined,
@@ -221,6 +227,7 @@ MultiUserPicker.defaultProps = {
 MultiUserPicker.propTypes = {
   /** Boolean to control the state of the modal */
   isOpen: PropTypes.bool,
+  teamName: PropTypes.string,
   /** Title of dialog */
   title: PropTypes.string,
   /** Body text of dialog */

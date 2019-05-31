@@ -79,7 +79,11 @@ const TransferToSupervisorAction = (props) => {
               destination={confirm}
               isOpen={!!confirm}
               title={__('Transfer a team member to a new Supervisor')}
-              bodyText={__('Explicit information about the transfer')}
+              bodyText={___(
+                __('Explicit information about the transfer'),
+                profile.name,
+                confirm.name
+              )}
               primaryButtonText={__('Accept')}
               secondaryButtonText={__('Back')}
               secondaryButtonClick={() => { setConfirm(undefined); }}
@@ -166,8 +170,13 @@ const TransferToNewTeamAction = (props) => {
               transferredUser={profile}
               destination={confirm}
               isOpen={!!confirm}
-              title={__('Transfer a team member to a new Supervisor')}
-              bodyText={__('Explicit information about the transfer')}
+              title={__('Transfer a team member to a new team')}
+              bodyText={___(
+                __('Explicit information about the transfer team'),
+                profile.name,
+                profile.team.nameEn,
+                confirm.nameEn
+              )}
               primaryButtonText={__('Accept')}
               secondaryButtonText={__('Back')}
               secondaryButtonClick={() => { setConfirm(undefined); }}
@@ -245,7 +254,7 @@ export const YourTeamMemberList = (props) => {
       </li>
     )) : (
       <li>
-        There are no members in this team
+        {__('There are no members in this team')}
       </li>
     );
   return (

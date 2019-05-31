@@ -10,3 +10,27 @@ msgstr ""
 msgid "Default Team"
 msgstr ""
 
+#: src/components/profile/team/TransferConfirmation.js 275:8
+msgid "transfere_title"
+msgstr ""
+
+#: src/components/profile/team/TransferConfirmation.js 276:12
+msgid "transfere_description"
+msgstr ""
+
+#: src/components/profile/team/TransferConfirmation.js 277:21
+msgid "confirm"
+msgstr ""
+
+#: src/components/profile/team/TransferConfirmation.js 279:23
+msgid "cancel"
+msgstr ""
+
+#: src/components/profile/team/TransferConfirmation.js 287:17
+msgid "avatar_of"
+msgstr ""
+
+#: src/components/profile/team/TransferConfirmation.js 161:37
+msgid "transfere_description2"
+msgstr ""
+

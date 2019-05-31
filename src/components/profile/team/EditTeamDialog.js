@@ -61,22 +61,20 @@ export class EditTeamDialog extends Component {
         className="modal-lg create-team-modal"
       >
         <ModalHeader>
-          Edit this Team
+          {__('Edit team')}
         </ModalHeader>
         <ModalBody>
           <Form>
             <FormBody>
-              <p>{__('What is a team')}</p>
               <FormGroup>
-                <Label for="nameEn">Team Name</Label>
+                <Label for="nameEn">{__('English team Name')}</Label>
                 <InputGroup>
                   <InputGroupAddon addonType="prepend">
                     EN
                   </InputGroupAddon>
                   <Input
-                    placeholder="Enter team name"
                     id="nameEn"
-                    aria-label="Enter team name"
+                    aria-label={__('English team Name')}
                     type="text"
                     value={this.state.nameEn || ''}
                     onChange={(e) => {
@@ -88,15 +86,14 @@ export class EditTeamDialog extends Component {
                 </InputGroup>
               </FormGroup>
               <FormGroup>
-                <Label for="nameFr">{'Titre d\'\u00E9quipe'}</Label>
+                <Label for="nameFr">{__('French team Name')}</Label>
                 <InputGroup>
                   <InputGroupAddon addonType="prepend">
                     FR
                   </InputGroupAddon>
                   <Input
-                    placeholder={'Entrez titre d\'\u00E9quipe'}
                     id="nameFr"
-                    aria-label="Entrez titre d\'\u00E9quipe"
+                    aria-label={__('French team Name')}
                     type="text"
                     value={this.state.nameFr || ''}
                     onChange={(e) => {
@@ -108,10 +105,12 @@ export class EditTeamDialog extends Component {
                 </InputGroup>
               </FormGroup>
               <FormGroup>
-                <Label for="descriptionEn">Description (English)</Label>
+                <Label for="descriptionEn">
+                  {__('English team description')}
+                </Label>
                 <InputCharacterCount
                   maxLength={280}
-                  placeholder="Describe your team..."
+                  placeholder={__('Write a English description')}
                   id="descriptionEn"
                   type="textarea"
                   value={this.state.descriptionEn || ''}
@@ -124,12 +123,11 @@ export class EditTeamDialog extends Component {
               </FormGroup>
               <FormGroup>
                 <Label for="descriptionFr">
-                  La description (Fran&ccedil;ais)
+                  {__('French team description')}
                 </Label>
                 <InputCharacterCount
                   maxLength={280}
-                  placeholder={
-                    'd\'\u00E9cris ton \u00E9quipe...'}
+                  placeholder={__('Write a French description')}
                   id="descriptionFr"
                   type="text"
                   value={this.state.descriptionFr}

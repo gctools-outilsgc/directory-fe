@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-03-28 13:32-0400\n"
+"POT-Creation-Date: 2019-04-15 14:42-0400\n"
 "PO-Revision-Date: 2019-03-26 09:32-0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr_CA\n"
@@ -24,9 +24,36 @@ msgstr ""
 
 #: 155:13 src/components/profile/team/EditTeamDialog.js
 msgid "Save"
-msgstr ""
+msgstr "Enregistrer les modifications"
 
 #: 157:56 src/components/profile/team/EditTeamDialog.js
 msgid "Cancel"
-msgstr ""
+msgstr "Annuler"
 
+#: 64:9 src/components/profile/team/EditTeamDialog.js
+msgid "Edit team"
+msgstr "Modifier l’équipe"
+
+#: 70:37 src/components/profile/team/EditTeamDialog.js
+msgid "English team Name"
+msgstr "Nom de l’équipe en anglais"
+
+#: 89:37 src/components/profile/team/EditTeamDialog.js
+msgid "French team Name"
+msgstr "Nom de l’équipe en français"
+
+#: 108:44 src/components/profile/team/EditTeamDialog.js
+msgid "English team description"
+msgstr "Description de l’équipe en anglais"
+
+#: 124:17 src/components/profile/team/EditTeamDialog.js
+msgid "French team description"
+msgstr "Description de l’équipe en français"
+
+#: 113:31 src/components/profile/team/EditTeamDialog.js
+msgid "Write a English description"
+msgstr "Rédigez une description en anglais de ce que fait votre équipe"
+
+#: 130:31 src/components/profile/team/EditTeamDialog.js
+msgid "Write a French description"
+msgstr "Rédigez une description en français de ce que fait votre équipe"

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
 import { Mutation } from 'react-apollo';
 import { Button } from 'reactstrap';
 
@@ -8,7 +9,6 @@ import styled from 'styled-components';
 
 import { EDIT } from '../../gql/profile';
 import GenericAvatar from '../profile/OrgChart/Card/img/user.gif';
-
 
 const UploadContainer = styled.div`
   text-align: center;
@@ -45,7 +45,7 @@ export const UserAvatar = (props) => {
             {uploadAvatar => (
               <Button>
                 <label htmlFor="avatarUploadTest">
-                  Upload
+                  {__('Upload')}
                   <input
                     type="file"
                     id="avatarUploadTest"
@@ -91,5 +91,4 @@ UserAvatar.propTypes = {
   size: PropTypes.string,
 };
 
-export default UserAvatar;
-
+export default LocalizedComponent(UserAvatar);

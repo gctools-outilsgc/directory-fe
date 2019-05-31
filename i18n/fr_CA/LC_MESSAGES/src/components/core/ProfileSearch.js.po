@@ -20,5 +20,5 @@ msgstr "Rechercher"
 
 #: 67:31 src/components/core/ProfileSearch.js
 msgid "Search Profiles"
-msgstr "Recherche de profils"
+msgstr "Recherche sur Annuaire"
 
