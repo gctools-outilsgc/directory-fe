@@ -126,7 +126,9 @@ msgid ""
 "We will be hosting user testing and feedback sessions where you can share"
 " what you’ve discovered. Join the (x) GCcollab group and keep an eye out "
 "for the next research session on Directory."
-msgstr ""
+msgstr "We will be hosting user testing and feedback sessions where you can share"
+" what you’ve discovered. Join the GCcollab group and keep an eye out "
+"for the next research session on Directory."
 
 #: 114:23 src/containers/Home.js
 msgid "All about the details"

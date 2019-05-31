@@ -155,7 +155,7 @@ msgid ""
 msgstr ""
 "Nous organiserons des séances d’essai et de rétroaction auprès des "
 "utilisateurs où vous pourrez faire part de vos découvertes. Joignez-vous "
-"au groupe (x) dans GCcollab et ne manquez surtout pas la prochaine séance"
+"au groupe dans GCcollab et ne manquez surtout pas la prochaine séance"
 " de recherche sur l’Annuaire."
 
 #: 114:23 src/containers/Home.js

@@ -147,6 +147,7 @@ class Home extends Component {
               ]
             }
             actionText={__('Give us your Feedback')}
+            actionLink="https://gccollab.ca/groups/profile/2104442/enresearch-participants-open-accessible-digital-workspacefrparticipants-de-recherche-u2013-espace-de-travail-numu00e9rique-ouvert-et-accessible"
           />
           <Container>
             <Row>
