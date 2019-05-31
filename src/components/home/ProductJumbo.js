@@ -7,21 +7,37 @@ import LocalizedComponent
 import { Jumbotron, Row, Col } from 'reactstrap';
 import ProfileSearch from '../core/ProfileSearch';
 
+import bannerLeft from '../../assets/imgs/home/directory_banner_left.png';
+import bannerRight from '../../assets/imgs/home/directory_banner_right.png';
+
 const ProductJumbo = (props) => {
   const {
     appName,
     appDescription,
   } = props;
   const style = {
-    padding: '6rem 2rem',
-    marginBottom: '0px',
-    backgroundColor: '#DFEBEF',
+    jumbo: {
+      padding: '0',
+      marginBottom: '0px',
+      backgroundColor: '#DFEBEF',
+    },
+    bannerImg: {
+      width: '100%',
+      height: '300px',
+      objectFit: 'cover',
+    },
   };
   return (
-    <Jumbotron fluid style={style}>
+    <Jumbotron fluid style={style.jumbo}>
       <Row>
-        <Col className=".d-none .d-sm-block" />
-        <Col className="text-center">
+        <Col className=".d-none .d-sm-block">
+          <img
+            alt=""
+            src={bannerLeft}
+            style={style.bannerImg}
+          />
+        </Col>
+        <Col className="text-center pt-5 pb-5">
           <div>
             <h1>{appName}</h1>
           </div>
@@ -32,7 +48,13 @@ const ProductJumbo = (props) => {
             <ProfileSearch />
           </div>
         </Col>
-        <Col className=".d-none .d-sm-block" />
+        <Col className=".d-none .d-sm-block">
+          <img
+            alt=""
+            src={bannerRight}
+            style={style.bannerImg}
+          />
+        </Col>
       </Row>
     </Jumbotron>
   );
