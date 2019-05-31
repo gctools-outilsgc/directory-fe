@@ -8,7 +8,7 @@ import ConnectedTeamCardHolder
   from '../components/profile/team/TeamCardHolder';
 
 const Profile = ({ match }) => (
-  <Container>
+  <Container className="mt-3">
     <Row>
       <ConnectedGQLProfileCard id={match.params.id} />
     </Row>
