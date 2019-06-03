@@ -295,9 +295,10 @@ class GQLYouTeamsTab extends React.Component {
               nameEn,
               nameFr,
               descriptionEn,
+              descriptionFr,
             } = team;
             return (
-              <NavItem key={id}>
+              <NavItem key={id} className="border-bottom">
                 <NavLink
                   href="#!"
                   onClick={() => { this.toggle(id); }}
@@ -307,44 +308,51 @@ class GQLYouTeamsTab extends React.Component {
                   <div>
                     <div className="font-weight-bold">
                       {(nameEn === '') && 'Default Team'}
-                      {(nameEn !== '') && `${nameEn} / ${nameFr}`}
+                      {(nameEn !== '') &&
+                        (localizer.lang === 'en_CA') ?
+                        nameEn : nameFr
+                      }
                     </div>
                     <small>
-                      {descriptionEn}
+                      {(localizer.lang === 'en_CA') ?
+                        descriptionEn : descriptionFr
+                      }
                     </small>
                     <small>
-                      <ul className="list-inline text-primary">
-                        <li className="list-inline-item">
-                          <Button
-                            color="link"
-                            size="small"
-                          >
-                            {__('Tranfer')}
-                          </Button>
-                        </li>
-                        <li className="list-inline-item">
-                          <Button
-                            color="link"
-                            size="small"
-                            onClick={() => {
-                              this.setState({
-                                editDialogOpen: true,
-                                editTeam: team,
-                              });
-                            }}
-                          >
-                            {__('edit')}
-                          </Button>
-                        </li>
-                        {nameEn !== '' && (
-                        <li className="list-inline-item">
-                          <DeleteTeamAction
-                            profile={userInfo}
-                            team={team}
-                          />
-                        </li>
-                        )}
-                      </ul>
+                      {(id !== defaultId) && (
+                        <ul className="list-inline text-primary ml-n2">
+                          <li className="list-inline-item">
+                            <Button
+                              color="link"
+                              size="small"
+                            >
+                              {__('Tranfer')}
+                            </Button>
+                          </li>
+                          <li className="list-inline-item">
+                            <Button
+                              color="link"
+                              size="small"
+                              onClick={() => {
+                                this.setState({
+                                  editDialogOpen: true,
+                                  editTeam: team,
+                                });
+                              }}
+                            >
+                              {__('edit')}
+                            </Button>
+                          </li>
+                          {nameEn !== '' && (
+                          <li className="list-inline-item">
+                            <DeleteTeamAction
+                              profile={userInfo}
+                              team={team}
+                            />
+                          </li>
+                          )}
+                        </ul>
+                      )}
                     </small>
                   </div>
                 </NavLink>

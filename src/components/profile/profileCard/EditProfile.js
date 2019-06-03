@@ -24,6 +24,7 @@ import { faPen } from '@fortawesome/free-solid-svg-icons';
 import { EDIT, prepareEditProfile, EDIT_TEAM } from '../../../gql/profile';
 import DepartmentPicker from '../../core/DepartmentPicker';
 import TransferConfirmation from '../team/TransferConfirmation';
+import { UserAvatar } from '../../core/UserAvatar';
 
 export class EditProfile extends Component {
   constructor(props) {
@@ -134,43 +135,56 @@ export class EditProfile extends Component {
                 }}
                 >
                   <Row>
-                    <Col sm="12">
-                      <label htmlFor="nameTest">
-                        <span className="font-weight-bold">
-                          {__('Full name')}
-                        </span>
-                        <input
-                          required
-                          type="text"
-                          id="nameTest"
-                          className="form-control"
-                          value={this.state.name || ''}
-                          onChange={(e) => {
-                            this.setState({
-                              name: e.target.value,
-                            });
-                          }}
-                        />
-                      </label>
+                    <Col sm="9">
+                      <div>
+                        <div className="w-100">
+                          <label htmlFor="nameTest">
+                            <span className="font-weight-bold">
+                              {__('Full name')}
+                            </span>
+                            <input
+                              required
+                              type="text"
+                              id="nameTest"
+                              className="form-control"
+                              value={this.state.name || ''}
+                              onChange={(e) => {
+                                this.setState({
+                                  name: e.target.value,
+                                });
+                              }}
+                            />
+                          </label>
+                        </div>
+                        <div className="w-100">
+                          <label htmlFor="emailTest">
+                            <span className="font-weight-bold">
+                              {__('Work email')}
+                            </span>
+                            <input
+                              id="emailTest"
+                              type="email"
+                              required
+                              className="form-control"
+                              value={this.state.email || ''}
+                              onChange={(e) => {
+                                this.setState({
+                                  email: e.target.value,
+                                });
+                              }}
+                            />
+                          </label>
+                        </div>
+                      </div>
                     </Col>
-                    <Col sm="12">
-                      <label htmlFor="emailTest">
-                        <span className="font-weight-bold">
-                          {__('Work email')}
-                        </span>
-                        <input
-                          id="emailTest"
-                          type="email"
-                          required
-                          className="form-control"
-                          value={this.state.email || ''}
-                          onChange={(e) => {
-                            this.setState({
-                              email: e.target.value,
-                            });
-                          }}
-                        />
-                      </label>
+                    <Col sm="3">
+                      <UserAvatar
+                        gcID={profile.gcID}
+                        myGcID={profile.gcID}
+                        avatar={profile.avatar}
+                        edit
+                        size="lg"
+                      />
                     </Col>
                   </Row>
                   <hr />

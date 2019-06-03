@@ -131,7 +131,13 @@ export class GQLTeamCard extends React.Component {
                           />
                           <div className="ml-2">
                             <div>
-                              {supTest ? supTest.name : 'None'}
+                              <a
+                                href={supTest ?
+                                  supTest.gcID : ''}
+                                className="text-dark font-weight-bold"
+                              >
+                                {supTest ? supTest.name : 'None'}
+                              </a>
                             </div>
                             <small className="text-muted">
                               {supTest ? supTest.titleEn : 'None'}
@@ -139,9 +145,9 @@ export class GQLTeamCard extends React.Component {
                           </div>
                         </div>
                         {canEdit ?
-                          <div className="mt-1">
+                          <div className="ml-5">
                             <Button
-                              color="light"
+                              color="link"
                               size="sm"
                               onClick={this.toggle}
                             >

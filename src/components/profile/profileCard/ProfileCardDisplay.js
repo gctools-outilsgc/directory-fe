@@ -8,20 +8,20 @@ import { Row, Col } from 'reactstrap';
 import { UserAvatar } from '../../core/UserAvatar';
 
 export const ProfileCardDisplay = (props) => {
-  const { user, edit } = props;
+  const { user } = props;
   const { address: userAddress } = user;
   return (
     <Row className="mb-3">
-      <Col xs="2">
+      <Col xs="3" sm="2">
         <UserAvatar
           gcID={user.gcID}
           myGcID={user.gcID}
           avatar={user.avatar}
-          edit={edit}
+          edit
           size="lg"
         />
       </Col>
-      <Col xs="10">
+      <Col xs="9" sm="10">
         <div className="profile-name">
           {user.name ? user.name : ''}
         </div>
@@ -100,7 +100,6 @@ ProfileCardDisplay.propTypes = {
       country: PropTypes.string,
     }),
   }).isRequired,
-  edit: PropTypes.bool.isRequired,
 };
 
 export default LocalizedComponent(ProfileCardDisplay);

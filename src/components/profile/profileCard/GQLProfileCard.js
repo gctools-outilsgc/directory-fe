@@ -63,7 +63,6 @@ export const GQLProfileCard = (props) => {
                   </CardTitle>
                   <LocalizedProfileCardDisplay
                     user={userInfo}
-                    edit={canEdit}
                   />
                 </CardBody>
               </div>
