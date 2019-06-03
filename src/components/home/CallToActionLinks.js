@@ -28,7 +28,7 @@ const CallToActionLinks = (props) => {
     <div>
       {myGcID && (
         <Row>
-          <Col>
+          <Col className="mb-2">
             <a href="/onboard" className="stretched-link">
               <Card>
                 <CardBody className="d-flex align-items-center">
@@ -44,7 +44,7 @@ const CallToActionLinks = (props) => {
               </Card>
             </a>
           </Col>
-          <Col>
+          <Col className="mb-2">
             <a
               href={`/p/${myGcID}`}
               className="stretched-link"

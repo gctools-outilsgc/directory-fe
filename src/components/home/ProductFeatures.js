@@ -10,7 +10,7 @@ const ProductFeatures = (props) => {
   const { heading, features } = props;
 
   const featureList = features.map(f => (
-    <Col sm="4" key={f.featureHeading} className="mb-4">
+    <Col md="4" sm="6" key={f.featureHeading} className="mb-4">
       <div>
         <img
           src={f.img}
