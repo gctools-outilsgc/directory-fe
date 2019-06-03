@@ -29,8 +29,8 @@ const ProductJumbo = (props) => {
   };
   return (
     <Jumbotron fluid style={style.jumbo}>
-      <Row>
-        <Col className=".d-none .d-sm-block">
+      <Row className="m-0">
+        <Col className=".d-none .d-sm-block p-0">
           <img
             alt=""
             src={bannerLeft}
@@ -48,7 +48,7 @@ const ProductJumbo = (props) => {
             <ProfileSearch />
           </div>
         </Col>
-        <Col className=".d-none .d-sm-block">
+        <Col className=".d-none .d-sm-block p-0">
           <img
             alt=""
             src={bannerRight}
