@@ -377,19 +377,23 @@ export class EditProfile extends Component {
                         <span className="font-weight-bold">
                           {__('Mobile Phone Number')}
                         </span>
-                        <input
-                          id="mobilePhone"
-                          type="tel"
-                          className="form-control"
-                          aria-describedby="mobilePhoneHelp"
-                          value={this.state.mobilePhone || ''}
-                          pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$"
-                          onChange={(e) => {
-                            this.setState({
-                              mobilePhone: e.target.value,
-                            });
-                          }}
-                        />
+                        <span className="shell">
+                          <input
+                            id="mobilePhone"
+                            type="tel"
+                            className="form-control"
+                            placeholder="XXX-XXX-XXXX"
+                            aria-describedby="mobilePhoneHelp"
+                            value={this.state.mobilePhone || ''}
+                            // eslint-disable-next-line
+                            pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"
+                            onChange={(e) => {
+                              this.setState({
+                                mobilePhone: e.target.value,
+                              });
+                            }}
+                          />
+                        </span>
                         <small id="mobilePhoneHelp" className="text-muted">
                           1234567890
                         </small>

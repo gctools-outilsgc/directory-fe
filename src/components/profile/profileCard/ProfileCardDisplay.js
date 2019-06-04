@@ -17,7 +17,6 @@ export const ProfileCardDisplay = (props) => {
           gcID={user.gcID}
           myGcID={user.gcID}
           avatar={user.avatar}
-          edit
           size="lg"
         />
       </Col>
