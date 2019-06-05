@@ -35,19 +35,18 @@ class ProfileSearch extends React.Component {
       <Query
         query={gql`
           query profileSearchQuery($name: String!) {
-            profiles(name: $name) {
+            search(partialName: $name) {
               gcID
               name
               avatar
-            }
-          }`}
+            }          }`}
         skip={this.state.skip}
         variables={{ name: this.state.value }}
       >
         {({ data }) => {
           const checkResult = (!data) ? [''] : data;
-          const results = (checkResult.profiles)
-            ? checkResult.profiles.map(a => (
+          const results = (checkResult.search)
+            ? checkResult.search.map(a => (
               <li key={a.gcID}>
                 <a href={`/p/${a.gcID}`}>
                   {a.name}

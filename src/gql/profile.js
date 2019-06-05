@@ -80,25 +80,13 @@ fragment FullTeam on Profile {
 
 export const SEARCH = gql`
 query profileSearchQuery($name: String!) {
-  profiles(name: $name) {
+  search(partialName: $name) {
     gcID
     name
     email
     titleEn
     titleFr
     avatar
-    team {
-      id
-      organization {
-        id
-        nameEn
-        nameFr
-      }
-    }
-    ownerOfTeams {
-      id
-      nameEn
-    }
   }
 }`;
 
