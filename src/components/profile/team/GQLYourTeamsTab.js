@@ -33,7 +33,7 @@ import GQLCreateTeamDialog from './GQLCreateTeamDialog';
 import GQLEditTeamDialog from './GQLEditTeamDialog';
 import MultiUserPicker from '../../core/MultiUserPicker';
 import TransferConfirmation from './TransferConfirmation';
-
+import TeamAvatar from './TeamAvatar';
 import refetchMutated from '../../../utils/refetchMutated';
 
 const RowContainer = styled.div`
@@ -306,18 +306,28 @@ class GQLYouTeamsTab extends React.Component {
                     classnames({ active: currentTab === id })}
                 >
                   <div>
-                    <div className="font-weight-bold">
-                      {(nameEn === '') && 'Default Team'}
-                      {(nameEn !== '') &&
-                        (localizer.lang === 'en_CA') ?
-                        nameEn : nameFr
-                      }
+                    <div className="d-flex">
+                      <TeamAvatar
+                        name={
+                          (localizer.lang === 'en_CA') ?
+                            nameEn : nameFr
+                        }
+                      />
+                      <div className="ml-2">
+                        <div className="font-weight-bold">
+                          {(nameEn === '') && 'Default Team'}
+                          {(nameEn !== '') &&
+                            (localizer.lang === 'en_CA') ?
+                            nameEn : nameFr
+                          }
+                        </div>
+                        <small>
+                          {(localizer.lang === 'en_CA') ?
+                            descriptionEn : descriptionFr
+                          }
+                        </small>
+                      </div>
                     </div>
-                    <small>
-                      {(localizer.lang === 'en_CA') ?
-                        descriptionEn : descriptionFr
-                      }
-                    </small>
                     <small>
                       {(id !== defaultId) && (
                         <ul className="list-inline text-primary ml-n2">
