@@ -22,6 +22,7 @@ class SupervisorPicker extends React.Component {
   handleResultClick(e) {
     this.setState({
       skip: true,
+      value: '',
     });
     setTimeout(() => this.props.onResultSelect(e), 0);
   }
@@ -65,6 +66,7 @@ class SupervisorPicker extends React.Component {
                   onClick={() => this.handleResultClick(a)}
                   color="light"
                   block
+                  className="user-btn"
                 >
                   <div className="d-flex">
                     <img
@@ -93,9 +95,11 @@ class SupervisorPicker extends React.Component {
           const styleClasses = (!data) ?
             'search-results-none' : 'list-unstyled search-results';
           return (
-            <div>
-              <label>
-                Search
+            <div className="search-form search-form-round">
+              <label className="w-100">
+                <span className="font-weight-bold">
+                  Search
+                </span>
                 <Input
                   type="text"
                   onChange={this.handleChange}

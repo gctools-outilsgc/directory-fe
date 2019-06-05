@@ -14,8 +14,8 @@ import {
   Button
 } from 'reactstrap';
 
-import I18NProfileListSearch from '../../core/ProfileListSearch';
-
+// import I18NProfileListSearch from '../../core/ProfileListSearch';
+import SupervisorPicker from '../../core/SupervisorPicker';
 
 const ProfileDisplay = styled.div`
 text-align: center;
@@ -30,6 +30,9 @@ font-weight: bold;
 margin: 0 auto;
 `;
 
+const ChosenHolder = styled.div`
+height: 150px;
+`;
 
 export const TransferToSupervisorDialog = (props) => {
   const {
@@ -76,7 +79,7 @@ export const TransferToSupervisorDialog = (props) => {
         >
           {__('Transfer a team member to a new Supervisor')}
         </ModalHeader>
-        <ModalBody>
+        <ModalBody className="mb-5">
           <ProfileDisplay>
             <h1>{__('Choose a new Supervisor for this team member')}</h1>
             <img
@@ -88,10 +91,44 @@ export const TransferToSupervisorDialog = (props) => {
             <ProfileName>{name}</ProfileName>
             {(localizer.lang === 'en_CA') ? titleEn : titleFr}
           </ProfileDisplay>
-          <I18NProfileListSearch
-            onChange={(_, val) => { setSupervisor(val); }}
-          />
-
+          <div>
+            <SupervisorPicker
+              onResultSelect={(e) => {
+                console.log(e);
+                setSupervisor(e);
+              }}
+            />
+            <ChosenHolder>
+              {supervisor && (
+                <div className="pt-4">
+                  <div>
+                    Chosen Supervisor
+                  </div>
+                  <div className="d-flex">
+                    <img
+                      className="avatar rounded-circle"
+                      src={
+                        supervisor.avatar
+                      }
+                      alt={
+                        supervisor.name
+                      }
+                    />
+                    <div className="ml-2">
+                      <div
+                        className="font-weight-bold"
+                      >
+                        {supervisor.name}
+                      </div>
+                      <small className="text-muted">
+                        {supervisor.titleEn}
+                      </small>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </ChosenHolder>
+          </div>
         </ModalBody>
         <ModalFooter>
           <Button
