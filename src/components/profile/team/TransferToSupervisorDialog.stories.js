@@ -30,7 +30,7 @@ const mocks = [
     },
     result: {
       data: {
-        profiles: [{
+        search: [{
           gcID: '2',
           name: 'Clara MacKinnon',
           email: 'test2@testing.com',
