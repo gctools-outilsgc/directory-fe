@@ -1,16 +1,11 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import {
-  Button,
-  Navbar,
-  NavbarBrand,
-  Nav,
-  NavItem
-} from 'reactstrap';
+import { Button } from 'reactstrap';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import { connect } from 'react-redux';
+import GlobalNav from '@gctools-components/global-nav';
 import Login from '@gctools-components/gc-login';
 import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
@@ -23,10 +18,8 @@ import Profile from './Profile';
 import Home from './Home';
 import Onboard from './Onboard';
 
-import ProfileSearch from '../components/core/ProfileSearch';
+// import ProfileSearch from '../components/core/ProfileSearch';
 import ProgressBanner from '../components/core/ProgressBanner';
-
-import enFip from '../assets/imgs/sig-en-w.png';
 
 export class App extends Component {
   static toggleLanguage(e) {
@@ -37,7 +30,7 @@ export class App extends Component {
   }
   constructor(props) {
     super(props);
-    this.state = { name: false };
+    this.state = { name: false, user: null, sidebar: false };
   }
 
   componentWillMount() {
@@ -50,6 +43,12 @@ export class App extends Component {
           localizer.setLanguage(lang);
         }
       });
+    if (cookies.filter(item => item.includes('oadw-gn-min=false')).length) {
+      this.setState({
+        sidebar: true,
+      });
+    }
+    console.log(document.cookie);
   }
 
   render() {
@@ -60,6 +59,7 @@ export class App extends Component {
 
     const doLogin = (user) => {
       this.setState({ name: user.profile.name });
+      this.setState({ user: user.profile });
       onLogin(user);
     };
 
@@ -67,53 +67,60 @@ export class App extends Component {
       this.setState({ name: false });
       onLogout();
     };
+
+    const gnSetLanguage = (e) => {
+      localizer.setLanguage(e);
+      document.cookie = `lang=${e};path=/`;
+    };
+
     return (
       <BrowserRouter>
         <div>
-          <ProgressBanner />
-          <Navbar color="white" className="shadow-sm">
-            <div className="h-100 directory-fip">
-              <img src={enFip} alt="Government of Canada" />
-            </div>
-            <NavbarBrand href="/" className="directory-brand">
-              <span>Directory</span>
-            </NavbarBrand>
-            <Nav className="ml-auto">
-              <NavItem className="mr-2">
-                <ProfileSearch
-                  defaultValue="22"
-                />
-              </NavItem>
-              <NavItem className="mr-2">
-                <Login
-                  oidcConfig={oidcConfig}
-                  onUserLoaded={doLogin}
-                  onUserFetched={doLogin}
-                  onLogoutClick={(e, oidc) => {
-                    oidc.logout();
-                    doLogout();
-                  }}
-                >
-                  {({ onClick }) => (
-                    <Button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        onClick(e);
-                      }}
-                    >
-                      {this.state.name || 'Login'}
-                    </Button>
-                  )}
-                </Login>
-              </NavItem>
-              <NavItem>
-                <Button onClick={App.toggleLanguage}>
-                  {__('Language')}
-                </Button>
-              </NavItem>
-            </Nav>
-          </Navbar>
-          <div>
+          <Login
+            oidcConfig={oidcConfig}
+            onUserLoaded={doLogin}
+            onUserFetched={doLogin}
+            onLogoutClick={(e, oidc) => {
+              oidc.logout();
+              doLogout();
+            }}
+          >
+            {({ onClick }) => (
+              <Button
+                id="login-btn"
+                className="sr-only"
+                tabIndex="-1"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onClick(e);
+                }}
+              >
+                {this.state.name || 'Login'}
+              </Button>
+            )}
+          </Login>
+          <GlobalNav
+            minimized={this.state.sidebar}
+            currentLang={localizer.lang}
+            currentUser={this.state.user}
+            onLanguageResultClick={e => gnSetLanguage(e)}
+            onToggleResultClick={() => {
+              this.setState({ sidebar: !this.state.sidebar });
+              document.cookie = `oadw-gn-min=${this.state.sidebar};`;
+            }}
+            currentApp={
+              {
+                id: '3',
+                name: 'GCprofile',
+                home: '/',
+              }
+            }
+          />
+          <div className={(this.state.sidebar) ?
+            'directory-container-min' : 'directory-container'
+            }
+          >
+            <ProgressBanner />
             <Switch>
               <Fragment>
                 <Route
