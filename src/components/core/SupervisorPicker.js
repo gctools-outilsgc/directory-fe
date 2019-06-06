@@ -52,6 +52,10 @@ class SupervisorPicker extends React.Component {
               titleEn
               titleFr
               avatar
+              ownerOfTeams {
+                id
+                nameEn
+              }
             }
           }`}
         skip={this.state.skip}
