@@ -16,6 +16,9 @@ import {
   Button
 } from 'reactstrap';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+
 import TeamAvatar from './TeamAvatar';
 
 import varTag from '../../../utils/cssVarTag';
@@ -156,6 +159,7 @@ const TransferConfirmation = (props) => {
     source,
     transferredUser,
     destination,
+    loading,
   } = props;
 
   const bodyText = props.bodyText || __('transfere_description');
@@ -258,12 +262,20 @@ const TransferConfirmation = (props) => {
           <Button
             color="primary"
             onClick={primaryButtonClick}
+            disabled={loading}
           >
-            {primaryButtonText}
+            {loading ?
+              <FontAwesomeIcon
+                icon={faSpinner}
+                spin
+              /> :
+              primaryButtonText
+            }
           </Button>
           <Button
             color="secondary"
             onClick={secondaryButtonClick}
+            disabled={loading}
           >
             {secondaryButtonText}
           </Button>
@@ -289,6 +301,7 @@ TransferConfirmation.defaultProps = {
   onClosed: undefined,
   zIndex: 1000,
   delete: false,
+  loading: false,
 };
 
 TransferConfirmation.propTypes = {
@@ -362,6 +375,8 @@ TransferConfirmation.propTypes = {
   ]).isRequired,
   /** Indicate the intention to delete "source" */
   delete: PropTypes.bool,
+  /** Check if the parent mutation is loading */
+  loading: PropTypes.bool,
 };
 
 export default LocalizedComponent(TransferConfirmation);

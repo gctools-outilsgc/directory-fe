@@ -193,6 +193,7 @@ export class GQLTeamCard extends React.Component {
                                           this.setState({
                                             chosenSupervisor: s,
                                             editTeam: true,
+                                            chosenTeam: s.ownerOfTeams[0],
                                           });
                                           this.toggleSup(editSup);
                                         }}
@@ -313,8 +314,10 @@ export class GQLTeamCard extends React.Component {
                                 });
                               }}
                             >
-                              {modifyProfile => this.state.confirmModal && (
+                              {(modifyProfile, { loading }) =>
+                                this.state.confirmModal && (
                                 <LocalizedTransferConfirmation
+                                  loading={loading}
                                   isOpen={this.state.confirmModal}
                                   source={
                                     (supTest !== null) ? supTest :

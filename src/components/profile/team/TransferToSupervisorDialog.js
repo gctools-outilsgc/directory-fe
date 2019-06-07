@@ -94,7 +94,6 @@ export const TransferToSupervisorDialog = (props) => {
           <div>
             <SupervisorPicker
               onResultSelect={(e) => {
-                console.log(e);
                 setSupervisor(e);
               }}
             />
