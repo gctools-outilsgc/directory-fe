@@ -12,7 +12,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 import { EDIT, prepareEditProfile } from '../../gql/profile';
 import SupervisorPicker from '../core/SupervisorPicker';
-import TeamPicker from '../core/TeamPicker';
+// import TeamPicker from '../core/TeamPicker';
 import { UserAvatar } from '../core/UserAvatar';
 
 export class OnboardStep5 extends Component {
@@ -21,8 +21,7 @@ export class OnboardStep5 extends Component {
     this.state = {
       chosenSupervisor: '',
       teamId: '',
-      editSup: false,
-      editTeam: false,
+      editSup: true,
     };
 
     this.toggleSup = this.toggleSup.bind(this);
@@ -42,7 +41,6 @@ export class OnboardStep5 extends Component {
       chosenSupervisor,
       teamId,
       editSup,
-      editTeam,
     } = this.state;
     const teamTest = (!userObject) ? '' : userObject.team;
     const supTest = (!teamTest) ? '' : userObject.team.owner;
@@ -68,7 +66,7 @@ export class OnboardStep5 extends Component {
                 onResultSelect={(s) => {
                   this.setState({
                     chosenSupervisor: s,
-                    editTeam: true,
+                    teamId: s.ownerOfTeams[0],
                   });
                   this.toggleSup(editSup);
                 }}
@@ -134,28 +132,6 @@ export class OnboardStep5 extends Component {
               </div>
             }
           </Col>
-          <Col>
-            <div className="font-weight-bold mb-2">
-              Team
-            </div>
-            {editTeam ?
-              <TeamPicker
-                editMode
-                supervisor={chosenSupervisor}
-                gcID={userObject.gcID}
-                selectedOrgTier={teamTest}
-                onTeamChange={(t) => {
-                  this.setState({
-                    teamId: t.id,
-                  });
-                }}
-              /> :
-              <div>
-                {teamTest ? teamTest.nameEn :
-                  'Pick a Supervisor'}
-              </div>
-            }
-          </Col>
         </Row>
         <Row className="m-2 border-top">
           <div className="ml-auto mt-3">
@@ -165,6 +141,7 @@ export class OnboardStep5 extends Component {
             >
               {__('Back')}
             </Button>
+            {/** TODO: Send approval */}
             <Mutation
               mutation={EDIT}
               onCompleted={() => {
