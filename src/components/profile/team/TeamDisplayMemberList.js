@@ -17,7 +17,13 @@ const TeamDisplayMemberList = (props) => {
           />
           <div className="ml-2 font-weight-bold">
             <div>
-              {p ? p.name : 'None'}
+              <a
+                href={p ?
+                  p.gcID : ''}
+                className="text-dark"
+              >
+                {p ? p.name : 'None'}
+              </a>
             </div>
             <small className="text-muted">
               {p ? p.titleEn : 'None'}
@@ -35,6 +41,7 @@ const TeamDisplayMemberList = (props) => {
 
 TeamDisplayMemberList.propTypes = {
   members: PropTypes.arrayOf(PropTypes.shape({
+    gcID: PropTypes.string,
     avatar: PropTypes.string,
     name: PropTypes.string,
     titleEn: PropTypes.string,

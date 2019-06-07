@@ -15,7 +15,7 @@ import OrgChart from '../OrgChart/OrgChart/OrgChart';
 import { graphQLToNode, calculateOrgChart }
   from '../OrgChart/algorithm/nrc_orgchart_placement';
 
-import Loading from './Loading';
+import LoadingOrg from './LoadingOrg';
 
 import { ORGCHART } from '../../../gql/profile';
 
@@ -93,7 +93,7 @@ export class GQLTeamOrgChart extends React.Component {
         }}
       >
         {({ loading, error, data }) => {
-          if (loading && this.requireFullReload(data)) return <Loading />;
+          if (loading && this.requireFullReload(data)) return <LoadingOrg />;
           if (error) return `Error!: ${error}`;
           const { profiles: [profile] } = data;
           const {
