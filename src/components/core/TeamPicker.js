@@ -72,12 +72,6 @@ class TeamPicker extends React.Component {
                 .concat([data.profiles[0].org], ownerOfTeams);
           }
           const tierOptions = [];
-          tierOptions.push({
-            key: 'orgtier-undefined',
-            text: '',
-            value: null,
-            data: null,
-          });
           ownerOfTeams
             .forEach(tier =>
               tierOptions.push({
@@ -90,7 +84,11 @@ class TeamPicker extends React.Component {
 
           return (
             <div>
+              <label htmlFor="teamPicker" className="font-weight-bold">
+                {__('Choose a Team')}
+              </label>
               <Input
+                id="teamPicker"
                 type="select"
                 onChange={evt => this.handleTeamChange(evt, ownerOfTeams)}
                 disabled={!supervisor || loading}
@@ -107,7 +105,7 @@ class TeamPicker extends React.Component {
         }}
           </Query>
         ) : (
-          <div>Please pick a supervisor</div>
+          <div>{__('Please pick a supervisor')}</div>
         )}
       </div>
     );

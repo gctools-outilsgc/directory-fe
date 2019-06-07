@@ -22,6 +22,7 @@ class SupervisorPicker extends React.Component {
   handleResultClick(e) {
     this.setState({
       skip: true,
+      value: '',
     });
     setTimeout(() => this.props.onResultSelect(e), 0);
   }
@@ -45,12 +46,16 @@ class SupervisorPicker extends React.Component {
       <Query
         query={gql`
           query profileSearchQuery($name: String!) {
-            profiles(name: $name, first:5) {
+            search(partialName: $name) {
               gcID
               name
               titleEn
               titleFr
               avatar
+              ownerOfTeams {
+                id
+                nameEn
+              }
             }
           }`}
         skip={this.state.skip}
@@ -58,13 +63,14 @@ class SupervisorPicker extends React.Component {
       >
         {({ data }) => {
           const checkResult = (!data) ? [''] : data;
-          const results = (checkResult.profiles) ?
-            checkResult.profiles.map(a => (
+          const results = (checkResult.search) ?
+            checkResult.search.map(a => (
               <li key={a.gcID}>
                 <Button
                   onClick={() => this.handleResultClick(a)}
                   color="light"
                   block
+                  className="user-btn"
                 >
                   <div className="d-flex">
                     <img
@@ -93,9 +99,11 @@ class SupervisorPicker extends React.Component {
           const styleClasses = (!data) ?
             'search-results-none' : 'list-unstyled search-results';
           return (
-            <div>
-              <label>
-                Search
+            <div className="search-form search-form-round">
+              <label className="w-100">
+                <span className="font-weight-bold">
+                  Search
+                </span>
                 <Input
                   type="text"
                   onChange={this.handleChange}

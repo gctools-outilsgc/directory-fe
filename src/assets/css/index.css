@@ -78,12 +78,45 @@ animation: LoadingText 2s ease infinite;
     width: 255px;
 }
 
+.search-form {
+  position: relative !important;
+}
+
+.search-results {
+  text-align: left !important;
+  width: 100% !important;
+  padding: 15px !important;
+}
+
+.search-form label {
+  width: 100% !important;
+}
+
 .search-results-none {
   display:none;
 }
 
 .nav-tabs .nav-item:hover{
   cursor: pointer;
+}
+
+.bg-gradient {
+  background: #0d727a; /* Old browsers */
+  background: -moz-linear-gradient(left, #0d727a 0%, #0d84b9 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #0d727a 0%,#0d84b9 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #0d727a 0%,#0d84b9 100%);
+}
+
+.user-btn {
+  text-align: left !important;
+}
+
+.user-btn .avatar {
+  margin-right: 8px;
+}
+
+.product-feature-holder .text-muted {
+  color: #5e666c !important;
 }
 
 /* Profile Card */

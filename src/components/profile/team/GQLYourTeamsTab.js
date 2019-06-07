@@ -33,7 +33,7 @@ import GQLCreateTeamDialog from './GQLCreateTeamDialog';
 import GQLEditTeamDialog from './GQLEditTeamDialog';
 import MultiUserPicker from '../../core/MultiUserPicker';
 import TransferConfirmation from './TransferConfirmation';
-
+import TeamAvatar from './TeamAvatar';
 import refetchMutated from '../../../utils/refetchMutated';
 
 const RowContainer = styled.div`
@@ -295,9 +295,10 @@ class GQLYouTeamsTab extends React.Component {
               nameEn,
               nameFr,
               descriptionEn,
+              descriptionFr,
             } = team;
             return (
-              <NavItem key={id}>
+              <NavItem key={id} className="border-bottom">
                 <NavLink
                   href="#!"
                   onClick={() => { this.toggle(id); }}
@@ -305,46 +306,63 @@ class GQLYouTeamsTab extends React.Component {
                     classnames({ active: currentTab === id })}
                 >
                   <div>
-                    <div className="font-weight-bold">
-                      {(nameEn === '') && 'Default Team'}
-                      {(nameEn !== '') && `${nameEn} / ${nameFr}`}
+                    <div className="d-flex">
+                      <TeamAvatar
+                        name={
+                          (localizer.lang === 'en_CA') ?
+                            nameEn : nameFr
+                        }
+                      />
+                      <div className="ml-2">
+                        <div className="font-weight-bold">
+                          {(nameEn === '') && 'Default Team'}
+                          {(nameEn !== '') &&
+                            (localizer.lang === 'en_CA') ?
+                            nameEn : nameFr
+                          }
+                        </div>
+                        <small>
+                          {(localizer.lang === 'en_CA') ?
+                            descriptionEn : descriptionFr
+                          }
+                        </small>
+                      </div>
                     </div>
                     <small>
-                      {descriptionEn}
-                    </small>
-                    <small>
-                      <ul className="list-inline text-primary">
-                        <li className="list-inline-item">
-                          <Button
-                            color="link"
-                            size="small"
-                          >
-                            {__('Tranfer')}
-                          </Button>
-                        </li>
-                        <li className="list-inline-item">
-                          <Button
-                            color="link"
-                            size="small"
-                            onClick={() => {
-                              this.setState({
-                                editDialogOpen: true,
-                                editTeam: team,
-                              });
-                            }}
-                          >
-                            {__('edit')}
-                          </Button>
-                        </li>
-                        {nameEn !== '' && (
-                        <li className="list-inline-item">
-                          <DeleteTeamAction
-                            profile={userInfo}
-                            team={team}
-                          />
-                        </li>
-                        )}
-                      </ul>
+                      {(id !== defaultId) && (
+                        <ul className="list-inline text-primary ml-n2">
+                          <li className="list-inline-item">
+                            <Button
+                              color="link"
+                              size="small"
+                            >
+                              {__('Tranfer')}
+                            </Button>
+                          </li>
+                          <li className="list-inline-item">
+                            <Button
+                              color="link"
+                              size="small"
+                              onClick={() => {
+                                this.setState({
+                                  editDialogOpen: true,
+                                  editTeam: team,
+                                });
+                              }}
+                            >
+                              {__('edit')}
+                            </Button>
+                          </li>
+                          {nameEn !== '' && (
+                          <li className="list-inline-item">
+                            <DeleteTeamAction
+                              profile={userInfo}
+                              team={team}
+                            />
+                          </li>
+                          )}
+                        </ul>
+                      )}
                     </small>
                   </div>
                 </NavLink>

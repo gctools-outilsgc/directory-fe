@@ -30,7 +30,7 @@ export const UserAvatar = (props) => {
   return (
     <div>
       <div className="query">
-        <div>
+        <div className="d-flex justify-content-center">
           <img
             className={`avatar rounded-circle avatar-${size}`}
             src={avatar}
@@ -43,14 +43,15 @@ export const UserAvatar = (props) => {
             mutation={EDIT}
           >
             {uploadAvatar => (
-              <Button>
-                <label htmlFor="avatarUploadTest">
+              <Button
+                onClick={e => e.stopPropagation()}
+              >
+                <label htmlFor="avatarUploadTest" className="mb-0">
                   {__('Upload')}
                   <input
                     type="file"
                     id="avatarUploadTest"
                     style={{ display: 'none' }}
-                    required
                     onChange={({ target }) => {
                       uploadAvatar({
                         variables: {
