@@ -73,7 +73,6 @@ export class EditProfile extends Component {
       modal: !this.state.modal,
       confirmModal: !this.state.confirmModal,
     });
-    console.log('I fired');
   }
 
   render() {

@@ -86,6 +86,7 @@ const ApprovalPane = (props) => {
   } = props;
 
   const [deny, setDeny] = useState(true);
+  const [formValue, setFormValue] = useState(null);
   return (
     <TabPane tabId={approval.id}>
       <div
@@ -95,7 +96,15 @@ const ApprovalPane = (props) => {
           <strong>{approval.user.name} </strong>
           wants to do a thing.
         </div>
-        <Form>
+        <Form
+          onSubmit={(e) => {
+            e.preventDefault();
+            console.log(formValue);
+            if (e.target[0].value) {
+              console.log(e.target[0].value);
+            }
+          }}
+        >
           <FormGroup>
             <label htmlFor={`comments-${approval.id}`}>
               Comments
@@ -108,10 +117,29 @@ const ApprovalPane = (props) => {
             />
           </FormGroup>
           <div className="float-right">
-            <Button color="primary" className="mr-2">
+            <Button
+              color="primary"
+              className="mr-2"
+              type="submit"
+              name="approve"
+              value="approve"
+              onClick={(e) => {
+                setFormValue(e.target.value);
+              }}
+            >
               Approve
             </Button>
-            <Button disabled={deny}>Deny</Button>
+            <Button
+              disabled={deny}
+              type="submit"
+              name="deny"
+              value="deny"
+              onClick={(e) => {
+                setFormValue(e.target.value);
+              }}
+            >
+              Deny
+            </Button>
           </div>
         </Form>
       </div>
