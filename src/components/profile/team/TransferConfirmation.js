@@ -212,11 +212,15 @@ const TransferConfirmation = (props) => {
                   alt={`${avatarAltText} ${user1.name}`}
                 />
                 <div className="team">
-                  <TeamAvatar name={user2.team.name} />
+                  {!user2.isTeam && (
+                    <TeamAvatar name={user2.team.name} />
+                  )}
                 </div>
                 <div className="name">
                   <h2>{user1.name}</h2>
-                  <span>{user2.team.name}</span>
+                  {!user2.isTeam && (
+                    <span>{user2.team.name}</span>
+                  )}
                 </div>
               </React.Fragment>
             )}
@@ -225,14 +229,29 @@ const TransferConfirmation = (props) => {
                 {props.delete && <i className="fas fa-trash-alt" />}
               </div>
             </div>
-            <img
-              src={user2.avatar}
-              alt={`${avatarAltText} ${user2.name}`}
-            />
-            <div className="name">
-              <h2>{user2.name}</h2>
-              <span>{user2.title}</span>
-            </div>
+            {user2.isTeam && (
+              <React.Fragment>
+                <TeamAvatar
+                  className="tcd-team-avatar"
+                  name={user2.name}
+                />
+                <div className="name">
+                  <h2>{user2.name}</h2>
+                </div>
+              </React.Fragment>
+            )}
+            {!user2.isTeam && (
+              <React.Fragment>
+                <img
+                  src={user2.avatar}
+                  alt={`${avatarAltText} ${user2.name}`}
+                />
+                <div className="name">
+                  <h2>{user2.name}</h2>
+                  <span>{user2.title}</span>
+                </div>
+              </React.Fragment>
+            )}
             {user3.isTeam && (
               <React.Fragment>
                 <TeamAvatar className="tcd-team-avatar" name={user3.name} />
@@ -248,11 +267,15 @@ const TransferConfirmation = (props) => {
                   alt={`${avatarAltText} ${user3.name}`}
                 />
                 <div className="team">
-                  <TeamAvatar name={user3.team.name} />
+                  {!user2.isTeam && (
+                    <TeamAvatar name={user3.team.name} />
+                  )}
                 </div>
                 <div className="name">
                   <h2>{user3.name}</h2>
-                  <span>{user3.team.name}</span>
+                  {!user2.isTeam && (
+                    <span>{user3.team.name}</span>
+                  )}
                 </div>
               </React.Fragment>
             )}
@@ -353,7 +376,7 @@ TransferConfirmation.propTypes = {
   ]).isRequired,
   /** The profile of user being transferred */
   transferredUser: PropTypes.shape({
-    name: PropTypes.string.isRequired,
+    name: PropTypes.string,
     avatar: PropTypes.string,
     titleEn: PropTypes.string,
     titleFr: PropTypes.string,
