@@ -114,3 +114,7 @@ msgstr ""
 msgid "Transfer this team to a new Supervisor"
 msgstr ""
 
+#: src/components/profile/team/GQLYourTeamsTab.js 263:9
+msgid "Transfer Team"
+msgstr ""
+

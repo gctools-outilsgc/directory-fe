@@ -27,6 +27,7 @@ import {
   EDIT_TEAM,
   FullTeamFragment
 } from '../../../gql/profile';
+import { EDIT_A_TEAM } from '../../../gql/team';
 import './css/youTeamStyle.css';
 import I18nYourTeamMemberList from './YourTeamMemberList';
 import GQLCreateTeamDialog from './GQLCreateTeamDialog';
@@ -259,11 +260,11 @@ const TransferTeamToSupervisorAction = (props) => {
         color="link"
         onClick={(e) => { setShowDialog(true); e.preventDefault(); }}
       >
-        Transfer to NEW SUP
+        {__('Transfer Team')}
       </Button>
       <ErrorModal error={error} />
       <Mutation
-        mutation={EDIT_TEAM}
+        mutation={EDIT_A_TEAM}
         refetchQueries={[{
           query: GET_YOUR_TEAM,
           variables: { gcID: supervisor.gcID },
@@ -310,11 +311,10 @@ const TransferTeamToSupervisorAction = (props) => {
               secondaryButtonClick={() => { setConfirm(undefined); }}
               closeButtonClick={closeAll}
               primaryButtonClick={() => {
-                const defaultTeam = getDefaultTeam(confirm);
                 mutate({
                   variables: {
-                    gcID: profile.gcID,
-                    data: { team: { id: defaultTeam.id } },
+                    id: profile.id,
+                    data: { owner: { gcID: confirm.gcID } },
                   },
                 });
               }}

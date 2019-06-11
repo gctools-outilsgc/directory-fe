@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-06-10 14:09-0400\n"
+"POT-Creation-Date: 2019-06-11 10:50-0400\n"
 "PO-Revision-Date: 2019-03-21 11:35-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en_CA\n"
@@ -125,4 +125,8 @@ msgstr ""
 #: 302:21 src/components/profile/team/GQLYourTeamsTab.js
 msgid "Transfer this team to a new Supervisor"
 msgstr ""
+
+#: 263:9 src/components/profile/team/GQLYourTeamsTab.js
+msgid "Transfer Team"
+msgstr "Transfer to other supervisor"
 
