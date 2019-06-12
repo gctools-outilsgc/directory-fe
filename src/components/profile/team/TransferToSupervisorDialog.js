@@ -207,7 +207,7 @@ TransferToSupervisorDialog.propTypes = {
   ]),
   /** The profile of the user being transferred */
   profile: PropTypes.shape({
-    name: PropTypes,
+    name: PropTypes.string,
     avatar: PropTypes.string,
     titleEn: PropTypes.string,
     titleFr: PropTypes.string,

@@ -255,13 +255,13 @@ const TransferTeamToSupervisorAction = (props) => {
   };
   return (
     <React.Fragment>
-      <Button
-        href="#!"
+      <button
+        className="btn btn-link"
         color="link"
         onClick={(e) => { setShowDialog(true); e.preventDefault(); }}
       >
         {__('Transfer Team')}
-      </Button>
+      </button>
       <ErrorModal error={error} />
       <Mutation
         mutation={EDIT_A_TEAM}
