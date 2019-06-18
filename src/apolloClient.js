@@ -1,6 +1,7 @@
 import { ApolloClient } from 'apollo-client';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { createUploadLink } from 'apollo-upload-client';
+import oidcClient from './oidcConfig.dev';
 
 const cache = new InMemoryCache({
   dataIdFromObject: (object) => {
@@ -19,9 +20,30 @@ const cache = new InMemoryCache({
   },
 });
 
+
+const authToken = () => {
+  // get the authentication token from redux store if it exists
+
+  const sessionInfo = JSON.parse(sessionStorage
+    .getItem(`oidc.user:${oidcClient.authority}:${oidcClient.client_id}`));
+
+  const token = () => {
+    if (sessionInfo) {
+      return sessionInfo.access_token ?
+        `Bearer ${sessionInfo.access_token}` : '';
+    }
+    return '';
+  };
+  return token();
+};
+
+
 const client = new ApolloClient({
   link: createUploadLink({
     uri: 'https://paas.beta.gccollab.ca/graphql',
+    headers: {
+      authorization: authToken(),
+    },
   }),
   cache,
 });
