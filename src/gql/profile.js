@@ -90,6 +90,28 @@ query profileSearchQuery($name: String!) {
   }
 }`;
 
+export const GET_APPROVALS = gql`
+query getApprovals($gcIDApprover: gcIDProfileInput!) {
+  approvals(gcIDApprover: $gcIDApprover) {
+    id
+    createdOn
+    status
+    changeType
+    gcIDSubmitter{
+      gcID
+      name
+      avatar
+      titleEn
+    }
+    requestedChange{
+      id
+      gcID
+      name
+    }
+  }
+}
+`;
+
 export const GET_TEAM = gql`
 query getTeam($gcID: ID!) {
   profiles(gcID: $gcID) {

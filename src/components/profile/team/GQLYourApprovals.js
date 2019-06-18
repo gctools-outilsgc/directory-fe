@@ -6,6 +6,8 @@ import LocalizedComponent
 import classnames from 'classnames';
 import styled from 'styled-components';
 
+import { Query } from 'react-apollo';
+
 import {
   TabContent,
   TabPane,
@@ -19,6 +21,7 @@ import {
   FormGroup
 } from 'reactstrap';
 
+import { GET_APPROVALS } from '../../../gql/profile';
 import { UserAvatar } from '../../core/UserAvatar';
 import InputCharacterCount from '../../core/InputCharacterCount';
 
@@ -59,7 +62,7 @@ const ApprovalList = (props) => {
               {user.name}
             </div>
             <small className="text-muted">
-              {user.title}
+              {user.titleEn}
             </small>
           </div>
         </div>
@@ -72,7 +75,7 @@ ApprovalList.propTypes = {
   user: PropTypes.shape({
     avatar: PropTypes.string,
     name: PropTypes.string,
-    title: PropTypes.string,
+    titleEn: PropTypes.string,
   }).isRequired,
   approvalID: PropTypes.string.isRequired,
   toggle: PropTypes.func.isRequired,
@@ -177,67 +180,66 @@ class GQLYourApprovals extends React.Component {
 
   render() {
     return (
-      <RowContainer>
-        <Row className="mt-3 your-teams-container">
-          <Col sm="4" className="pr-0">
-            A Query for this ID: {this.props.gcID} will go here!
-            <div className="member-holder">
-              <Nav vertical>
-                {/* TODO Map these / props may change based on schema */}
-                <ApprovalList
-                  user={
-                    {
-                      name: 'Jonald',
-                      title: 'Just testing',
-                    }
-                  }
-                  approvalID="3"
-                  toggle={(e) => { this.toggle(e); }}
-                  activeTab={this.state.activeTab}
-                />
-                <ApprovalList
-                  user={
-                    {
-                      name: 'Jonaldina',
-                      title: 'Another user',
-                    }
-                  }
-                  approvalID="4"
-                  toggle={(e) => { this.toggle(e); }}
-                  activeTab={this.state.activeTab}
-                />
-              </Nav>
-            </div>
-          </Col>
-          <Col sm="8" className="pl-0">
-            <TabContent activeTab={this.state.activeTab}>
-              {/* TODO Map these */}
-              <ApprovalPane
-                approval={
-                  {
-                    id: '3',
-                    user: {
-                      gcID: '21',
-                      name: 'Jonald',
-                    },
-                  }
+      <Query
+        query={GET_APPROVALS}
+        variables={
+          { gcIDApprover: { gcID: (String(this.props.gcID)) } }
+        }
+      >
+        {({
+          loading,
+          error,
+          data,
+        }) => {
+          if (loading) return 'Loading...';
+          if (error) return `Error!: ${error}`;
+          const approvalData = (!data) ? '' : data.approvals;
+          const Testing = (data.length > 0) ? 'GREATER' : 'LESS';
+          const aList = approvalData.map(apprvl => (
+            <ApprovalList
+              user={apprvl.gcIDSubmitter}
+              approvalID={apprvl.id}
+              toggle={(e) => { this.toggle(e); }}
+              activeTab={this.state.activeTab}
+            />
+          ));
+
+          const aPane = approvalData.map(apprvl => (
+            <ApprovalPane
+              approval={
+                {
+                  id: apprvl.id,
+                  user: {
+                    gcID: apprvl.gcIDSubmitter.gcID,
+                    name: apprvl.gcIDSubmitter.name,
+                  },
                 }
-              />
-              <ApprovalPane
-                approval={
-                  {
-                    id: '4',
-                    user: {
-                      gcID: '120',
-                      name: 'Jonaldina',
-                    },
-                  }
-                }
-              />
-            </TabContent>
-          </Col>
-        </Row>
-      </RowContainer>
+              }
+            />
+          ));
+          return (
+            <RowContainer>
+              <Row className="mt-3 your-teams-container">
+                <Col sm="4" className="pr-0">
+                  ALSO: {approvalData} + {Testing}
+                  <div className="member-holder">
+                    <Nav vertical>
+                      {/* TODO Map these / props may change based on schema */}
+                      {aList}
+                    </Nav>
+                  </div>
+                </Col>
+                <Col sm="8" className="pl-0">
+                  <TabContent activeTab={this.state.activeTab}>
+                    {/* TODO Map these */}
+                    {aPane}
+                  </TabContent>
+                </Col>
+              </Row>
+            </RowContainer>
+          );
+        }}
+      </Query>
     );
   }
 }
