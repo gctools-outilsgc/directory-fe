@@ -112,6 +112,16 @@ query getApprovals($gcIDApprover: gcIDProfileInput!) {
 }
 `;
 
+export const MODIFY_APPROVALS = gql`
+mutation modifyApproval($id: ID! $data: ModifyApprovalInput) {
+  approvals(id: $id, data: $data) {
+    id
+    deniedComment
+    status
+  }
+}
+`;
+
 export const GET_TEAM = gql`
 query getTeam($gcID: ID!) {
   profiles(gcID: $gcID) {

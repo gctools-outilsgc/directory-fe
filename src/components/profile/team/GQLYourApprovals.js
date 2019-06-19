@@ -6,7 +6,7 @@ import LocalizedComponent
 import classnames from 'classnames';
 import styled from 'styled-components';
 
-import { Query } from 'react-apollo';
+import { Query, Mutation } from 'react-apollo';
 
 import {
   TabContent,
@@ -21,7 +21,7 @@ import {
   FormGroup
 } from 'reactstrap';
 
-import { GET_APPROVALS } from '../../../gql/profile';
+import { GET_APPROVALS, MODIFY_APPROVALS } from '../../../gql/profile';
 import { UserAvatar } from '../../core/UserAvatar';
 import InputCharacterCount from '../../core/InputCharacterCount';
 
@@ -86,10 +86,12 @@ ApprovalList.propTypes = {
 const ApprovalPane = (props) => {
   const {
     approval,
+    changeType,
   } = props;
 
   const [deny, setDeny] = useState(true);
   const [formValue, setFormValue] = useState(null);
+  const [denyValue, setDenyValue] = useState('');
   return (
     <TabPane tabId={approval.id}>
       <div
@@ -97,60 +99,79 @@ const ApprovalPane = (props) => {
       >
         <div className="mb-auto">
           <strong>{approval.user.name} </strong>
-          wants to do a thing.
+          wants to
+          {(changeType === 'Membership') ?
+            ' JOIN YOUR TEAM AND MAKE YOU THEIR SUPERVISOR.' :
+            ' CHANGE THEIR PROFILE INFORMATION'
+          }
         </div>
-        <Form
-          onSubmit={(e) => {
-            e.preventDefault();
-            console.log(formValue);
-            if (e.target[0].value) {
-              console.log(e.target[0].value);
-            }
-          }}
+        <Mutation
+          mutation={MODIFY_APPROVALS}
         >
-          <FormGroup>
-            <label htmlFor={`comments-${approval.id}`}>
-              Comments
-            </label>
-            <InputCharacterCount
-              onChange={() => {
-                setDeny(false);
-              }}
-              id={`comments-${approval.id}`}
-            />
-          </FormGroup>
-          <div className="float-right">
-            <Button
-              color="primary"
-              className="mr-2"
-              type="submit"
-              name="approve"
-              value="approve"
-              onClick={(e) => {
-                setFormValue(e.target.value);
+          {modifyApproval => (
+            <Form
+              onSubmit={(e) => {
+                e.preventDefault();
+                console.log(formValue);
+                console.log(denyValue);
+                modifyApproval({
+                  variables: {
+                    id: approval.id,
+                    data: {
+                      deniedComment: denyValue,
+                      status: formValue,
+                    },
+                  },
+                });
               }}
             >
-              Approve
-            </Button>
-            <Button
-              disabled={deny}
-              type="submit"
-              name="deny"
-              value="deny"
-              onClick={(e) => {
-                setFormValue(e.target.value);
-              }}
-            >
-              Deny
-            </Button>
-          </div>
-        </Form>
+              <FormGroup>
+                <label htmlFor={`comments-${approval.id}`}>
+                  Comments
+                </label>
+                <InputCharacterCount
+                  onChange={(e) => {
+                    setDeny(false);
+                    setDenyValue(e.target.value);
+                  }}
+                  id={`comments-${approval.id}`}
+                />
+              </FormGroup>
+              <div className="float-right">
+                <Button
+                  color="primary"
+                  className="mr-2"
+                  type="submit"
+                  name="approve"
+                  value="Approved"
+                  onClick={(e) => {
+                    setFormValue(e.target.value);
+                  }}
+                >
+                  Approve
+                </Button>
+                <Button
+                  disabled={deny}
+                  type="submit"
+                  name="deny"
+                  value="Denied"
+                  onClick={(e) => {
+                    setFormValue(e.target.value);
+                  }}
+                >
+                  Deny
+                </Button>
+              </div>
+            </Form>
+          )}
+        </Mutation>
       </div>
     </TabPane>
   );
 };
 
 ApprovalPane.propTypes = {
+  changeType: PropTypes.string.isRequired,
   approval: PropTypes.shape({
     id: PropTypes.string,
     user: PropTypes.shape({
@@ -197,6 +218,7 @@ class GQLYourApprovals extends React.Component {
           const Testing = (data.length > 0) ? 'GREATER' : 'LESS';
           const aList = approvalData.map(apprvl => (
             <ApprovalList
+              key={apprvl.id}
               user={apprvl.gcIDSubmitter}
               approvalID={apprvl.id}
               toggle={(e) => { this.toggle(e); }}
@@ -206,6 +228,8 @@ class GQLYourApprovals extends React.Component {
 
           const aPane = approvalData.map(apprvl => (
             <ApprovalPane
+              key={apprvl.id}
+              changeType={apprvl.changeType}
               approval={
                 {
                   id: apprvl.id,
@@ -221,7 +245,7 @@ class GQLYourApprovals extends React.Component {
             <RowContainer>
               <Row className="mt-3 your-teams-container">
                 <Col sm="4" className="pr-0">
-                  ALSO: {approvalData} + {Testing}
+                  ALSO: {Testing}
                   <div className="member-holder">
                     <Nav vertical>
                       {/* TODO Map these / props may change based on schema */}
