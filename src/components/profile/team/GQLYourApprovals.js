@@ -91,6 +91,7 @@ const ApprovalPane = (props) => {
   const {
     approval,
     changeType,
+    requestedChange,
   } = props;
 
   const [deny, setDeny] = useState(true);
@@ -106,8 +107,9 @@ const ApprovalPane = (props) => {
           wants to
           {(changeType === 'Membership') ?
             ' JOIN YOUR TEAM AND MAKE YOU THEIR SUPERVISOR.' :
-            ' CHANGE THEIR PROFILE INFORMATION'
+            ' Change the following:'
           }
+          {requestedChange.titleEn}
         </div>
         <Mutation
           mutation={MODIFY_APPROVALS}
@@ -184,6 +186,13 @@ ApprovalPane.propTypes = {
       name: PropTypes.string,
     }),
   }).isRequired,
+  requestedChange: PropTypes.shape({
+    id: PropTypes.string,
+    gcID: PropTypes.string,
+    name: PropTypes.string,
+    titleEn: PropTypes.string,
+    titleFr: PropTypes.string,
+  }).isRequired,
 };
 
 class GQLYourApprovals extends React.Component {
@@ -211,6 +220,7 @@ class GQLYourApprovals extends React.Component {
         variables={
           { gcIDApprover: { gcID: (String(this.props.gcID)) } }
         }
+        fetchPolicy="network-only"
       >
         {({
           loading,
@@ -220,7 +230,8 @@ class GQLYourApprovals extends React.Component {
           if (loading) return 'Loading...';
           if (error) return `Error!: ${error}`;
           const approvalData = (!data) ? '' : data.approvals;
-          const Testing = (data.length > 0) ? 'GREATER' : 'LESS';
+          console.log(approvalData);
+          // const Testing = (data.length > 0) ? 'GREATER' : 'LESS';
           const aList = approvalData.map(apprvl => (
             <ApprovalList
               key={apprvl.id}
@@ -245,13 +256,13 @@ class GQLYourApprovals extends React.Component {
                   },
                 }
               }
+              requestedChange={apprvl.requestedChange}
             />
           ));
           return (
             <RowContainer>
               <Row className="mt-3 your-teams-container">
                 <Col sm="4" className="pr-0">
-                  ALSO: {Testing}
                   <div className="member-holder">
                     <Nav vertical>
                       {/* TODO Map these / props may change based on schema */}

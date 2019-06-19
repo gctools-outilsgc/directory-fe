@@ -107,6 +107,8 @@ query getApprovals($gcIDApprover: gcIDProfileInput!) {
       id
       gcID
       name
+      titleEn
+      titleFr
     }
   }
 }
