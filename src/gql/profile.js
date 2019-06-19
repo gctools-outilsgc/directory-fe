@@ -114,7 +114,7 @@ query getApprovals($gcIDApprover: gcIDProfileInput!) {
 
 export const MODIFY_APPROVALS = gql`
 mutation modifyApproval($id: ID! $data: ModifyApprovalInput) {
-  approvals(id: $id, data: $data) {
+  modifyApproval(id: $id, data: $data) {
     id
     deniedComment
     status

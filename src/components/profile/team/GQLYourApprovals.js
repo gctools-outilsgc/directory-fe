@@ -22,6 +22,7 @@ import {
 } from 'reactstrap';
 
 import { GET_APPROVALS, MODIFY_APPROVALS } from '../../../gql/profile';
+import refetchMutated from '../../../utils/refetchMutated';
 import { UserAvatar } from '../../core/UserAvatar';
 import InputCharacterCount from '../../core/InputCharacterCount';
 
@@ -39,6 +40,7 @@ const ApprovalList = (props) => {
     approvalID,
     toggle,
     activeTab,
+    status,
   } = props;
 
   return (
@@ -64,6 +66,7 @@ const ApprovalList = (props) => {
             <small className="text-muted">
               {user.titleEn}
             </small>
+            <div>{status}</div>
           </div>
         </div>
       </NavLink>
@@ -80,6 +83,7 @@ ApprovalList.propTypes = {
   approvalID: PropTypes.string.isRequired,
   toggle: PropTypes.func.isRequired,
   activeTab: PropTypes.string.isRequired,
+  status: PropTypes.string.isRequired,
 };
 
 // TODO: Make this form nicer and make it work.
@@ -107,6 +111,7 @@ const ApprovalPane = (props) => {
         </div>
         <Mutation
           mutation={MODIFY_APPROVALS}
+          update={refetchMutated}
         >
           {modifyApproval => (
             <Form
@@ -223,6 +228,7 @@ class GQLYourApprovals extends React.Component {
               approvalID={apprvl.id}
               toggle={(e) => { this.toggle(e); }}
               activeTab={this.state.activeTab}
+              status={apprvl.status}
             />
           ));
 
