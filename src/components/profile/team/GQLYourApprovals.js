@@ -103,13 +103,37 @@ const ApprovalPane = (props) => {
         className="vh-100 p-3 member-holder d-flex flex-column"
       >
         <div className="mb-auto">
-          <strong>{approval.user.name} </strong>
-          wants to
-          {(changeType === 'Membership') ?
-            ' JOIN YOUR TEAM AND MAKE YOU THEIR SUPERVISOR.' :
-            ' Change the following:'
+          <div className="mb-2">
+            <strong>{approval.user.name} </strong>
+            wants to
+            {(changeType === 'Membership') ?
+              ' JOIN YOUR TEAM AND MAKE YOU THEIR SUPERVISOR.' :
+              <span> change the following:</span>
+            }
+          </div>
+          {
+            Object.keys(requestedChange).map((c) => {
+              if (requestedChange[c] && c !== 'id' && c !== '__typename') {
+                let displayName = '';
+                switch (c) {
+                  case 'titleEn':
+                    displayName = 'Title EN';
+                    break;
+                  case 'titleFr':
+                    displayName = 'Title FR';
+                    break;
+                  default:
+                    displayName = '';
+                }
+                return (
+                  <div key={`${approval.id}-${c}`}>
+                    {`${displayName} = ${requestedChange[c]}`}
+                  </div>
+                );
+              }
+              return '';
+            })
           }
-          {requestedChange.titleEn}
         </div>
         <Mutation
           mutation={MODIFY_APPROVALS}
@@ -188,7 +212,6 @@ ApprovalPane.propTypes = {
   }).isRequired,
   requestedChange: PropTypes.shape({
     id: PropTypes.string,
-    gcID: PropTypes.string,
     name: PropTypes.string,
     titleEn: PropTypes.string,
     titleFr: PropTypes.string,
@@ -220,7 +243,6 @@ class GQLYourApprovals extends React.Component {
         variables={
           { gcIDApprover: { gcID: (String(this.props.gcID)) } }
         }
-        fetchPolicy="network-only"
       >
         {({
           loading,
@@ -230,9 +252,8 @@ class GQLYourApprovals extends React.Component {
           if (loading) return 'Loading...';
           if (error) return `Error!: ${error}`;
           const approvalData = (!data) ? '' : data.approvals;
-          console.log(approvalData);
           // const Testing = (data.length > 0) ? 'GREATER' : 'LESS';
-          const aList = approvalData.map(apprvl => (
+          const aList = (approvalData) ? approvalData.map(apprvl => (
             <ApprovalList
               key={apprvl.id}
               user={apprvl.gcIDSubmitter}
@@ -241,9 +262,9 @@ class GQLYourApprovals extends React.Component {
               activeTab={this.state.activeTab}
               status={apprvl.status}
             />
-          ));
+          )) : 'NO APPROVALS';
 
-          const aPane = approvalData.map(apprvl => (
+          const aPane = (approvalData) ? approvalData.map(apprvl => (
             <ApprovalPane
               key={apprvl.id}
               changeType={apprvl.changeType}
@@ -258,21 +279,19 @@ class GQLYourApprovals extends React.Component {
               }
               requestedChange={apprvl.requestedChange}
             />
-          ));
+          )) : '';
           return (
             <RowContainer>
               <Row className="mt-3 your-teams-container">
                 <Col sm="4" className="pr-0">
                   <div className="member-holder">
                     <Nav vertical>
-                      {/* TODO Map these / props may change based on schema */}
                       {aList}
                     </Nav>
                   </div>
                 </Col>
                 <Col sm="8" className="pl-0">
                   <TabContent activeTab={this.state.activeTab}>
-                    {/* TODO Map these */}
                     {aPane}
                   </TabContent>
                 </Col>
