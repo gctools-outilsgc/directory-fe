@@ -1,0 +1,769 @@
+"Language : en\n"
+"Plural-Forms : nplurals=2; plural=(n != 1);\n"
+"MIME-Version : 1.0\n"
+"Content-Type : text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding : 8bit\n"
+
+#: src/containers/App.js 111:19
+msgid "Language"
+msgtr ""
+
+#: src/containers/Home.js 36:21
+msgid "Search for anyone"
+msgtr ""
+
+#: src/containers/Home.js 37:28
+msgid "Type in a name"
+msgtr ""
+
+#: src/containers/Home.js 42:25
+msgid "This has no exclamation marks"
+msgtr ""
+
+#: src/containers/Home.js 46:28
+msgid "Welcome block text"
+msgtr ""
+
+#: src/containers/Home.js 59:36
+msgid "Self-serve contact information"
+msgtr ""
+
+#: src/containers/Home.js 60:33
+msgid "Easily update your contact information so that it is always accurate. You can make changes yourself and they will show up immediately."
+msgtr ""
+
+#: src/containers/Home.js 65:36
+msgid "Easy to search"
+msgtr ""
+
+#: src/containers/Home.js 66:33
+msgid "Looking for someone? Quickly find other members and start collaborating."
+msgtr ""
+
+#: src/containers/Home.js 71:36
+msgid "Clean and simple profile"
+msgtr ""
+
+#: src/containers/Home.js 72:33
+msgid "Your profile is yours to complete. Add a profile photo to make it personal."
+msgtr ""
+
+#: src/containers/Home.js 77:36
+msgid "Create teams"
+msgtr ""
+
+#: src/containers/Home.js 78:33
+msgid "Supervisors can create teams and self-manage members."
+msgtr ""
+
+#: src/containers/Home.js 83:36
+msgid "Organizational chart"
+msgtr ""
+
+#: src/containers/Home.js 84:33
+msgid "Explore an entire team and find the exact person you need to talk to."
+msgtr ""
+
+#: src/containers/Home.js 89:36
+msgid "New interface design"
+msgtr ""
+
+#: src/containers/Home.js 90:33
+msgid "A bright-blue colour scheme, rounded elements and minimalist look make the application just a little more fun to use."
+msgtr ""
+
+#: src/containers/Home.js 94:23
+msgid "Key features"
+msgtr ""
+
+#: src/containers/Home.js 98:25
+msgid "What’s coming next?"
+msgtr ""
+
+#: src/containers/Home.js 102:28
+msgid "This is the first version of the Directory but we have big plans for the future. Below is a list of some features we have planned for development."
+msgtr ""
+
+#: src/containers/Home.js 105:28
+msgid "Please note that all these features are subject to change, as future features and improvements will depend on your feedback."
+msgtr ""
+
+#: src/containers/Home.js 113:21
+msgid "Automatic profile creation when you register for GCaccount, which includes your name and email address."
+msgtr ""
+
+#: src/containers/Home.js 116:21
+msgid "Approval workflow that allows supervisors to approve requests for team members and employees."
+msgtr ""
+
+#: src/containers/Home.js 119:21
+msgid "In-app notifications for items that require your attention (approvals, change requests, etc.)"
+msgtr ""
+
+#: src/containers/Home.js 122:21
+msgid "Ability to choose team avatars and colours"
+msgtr ""
+
+#: src/containers/Home.js 125:21
+msgid "Enhanced search functionality"
+msgtr ""
+
+#: src/containers/Home.js 128:21
+msgid "One-time profile transfer from GCcollab to Directory"
+msgtr ""
+
+#: src/containers/Home.js 131:21
+msgid "Integrating non-government accounts and users into Directory"
+msgtr ""
+
+#: src/containers/Home.js 138:21
+msgid "How to provide your feedback"
+msgtr ""
+
+#: src/containers/Home.js 142:24
+msgid "We want your feedback to help us improve Directory and priorities new features to be developed. Before telling us what you think, play around and test out the new design and functionality of Directory. Take note of what you like, don’t like, and suggestions for improvement."
+msgtr ""
+
+#: src/containers/Home.js 145:24
+msgid "We will be hosting user testing and feedback sessions where you can share what you’ve discovered. Join the (x) GCcollab group and keep an eye out for the next research session on Directory."
+msgtr ""
+
+#: src/containers/Home.js 149:24
+msgid "Give us your Feedback"
+msgtr ""
+
+#: src/containers/Home.js 155:25
+msgid "All about the details"
+msgtr ""
+
+#: src/containers/Home.js 159:28
+msgid "This application is in its early stages. As a proof of concept, this application is not a finalized product ready for full use. It’s meant to be a first version with base features so that you can add your contact info, explore, and provide your feedback."
+msgtr ""
+
+#: src/containers/Home.js 162:28
+msgid "As a functional prototype, this application is set for user testing and exploration. We will be running user testing and feedback sessions soon, so play around and take note of what you like, what you don’t, and suggestions for improvement. See below for more information on how you can provide your feedback."
+msgtr ""
+
+#: src/containers/Home.js 165:28
+msgid "Because this is a proof of concept, there will be bugs in the system. If you come across a bug, don’t worry. We’ll be fixing bugs on a regular basis as we develop new features and improvements."
+msgtr ""
+
+#: src/containers/Home.js 168:28
+msgid "NOTE:"
+msgtr ""
+
+#: src/containers/Home.js 171:28
+msgid "This application currently uses fake content so that we could accurately display certain features, such as the organizational chart. Approximately 12,000 users were randomly generated to add data to the application and show a realistic sample."
+msgtr ""
+
+#: src/containers/Home.js 174:28
+msgid "As we onboard more departments, and more public servants complete their profile, we will remove the fake content."
+msgtr ""
+
+#: src/containers/Home.js 198:21
+msgid "Made with Aurora"
+msgtr ""
+
+#: src/components/core/ProfileSearch.js 61:43
+msgid "Search"
+msgtr ""
+
+#: src/components/core/ProfileSearch.js 66:31
+msgid "Search Profiles"
+msgtr ""
+
+#: src/components/core/ProgressBanner.js 13:19
+msgid "mvpBanner"
+msgtr ""
+
+#: src/components/home/CallToActionLinks.js 41:21
+msgid "Fill out your profile."
+msgtr ""
+
+#: src/components/home/CallToActionLinks.js 60:21
+msgid "View your new profile"
+msgtr ""
+
+#: src/components/profile/profileCard/GQLProfileCard.js 57:46
+msgid "Profile"
+msgtr ""
+
+#: src/components/profile/profileCard/GQLProfileCard.js 69:28
+msgid "Cannot find GCID"
+msgtr ""
+
+#: src/components/profile/team/TeamCardHolder.js 72:13
+msgid "Teams"
+msgtr ""
+
+#: src/components/profile/team/TeamCardHolder.js 84:19
+msgid "imin"
+msgtr ""
+
+#: src/components/profile/team/TeamCardHolder.js 96:21
+msgid "your_teams"
+msgtr ""
+
+#: src/components/profile/team/TeamCardHolder.js 125:19
+msgid "Org Chart"
+msgtr ""
+
+#: src/components/profile/team/GQLTeamCard.js 94:22
+msgid "Changesup/team"
+msgtr ""
+
+#: src/components/profile/team/GQLTeamCard.js 116:27
+msgid "Supervisor"
+msgtr ""
+
+#: src/components/profile/team/GQLTeamCard.js 157:33
+msgid "edit_team"
+msgtr ""
+
+#: src/components/profile/team/GQLTeamCard.js 247:47
+msgid "search"
+msgtr ""
+
+#: src/components/profile/team/GQLTeamCard.js 264:35
+msgid "next"
+msgtr ""
+
+#: src/components/profile/team/GQLTeamCard.js 275:35
+msgid "cancel"
+msgtr ""
+
+#: src/components/profile/team/GQLTeamCard.js 300:45
+msgid "None"
+msgtr ""
+
+#: src/components/profile/team/GQLTeamCard.js 307:41
+msgid "Confirm supervisor transfer"
+msgtr ""
+
+#: src/components/profile/team/GQLTeamCard.js 275:35
+msgid "cancel"
+msgtr ""
+
+#: src/components/profile/team/GQLTeamCard.js 309:53
+msgid "Confirm"
+msgtr ""
+
+#: src/components/profile/team/GQLTeamCard.js 310:51
+msgid "You are transferring %1$s %2$s %3$s %4$s."
+msgtr[0] ""
+msgtr[1] ""
+
+#: src/components/profile/team/GQLTeamCard.js 300:45
+msgid "None"
+msgtr ""
+
+#: src/components/profile/team/GQLTeamCard.js 351:27
+msgid "Team"
+msgtr ""
+
+#: src/components/profile/team/GQLTeamCard.js 358:23
+msgid "people"
+msgtr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 69:39
+msgid "Add member"
+msgtr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 154:37
+msgid "and"
+msgtr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 186:9
+msgid "Delete Team"
+msgtr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 205:19
+msgid "Delete/Disband (?) a team"
+msgtr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 208:16
+msgid "You are about to disband this team."
+msgtr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 212:16
+msgid "%1$s will be moved from %2$s to %3$s"
+msgtr[0] ""
+msgtr[1] ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 215:16
+msgid "Default team"
+msgtr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 218:31
+msgid "Are you sure?"
+msgtr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 219:33
+msgid "Cancel"
+msgtr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 263:9
+msgid "Transfer Team"
+msgtr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 282:31
+msgid "already supervisor"
+msgtr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 287:31
+msgid "no default team"
+msgtr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 303:21
+msgid "Transfer this team to a new Supervisor"
+msgtr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 305:16
+msgid "Explicit information about the transfer"
+msgtr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 309:33
+msgid "Accept"
+msgtr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 310:35
+msgid "Back"
+msgtr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 463:31
+msgid "edit"
+msgtr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 519:23
+msgid "team"
+msgtr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 529:51
+msgid "Add team"
+msgtr ""
+
+#: src/components/profile/profileCard/EditProfile.js 89:37
+msgid "Edit Profile"
+msgtr ""
+
+#: src/components/profile/profileCard/EditProfile.js 89:37
+msgid "Edit Profile"
+msgtr ""
+
+#: src/components/profile/profileCard/EditProfile.js 142:31
+msgid "Full name"
+msgtr ""
+
+#: src/components/profile/profileCard/EditProfile.js 161:31
+msgid "Work email"
+msgtr ""
+
+#: src/components/profile/profileCard/EditProfile.js 213:29
+msgid "English job title"
+msgtr ""
+
+#: src/components/profile/profileCard/EditProfile.js 236:29
+msgid "French job title"
+msgtr ""
+
+#: src/components/profile/profileCard/EditProfile.js 261:27
+msgid "Address"
+msgtr ""
+
+#: src/components/profile/profileCard/EditProfile.js 267:39
+msgid "123 Workplace St."
+msgtr ""
+
+#: src/components/profile/profileCard/EditProfile.js 279:60
+msgid "City"
+msgtr ""
+
+#: src/components/profile/profileCard/EditProfile.js 296:27
+msgid "Province"
+msgtr ""
+
+#: src/components/profile/profileCard/EditProfile.js 314:27
+msgid "Postal Code"
+msgtr ""
+
+#: src/components/profile/profileCard/EditProfile.js 319:39
+msgid "A1B2C3"
+msgtr ""
+
+#: src/components/profile/profileCard/EditProfile.js 333:27
+msgid "Country"
+msgtr ""
+
+#: src/components/profile/profileCard/EditProfile.js 354:27
+msgid "Office Phone Number"
+msgtr ""
+
+#: src/components/profile/profileCard/EditProfile.js 377:27
+msgid "Mobile Phone Number"
+msgtr ""
+
+#: src/components/profile/profileCard/EditProfile.js 411:23
+msgid "Save"
+msgtr ""
+
+#: src/components/profile/profileCard/EditProfile.js 429:21
+msgid "Update department title"
+msgtr ""
+
+#: src/components/profile/profileCard/EditProfile.js 432:18
+msgid "department changing"
+msgtr ""
+
+#: src/components/profile/profileCard/EditProfile.js 439:33
+msgid "Comfirm"
+msgtr ""
+
+#: src/components/profile/profileCard/ProfileCardDisplay.js 37:49
+msgid "Email"
+msgtr ""
+
+#: src/components/profile/profileCard/ProfileCardDisplay.js 45:49
+msgid "Work"
+msgtr ""
+
+#: src/components/profile/profileCard/ProfileCardDisplay.js 53:49
+msgid "Mobile"
+msgtr ""
+
+#: src/components/profile/OrgChart/OrgChart/OrgChart.js 298:39
+msgid "Go to me"
+msgtr ""
+
+#: src/components/core/UserAvatar.js 50:19
+msgid "Upload"
+msgtr ""
+
+#: src/components/core/DepartmentPicker.js 84:19
+msgid "Department"
+msgtr ""
+
+#: src/components/profile/team/TransferConfirmation.js 165:37
+msgid "transfere_description"
+msgtr ""
+
+#: src/components/profile/team/TransferConfirmation.js 166:55
+msgid "confirm"
+msgtr ""
+
+#: src/components/profile/team/TransferConfirmation.js 168:47
+msgid "avatar_of"
+msgtr ""
+
+#: src/components/profile/team/TransferToSupervisorDialog.js 84:11
+msgid "Transfer a team member to a new Supervisor"
+msgtr ""
+
+#: src/components/profile/team/TransferToSupervisorDialog.js 96:19
+msgid "Choose a new Supervisor for this team member"
+msgtr ""
+
+#: src/components/profile/team/TransferToSupervisorDialog.js 101:25
+msgid "%1$s avatar"
+msgtr[0] ""
+msgtr[1] ""
+
+#: src/components/profile/team/TransferToSupervisorDialog.js 151:13
+msgid "Transfer"
+msgtr ""
+
+#: src/components/core/MultiUserPicker.js 142:31
+msgid "title"
+msgtr ""
+
+#: src/components/core/MultiUserPicker.js 143:41
+msgid "bodyText"
+msgtr ""
+
+#: src/components/core/MultiUserPicker.js 144:55
+msgid "primaryButtonText"
+msgtr ""
+
+#: src/components/core/MultiUserPicker.js 146:7
+msgid "secondaryButtonText"
+msgtr ""
+
+#: src/components/profile/team/YourTeamMemberList.js 38:9
+msgid "transfer to new Supervisor"
+msgtr ""
+
+#: src/components/profile/team/YourTeamMemberList.js 140:9
+msgid "transfer to new Team"
+msgtr ""
+
+#: src/components/profile/team/YourTeamMemberList.js 173:21
+msgid "Transfer a team member to a new team"
+msgtr ""
+
+#: src/components/profile/team/YourTeamMemberList.js 175:16
+msgid "Explicit information about the transfer team"
+msgtr ""
+
+#: src/components/profile/team/YourTeamMemberList.js 257:9
+msgid "There are no members in this team"
+msgtr ""
+
+#: src/components/profile/team/EditTeamDialog.js 64:11
+msgid "Edit team"
+msgtr ""
+
+#: src/components/profile/team/EditTeamDialog.js 70:37
+msgid "English team Name"
+msgtr ""
+
+#: src/components/profile/team/EditTeamDialog.js 70:37
+msgid "English team Name"
+msgtr ""
+
+#: src/components/profile/team/EditTeamDialog.js 89:37
+msgid "French team Name"
+msgtr ""
+
+#: src/components/profile/team/EditTeamDialog.js 89:37
+msgid "French team Name"
+msgtr ""
+
+#: src/components/profile/team/EditTeamDialog.js 109:19
+msgid "English team description"
+msgtr ""
+
+#: src/components/profile/team/EditTeamDialog.js 113:31
+msgid "Write a English description"
+msgtr ""
+
+#: src/components/profile/team/EditTeamDialog.js 126:19
+msgid "French team description"
+msgtr ""
+
+#: src/components/profile/team/EditTeamDialog.js 130:31
+msgid "Write a French description"
+msgtr ""
+
+#: src/components/profile/team/CreateTeamDialog.js 55:11
+msgid "Create a Team"
+msgtr ""
+
+#: src/components/profile/team/CreateTeamDialog.js 60:18
+msgid "What is a team"
+msgtr ""
+
+#: src/components/profile/team/CreateTeamDialog.js 62:37
+msgid "Team_name_en"
+msgtr ""
+
+#: src/components/profile/team/CreateTeamDialog.js 62:37
+msgid "Team_name_en"
+msgtr ""
+
+#: src/components/profile/team/CreateTeamDialog.js 81:37
+msgid "Team_name_fr"
+msgtr ""
+
+#: src/components/profile/team/CreateTeamDialog.js 81:37
+msgid "Team_name_fr"
+msgtr ""
+
+#: src/components/profile/team/CreateTeamDialog.js 101:18
+msgid "Enter_Team_description_en"
+msgtr ""
+
+#: src/components/profile/team/CreateTeamDialog.js 105:31
+msgid "placeholder_description_en"
+msgtr ""
+
+#: src/components/profile/team/CreateTeamDialog.js 119:19
+msgid "Enter_Team_description_fr"
+msgtr ""
+
+#: src/components/profile/team/CreateTeamDialog.js 122:31
+msgid "placeholder_description_fr"
+msgtr ""
+
+#: src/components/profile/team/TransferToTeamDialog.js 139:17
+msgid "Transfer a team member to a new Team"
+msgtr ""
+
+#: src/components/profile/team/TransferToTeamDialog.js 155:46
+msgid "Default Team"
+msgtr ""
+
+#: src/components/onboard/OnboardStep6.js 15:9
+msgid "Step6T1"
+msgtr ""
+
+#: src/components/onboard/OnboardStep6.js 17:10
+msgid "Step6D1"
+msgtr ""
+
+#: src/components/onboard/OnboardStep6.js 18:10
+msgid "Step6D2"
+msgtr ""
+
+#: src/components/onboard/OnboardStep6.js 19:10
+msgid "Step6D3"
+msgtr ""
+
+#: src/components/onboard/OnboardStep6.js 20:10
+msgid "Step6D4"
+msgtr ""
+
+#: src/components/onboard/OnboardStep6.js 27:13
+msgid "View my Profile"
+msgtr ""
+
+#: src/components/onboard/OnboardStep5.js 51:11
+msgid "Step5T1"
+msgtr ""
+
+#: src/components/onboard/OnboardStep5.js 55:16
+msgid "Step5D1"
+msgtr ""
+
+#: src/components/onboard/OnboardStep5.js 56:16
+msgid "Step5D2"
+msgtr ""
+
+#: src/components/onboard/OnboardStep5.js 162:19
+msgid "Next"
+msgtr ""
+
+#: src/components/onboard/OnboardStep4.js 19:11
+msgid "Step4T1"
+msgtr ""
+
+#: src/components/onboard/OnboardStep4.js 32:16
+msgid "Step4D1"
+msgtr ""
+
+#: src/components/onboard/OnboardStep4.js 33:16
+msgid "Step4D2"
+msgtr ""
+
+#: src/components/onboard/OnboardStep2.js 78:21
+msgid "Step2T1"
+msgtr ""
+
+#: src/components/onboard/OnboardStep2.js 80:22
+msgid "Step2D1"
+msgtr ""
+
+#: src/components/onboard/OnboardStep1.js 15:11
+msgid "Welcome"
+msgtr ""
+
+#: src/components/onboard/OnboardStep1.js 18:11
+msgid "Step1Sub1"
+msgtr ""
+
+#: src/components/onboard/OnboardStep1.js 20:12
+msgid "welcome body"
+msgtr ""
+
+#: src/components/onboard/OnboardStep1.js 22:15
+msgid "Step1List1"
+msgtr ""
+
+#: src/components/onboard/OnboardStep1.js 23:15
+msgid "Step1List2"
+msgtr ""
+
+#: src/components/onboard/OnboardStep1.js 24:15
+msgid "Step1List3"
+msgtr ""
+
+#: src/components/onboard/OnboardStep1.js 25:15
+msgid "Step1List4"
+msgtr ""
+
+#: src/components/onboard/OnboardStep1.js 28:11
+msgid "Step1Sub2"
+msgtr ""
+
+#: src/components/onboard/OnboardStep1.js 30:12
+msgid "Step1Sub2Desc"
+msgtr ""
+
+#: src/components/onboard/OnboardStep1.js 31:12
+msgid "Step1Sub2Desc2"
+msgtr ""
+
+#: src/components/onboard/OnboardStep1.js 38:15
+msgid "Get Started"
+msgtr ""
+
+#: src/components/onboard/OnboardNav.js 12:4
+msgid "personnal_info"
+msgtr ""
+
+#: src/components/onboard/OnboardNav.js 13:4
+msgid "step1"
+msgtr ""
+
+#: src/components/onboard/OnboardNav.js 14:4
+msgid "step2"
+msgtr ""
+
+#: src/components/onboard/OnboardNav.js 15:4
+msgid "step3"
+msgtr ""
+
+#: src/components/onboard/OnboardNav.js 16:4
+msgid "step4"
+msgtr ""
+
+#: src/components/onboard/OnboardStep3.js 66:15
+msgid "Step3T1"
+msgtr ""
+
+#: src/components/onboard/OnboardStep3.js 68:16
+msgid "Step3D1"
+msgtr ""
+
+#: src/components/onboard/OnboardStep3.js 72:19
+msgid "Step3SubT2"
+msgtr ""
+
+#: src/components/onboard/OnboardStep3.js 161:15
+msgid "Step3T2"
+msgtr ""
+
+#: src/components/onboard/OnboardStep3.js 167:21
+msgid "Phone number"
+msgtr ""
+
+#: src/components/onboard/OnboardStep3.js 190:21
+msgid "Mobile phone number"
+msgtr ""
+
+#: src/components/profile/team/GQLYourApprovals.js 108:14
+msgid "wants to make you their supervisor."
+msgtr ""
+
+#: src/components/profile/team/GQLYourApprovals.js 109:21
+msgid "is trying to change the following:"
+msgtr ""
+
+#: src/components/profile/team/GQLYourApprovals.js 118:34
+msgid "Title EN"
+msgtr ""
+
+#: src/components/profile/team/GQLYourApprovals.js 121:34
+msgid "Title FR"
+msgtr ""
+
+#: src/components/profile/team/GQLYourApprovals.js 157:19
+msgid "Comments"
+msgtr ""
+
+#: src/components/profile/team/GQLYourApprovals.js 179:19
+msgid "Approve"
+msgtr ""
+
+#: src/components/profile/team/GQLYourApprovals.js 190:19
+msgid "Deny"
+msgtr ""
+

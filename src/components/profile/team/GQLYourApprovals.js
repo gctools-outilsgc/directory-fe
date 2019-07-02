@@ -25,14 +25,13 @@ import { GET_APPROVALS, MODIFY_APPROVALS } from '../../../gql/profile';
 import refetchMutated from '../../../utils/refetchMutated';
 import { UserAvatar } from '../../core/UserAvatar';
 import InputCharacterCount from '../../core/InputCharacterCount';
+import ErrorModal from '../../core/ErrorModal';
 
 const RowContainer = styled.div`
 background-color: #F4F8F9;
-height: 345px;
+height: 360px;
 overflow: hidden;
 `;
-
-// TODO: Add an approval object query to this component then map the approvals
 
 const ApprovalList = (props) => {
   const {
@@ -44,7 +43,7 @@ const ApprovalList = (props) => {
   } = props;
 
   return (
-    <NavItem>
+    <NavItem className="border-bottom">
       <NavLink
         href="#!"
         className={
@@ -86,7 +85,6 @@ ApprovalList.propTypes = {
   status: PropTypes.string.isRequired,
 };
 
-// TODO: Make this form nicer and make it work.
 const ApprovalPane = (props) => {
   const {
     approval,
@@ -105,10 +103,9 @@ const ApprovalPane = (props) => {
         <div className="mb-auto">
           <div className="mb-2">
             <strong>{approval.user.name} </strong>
-            wants to
             {(changeType === 'Membership') ?
-              ' JOIN YOUR TEAM AND MAKE YOU THEIR SUPERVISOR.' :
-              <span> change the following:</span>
+              __('wants to make you their supervisor.') :
+              <span>{__('is trying to change the following:')}</span>
             }
           </div>
           {
@@ -117,10 +114,10 @@ const ApprovalPane = (props) => {
                 let displayName = '';
                 switch (c) {
                   case 'titleEn':
-                    displayName = 'Title EN';
+                    displayName = __('Title EN');
                     break;
                   case 'titleFr':
-                    displayName = 'Title FR';
+                    displayName = __('Title FR');
                     break;
                   default:
                     displayName = '';
@@ -139,12 +136,10 @@ const ApprovalPane = (props) => {
           mutation={MODIFY_APPROVALS}
           update={refetchMutated}
         >
-          {modifyApproval => (
+          {(modifyApproval, { loading, error }) => (
             <Form
               onSubmit={(e) => {
                 e.preventDefault();
-                console.log(formValue);
-                console.log(denyValue);
                 modifyApproval({
                   variables: {
                     id: approval.id,
@@ -158,7 +153,7 @@ const ApprovalPane = (props) => {
             >
               <FormGroup>
                 <label htmlFor={`comments-${approval.id}`}>
-                  Comments
+                  {__('Comments')}
                 </label>
                 <InputCharacterCount
                   onChange={(e) => {
@@ -170,6 +165,7 @@ const ApprovalPane = (props) => {
               </FormGroup>
               <div className="float-right">
                 <Button
+                  disabled={loading}
                   color="primary"
                   className="mr-2"
                   type="submit"
@@ -179,7 +175,7 @@ const ApprovalPane = (props) => {
                     setFormValue(e.target.value);
                   }}
                 >
-                  Approve
+                  {__('Approve')}
                 </Button>
                 <Button
                   disabled={deny}
@@ -190,8 +186,9 @@ const ApprovalPane = (props) => {
                     setFormValue(e.target.value);
                   }}
                 >
-                  Deny
+                  {__('Deny')}
                 </Button>
+                {error && <ErrorModal error={error} />}
               </div>
             </Form>
           )}
@@ -252,34 +249,35 @@ class GQLYourApprovals extends React.Component {
           if (loading) return 'Loading...';
           if (error) return `Error!: ${error}`;
           const approvalData = (!data) ? '' : data.approvals;
-          // const Testing = (data.length > 0) ? 'GREATER' : 'LESS';
-          const aList = (approvalData) ? approvalData.map(apprvl => (
-            <ApprovalList
-              key={apprvl.id}
-              user={apprvl.gcIDSubmitter}
-              approvalID={apprvl.id}
-              toggle={(e) => { this.toggle(e); }}
-              activeTab={this.state.activeTab}
-              status={apprvl.status}
-            />
-          )) : 'NO APPROVALS';
+          const aList = (approvalData.length > 0)
+            ? approvalData.map(apprvl => (
+              <ApprovalList
+                key={apprvl.id}
+                user={apprvl.gcIDSubmitter}
+                approvalID={apprvl.id}
+                toggle={(e) => { this.toggle(e); }}
+                activeTab={this.state.activeTab}
+                status={apprvl.status}
+              />
+            )) : 'NO APPROVALS';
 
-          const aPane = (approvalData) ? approvalData.map(apprvl => (
-            <ApprovalPane
-              key={apprvl.id}
-              changeType={apprvl.changeType}
-              approval={
-                {
-                  id: apprvl.id,
-                  user: {
-                    gcID: apprvl.gcIDSubmitter.gcID,
-                    name: apprvl.gcIDSubmitter.name,
-                  },
+          const aPane = (approvalData.length > 0)
+            ? approvalData.map(apprvl => (
+              <ApprovalPane
+                key={apprvl.id}
+                changeType={apprvl.changeType}
+                approval={
+                  {
+                    id: apprvl.id,
+                    user: {
+                      gcID: apprvl.gcIDSubmitter.gcID,
+                      name: apprvl.gcIDSubmitter.name,
+                    },
+                  }
                 }
-              }
-              requestedChange={apprvl.requestedChange}
-            />
-          )) : '';
+                requestedChange={apprvl.requestedChange}
+              />
+            )) : '';
           return (
             <RowContainer>
               <Row className="mt-3 your-teams-container">

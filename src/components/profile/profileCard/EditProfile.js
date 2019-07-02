@@ -25,6 +25,7 @@ import { EDIT, prepareEditProfile, EDIT_TEAM } from '../../../gql/profile';
 import DepartmentPicker from '../../core/DepartmentPicker';
 import TransferConfirmation from '../team/TransferConfirmation';
 import { UserAvatar } from '../../core/UserAvatar';
+import ErrorModal from '../../core/ErrorModal';
 
 export class EditProfile extends Component {
   constructor(props) {
@@ -102,11 +103,8 @@ export class EditProfile extends Component {
                 // Do this nicer / hot load maybe?
                 // window.location.reload(false);
               }}
-              onError={() => {
-                alert('ERROR - Replace with error UX');
-               }}
             >
-              {modifyProfile => (
+              {(modifyProfile, { loading, error }) => (
                 <Form
                   onSubmit={(e) => {
                     e.preventDefault();
@@ -197,7 +195,6 @@ export class EditProfile extends Component {
                               depChange: true,
                               newTeamId: d.teams[0].id,
                             });
-                            console.log('yup');
                           }
                         }}
                       />
@@ -407,10 +404,12 @@ export class EditProfile extends Component {
                       className="float-right"
                       type="submit"
                       color="primary"
+                      disabled={loading}
                     >
                       {__('Save')}
                     </Button>
                   </div>
+                  {error && <ErrorModal error={error} />}
                 </Form>
               )}
             </Mutation>
