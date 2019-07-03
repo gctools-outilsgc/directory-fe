@@ -25,7 +25,7 @@ import { GET_APPROVALS, MODIFY_APPROVALS } from '../../../gql/profile';
 import refetchMutated from '../../../utils/refetchMutated';
 import { UserAvatar } from '../../core/UserAvatar';
 import InputCharacterCount from '../../core/InputCharacterCount';
-// import ErrorModal from '../../core/ErrorModal';
+import ErrorModal, { err } from '../../core/ErrorModal';
 
 const RowContainer = styled.div`
 background-color: #F4F8F9;
@@ -95,6 +95,7 @@ const ApprovalPane = (props) => {
   const [deny, setDeny] = useState(true);
   const [formValue, setFormValue] = useState(null);
   const [denyValue, setDenyValue] = useState('');
+  const [errorState, setErrorState] = useState([]);
   return (
     <TabPane tabId={approval.id}>
       <div
@@ -136,11 +137,10 @@ const ApprovalPane = (props) => {
           mutation={MODIFY_APPROVALS}
           update={refetchMutated}
           onError={(error) => {
-            console.log(error);
-            console.log(approval);
+            setErrorState(err(error));
           }}
         >
-          {modifyApproval => (
+          {(modifyApproval, { loading }) => (
             <Form
               onSubmit={(e) => {
                 e.preventDefault();
@@ -169,6 +169,7 @@ const ApprovalPane = (props) => {
               </FormGroup>
               <div className="float-right">
                 <Button
+                  disabled={loading}
                   color="primary"
                   className="mr-2"
                   type="submit"
@@ -191,6 +192,7 @@ const ApprovalPane = (props) => {
                 >
                   {__('Deny')}
                 </Button>
+                <ErrorModal error={errorState} />
               </div>
             </Form>
           )}
