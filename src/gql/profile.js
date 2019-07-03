@@ -92,7 +92,7 @@ query profileSearchQuery($name: String!) {
 
 export const GET_APPROVALS = gql`
 query getApprovals($gcIDApprover: gcIDProfileInput!) {
-  approvals(gcIDApprover: $gcIDApprover) {
+  approvals(gcIDApprover: $gcIDApprover, status: Pending) {
     id
     createdOn
     status
@@ -114,7 +114,7 @@ query getApprovals($gcIDApprover: gcIDProfileInput!) {
 `;
 
 export const MODIFY_APPROVALS = gql`
-mutation modifyApproval($id: ID! $data: ModifyApprovalInput) {
+mutation modifyApproval($id: ID!, $data: ModifyApprovalInput) {
   modifyApproval(id: $id, data: $data) {
     id
     deniedComment
