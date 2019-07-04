@@ -301,9 +301,10 @@ animation: LoadingText 2s ease infinite;
 }
 
 @media (max-width: 768px) {
-  .directory-container-min {
+
+  .directory-container-min, .directory-container {
     width: 100%;
-    padding-right: 0;
+    padding-right: 0 !important;
     margin-top: 115px;
   }
 }
