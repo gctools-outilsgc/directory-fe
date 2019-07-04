@@ -20,6 +20,7 @@ import Onboard from './Onboard';
 
 // import ProfileSearch from '../components/core/ProfileSearch';
 import ProgressBanner from '../components/core/ProgressBanner';
+import directoryIcon from '../assets/imgs/directory_icon.png';
 
 export class App extends Component {
   static toggleLanguage(e) {
@@ -102,6 +103,7 @@ export class App extends Component {
             minimized={this.state.sidebar}
             currentLang={localizer.lang}
             currentUser={this.state.user}
+            hamburgerMenu={false}
             onLanguageResultClick={e => gnSetLanguage(e)}
             onToggleResultClick={() => {
               this.setState({ sidebar: !this.state.sidebar });
@@ -110,8 +112,9 @@ export class App extends Component {
             currentApp={
               {
                 id: '3',
-                name: 'GCprofile',
+                name: 'Directory',
                 home: '/',
+                logo: directoryIcon,
               }
             }
           />
