@@ -79,12 +79,13 @@ const TeamAvatar = props => (
 );
 
 TeamAvatar.defaultProps = {
+  name: 'N/A',
   className: undefined,
 };
 
 TeamAvatar.propTypes = {
   /** Name of team to generate temporary avatar for */
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   /** optional css class name */
   className: PropTypes.string,
 };

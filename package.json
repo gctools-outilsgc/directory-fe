@@ -46,6 +46,7 @@
     "file-loader": "3.0.1",
     "fork-ts-checker-webpack-plugin-alt": "0.4.14",
     "fs-extra": "7.0.1",
+    "gettext-loader": "^0.2.2",
     "graphql": "14.1.1",
     "graphql-tag": "2.10.1",
     "html-webpack-plugin": "4.0.0-alpha.2",

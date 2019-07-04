@@ -86,3 +86,35 @@ msgstr ""
 msgid "Add team"
 msgstr ""
 
+#: src/components/profile/team/GQLYourTeamsTab.js 281:31
+msgid "already supervisor"
+msgstr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 286:31
+msgid "no default team"
+msgstr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 302:21
+msgid "Transfer a team member to a new Supervisor"
+msgstr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 304:16
+msgid "Explicit information about the transfer"
+msgstr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 308:33
+msgid "Accept"
+msgstr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 309:35
+msgid "Back"
+msgstr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 302:21
+msgid "Transfer this team to a new Supervisor"
+msgstr ""
+
+#: src/components/profile/team/GQLYourTeamsTab.js 263:9
+msgid "Transfer Team"
+msgstr ""
+

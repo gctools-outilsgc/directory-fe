@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-04-15 08:26-0400\n"
+"POT-Creation-Date: 2019-06-11 10:50-0400\n"
 "PO-Revision-Date: 2019-03-21 11:35-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en_CA\n"
@@ -58,10 +58,16 @@ msgstr[1] ""
 msgid "You are about to disband this team."
 msgstr "You are about to permanently delete the %1$s team."
 
+#: 167:25 src/components/profile/team/GQLYourTeamsTab.js
+msgid "These team members will be moved."
+msgstr ""
+
 #: 169:16 src/components/profile/team/GQLYourTeamsTab.js
 msgid "%1$s will be moved from %2$s to %3$s"
 msgid_plural ""
-msgstr[0] "Team members %1$s will be moved to the team Unassigned. You will still be their supervisor. You cannot undo this action."
+msgstr[0] ""
+"Team members %1$s will be moved to the team Unassigned. You will still be"
+" their supervisor. You cannot undo this action."
 msgstr[1] ""
 
 #: 172:16 src/components/profile/team/GQLYourTeamsTab.js
@@ -91,4 +97,36 @@ msgstr "Add team members"
 #: 394:51 src/components/profile/team/GQLYourTeamsTab.js
 msgid "Add team"
 msgstr "Create new team"
+
+#: 281:31 src/components/profile/team/GQLYourTeamsTab.js
+msgid "already supervisor"
+msgstr ""
+
+#: 286:31 src/components/profile/team/GQLYourTeamsTab.js
+msgid "no default team"
+msgstr ""
+
+#: 302:21 src/components/profile/team/GQLYourTeamsTab.js
+msgid "Transfer a team member to a new Supervisor"
+msgstr ""
+
+#: 304:16 src/components/profile/team/GQLYourTeamsTab.js
+msgid "Explicit information about the transfer"
+msgstr ""
+
+#: 308:33 src/components/profile/team/GQLYourTeamsTab.js
+msgid "Accept"
+msgstr ""
+
+#: 309:35 src/components/profile/team/GQLYourTeamsTab.js
+msgid "Back"
+msgstr ""
+
+#: 302:21 src/components/profile/team/GQLYourTeamsTab.js
+msgid "Transfer this team to a new Supervisor"
+msgstr ""
+
+#: 263:9 src/components/profile/team/GQLYourTeamsTab.js
+msgid "Transfer Team"
+msgstr "Transfer to other supervisor"
 

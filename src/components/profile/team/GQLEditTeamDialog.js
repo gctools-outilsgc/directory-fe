@@ -6,6 +6,7 @@ import LocalizedEditTeam from './EditTeamDialog';
 import { EDIT_A_TEAM } from '../../../gql/team';
 
 import refetchMutated from '../../../utils/refetchMutated';
+import ErrorModal, { err } from '../../core/ErrorModal';
 
 const GQLEditTeamDialog = (props) => {
   const {
@@ -22,9 +23,9 @@ const GQLEditTeamDialog = (props) => {
       onCompleted={(e) => {
         onSave(e);
       }}
-      onError={() => {
-        alert('ERROR - Replace with error UX');
-      }}
+      onError={error => (
+        <ErrorModal error={err(error)} />
+      )}
     >
       {modifyTeam => (
         <LocalizedEditTeam

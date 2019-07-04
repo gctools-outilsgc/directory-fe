@@ -54,6 +54,10 @@ export const TransferToSupervisorDialog = (props) => {
       titleEn,
       titleFr,
     },
+    team: {
+      nameEn,
+      nameFr,
+    },
   } = props;
 
   const [supervisor, setSupervisor] = useState(undefined);
@@ -80,17 +84,26 @@ export const TransferToSupervisorDialog = (props) => {
           {__('Transfer a team member to a new Supervisor')}
         </ModalHeader>
         <ModalBody className="mb-5">
-          <ProfileDisplay>
-            <h1>{__('Choose a new Supervisor for this team member')}</h1>
-            <img
-              className="avatar rounded-circle avatar-lg"
-              style={{ marginLeft: '10px' }}
-              src={avatar}
-              alt={___(__('%1$s avatar'), name)}
-            />
-            <ProfileName>{name}</ProfileName>
-            {(localizer.lang === 'en_CA') ? titleEn : titleFr}
-          </ProfileDisplay>
+          {nameEn ? (
+            <ProfileDisplay>
+              <ProfileName>
+                {(localizer.lang === 'en_CA') ?
+                  nameEn : nameFr}
+              </ProfileName>
+            </ProfileDisplay>
+          ) : (
+            <ProfileDisplay>
+              <h1>{__('Choose a new Supervisor for this team member')}</h1>
+              <img
+                className="avatar rounded-circle avatar-lg"
+                style={{ marginLeft: '10px' }}
+                src={avatar}
+                alt={___(__('%1$s avatar'), name)}
+              />
+              <ProfileName>{name}</ProfileName>
+              {(localizer.lang === 'en_CA') ? titleEn : titleFr}
+            </ProfileDisplay>
+          )}
           <div>
             <SupervisorPicker
               onResultSelect={(e) => {
@@ -158,6 +171,16 @@ TransferToSupervisorDialog.defaultProps = {
   onOpened: undefined,
   onClosed: undefined,
   zIndex: 1000,
+  profile: {
+    name: 'Jonald',
+    avatar: '',
+    titleEn: '',
+    titleFr: '',
+  },
+  team: {
+    nameEn: '',
+    nameFr: '',
+  },
 };
 
 TransferToSupervisorDialog.propTypes = {
@@ -184,11 +207,15 @@ TransferToSupervisorDialog.propTypes = {
   ]),
   /** The profile of the user being transferred */
   profile: PropTypes.shape({
-    name: PropTypes.string.isRequired,
+    name: PropTypes.string,
     avatar: PropTypes.string,
     titleEn: PropTypes.string,
     titleFr: PropTypes.string,
-  }).isRequired,
+  }),
+  team: PropTypes.shape({
+    nameEn: PropTypes.string,
+    nameFr: PropTypes.string,
+  }),
 };
 
 export default LocalizedComponent(TransferToSupervisorDialog);

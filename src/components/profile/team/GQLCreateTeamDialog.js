@@ -6,6 +6,7 @@ import LocalizedCreateTeam from './CreateTeamDialog';
 import { CREATE_TEAM } from '../../../gql/team';
 
 import refetchMutated from '../../../utils/refetchMutated';
+import ErrorModal, { err } from '../../core/ErrorModal';
 
 const GQLCreateTeamDialog = (props) => {
   const {
@@ -22,9 +23,9 @@ const GQLCreateTeamDialog = (props) => {
       onCompleted={(e) => {
         onSave(e);
       }}
-      onError={() => {
-        alert('ERROR - Replace with error UX');
-      }}
+      onError={error => (
+        <ErrorModal error={err(error)} />
+      )}
     >
       {createTeam => (
         <LocalizedCreateTeam

@@ -24,7 +24,7 @@ import Loading from './Loading';
 
 import { GET_TEAM, EDIT_TEAM } from '../../../gql/profile';
 import SupervisorPicker from '../../core/SupervisorPicker';
-import TeamPicker from '../../core/TeamPicker';
+// import TeamPicker from '../../core/TeamPicker';
 import { UserAvatar } from '../../core/UserAvatar';
 import LocalizedTransferConfirmation from './TransferConfirmation';
 import TeamDisplayMemberList from './TeamDisplayMemberList';
@@ -53,12 +53,10 @@ export class GQLTeamCard extends React.Component {
       confirmModal: false,
       chosenSupervisor: '',
       chosenTeam: '',
-      editSup: false,
-      editTeam: false,
+      editSup: true,
     };
     this.toggle = this.toggle.bind(this);
     this.toggleSup = this.toggleSup.bind(this);
-    this.toggleTeam = this.toggleTeam.bind(this);
     this.toggleConfirm = this.toggleConfirm.bind(this);
   }
 
@@ -71,12 +69,6 @@ export class GQLTeamCard extends React.Component {
   toggleSup() {
     this.setState(prevState => ({
       editSup: !prevState.editSup,
-    }));
-  }
-
-  toggleTeam() {
-    this.setState(prevState => ({
-      editTeam: !prevState.editTeam,
     }));
   }
 
@@ -97,7 +89,6 @@ export class GQLTeamCard extends React.Component {
       chosenSupervisor,
       chosenTeam,
       editSup,
-      editTeam,
     } = this.state;
 
     const ChangeSup = __('Changesup/team');
@@ -156,7 +147,8 @@ export class GQLTeamCard extends React.Component {
                             <Modal
                               isOpen={this.state.modal}
                               toggle={this.toggle}
-                              size="lg"
+                              centered
+                              autoFocus
                             >
                               <ModalHeader
                                 toggle={this.toggle}
@@ -164,7 +156,7 @@ export class GQLTeamCard extends React.Component {
                               >
                                 {__('edit_team')}
                               </ModalHeader>
-                              <ModalBody>
+                              <ModalBody className="pb-5">
                                 <Row
                                   className="justify-content-md-center"
                                 >
@@ -173,6 +165,7 @@ export class GQLTeamCard extends React.Component {
                                       <UserAvatar
                                         avatar={userInfo.avatar}
                                         name={userInfo.name}
+                                        size="lg"
                                       />
                                     </div>
                                     <div>
@@ -185,14 +178,13 @@ export class GQLTeamCard extends React.Component {
                                     </div>
                                   </div>
                                 </Row>
-                                <Row className="mt-3">
+                                <Row className="mt-3 mb-5">
                                   <Col>
                                     {editSup ?
                                       <SupervisorPicker
                                         onResultSelect={(s) => {
                                           this.setState({
                                             chosenSupervisor: s,
-                                            editTeam: true,
                                             chosenTeam: s.ownerOfTeams[0],
                                           });
                                           this.toggleSup(editSup);
@@ -259,24 +251,6 @@ export class GQLTeamCard extends React.Component {
                                       </div>
                                     }
                                   </Col>
-                                  <Col>
-                                    {editTeam ?
-                                      <TeamPicker
-                                        editMode
-                                        supervisor={chosenSupervisor}
-                                        gcID={id}
-                                        selectedOrgTier={teamTest}
-                                        onTeamChange={(t) => {
-                                          this.setState({
-                                            chosenTeam: t,
-                                          });
-                                        }}
-                                      /> :
-                                      <div>
-                                        {teamTest ? teamTest.nameEn : 'None'}
-                                      </div>
-                                    }
-                                  </Col>
                                 </Row>
                               </ModalBody>
                               <ModalFooter>
@@ -302,6 +276,7 @@ export class GQLTeamCard extends React.Component {
                                 </Button>
                               </ModalFooter>
                             </Modal>
+                            {/** TODO: Create an approval */}
                             <Mutation
                               mutation={EDIT_TEAM}
                               refetchQueries={[{

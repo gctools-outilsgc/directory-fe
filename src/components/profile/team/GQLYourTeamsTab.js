@@ -27,14 +27,17 @@ import {
   EDIT_TEAM,
   FullTeamFragment
 } from '../../../gql/profile';
+import { EDIT_A_TEAM } from '../../../gql/team';
 import './css/youTeamStyle.css';
 import I18nYourTeamMemberList from './YourTeamMemberList';
 import GQLCreateTeamDialog from './GQLCreateTeamDialog';
 import GQLEditTeamDialog from './GQLEditTeamDialog';
 import MultiUserPicker from '../../core/MultiUserPicker';
 import TransferConfirmation from './TransferConfirmation';
+import I18nTransferToSupervisorDialog from './TransferToSupervisorDialog';
 import TeamAvatar from './TeamAvatar';
 import refetchMutated from '../../../utils/refetchMutated';
+import ErrorModal, { err } from '../../core/ErrorModal';
 
 const RowContainer = styled.div`
 background-color: #F4F8F9;
@@ -241,6 +244,104 @@ DeleteTeamAction.propTypes = {
   }).isRequired,
 };
 
+const TransferTeamToSupervisorAction = (props) => {
+  const { profile, supervisor } = props;
+  const [showDialog, setShowDialog] = useState(false);
+  const [error, setError] = useState([]);
+  const [confirm, setConfirm] = useState(undefined);
+  const closeAll = () => {
+    setConfirm(undefined);
+    setShowDialog(false);
+  };
+  return (
+    <React.Fragment>
+      <button
+        className="btn btn-link"
+        color="link"
+        onClick={(e) => { setShowDialog(true); e.preventDefault(); }}
+      >
+        {__('Transfer Team')}
+      </button>
+      <ErrorModal error={error} />
+      <Mutation
+        mutation={EDIT_A_TEAM}
+        refetchQueries={[{
+          query: GET_YOUR_TEAM,
+          variables: { gcID: supervisor.gcID },
+        }]}
+      >
+        {mutate => (
+          <React.Fragment>
+            <I18nTransferToSupervisorDialog
+              isOpen={showDialog}
+              team={profile}
+              secondaryButtonClick={() => { setShowDialog(false); }}
+              closeButtonClick={() => { setShowDialog(false); }}
+              primaryButtonClick={(_, destination) => {
+                if (destination.id === supervisor.gcID) {
+                  setError(err(__('already supervisor')));
+                  return false;
+                }
+                const defaultTeam = getDefaultTeam(destination);
+                if (!defaultTeam) {
+                  setError(err(__('no default team')));
+                  return false;
+                }
+                setConfirm(Object.assign(
+                  {},
+                  destination,
+                  { team: defaultTeam }
+                ));
+                return true;
+              }}
+            />
+            {confirm && (<TransferConfirmation
+              source={supervisor}
+              transferredUser={profile}
+              destination={confirm}
+              isOpen={!!confirm}
+              title={__('Transfer this team to a new Supervisor')}
+              bodyText={___(
+                __('Explicit information about the transfer'),
+                profile.name,
+                confirm.name
+              )}
+              primaryButtonText={__('Accept')}
+              secondaryButtonText={__('Back')}
+              secondaryButtonClick={() => { setConfirm(undefined); }}
+              closeButtonClick={closeAll}
+              primaryButtonClick={() => {
+                mutate({
+                  variables: {
+                    id: profile.id,
+                    data: { owner: { gcID: confirm.gcID } },
+                  },
+                });
+              }}
+            />)}
+          </React.Fragment>
+        )}
+      </Mutation>
+    </React.Fragment>
+  );
+};
+TransferTeamToSupervisorAction.propTypes = {
+  /** Profile of current supervisor */
+  supervisor: PropTypes.shape({
+    gcID: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    avatar: PropTypes.string,
+    titleEn: PropTypes.string,
+    titleFr: PropTypes.string,
+  }).isRequired,
+  /** Profile of user being transferred */
+  profile: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    nameEn: PropTypes.string,
+    nameFr: PropTypes.string,
+  }).isRequired,
+};
+
 class GQLYouTeamsTab extends React.Component {
   constructor(props) {
     super(props);
@@ -332,12 +433,21 @@ class GQLYouTeamsTab extends React.Component {
                       {(id !== defaultId) && (
                         <ul className="list-inline text-primary ml-n2">
                           <li className="list-inline-item">
-                            <Button
-                              color="link"
-                              size="small"
-                            >
-                              {__('Tranfer')}
-                            </Button>
+                            <TransferTeamToSupervisorAction
+                              profile={
+                                {
+                                  id: team.id,
+                                  nameEn: team.nameEn,
+                                  nameFr: team.nameFr,
+                                }
+                              }
+                              supervisor={
+                                {
+                                  gcID: userInfo.gcID,
+                                  name: userInfo.name,
+                                }
+                              }
+                            />
                           </li>
                           <li className="list-inline-item">
                             <Button
