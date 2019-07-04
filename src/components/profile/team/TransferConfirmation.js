@@ -16,6 +16,9 @@ import {
   Button
 } from 'reactstrap';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+
 import TeamAvatar from './TeamAvatar';
 
 import varTag from '../../../utils/cssVarTag';
@@ -156,6 +159,7 @@ const TransferConfirmation = (props) => {
     source,
     transferredUser,
     destination,
+    loading,
   } = props;
 
   const bodyText = props.bodyText || __('transfere_description');
@@ -208,11 +212,15 @@ const TransferConfirmation = (props) => {
                   alt={`${avatarAltText} ${user1.name}`}
                 />
                 <div className="team">
-                  <TeamAvatar name={user2.team.name} />
+                  {!user2.isTeam && (
+                    <TeamAvatar name={user2.team.name} />
+                  )}
                 </div>
                 <div className="name">
                   <h2>{user1.name}</h2>
-                  <span>{user2.team.name}</span>
+                  {!user2.isTeam && (
+                    <span>{user2.team.name}</span>
+                  )}
                 </div>
               </React.Fragment>
             )}
@@ -221,14 +229,29 @@ const TransferConfirmation = (props) => {
                 {props.delete && <i className="fas fa-trash-alt" />}
               </div>
             </div>
-            <img
-              src={user2.avatar}
-              alt={`${avatarAltText} ${user2.name}`}
-            />
-            <div className="name">
-              <h2>{user2.name}</h2>
-              <span>{user2.title}</span>
-            </div>
+            {user2.isTeam && (
+              <React.Fragment>
+                <TeamAvatar
+                  className="tcd-team-avatar"
+                  name={user2.name}
+                />
+                <div className="name">
+                  <h2>{user2.name}</h2>
+                </div>
+              </React.Fragment>
+            )}
+            {!user2.isTeam && (
+              <React.Fragment>
+                <img
+                  src={user2.avatar}
+                  alt={`${avatarAltText} ${user2.name}`}
+                />
+                <div className="name">
+                  <h2>{user2.name}</h2>
+                  <span>{user2.title}</span>
+                </div>
+              </React.Fragment>
+            )}
             {user3.isTeam && (
               <React.Fragment>
                 <TeamAvatar className="tcd-team-avatar" name={user3.name} />
@@ -244,11 +267,15 @@ const TransferConfirmation = (props) => {
                   alt={`${avatarAltText} ${user3.name}`}
                 />
                 <div className="team">
-                  <TeamAvatar name={user3.team.name} />
+                  {!user2.isTeam && (
+                    <TeamAvatar name={user3.team.name} />
+                  )}
                 </div>
                 <div className="name">
                   <h2>{user3.name}</h2>
-                  <span>{user3.team.name}</span>
+                  {!user2.isTeam && (
+                    <span>{user3.team.name}</span>
+                  )}
                 </div>
               </React.Fragment>
             )}
@@ -258,12 +285,20 @@ const TransferConfirmation = (props) => {
           <Button
             color="primary"
             onClick={primaryButtonClick}
+            disabled={loading}
           >
-            {primaryButtonText}
+            {loading ?
+              <FontAwesomeIcon
+                icon={faSpinner}
+                spin
+              /> :
+              primaryButtonText
+            }
           </Button>
           <Button
             color="secondary"
             onClick={secondaryButtonClick}
+            disabled={loading}
           >
             {secondaryButtonText}
           </Button>
@@ -289,6 +324,7 @@ TransferConfirmation.defaultProps = {
   onClosed: undefined,
   zIndex: 1000,
   delete: false,
+  loading: false,
 };
 
 TransferConfirmation.propTypes = {
@@ -340,7 +376,7 @@ TransferConfirmation.propTypes = {
   ]).isRequired,
   /** The profile of user being transferred */
   transferredUser: PropTypes.shape({
-    name: PropTypes.string.isRequired,
+    name: PropTypes.string,
     avatar: PropTypes.string,
     titleEn: PropTypes.string,
     titleFr: PropTypes.string,
@@ -362,6 +398,8 @@ TransferConfirmation.propTypes = {
   ]).isRequired,
   /** Indicate the intention to delete "source" */
   delete: PropTypes.bool,
+  /** Check if the parent mutation is loading */
+  loading: PropTypes.bool,
 };
 
 export default LocalizedComponent(TransferConfirmation);

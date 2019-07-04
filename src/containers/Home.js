@@ -43,7 +43,7 @@ class Home extends Component {
                 body={
                   [
                     {
-                      text: __('Welcome. You’re one of the first to try out the new Directory application proof of concept. Click one of the options below to jump right in and explore, or, if you want to learn more, keep reading.'),
+                      text: __('Welcome block text'),
                     },
                   ]
                 }

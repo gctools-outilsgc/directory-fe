@@ -1,4 +1,4 @@
-/* eslint-disable comma-dangle */
+/* eslint-disable */
 import React from 'react';
 
 import PropTypes from 'prop-types';
@@ -147,7 +147,7 @@ class CardContainer extends React.Component {
         this.oldWidth
       );
     const svgHeight =
-      Math.max(...this.props.cards.map(b => b.y), this.oldHeight);
+      Math.max(this.oldHeight, ...this.props.cards.map(b => b.y));
 
     const lines = (
       <svg

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-04-04 10:32-0400\n"
+"POT-Creation-Date: 2019-06-06 15:15-0400\n"
 "PO-Revision-Date: 2019-04-01 17:05-0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en_CA\n"
@@ -21,12 +21,11 @@ msgstr ""
 #: 87:26 src/containers/Home.js
 msgid "Type in a name"
 msgstr ""
-"Type in a person's profile to find them. Search is currently case "
-"sensitive"
+"Type in a person's name to find them."
 
 #: 92:23 src/containers/Home.js
 msgid "This has no exclamation marks"
-msgstr "Get started with the new Directory!"
+msgstr "Welcome to the Directory Proof of Concept!"
 
 #: 20:20 src/containers/Home.js
 msgid "Self-serve contact information"
@@ -82,13 +81,6 @@ msgid ""
 "the application just a little more fun to use."
 msgstr ""
 
-#: 84:20 src/containers/Home.js
-msgid ""
-"Welcome. You’re one of the first to try out the new Directory application"
-" proof of concept. Click one of the options below to jump right in and "
-"explore, or, if you want to learn more, keep reading."
-msgstr ""
-
 #: 90:21 src/containers/Home.js
 msgid "Key features"
 msgstr ""
@@ -126,9 +118,10 @@ msgid ""
 "We will be hosting user testing and feedback sessions where you can share"
 " what you’ve discovered. Join the (x) GCcollab group and keep an eye out "
 "for the next research session on Directory."
-msgstr "We will be hosting user testing and feedback sessions where you can share"
-" what you’ve discovered. Join the GCcollab group and keep an eye out "
-"for the next research session on Directory."
+msgstr ""
+"We will be hosting user testing and feedback sessions where you can share"
+" what you’ve discovered. Join the GCcollab group and keep an eye out for "
+"the next research session on Directory."
 
 #: 114:23 src/containers/Home.js
 msgid "All about the details"
@@ -217,4 +210,9 @@ msgstr ""
 #: 191:21 src/containers/Home.js
 msgid "Made with Aurora"
 msgstr ""
+
+#: 46:28 src/containers/Home.js
+msgid "Welcome block text"
+msgstr "You’re one of the first to check out the new Directory application proof of concept."
+" Feel free to take a look. You can't login just yet, but more is coming soon!"
 

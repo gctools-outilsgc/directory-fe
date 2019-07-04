@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-04-15 08:26-0400\n"
+"POT-Creation-Date: 2019-06-11 10:50-0400\n"
 "PO-Revision-Date: 2019-03-21 11:35-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr_CA\n"
@@ -58,10 +58,17 @@ msgstr[1] "blo"
 msgid "You are about to disband this team."
 msgstr "Vous êtes sur le point de supprimer définitivement l’équipe %1$s."
 
+#: 167:25 src/components/profile/team/GQLYourTeamsTab.js
+msgid "These team members will be moved."
+msgstr ""
+
 #: 169:16 src/components/profile/team/GQLYourTeamsTab.js
 msgid "%1$s will be moved from %2$s to %3$s"
 msgid_plural ""
-msgstr[0] "Les membres de l’équipe %1$s seront déplacés sous l’équipe Non assigné. Vous serez toujours leur superviseur. Vous ne pouvez pas annuler cette action."
+msgstr[0] ""
+"Les membres de l’équipe %1$s seront déplacés sous l’équipe Non assigné. "
+"Vous serez toujours leur superviseur. Vous ne pouvez pas annuler cette "
+"action."
 msgstr[1] ""
 
 #: 172:16 src/components/profile/team/GQLYourTeamsTab.js
@@ -91,4 +98,36 @@ msgstr "Ajouter des membres à l’équipe"
 #: 394:51 src/components/profile/team/GQLYourTeamsTab.js
 msgid "Add team"
 msgstr "Créer une équipe"
+
+#: 281:31 src/components/profile/team/GQLYourTeamsTab.js
+msgid "already supervisor"
+msgstr ""
+
+#: 286:31 src/components/profile/team/GQLYourTeamsTab.js
+msgid "no default team"
+msgstr ""
+
+#: 302:21 src/components/profile/team/GQLYourTeamsTab.js
+msgid "Transfer a team member to a new Supervisor"
+msgstr ""
+
+#: 304:16 src/components/profile/team/GQLYourTeamsTab.js
+msgid "Explicit information about the transfer"
+msgstr ""
+
+#: 308:33 src/components/profile/team/GQLYourTeamsTab.js
+msgid "Accept"
+msgstr ""
+
+#: 309:35 src/components/profile/team/GQLYourTeamsTab.js
+msgid "Back"
+msgstr ""
+
+#: 302:21 src/components/profile/team/GQLYourTeamsTab.js
+msgid "Transfer this team to a new Supervisor"
+msgstr ""
+
+#: 263:9 src/components/profile/team/GQLYourTeamsTab.js
+msgid "Transfer Team"
+msgstr "Transférer à un autre superviseur"
 

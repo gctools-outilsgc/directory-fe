@@ -48,7 +48,6 @@ export class App extends Component {
         sidebar: true,
       });
     }
-    console.log(document.cookie);
   }
 
   render() {

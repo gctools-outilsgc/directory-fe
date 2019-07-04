@@ -162,3 +162,7 @@ msgstr ""
 msgid "Made with Aurora"
 msgstr ""
 
+#: src/containers/Home.js 46:28
+msgid "Welcome block text"
+msgstr ""
+

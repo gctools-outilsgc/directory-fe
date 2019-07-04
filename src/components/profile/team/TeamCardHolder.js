@@ -20,6 +20,7 @@ import classnames from 'classnames';
 import LocalizedGQLTeamCard from './GQLTeamCard';
 import LocalizedGQLTeamOrgChart from './GQLTeamOrgChart';
 import GQLYourTeamsTab from './GQLYourTeamsTab';
+import GQLYourApprovals from './GQLYourApprovals';
 
 const mapStateToProps = ({ user }) => {
   const props = {};
@@ -74,6 +75,7 @@ class TeamCardHolder extends React.Component {
             <Nav tabs>
               <NavItem>
                 <NavLink
+                  href="#!"
                   className={
                     classnames({ active: this.state.activeTab === '1' })
                   }
@@ -85,6 +87,7 @@ class TeamCardHolder extends React.Component {
               {canEdit ?
                 <NavItem>
                   <NavLink
+                    href="#!"
                     className={
                       classnames({ active: this.state.activeTab === '2' })
                     }
@@ -96,8 +99,24 @@ class TeamCardHolder extends React.Component {
               :
               ''
               }
+              {canEdit ?
+                <NavItem>
+                  <NavLink
+                    href="#!"
+                    className={
+                      classnames({ active: this.state.activeTab === '4' })
+                    }
+                    onClick={() => { this.toggle('4'); }}
+                  >
+                    Approvals
+                  </NavLink>
+                </NavItem>
+              :
+              ''
+              }
               <NavItem>
                 <NavLink
+                  href="#!"
                   className={
                     classnames({ active: this.state.activeTab === '3' })
                   }
@@ -125,6 +144,12 @@ class TeamCardHolder extends React.Component {
                 />
               )}
               </TabPane>
+              {canEdit ?
+                <TabPane tabId="4">
+                  <GQLYourApprovals gcID={id} />
+                </TabPane> :
+                ''
+              }
             </TabContent>
           </div>
         </CardBody>

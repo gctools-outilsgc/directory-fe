@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-04-04 10:32-0400\n"
+"POT-Creation-Date: 2019-06-06 15:15-0400\n"
 "PO-Revision-Date: 2019-04-01 17:05-0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr_CA\n"
@@ -20,11 +20,11 @@ msgstr "Recherche quelqu’un "
 
 #: 87:26 src/containers/Home.js
 msgid "Type in a name"
-msgstr "Tappez le nom d’une personne pour la trouver."
+msgstr "Entrez le nom d’une personne pour la trouver."
 
 #: 92:23 src/containers/Home.js
 msgid "This has no exclamation marks"
-msgstr "Commencez à vous servir du nouvel Annuaire!"
+msgstr "Bienvenue à la validation de principe d’Annuaire!"
 
 #: 20:20 src/containers/Home.js
 msgid "Self-serve contact information"
@@ -92,17 +92,6 @@ msgstr ""
 "visuels et l’aspect sobre et minimaliste rendent l’application un peu "
 "plus plaisante à utiliser."
 
-#: 84:20 src/containers/Home.js
-msgid ""
-"Welcome. You’re one of the first to try out the new Directory application"
-" proof of concept. Click one of the options below to jump right in and "
-"explore, or, if you want to learn more, keep reading."
-msgstr ""
-"Bienvenue! Vous faites partie des premiers participants à la validation "
-"de principe de la nouvelle application Annuaire. Veuillez cliquer sur "
-"l’une des options suivantes afin de commencer directement à explorer "
-"l’Annuaire, ou continuez à lire pour en savoir plus sur l’application."
-
 #: 90:21 src/containers/Home.js
 msgid "Key features"
 msgstr "Principaux éléments"
@@ -155,8 +144,8 @@ msgid ""
 msgstr ""
 "Nous organiserons des séances d’essai et de rétroaction auprès des "
 "utilisateurs où vous pourrez faire part de vos découvertes. Joignez-vous "
-"au groupe dans GCcollab et ne manquez surtout pas la prochaine séance"
-" de recherche sur l’Annuaire."
+"au groupe dans GCcollab et ne manquez surtout pas la prochaine séance de "
+"recherche sur l’Annuaire."
 
 #: 114:23 src/containers/Home.js
 msgid "All about the details"
@@ -280,3 +269,11 @@ msgstr "Donnez-nous vos commentaires"
 #: 191:21 src/containers/Home.js
 msgid "Made with Aurora"
 msgstr "Créé en utilisant Aurora"
+
+#: 46:28 src/containers/Home.js
+msgid "Welcome block text"
+msgstr "Vous êtes parmi les premiers à consulter la validation de concept"
+" de la nouvelle application Annuaire. N'hésitez pas à y jeter un coup d'œil."
+" Vous ne pouvez pas vous connecter pour l'instant, mais d'autres mises à jour"
+" seront bientôt disponibles!"
+

@@ -25,6 +25,7 @@ import { EDIT, prepareEditProfile, EDIT_TEAM } from '../../../gql/profile';
 import DepartmentPicker from '../../core/DepartmentPicker';
 import TransferConfirmation from '../team/TransferConfirmation';
 import { UserAvatar } from '../../core/UserAvatar';
+import ErrorModal, { err } from '../../core/ErrorModal';
 
 export class EditProfile extends Component {
   constructor(props) {
@@ -73,7 +74,6 @@ export class EditProfile extends Component {
       modal: !this.state.modal,
       confirmModal: !this.state.confirmModal,
     });
-    console.log('I fired');
   }
 
   render() {
@@ -103,11 +103,8 @@ export class EditProfile extends Component {
                 // Do this nicer / hot load maybe?
                 // window.location.reload(false);
               }}
-              onError={() => {
-                alert('ERROR - Replace with error UX');
-               }}
             >
-              {modifyProfile => (
+              {(modifyProfile, { loading, error }) => (
                 <Form
                   onSubmit={(e) => {
                     e.preventDefault();
@@ -198,7 +195,6 @@ export class EditProfile extends Component {
                               depChange: true,
                               newTeamId: d.teams[0].id,
                             });
-                            console.log('yup');
                           }
                         }}
                       />
@@ -317,8 +313,11 @@ export class EditProfile extends Component {
                         <input
                           id="postalCode"
                           type="text"
-                          placeholder={__('A1B2C3')}
                           className="form-control"
+                          aria-describedby="postalCodeHelp"
+                          placeholder="A1B 2C3"
+                          // eslint-disable-next-line
+                          pattern="[ABCEGHJKLMNPRSTVXY][0-9][ABCEGHJKLMNPRSTVWXYZ] ?[0-9][ABCEGHJKLMNPRSTVWXYZ][0-9]"
                           value={this.state.postalCode || ''}
                           onChange={(e) => {
                             this.setState({
@@ -326,6 +325,9 @@ export class EditProfile extends Component {
                             });
                           }}
                         />
+                        <small id="postalCodeHelp" className="text-muted">
+                          A1B 2C3
+                        </small>
                       </label>
                     </Col>
                     <Col sm="6">
@@ -382,11 +384,10 @@ export class EditProfile extends Component {
                             id="mobilePhone"
                             type="tel"
                             className="form-control"
-                            placeholder="XXX-XXX-XXXX"
                             aria-describedby="mobilePhoneHelp"
                             value={this.state.mobilePhone || ''}
                             // eslint-disable-next-line
-                            pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"
+                            pattern="^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$"
                             onChange={(e) => {
                               this.setState({
                                 mobilePhone: e.target.value,
@@ -408,10 +409,12 @@ export class EditProfile extends Component {
                       className="float-right"
                       type="submit"
                       color="primary"
+                      disabled={loading}
                     >
                       {__('Save')}
                     </Button>
                   </div>
+                  {error && <ErrorModal error={err(error)} />}
                 </Form>
               )}
             </Mutation>

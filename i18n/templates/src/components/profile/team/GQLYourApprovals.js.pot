@@ -1,0 +1,36 @@
+msgid ""
+msgstr ""
+"Language : en\n"
+"Plural-Forms : nplurals=2; plural=(n != 1);\n"
+"MIME-Version : 1.0\n"
+"Content-Type : text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding : 8bit\n"
+
+#: src/components/profile/team/GQLYourApprovals.js 107:14
+msgid "wants to make you their supervisor."
+msgstr ""
+
+#: src/components/profile/team/GQLYourApprovals.js 108:21
+msgid "is trying to change the following:"
+msgstr ""
+
+#: src/components/profile/team/GQLYourApprovals.js 117:34
+msgid "Title EN"
+msgstr ""
+
+#: src/components/profile/team/GQLYourApprovals.js 120:34
+msgid "Title FR"
+msgstr ""
+
+#: src/components/profile/team/GQLYourApprovals.js 156:19
+msgid "Comments"
+msgstr ""
+
+#: src/components/profile/team/GQLYourApprovals.js 178:19
+msgid "Approve"
+msgstr ""
+
+#: src/components/profile/team/GQLYourApprovals.js 189:19
+msgid "Deny"
+msgstr ""
+

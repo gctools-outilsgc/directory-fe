@@ -90,6 +90,39 @@ query profileSearchQuery($name: String!) {
   }
 }`;
 
+export const GET_APPROVALS = gql`
+query getApprovals($gcIDApprover: gcIDProfileInput!) {
+  approvals(gcIDApprover: $gcIDApprover, status: Pending) {
+    id
+    createdOn
+    status
+    changeType
+    gcIDSubmitter{
+      gcID
+      name
+      avatar
+      titleEn
+    }
+    requestedChange{
+      id
+      name
+      titleEn
+      titleFr
+    }
+  }
+}
+`;
+
+export const MODIFY_APPROVALS = gql`
+mutation modifyApproval($id: ID!, $data: ModifyApprovalInput) {
+  modifyApproval(id: $id, data: $data) {
+    id
+    deniedComment
+    status
+  }
+}
+`;
+
 export const GET_TEAM = gql`
 query getTeam($gcID: ID!) {
   profiles(gcID: $gcID) {
