@@ -118,7 +118,9 @@ export class App extends Component {
               }
             }
           />
-          <div className={(this.state.sidebar) ?
+          <main
+            id="gn-main"
+            className={(this.state.sidebar) ?
             'directory-container-min' : 'directory-container'
             }
           >
@@ -134,7 +136,7 @@ export class App extends Component {
                 <Route path="/onboard" component={Onboard} />
               </Fragment>
             </Switch>
-          </div>
+          </main>
         </div>
       </BrowserRouter>
     );
