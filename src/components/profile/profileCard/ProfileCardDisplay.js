@@ -24,9 +24,15 @@ export const ProfileCardDisplay = (props) => {
         <div className="profile-name">
           {user.name ? user.name : ''}
         </div>
-        <div className="profile-title">
-          {user.titleEn ? user.titleEn : ''}
-        </div>
+        {(localizer.lang === 'en_CA') ? (
+          <div className="profile-title">
+            {user.titleEn ? user.titleEn : ''}
+          </div>
+        ) : (
+          <div className="profile-title">
+            {user.titleFr ? user.titleFr : ''}
+          </div>
+        )}
         <div className="profile-title">
           {user.team ?
             user.team.organization.nameEn : ''}
