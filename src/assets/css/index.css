@@ -119,6 +119,26 @@ animation: LoadingText 2s ease infinite;
   color: #5e666c !important;
 }
 
+.directory-container {
+  -webkit-transition: 0.45s ease-out;
+  -moz-transition: 0.45s ease-out;
+  -o-transition: 0.45s ease-out;
+  transition: 0.45s ease-out;
+  margin-top: 60px;
+  width: 100%;
+  padding-right: 240px;
+}
+
+.directory-container-min {
+  -webkit-transition: 0.45s ease-out;
+  -moz-transition: 0.45s ease-out;
+  -o-transition: 0.45s ease-out;
+  transition: 0.45s ease-out;
+  margin-top: 60px;
+  width:100%;
+  padding-right: 60px;
+}
+
 /* Profile Card */
 
 .profile-card-title {
@@ -254,6 +274,10 @@ animation: LoadingText 2s ease infinite;
   background-color: white;
   color: black;
 }
+/* TEMPORARY hide non functional search box */
+.top_bar .searchContainer {
+  display: none !important;
+}
 
 .onboard-nav ul li.ob-active .display-text {
   color: black;
@@ -266,5 +290,21 @@ animation: LoadingText 2s ease infinite;
 @media (max-width: 992px) {
   .onboard-container {
     width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .directory-container {
+    max-width: 1200px;
+    padding-right: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .directory-container-min, .directory-container {
+    width: 100%;
+    padding-right: 0 !important;
+    margin-top: 115px;
   }
 }
