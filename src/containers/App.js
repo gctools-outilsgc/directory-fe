@@ -31,7 +31,12 @@ export class App extends Component {
   }
   constructor(props) {
     super(props);
-    this.state = { name: false, user: null, sidebar: false };
+    this.state = {
+      name: false,
+      user: null,
+      sidebar: false,
+      t: null,
+    };
   }
 
   componentWillMount() {
@@ -60,6 +65,7 @@ export class App extends Component {
     const doLogin = (user) => {
       this.setState({ name: user.profile.name });
       this.setState({ user: user.profile });
+      this.setState({ t: user.access_token });
       onLogin(user);
     };
 
@@ -103,6 +109,7 @@ export class App extends Component {
             minimized={this.state.sidebar}
             currentLang={localizer.lang}
             currentUser={this.state.user}
+            accessToken={this.state.t}
             hamburgerMenu={false}
             onLanguageResultClick={e => gnSetLanguage(e)}
             onToggleResultClick={() => {
