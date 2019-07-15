@@ -868,8 +868,8 @@ export const profileToNode = (profile, team) => (
       root: false,
     } :
     {
-      uuid: team.id,
-      gcID: team.id,
+      uuid: 'team',
+      gcID: 'team',
       name: (localizer.lang === 'en_CA') ? team.nameEn : team.nameFr,
       department: {
         en_CA: team.nameEn,
