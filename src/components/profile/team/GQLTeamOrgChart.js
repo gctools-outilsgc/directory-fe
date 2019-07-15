@@ -60,8 +60,10 @@ export class GQLTeamOrgChart extends React.Component {
   }
   navigateToProfile(card) {
     const { history } = this.props;
-    history.push(`/p/${card.id}`);
-    this.setState({ selected: card.id });
+    if (card.id !== 'team') {
+      history.push(`/p/${card.id}`);
+      this.setState({ selected: card.id });
+    }
   }
   moveToLoggedInUser() {
     this.setState({ selected: this.props.myGcID });
