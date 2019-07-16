@@ -71,5 +71,6 @@ msgstr[1] ""
 msgid "Confirm"
 msgstr "Confirmer"
 
-
+msgid "You cannot be your own supervisor. Please pick someone else."
+msgstr ""
 

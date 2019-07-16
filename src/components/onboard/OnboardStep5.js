@@ -161,7 +161,7 @@ export class OnboardStep5 extends Component {
                     } else {
                       this.setState({
                         // eslint-disable-next-line
-                        errors: 'You cannot be your own supervisor. Please pick someone else.',
+                        errors: __('You cannot be your own supervisor. Please pick someone else.'),
                       });
                     }
                   }}

@@ -266,7 +266,7 @@ export class GQLTeamCard extends React.Component {
                                       this.toggleConfirm();
                                     } else {
                                       this.setState({
-                                        errors: 'You cannot be your own supervisor. Please pick someone else.',
+                                        errors: __('You cannot be your own supervisor. Please pick someone else.'),
                                       });
                                     }
                                   }}
