@@ -110,6 +110,26 @@ query getYourApproval($gcIDSubmitter: gcIDProfileInput!) {
 }
 `;
 
+export const GET_YOUR_INFO_APPROVAL = gql`
+query getYourApproval($gcIDSubmitter: gcIDProfileInput!) {
+  approvals(
+    gcIDSubmitter: $gcIDSubmitter,
+    status: Pending,
+    changeType: Informational,
+  ) {
+    id
+    createdOn
+    status
+    changeType
+    gcIDApprover {
+      gcID
+      name
+      avatar
+    }
+  }
+}
+`;
+
 export const GET_APPROVALS = gql`
 query getApprovals($gcIDApprover: gcIDProfileInput!) {
   approvals(gcIDApprover: $gcIDApprover, status: Pending) {

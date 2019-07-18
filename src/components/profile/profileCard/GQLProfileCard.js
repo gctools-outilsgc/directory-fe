@@ -11,6 +11,7 @@ import { Card, CardBody, CardTitle } from 'reactstrap';
 import LocalizedProfileCardDisplay from './ProfileCardDisplay';
 import LocalizedEditProfile from './EditProfile';
 import Loading from './Loading';
+import GQLYourInfoApprovalStatus from './GQLYourInfoApprovalStatus';
 
 import { GET } from '../../../gql/profile';
 
@@ -61,6 +62,11 @@ export const GQLProfileCard = (props) => {
                         token={accessToken}
                       /> : ''}
                   </CardTitle>
+                  {canEdit && (
+                    <GQLYourInfoApprovalStatus
+                      gcID={id}
+                    />
+                  )}
                   <LocalizedProfileCardDisplay
                     user={userInfo}
                   />

@@ -12,7 +12,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
-import { GET_YOUR_TEAM_APPROVAL } from '../../../gql/profile';
+import { GET_YOUR_INFO_APPROVAL } from '../../../gql/profile';
 
 const GQLYourTeamApprovalStatus = (props) => {
   const {
@@ -21,7 +21,7 @@ const GQLYourTeamApprovalStatus = (props) => {
   const [modalOpen, setModalOpen] = useState(false);
   return (
     <Query
-      query={GET_YOUR_TEAM_APPROVAL}
+      query={GET_YOUR_INFO_APPROVAL}
       variables={
         { gcIDSubmitter: { gcID: (String(gcID)) } }
       }
@@ -47,7 +47,7 @@ const GQLYourTeamApprovalStatus = (props) => {
                     <a href={`/p/${approvalData[0].gcIDApprover.gcID}`}>
                       {approvalData[0].gcIDApprover.name}
                     </a>
-                    needs to approve your team change request.
+                    needs to approve your information change
                   </div>
                   <div className="ml-auto">
                     <Button
@@ -88,7 +88,7 @@ const GQLYourTeamApprovalStatus = (props) => {
               TODO: Find a more elegant way to refetch this component
             */}
             <Button
-              id="refetchAprvlSts"
+              id="refetchInfoSts"
               className="sr-only"
               tabIndex="-1"
               aria-hidden="true"
