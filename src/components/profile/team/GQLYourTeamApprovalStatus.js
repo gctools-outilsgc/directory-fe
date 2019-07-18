@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import { Query } from 'react-apollo';
+import { Query, Mutation } from 'react-apollo';
 import {
   Button,
   Modal,
@@ -12,7 +12,11 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
-import { GET_YOUR_TEAM_APPROVAL } from '../../../gql/profile';
+import {
+  GET_YOUR_TEAM_APPROVAL,
+  MODIFY_APPROVALS
+} from '../../../gql/profile';
+import refetchMutated from '../../../utils/refetchMutated';
 
 const GQLYourTeamApprovalStatus = (props) => {
   const {
@@ -68,12 +72,31 @@ const GQLYourTeamApprovalStatus = (props) => {
                         </div>
                       </ModalBody>
                       <ModalFooter>
-                        <Button
-                          onClick={() => { setModalOpen(false); }}
-                          color="primary"
+                        <Mutation
+                          mutation={MODIFY_APPROVALS}
+                          update={refetchMutated}
+                          onComplete={() => {
+                            setModalOpen(false);
+                          }}
                         >
-                          YUP
-                        </Button>
+                          {modifyApproval => (
+                            <Button
+                              onClick={() => {
+                                modifyApproval({
+                                  variables: {
+                                    id: approvalData[0].id,
+                                    data: {
+                                      status: 'Revoked',
+                                    },
+                                  },
+                                });
+                              }}
+                              color="primary"
+                            >
+                              YUP
+                            </Button>
+                          )}
+                        </Mutation>
                         <Button onClick={() => { setModalOpen(false); }}>
                           NOPE
                         </Button>
