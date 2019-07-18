@@ -2,7 +2,13 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { Query } from 'react-apollo';
-import { Button, Modal, ModalBody, ModalHeader } from 'reactstrap';
+import {
+  Button,
+  Modal,
+  ModalBody,
+  ModalHeader,
+  ModalFooter
+} from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
@@ -20,10 +26,15 @@ const GQLYourTeamApprovalStatus = (props) => {
         { gcIDSubmitter: { gcID: (String(gcID)) } }
       }
     >
-      {({ loading, error, data }) => {
+      {({
+        loading,
+        error,
+        data,
+        refetch,
+      }) => {
         if (loading) return null;
         if (error) return `Error: ${error}`;
-        const approvalData = (!data) ? '' : data.approvals;
+        const approvalData = (data.approvals.length < 1) ? '' : data.approvals;
         return (
           <React.Fragment>
             {approvalData && (
@@ -55,18 +66,36 @@ const GQLYourTeamApprovalStatus = (props) => {
                         <div>
                           Do you want to revoke this request?
                         </div>
-                        <Button onClick={() => { setModalOpen(false); }}>
+                      </ModalBody>
+                      <ModalFooter>
+                        <Button
+                          onClick={() => { setModalOpen(false); }}
+                          color="primary"
+                        >
                           YUP
                         </Button>
                         <Button onClick={() => { setModalOpen(false); }}>
                           NOPE
                         </Button>
-                      </ModalBody>
+                      </ModalFooter>
                     </Modal>
                   </div>
                 </div>
               </div>
             )}
+            {/**
+              Hidden button gets clicked in parent mutation onComplete
+              TODO: Find a more elegant way to refetch this component
+            */}
+            <Button
+              id="refetchAprvlSts"
+              className="sr-only"
+              tabIndex="-1"
+              aria-hidden="true"
+              onClick={() => refetch()}
+            >
+              Refetch (im invisible)
+            </Button>
           </React.Fragment>
         );
       }}

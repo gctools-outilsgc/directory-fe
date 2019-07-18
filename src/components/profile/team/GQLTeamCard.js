@@ -99,7 +99,11 @@ export class GQLTeamCard extends React.Component {
         query={GET_TEAM}
         variables={{ gcID: (String(id)) }}
       >
-        {({ loading, error, data }) => {
+        {({
+          loading,
+          error,
+          data,
+        }) => {
           if (loading) return <Loading />;
           if (error) return `Error!: ${error}`;
           const userInfo = (!data) ? '' : data.profiles[0];
@@ -297,6 +301,7 @@ export class GQLTeamCard extends React.Component {
                                 this.setState({
                                   confirmModal: false,
                                 });
+                                document.getElementById('refetchAprvlSts').click();
                               }}
                             >
                               {(modifyProfile, { loading }) =>
