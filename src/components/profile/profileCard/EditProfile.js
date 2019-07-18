@@ -102,6 +102,7 @@ export class EditProfile extends Component {
                 this.setState({ modal: false });
                 // Do this nicer / hot load maybe?
                 // window.location.reload(false);
+                document.getElementById('refetchInfoSts').click();
               }}
             >
               {(modifyProfile, { loading, error }) => (
