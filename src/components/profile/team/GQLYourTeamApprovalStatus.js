@@ -51,7 +51,7 @@ const GQLYourTeamApprovalStatus = (props) => {
                     <a href={`/p/${approvalData[0].gcIDApprover.gcID}`}>
                       {approvalData[0].gcIDApprover.name}
                     </a>
-                    needs to approve your team change request.
+                    {__(' needs to approve your supervisor request.')}
                   </div>
                   <div className="ml-auto">
                     <Button
@@ -60,15 +60,18 @@ const GQLYourTeamApprovalStatus = (props) => {
                         setModalOpen(true);
                       }}
                     >
-                      REVOKE IT
+                      {__('Cancel request')}
                     </Button>
                     <Modal
                       isOpen={modalOpen}
                     >
-                      <ModalHeader>Are you sure?</ModalHeader>
+                      <ModalHeader>
+                        {__('Are you sure?')}
+                      </ModalHeader>
                       <ModalBody>
                         <div>
-                          Do you want to revoke this request?
+                          {__('Do you want to cancel this change request to')}
+                          {approvalData[0].gcIDApprover.name}?
                         </div>
                       </ModalBody>
                       <ModalFooter>
@@ -93,12 +96,12 @@ const GQLYourTeamApprovalStatus = (props) => {
                               }}
                               color="primary"
                             >
-                              YUP
+                              {__('Cancel request')}
                             </Button>
                           )}
                         </Mutation>
                         <Button onClick={() => { setModalOpen(false); }}>
-                          NOPE
+                          {__('Back')}
                         </Button>
                       </ModalFooter>
                     </Modal>

@@ -1,0 +1,22 @@
+msgid ""
+msgstr ""
+"Language : en\n"
+"Plural-Forms : nplurals=2; plural=(n != 1);\n"
+"MIME-Version : 1.0\n"
+"Content-Type : text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding : 8bit\n"
+
+msgid " needs to approve your information change"
+msgstr ""
+
+msgid "Do you want to cancel this change request to"
+msgstr ""
+
+msgid "Cancel request"
+msgstr ""
+
+msgid "Back"
+msgstr ""
+
+msgid "Are you sure?"
+msgstr ""
