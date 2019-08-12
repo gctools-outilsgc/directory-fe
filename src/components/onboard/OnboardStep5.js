@@ -22,6 +22,7 @@ export class OnboardStep5 extends Component {
       chosenSupervisor: '',
       teamId: '',
       editSup: true,
+      errors: '',
     };
 
     this.toggleSup = this.toggleSup.bind(this);
@@ -131,6 +132,7 @@ export class OnboardStep5 extends Component {
                 </div>
               </div>
             }
+            <span className="text-danger">{this.state.errors}</span>
           </Col>
         </Row>
         <Row className="m-2 border-top">
@@ -151,10 +153,17 @@ export class OnboardStep5 extends Component {
               {modifyProfile => (
                 <Button
                   onClick={() => {
-                    modifyProfile(prepareEditProfile({
-                      gcID: userObject.gcID,
-                      teamId,
-                    }));
+                    if (chosenSupervisor.gcID !== userObject.gcID) {
+                      modifyProfile(prepareEditProfile({
+                        gcID: userObject.gcID,
+                        teamId,
+                      }));
+                    } else {
+                      this.setState({
+                        // eslint-disable-next-line
+                        errors: __('You cannot be your own supervisor. Please pick someone else.'),
+                      });
+                    }
                   }}
                   color="primary"
                   className="ml-3"

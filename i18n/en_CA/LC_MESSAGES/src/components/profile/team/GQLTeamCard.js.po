@@ -68,4 +68,6 @@ msgstr[1] ""
 msgid "Confirm"
 msgstr ""
 
+msgid "You cannot be your own supervisor. Please pick someone else."
+msgstr ""
 

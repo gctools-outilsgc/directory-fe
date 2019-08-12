@@ -44,3 +44,5 @@ msgstr ""
 msgid "Next"
 msgstr "Save"
 
+msgid "You cannot be your own supervisor. Please pick someone else."
+msgstr ""

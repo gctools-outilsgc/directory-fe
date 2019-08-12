@@ -54,6 +54,7 @@ export class GQLTeamCard extends React.Component {
       chosenSupervisor: '',
       chosenTeam: '',
       editSup: true,
+      errors: '',
     };
     this.toggle = this.toggle.bind(this);
     this.toggleSup = this.toggleSup.bind(this);
@@ -76,6 +77,7 @@ export class GQLTeamCard extends React.Component {
     this.setState({
       modal: !this.state.modal,
       confirmModal: !this.state.confirmModal,
+      errors: '',
     });
   }
 
@@ -186,6 +188,7 @@ export class GQLTeamCard extends React.Component {
                                           this.setState({
                                             chosenSupervisor: s,
                                             chosenTeam: s.ownerOfTeams[0],
+                                            errors: '',
                                           });
                                           this.toggleSup(editSup);
                                         }}
@@ -250,6 +253,7 @@ export class GQLTeamCard extends React.Component {
                                         </div>
                                       </div>
                                     }
+                                    <span className="text-danger">{this.state.errors}</span>
                                   </Col>
                                 </Row>
                               </ModalBody>
@@ -257,8 +261,14 @@ export class GQLTeamCard extends React.Component {
                                 <Button
                                   color="primary"
                                   onClick={() => {
-                                    this.toggle();
-                                    this.toggleConfirm();
+                                    if (this.state.chosenSupervisor.gcID !== this.props.id) {
+                                      this.toggle();
+                                      this.toggleConfirm();
+                                    } else {
+                                      this.setState({
+                                        errors: __('You cannot be your own supervisor. Please pick someone else.'),
+                                      });
+                                    }
                                   }}
                                 >
                                   {__('next')}
