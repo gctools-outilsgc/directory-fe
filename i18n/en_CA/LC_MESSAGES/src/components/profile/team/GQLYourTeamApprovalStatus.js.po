@@ -11,7 +11,7 @@ msgid " needs to approve your supervisor request."
 msgstr ""
 
 msgid "Do you want to cancel this change request to"
-msgstr ""
+msgstr "Do you want to cancel this change request to "
 
 msgid "Cancel request"
 msgstr ""

@@ -42,3 +42,5 @@ msgstr "Retour"
 msgid "Next"
 msgstr "Enregistrer"
 
+msgid "You cannot be your own supervisor. Please pick someone else."
+msgstr ""

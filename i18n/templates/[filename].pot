@@ -787,3 +787,7 @@ msgtr ""
 msgid " needs to approve your information change"
 msgtr ""
 
+#: src/components/profile/team/GQLTeamCard.js 269:48
+msgid "You cannot be your own supervisor. Please pick someone else."
+msgtr ""
+
