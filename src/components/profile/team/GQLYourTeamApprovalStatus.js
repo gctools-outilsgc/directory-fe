@@ -78,8 +78,9 @@ const GQLYourTeamApprovalStatus = (props) => {
                         <Mutation
                           mutation={MODIFY_APPROVALS}
                           update={refetchMutated}
-                          onComplete={() => {
+                          onCompleted={() => {
                             setModalOpen(false);
+                            refetch();
                           }}
                         >
                           {modifyApproval => (
