@@ -16,19 +16,19 @@ msgstr ""
 
 #: 107:14 src/components/profile/team/GQLYourApprovals.js
 msgid "wants to make you their supervisor."
-msgstr ""
+msgstr "vous a inscrit comme superviseur."
 
 #: 108:21 src/components/profile/team/GQLYourApprovals.js
 msgid "is trying to change the following:"
-msgstr ""
+msgstr "a demandé de faire les modifications suivantes:"
 
 #: 117:34 src/components/profile/team/GQLYourApprovals.js
 msgid "Title EN"
-msgstr ""
+msgstr "Titre EN"
 
 #: 120:34 src/components/profile/team/GQLYourApprovals.js
 msgid "Title FR"
-msgstr ""
+msgstr "Titre FR"
 
 #: 156:19 src/components/profile/team/GQLYourApprovals.js
 msgid "Comments"
@@ -36,9 +36,9 @@ msgstr ""
 
 #: 178:19 src/components/profile/team/GQLYourApprovals.js
 msgid "Approve"
-msgstr ""
+msgstr "Approuver"
 
 #: 189:19 src/components/profile/team/GQLYourApprovals.js
 msgid "Deny"
-msgstr ""
+msgstr "Refuser"
 

@@ -1,0 +1,23 @@
+msgid ""
+msgstr ""
+"Language: en_CA\n"
+"Language-Team: en_CA <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid " needs to approve your information change"
+msgstr ""
+
+msgid "Do you want to cancel this change request to"
+msgstr "Do you want to cancel this change request to "
+
+msgid "Cancel request"
+msgstr ""
+
+msgid "Back"
+msgstr ""
+
+msgid "Are you sure?"
+msgstr ""

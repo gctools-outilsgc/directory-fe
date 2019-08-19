@@ -96,6 +96,7 @@ export class App extends Component {
                 id="login-btn"
                 className="sr-only"
                 tabIndex="-1"
+                aria-hidden="true"
                 onClick={(e) => {
                   e.stopPropagation();
                   onClick(e);

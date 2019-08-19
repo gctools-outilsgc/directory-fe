@@ -16,11 +16,11 @@ msgstr ""
 
 #: 107:14 src/components/profile/team/GQLYourApprovals.js
 msgid "wants to make you their supervisor."
-msgstr ""
+msgstr "listed you as their supervisor."
 
 #: 108:21 src/components/profile/team/GQLYourApprovals.js
 msgid "is trying to change the following:"
-msgstr ""
+msgstr "asked to change the following:"
 
 #: 117:34 src/components/profile/team/GQLYourApprovals.js
 msgid "Title EN"
@@ -40,5 +40,5 @@ msgstr ""
 
 #: 189:19 src/components/profile/team/GQLYourApprovals.js
 msgid "Deny"
-msgstr ""
+msgstr "Decline"
 

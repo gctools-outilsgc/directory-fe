@@ -767,6 +767,26 @@ msgtr ""
 msgid "Deny"
 msgtr ""
 
+#: src/components/profile/team/GQLYourTeamApprovalStatus.js 54:21
+msgid " needs to approve your supervisor request."
+msgtr ""
+
+#: src/components/profile/team/GQLYourTeamApprovalStatus.js 63:23
+msgid "Cancel request"
+msgtr ""
+
+#: src/components/profile/team/GQLYourTeamApprovalStatus.js 73:27
+msgid "Do you want to cancel this change request to"
+msgtr ""
+
+#: src/components/profile/team/GQLYourTeamApprovalStatus.js 63:23
+msgid "Cancel request"
+msgtr ""
+
+#: src/components/profile/profileCard/GQLYourInfoApprovalStatus.js 54:21
+msgid " needs to approve your information change"
+msgtr ""
+
 #: src/components/profile/team/GQLTeamCard.js 269:48
 msgid "You cannot be your own supervisor. Please pick someone else."
 msgtr ""

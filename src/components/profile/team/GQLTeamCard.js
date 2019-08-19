@@ -28,6 +28,7 @@ import SupervisorPicker from '../../core/SupervisorPicker';
 import { UserAvatar } from '../../core/UserAvatar';
 import LocalizedTransferConfirmation from './TransferConfirmation';
 import TeamDisplayMemberList from './TeamDisplayMemberList';
+import GQLYourTeamApprovalStatus from './GQLYourTeamApprovalStatus';
 
 const mapStateToProps = ({ user }) => {
   const props = {};
@@ -100,7 +101,11 @@ export class GQLTeamCard extends React.Component {
         query={GET_TEAM}
         variables={{ gcID: (String(id)) }}
       >
-        {({ loading, error, data }) => {
+        {({
+          loading,
+          error,
+          data,
+        }) => {
           if (loading) return <Loading />;
           if (error) return `Error!: ${error}`;
           const userInfo = (!data) ? '' : data.profiles[0];
@@ -112,6 +117,15 @@ export class GQLTeamCard extends React.Component {
               {userInfo ? (
                 <div>
                   <div>
+                    <Row>
+                      <Col>
+                        {canEdit && (
+                          <GQLYourTeamApprovalStatus
+                            gcID={id}
+                          />
+                        )}
+                      </Col>
+                    </Row>
                     <Row>
                       <Col>
                         <div className="font-weight-bold mb-2">
@@ -297,6 +311,7 @@ export class GQLTeamCard extends React.Component {
                                 this.setState({
                                   confirmModal: false,
                                 });
+                                document.getElementById('refetchAprvlSts').click();
                               }}
                             >
                               {(modifyProfile, { loading }) =>
