@@ -72,6 +72,7 @@ fragment FullTeam on Profile {
       gcID
       name
       titleEn
+      titleFr
       avatar
     }
   }

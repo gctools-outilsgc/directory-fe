@@ -143,11 +143,11 @@ export class GQLTeamCard extends React.Component {
                                   supTest.gcID : ''}
                                 className="text-dark font-weight-bold"
                               >
-                                {supTest ? supTest.name : 'None'}
+                                {supTest ? supTest.name : 'N/A'}
                               </a>
                             </div>
                             <small className="text-muted">
-                              {supTest ? supTest.titleEn : 'None'}
+                              {supTest ? supTest.titleEn : 'N/A'}
                             </small>
                           </div>
                         </div>
@@ -190,7 +190,9 @@ export class GQLTeamCard extends React.Component {
                                       </span>
                                     </div>
                                     <div>
-                                      {userInfo.titleEn}
+                                      {(localizer.lang === 'en_CA') ?
+                                        userInfo.titleEn : userInfo.titleFr
+                                      }
                                     </div>
                                   </div>
                                 </Row>

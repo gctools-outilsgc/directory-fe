@@ -25,9 +25,15 @@ const TeamDisplayMemberList = (props) => {
                 {p ? p.name : 'None'}
               </a>
             </div>
-            <small className="text-muted">
-              {p ? p.titleEn : 'None'}
-            </small>
+            {(localizer.lang === 'en_CA') ? (
+              <small className="text-muted">
+                {p ? p.titleEn : ''}
+              </small>
+            ) : (
+              <small className="text-muted">
+                {p ? p.titleFr : ''}
+              </small>
+            )}
           </div>
         </div>
       </Col>
@@ -45,6 +51,7 @@ TeamDisplayMemberList.propTypes = {
     avatar: PropTypes.string,
     name: PropTypes.string,
     titleEn: PropTypes.string,
+    titleFr: PropTypes.string,
   })).isRequired,
 };
 

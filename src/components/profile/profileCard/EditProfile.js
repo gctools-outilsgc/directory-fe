@@ -27,6 +27,8 @@ import TransferConfirmation from '../team/TransferConfirmation';
 import { UserAvatar } from '../../core/UserAvatar';
 import ErrorModal, { err } from '../../core/ErrorModal';
 
+import GenericAvatar from '../OrgChart/Card/img/user.gif';
+
 export class EditProfile extends Component {
   constructor(props) {
     super(props);
@@ -194,7 +196,7 @@ export class EditProfile extends Component {
                           if (change) {
                             this.setState({
                               depChange: true,
-                              newTeamId: d.teams[0].id,
+                              newTeamId: d.teams[0],
                             });
                           }
                         }}
@@ -436,7 +438,7 @@ export class EditProfile extends Component {
                 ${___(
                   __('department changing'),
                 this.state.organization.nameEn,
-                this.state.newTeamId,
+                this.state.newTeamId.nameEn,
                 this.state.supervisor.name,
                 this.state.organization.nameEn
               )}
@@ -446,7 +448,7 @@ export class EditProfile extends Component {
               destination={
                 {
                   name: 'Choose a new Supervisor',
-                  avatar: 'placeholder icon',
+                  avatar: GenericAvatar,
                   team: {
                     name: 'No Team',
                     avatar: 'placeholder',
@@ -462,7 +464,7 @@ export class EditProfile extends Component {
                     gcID: profile.gcID,
                     data: {
                       team: {
-                        id: String(this.state.newTeamId),
+                        id: String(this.state.newTeamId.id),
                       },
                     },
                   },

@@ -228,10 +228,10 @@ export const YourTeamMemberList = (props) => {
           />
           <div className="ml-3">
             <div className="font-weight-bold member-name">
-              {p ? p.name : 'None'}
+              {p ? p.name : 'N/A'}
             </div>
             <small className="text-muted">
-              {p ? p.titleEn : 'None'}
+              {p ? p.titleEn : 'N/A'}
             </small>
             <small>
               <ul className="list-inline">
