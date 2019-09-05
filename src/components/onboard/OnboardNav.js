@@ -17,6 +17,10 @@ const OnboardNav = (props) => {
   ];
   for (let i = 1; i <= props.totalSteps; i += 1) {
     const isActive = props.currentStep === i;
+    let isComplete = '';
+    if (i < props.currentStep) {
+      isComplete = 'complete';
+    }
     switch (i) {
       case 1:
       case 6:
@@ -26,7 +30,7 @@ const OnboardNav = (props) => {
         dots.push((
           <li
             key={`step-${i}`}
-            className={`${isActive ? 'active' : ''}`}
+            className={`${isActive ? 'active' : isComplete}`}
           >
             <div>
               <div>

@@ -16,17 +16,17 @@ msgstr ""
 
 #: 15:11 src/components/onboard/OnboardStep1.js
 msgid "Welcome"
-msgstr "Welcome to GCprofile!"
+msgstr "Welcome to Directory!"
 
 #: 18:11 src/components/onboard/OnboardStep1.js
 msgid "Step1Sub1"
-msgstr "What is GCprofile?"
+msgstr "What is Directory?"
 
 #: 20:12 src/components/onboard/OnboardStep1.js
 msgid "welcome body"
-msgstr "GCprofile is a self-service application that enhances collaboration by "
+msgstr "Directory is a self-service application that enhances collaboration by "
 "providing accurate user contact and organizational information. With "
-"GCprofile, you can…"
+"Directory, you can…"
 
 #: 22:15 src/components/onboard/OnboardStep1.js
 msgid "Step1List1"
@@ -47,7 +47,7 @@ msgstr "Create teams and self-manage members (for supervisors)."
 
 #: 28:11 src/components/onboard/OnboardStep1.js
 msgid "Step1Sub2"
-msgstr "Why use GCprofile?"
+msgstr "Why use Directory?"
 
 #: 30:12 src/components/onboard/OnboardStep1.js
 msgid "Step1Sub2Desc"

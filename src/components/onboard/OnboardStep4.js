@@ -37,7 +37,7 @@ export class OnboardStep4 extends Component {
           <div className="ml-auto mt-3">
             <Button
               onClick={this.props.previousStep}
-              color="primary"
+              color="secondary"
             >
               {__('Back')}
             </Button>

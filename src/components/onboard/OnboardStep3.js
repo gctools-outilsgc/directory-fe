@@ -212,7 +212,7 @@ export class OnboardStep3 extends Component {
               <div className="ml-auto mt-3">
                 <Button
                   onClick={this.handleClick}
-                  color="primary"
+                  color="secondary"
                 >
                   {__('Back')}
                 </Button>
