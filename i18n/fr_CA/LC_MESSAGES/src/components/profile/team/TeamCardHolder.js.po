@@ -30,3 +30,5 @@ msgstr "Organigramme"
 msgid "imin"
 msgstr "Équipe"
 
+msgid "Approvals"
+msgstr "Approbations"

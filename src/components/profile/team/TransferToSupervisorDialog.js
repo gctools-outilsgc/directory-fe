@@ -114,7 +114,7 @@ export const TransferToSupervisorDialog = (props) => {
               {supervisor && (
                 <div className="pt-4">
                   <div>
-                    Chosen Supervisor
+                    {__('Chosen Supervisor')}
                   </div>
                   <div className="d-flex">
                     <img

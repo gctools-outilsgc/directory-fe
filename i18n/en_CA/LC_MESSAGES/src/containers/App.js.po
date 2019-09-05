@@ -18,3 +18,5 @@ msgstr ""
 msgid "Language"
 msgstr "FR"
 
+msgid "Directory"
+msgstr "Directory"

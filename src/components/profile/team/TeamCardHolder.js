@@ -108,7 +108,7 @@ class TeamCardHolder extends React.Component {
                     }
                     onClick={() => { this.toggle('4'); }}
                   >
-                    Approvals
+                    {__('Approvals')}
                   </NavLink>
                 </NavItem>
               :

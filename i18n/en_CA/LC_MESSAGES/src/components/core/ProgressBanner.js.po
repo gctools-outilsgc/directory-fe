@@ -17,6 +17,6 @@ msgstr ""
 #: 13:19 src/components/core/ProgressBanner.js
 msgid "mvpBanner"
 msgstr ""
-"GCprofile is currently an open proof of concept. The information in this "
+"Directory is currently an open proof of concept. The information in this "
 "application is randomly generated and does not represent actual users."
 

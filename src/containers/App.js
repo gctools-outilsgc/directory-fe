@@ -120,7 +120,7 @@ export class App extends Component {
             currentApp={
               {
                 id: '3',
-                name: 'Directory',
+                name: __('Directory'),
                 home: '/',
                 logo: directoryIcon,
               }

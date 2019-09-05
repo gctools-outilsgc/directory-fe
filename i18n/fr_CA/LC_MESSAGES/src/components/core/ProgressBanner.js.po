@@ -17,7 +17,7 @@ msgstr ""
 #: 13:19 src/components/core/ProgressBanner.js
 msgid "mvpBanner"
 msgstr ""
-"GCprofil est actuellement une validation de principe ouverte. Les "
+"Annuiare est actuellement une validation de principe ouverte. Les "
 "informations contenues dans cette application sont générées aléatoirement"
 " et ne représentent pas des utilisateurs réels."
 
