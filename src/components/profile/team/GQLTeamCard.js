@@ -1,5 +1,5 @@
 /*eslint-disable */
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
@@ -18,7 +18,7 @@ import {
 } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-
+import ErrorModal, { err } from '../../core/ErrorModal';
 
 import Loading from './Loading';
 
@@ -46,358 +46,338 @@ const style = {
   },
 };
 
-export class GQLTeamCard extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      modal: false,
-      confirmModal: false,
-      chosenSupervisor: '',
-      chosenTeam: '',
-      editSup: true,
-      errors: '',
-    };
-    this.toggle = this.toggle.bind(this);
-    this.toggleSup = this.toggleSup.bind(this);
-    this.toggleConfirm = this.toggleConfirm.bind(this);
+function GQLTeamCard(props) {
+
+  const [modal, setModal] = useState(false);
+  const [confirmModal, setConfirmModal] = useState(false);
+  const [chosenSupervisor, setChosenSupervisor] = useState('');
+  const [chosenTeam, setChosenTeam] = useState('');
+  const [editSup, setEditSup] = useState(true);
+  const [errors, setErrors] = useState([])
+
+  const toggle = () => {
+    setModal(!modal);
   }
 
-  toggle() {
-    this.setState({
-      modal: !this.state.modal,
-    });
+  const toggleSup = () => {
+    setEditSup(!editSup);
   }
 
-  toggleSup() {
-    this.setState(prevState => ({
-      editSup: !prevState.editSup,
-    }));
+  const toggleConfirm = () => {
+    setModal(!modal);
+    setConfirmModal(!confirmModal);
+    setErrors([]);
   }
 
-  toggleConfirm() {
-    this.setState({
-      modal: !this.state.modal,
-      confirmModal: !this.state.confirmModal,
-      errors: '',
-    });
+  const errorHandler = (e) => {
+    setErrors(err(e));
   }
 
-  render() {
-    const {
-      id,
-      accessToken,
-      myGcID,
-    } = this.props;
-    const {
-      chosenSupervisor,
-      chosenTeam,
-      editSup,
-    } = this.state;
+  const {
+    id,
+    accessToken,
+    myGcID,
+  } = props;
 
-    const ChangeSup = __('Changesup/team');
-    const canEdit = (accessToken !== '') && (id === myGcID);
-    return (
-      <Query
-        query={GET_TEAM}
-        variables={{ gcID: (String(id)) }}
-      >
-        {({
-          loading,
-          error,
-          data,
-        }) => {
-          if (loading) return <Loading />;
-          if (error) return `Error!: ${error}`;
-          const userInfo = (!data) ? '' : data.profiles[0];
-          const teamTest = (!userInfo) ? '' : userInfo.team;
-          const supTest = (!teamTest) ? '' : userInfo.team.owner;
-          const memberTest = (!teamTest) ? '' : userInfo.team.members;
-          return (
-            <div style={style.card}>
-              {userInfo ? (
+  const ChangeSup = __('Changesup/team');
+  const canEdit = (accessToken !== '') && (id === myGcID);
+  return (
+    <Query
+      query={GET_TEAM}
+      variables={{ gcID: (String(id)) }}
+    >
+      {({
+        loading,
+        error,
+        data,
+      }) => {
+        if (loading) return <Loading />;
+        if (error) return errorHandler(error);
+        const userInfo = (!data) ? '' : data.profiles[0];
+        const teamTest = (!userInfo) ? '' : userInfo.team;
+        const supTest = (!teamTest) ? '' : userInfo.team.owner;
+        const memberTest = (!teamTest) ? '' : userInfo.team.members;
+        return (
+          <div style={style.card}>
+            {userInfo ? (
+              <div>
                 <div>
-                  <div>
-                    <Row>
-                      <Col>
-                        {canEdit && (
-                          <GQLYourTeamApprovalStatus
-                            gcID={id}
-                          />
-                        )}
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col>
-                        <div className="font-weight-bold mb-2">
-                          {__('Supervisor')}
-                        </div>
-                        <div className="d-flex">
-                          <UserAvatar
-                            avatar={supTest ? supTest.avatar : ''}
-                            name={supTest ? supTest.name : ''}
-                          />
-                          <div className="ml-2">
-                            <div>
-                              <a
-                                href={supTest ?
-                                  supTest.gcID : ''}
-                                className="text-dark font-weight-bold"
-                              >
-                                {supTest ? supTest.name : 'N/A'}
-                              </a>
-                            </div>
-                            <small className="text-muted">
-                              {supTest ? supTest.titleEn : 'N/A'}
-                            </small>
+                  <Row>
+                    <Col>
+                      {canEdit && (
+                        <GQLYourTeamApprovalStatus
+                          gcID={id}
+                        />
+                      )}
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>
+                      <div className="font-weight-bold mb-2">
+                        {__('Supervisor')}
+                      </div>
+                      <div className="d-flex">
+                        <UserAvatar
+                          avatar={supTest ? supTest.avatar : ''}
+                          name={supTest ? supTest.name : ''}
+                        />
+                        <div className="ml-2">
+                          <div>
+                            <a
+                              href={supTest ?
+                                supTest.gcID : ''}
+                              className="text-dark font-weight-bold"
+                            >
+                              {supTest ? supTest.name : 'N/A'}
+                            </a>
                           </div>
+                          <small className="text-muted">
+                            {supTest ? supTest.titleEn : 'N/A'}
+                          </small>
                         </div>
-                        {canEdit ?
-                          <div className="ml-5">
-                            <Button
-                              color="link"
-                              size="sm"
-                              onClick={this.toggle}
+                      </div>
+                      {canEdit ?
+                        <div className="ml-5">
+                          <Button
+                            color="link"
+                            size="sm"
+                            onClick={toggle}
+                          >
+                            {ChangeSup}
+                          </Button>
+                          <Modal
+                            isOpen={modal}
+                            toggle={toggle}
+                            centered
+                            autoFocus
+                          >
+                            <ModalHeader
+                              toggle={toggle}
+                              className="border-bottom"
                             >
-                              {ChangeSup}
-                            </Button>
-                            <Modal
-                              isOpen={this.state.modal}
-                              toggle={this.toggle}
-                              centered
-                              autoFocus
-                            >
-                              <ModalHeader
-                                toggle={this.toggle}
-                                className="border-bottom"
+                              {__('edit_team')}
+                            </ModalHeader>
+                            <ModalBody className="pb-5">
+                              <Row
+                                className="justify-content-md-center"
                               >
-                                {__('edit_team')}
-                              </ModalHeader>
-                              <ModalBody className="pb-5">
-                                <Row
-                                  className="justify-content-md-center"
-                                >
-                                  <div className="text-center">
-                                    <div>
-                                      <UserAvatar
-                                        avatar={userInfo.avatar}
-                                        name={userInfo.name}
-                                        size="lg"
-                                      />
-                                    </div>
-                                    <div>
-                                      <span className="font-weight-bold">
-                                        {userInfo.name}
-                                      </span>
-                                    </div>
-                                    <div>
-                                      {(localizer.lang === 'en_CA') ?
-                                        userInfo.titleEn : userInfo.titleFr
-                                      }
-                                    </div>
+                                <div className="text-center">
+                                  <div>
+                                    <UserAvatar
+                                      avatar={userInfo.avatar}
+                                      name={userInfo.name}
+                                      size="lg"
+                                    />
                                   </div>
-                                </Row>
-                                <Row className="mt-3 mb-5">
-                                  <Col>
-                                    {editSup ?
-                                      <SupervisorPicker
-                                        onResultSelect={(s) => {
-                                          this.setState({
-                                            chosenSupervisor: s,
-                                            chosenTeam: s.ownerOfTeams[0],
-                                            errors: '',
-                                          });
-                                          this.toggleSup(editSup);
-                                        }}
-                                      /> :
-                                      <div className="d-flex">
-                                        {!chosenSupervisor ?
-                                          <div className="mr-auto d-flex">
-                                            <div className="mr-2">
-                                              <UserAvatar
-                                                avatar={supTest ?
-                                                  supTest.avatar : ''}
-                                                name={supTest ?
-                                                  supTest.name : ''}
-                                              />
-                                            </div>
-                                            <div>
-                                              <div
-                                                className="font-weight-bold"
-                                              >
-                                                {supTest
-                                                  ? supTest.name : 'None'}
-                                              </div>
-                                              <small className="text-muted">
-                                                {supTest ?
-                                                  supTest.titleEn : 'No'}
-                                              </small>
-                                            </div>
-                                          </div> :
-                                          <div className="mr-auto d-flex">
-                                            <div className="mr-2">
-                                              <UserAvatar
-                                                avatar={chosenSupervisor ?
-                                                  chosenSupervisor.avatar : ''}
-                                                name={chosenSupervisor ?
-                                                  chosenSupervisor.name : ''}
-                                              />
-                                            </div>
-                                            <div>
-                                              <div
-                                                className="font-weight-bold"
-                                              >
-                                                {chosenSupervisor.name}
-                                              </div>
-                                              <small className="text-muted">
-                                                {chosenSupervisor.titleEn}
-                                              </small>
-                                            </div>
-                                          </div>
-                                        }
-                                        <div>
-                                          <Button
-                                            onClick={this.toggleSup}
-                                            color="light"
-                                          >
-                                            <FontAwesomeIcon
-                                              icon={faSearch}
+                                  <div>
+                                    <span className="font-weight-bold">
+                                      {userInfo.name}
+                                    </span>
+                                  </div>
+                                  <div>
+                                    {(localizer.lang === 'en_CA') ?
+                                      userInfo.titleEn : userInfo.titleFr
+                                    }
+                                  </div>
+                                </div>
+                              </Row>
+                              <Row className="mt-3 mb-5">
+                                <Col>
+                                  {editSup ?
+                                    <SupervisorPicker
+                                      onResultSelect={(s) => {
+                                        setChosenSupervisor(s);
+                                        setChosenTeam(s.ownerOfTeams[0]);
+                                        setErrors([]);
+                                        toggleSup(editSup);
+                                      }}
+                                    /> :
+                                    <div className="d-flex">
+                                      {!chosenSupervisor ?
+                                        <div className="mr-auto d-flex">
+                                          <div className="mr-2">
+                                            <UserAvatar
+                                              avatar={supTest ?
+                                                supTest.avatar : ''}
+                                              name={supTest ?
+                                                supTest.name : ''}
                                             />
-                                            <span className="sr-only">
-                                              {__('search')}
-                                            </span>
-                                          </Button>
+                                          </div>
+                                          <div>
+                                            <div
+                                              className="font-weight-bold"
+                                            >
+                                              {supTest
+                                                ? supTest.name : 'None'}
+                                            </div>
+                                            <small className="text-muted">
+                                              {supTest ?
+                                                supTest.titleEn : 'No'}
+                                            </small>
+                                          </div>
+                                        </div> :
+                                        <div className="mr-auto d-flex">
+                                          <div className="mr-2">
+                                            <UserAvatar
+                                              avatar={chosenSupervisor ?
+                                                chosenSupervisor.avatar : ''}
+                                              name={chosenSupervisor ?
+                                                chosenSupervisor.name : ''}
+                                            />
+                                          </div>
+                                          <div>
+                                            <div
+                                              className="font-weight-bold"
+                                            >
+                                              {chosenSupervisor.name}
+                                            </div>
+                                            <small className="text-muted">
+                                              {chosenSupervisor.titleEn}
+                                            </small>
+                                          </div>
                                         </div>
+                                      }
+                                      <div>
+                                        <Button
+                                          onClick={toggleSup}
+                                          color="light"
+                                        >
+                                          <FontAwesomeIcon
+                                            icon={faSearch}
+                                          />
+                                          <span className="sr-only">
+                                            {__('search')}
+                                          </span>
+                                        </Button>
                                       </div>
-                                    }
-                                    <span className="text-danger">{this.state.errors}</span>
-                                  </Col>
-                                </Row>
-                              </ModalBody>
-                              <ModalFooter>
-                                <Button
-                                  color="primary"
-                                  onClick={() => {
-                                    if (this.state.chosenSupervisor.gcID !== this.props.id) {
-                                      this.toggle();
-                                      this.toggleConfirm();
-                                    } else {
-                                      this.setState({
-                                        errors: __('You cannot be your own supervisor. Please pick someone else.'),
-                                      });
-                                    }
-                                  }}
-                                >
-                                  {__('next')}
-                                </Button>
-                                <Button
-                                  onClick={() => {
-                                    this.setState({
-                                      chosenSupervisor: '',
-                                      chosenTeam: '',
-                                      modal: false,
-                                    });
-                                  }}
-                                >
-                                  {__('cancel')}
-                                </Button>
-                              </ModalFooter>
-                            </Modal>
-                            {/** TODO: Create an approval */}
-                            <Mutation
-                              mutation={EDIT_TEAM}
-                              refetchQueries={[{
-                                query: GET_TEAM,
-                                variables: { gcID: String(userInfo.gcID) },
-                              }]}
-                              onCompleted={() => {
-                                this.setState({
-                                  confirmModal: false,
-                                });
-                                document.getElementById('refetchAprvlSts').click();
-                              }}
-                            >
-                              {(modifyProfile, { loading }) =>
-                                this.state.confirmModal && (
-                                <LocalizedTransferConfirmation
-                                  loading={loading}
-                                  isOpen={this.state.confirmModal}
-                                  source={
-                                    (supTest !== null) ? supTest :
-                                    {
-                                       name: __('None'),
-                                       team: {
-                                         nameEn: teamTest.nameEn,
-                                         nameFr: teamTest.nameFr,
-                                       },
-                                    }}
-                                  transferredUser={userInfo}
-                                  title={__('Confirm supervisor transfer')}
-                                  secondaryButtonText={__('cancel')}
-                                  primaryButtonText={__('Confirm')}
-                                  bodyText={`${___(__('You are transferring %1$s %2$s %3$s %4$s.'), // eslint-disable-line
-                                            (supTest !== null) ? supTest.name : __('None'),
-                                            chosenSupervisor.name,
-                                            (localizer.lang == 'en_CA') ? teamTest.nameEn : teamTest.nameFr,
-                                            (localizer.lang == 'en_CA') ? chosenTeam.nameEn : chosenTeam.nameFr
-                                          )}`}
-                                  destination={
-                                    {
-                                      name: chosenSupervisor.name,
-                                      avatar: chosenSupervisor.avatar,
-                                      team: {
-                                        nameEn: chosenTeam.nameEn,
-                                        nameFr: chosenTeam.nameFr,
-                                        avatar: chosenTeam.avatar,
-                                      },
-                                    }
+                                    </div>
                                   }
-                                  primaryButtonClick={() => {
-                                    // TODO Send this to notifications
-                                    modifyProfile({
-                                      variables: {
-                                        gcID: String(userInfo.gcID),
-                                        data: {
-                                          team: {
-                                            id: chosenTeam.id,
-                                          },
+                                </Col>
+                              </Row>
+                            </ModalBody>
+                            <ModalFooter>
+                              <Button
+                                color="primary"
+                                onClick={() => {
+                                  if (chosenSupervisor.gcID !== props.id) {
+                                    toggle();
+                                    toggleConfirm();
+                                  } else {
+                                    errorHandler(__('You cannot be your own supervisor. Please pick someone else.'));
+                                  }
+                                }}
+                              >
+                                {__('next')}
+                              </Button>
+                              <Button
+                                onClick={() => {
+                                  setChosenTeam('');
+                                  setChosenTeam('');
+                                  setModal(false);
+                                }}
+                              >
+                                {__('cancel')}
+                              </Button>
+                            </ModalFooter>
+                          </Modal>
+                          {/** TODO: Create an approval */}
+                          <Mutation
+                            mutation={EDIT_TEAM}
+                            refetchQueries={[{
+                              query: GET_TEAM,
+                              variables: { gcID: String(userInfo.gcID) },
+                            }]}
+                            onError={(e) => {
+                              errorHandler(e);
+                            }}
+                            onCompleted={() => {
+                              setConfirmModal(false);
+                              document.getElementById('refetchAprvlSts').click();
+                            }}
+                          >
+                            {(modifyProfile, { loading }) =>
+                              confirmModal && (
+                              <LocalizedTransferConfirmation
+                                loading={loading}
+                                isOpen={confirmModal}
+                                source={
+                                  (supTest !== null) ? supTest :
+                                  {
+                                      name: __('None'),
+                                      team: {
+                                        nameEn: teamTest.nameEn,
+                                        nameFr: teamTest.nameFr,
+                                      },
+                                  }}
+                                transferredUser={userInfo}
+                                title={__('Confirm supervisor transfer')}
+                                secondaryButtonText={__('cancel')}
+                                primaryButtonText={__('Confirm')}
+                                bodyText={`${___(__('You are transferring %1$s %2$s %3$s %4$s.'), // eslint-disable-line
+                                          (supTest !== null) ? supTest.name : __('None'),
+                                          chosenSupervisor.name,
+                                          (localizer.lang == 'en_CA') ? teamTest.nameEn : teamTest.nameFr,
+                                          (localizer.lang == 'en_CA') ? chosenTeam.nameEn : chosenTeam.nameFr
+                                        )}`}
+                                destination={
+                                  {
+                                    name: chosenSupervisor.name,
+                                    avatar: chosenSupervisor.avatar,
+                                    team: {
+                                      nameEn: chosenTeam.nameEn,
+                                      nameFr: chosenTeam.nameFr,
+                                      avatar: chosenTeam.avatar,
+                                    },
+                                  }
+                                }
+                                primaryButtonClick={() => {
+                                  // TODO Send this to notifications
+                                  modifyProfile({
+                                    variables: {
+                                      gcID: String(userInfo.gcID),
+                                      data: {
+                                        team: {
+                                          id: chosenTeam.id,
                                         },
                                       },
-                                    });
-                                  }}
-                                  secondaryButtonClick={() => {
-                                    this.toggleConfirm();
-                                  }}
-                                />
-                              )}
-                            </Mutation>
-                          </div>
-                          : ''}
-                      </Col>
-                      <Col>
-                        <div className="font-weight-bold mb-2">
-                          {__('Team')}
+                                    },
+                                  });
+                                }}
+                                secondaryButtonClick={() => {
+                                  toggleConfirm();
+                                }}
+                              />
+                            )}
+                          </Mutation>
+                          <ErrorModal error={errors} />
                         </div>
-                        {teamTest ? teamTest.nameEn : 'None'}
-                      </Col>
-                    </Row>
-                    <hr />
-                    <div className="font-weight-bold">
-                      {__('people')}
-                    </div>
-                    <TeamDisplayMemberList
-                      members={memberTest}
-                    />
+                        : ''}
+                    </Col>
+                    <Col>
+                      <div className="font-weight-bold mb-2">
+                        {__('Team')}
+                      </div>
+                      {teamTest ? teamTest.nameEn : 'None'}
+                    </Col>
+                  </Row>
+                  <hr />
+                  <div className="font-weight-bold">
+                    {__('people')}
                   </div>
+                  <TeamDisplayMemberList
+                    members={memberTest}
+                  />
                 </div>
-              ) : (
-                <div>{__('Cannot find GCID')}</div>
-              )}
-            </div>
-          );
-      }}
-      </Query>
-    );
-  }
+              </div>
+            ) : (
+              <div>{__('Cannot find GCID')}</div>
+            )}
+          </div>
+        );
+    }}
+    </Query>
+  );
+
 }
 
 GQLTeamCard.defaultProps = {
