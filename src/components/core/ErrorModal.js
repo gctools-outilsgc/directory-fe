@@ -15,6 +15,20 @@ export const err = msg => [
   new Date(),
 ];
 
+const formatError = (error) => {
+  const textToRemove = [
+    new RegExp('Error: GraphQL error:', 'g'),
+  ];
+
+  let newError = error;
+
+  textToRemove.forEach((text) => {
+    newError = newError.replace(text, '');
+  });
+
+  return newError;
+};
+
 const ErrorModal = ({
   title,
   alertColour,
@@ -26,7 +40,7 @@ const ErrorModal = ({
   useEffect(() => {
     setOpen(!!error);
   }, [error, date]);
-  const message = (error) ? error.message : '';
+  const message = (error) ? formatError(error.message) : '';
   return (
     <Modal isOpen={open} toggle={toggle}>
       <ModalHeader>{title}</ModalHeader>
