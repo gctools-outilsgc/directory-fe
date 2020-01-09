@@ -74,7 +74,6 @@
     "react-redux": "6.0.1",
     "react-router-dom": "5.0.0",
     "react-router-prop-types": "1.0.4",
-    "react-scripts": "^3.2.0",
     "react-step-wizard": "5.1.0",
     "react-testing-library": "6.0.2",
     "reactstrap": "7.1.0",
