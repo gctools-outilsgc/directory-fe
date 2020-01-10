@@ -30,5 +30,3 @@ msgstr ""
 msgid "Address"
 msgstr "Work address"
 
-msgid "Profile of"
-msgstr "Profile of"

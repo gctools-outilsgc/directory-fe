@@ -9,7 +9,6 @@ import GlobalNav from '@gctools-components/global-nav';
 import Login from '@gctools-components/gc-login';
 import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
-import { Helmet } from 'react-helmet';
 
 import { loginAction, logoutAction, clearErrorAction } from '../store';
 
@@ -83,10 +82,6 @@ export class App extends Component {
     return (
       <BrowserRouter>
         <div>
-          <Helmet>
-            <meta property="og:type" content="website" />
-            <meta property="og:url" content="https://directory.da-an.ca" />
-          </Helmet>
           <Login
             oidcConfig={oidcConfig}
             onUserLoaded={doLogin}
@@ -122,25 +117,29 @@ export class App extends Component {
               this.setState({ sidebar: !this.state.sidebar });
               document.cookie = `oadw-gn-min=${this.state.sidebar};`;
             }}
-            currentApp={{
-              id: '3',
-              name: 'Directory',
-              home: '/',
-              logo: directoryIcon,
-            }}
+            currentApp={
+              {
+                id: '3',
+                name: 'Directory',
+                home: '/',
+                logo: directoryIcon,
+              }
+            }
           />
           <main
             id="gn-main"
-            className={
-              this.state.sidebar
-                ? 'directory-container-min'
-                : 'directory-container'
+            className={(this.state.sidebar) ?
+            'directory-container-min' : 'directory-container'
             }
           >
             <ProgressBanner />
             <Switch>
               <Fragment>
-                <Route exact path="/" component={Home} />
+                <Route
+                  exact
+                  path="/"
+                  component={Home}
+                />
                 <Route path="/p/:id" component={Profile} />
                 <Route path="/onboard" component={Onboard} />
               </Fragment>
