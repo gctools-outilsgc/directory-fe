@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[16],{1166:function(e,a){e.exports={domain:"messages",locale_data:{messages:{"":{domain:"messages",plural_forms:"nplurals=2; plural=(n != 1)",lang:"en_CA"},"Create a Team":[""],"What is a team":[""],Save:["Save edits"],Cancel:[""],"Edit team":[""],"English team Name":[""],"French team Name":[""],"English team description":[""],"French team description":[""],"Write a English description":[""],"Write a French description":[""]}}}}}]);
+//# sourceMappingURL=en_CA23.7ecf360b.chunk.js.map

@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[56],{1206:function(s,e){s.exports={domain:"messages",locale_data:{messages:{"":{domain:"messages",plural_forms:"nplurals=2; plural=(n > 1)",lang:"fr_CA"},Teams:["\xc9quipes"],your_teams:["\xc9quipes que je supervise"],"Org Chart":["Organigramme"],imin:["\xc9quipe"]}}}}}]);
+//# sourceMappingURL=fr_CA28.eb2bff12.chunk.js.map

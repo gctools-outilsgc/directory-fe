@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[58],{1181:function(s,e){s.exports={domain:"messages",locale_data:{messages:{"":{domain:"messages",plural_forms:"nplurals=2; plural=(n > 1)",lang:"fr_CA"},"Unable to perform search":[""],"%1$s avatar":["",null],"Search for a new supervisor":["Rechercher des superviseurs"]}}}}}]);
+//# sourceMappingURL=fr_CA3.d0525224.chunk.js.map

@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[35],{1178:function(s,a){s.exports={domain:"messages",locale_data:{messages:{"":{domain:"messages",plural_forms:"nplurals=2; plural=(n > 1)",lang:"fr_CA"},Department:["Minist\xe8re"]}}}}}]);
+//# sourceMappingURL=fr_CA0.9fc3ec19.chunk.js.map

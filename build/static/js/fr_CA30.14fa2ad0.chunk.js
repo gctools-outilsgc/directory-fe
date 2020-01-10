@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[59],{1208:function(e,r){e.exports={domain:"messages",locale_data:{messages:{"":{domain:"messages",plural_forms:"nplurals=2; plural=(n > 1)",lang:"fr_CA"},"Transfer a team member to a new Supervisor":["D\xe9placer le membre de l\u2019\xe9quipe sous un autre superviseur"],"Choose a new Supervisor for this team member":["Choisir un nouveau superviseur pour"],"%1$s avatar":["",null],Transfer:["Changer de superviseur"],Cancel:["Annuler"]}}}}}]);
+//# sourceMappingURL=fr_CA30.14fa2ad0.chunk.js.map

@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[22],{1172:function(a,e){a.exports={domain:"messages",locale_data:{messages:{"":{domain:"messages",plural_forms:"nplurals=2; plural=(n != 1)",lang:"en_CA"},"Default Team":[""],transfere_title:["You will transfer to a new Supervisor (& Team)"],transfere_description:["Explicit information about the transfer to include the Perso"],confirm:["Primary"],cancel:["Secondary"],avatar_of:["Avatar of "]}}}}}]);
+//# sourceMappingURL=en_CA29.bfd3b516.chunk.js.map

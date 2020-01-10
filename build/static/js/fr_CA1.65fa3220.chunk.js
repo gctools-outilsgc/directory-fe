@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[36],{1179:function(e,s){e.exports={domain:"messages",locale_data:{messages:{"":{domain:"messages",plural_forms:"nplurals=2; plural=(n > 1)",lang:"fr_CA"},title:["Ajouter des membres \xe0 l\u2019\xe9quipe"],bodyText:["Choisir au moins une personne qui se joindra \xe0 l\u2019\xe9quipe %1$s."],primaryButtonText:["Ajouter \xe0 l\u2019\xe9quipe"],secondaryButtonText:["Annuler"]}}}}}]);
+//# sourceMappingURL=fr_CA1.65fa3220.chunk.js.map

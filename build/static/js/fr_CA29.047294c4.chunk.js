@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[57],{1207:function(a,e){a.exports={domain:"messages",locale_data:{messages:{"":{domain:"messages",plural_forms:"nplurals=2; plural=(n > 1)",lang:"fr_CA"},"Default Team":[""],transfere_title:[""],transfere_description:[""],confirm:[""],cancel:[""],avatar_of:[""],transfere_description2:[""]}}}}}]);
+//# sourceMappingURL=fr_CA29.047294c4.chunk.js.map

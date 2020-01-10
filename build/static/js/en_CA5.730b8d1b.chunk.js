@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[30],{1148:function(n,e){n.exports={domain:"messages",locale_data:{messages:{"":{domain:"messages",plural_forms:"nplurals=2; plural=(n != 1)",lang:"en_CA"},mvpBanner:["GCprofile is currently an open proof of concept. The information in this application is randomly generated and does not represent actual users."]}}}}}]);
+//# sourceMappingURL=en_CA5.730b8d1b.chunk.js.map

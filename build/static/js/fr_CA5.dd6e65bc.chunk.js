@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[65],{1183:function(e,n){e.exports={domain:"messages",locale_data:{messages:{"":{domain:"messages",plural_forms:"nplurals=2; plural=(n > 1)",lang:"fr_CA"},mvpBanner:["GCprofil est actuellement une validation de principe ouverte. Les informations contenues dans cette application sont g\xe9n\xe9r\xe9es al\xe9atoirement et ne repr\xe9sentent pas des utilisateurs r\xe9els."]}}}}}]);
+//# sourceMappingURL=fr_CA5.dd6e65bc.chunk.js.map

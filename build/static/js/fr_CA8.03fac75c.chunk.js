@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[68],{1186:function(e,o){e.exports={domain:"messages",locale_data:{messages:{"":{domain:"messages",plural_forms:"nplurals=2; plural=(n > 1)",lang:"fr_CA"},"Fill out your profile.":["Remplissez votre profil!"],"View your new profile":["Acc\xe9dez \xe0 votre nouveau profil"]}}}}}]);
+//# sourceMappingURL=fr_CA8.03fac75c.chunk.js.map

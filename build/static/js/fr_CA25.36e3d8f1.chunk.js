@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[53],{1203:function(e,s){e.exports={domain:"messages",locale_data:{messages:{"":{domain:"messages",plural_forms:"nplurals=2; plural=(n > 1)",lang:"fr_CA"},"wants to make you their supervisor.":["vous a inscrit comme superviseur."],"is trying to change the following:":["a demand\xe9 de faire les modifications suivantes:"],"Title EN":["Titre EN"],"Title FR":["Titre FR"],Comments:[""],Approve:["Approuver"],Deny:["Refuser"]}}}}}]);
+//# sourceMappingURL=fr_CA25.36e3d8f1.chunk.js.map

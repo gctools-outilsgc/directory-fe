@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{1144:function(e,a){e.exports={domain:"messages",locale_data:{messages:{"":{domain:"messages",plural_forms:"nplurals=2; plural=(n != 1)",lang:"en_CA"},title:["Add team members"],bodyText:["Select at least one person to join the %1$s team."],primaryButtonText:["Add to team"],secondaryButtonText:["Cancel"]}}}}}]);
+//# sourceMappingURL=en_CA1.a4ad236f.chunk.js.map

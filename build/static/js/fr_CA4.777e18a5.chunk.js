@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[64],{1182:function(e,a){e.exports={domain:"messages",locale_data:{messages:{"":{domain:"messages",plural_forms:"nplurals=2; plural=(n > 1)",lang:"fr_CA"},Search:["Rechercher"],"Search Profiles":["Recherche sur Annuaire"]}}}}}]);
+//# sourceMappingURL=fr_CA4.777e18a5.chunk.js.map

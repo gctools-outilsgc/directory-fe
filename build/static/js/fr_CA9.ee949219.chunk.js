@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[69],{1187:function(s,a){s.exports={domain:"messages",locale_data:{messages:{"":{domain:"messages",plural_forms:"nplurals=2; plural=(n > 1)",lang:"fr_CA"},"Get started with the new Directory!":[""]}}}}}]);
+//# sourceMappingURL=fr_CA9.ee949219.chunk.js.map

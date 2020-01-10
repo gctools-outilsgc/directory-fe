@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[48],{1198:function(e,a){e.exports={domain:"messages",locale_data:{messages:{"":{domain:"messages",plural_forms:"nplurals=2; plural=(n != 1)",lang:"fr_CA"}," needs to approve your information change":[" doit approuver votre changement d\u2019information."],"Do you want to cancel this change request to":["Souhaitez-vous annuler cette demande de changement \xe0 "],"Cancel request":["Annuler la demande"],Back:["Retour"],"Are you sure?":["\xcates-vous sur?"]}}}}}]);
+//# sourceMappingURL=fr_CA20.9935c3c8.chunk.js.map
