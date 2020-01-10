@@ -30,3 +30,6 @@ msgstr "Cellulaire"
 msgid "Address"
 msgstr "Adresse au travail"
 
+msgid "Profile of"
+msgstr "Profil de"
+

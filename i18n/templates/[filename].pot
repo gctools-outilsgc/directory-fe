@@ -791,3 +791,7 @@ msgtr ""
 msgid "You cannot be your own supervisor. Please pick someone else."
 msgtr ""
 
+#: src/components/profile/profileCard/ProfileCardDisplay.js 24:22
+msgid "Profile of"
+msgtr ""
+
