@@ -64,7 +64,23 @@ export class EditTeamDialog extends Component {
           {__('Edit team')}
         </ModalHeader>
         <ModalBody>
-          <Form>
+          <Form
+            onSubmit={(e) => {
+              e.preventDefault();
+              const {
+                nameEn,
+                nameFr,
+                descriptionEn,
+                descriptionFr,
+              } = this.state;
+              onSave({
+                nameEn,
+                nameFr,
+                descriptionEn,
+                descriptionFr,
+              });
+            }}
+          >
             <FormBody>
               <FormGroup>
                 <Label for="nameEn">{__('English team Name')}</Label>
@@ -74,6 +90,7 @@ export class EditTeamDialog extends Component {
                   </InputGroupAddon>
                   <Input
                     id="nameEn"
+                    required
                     aria-label={__('English team Name')}
                     type="text"
                     value={this.state.nameEn || ''}
@@ -93,6 +110,7 @@ export class EditTeamDialog extends Component {
                   </InputGroupAddon>
                   <Input
                     id="nameFr"
+                    required
                     aria-label={__('French team Name')}
                     type="text"
                     value={this.state.nameFr || ''}
@@ -139,30 +157,22 @@ export class EditTeamDialog extends Component {
                 />
               </FormGroup>
             </FormBody>
+            <ModalFooter>
+              <Button
+                color="primary"
+                type="submit"
+              >
+                {__('Save')}
+              </Button>
+              <Button
+                color="secondary"
+                onClick={onCancel}
+              >
+                {__('Cancel')}
+              </Button>
+            </ModalFooter>
           </Form>
         </ModalBody>
-        <ModalFooter>
-          <Button
-            color="primary"
-            onClick={() => {
-              const {
-                nameEn,
-                nameFr,
-                descriptionEn,
-                descriptionFr,
-              } = this.state;
-              onSave({
-                nameEn,
-                nameFr,
-                descriptionEn,
-                descriptionFr,
-              });
-            }}
-          >
-            {__('Save')}
-          </Button>
-          <Button color="secondary" onClick={onCancel}>{__('Cancel')}</Button>
-        </ModalFooter>
       </Modal>
     );
   }
