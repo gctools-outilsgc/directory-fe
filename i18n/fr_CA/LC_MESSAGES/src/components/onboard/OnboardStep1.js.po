@@ -16,15 +16,15 @@ msgstr ""
 
 #: 15:11 src/components/onboard/OnboardStep1.js
 msgid "Welcome"
-msgstr "Bienvenue à GCprofil!"
+msgstr "Bienvenue à Annuaire!"
 
 #: 18:11 src/components/onboard/OnboardStep1.js
 msgid "Step1Sub1"
-msgstr ""
+msgstr "C'est quoi Annuaire?"
 
 #: 20:12 src/components/onboard/OnboardStep1.js
 msgid "welcome body"
-msgstr "GCprofil est une application en libre-service qui améliore la collaboration en fournissant des coordonnées exactes des utilisateurs et des renseignements organisationnels. Grâce à GCprofil, vous pouvez..."
+msgstr "Annuaire est une application en libre-service qui améliore la collaboration en fournissant des coordonnées exactes des utilisateurs et des renseignements organisationnels. Grâce à GCprofil, vous pouvez..."
 
 #: 22:15 src/components/onboard/OnboardStep1.js
 msgid "Step1List1"
@@ -44,7 +44,7 @@ msgstr "Créer des équipes et gérer les des membres de l’équipe (pour les s
 
 #: 28:11 src/components/onboard/OnboardStep1.js
 msgid "Step1Sub2"
-msgstr "Pourquoi utiliser GCprofil?"
+msgstr "Pourquoi utiliser Annuaire?"
 
 #: 30:12 src/components/onboard/OnboardStep1.js
 msgid "Step1Sub2Desc"

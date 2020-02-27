@@ -20,7 +20,7 @@ msgstr "Move team member supervisor"
 
 #: 200:17 src/components/profile/team/TransferToSupervisorDialog.js
 msgid "Choose a new Supervisor for this team member"
-msgstr "Select a new supervisor for"
+msgstr "Select supervisor"
 
 #: 205:23 src/components/profile/team/TransferToSupervisorDialog.js
 msgid "%1$s avatar"
@@ -30,10 +30,12 @@ msgstr[1] ""
 
 #: 97:13 src/components/profile/team/TransferToSupervisorDialog.js
 msgid "Transfer"
-msgstr "Select a new supervisor for"
+msgstr "Select supervisor"
 msgstr ""
 
 #: 103:13 src/components/profile/team/TransferToSupervisorDialog.js
 msgid "Cancel"
 msgstr ""
 
+msgid "Chosen Supervisor"
+msgstr "Chosen supervisor"

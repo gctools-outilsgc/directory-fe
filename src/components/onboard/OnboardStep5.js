@@ -60,7 +60,7 @@ export class OnboardStep5 extends Component {
         <Row>
           <Col>
             <div className="font-weight-bold mb-2">
-              Supervisor
+              {__('Supervisor')}
             </div>
             {editSup ?
               <SupervisorPicker
@@ -139,7 +139,7 @@ export class OnboardStep5 extends Component {
           <div className="ml-auto mt-3">
             <Button
               onClick={this.props.previousStep}
-              color="primary"
+              color="secondary"
             >
               {__('Back')}
             </Button>

@@ -36,3 +36,5 @@ msgstr "Changer de superviseur"
 msgid "Cancel"
 msgstr "Annuler"
 
+msgid "Chosen Supervisor"
+msgstr "Gestionnaire choisi"

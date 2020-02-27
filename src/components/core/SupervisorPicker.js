@@ -6,6 +6,9 @@ import { Query } from 'react-apollo';
 
 import { Input, Button } from 'reactstrap';
 
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
+
 class SupervisorPicker extends React.Component {
   constructor(props) {
     super(props);
@@ -102,7 +105,7 @@ class SupervisorPicker extends React.Component {
             <div className="search-form search-form-round">
               <label className="w-100">
                 <span className="font-weight-bold">
-                  Search
+                  {__('Search')}
                 </span>
                 <Input
                   type="text"
@@ -123,4 +126,4 @@ SupervisorPicker.propTypes = {
   onResultSelect: PropTypes.func.isRequired,
 };
 
-export default SupervisorPicker;
+export default LocalizedComponent(SupervisorPicker);
