@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import { Query, Mutation } from 'react-apollo';
@@ -22,6 +22,17 @@ const GQLYourTeamApprovalStatus = (props) => {
   const {
     gcID,
   } = props;
+  useEffect(() => {
+    const cookies = decodeURIComponent(document.cookie).split(';');
+    cookies
+      .filter(c => c.trim().indexOf('lang=') === 0)
+      .forEach((c) => {
+        const lang = c.split('=', 2)[1];
+        if (localizer.hasLanguage(lang)) {
+          localizer.setLanguage(lang);
+        }
+      });
+  });
   const [modalOpen, setModalOpen] = useState(false);
   return (
     <Query
