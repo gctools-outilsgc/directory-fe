@@ -117,15 +117,15 @@ msgstr ""
 
 #: 308:33 src/components/profile/team/GQLYourTeamsTab.js
 msgid "Accept"
-msgstr ""
+msgstr "Confirmer"
 
 #: 309:35 src/components/profile/team/GQLYourTeamsTab.js
 msgid "Back"
-msgstr ""
+msgstr "Retour"
 
 #: 302:21 src/components/profile/team/GQLYourTeamsTab.js
 msgid "Transfer this team to a new Supervisor"
-msgstr ""
+msgstr "Transférer cette équipe à un nouveau superviseur"
 
 #: 263:9 src/components/profile/team/GQLYourTeamsTab.js
 msgid "Transfer Team"
