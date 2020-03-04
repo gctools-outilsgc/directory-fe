@@ -513,59 +513,67 @@ class GQLYouTeamsTab extends React.Component {
           return (
             <RowContainer>
               <Row className="mt-3 your-teams-container">
-                <Col className="pr-0">
-                  <div className="border-bottom d-flex p-3">
-                    <div className="mr-auto font-weight-bold">
-                      {__('team')}
-                    </div>
-                    <div>
-                      <Button
-                        size="small"
-                        onClick={() => {
-                          this.setState({ createDialogOpen: true });
-                        }}
+                {(userInfo.team.organization) ?
+                  <React.Fragment>
+                    <Col className="pr-0">
+                      <div className="border-bottom d-flex p-3">
+                        <div className="mr-auto font-weight-bold">
+                          {__('team')}
+                        </div>
+                        <div>
+                          <Button
+                            size="small"
+                            onClick={() => {
+                              this.setState({ createDialogOpen: true });
+                            }}
+                          >
+                            <FontAwesomeIcon icon={faPlus} />
+                            <span className="sr-only">{__('Add team')}</span>
+                          </Button>
+                          <GQLCreateTeamDialog
+                            isOpen={this.state.createDialogOpen}
+                            orgId={userInfo.team.organization.id}
+                            gcID={userInfo.gcID}
+                            onSave={() => {
+                              this.setState({ createDialogOpen: false });
+                            }}
+                            onCancel={() => {
+                              this.setState({ createDialogOpen: false });
+                            }}
+                          />
+                        </div>
+                      </div>
+                      <div className="member-holder">
+                        <Nav vertical>
+                          {teamList}
+                        </Nav>
+                      </div>
+                    </Col>
+                    <Col className="pl-0 d-flex">
+                      <TabContent
+                        activeTab={currentTab}
+                        className="d-flex w-100"
                       >
-                        <FontAwesomeIcon icon={faPlus} />
-                        <span className="sr-only">{__('Add team')}</span>
-                      </Button>
-                      <GQLCreateTeamDialog
-                        isOpen={this.state.createDialogOpen}
-                        orgId={userInfo.team.organization.id}
-                        gcID={userInfo.gcID}
-                        onSave={() => {
-                          this.setState({ createDialogOpen: false });
-                        }}
-                        onCancel={() => {
-                          this.setState({ createDialogOpen: false });
-                        }}
-                      />
-                    </div>
+                        {tabPanel}
+                      </TabContent>
+                    </Col>
+                    <GQLEditTeamDialog
+                      isOpen={this.state.editDialogOpen}
+                      onSave={() => {
+                        this.setState({ editDialogOpen: false });
+                      }}
+                      onCancel={() => {
+                        this.setState({ editDialogOpen: false });
+                      }}
+                      team={this.state.editTeam}
+                      gcID={userInfo.gcID}
+                    />
+                  </React.Fragment>
+                :
+                  <div>
+                    You have No Org. Please pick an Org.
                   </div>
-                  <div className="member-holder">
-                    <Nav vertical>
-                      {teamList}
-                    </Nav>
-                  </div>
-                </Col>
-                <Col className="pl-0 d-flex">
-                  <TabContent
-                    activeTab={currentTab}
-                    className="d-flex w-100"
-                  >
-                    {tabPanel}
-                  </TabContent>
-                </Col>
-                <GQLEditTeamDialog
-                  isOpen={this.state.editDialogOpen}
-                  onSave={() => {
-                    this.setState({ editDialogOpen: false });
-                  }}
-                  onCancel={() => {
-                    this.setState({ editDialogOpen: false });
-                  }}
-                  team={this.state.editTeam}
-                  gcID={userInfo.gcID}
-                />
+                }
               </Row>
             </RowContainer>
           );
