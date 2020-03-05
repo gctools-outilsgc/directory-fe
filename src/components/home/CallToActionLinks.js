@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
@@ -23,6 +23,18 @@ const CallToActionLinks = (props) => {
   const {
     myGcID,
   } = props;
+
+  useEffect(() => {
+    const cookies = decodeURIComponent(document.cookie).split(';');
+    cookies
+      .filter(c => c.trim().indexOf('lang=') === 0)
+      .forEach((c) => {
+        const lang = c.split('=', 2)[1];
+        if (localizer.hasLanguage(lang)) {
+          localizer.setLanguage(lang);
+        }
+      });
+  });
 
   return (
     <div>
