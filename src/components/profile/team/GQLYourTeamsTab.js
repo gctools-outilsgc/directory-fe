@@ -513,7 +513,7 @@ class GQLYouTeamsTab extends React.Component {
           return (
             <RowContainer>
               <Row className="mt-3 your-teams-container">
-                {(userInfo.team.organization) ?
+                {(userInfo.team) ?
                   <React.Fragment>
                     <Col className="pr-0">
                       <div className="border-bottom d-flex p-3">
