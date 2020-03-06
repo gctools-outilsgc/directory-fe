@@ -305,8 +305,8 @@ function GQLTeamCard(props) {
                                   {
                                       name: __('None'),
                                       team: {
-                                        nameEn: teamTest.nameEn,
-                                        nameFr: teamTest.nameFr,
+                                        nameEn: teamTest ? teamTest.nameEn : 'N/A',
+                                        nameFr: teamTest ? teamTest.nameFr : 'N/A',
                                       },
                                   }}
                                 transferredUser={userInfo}
@@ -316,7 +316,7 @@ function GQLTeamCard(props) {
                                 bodyText={`${___(__('You are transferring %1$s %2$s %3$s %4$s.'), // eslint-disable-line
                                           (supTest !== null) ? supTest.name : __('None'),
                                           chosenSupervisor.name,
-                                          (localizer.lang == 'en_CA') ? teamTest.nameEn : teamTest.nameFr,
+                                          (localizer.lang == 'en_CA') ? (teamTest) ? teamTest.nameEn : 'N/A' : (teamTest) ? teamTest.nameFr : 'N/A',
                                           (localizer.lang == 'en_CA') ? chosenTeam.nameEn : chosenTeam.nameFr
                                         )}`}
                                 destination={
@@ -357,7 +357,7 @@ function GQLTeamCard(props) {
                       <div className="font-weight-bold mb-2">
                         {__('Team')}
                       </div>
-                      {teamTest ? teamTest.nameEn : 'None'}
+                      {teamTest ? teamTest.nameEn : 'N/A'}
                     </Col>
                   </Row>
                   <hr />
