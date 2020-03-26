@@ -20,9 +20,6 @@ COPY . .
 
 # Bundle app source
 
-COPY ./docker/start.sh /usr/src/app
-RUN chmod +x start.sh
-
 EXPOSE 3000
 
-CMD [ "./start.sh" ]
+CMD [ "yarn", "start" ]
