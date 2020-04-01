@@ -40,7 +40,7 @@ const authToken = () => {
 
 const client = new ApolloClient({
   link: createUploadLink({
-    uri: 'https://paas.beta.gccollab.ca/graphql',
+    uri: process.env.GRAPHQL_PROFILE,
     headers: {
       authorization: authToken(),
     },
