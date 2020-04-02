@@ -1,0 +1,30 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: directory-fe
+  namespace: directory-fe
+spec:
+  replicas: 1 # tells deployment to run 1 pod matching the template
+  template: # create pods using pod definition in this template
+    metadata:
+      labels:
+        app: directory-fe
+    spec:
+      containers:
+      - name: directory-fe
+        image: directory-fe:latest
+        ports:
+        - containerPort: 3000
+        env:
+        - name: "NODE_ENV"
+          value: "production"
+        - name: "client_id": 
+          valueFrom:
+            secretKeyRef:
+              name: directory-fe-env
+              key: client_id
+        - name: "client_secret": 
+          valueFrom:
+            secretKeyRef:
+              name: directory-fe-env
+              key: client_secret
