@@ -1,11 +1,14 @@
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: directory-fe
   namespace: directory-fe
 spec:
-  replicas: 1 # tells deployment to run 1 pod matching the template
-  template: # create pods using pod definition in this template
+  replicas: 1 
+  selector:
+    matchLabels:
+      app: directory-fe
+  template: 
     metadata:
       labels:
         app: directory-fe
