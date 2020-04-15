@@ -15,19 +15,17 @@ spec:
     spec:
       containers:
       - name: directory-fe
-        image: directory-fe:latest
+        image: digitalcollab/directory:latest
         ports:
         - containerPort: 3000
         env:
         - name: "NODE_ENV"
           value: "production"
-        - name: "client_id": 
-          valueFrom:
-            secretKeyRef:
-              name: directory-fe-env
-              key: client_id
-        - name: "client_secret": 
-          valueFrom:
-            secretKeyRef:
-              name: directory-fe-env
-              key: client_secret
+        volumeMounts:
+        - mountPath: /usr/src/app/src/oidcConfig.dev.js
+          subPath: oidcConfig.dev.js
+          name: oidc-config
+      volumes:
+      - name: oidc-config
+        secret:
+          secretName: directory-fe
