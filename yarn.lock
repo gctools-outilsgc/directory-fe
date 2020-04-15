@@ -1361,9 +1361,10 @@
     save "^2.3.3"
     webpack "^4.31.0"
 
-"@gctools-components/i18n-translation-webpack-plugin@2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@gctools-components/i18n-translation-webpack-plugin/-/i18n-translation-webpack-plugin-2.0.1.tgz#dc39f39a5082e1bf57e8e81626f2dcba706f78ac"
+"@gctools-components/i18n-translation-webpack-plugin@2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@gctools-components/i18n-translation-webpack-plugin/-/i18n-translation-webpack-plugin-2.0.2.tgz#92067745972797505ebb6be0135bb45a7d4c4cc5"
+  integrity sha512-+wzmPefXuNgsdJDwbjDlEiw53/dsNTZmzBB9PZu7jk2JcLfO//3hXHaYYsjz7B/AB0RZ/C2SITBPYK+JzbmG9g==
   dependencies:
     es6-promise "^4.1.1"
     es6-promises "~1.0.10"
@@ -1374,7 +1375,7 @@
     md5-file "~3.2.3"
     object-assign "^4.1.1"
     po-loader "~0.4.1"
-    virtualenv "git+https://github.com/lucbelliveau/node-virtualenv.git"
+    virtualenv "git+https://github.com/phanoix/node-virtualenv.git"
     webpack "^4.16.1"
 
 "@gctools-components/react-i18n-translation-webpack@1.1.4":
