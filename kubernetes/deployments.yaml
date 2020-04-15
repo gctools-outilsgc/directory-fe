@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: directory-fe
+  namespace: directory-fe
+spec:
+  replicas: 1 
+  selector:
+    matchLabels:
+      app: directory-fe
+  template: 
+    metadata:
+      labels:
+        app: directory-fe
+    spec:
+      containers:
+      - name: directory-fe
+        image: digitalcollab/directory:latest
+        ports:
+        - containerPort: 3000
+        env:
+        - name: "NODE_ENV"
+          value: "production"
+        volumeMounts:
+        - mountPath: /usr/src/app/src/oidcConfig.dev.js
+          subPath: oidcConfig.dev.js
+          name: oidc-config
+      volumes:
+      - name: oidc-config
+        secret:
+          secretName: directory-fe
