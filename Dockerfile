@@ -1,4 +1,4 @@
-FROM node:8
+FROM node:13
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -10,8 +10,9 @@ RUN apt-get update && apt-get -y upgrade
 # where available (npm@5+)
 
 COPY package*.json ./
+COPY yarn.lock ./
 
-RUN npm install
+RUN yarn install
 
 # If you are building your code for production
 # RUN npm install --only=production
