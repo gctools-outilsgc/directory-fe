@@ -120,7 +120,7 @@ function GQLTeamCard(props) {
                         <div className="d-flex">
                           <UserAvatar
                             avatar={supTest ? supTest.avatar : ''}
-                            name={supTest ? supTest.name : ''}
+                            name=""
                           />
                           <div className="ml-2">
                             <div className="text-dark font-weight-bold">

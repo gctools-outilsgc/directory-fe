@@ -14,7 +14,7 @@ const TeamDisplayMemberList = (props) => {
           <div className="d-flex">
             <UserAvatar
               avatar={p ? p.avatar : ''}
-              name={p ? p.name : ''}
+              name=""
             />
             <div className="ml-2 font-weight-bold">
               <div className="text-dark">
