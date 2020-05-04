@@ -10,33 +10,28 @@ const TeamDisplayMemberList = (props) => {
   const list = (members) ?
     members.map(p => (
       <Col sm="4" className="mb-3" key={p.gcID}>
-        <div className="d-flex">
-          <UserAvatar
-            avatar={p ? p.avatar : ''}
-            name={p ? p.name : ''}
-            url={p ? p.gcID : ''}
-          />
-          <div className="ml-2 font-weight-bold">
-            <div>
-              <a
-                href={p ?
-                  p.gcID : ''}
-                className="text-dark"
-              >
+        <a href={p ? p.gcID : ''} >
+          <div className="d-flex">
+            <UserAvatar
+              avatar={p ? p.avatar : ''}
+              name={p ? p.name : ''}
+            />
+            <div className="ml-2 font-weight-bold">
+              <div className="text-dark">
                 {p ? p.name : 'None'}
-              </a>
+              </div>
+              {(localizer.lang === 'en_CA') ? (
+                <small className="text-muted">
+                  {p ? p.titleEn : ''}
+                </small>
+              ) : (
+                <small className="text-muted">
+                  {p ? p.titleFr : ''}
+                </small>
+              )}
             </div>
-            {(localizer.lang === 'en_CA') ? (
-              <small className="text-muted">
-                {p ? p.titleEn : ''}
-              </small>
-            ) : (
-              <small className="text-muted">
-                {p ? p.titleFr : ''}
-              </small>
-            )}
           </div>
-        </div>
+        </a>
       </Col>
     )) : 'No Team';
   return (

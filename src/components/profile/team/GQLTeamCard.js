@@ -116,27 +116,22 @@ function GQLTeamCard(props) {
                       <div className="font-weight-bold mb-2">
                         {__('Supervisor')}
                       </div>
-                      <div className="d-flex">
-                        <UserAvatar
-                          avatar={supTest ? supTest.avatar : ''}
-                          name={supTest ? supTest.name : ''}
-                          url={supTest ? supTest.gcID : ''}
-                        />
-                        <div className="ml-2">
-                          <div>
-                            <a
-                              href={supTest ?
-                                supTest.gcID : ''}
-                              className="text-dark font-weight-bold"
-                            >
+                      <a href={supTest ? supTest.gcID : ''} >
+                        <div className="d-flex">
+                          <UserAvatar
+                            avatar={supTest ? supTest.avatar : ''}
+                            name={supTest ? supTest.name : ''}
+                          />
+                          <div className="ml-2">
+                            <div className="text-dark font-weight-bold">
                               {supTest ? supTest.name : 'N/A'}
-                            </a>
+                            </div>
+                            <small className="text-muted">
+                              {supTest ? supTest.titleEn : 'N/A'}
+                            </small>
                           </div>
-                          <small className="text-muted">
-                            {supTest ? supTest.titleEn : 'N/A'}
-                          </small>
                         </div>
-                      </div>
+                      </a>
                       {canEdit ?
                         <div className="ml-5">
                           <Button
