@@ -14,7 +14,7 @@ const TeamDisplayMemberList = (props) => {
           <UserAvatar
             avatar={p ? p.avatar : ''}
             name={p ? p.name : ''}
-            gcID={p ? p.gcID : ''}
+            url={p ? p.gcID : ''}
           />
           <div className="ml-2 font-weight-bold">
             <div>

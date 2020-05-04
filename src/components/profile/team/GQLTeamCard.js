@@ -120,7 +120,7 @@ function GQLTeamCard(props) {
                         <UserAvatar
                           avatar={supTest ? supTest.avatar : ''}
                           name={supTest ? supTest.name : ''}
-                          gcID={supTest ? supTest.gcID : ''}
+                          url={supTest ? supTest.gcID : ''}
                         />
                         <div className="ml-2">
                           <div>

@@ -23,6 +23,7 @@ export const UserAvatar = (props) => {
     avatar: profileAvatar,
     gcID,
     size,
+    url,
   } = props;
   const canEdit = edit && (gcID === myGcID);
   const avatar = profileAvatar || GenericAvatar;
@@ -31,7 +32,7 @@ export const UserAvatar = (props) => {
     <div>
       <div className="query">
         <div className="d-flex justify-content-center">
-          <a href={gcID}>
+          <a href={url}>
             <img
               className={`avatar rounded-circle avatar-${size}`}
               src={avatar}
@@ -83,6 +84,7 @@ UserAvatar.defaultProps = {
   myGcID: '',
   avatar: '',
   size: '',
+  url: null,
 };
 
 UserAvatar.propTypes = {
@@ -92,6 +94,7 @@ UserAvatar.propTypes = {
   avatar: PropTypes.string,
   myGcID: PropTypes.string,
   size: PropTypes.string,
+  url: PropTypes.string,
 };
 
 export default LocalizedComponent(UserAvatar);
