@@ -31,11 +31,13 @@ export const UserAvatar = (props) => {
     <div>
       <div className="query">
         <div className="d-flex justify-content-center">
-          <img
-            className={`avatar rounded-circle avatar-${size}`}
-            src={avatar}
-            alt={name}
-          />
+          <a href={gcID}>
+            <img
+              className={`avatar rounded-circle avatar-${size}`}
+              src={avatar}
+              alt={name}
+            />
+          </a>
         </div>
         {canEdit && (
         <UploadContainer className="mutate">
