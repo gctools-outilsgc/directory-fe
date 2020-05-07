@@ -13,7 +13,7 @@ const InfoText = (props) => {
     </p>
   ));
   return (
-    <div className="m-2 mb-4">
+    <div className="m-2 mb-4 w-100">
       <div className="text-center m-4">
         <h2>{heading}</h2>
       </div>
