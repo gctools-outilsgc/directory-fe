@@ -5,6 +5,7 @@ import LocalizedComponent
 
 import { Query } from 'react-apollo';
 import { connect } from 'react-redux';
+import { Helmet } from 'react-helmet';
 
 import { Card, CardBody, CardTitle } from 'reactstrap';
 
@@ -65,9 +66,13 @@ export const GQLProfileCard = (props) => {
           <Card style={style.card}>
             {userInfo ? (
               <div>
+                <Helmet>
+                  <title>{userInfo.name} - {__('Directory')}</title>
+                </Helmet>
+                <h1 className="sr-only">{userInfo.name}</h1>
                 <CardBody>
                   <CardTitle className="profile-card-title d-flex">
-                    <div className="mr-auto">{__('Profile')}</div>
+                    <h2 className="mr-auto">{__('Profile')}</h2>
                     {canEdit ?
                       <LocalizedEditProfile
                         profile={userInfo}
@@ -87,7 +92,7 @@ export const GQLProfileCard = (props) => {
             ) : (<CardBody>{__('Cannot find GCID')}</CardBody>)}
           </Card>
         );
-    }}
+      }}
     </Query>
   );
 };
