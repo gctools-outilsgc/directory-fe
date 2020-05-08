@@ -147,7 +147,15 @@ animation: LoadingText 2s ease infinite;
   font-weight: 500;
   border-bottom: 1px solid black;
   margin-bottom: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 6px;
+}
+
+.profile-card-title > h2 {
+  font-size: 1.5rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  margin-bottom: 0;
+  line-height: 1.6;
 }
 
 .profile-name {

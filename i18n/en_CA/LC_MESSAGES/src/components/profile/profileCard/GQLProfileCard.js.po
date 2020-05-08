@@ -18,6 +18,9 @@ msgstr ""
 msgid "Profile"
 msgstr ""
 
+msgid "Directory"
+msgstr ""
+
 #: 71:28 src/components/profile/profileCard/GQLProfileCard.js
 msgid "Cannot find GCID"
 msgstr ""

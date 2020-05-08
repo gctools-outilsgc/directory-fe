@@ -69,7 +69,7 @@ class TeamCardHolder extends React.Component {
       <Card style={style.card}>
         <CardBody>
           <CardTitle className="profile-card-title">
-            {__('Teams')}
+            <h2>{__('Teams')}</h2>
           </CardTitle>
           <div>
             <Nav tabs>
@@ -96,8 +96,8 @@ class TeamCardHolder extends React.Component {
                     {__('your_teams')}
                   </NavLink>
                 </NavItem>
-              :
-              ''
+                :
+                ''
               }
               {canEdit ?
                 <NavItem>
@@ -111,8 +111,8 @@ class TeamCardHolder extends React.Component {
                     {__('Approvals')}
                   </NavLink>
                 </NavItem>
-              :
-              ''
+                :
+                ''
               }
               <NavItem>
                 <NavLink
@@ -138,11 +138,11 @@ class TeamCardHolder extends React.Component {
               }
               <TabPane tabId="3">
                 {(this.state.activeTab === '3' &&
-                <LocalizedGQLTeamOrgChart
-                  visible={this.state.activeTab === '3'}
-                  id={id}
-                />
-              )}
+                  <LocalizedGQLTeamOrgChart
+                    visible={this.state.activeTab === '3'}
+                    id={id}
+                  />
+                )}
               </TabPane>
               {canEdit ?
                 <TabPane tabId="4">
