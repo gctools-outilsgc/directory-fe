@@ -9,6 +9,8 @@ import { Input, Button } from 'reactstrap';
 import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
 
+import GenericAvatar from '../profile/OrgChart/Card/img/user.gif';
+
 class SupervisorPicker extends React.Component {
   constructor(props) {
     super(props);
@@ -79,11 +81,9 @@ class SupervisorPicker extends React.Component {
                     <img
                       className="avatar rounded-circle"
                       src={
-                        a.avatar
+                        a.avatar ? a.avatar : GenericAvatar
                       }
-                      alt={
-                        a.name
-                      }
+                      alt=""
                     />
                     <div className="ml-2">
                       <div
@@ -98,7 +98,7 @@ class SupervisorPicker extends React.Component {
                   </div>
                 </Button>
               </li>
-              )) : [];
+            )) : [];
           const styleClasses = (!data) ?
             'search-results-none' : 'list-unstyled search-results';
           return (
