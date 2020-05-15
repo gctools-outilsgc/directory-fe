@@ -1,4 +1,4 @@
-version: '3'
+version: '3.3'
 services:
 # Directory-fe
   directory-fe:
@@ -21,15 +21,15 @@ services:
     environment:
       NODE_ENV: "production"
       PRISMA_API_ENDPOINT: 'profileprisma'
-      client_id: "123123"
-      client_secret: "3iu12yg3iu21yg3ui12"
+      PRISMA_HOST: "profileprisma"
+      client_id: "1"
+      client_secret: "123"
       account_url: "https://account_web:8080"
       scope: "token_introspection"
+      MQ_HOST: "rabbitMQ"
       MQ_USER: "rebbit"
       MQ_PASS: "rebbit"
       ELASTIC_HOST: "http://es:9200"
-      MQ_HOST: "rabbitMQ"
-      PRISMA_HOST: "profileprisma"
       IMAGE_URL: "http://localhost:8007/backend.php"
     ports:
     - "4000:4000"
@@ -57,12 +57,20 @@ services:
     environment:
       POSTGRES_USER: prisma
       POSTGRES_PASSWORD: prisma
+
 # notification service
   notification_apollo:
     image: digitalcollab/notifications-apollo:latest
     environment: 
       NODE_ENV: "production"
-      PRISMA_API_ENDPOINT: 'prisma'
+      PRISMA_API_ENDPOINT: 'notification_prisma'
+      PRISMA_HOST: 'notification_prisma'
+      account_url: 'http://localhost:8080'
+      client_id: '2'
+      client_secret: '456'
+      MQ_HOST: 'rabbitMQ'
+      MQ_USER: 'rebbit'
+      MQ_PASS: 'rebbit'
     ports:
     - "4001:4000"
     depends_on: 
@@ -131,14 +139,17 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
   account_web:
-    image: phanoix/concierge:latest
+    image: phanoix/concierge:profile_integration
     environment:
       - CONCIERGE_ALLOWED_HOSTS=['*']
       - CONCIERGE_SECRET_KEY=qWxPJrZCLeHZraNTWjEKHdJJxJyho8
       - CONCIERGE_DATABASE_URL=postgres://postgres:postgres@account_db:5432/postgres
       - SEND_SUSPICIOUS_BEHAVIOR_WARNINGS=True
+    volumes:
+      - ./account-init:/app/docker
     ports:
       - "8080:8000"
+    command: sh /app/docker/start.sh
     depends_on:
       - account_db
     restart: always
