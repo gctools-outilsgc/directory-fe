@@ -1,0 +1,158 @@
+version: '3.3'
+services:
+# Directory-fe
+  directory-fe:
+    #build: ../.
+    image: digitalcollab/directory:latest
+    ports:
+      - '8008:3000'
+
+# profile service
+  profile_image:
+    image: digitalcollab/profile-image:latest
+    environment:
+      - TITLE=OADW-Image-Server
+      - DOMAIN=http://localhost
+      - LOWPROFILE=True
+    ports:
+    - "8007:80"
+  profile_apollo:
+    image: digitalcollab/profile-apollo:latest
+    environment:
+      NODE_ENV: "production"
+      PRISMA_API_ENDPOINT: 'profileprisma'
+      PRISMA_HOST: "profileprisma"
+      client_id: "1"
+      client_secret: "123"
+      account_url: "https://account_web:8080"
+      scope: "token_introspection"
+      MQ_HOST: "rabbitMQ"
+      MQ_USER: "rebbit"
+      MQ_PASS: "rebbit"
+      ELASTIC_HOST: "http://es:9200"
+      IMAGE_URL: "http://localhost:8007/backend.php"
+    ports:
+    - "4000:4000"
+    depends_on: 
+      - profileprisma
+  profileprisma:
+    image: prismagraphql/prisma:1.26
+    environment:
+      PRISMA_CONFIG: |
+        port: 4466
+        # uncomment the next line and provide the env var PRISMA_MANAGEMENT_API_SECRET=my-secret to activate cluster security
+        # managementApiSecret: thisissupersecret
+        databases:
+          default:
+            connector: postgres
+            host: profile_postgres
+            port: 5432
+            user: prisma
+            password: prisma
+            migrations: true
+    depends_on:
+      - profile_postgres
+  profile_postgres:
+    image: postgres:10.6
+    environment:
+      POSTGRES_USER: prisma
+      POSTGRES_PASSWORD: prisma
+
+# notification service
+  notification_apollo:
+    image: digitalcollab/notifications-apollo:latest
+    environment: 
+      NODE_ENV: "production"
+      PRISMA_API_ENDPOINT: 'notification_prisma'
+      PRISMA_HOST: 'notification_prisma'
+      account_url: 'http://localhost:8080'
+      client_id: '2'
+      client_secret: '456'
+      MQ_HOST: 'rabbitMQ'
+      MQ_USER: 'rebbit'
+      MQ_PASS: 'rebbit'
+    ports:
+    - "4001:4000"
+    depends_on: 
+      - notification_prisma
+  notification_prisma:
+    image: prismagraphql/prisma:1.26
+    environment:
+      PRISMA_CONFIG: |
+        port: 4466
+        databases:
+          default:
+            connector: postgres
+            host: notification_postgres
+            port: 5432
+            user: prisma
+            password: prisma
+            migrations: true
+    depends_on:
+      - notification_postgres
+  notification_postgres:
+    image: postgres:10.6
+    environment:
+      POSTGRES_USER: prisma
+      POSTGRES_PASSWORD: prisma
+
+# Search
+  es:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.6.2
+    environment:
+      - discovery.type=single-node
+    ports:
+      - 9200:9200
+    restart: always
+  ls:
+    image: docker.elastic.co/logstash/logstash:7.6.2
+    restart: always
+    ports:
+      - 9600:9600
+    environment:
+      - XPACK_MONITORING_ENABLED=false
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.6.2
+    restart: always
+    ports:
+      - 5601:5601
+    environment:
+      - SERVER_NAME=kibana
+      - ELASTICSEARCH_HOSTS=http://es:9200
+# RabbitMQ
+  rabbitMQ:
+    image: rabbitmq:3-management-alpine
+    restart: always
+    environment:
+      RABBITMQ_ERLANG_COOKIE: "IASHFOIASUHDFI"
+      RABBITMQ_DEFAULT_VHOST: "/"
+      RABBITMQ_DEFAULT_USER: "rebbit"
+      RABBITMQ_DEFAULT_PASS: "rebbit"
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+# Account
+  account_db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+  account_web:
+    image: phanoix/concierge:profile_integration
+    environment:
+      - CONCIERGE_ALLOWED_HOSTS=['*']
+      - CONCIERGE_SECRET_KEY=qWxPJrZCLeHZraNTWjEKHdJJxJyho8
+      - CONCIERGE_DATABASE_URL=postgres://postgres:postgres@account_db:5432/postgres
+      - SEND_SUSPICIOUS_BEHAVIOR_WARNINGS=True
+    volumes:
+      - ./account-init:/app/docker
+    ports:
+      - "8080:8000"
+    command: sh /app/docker/start.sh
+    depends_on:
+      - account_db
+    restart: always
+  redis:
+    image: redis
+    restart: always
