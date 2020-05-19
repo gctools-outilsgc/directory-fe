@@ -70,7 +70,7 @@ export class App extends Component {
     };
 
     const doLogout = () => {
-      this.setState({ name: false });
+      this.setState({ name: false, user: null });
       onLogout();
     };
 
@@ -129,7 +129,7 @@ export class App extends Component {
           <main
             id="gn-main"
             className={(this.state.sidebar) ?
-            'directory-container-min' : 'directory-container'
+              'directory-container-min' : 'directory-container'
             }
           >
             <ProgressBanner />
@@ -152,8 +152,8 @@ export class App extends Component {
 }
 
 App.defaultProps = {
-  onLogin: () => {},
-  onLogout: () => {},
+  onLogin: () => { },
+  onLogout: () => { },
 };
 
 App.propTypes = {
