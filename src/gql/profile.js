@@ -173,6 +173,50 @@ query getTeam($gcID: ID!) {
 ${FullTeamFragment}
 `;
 
+export const GET_TEAM_NAME = gql`
+query getTeamName($gcID: ID!) {
+  profiles(gcID: $gcID) {
+    gcID
+    name
+    team {
+      id
+      nameEn
+      nameFr
+      organization {
+        id,
+        nameEn,
+        nameFr
+      }
+      owner {
+        gcID
+        name
+        avatar
+        titleEn
+        titleFr
+      }
+    }
+  }
+}
+`;
+
+export const GET_TEAM_MEMBERS = gql`
+query getTeamMembers($gcID: ID!) {
+  profiles(gcID: $gcID) {
+    gcID
+    team {
+      id
+      members {
+        gcID
+        name
+        titleEn
+        titleFr
+        avatar
+      }
+    }
+  }
+}
+`;
+
 export const GET_YOUR_TEAM = gql`
 query getYourTeam($gcID: ID!) {
   profiles(gcID: $gcID) {

@@ -22,7 +22,7 @@ import ErrorModal, { err } from '../../core/ErrorModal';
 
 import Loading from './Loading';
 
-import { GET_TEAM, EDIT_TEAM } from '../../../gql/profile';
+import { GET_TEAM_NAME, EDIT_TEAM } from '../../../gql/profile';
 import SupervisorPicker from '../../core/SupervisorPicker';
 // import TeamPicker from '../../core/TeamPicker';
 import { UserAvatar } from '../../core/UserAvatar';
@@ -83,7 +83,7 @@ function GQLTeamCard(props) {
   const canEdit = (accessToken !== '') && (id === myGcID);
   return (
     <Query
-      query={GET_TEAM}
+      query={GET_TEAM_NAME}
       variables={{ gcID: (String(id)) }}
     >
       {({
@@ -96,7 +96,7 @@ function GQLTeamCard(props) {
         const userInfo = (!data) ? '' : data.profiles[0];
         const teamTest = (!userInfo) ? '' : userInfo.team;
         const supTest = (!teamTest) ? '' : userInfo.team.owner;
-        const memberTest = (!teamTest) ? '' : userInfo.team.members;
+        // const memberTest = (!teamTest) ? '' : userInfo.team.members;
         return (
           <div style={style.card}>
             {userInfo ? (
@@ -280,7 +280,7 @@ function GQLTeamCard(props) {
                           <Mutation
                             mutation={EDIT_TEAM}
                             refetchQueries={[{
-                              query: GET_TEAM,
+                              query: GET_TEAM_NAME,
                               variables: { gcID: String(userInfo.gcID) },
                             }]}
                             onError={(e) => {
@@ -360,9 +360,13 @@ function GQLTeamCard(props) {
                   <div className="font-weight-bold">
                     {__('people')}
                   </div>
-                  <TeamDisplayMemberList
-                    members={memberTest}
-                  />
+                  {teamTest.nameEn == 'Global Team' ? (
+                    <div>No Team</div>
+                  ) : (
+                    <TeamDisplayMemberList
+                      userID={(String(id))}
+                    />
+                  )}
                 </div>
               </div>
             ) : (
