@@ -18,10 +18,10 @@ RUN yarn install
 # RUN npm install --only=production
 
 COPY . .
-RUN node --max-old-space-size=4096 scripts/build.js
-RUN npm install -g serve
+#RUN node --max-old-space-size=4096 scripts/build.js
+#RUN npm install -g serve
 # Bundle app source
 
-EXPOSE 3000
+EXPOSE 5000
 
-CMD [ "serve", "-s", "build", "-l", "3000" ]
+CMD [ "docker/start.sh" ]

@@ -2,10 +2,12 @@ version: '3.3'
 services:
 # Directory-fe
   directory-fe:
-    #build: ../.
-    image: digitalcollab/directory:latest
+    build: ../.
+    #image: directory-fe:latest
+    environment:
+      GQL_ENDPOINT: "http://localhost:4000/graphql"
     ports:
-      - '8008:3000'
+      - '8008:5000'
 
 # profile service
   profile_image:
@@ -24,7 +26,7 @@ services:
       PRISMA_HOST: "profileprisma"
       client_id: "1"
       client_secret: "123"
-      account_url: "https://account_web:8080"
+      account_url: "https://account_web:8000"
       scope: "token_introspection"
       MQ_HOST: "rabbitMQ"
       MQ_USER: "rebbit"
@@ -109,6 +111,8 @@ services:
     restart: always
     ports:
       - 9600:9600
+    volumes:
+      - ./ES-pipeline/:/usr/share/logstash/pipeline/
     environment:
       - XPACK_MONITORING_ENABLED=false
   kibana:
