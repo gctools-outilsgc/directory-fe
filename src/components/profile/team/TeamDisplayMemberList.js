@@ -68,7 +68,7 @@ const TeamDisplayMemberList = (props) => {
         const list = (members) ?
           members.map(p => (
             <MemberList p={p} />
-          )): 'No Team';
+          )): 'N/A';
         return(
           <Row className="mt-3">
             {list}

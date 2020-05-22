@@ -361,7 +361,7 @@ function GQLTeamCard(props) {
                     {__('people')}
                   </div>
                   {teamTest.nameEn == 'Global Team' ? (
-                    <div>No Team</div>
+                    <div>{__('No Team')}</div>
                   ) : (
                     <TeamDisplayMemberList
                       userID={(String(id))}
