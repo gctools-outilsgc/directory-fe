@@ -67,7 +67,7 @@ services:
       NODE_ENV: "production"
       PRISMA_API_ENDPOINT: 'notification_prisma'
       PRISMA_HOST: 'notification_prisma'
-      account_url: 'http://localhost:8080'
+      account_url: 'http://localhost:8080/openid'
       client_id: '2'
       client_secret: '456'
       MQ_HOST: 'rabbitMQ'
