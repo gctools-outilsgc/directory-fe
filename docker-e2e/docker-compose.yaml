@@ -6,6 +6,12 @@ services:
     #image: directory-fe:latest
     environment:
       GQL_ENDPOINT: "http://localhost:4000/graphql"
+      OIDC_AUTHORITY: "http://localhost:8080/openid"
+      OIDC_CLIENT_ID: "3"
+      OIDC_SCOPE: "openid modify_profile email profile"
+      OIDC_REDIRECT_URI: 'http://localhost:8008/#!callback'
+      OIDC_SILENT_REDIRECT_URI: 'http://localhost:8008/#!silent'
+      OIDC_POST_LOGOUT_REDIRECT_URI: 'http://localhost:8008/#!logout'
     ports:
       - '8008:5000'
 

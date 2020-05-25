@@ -1,7 +1,6 @@
 import { ApolloClient } from 'apollo-client';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { createUploadLink } from 'apollo-upload-client';
-import oidcClient from './oidcConfig.dev';
 
 const cache = new InMemoryCache({
   dataIdFromObject: (object) => {
@@ -23,9 +22,10 @@ const cache = new InMemoryCache({
 
 const authToken = () => {
   // get the authentication token from redux store if it exists
-
+  const auth = process.env.REACT_APP_OIDC_AUTHORITY;
+  const client = process.env.REACT_APP_OIDC_CLIENT_ID;
   const sessionInfo = JSON.parse(sessionStorage
-    .getItem(`oidc.user:${oidcClient.authority}:${oidcClient.client_id}`));
+    .getItem(`oidc.user:${auth}:${client}`));
 
   const token = () => {
     if (sessionInfo) {
