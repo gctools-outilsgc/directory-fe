@@ -28,10 +28,10 @@ const MemberList = (props) => {
                 {p ? p.titleEn : ''}
               </small>
             ) : (
-                <small className="text-muted">
-                  {p ? p.titleFr : ''}
-                </small>
-              )}
+              <small className="text-muted">
+                {p ? p.titleFr : ''}
+              </small>
+            )}
           </div>
         </div>
       </a>
