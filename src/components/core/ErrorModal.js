@@ -32,6 +32,7 @@ const formatError = (error) => {
 const ErrorModal = ({
   title,
   alertColour,
+  onOkClick,
   error: [error, date],
 }) => {
   const [open, setOpen] = useState(!!error);
@@ -48,7 +49,15 @@ const ErrorModal = ({
         <Alert color={alertColour}>{message}</Alert>
       </ModalBody>
       <ModalFooter>
-        <Button color="primary" onClick={toggle}>Ok</Button>
+        <Button
+          color="primary"
+          onClick={() => {
+            toggle();
+            onOkClick();
+          }}
+        >
+          Ok
+        </Button>
       </ModalFooter>
     </Modal>
   );
@@ -58,6 +67,7 @@ ErrorModal.defaultProps = {
   error: [],
   title: 'Error',
   alertColour: 'danger',
+  onOkClick: () => {},
 };
 
 ErrorModal.propTypes = {
@@ -67,6 +77,7 @@ ErrorModal.propTypes = {
   title: PropTypes.string,
   /** Color to use in the embedded Alert */
   alertColour: PropTypes.string,
+  onOkClick: PropTypes.func,
 };
 
 export default ErrorModal;
