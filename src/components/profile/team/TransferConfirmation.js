@@ -67,7 +67,7 @@ const Avatars = styled.div`
     border: 3px solid ${varTag('--primary')};
   }
   .tcd-team-avatar + div.name + div.break + img {
-    margin-top: -60px;
+    margin-top: 0px;
   }
   >div.name {
     position: absolute;
