@@ -12,7 +12,7 @@ import Loading from './Loading';
 const MemberList = (props) => {
   const { p } = props;
   return (
-    <Col sm="4" className="mb-3" key={p.gcID}>
+    <Col sm="4" className="mb-3" >
       <a href={p ? p.gcID : ''} >
         <div className="d-flex">
           <UserAvatar
@@ -28,10 +28,10 @@ const MemberList = (props) => {
                 {p ? p.titleEn : ''}
               </small>
             ) : (
-              <small className="text-muted">
-                {p ? p.titleFr : ''}
-              </small>
-            )}
+                <small className="text-muted">
+                  {p ? p.titleFr : ''}
+                </small>
+              )}
           </div>
         </div>
       </a>
@@ -67,9 +67,11 @@ const TeamDisplayMemberList = (props) => {
         const members = (!data) ? '' : data.profiles[0].team.members;
         const list = (members) ?
           members.map(p => (
-            <MemberList p={p} />
-          )): 'N/A';
-        return(
+            userID != p.gcID ?
+              <MemberList key={p.gcID} p={p} />
+              : null
+          )) : 'N/A';
+        return (
           <Row className="mt-3">
             {list}
           </Row>

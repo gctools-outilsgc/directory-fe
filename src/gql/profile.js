@@ -217,6 +217,26 @@ query getTeamMembers($gcID: ID!) {
 }
 `;
 
+export const GET_DIRECT_REPORTS = gql`
+query getTeamMembers($gcID: ID!) {
+  profiles(gcID: $gcID) {
+    gcID
+    ownerOfTeams {
+      id
+      nameEn
+      nameFr
+      members {
+        gcID
+        name
+        avatar
+        titleEn
+        titleFr
+      }
+    }
+  }
+}
+`;
+
 export const GET_YOUR_TEAM = gql`
 query getYourTeam($gcID: ID!) {
   profiles(gcID: $gcID) {
