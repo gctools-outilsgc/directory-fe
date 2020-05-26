@@ -1,5 +1,5 @@
 /*eslint-disable */
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
@@ -28,6 +28,7 @@ import SupervisorPicker from '../../core/SupervisorPicker';
 import { UserAvatar } from '../../core/UserAvatar';
 import LocalizedTransferConfirmation from './TransferConfirmation';
 import TeamDisplayMemberList from './TeamDisplayMemberList';
+import DirectReportMemberList from './DirectReportMemberList';
 import GQLYourTeamApprovalStatus from './GQLYourTeamApprovalStatus';
 
 const mapStateToProps = ({ user }) => {
@@ -293,57 +294,57 @@ function GQLTeamCard(props) {
                           >
                             {(modifyProfile, { loading }) =>
                               confirmModal && (
-                              <LocalizedTransferConfirmation
-                                loading={loading}
-                                isOpen={confirmModal}
-                                source={
-                                  (supTest !== null) ? supTest :
-                                  {
-                                      name: __('None'),
-                                      team: {
-                                        nameEn: teamTest ? teamTest.nameEn : 'N/A',
-                                        nameFr: teamTest ? teamTest.nameFr : 'N/A',
-                                      },
-                                  }}
-                                transferredUser={userInfo}
-                                title={__('Confirm supervisor transfer')}
-                                secondaryButtonText={__('cancel')}
-                                primaryButtonText={__('Confirm')}
-                                bodyText={`${___(__('You are transferring %1$s %2$s %3$s %4$s.'), // eslint-disable-line
-                                          (supTest !== null) ? supTest.name : __('None'),
-                                          chosenSupervisor.name,
-                                          (localizer.lang == 'en_CA') ? (teamTest) ? teamTest.nameEn : 'N/A' : (teamTest) ? teamTest.nameFr : 'N/A',
-                                          (localizer.lang == 'en_CA') ? chosenTeam.nameEn : chosenTeam.nameFr
-                                        )}`}
-                                destination={
-                                  {
-                                    name: chosenSupervisor.name,
-                                    avatar: chosenSupervisor.avatar,
-                                    team: {
-                                      nameEn: chosenTeam.nameEn,
-                                      nameFr: chosenTeam.nameFr,
-                                      avatar: chosenTeam.avatar,
-                                    },
-                                  }
-                                }
-                                primaryButtonClick={() => {
-                                  // TODO Send this to notifications
-                                  modifyProfile({
-                                    variables: {
-                                      gcID: String(userInfo.gcID),
-                                      data: {
+                                <LocalizedTransferConfirmation
+                                  loading={loading}
+                                  isOpen={confirmModal}
+                                  source={
+                                    (supTest !== null) ? supTest :
+                                      {
+                                        name: __('None'),
                                         team: {
-                                          id: chosenTeam.id,
+                                          nameEn: teamTest ? teamTest.nameEn : 'N/A',
+                                          nameFr: teamTest ? teamTest.nameFr : 'N/A',
+                                        },
+                                      }}
+                                  transferredUser={userInfo}
+                                  title={__('Confirm supervisor transfer')}
+                                  secondaryButtonText={__('cancel')}
+                                  primaryButtonText={__('Confirm')}
+                                  bodyText={`${___(__('You are transferring %1$s %2$s %3$s %4$s.'), // eslint-disable-line
+                                    (supTest !== null) ? supTest.name : __('None'),
+                                    chosenSupervisor.name,
+                                    (localizer.lang == 'en_CA') ? (teamTest) ? teamTest.nameEn : 'N/A' : (teamTest) ? teamTest.nameFr : 'N/A',
+                                    (localizer.lang == 'en_CA') ? chosenTeam.nameEn : chosenTeam.nameFr
+                                  )}`}
+                                  destination={
+                                    {
+                                      name: chosenSupervisor.name,
+                                      avatar: chosenSupervisor.avatar,
+                                      team: {
+                                        nameEn: chosenTeam.nameEn,
+                                        nameFr: chosenTeam.nameFr,
+                                        avatar: chosenTeam.avatar,
+                                      },
+                                    }
+                                  }
+                                  primaryButtonClick={() => {
+                                    // TODO Send this to notifications
+                                    modifyProfile({
+                                      variables: {
+                                        gcID: String(userInfo.gcID),
+                                        data: {
+                                          team: {
+                                            id: chosenTeam.id,
+                                          },
                                         },
                                       },
-                                    },
-                                  });
-                                }}
-                                secondaryButtonClick={() => {
-                                  toggleConfirm();
-                                }}
-                              />
-                            )}
+                                    });
+                                  }}
+                                  secondaryButtonClick={() => {
+                                    toggleConfirm();
+                                  }}
+                                />
+                              )}
                           </Mutation>
                           <ErrorModal error={errors} />
                         </div>
@@ -363,18 +364,21 @@ function GQLTeamCard(props) {
                   {teamTest.nameEn == 'Global Team' ? (
                     <div>{__('No Team')}</div>
                   ) : (
-                    <TeamDisplayMemberList
-                      userID={(String(id))}
-                    />
-                  )}
+                      <TeamDisplayMemberList
+                        userID={(String(id))}
+                      />
+                    )}
+                  <DirectReportMemberList
+                    userID={(String(id))}
+                  />
                 </div>
               </div>
             ) : (
-              <div>{__('Cannot find GCID')}</div>
-            )}
+                <div>{__('Cannot find GCID')}</div>
+              )}
           </div>
         );
-    }}
+      }}
     </Query>
   );
 
