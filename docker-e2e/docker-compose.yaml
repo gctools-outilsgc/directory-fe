@@ -32,7 +32,7 @@ services:
       PRISMA_HOST: "profileprisma"
       client_id: "1"
       client_secret: "123"
-      account_url: "https://account_web:8000"
+      account_url: "http://accountweb:8000"
       scope: "token_introspection"
       MQ_HOST: "rabbitMQ"
       MQ_USER: "rebbit"
@@ -73,7 +73,7 @@ services:
       NODE_ENV: "production"
       PRISMA_API_ENDPOINT: 'notification_prisma'
       PRISMA_HOST: 'notification_prisma'
-      account_url: 'http://localhost:8080/openid'
+      account_url: 'http://accountweb:8000'
       client_id: '2'
       client_secret: '456'
       MQ_HOST: 'rabbitMQ'
@@ -148,7 +148,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-  account_web:
+  accountweb:
     image: phanoix/concierge:profile_integration
     environment:
       - CONCIERGE_ALLOWED_HOSTS=['*']

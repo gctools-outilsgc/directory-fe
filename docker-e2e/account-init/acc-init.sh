@@ -15,14 +15,14 @@ EOF
 
 python manage.py shell << EOF
 from oidc_provider.models import Client, ResponseType
-c = Client(name='profile', client_type='confidential', client_id='1', client_secret='123', redirect_uris=['http://profile_apollo:4000/'])
+c = Client(name='profile', client_type='confidential', client_id='1', client_secret='123', scope=['token_introspection'], redirect_uris=['http://localhost:4000', 'http://profile_apollo:4000/'])
 c.save()
 c.response_types.add(ResponseType.objects.get(value='code'))
 EOF
 
 python manage.py shell << EOF
 from oidc_provider.models import Client, ResponseType
-c = Client(name='notifications', client_type='confidential', client_id='2', client_secret='456', redirect_uris=['http://notification_apollo:4000/'])
+c = Client(name='notifications', client_type='confidential', client_id='2', client_secret='456', scope=['openid', 'token_introspection'], redirect_uris=['http://notification_apollo:4000/', 'http://localhost:4001/'])
 c.save()
 c.response_types.add(ResponseType.objects.get(value='code'))
 EOF
@@ -156,7 +156,13 @@ from django.core import signing
 user = User.objects.create_user('user@gccollab.ca', 'user', 'pass')
 user.activate_user(signing.dumps(obj=user.email))
 EOF
-sleep 6
+sleep 10
+python manage.py shell << EOF
+from core.models import User;
+from django.core import signing
+user = User.objects.create_user('user1@gccollab.ca', 'user1', 'pass')
+user.activate_user(signing.dumps(obj=user.email))
+EOF
 python manage.py shell << EOF
 from core.models import User;
 from django.core import signing
