@@ -1,10 +1,10 @@
 
 python manage.py constance set RECAPTCHA_ENABLED false
 
-python manage.py constance set SERVICE_MESH_ACTIVATION true
 python manage.py constance set SERVICE_MESH_USER "rebbit"
 python manage.py constance set SERVICE_MESH_PASSWORD "rebbit"
 python manage.py constance set SERVICE_MESH_HOST "rabbitMQ"
+python manage.py constance set SERVICE_MESH_ACTIVATION true
 
 python manage.py creatersakey
 
