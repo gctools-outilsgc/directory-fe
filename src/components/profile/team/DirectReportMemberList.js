@@ -67,7 +67,7 @@ const DirectReportMemberList = (props) => {
         const teams = (!data) ? '' : data.profiles[0].ownerOfTeams;
         const list = teams.map(t => (
           t.members.length > 0 ?
-            <div>
+            <div key={t.id}>
               {localizer.lang === 'en_CA' ?
                 <div className="font-weight-bold">{t.nameEn}</div> :
                 <div className="font-weight-bold">{t.nameFr}</div>}
