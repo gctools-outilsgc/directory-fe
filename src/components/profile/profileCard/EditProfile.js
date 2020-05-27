@@ -46,6 +46,7 @@ export class EditProfile extends Component {
       modal: false,
       depChange: false,
       confirmModal: false,
+      stateError: '',
       newTeamId: '',
       name: name || '',
       email: email || '',
@@ -100,6 +101,11 @@ export class EditProfile extends Component {
           <ModalBody>
             <Mutation
               mutation={EDIT}
+              onError={(error) => {
+                this.setState({
+                  stateError: error,
+                });
+              }}
               onCompleted={() => {
                 this.setState({ modal: false });
                 // Do this nicer / hot load maybe?
@@ -107,7 +113,7 @@ export class EditProfile extends Component {
                 document.getElementById('refetchInfoSts').click();
               }}
             >
-              {(modifyProfile, { loading, error }) => (
+              {(modifyProfile, { loading }) => (
                 <Form
                   onSubmit={(e) => {
                     e.preventDefault();
@@ -417,7 +423,6 @@ export class EditProfile extends Component {
                       {__('Save')}
                     </Button>
                   </div>
-                  {error && <ErrorModal error={err(error)} />}
                 </Form>
               )}
             </Mutation>
@@ -473,6 +478,15 @@ export class EditProfile extends Component {
             />
           )}
         </Mutation>
+        {this.state.stateError &&
+          <ErrorModal
+            error={err(this.state.stateError)}
+            onOkClick={() => {
+              this.setState({
+                stateError: '',
+              });
+            }}
+          />}
       </div>
     );
   }
