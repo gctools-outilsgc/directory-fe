@@ -156,7 +156,6 @@ from django.core import signing
 user = User.objects.create_user('user@gccollab.ca', 'user', 'pass')
 user.activate_user(signing.dumps(obj=user.email))
 EOF
-sleep 10
 python manage.py shell << EOF
 from core.models import User;
 from django.core import signing
