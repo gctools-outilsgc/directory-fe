@@ -2,6 +2,22 @@
 process.env.BABEL_ENV = 'development';
 process.env.NODE_ENV = 'development';
 
+const BASE_URL = "http://localhost:3000";
+if (!process.env.REACT_APP_GQL_ENDPOINT)
+  process.env.REACT_APP_GQL_ENDPOINT = 'https://paas.beta.gccollab.ca/';
+if (!process.env.REACT_APP_OIDC_AUTHORITY)
+  process.env.REACT_APP_OIDC_AUTHORITY = 'https://dev.account.gccollab.ca/openid';
+if (!process.env.REACT_APP_OIDC_CLIENT_ID)
+  process.env.REACT_APP_OIDC_CLIENT_ID = 123;
+if (!process.env.REACT_APP_OIDC_SCOPE)
+  process.env.REACT_APP_OIDC_SCOPE = 'openid modify_profile email profile';
+if (!process.env.REACT_APP_OIDC_REDIRECT_URI)
+  process.env.REACT_APP_OIDC_REDIRECT_URI = BASE_URL+'/#!callback';
+if (!process.env.REACT_APP_OIDC_SILENT_REDIRECT_URI)
+  process.env.REACT_APP_OIDC_SILENT_REDIRECT_URI = BASE_URL+'/#!silent';
+if (!process.env.REACT_APP_OIDC_POST_LOGOUT_REDIRECT_URI)
+  process.env.REACT_APP_OIDC_POST_LOGOUT_REDIRECT_URI = BASE_URL+'/#!logout';
+
 // Makes the script crash on unhandled rejections instead of silently
 // ignoring them. In the future, promise rejections that are not handled will
 // terminate the Node.js process with a non-zero exit code.

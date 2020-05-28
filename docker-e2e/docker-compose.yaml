@@ -2,10 +2,18 @@ version: '3.3'
 services:
 # Directory-fe
   directory-fe:
-    #build: ../.
-    image: digitalcollab/directory:latest
+    build: ../.
+    #image: directory-fe:latest
+    environment:
+      GQL_ENDPOINT: "http://localhost:4000/graphql"
+      OIDC_AUTHORITY: "http://localhost:8080/openid"
+      OIDC_CLIENT_ID: "3"
+      OIDC_SCOPE: "openid modify_profile email profile"
+      OIDC_REDIRECT_URI: 'http://localhost:8008/#!callback'
+      OIDC_SILENT_REDIRECT_URI: 'http://localhost:8008/#!silent'
+      OIDC_POST_LOGOUT_REDIRECT_URI: 'http://localhost:8008/#!logout'
     ports:
-      - '8008:3000'
+      - '8008:5000'
 
 # profile service
   profile_image:
@@ -24,7 +32,7 @@ services:
       PRISMA_HOST: "profileprisma"
       client_id: "1"
       client_secret: "123"
-      account_url: "https://account_web:8080"
+      account_url: "http://accountweb:8000"
       scope: "token_introspection"
       MQ_HOST: "rabbitMQ"
       MQ_USER: "rebbit"
@@ -65,7 +73,7 @@ services:
       NODE_ENV: "production"
       PRISMA_API_ENDPOINT: 'notification_prisma'
       PRISMA_HOST: 'notification_prisma'
-      account_url: 'http://localhost:8080'
+      account_url: 'http://accountweb:8000'
       client_id: '2'
       client_secret: '456'
       MQ_HOST: 'rabbitMQ'
@@ -109,6 +117,8 @@ services:
     restart: always
     ports:
       - 9600:9600
+    volumes:
+      - ./ES-pipeline/:/usr/share/logstash/pipeline/
     environment:
       - XPACK_MONITORING_ENABLED=false
   kibana:
@@ -138,7 +148,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-  account_web:
+  accountweb:
     image: phanoix/concierge:profile_integration
     environment:
       - CONCIERGE_ALLOWED_HOSTS=['*']
