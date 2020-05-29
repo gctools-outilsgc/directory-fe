@@ -28,7 +28,7 @@ const GQLYourTeamApprovalStatus = (props) => {
       .filter(c => c.trim().indexOf('lang=') === 0)
       .forEach((c) => {
         const lang = c.split('=', 2)[1];
-        if (localizer.hasLanguage(lang)) {
+        if (localizer.hasLanguage(lang) && localizer.lang !== lang) {
           localizer.setLanguage(lang);
         }
       });
