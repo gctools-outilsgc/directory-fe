@@ -354,7 +354,7 @@ function GQLTeamCard(props) {
                       <div className="font-weight-bold mb-2">
                         {__('Team')}
                       </div>
-                      {teamTest ? teamTest.nameEn : 'N/A'}
+                      {(localizer.lang == 'en_CA') ? (teamTest) ? teamTest.nameEn : 'N/A' : (teamTest) ? teamTest.nameFr : 'N/A'}
                     </Col>
                   </Row>
                   <hr />
