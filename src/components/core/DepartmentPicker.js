@@ -76,7 +76,7 @@ class DepartmentPicker extends React.Component {
               </li>
             )) : [];
           const styleClasses = (!data) ?
-            'search-results-none' : 'list-unstyled search-results';
+            'search-results-none' : 'list-unstyled org-search-results';
           return (
             <div>
               <label>
@@ -87,9 +87,15 @@ class DepartmentPicker extends React.Component {
                   type="text"
                   onChange={this.handleChange}
                   value={(this.state.value) ? this.state.value : ''}
+                  placeholder="Search your Department"
                 />
               </label>
               <ul className={styleClasses}>
+                <li>
+                  <small className="text-muted pl-2">
+                    Search and Select Org
+                  </small>
+                </li>
                 {results}
               </ul>
             </div>
