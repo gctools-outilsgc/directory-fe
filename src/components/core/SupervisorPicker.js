@@ -102,7 +102,7 @@ class SupervisorPicker extends React.Component {
           const styleClasses = (!data) ?
             'search-results-none' : 'list-unstyled search-results';
           return (
-            <div className="search-form search-form-round">
+            <div className="search-form">
               <label className="w-100">
                 <span className="font-weight-bold">
                   {__('Search')}
@@ -111,9 +111,17 @@ class SupervisorPicker extends React.Component {
                   type="text"
                   onChange={this.handleChange}
                   value={this.state.value}
+                  placeholder={__('Search and select')}
                 />
               </label>
-              <ul className={styleClasses}>{results}</ul>
+              <ul className={styleClasses}>
+                <li>
+                  <small className="text-muted pl-2 pb-2">
+                    {__('Select Supervisor')}
+                  </small>
+                </li>
+                {(results.length === 0) ? __('Not Found') : results}
+              </ul>
             </div>
           );
         }}

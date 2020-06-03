@@ -18,3 +18,8 @@ msgstr ""
 msgid "Department"
 msgstr ""
 
+msgid "Search your Department"
+msgstr ""
+
+msgid "Select Department"
+msgstr ""

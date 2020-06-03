@@ -18,3 +18,8 @@ msgstr ""
 msgid "Department"
 msgstr "Ministère"
 
+msgid "Search your Department"
+msgstr "Search your Department FR"
+
+msgid "Select Department"
+msgstr "Select Department FR"

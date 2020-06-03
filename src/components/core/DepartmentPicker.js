@@ -87,13 +87,13 @@ class DepartmentPicker extends React.Component {
                   type="text"
                   onChange={this.handleChange}
                   value={(this.state.value) ? this.state.value : ''}
-                  placeholder="Search your Department"
+                  placeholder={__('Search your Department')}
                 />
               </label>
               <ul className={styleClasses}>
                 <li>
                   <small className="text-muted pl-2">
-                    Search and Select Org
+                    {__('Select Department')}
                   </small>
                 </li>
                 {results}
