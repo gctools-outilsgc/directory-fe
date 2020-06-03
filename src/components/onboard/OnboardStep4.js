@@ -23,6 +23,7 @@ export class OnboardStep4 extends Component {
             <UserAvatar
               gcID={userObject.gcID}
               myGcID={userObject.gcID}
+              avatar={userObject.avatar}
               edit
               size="lg"
             />
