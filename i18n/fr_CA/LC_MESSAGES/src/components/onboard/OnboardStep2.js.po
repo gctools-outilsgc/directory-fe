@@ -41,3 +41,7 @@ msgstr "Titre du poste en français"
 #: 156:41 src/components/onboard/OnboardStep2.js
 msgid "Next"
 msgstr "Continuer"
+
+#: 196:41 src/components/onboard/OnboardStep2.js
+msgid "Save"
+msgstr "Sauvegarder"

@@ -23,6 +23,7 @@ export class OnboardStep5 extends Component {
       teamId: '',
       editSup: true,
       errors: '',
+      change: false,
     };
 
     this.toggleSup = this.toggleSup.bind(this);
@@ -68,6 +69,7 @@ export class OnboardStep5 extends Component {
                   this.setState({
                     chosenSupervisor: s,
                     teamId: s.ownerOfTeams[0],
+                    change: true,
                   });
                   this.toggleSup(editSup);
                 }}
@@ -168,7 +170,11 @@ export class OnboardStep5 extends Component {
                   color="primary"
                   className="ml-3"
                 >
-                  {__('Next')}
+                  {this.state.change ?
+                      __('Next')
+                      :
+                      __('Continue')
+                  }
                 </Button>
               )}
             </Mutation>

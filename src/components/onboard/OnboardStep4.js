@@ -9,6 +9,14 @@ import { UserAvatar } from '../core/UserAvatar';
 /* eslint react/prefer-stateless-function: 0 */
 
 export class OnboardStep4 extends Component {
+  constructor(props) {
+    super(props);
+    // const { avatar } = props.userObject;
+    this.state = {
+      // avatar: avatar || '',
+      // change: false,
+    };
+  }
   render() {
     const {
       userObject,
@@ -46,7 +54,11 @@ export class OnboardStep4 extends Component {
               color="primary"
               className="ml-3"
             >
-              {__('Next')}
+              {userObject.avatar ?
+                      __('Save')
+                      :
+                      __('Next')
+                  }
             </Button>
           </div>
         </Row>

@@ -44,3 +44,7 @@ msgstr ""
 msgid "Next"
 msgstr "Continue"
 
+#: 196:41 src/components/onboard/OnboardStep2.js
+msgid "Save"
+msgstr ""
+

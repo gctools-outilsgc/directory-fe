@@ -47,3 +47,8 @@ msgstr ""
 
 msgid "Supervisor"
 msgstr "Superviseur"
+
+#: 174:21 src/components/onboard/OnboardStep5.js
+msgid "Continue"
+msgstr "Continuer"
+
