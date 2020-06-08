@@ -23,3 +23,6 @@ msgstr ""
 
 msgid "Select Department"
 msgstr ""
+
+msgid "Search and Select"
+msgstr ""

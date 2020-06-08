@@ -23,3 +23,6 @@ msgstr "Search your Department FR"
 
 msgid "Select Department"
 msgstr "Select Department FR"
+
+msgid "Search and Select"
+msgstr "Search and Select FR"

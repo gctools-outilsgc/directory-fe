@@ -80,11 +80,18 @@ class DepartmentPicker extends React.Component {
           return (
             <div>
               <label>
-                <span className="font-weight-bold">
+                <div className="font-weight-bold">
                   {__('Department')}
-                </span>
+                </div>
+                <small
+                  id="departHelp"
+                  className="text-muted org-help"
+                >
+                  {__('Search and Select')}
+                </small>
                 <Input
                   type="text"
+                  aria-describedby="departHelp"
                   onChange={this.handleChange}
                   value={(this.state.value) ? this.state.value : ''}
                   placeholder={__('Search your Department')}

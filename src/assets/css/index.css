@@ -78,6 +78,10 @@ animation: LoadingText 2s ease infinite;
     width: 255px;
 }
 
+.org-help {
+  display: block;
+}
+
 .org-search-results {
   position: absolute;
   border: 1px solid #269abc;
@@ -87,7 +91,7 @@ animation: LoadingText 2s ease infinite;
   z-index: 999;
   width: calc(100% + -30px);
   padding-top: 7px;
-  top: 64px;
+  top: 83px;
   border-radius: 0 0 4px 4px;
 }
 
