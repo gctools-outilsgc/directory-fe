@@ -173,7 +173,7 @@ export class OnboardStep5 extends Component {
                   {this.state.change ?
                       __('Next')
                       :
-                      __('Continue')
+                      __('Save')
                   }
                 </Button>
               )}
