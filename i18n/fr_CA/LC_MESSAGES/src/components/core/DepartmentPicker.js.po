@@ -19,10 +19,10 @@ msgid "Department"
 msgstr "Ministère"
 
 msgid "Search your Department"
-msgstr "Search your Department FR"
+msgstr "Trouver votre ministère"
 
 msgid "Select Department"
-msgstr "Select Department FR"
+msgstr "Sélectionnez ministère"
 
 msgid "Search and Select"
-msgstr "Search and Select FR"
+msgstr "Rechercher et sélectionner"
