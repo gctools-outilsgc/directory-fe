@@ -16,3 +16,12 @@ msgstr ""
 
 msgid "Search"
 msgstr "Rechercher"
+
+msgid "Select Supervisor"
+msgstr "Sélectionnez superviseur"
+
+msgid "Not Found"
+msgstr "Pas trouvé"
+
+msgid "Search and select"
+msgstr "Rechercher et sélectionner"

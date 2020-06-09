@@ -76,20 +76,33 @@ class DepartmentPicker extends React.Component {
               </li>
             )) : [];
           const styleClasses = (!data) ?
-            'search-results-none' : 'list-unstyled search-results';
+            'search-results-none' : 'list-unstyled org-search-results';
           return (
             <div>
               <label>
-                <span className="font-weight-bold">
+                <div className="font-weight-bold">
                   {__('Department')}
-                </span>
+                </div>
+                <small
+                  id="departHelp"
+                  className="text-muted org-help"
+                >
+                  {__('Search and Select')}
+                </small>
                 <Input
                   type="text"
+                  aria-describedby="departHelp"
                   onChange={this.handleChange}
                   value={(this.state.value) ? this.state.value : ''}
+                  placeholder={__('Search your Department')}
                 />
               </label>
               <ul className={styleClasses}>
+                <li>
+                  <small className="text-muted pl-2">
+                    {__('Select Department')}
+                  </small>
+                </li>
                 {results}
               </ul>
             </div>
