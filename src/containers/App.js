@@ -15,6 +15,7 @@ import { loginAction, logoutAction, clearErrorAction } from '../store';
 import Profile from './Profile';
 import Home from './Home';
 import Onboard from './Onboard';
+import Search from './Search';
 
 // import ProfileSearch from '../components/core/ProfileSearch';
 import ProgressBanner from '../components/core/ProgressBanner';
@@ -150,6 +151,7 @@ export class App extends Component {
                 />
                 <Route path="/p/:id" component={Profile} />
                 <Route path="/onboard" component={Onboard} />
+                <Route path="/search" component={Search} />
               </Fragment>
             </Switch>
           </main>

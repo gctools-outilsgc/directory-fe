@@ -1,8 +1,11 @@
+/* eslint-disable */
 import React from 'react';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
-
-import { Input } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { Input, Label, InputGroup, InputGroupAddon, Button } from 'reactstrap'; // eslint-disable-line
+import { withRouter } from 'react-router-dom';
 
 class ProfileSearch extends React.Component {
   constructor(props) {
@@ -14,6 +17,7 @@ class ProfileSearch extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.searchDelay = false;
+    this.handleClick  = this.handleClick .bind(this);
   }
 
   handleChange(event) {
@@ -28,6 +32,17 @@ class ProfileSearch extends React.Component {
         this.setState({ skip: true });
       }
     }, 200);
+  }
+
+  handleClick(resultsSearch) {
+    console.log(resultsSearch)
+    if(resultsSearch != ''){
+      if (resultsSearch.length == 1){
+        this.props.history.push('p/'+resultsSearch.gcID);
+      }else{
+        this.props.history.push('search');
+      }
+    }
   }
 
   render() {
@@ -56,15 +71,25 @@ class ProfileSearch extends React.Component {
           const styleClasses = (!data)
             ? 'search-results-none' : 'list-unstyled search-results';
           return (
-            <div className="search-form search-form-round">
+            <div className="search-form search-round">
               <label>
-                <span className="sr-only">{__('Search')}</span>
-                <Input
-                  type="text"
-                  onChange={this.handleChange}
-                  value={this.state.value}
-                  placeholder={__('Search Profiles')}
-                />
+              <InputGroup>
+              <Input
+                type="text"
+                onChange={this.handleChange}
+                value={this.state.value}
+                placeholder={__('Search Profiles')}
+                className="search-round"
+              />
+              <InputGroupAddon addonType="prepend">
+                <Button
+                  className="search-button"
+                  onClick={() => {this.handleClick(checkResult)}}
+                >
+                  <FontAwesomeIcon icon={faSearch} />
+                </Button>
+              </InputGroupAddon>
+            </InputGroup>
               </label>
               <ul className={styleClasses}>{results}</ul>
             </div>
@@ -75,4 +100,4 @@ class ProfileSearch extends React.Component {
   }
 }
 
-export default ProfileSearch;
+export default withRouter(ProfileSearch);
