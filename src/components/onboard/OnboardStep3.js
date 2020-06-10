@@ -21,6 +21,7 @@ export class OnboardStep3 extends Component {
       province: (address) ? address.province || '' : '',
       postalCode: (address) ? address.postalCode || '' : '',
       country: (address) ? address.country || '' : '',
+      change: false,
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -85,6 +86,7 @@ export class OnboardStep3 extends Component {
                     onChange={(e) => {
                       this.setState({
                         streetAddress: e.target.value,
+                        change: true,
                       });
                     }}
                   />
@@ -101,6 +103,7 @@ export class OnboardStep3 extends Component {
                     onChange={(e) => {
                       this.setState({
                         city: e.target.value,
+                        change: true,
                       });
                     }}
                   />
@@ -117,6 +120,7 @@ export class OnboardStep3 extends Component {
                     onChange={(e) => {
                       this.setState({
                         province: e.target.value,
+                        change: true,
                       });
                     }}
                   />
@@ -135,6 +139,7 @@ export class OnboardStep3 extends Component {
                     onChange={(e) => {
                       this.setState({
                         postalCode: e.target.value,
+                        change: true,
                       });
                     }}
                   />
@@ -151,6 +156,7 @@ export class OnboardStep3 extends Component {
                     onChange={(e) => {
                       this.setState({
                         country: e.target.value,
+                        change: true,
                       });
                     }}
                   />
@@ -176,6 +182,7 @@ export class OnboardStep3 extends Component {
                     onChange={(e) => {
                       this.setState({
                         officePhone: e.target.value,
+                        change: true,
                       });
                     }}
                   />
@@ -199,6 +206,7 @@ export class OnboardStep3 extends Component {
                     onChange={(e) => {
                       this.setState({
                         mobilePhone: e.target.value,
+                        change: true,
                       });
                       }}
                   />
@@ -221,7 +229,11 @@ export class OnboardStep3 extends Component {
                   color="primary"
                   className="ml-3"
                 >
-                  {__('Next')}
+                  {this.state.change ?
+                      __('Save')
+                      :
+                      __('Next')
+                  }
                 </Button>
               </div>
             </Row>
