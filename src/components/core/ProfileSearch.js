@@ -39,7 +39,10 @@ class ProfileSearch extends React.Component {
       if (resultsSearch.search.length === 1) {
         this.props.history.push('p/'+resultsSearch.search.map( result => result.gcID)); // eslint-disable-line
       } else {
-        this.props.history.push('search');
+        this.props.history.push({
+          pathname: '/search',
+          state: { detail: resultsSearch.search },
+        });
       }
     }
   }
@@ -72,6 +75,7 @@ class ProfileSearch extends React.Component {
           return (
             <div className="search-form search-round">
               <label>
+                <span className="sr-only">{__('Search')}</span>
                 <InputGroup>
                   <Input
                     type="text"

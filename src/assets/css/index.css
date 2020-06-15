@@ -364,3 +364,17 @@ animation: LoadingText 2s ease infinite;
     margin-top: 115px;
   }
 }
+
+.imgsearch{
+  float: left;
+  padding-right: 2%;
+}
+
+.listsearch{
+  display: block;
+  overflow: auto;
+}
+
+.search-bar{
+  padding: 5%;
+}
