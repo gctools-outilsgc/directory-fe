@@ -3,20 +3,61 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withRouter } from "react-router";
 import ProfileSearch from "../components/core/ProfileSearch"
-import { Container, Row, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText } from 'reactstrap';
+import { Container, Row, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, Col, Form, FormGroup, Input, Label } from 'reactstrap';
 
 // A simple component that shows the pathname of the current location
 class search extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchResult: [],
+    };
+    this.handleAlphabetClick = this.handleAlphabetClick.bind(this);
+  }
+
+  componentDidMount() {
+    const { match, location, history } = this.props;
+    this.setState({ searchResult: location.state.detail });
+ }
+
+ sortDescAndRender(event) {
+    let searchArr = Object.values(event);
+    searchArr.sort(function(a, b) {
+      var textA = a.name.toUpperCase();
+      var textB = b.name.toUpperCase();
+        return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+    });
+    return searchArr;
+  }
+
+  sortAscAndRender(event) {
+    let searchArr = Object.values(event);
+    searchArr.sort(function(a, b) {
+      var textA = a.name.toUpperCase();
+      var textB = b.name.toUpperCase();
+      return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
+    });
+    return searchArr;
+  }
+
+
+  handleAlphabetClick(e){
+    if(e.target.value == 'desc'){
+      let data = this.sortDescAndRender(this.state.searchResult);
+      this.setState({searchResult:data});
+    }else{
+      let data = this.sortAscAndRender(this.state.searchResult);
+      this.setState({searchResult:data});
+    }
+  }
 
   render() {
-    const { match, location, history } = this.props;
-    const results = (location.state.detail)
-    // console.log(results)
-    ? location.state.detail.map(a => (
+
+    const results = (this.state.searchResult)
+    ? this.state.searchResult.map(a => (
       <div>
         <ListGroupItem key={a.gcID}>
           <a href={`/p/${a.gcID}`} className="listsearch">
-            {/* <Media object src={a.avatar} alt="Generic placeholder image" /> */}
             <img className="imgsearch" src={a.avatar} alt="Card image cap" />
             <ListGroupItemHeading>{a.name}</ListGroupItemHeading>
             <ListGroupItemText>
@@ -32,7 +73,51 @@ class search extends React.Component {
         <div className="search-bar">
           <ProfileSearch />
         </div>
-        <ListGroup>{results}</ListGroup>
+        <Row>
+          <Col xs="12" sm="10">
+            <Form>
+                <FormGroup>
+                <Label for="exampleSelect">Sort by</Label>
+                  <Input type="select" onChange={this.handleAlphabetClick.bind(this)} name="sort" id="sort">
+                    <option>---</option>
+                    <option value="desc">Alphabetical</option>
+                    <option value="asc">Unalphabetical</option>                  
+                  </Input>
+                </FormGroup>
+ 
+              </Form>
+          </Col> 
+        </Row>
+        <Row>
+          <Col xs="12" sm="10">
+            <ListGroup>{results}</ListGroup>
+          </Col>
+          <Col className='filter-section'>
+          <h5>Filter</h5>
+            <Form>
+              <FormGroup>
+                <Label check>
+                  <Input type="checkbox" /> Email
+                </Label>
+              </FormGroup>
+              <FormGroup>
+                <Label check>
+                  <Input type="checkbox" /> Name
+                </Label>
+              </FormGroup>
+              <FormGroup>
+                <Label check>
+                  <Input type="checkbox" /> Address
+                </Label>
+              </FormGroup>
+              <FormGroup>
+                <Label check>
+                  <Input type="checkbox" /> Phone number
+                </Label>
+              </FormGroup>
+            </Form>
+          </Col>
+        </Row>
       </ Container>
     )
   }

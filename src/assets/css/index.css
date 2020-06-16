@@ -378,3 +378,13 @@ animation: LoadingText 2s ease infinite;
 .search-bar{
   padding: 5%;
 }
+
+.filter-section{
+  padding: .75rem 1.25rem;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.125);
+  border-top-left-radius: .35rem;
+  border-top-right-radius: .35rem;
+  padding-left: 3%;
+}
