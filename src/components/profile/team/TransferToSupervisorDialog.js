@@ -66,6 +66,7 @@ export const TransferToSupervisorDialog = (props) => {
     <div>
       <Modal
         isOpen={isOpen}
+        toggle={secondaryButtonClick}
         centered
         autoFocus
         onEnter={onEnter}
