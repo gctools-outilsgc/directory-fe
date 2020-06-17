@@ -49,9 +49,16 @@ export class CreateTeamDialog extends Component {
     return (
       <Modal
         isOpen={isOpen}
+        toggle={onCancel}
         className="modal-lg create-team-modal"
       >
-        <ModalHeader>
+        <ModalHeader
+          close={(
+            <button className="close" onClick={onCancel}>
+              &times;
+            </button>
+          )}
+        >
           {__('Create a Team')}
         </ModalHeader>
         <ModalBody>
