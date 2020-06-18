@@ -74,10 +74,10 @@ class search extends React.Component {
           <ProfileSearch />
         </div>
         <Row>
-          <Col xs="12" sm="10">
+          <Col xs="2" sm="2">
             <Form>
                 <FormGroup>
-                <Label for="exampleSelect">Sort by</Label>
+                <Label for="sort">Sort by</Label>
                   <Input type="select" onChange={this.handleAlphabetClick.bind(this)} name="sort" id="sort">
                     <option>---</option>
                     <option value="desc">Alphabetical</option>
@@ -97,22 +97,17 @@ class search extends React.Component {
             <Form>
               <FormGroup>
                 <Label check>
-                  <Input type="checkbox" /> Email
+                  <Input type="checkbox" /> Internal
                 </Label>
               </FormGroup>
               <FormGroup>
                 <Label check>
-                  <Input type="checkbox" /> Name
+                  <Input type="checkbox" /> External
                 </Label>
               </FormGroup>
               <FormGroup>
                 <Label check>
-                  <Input type="checkbox" /> Address
-                </Label>
-              </FormGroup>
-              <FormGroup>
-                <Label check>
-                  <Input type="checkbox" /> Phone number
+                  <Input type="checkbox" /> Department name
                 </Label>
               </FormGroup>
             </Form>

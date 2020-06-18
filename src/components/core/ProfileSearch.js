@@ -74,10 +74,11 @@ class ProfileSearch extends React.Component {
             ? 'search-results-none' : 'list-unstyled search-results';
           return (
             <div className="search-form search-round">
-              <label>
+              <label htmlFor="search-input">
                 <span className="sr-only">{__('Search')}</span>
                 <InputGroup>
                   <Input
+                    name="search-input"
                     type="text"
                     onChange={this.handleChange}
                     value={this.state.value}
