@@ -1,3 +1,4 @@
+/*eslint-disable */
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
@@ -26,6 +27,55 @@ const formatError = (error) => {
     newError = newError.replace(text, '');
   });
 
+  switch(newError) {
+    case "E1ProfileNotExist":
+      newError = __('Profile not found')
+      break;
+    case "E2TeamNotExist":
+      newError = __('Team does not exist')
+      break;
+    case "E3OrgNotExist":
+      newError = __('Organization does not Exist')
+      break;
+    case "E4ApprovalNotExist":
+      newError = __('Approval does not Exist')
+      break;
+    case "E6NotAuthorized":
+      newError = __('Not Authorized')
+      break;
+    case "E7CircularRelationship":
+      newError = __('Selected supervisor would create a circular reporting relationship')
+      break;
+    case "E8TokenProfileNotExist":
+      newError = __('Profile does not exist')
+      break;
+    case "E9MustBeAuthenticated":
+      newError = __('Must be authenticaticated')
+      break;
+    case "E10MustBeOwnerOrSupervisor":
+      newError = __('Must be owner or supervisor of profile to Modify')
+      break;
+    case "E11MustBeTeamOwner":
+      newError = __('Must be owner of team to modify')
+      break;
+    case "E12ApprovalOnlyRevokedBySubmitter":
+      newError = __('Approvals can only be revoked by the submitter')
+      break;
+    case "E13MustBeSupervisorInfo":
+      newError = __('Must be supervisor of user to modify Informational Approval')
+      break;
+    case "E14MustBeSupervisorTransfer":
+      newError = __('Must be supervisor of the team to accept transfer request')
+      break;
+    case "E15MustBeApprover":
+      newError = __('Must be Approver on Approval to modify')
+      break;
+    case "E16AddressFieldMissing":
+      newError = __('All address fields are required')
+      break;
+    default:
+      newError
+  }
   return newError;
 };
 
