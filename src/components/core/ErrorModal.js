@@ -28,7 +28,7 @@ const formatError = (error) => {
   });
 
   let translatedError = '';
-  switch(newError) {
+  switch(newError.trim()) {
     case "E1ProfileNotExist":
       translatedError = (localizer.lang === 'en_CA') ?
       "Profile not found" : "Profil n'existe pas"
