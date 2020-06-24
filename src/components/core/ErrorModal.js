@@ -27,56 +27,72 @@ const formatError = (error) => {
     newError = newError.replace(text, '');
   });
 
+  let translatedError = '';
   switch(newError) {
     case "E1ProfileNotExist":
-      newError = __('Profile not found')
+      translatedError = (localizer.lang === 'en_CA') ?
+      "Profile not found" : "Profil n'existe pas"
       break;
     case "E2TeamNotExist":
-      newError = __('Team does not exist')
+      translatedError = (localizer.lang === 'en_CA') ?
+      "Team does not exist" : "Équipe n'existe pas"
       break;
     case "E3OrgNotExist":
-      newError = __('Organization does not Exist')
+      translatedError = (localizer.lang === 'en_CA') ?
+      "Organization does not exist" : "Organisation n'existe pas"
       break;
     case "E4ApprovalNotExist":
-      newError = __('Approval does not Exist')
+      translatedError = (localizer.lang === 'en_CA') ?
+      "Approval does not exist" : "Approbation n'existe pas"
       break;
     case "E6NotAuthorized":
-      newError = __('Not Authorized')
+      translatedError = (localizer.lang === 'en_CA') ?
+      "Not Authorized" : "Non authorisé(e)"
       break;
     case "E7CircularRelationship":
-      newError = __('Selected supervisor would create a circular reporting relationship')
+      translatedError = (localizer.lang === 'en_CA') ?
+        "Selected supervisor would create a circular reporting relationship" : "Sélecionner le superviseur créerait une relation hiérarchique circulaire"
       break;
     case "E8TokenProfileNotExist":
-      newError = __('Profile does not exist')
+      translatedError = (localizer.lang === 'en_CA') ?
+        "Profile does not exist" : "Profil n'existe pas"
       break;
     case "E9MustBeAuthenticated":
-      newError = __('Must be authenticaticated')
+      translatedError = (localizer.lang === 'en_CA') ?
+        "Must be authenticaticated" : "Doit être authentifié"
       break;
     case "E10MustBeOwnerOrSupervisor":
-      newError = __('Must be owner or supervisor of profile to Modify')
+      translatedError = (localizer.lang === 'en_CA') ?
+        "Must be owner or supervisor of profile to modify" : "Doit être propriétaire ou superviseur du profil pour mofidier"
       break;
     case "E11MustBeTeamOwner":
-      newError = __('Must be owner of team to modify')
+      translatedError = (localizer.lang === 'en_CA') ?
+      "Must be owner of team to modify" : "Doit être propriétaire de l'équipe pour modifier"
       break;
     case "E12ApprovalOnlyRevokedBySubmitter":
-      newError = __('Approvals can only be revoked by the submitter')
+      translatedError = (localizer.lang === 'en_CA') ?
+      "Approvals can only be revoked by the submitter" : "L'approbation peut être révoquée par le demandeur"
       break;
     case "E13MustBeSupervisorInfo":
-      newError = __('Must be supervisor of user to modify Informational Approval')
+      translatedError = (localizer.lang === 'en_CA') ?
+      "Must be supervisor of user to modify Informational Approval" : "Doit être le superviseur de l'utilisateur pour modifier l'information de l'approbation"
       break;
     case "E14MustBeSupervisorTransfer":
-      newError = __('Must be supervisor of the team to accept transfer request')
+      translatedError = (localizer.lang === 'en_CA') ?
+      "Must be supervisor of the team to accept transfer request" : "Doit être le superviseur de l'équipe pour accecpter la demande de transfert"
       break;
     case "E15MustBeApprover":
-      newError = __('Must be Approver on Approval to modify')
+      translatedError = (localizer.lang === 'en_CA') ?
+      "Must be Approver on Approval to modify" : "Doit être l'approbateur de l'approbation pour pouvoir modifier."
       break;
     case "E16AddressFieldMissing":
-      newError = __('All address fields are required')
+      translatedError = (localizer.lang === 'en_CA') ?
+      "All address fields are required" : "Tous les champs de l'adresse sont obligatoires"
       break;
     default:
-      newError
+      translatedError = newError
   }
-  return newError;
+  return translatedError;
 };
 
 const ErrorModal = ({
