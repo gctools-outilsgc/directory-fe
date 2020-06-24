@@ -33,10 +33,17 @@ export const ProfileCardDisplay = (props) => {
             {user.titleFr ? user.titleFr : ''}
           </div>
         )}
-        <div className="profile-title">
-          {user.team ?
+        {(localizer.lang === 'en_CA') ? (
+          <div className="profile-title">
+            {user.team ?
             user.team.organization.nameEn : ''}
-        </div>
+          </div>
+        ) : (
+          <div className="profile-title">
+            {user.team ?
+            user.team.organization.nameFr : ''}
+          </div>
+        )}
         <ul className="list-unstyled mt-3">
           <li className="mb-2">
             <div>
