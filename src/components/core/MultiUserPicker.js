@@ -149,6 +149,7 @@ const MultiUserPicker = (props) => {
     <div>
       <Modal
         isOpen={isOpen}
+        toggle={closeButtonClick}
         centered
         autoFocus
         onEnter={onEnter}

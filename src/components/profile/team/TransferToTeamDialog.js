@@ -121,6 +121,7 @@ export const TransferToTeamDialog = (props) => {
           }) => (
             <Modal
               isOpen={isOpen}
+              toggle={closeButtonClick}
               centered
               autoFocus
               onEnter={onEnter}
