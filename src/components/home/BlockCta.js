@@ -20,11 +20,11 @@ const BlockCta = (props) => {
     <div className="bg-gradient text-light p-5">
       <Container>
         <Row className="flex">
-          <Col sm="8" className="align-self-center">
+          <Col lg="6" className="align-self-center">
             <h2>{heading}</h2>
             <div>{pList}</div>
           </Col>
-          <Col sm="4" className="align-self-center">
+          <Col lg="6" className="align-self-center">
             <Button
               href={actionLink}
               color="light"
