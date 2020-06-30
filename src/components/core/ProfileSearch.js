@@ -56,6 +56,11 @@ class ProfileSearch extends React.Component {
               gcID
               name
               avatar
+              email
+              mobilePhone
+              officePhone
+              address{id streetAddress city }
+              team{id nameEn nameFr organization{id nameEn nameFr}}
             }          }`}
         skip={this.state.skip}
         variables={{ name: this.state.value }}

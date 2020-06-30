@@ -59,9 +59,14 @@ class search extends React.Component {
         <ListGroupItem key={a.gcID}>
           <a href={`/p/${a.gcID}`} className="listsearch">
             <img className="imgsearch" src={a.avatar} alt="Card image cap" />
-            <ListGroupItemHeading>{a.name}</ListGroupItemHeading>
+            <ListGroupItemHeading>{a.name}  {a.email} </ListGroupItemHeading>
             <ListGroupItemText>
-              Depart name
+            mobile: {a.mobilePhone}   office: {a.officePhone}
+            </ListGroupItemText>
+            <ListGroupItemText>
+            {a.address.streetAddress}, {a.address.city}
+            </ListGroupItemText>            <ListGroupItemText>
+            Team: {a.team.nameEn}   Organization: {a.team.organization.nameEn}
             </ListGroupItemText>
           </a>
         </ListGroupItem>
