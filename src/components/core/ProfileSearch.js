@@ -84,6 +84,11 @@ class ProfileSearch extends React.Component {
                     value={this.state.value}
                     placeholder={__('Search Profiles')}
                     className="search-round"
+                    onKeyPress={(event) => {
+                      if (event.key === 'Enter') {
+                        this.handleClick(checkResult);
+                      }
+                    }}
                   />
                   <InputGroupAddon addonType="prepend">
                     <Button
