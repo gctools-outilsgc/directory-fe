@@ -61,10 +61,12 @@ class search extends React.Component {
             <img className="imgsearch" src={a.avatar} alt="Card image cap" />
             <ListGroupItemHeading>{a.name}  {a.email} </ListGroupItemHeading>
             <ListGroupItemText>
-            mobile: {a.mobilePhone}   office: {a.officePhone}
+            mobile: {a.mobilePhone !== null ? a.mobilePhone : ""}, 
+            office: {a.officePhone !== null ? a.officePhone : ""}, 
             </ListGroupItemText>
             <ListGroupItemText>
-            {a.address.streetAddress}, {a.address.city}
+            {a.address.streetAddress !== null ? a.address.streetAddress : ""}, 
+            {a.address.city !== null ? a.address.city : ""},             
             </ListGroupItemText>            <ListGroupItemText>
             Team: {a.team.nameEn}   Organization: {a.team.organization.nameEn}
             </ListGroupItemText>
