@@ -20,6 +20,14 @@ class search extends React.Component {
     this.setState({ searchResult: location.state.detail });
  }
 
+ componentWillReceiveProps(nextProps){
+  const { match, location, history } = this.props;
+    
+  if(nextProps.location.state.detail){
+    this.setState({ searchResult: nextProps.location.state.detail });
+   }
+}
+
  sortDescAndRender(event) {
     let searchArr = Object.values(event);
     searchArr.sort(function(a, b) {
