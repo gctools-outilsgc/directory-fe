@@ -79,7 +79,7 @@ export const ProfileCardDisplay = (props) => {
                 <span className="mr-1">
                   {/* Create the googlemaps link with the address */}
                   {userAddress ?
-                    <a href={`https://maps.google.com/?q=${userAddress.streetAddress}${userAddress.city}${userAddress.province}${userAddress.postalCode}${userAddress.country}`}> {/* eslint-disable-line */}
+                    <a href={`https://maps.google.com/?q=${userAddress.streetAddress}${userAddress.city}${userAddress.province}${userAddress.postalCode}${userAddress.country}`} target="_blank" rel="noopener noreferrer"> {/* eslint-disable-line */}
                       {userAddress.streetAddress+' '+userAddress.city+' '+userAddress.province+' '+userAddress.postalCode+' '+userAddress.country} {/* eslint-disable-line */}
                     </a> : ''
                   }
