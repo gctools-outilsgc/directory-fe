@@ -49,7 +49,8 @@ export const ProfileCardDisplay = (props) => {
             <div>
               <div className="font-weight-bold">{__('Email')}</div>
               <span className="list-desc-ph">
-                {user.email ? user.email : ''}
+                {user.email ?
+                  <a href={`mailto:${user.email}`}>{user.email}</a> : ''}
               </span>
             </div>
           </li>
@@ -57,7 +58,8 @@ export const ProfileCardDisplay = (props) => {
             <div>
               <div className="font-weight-bold">{__('Work')}</div>
               <span className="list-desc-ph">
-                {user.officePhone ? user.officePhone : ''}
+                {/* eslint-disable-next-line */}
+                {user.officePhone ? <a href={`tel:${user.officePhone}`}>{user.officePhone}</a> : ''}
               </span>
             </div>
           </li>
@@ -65,7 +67,8 @@ export const ProfileCardDisplay = (props) => {
             <div>
               <div className="font-weight-bold">{__('Mobile')}</div>
               <span className="list-desc-ph">
-                {user.mobilePhone ? user.mobilePhone : ''}
+                {/* eslint-disable-next-line */}
+                {user.mobilePhone ? <a href={`tel:${user.mobilePhone}`}>{user.mobilePhone}</a> : ''}
               </span>
             </div>
           </li>
@@ -74,19 +77,12 @@ export const ProfileCardDisplay = (props) => {
               <div className="font-weight-bold">{__('Address')}</div>
               <span className="list-desc-ph">
                 <span className="mr-1">
-                  {userAddress ? userAddress.streetAddress : ''}
-                </span>
-                <span className="mr-1">
-                  {userAddress ? userAddress.city : ''}
-                </span>
-                <span className="mr-1">
-                  {userAddress ? userAddress.province : ''}
-                </span>
-                <span className="mr-1">
-                  {userAddress ? userAddress.postalCode : ''}
-                </span>
-                <span className="mr-1">
-                  {userAddress ? userAddress.country : ''}
+                  {/* Create the googlemaps link with the address */}
+                  {userAddress ?
+                    <a href={`https://maps.google.com/?q=${userAddress.streetAddress}${userAddress.city}${userAddress.province}${userAddress.postalCode}${userAddress.country}`} target="_blank" rel="noopener noreferrer"> {/* eslint-disable-line */}
+                      {userAddress.streetAddress+' '+userAddress.city+' '+userAddress.province+' '+userAddress.postalCode+' '+userAddress.country} {/* eslint-disable-line */}
+                    </a> : ''
+                  }
                 </span>
               </span>
             </div>
