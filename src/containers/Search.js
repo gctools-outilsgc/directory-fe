@@ -17,13 +17,13 @@ class search extends React.Component {
 
   componentDidMount() {
     const { match, location, history } = this.props;
-    this.setState({ searchResult: location.state.detail });
+    this.setState({ searchResult: location.state ? location.state.detail:'' });
  }
 
  componentWillReceiveProps(nextProps){
   const { match, location, history } = this.props;
     
-  if(nextProps.location.state.detail){
+  if(nextProps.location.state){
     this.setState({ searchResult: nextProps.location.state.detail });
    }
 }
@@ -80,7 +80,7 @@ class search extends React.Component {
           </a>
         </ListGroupItem>
       </div>
-    )) : [];
+    )) : 'No result found / Aucun résultat trouver';
 
     return (
       <Container>
