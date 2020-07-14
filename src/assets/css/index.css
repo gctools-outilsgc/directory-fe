@@ -117,6 +117,27 @@ animation: LoadingText 2s ease infinite;
   display:none;
 }
 
+.search-round{
+  border-top-left-radius:16px;
+  border-bottom-left-radius:16px;
+}
+
+.search-button{
+  background-color: #FFF;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 2px rgba(0,0,0,0.2);
+    transition: border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+  border-top-right-radius:16px !important;
+  border-bottom-right-radius:16px !important;
+  color: #0a5d6a;
+}
+
+.search-button:hover{
+  background-color: #e4e4e4;
+  color: #0a5d6a;
+  border: 1px solid #ccc;
+}
+
 .nav-tabs .nav-item:hover{
   cursor: pointer;
 }
@@ -342,4 +363,31 @@ animation: LoadingText 2s ease infinite;
     padding-right: 0 !important;
     margin-top: 115px;
   }
+}
+
+.imgsearch{
+  float: left;
+  padding-right: 2%;
+}
+
+.search-bar{
+  padding: 5%;
+}
+
+.filter-section{
+  padding: .75rem 1.25rem;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.125);
+  border-top-left-radius: .35rem;
+  border-top-right-radius: .35rem;
+  padding-left: 3%;
+}
+
+.search-address{
+  padding-left:15px;
+}
+
+.search-email{
+  vertical-align: -webkit-baseline-middle;
 }
