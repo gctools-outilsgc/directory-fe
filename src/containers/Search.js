@@ -82,28 +82,28 @@ class search extends React.Component {
               </Row>
               <Row>
                 <Col xs="auto">
-                  <span className="font-weight-bold"> Team: </span>{a.team.nameEn}
+                  <span className="font-weight-bold"> {__('Teams')} </span>{a.team.nameEn}
                 </Col>
                 <Col xs="auto">
-                  <span className="font-weight-bold">Organization: </span>{a.team.organization.nameEn}
+                  <span className="font-weight-bold">{__('Organization')}: </span>{a.team.organization.nameEn}
                 </Col>
               </Row>
               <Row>
                 <Col xs="auto">
-                  {a.mobilePhone !== null ? <div><span className="font-weight-bold">mobile: </span>{a.mobilePhone}</div>: ""}
+                  {a.mobilePhone !== null ? <div><span className="font-weight-bold">{__('Mobile')}: </span>{a.mobilePhone}</div>: ""}
                 </Col>
                 <Col xs="auto">
-                  {a.officePhone !== null ? <div><span className="font-weight-bold">office: </span>{a.officePhone}</div> : ""}
+                  {a.officePhone !== null ? <div><span className="font-weight-bold">{__('Office')}: </span>{a.officePhone}</div> : ""}
                 </Col>
               </Row>
               <Row>
-                <div className="search-address">{a.address !== null ? <div><span className="font-weight-bold">address: </span>{a.address.streetAddress+ ', ' +a.address.city}</div> : ""}   </div>          
+                <div className="search-address">{a.address !== null ? <div><span className="font-weight-bold">{__('Address')}: </span>{a.address.streetAddress+ ', ' +a.address.city}</div> : ""}   </div>          
               </Row>  
             </Col>
           </Row>
         </ListGroupItem>
       </div>
-    )) : 'No result found / Aucun résultat trouver';
+    )) : __('No result found');
 
     return (
       <Container>
@@ -114,11 +114,11 @@ class search extends React.Component {
           <Col xs="2" sm="2">
             <Form>
                 <FormGroup>
-                <Label for="sort">Sort by</Label>
+                <Label for="sort">{__('Sort by')}</Label>
                   <Input type="select" onChange={this.handleAlphabetClick.bind(this)} name="sort" id="sort">
                     <option>---</option>
-                    <option value="desc">Alphabetical</option>
-                    <option value="asc">Unalphabetical</option>                  
+                    <option value="desc">{__('Alphabetical')}</option>
+                    <option value="asc">{__('Unalphabetical')}</option>                  
                   </Input>
                 </FormGroup>
  
