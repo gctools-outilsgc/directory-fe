@@ -3,7 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { withRouter } from "react-router";
 import ProfileSearch from "../components/core/ProfileSearch"
-import { Container, Row, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, Col, Form, FormGroup, Input, Label } from 'reactstrap';
+import { Container, Row, ListGroup, ListGroupItem, ListGroupItemHeading, Col, Form, FormGroup, Input, Label } from 'reactstrap';
 
 // A simple component that shows the pathname of the current location
 class search extends React.Component {
@@ -65,19 +65,42 @@ class search extends React.Component {
     ? this.state.searchResult.map(a => (
       <div>
         <ListGroupItem key={a.gcID}>
-          <a href={`/p/${a.gcID}`} className="listsearch">
-            <img className="imgsearch" src={a.avatar} alt="Card image cap" />
-            <ListGroupItemHeading>{a.name}  {a.email} </ListGroupItemHeading>
-            <ListGroupItemText>
-            {a.mobilePhone !== null ? 'mobile: '+ a.mobilePhone : ""} 
-            {a.officePhone !== null ? 'office: '+ a.officePhone : ""} 
-            </ListGroupItemText>
-            <ListGroupItemText>
-            {a.address !== null ? a.address.streetAddress+ '' +a.address.city : ""}             
-            </ListGroupItemText>            <ListGroupItemText>
-            Team: {a.team.nameEn}   Organization: {a.team.organization.nameEn}
-            </ListGroupItemText>
-          </a>
+          <Row>
+            <Col xs="auto">
+              <a href={`/p/${a.gcID}`} >
+                <img className="imgsearch" src={a.avatar} alt="Card image cap" />
+              </a>
+            </Col>
+            <Col xs="auto">
+              <Row>         
+                <Col xs="auto">
+                  <span className="profile-name"> {a.name}</span>
+                </Col>
+                <Col xs="auto">
+                  <span className="search-email">{a.email}</span>
+                </Col>
+              </Row>
+              <Row>
+                <Col xs="auto">
+                  <span className="font-weight-bold"> Team: </span>{a.team.nameEn}
+                </Col>
+                <Col xs="auto">
+                  <span className="font-weight-bold">Organization: </span>{a.team.organization.nameEn}
+                </Col>
+              </Row>
+              <Row>
+                <Col xs="auto">
+                  {a.mobilePhone !== null ? <div><span className="font-weight-bold">mobile: </span>{a.mobilePhone}</div>: ""}
+                </Col>
+                <Col xs="auto">
+                  {a.officePhone !== null ? <div><span className="font-weight-bold">office: </span>{a.officePhone}</div> : ""}
+                </Col>
+              </Row>
+              <Row>
+                <div className="search-address">{a.address !== null ? <div><span className="font-weight-bold">address: </span>{a.address.streetAddress+ ', ' +a.address.city}</div> : ""}   </div>          
+              </Row>  
+            </Col>
+          </Row>
         </ListGroupItem>
       </div>
     )) : 'No result found / Aucun résultat trouver';
