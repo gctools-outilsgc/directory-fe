@@ -42,10 +42,15 @@ msgstr ""
 
 #: 232:21 src/components/onboard/OnboardStep5.js
 msgid "Next"
-msgstr "Save"
+msgstr "Continue"
 
 msgid "You cannot be your own supervisor. Please pick someone else."
 msgstr ""
 
 msgid "Supervisor"
 msgstr "Supervisor"
+
+#: 174:21 src/components/onboard/OnboardStep5.js
+msgid "Save"
+msgstr ""
+

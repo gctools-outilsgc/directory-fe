@@ -1331,10 +1331,10 @@
     react "^16.2.0"
     react-dom "^16.2.0"
 
-"@gctools-components/global-nav@^0.4.11":
-  version "0.4.11"
-  resolved "https://registry.yarnpkg.com/@gctools-components/global-nav/-/global-nav-0.4.11.tgz#05b1eeee79bed4d9ed36f1be8a9409c27377bed5"
-  integrity sha512-RffHnFU7JBwWqjAp5PwgHsi+QSE7uRQbl0nKQ/FMZUvJXWM6wj2HgwSStU1J5Knx/1OWOKbU/2hgPcDjU1nneA==
+"@gctools-components/global-nav@^0.4.14":
+  version "0.4.14"
+  resolved "https://registry.yarnpkg.com/@gctools-components/global-nav/-/global-nav-0.4.14.tgz#a91f45fa55b3c0927b76d908584509ad3a54411b"
+  integrity sha512-vjNJflAk/Pu4/VkyH55pSANS+jXIfbjNcNaBmTC/DYVzyvWoRxrFvzd0T1YSZmfTjCTJ/JFq5dOhXIFW+V9wxg==
   dependencies:
     "@babel/cli" "^7.4.3"
     "@babel/core" "^7.4.3"
@@ -10211,7 +10211,7 @@ react-apollo@^2.5.5:
     ts-invariant "^0.4.2"
     tslib "^1.9.3"
 
-react-app-polyfill@^1.0.1:
+react-app-polyfill@^1.0.5:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/react-app-polyfill/-/react-app-polyfill-1.0.6.tgz#890f8d7f2842ce6073f030b117de9130a5f385f0"
   integrity sha512-OfBnObtnGgLGfweORmdZbyEz+3dgVePQBb3zipiaDsMHV1NpWm0rDFYIVXFV/AK+x4VIIfWHhrdMIeoTLyRr2g==

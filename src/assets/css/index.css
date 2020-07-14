@@ -370,11 +370,6 @@ animation: LoadingText 2s ease infinite;
   padding-right: 2%;
 }
 
-.listsearch{
-  display: block;
-  overflow: auto;
-}
-
 .search-bar{
   padding: 5%;
 }
@@ -387,4 +382,12 @@ animation: LoadingText 2s ease infinite;
   border-top-left-radius: .35rem;
   border-top-right-radius: .35rem;
   padding-left: 3%;
+}
+
+.search-address{
+  padding-left:15px;
+}
+
+.search-email{
+  vertical-align: -webkit-baseline-middle;
 }

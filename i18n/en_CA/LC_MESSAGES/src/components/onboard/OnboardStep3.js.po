@@ -66,3 +66,7 @@ msgstr "Continue"
 msgid "Step3T2"
 msgstr "Your phone number"
 
+#: 233:37 src/components/onboard/OnboardStep3.js
+msgid "Save"
+msgstr ""
+

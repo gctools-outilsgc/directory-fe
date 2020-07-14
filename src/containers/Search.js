@@ -25,16 +25,16 @@ class search extends React.Component {
 
   componentDidMount() {
     const { match, location, history } = this.props;
-    this.setState({ searchResult: location.state.detail });
+    this.setState({ searchResult: location.state ? location.state.detail:'' });
  }
 
  componentWillReceiveProps(nextProps){
   const { match, location, history } = this.props;
     
-  if(nextProps.location.state.detail){
+  if(nextProps.location.state){
     this.setState({ searchResult: nextProps.location.state.detail });
    }
-  }
+}
 
  sortDescAndRender(event) {
     let searchArr = Object.values(event);
@@ -120,21 +120,43 @@ class search extends React.Component {
           const currentTodos = checkResult.search.slice(indexOfFirstTodo, indexOfLastTodo);
           results = currentTodos.map(a => ( 
             <ListGroupItem key={a.gcID}>
-              <a href={`/p/${a.gcID}`} className="listsearch">
+          <Row>
+            <Col xs="auto">
+              <a href={`/p/${a.gcID}`} >
                 <img className="imgsearch" src={a.avatar} alt="Card image cap" />
-                <ListGroupItemHeading>{a.name}  {a.email} </ListGroupItemHeading>
-                <ListGroupItemText>
-                  {a.mobilePhone !== null ? 'mobile: '+ a.mobilePhone : ""} 
-                  {a.officePhone !== null ? 'office: '+ a.officePhone : ""} 
-                </ListGroupItemText>
-                <ListGroupItemText>
-                  {a.address !== null ? a.address.streetAddress+ '' +a.address.city : ""}             
-                </ListGroupItemText>
-                <ListGroupItemText>
-                  Team: {a.team.nameEn}   Organization: {a.team.organization.nameEn}
-                </ListGroupItemText>
               </a>
-            </ListGroupItem>
+            </Col>
+            <Col xs="auto">
+              <Row>         
+                <Col xs="auto">
+                  <span className="profile-name"> {a.name}</span>
+                </Col>
+                <Col xs="auto">
+                  <span className="search-email">{a.email}</span>
+                </Col>
+              </Row>
+              <Row>
+                <Col xs="auto">
+                  <span className="font-weight-bold"> {__('Teams')} </span>{a.team.nameEn}
+                </Col>
+                <Col xs="auto">
+                  <span className="font-weight-bold">{__('Organization')}: </span>{a.team.organization.nameEn}
+                </Col>
+              </Row>
+              <Row>
+                <Col xs="auto">
+                  {a.mobilePhone !== null ? <div><span className="font-weight-bold">{__('Mobile')}: </span>{a.mobilePhone}</div>: ""}
+                </Col>
+                <Col xs="auto">
+                  {a.officePhone !== null ? <div><span className="font-weight-bold">{__('Office')}: </span>{a.officePhone}</div> : ""}
+                </Col>
+              </Row>
+              <Row>
+                <div className="search-address">{a.address !== null ? <div><span className="font-weight-bold">{__('Address')}: </span>{a.address.streetAddress+ ', ' +a.address.city}</div> : ""}   </div>          
+              </Row>  
+            </Col>
+          </Row>
+        </ListGroupItem>
           ))
        
           const numberResults = Object.keys(checkResult.search).length;
@@ -153,7 +175,7 @@ class search extends React.Component {
           });
             
         }else{
-          results = [];
+          results =  __('No result found');
         } 
             
         const styleClasses = (!data)
@@ -168,11 +190,11 @@ class search extends React.Component {
               <Col xs="2" sm="2">
                 <Form>
                   <FormGroup>
-                    <Label for="sort">Sort by</Label>
+                    <Label for="sort">{__('Sort by')}</Label>
                     <Input type="select" onChange={(e) => this.handleAlphabetClick(e)} name="sort" id="sort">
                       <option>---</option>
-                      <option value="desc">Alphabetical</option>
-                      <option value="asc">Unalphabetical</option>                  
+                      <option value="desc">{__('Alphabetical')}</option>
+                      <option value="asc">{__('Unalphabetical')}</option>                  
                     </Input>
                   </FormGroup>
                 </Form>

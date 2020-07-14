@@ -30,6 +30,7 @@ export class OnboardStep2 extends Component {
       titleFr: this.props.userObject.titleFr || '',
       team: this.props.userObject.team || '',
       teamId: '',
+      change: false,
     };
     this.handleNext = this.handleNext.bind(this);
   }
@@ -91,6 +92,7 @@ export class OnboardStep2 extends Component {
                       onChange={(e) => {
                         this.setState({
                           name: e.target.value,
+                          change: true,
                         });
                       }}
                     />
@@ -110,6 +112,7 @@ export class OnboardStep2 extends Component {
                       onChange={(e) => {
                         this.setState({
                           email: e.target.value,
+                          change: true,
                         });
                       }}
                     />
@@ -134,6 +137,7 @@ export class OnboardStep2 extends Component {
                         onChange={(e) => {
                           this.setState({
                             titleEn: e.target.value,
+                            change: true,
                           });
                         }}
                       />
@@ -157,6 +161,7 @@ export class OnboardStep2 extends Component {
                         onChange={(e) => {
                           this.setState({
                             titleFr: e.target.value,
+                            change: true,
                           });
                         }}
                       />
@@ -171,6 +176,7 @@ export class OnboardStep2 extends Component {
                     onResultSelect={(d) => {
                       this.setState({
                         teamId: d.teams[0].id,
+                        change: true,
                       });
                     }}
                   />
@@ -182,7 +188,11 @@ export class OnboardStep2 extends Component {
                     type="submit"
                     color="primary"
                   >
-                    {__('Next')}
+                    {this.state.change ?
+                      __('Save')
+                      :
+                      __('Next')
+                    }
                   </Button>
                 </div>
               </Row>
