@@ -15,12 +15,16 @@ class search extends React.Component {
       searchResult: [],
       currentPage: 1,
       todosPerPage: 6,
-      order:''
+      order:'',
+      filters:{org:[],team:[]}
+      
     };
     this.handleAlphabetClick = this.handleAlphabetClick.bind(this);
     this.handleClick = this.handleClick.bind(this);
-    this.next_save = this.next_save.bind(this);    
-        
+    this.next_save = this.next_save.bind(this);
+    this.onChangeFilters = this.onChangeFilters.bind(this);
+    this.filterssearch = this.filterssearch.bind(this);
+    
   }
 
   componentDidMount() {
@@ -30,7 +34,6 @@ class search extends React.Component {
 
  componentWillReceiveProps(nextProps){
   const { match, location, history } = this.props;
-    
   if(nextProps.location.state){
     this.setState({ searchResult: nextProps.location.state.detail });
    }
@@ -57,14 +60,11 @@ class search extends React.Component {
   }
 
   next_save(prev_next, pageNumbers) {
-    console.log(pageNumbers)
     if(prev_next >= 1 && prev_next <= pageNumbers[pageNumbers.length-1]){
-      console.log(prev_next)
-    this.setState({
-      currentPage: Number(prev_next)
-    });
+      this.setState({
+        currentPage: Number(prev_next)
+      });
     }
-    
   }
 
   handleClick(event) {
@@ -77,10 +77,56 @@ class search extends React.Component {
     this.setState({order:e.target.value});
   }
 
+  onChangeFilters(type,e){
+    var filtersArray = this.state.filters
+    if(type =='org'){
+      if(filtersArray.org.includes(e.target.value)){
+        var filtered = filtersArray.org.filter(function(value, index, arr){ return value !== e.target.value;});
+        filtersArray.org = filtered
+        this.setState({filters:filtersArray});
+      }else{
+        filtersArray.org.push(e.target.value)
+        this.setState({filters:filtersArray})
+      }
+    }else{
+      if(filtersArray.team.includes(e.target.value)){
+        var filtered = filtersArray.team.filter(function(value, index, arr){ return value !== e.target.value;});
+        filtersArray.team = filtered
+        this.setState({ filters: filtersArray });  
+      }else{
+        filtersArray.team.push(e.target.value)
+        this.setState({filters:filtersArray})
+      }
+    }
+  }
+
+  filterssearch(search){
+    var filters = this.state.filters
+    var filtersOrg = filters.org
+    var filtersTeam = filters.team
+    var searchResult = search.filter(function(profiles) {
+      if(Object.keys(filtersOrg).length >0 && Object.keys(filtersTeam).length >0 ){
+        return profiles.team.organization.nameEn == filtersOrg && profiles.team.nameEn == filtersTeam;
+      }else if(Object.keys(filtersOrg).length == 0 && Object.keys(filtersTeam).length >0){ 
+        return profiles.team.nameEn == filtersTeam;       
+      }else if(Object.keys(filtersTeam).length ==0 && Object.keys(filtersOrg).length >0){      
+        return profiles.team.organization.nameEn == filtersOrg;       
+      }else{
+        return search
+      }
+    });
+
+    return searchResult
+  }
+
   render() {
     const { currentPage, todosPerPage } = this.state;
-    const pageNumbers = [];
-    let results, renderPageNumbers = [];
+    let results, renderPageNumbers, pageNumbers = [];
+    var filters = this.state.filters
+    var filtersOrg = filters.org
+    var filtersTeam = filters.team
+    var filtersListOrgs, filtersListTeams = ''
+    
     return (
       <Query 
         query={gql`
@@ -112,6 +158,9 @@ class search extends React.Component {
         return <div>Error</div>
 
         if( Object.keys(checkResult).length >0) {
+          if(Object.keys(filtersOrg).length >0 || Object.keys(filtersTeam).length >0 ){
+            checkResult.search = this.filterssearch(checkResult.search)   
+          }
           if(this.state.order == 'desc'){
             checkResult.search = this.sortDescAndRender(checkResult.search)
           }else if(this.state.order == 'asc'){
@@ -173,7 +222,37 @@ class search extends React.Component {
               </PaginationItem>
             );
           });
-            
+
+          let teamsList = [];
+          let orgsList = [];
+
+          checkResult.search.forEach(el => {
+            teamsList[el.team.nameEn] = (teamsList[el.team.nameEn] || 0) + 1;
+            orgsList[el.team.organization.nameEn] = (orgsList[el.team.organization.nameEn] || 0) + 1;            
+          })
+
+
+        filtersListTeams = Object.keys(teamsList).map((team, number) => (
+          <li className="" key={number}>
+           <FormGroup>
+        <Label>
+          <Input type="checkbox" checked={this.state.filters.team.includes(team)} value={team} name='team' onChange={(e) =>this.onChangeFilters('team', e)}/>
+          {team}: {teamsList[team]}
+        </Label>
+      </FormGroup>
+          </li>
+      ))
+
+      filtersListOrgs = Object.keys(orgsList).map((org, number) => (
+        <li className="" key={number}>
+                   <FormGroup check>
+        <Label check>
+          <Input type="checkbox" checked={this.state.filters.org.includes(org)}  name="org" value={org} onChange={(e) =>this.onChangeFilters('org', e)}/>
+          {org}: {orgsList[org]}
+        </Label>
+      </FormGroup>
+        </li>
+    ))
         }else{
           results =  __('No result found');
         } 
@@ -201,10 +280,13 @@ class search extends React.Component {
               </Col> 
             </Row>
             <Row>
-              <Col xs="12" sm="10">
+              <Col xs="10" sm="10">
                 <ul>{results}</ul>
               </Col>
-              <Col className='filter-section'>
+              <Col xs="2" sm="2" className='filter-section'>
+              
+              <ul>{filtersListTeams}</ul>
+              <ul>{filtersListOrgs}</ul>
                 <h5>Filter</h5>
                 <Form>
                   <FormGroup>
