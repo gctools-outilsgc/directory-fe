@@ -3,14 +3,12 @@ import PropTypes from 'prop-types';
 import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
 
-// import classnames from 'classnames';
 import styled from 'styled-components';
 
 import { Query, Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
 
 import {
-  TabPane,
   UncontrolledCollapse,
   Button
 } from 'reactstrap';
@@ -30,7 +28,6 @@ import GQLEditTeamDialog from './GQLEditTeamDialog';
 import MultiUserPicker from '../../core/MultiUserPicker';
 import TransferConfirmation from './TransferConfirmation';
 import I18nTransferToSupervisorDialog from './TransferToSupervisorDialog';
-// import TeamAvatar from './TeamAvatar';
 import refetchMutated from '../../../utils/refetchMutated';
 import ErrorModal, { err } from '../../core/ErrorModal';
 
@@ -53,8 +50,8 @@ const TeamList = (props) => {
     profile,
   } = props;
   return (
-    <TabPane tabId={teamId} key={teamId} className="w-100">
-      <div className="d-flex pl-3 pr-3 tab-head">
+    <div key={teamId} className="w-100">
+      <div className="d-flex pl-3 pr-3">
         <div className="mr-auto font-weight-bold">
           {__('people')}
         </div>
@@ -104,7 +101,7 @@ const TeamList = (props) => {
       <div className="p-3">
         <I18nYourTeamMemberList members={members} profile={profile} />
       </div>
-    </TabPane>
+    </div>
   );
 };
 
@@ -344,25 +341,14 @@ class GQLYouTeamsTab extends React.Component {
   constructor(props) {
     super(props);
 
-    this.toggle = this.toggle.bind(this);
     this.state = {
-      activeTab: undefined,
       createDialogOpen: false,
       editDialogOpen: false,
       editTeam: {},
     };
   }
 
-  toggle(tab) {
-    if (this.state.activeTab !== tab) {
-      this.setState({
-        activeTab: tab,
-      });
-    }
-  }
-
   render() {
-    // const { activeTab } = this.state;
     return (
       <Query
         query={GET_YOUR_TEAM}
@@ -386,7 +372,6 @@ class GQLYouTeamsTab extends React.Component {
           const defaultMembers = (sortedTeams.length > 0) ?
             sortedTeams[0].members : [];
 
-          // const currentTab = activeTab || defaultId;
           const accordionTeam = sortedTeams.map(({
             id,
             nameEn,
