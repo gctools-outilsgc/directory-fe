@@ -5,7 +5,7 @@ import { Query, withApollo } from 'react-apollo';
 import PropTypes from "prop-types";
 import { withRouter } from "react-router";
 import ProfileSearch from "../components/core/ProfileSearch"
-import { Container, Row, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, Col, Form, FormGroup, Input, Label, Pagination, PaginationItem, PaginationLink } from 'reactstrap';
+import { Container, Row, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, Col, Form, FormGroup, Input, Label, Pagination, PaginationItem, PaginationLink, Badge, CustomInput, Button } from 'reactstrap';
 
 // A simple component that shows the pathname of the current location
 class search extends React.Component {
@@ -16,7 +16,9 @@ class search extends React.Component {
       currentPage: 1,
       todosPerPage: 6,
       order:'',
-      filters:{org:[],team:[]}
+      filters:{org:[],team:[]},
+      limitTeams:5,
+      limitOrgs:5
       
     };
     this.handleAlphabetClick = this.handleAlphabetClick.bind(this);
@@ -24,7 +26,9 @@ class search extends React.Component {
     this.next_save = this.next_save.bind(this);
     this.onChangeFilters = this.onChangeFilters.bind(this);
     this.filterssearch = this.filterssearch.bind(this);
-    
+    this.onLoadMore = this.onLoadMore.bind(this); 
+    this.onLoadLess = this.onLoadLess.bind(this);
+    this.renderLoadButton = this.renderLoadButton.bind(this);       
   }
 
   componentDidMount() {
@@ -119,6 +123,42 @@ class search extends React.Component {
     return searchResult
   }
 
+  onLoadMore(type) {
+    if (type == 'team'){
+      this.setState({
+        limitTeams: this.state.limitTeams + 5
+      });
+    }else{
+      this.setState({
+        limitOrgs: this.state.limitOrgs + 5
+      });
+    }
+  }
+
+  onLoadLess(type) {
+    if (type == 'team'){
+      this.setState({
+        limitTeams: 5
+      });
+    }else{
+      this.setState({
+        limitOrgs: 5
+      });
+    }
+  }
+
+  renderLoadButton(List, type) {
+  var limit = type == 'org' ? this.state.limitOrgs : this.state.limitTeams
+  
+    if(Object.keys(List).length <= 5){
+     return ''
+    }else if(limit >= Object.keys(List).length){
+       return <Button onClick={() =>{this.onLoadLess(type)}} color="link">Load Less</Button>
+    }else{
+      return <Button onClick={() =>{this.onLoadMore(type)}} color="link">Load more</Button>
+    }
+  }
+
   render() {
     const { currentPage, todosPerPage } = this.state;
     let results, renderPageNumbers, pageNumbers = [];
@@ -126,6 +166,8 @@ class search extends React.Component {
     var filtersOrg = filters.org
     var filtersTeam = filters.team
     var filtersListOrgs, filtersListTeams = ''
+    let teamsList = [];
+    let orgsList = [];
     
     return (
       <Query 
@@ -223,8 +265,7 @@ class search extends React.Component {
             );
           });
 
-          let teamsList = [];
-          let orgsList = [];
+
 
           checkResult.search.forEach(el => {
             teamsList[el.team.nameEn] = (teamsList[el.team.nameEn] || 0) + 1;
@@ -232,27 +273,19 @@ class search extends React.Component {
           })
 
 
-        filtersListTeams = Object.keys(teamsList).map((team, number) => (
-          <li className="" key={number}>
-           <FormGroup>
-        <Label>
-          <Input type="checkbox" checked={this.state.filters.team.includes(team)} value={team} name='team' onChange={(e) =>this.onChangeFilters('team', e)}/>
-          {team}: {teamsList[team]}
-        </Label>
-      </FormGroup>
-          </li>
-      ))
+        filtersListTeams = Object.keys(teamsList).slice(0,this.state.limitTeams).map((team, number) => (
+          <Label style={{margin: 1 + '%'}} check>       
+            <Input type="checkbox" className="filterCheckbox" checked={this.state.filters.team.includes(team)} value={team} name='team' onChange={(e) =>this.onChangeFilters('team', e)}/>
+            {team}<Badge style={{marginLeft: 5 + 'px'}}  pill>{teamsList[team]}</Badge>
+          </Label>
+        ))
 
-      filtersListOrgs = Object.keys(orgsList).map((org, number) => (
-        <li className="" key={number}>
-                   <FormGroup check>
-        <Label check>
-          <Input type="checkbox" checked={this.state.filters.org.includes(org)}  name="org" value={org} onChange={(e) =>this.onChangeFilters('org', e)}/>
-          {org}: {orgsList[org]}
+      filtersListOrgs = Object.keys(orgsList).slice(0,this.state.limitOrgs).map((org, number) => (
+        <Label style={{margin: 1 + '%'}} check>       
+          <Input type="checkbox" className="filterCheckbox" checked={this.state.filters.org.includes(org)}  name="org" value={org} onChange={(e) =>this.onChangeFilters('org', e)}/>
+          {org}<Badge style={{marginLeft: 5 + 'px'}} pill>{orgsList[org]}</Badge>
         </Label>
-      </FormGroup>
-        </li>
-    ))
+      ))
         }else{
           results =  __('No result found');
         } 
@@ -266,7 +299,7 @@ class search extends React.Component {
               <ProfileSearch />
             </div>
             <Row>
-              <Col xs="2" sm="2">
+              <Col xs="3" sm="2">
                 <Form>
                   <FormGroup>
                     <Label for="sort">{__('Sort by')}</Label>
@@ -280,31 +313,28 @@ class search extends React.Component {
               </Col> 
             </Row>
             <Row>
-              <Col xs="10" sm="10">
+              <Col xs="9" sm="9">
                 <ul>{results}</ul>
               </Col>
-              <Col xs="2" sm="2" className='filter-section'>
-              
-              <ul>{filtersListTeams}</ul>
-              <ul>{filtersListOrgs}</ul>
-                <h5>Filter</h5>
-                <Form>
-                  <FormGroup>
-                    <Label check>
-                      <Input type="checkbox" /> Internal
-                    </Label>
-                  </FormGroup>
-                  <FormGroup>
-                    <Label check>
-                      <Input type="checkbox" /> External
-                    </Label>
-                  </FormGroup>
-                  <FormGroup>
-                    <Label check>
-                      <Input type="checkbox" /> Department name
-                    </Label>
-                  </FormGroup>
-                </Form>
+              <Col xs="3" sm="3">
+              <div className="filter-section">
+              <h5>Filter</h5>
+               <FormGroup>
+        <Label for="exampleCheckbox">Organization</Label>
+        <div>
+        {filtersListOrgs}
+        {this.renderLoadButton(orgsList, 'org')}
+        </div>
+      </FormGroup>
+              <FormGroup>
+        <Label for="exampleCheckbox">Team</Label>
+        <div>
+        {filtersListTeams} 
+        {this.renderLoadButton(teamsList, 'team')}
+        </div>
+      </FormGroup>
+       
+                </div>
               </Col>
             </Row>
             <Row>

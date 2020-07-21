@@ -374,6 +374,14 @@ animation: LoadingText 2s ease infinite;
   padding: 5%;
 }
 
+.search-address{
+  padding-left:15px;
+}
+
+.search-email{
+  vertical-align: -webkit-baseline-middle;
+}
+
 .filter-section{
   padding: .75rem 1.25rem;
   margin-bottom: -1px;
@@ -384,10 +392,8 @@ animation: LoadingText 2s ease infinite;
   padding-left: 3%;
 }
 
-.search-address{
-  padding-left:15px;
-}
-
-.search-email{
-  vertical-align: -webkit-baseline-middle;
+.filterCheckbox{
+  margin-left: 0;
+  position: initial;
+  margin-right: 5px;
 }
