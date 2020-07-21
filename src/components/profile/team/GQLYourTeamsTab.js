@@ -15,7 +15,7 @@ import {
   Button
 } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faUser } from '@fortawesome/free-solid-svg-icons';
 
 import {
   GET_YOUR_TEAM,
@@ -401,22 +401,30 @@ class GQLYouTeamsTab extends React.Component {
                   id={`test-${id}`}
                   data-toggle="collapse"
                   color="link"
+                  block
+                  className="text-left"
                 >
                   {(nameEn === '') && 'Default Team'}
                   {(nameEn !== '') &&
                     (localizer.lang === 'en_CA') ?
                     nameEn : nameFr
                   }
-                  - Members: {members.length}
+                  <span className="pl-3">
+                    <span className="sr-only"> Members: </span>
+                    <FontAwesomeIcon icon={faUser} />
+                    <span className="pl-1">{members.length}</span>
+                  </span>
                 </Button>
               </AccordionHeader>
               <UncontrolledCollapse
                 toggler={`#test-${id}`}
                 data-parent="#teamAccordion"
+                className="border-top"
               >
                 <small>
                   {(id !== defaultId) && (
-                    <ul className="list-inline text-primary ml-n2 mb-1">
+                    // eslint-disable-next-line max-len
+                    <ul className="list-inline text-primary ml-n2 mb-1 mt-2">
                       <li className="list-inline-item">
                         <TransferTeamToSupervisorAction
                           profile={
