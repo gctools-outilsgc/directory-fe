@@ -397,3 +397,10 @@ animation: LoadingText 2s ease infinite;
   position: initial;
   margin-right: 5px;
 }
+
+.label-filters{
+  margin: 1%;
+}
+.badge-filters{
+  margin-left: 5px;
+}

@@ -5,6 +5,8 @@ import { Query, withApollo } from 'react-apollo';
 import PropTypes from "prop-types";
 import { withRouter } from "react-router";
 import ProfileSearch from "../components/core/ProfileSearch"
+import Filters from "../components/search/filters"
+
 import { Container, Row, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, Col, Form, FormGroup, Input, Label, Pagination, PaginationItem, PaginationLink, Badge, CustomInput, Button } from 'reactstrap';
 
 // A simple component that shows the pathname of the current location
@@ -17,18 +19,12 @@ class search extends React.Component {
       todosPerPage: 6,
       order:'',
       filters:{org:[],team:[]},
-      limitTeams:5,
-      limitOrgs:5
-      
     };
     this.handleAlphabetClick = this.handleAlphabetClick.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.next_save = this.next_save.bind(this);
-    this.onChangeFilters = this.onChangeFilters.bind(this);
     this.filterssearch = this.filterssearch.bind(this);
-    this.onLoadMore = this.onLoadMore.bind(this); 
-    this.onLoadLess = this.onLoadLess.bind(this);
-    this.renderLoadButton = this.renderLoadButton.bind(this);       
+    this.callbackFunction = this.callbackFunction.bind(this);     
   }
 
   componentDidMount() {
@@ -81,29 +77,6 @@ class search extends React.Component {
     this.setState({order:e.target.value});
   }
 
-  onChangeFilters(type,e){
-    var filtersArray = this.state.filters
-    if(type =='org'){
-      if(filtersArray.org.includes(e.target.value)){
-        var filtered = filtersArray.org.filter(function(value, index, arr){ return value !== e.target.value;});
-        filtersArray.org = filtered
-        this.setState({filters:filtersArray});
-      }else{
-        filtersArray.org.push(e.target.value)
-        this.setState({filters:filtersArray})
-      }
-    }else{
-      if(filtersArray.team.includes(e.target.value)){
-        var filtered = filtersArray.team.filter(function(value, index, arr){ return value !== e.target.value;});
-        filtersArray.team = filtered
-        this.setState({ filters: filtersArray });  
-      }else{
-        filtersArray.team.push(e.target.value)
-        this.setState({filters:filtersArray})
-      }
-    }
-  }
-
   filterssearch(search){
     var filters = this.state.filters
     var filtersOrg = filters.org
@@ -123,41 +96,9 @@ class search extends React.Component {
     return searchResult
   }
 
-  onLoadMore(type) {
-    if (type == 'team'){
-      this.setState({
-        limitTeams: this.state.limitTeams + 5
-      });
-    }else{
-      this.setState({
-        limitOrgs: this.state.limitOrgs + 5
-      });
-    }
-  }
-
-  onLoadLess(type) {
-    if (type == 'team'){
-      this.setState({
-        limitTeams: 5
-      });
-    }else{
-      this.setState({
-        limitOrgs: 5
-      });
-    }
-  }
-
-  renderLoadButton(List, type) {
-  var limit = type == 'org' ? this.state.limitOrgs : this.state.limitTeams
-  
-    if(Object.keys(List).length <= 5){
-     return ''
-    }else if(limit >= Object.keys(List).length){
-       return <Button onClick={() =>{this.onLoadLess(type)}} color="link">Load Less</Button>
-    }else{
-      return <Button onClick={() =>{this.onLoadMore(type)}} color="link">Load more</Button>
-    }
-  }
+  callbackFunction(childData) {
+    this.setState({filters: childData})
+}
 
   render() {
     const { currentPage, todosPerPage } = this.state;
@@ -165,9 +106,6 @@ class search extends React.Component {
     var filters = this.state.filters
     var filtersOrg = filters.org
     var filtersTeam = filters.team
-    var filtersListOrgs, filtersListTeams = ''
-    let teamsList = [];
-    let orgsList = [];
     
     return (
       <Query 
@@ -265,27 +203,6 @@ class search extends React.Component {
             );
           });
 
-
-
-          checkResult.search.forEach(el => {
-            teamsList[el.team.nameEn] = (teamsList[el.team.nameEn] || 0) + 1;
-            orgsList[el.team.organization.nameEn] = (orgsList[el.team.organization.nameEn] || 0) + 1;            
-          })
-
-
-        filtersListTeams = Object.keys(teamsList).slice(0,this.state.limitTeams).map((team, number) => (
-          <Label style={{margin: 1 + '%'}} check>       
-            <Input type="checkbox" className="filterCheckbox" checked={this.state.filters.team.includes(team)} value={team} name='team' onChange={(e) =>this.onChangeFilters('team', e)}/>
-            {team}<Badge style={{marginLeft: 5 + 'px'}}  pill>{teamsList[team]}</Badge>
-          </Label>
-        ))
-
-      filtersListOrgs = Object.keys(orgsList).slice(0,this.state.limitOrgs).map((org, number) => (
-        <Label style={{margin: 1 + '%'}} check>       
-          <Input type="checkbox" className="filterCheckbox" checked={this.state.filters.org.includes(org)}  name="org" value={org} onChange={(e) =>this.onChangeFilters('org', e)}/>
-          {org}<Badge style={{marginLeft: 5 + 'px'}} pill>{orgsList[org]}</Badge>
-        </Label>
-      ))
         }else{
           results =  __('No result found');
         } 
@@ -316,25 +233,8 @@ class search extends React.Component {
               <Col xs="9" sm="9">
                 <ul>{results}</ul>
               </Col>
-              <Col xs="3" sm="3">
-              <div className="filter-section">
-              <h5>Filter</h5>
-               <FormGroup>
-        <Label for="exampleCheckbox">Organization</Label>
-        <div>
-        {filtersListOrgs}
-        {this.renderLoadButton(orgsList, 'org')}
-        </div>
-      </FormGroup>
-              <FormGroup>
-        <Label for="exampleCheckbox">Team</Label>
-        <div>
-        {filtersListTeams} 
-        {this.renderLoadButton(teamsList, 'team')}
-        </div>
-      </FormGroup>
-       
-                </div>
+              <Col xs="3" sm="3">  
+              <Filters  resultSearch={ checkResult.search } parentCallback = {this.callbackFunction}/>
               </Col>
             </Row>
             <Row>
