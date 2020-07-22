@@ -15,6 +15,9 @@ import {
   Alert
 } from 'reactstrap';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+
 import { GET_APPROVAL_BY_ID, MODIFY_APPROVALS } from '../../gql/profile';
 import ErrorModal, { err } from '../core/ErrorModal';
 
@@ -31,6 +34,12 @@ const style = {
   card: {
     width: '100%',
     padding: '0 15px 10px 15px',
+  },
+  spinner: {
+    width: '100%',
+    maxWidth: '200px',
+    margin: '0 auto',
+    textAlign: 'center',
   },
 };
 
@@ -99,7 +108,7 @@ export const GQLApproveApproval = (props) => {
                                   },
                                 },
                               });
-                            }, 1500);
+                            }, 2500);
                           }
                           return (
                             <Fragment>
@@ -123,7 +132,21 @@ export const GQLApproveApproval = (props) => {
                                   <Fragment>
                                     {
                                       errorState.length === 0 ?
-                                        <p>Loading</p> : 'Error'
+                                        <div style={style.spinner}>
+                                          <p className="h2">Loading</p>
+                                          <FontAwesomeIcon
+                                            icon={faSpinner}
+                                            size="3x"
+                                            pulse
+                                          />
+                                        </div>
+                                        :
+                                        <Alert color="danger">
+                                          An error has occured.<br />
+                                          <a href={myProfile}>
+                                            Return to my profile
+                                          </a>
+                                        </Alert>
                                     }
                                   </Fragment>
                               }

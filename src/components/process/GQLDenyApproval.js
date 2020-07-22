@@ -137,6 +137,9 @@ export const GQLDenyApproval = (props) => {
                                     });
                                   }}
                                 >
+                                  <p>
+                                    Please provide comments.
+                                  </p>
                                   <FormGroup>
                                     <label htmlFor={`comments-${id}`}>
                                       Comments
