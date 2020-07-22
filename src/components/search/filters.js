@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
 import { FormGroup, Input, Label, Badge, Button } from 'reactstrap';
 
 // A simple component that shows the pathname of the current location
@@ -121,48 +123,77 @@ class Filters extends React.Component {
     const orgsList = [];
 
     this.props.resultSearch.forEach((el) => {
-      teamsList[el.team.nameEn] = (teamsList[el.team.nameEn] || 0) + 1;
-      orgsList[el.team.organization.nameEn] =
-      (orgsList[el.team.organization.nameEn] || 0) + 1;
+      let addTeam = [];
+      let teamIndex = [];
+      let addOrg = [];
+      let orgIndex = [];
+
+      if (teamsList.findIndex((obj => obj.nameEn === el.team.nameEn)) > -1) {
+        teamIndex = teamsList.findIndex((obj =>
+          obj.nameEn === el.team.nameEn
+        ));
+        teamsList[teamIndex].duplicate += 1;
+      } else {
+        addTeam = {
+          id: el.team.id,
+          duplicate: 1,
+          nameEn: el.team.nameEn,
+          nameFr: el.team.nameFr,
+        };
+        teamsList.push(addTeam);
+      }
+      // eslint-disable-next-line
+      if (orgsList.findIndex((obj => obj.nameEn === el.team.organization.nameEn)) > -1) {
+        orgIndex = orgsList.findIndex((obj =>
+          obj.nameEn === el.team.organization.nameEn
+        ));
+        orgsList[orgIndex].duplicate += 1;
+      } else {
+        addOrg = {
+          id: el.team.organization.id,
+          duplicate: 1,
+          nameEn: el.team.organization.nameEn,
+          nameFr: el.team.organization.nameFr,
+        };
+        orgsList.push(addOrg);
+      }
     });
-
     // eslint-disable-next-line
-    filtersListTeams = Object.keys(teamsList).slice(0,this.state.limitTeams).map(
-      team => (
-        <Label className="label-filters" check>
-          <Input
-            type="checkbox"
-            className="filterCheckbox"
-            checked={this.state.filters.team.includes(team)}
-            value={team}
-            name="team"
-            onChange={e => this.onChangeFilters('team', e)}
-          />
-          {team}
-          <Badge className="badges-filters" pill>
-            {teamsList[team]}
-          </Badge>
-        </Label>
-      ));
-
+    filtersListTeams = Object.entries(teamsList).slice(0, this.state.limitTeams).map(team => (
+      <Label className="label-filters" check>
+        <Input
+          type="checkbox"
+          className="filterCheckbox"
+          checked={this.state.filters.team.includes(team[1].nameEn)}
+          value={team[1].nameEn}
+          name="team"
+          onChange={e => this.onChangeFilters('team', e)}
+        />
+        {(localizer.lang === 'en_CA') ?
+        team[1].nameEn : team[1].nameFr}
+        <Badge className="badges-filters" pill>
+          {team[1].duplicate}
+        </Badge>
+      </Label>
+    ));
     // eslint-disable-next-line
-    filtersListOrgs = Object.keys(orgsList).slice(0,this.state.limitOrgs).map(
-      org => (
-        <Label className="label-filters" check>
-          <Input
-            type="checkbox"
-            className="filterCheckbox"
-            checked={this.state.filters.org.includes(org)}
-            name="org"
-            value={org}
-            onChange={e => this.onChangeFilters('org', e)}
-          />
-          {org}
-          <Badge className="badges-filters" pill>
-            {orgsList[org]}
-          </Badge>
-        </Label>
-      ));
+    filtersListOrgs = Object.entries(orgsList).slice(0,this.state.limitOrgs).map(org => (
+      <Label className="label-filters" check>
+        <Input
+          type="checkbox"
+          className="filterCheckbox"
+          checked={this.state.filters.org.includes(org[1].nameEn)}
+          value={org[1].nameEn}
+          name="org"
+          onChange={e => this.onChangeFilters('org', e)}
+        />
+        {(localizer.lang === 'en_CA') ?
+        org[1].nameEn : org[1].nameFr}
+        <Badge className="badges-filters" pill>
+          {org[1].duplicate}
+        </Badge>
+      </Label>
+    ));
 
     return (
       <div className="filter-section">
@@ -196,4 +227,4 @@ Filters.defaultProps = {
   resultSearch: [],
 };
 
-export default Filters;
+export default LocalizedComponent(Filters);
