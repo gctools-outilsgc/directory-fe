@@ -130,3 +130,5 @@ msgstr ""
 msgid "Transfer Team"
 msgstr "Transfer to other supervisor"
 
+msgid "members"
+msgstr "Members"

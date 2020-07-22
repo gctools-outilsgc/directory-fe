@@ -131,3 +131,5 @@ msgstr "Transférer cette équipe à un nouveau superviseur"
 msgid "Transfer Team"
 msgstr "Transférer à un autre superviseur"
 
+msgid "members"
+msgstr "membres"

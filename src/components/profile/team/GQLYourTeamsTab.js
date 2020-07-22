@@ -395,7 +395,7 @@ class GQLYouTeamsTab extends React.Component {
                     nameEn : nameFr
                   }
                   <span className="pl-3">
-                    <span className="sr-only"> Members: </span>
+                    <span className="sr-only">{__('members')}:</span>
                     <FontAwesomeIcon icon={faUser} />
                     <span className="pl-1">{members.length}</span>
                   </span>
