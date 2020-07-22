@@ -13,7 +13,8 @@ import {
   CardTitle,
   Button,
   Form,
-  FormGroup
+  FormGroup,
+  Alert
 } from 'reactstrap';
 
 import { GET_APPROVAL_BY_ID, MODIFY_APPROVALS } from '../../gql/profile';
@@ -24,7 +25,7 @@ const mapSToP = ({ user }) => {
   const props = {};
   if (user) {
     props.accessToken = user.access_token;
-    // props.myGcID = user.profile.sub;
+    props.myGcID = user.profile.sub;
   }
   return props;
 };
@@ -32,6 +33,14 @@ const mapSToP = ({ user }) => {
 const style = {
   card: {
     width: '100%',
+    maxWidth: '600px',
+    margin: '0 auto',
+    padding: '0 15px 10px 15px',
+  },
+  loginCard: {
+    width: '100%',
+    maxWidth: '250px',
+    margin: '0 auto',
     padding: '0 15px 10px 15px',
   },
 };
@@ -40,10 +49,12 @@ export const GQLDenyApproval = (props) => {
   const {
     id,
     accessToken,
-    // myGcID,
+    myGcID,
   } = props;
 
   const Processing = <Card style={style.card}><CardBody /></Card>;
+
+  const myProfile = `/p/${myGcID}`;
 
   const variables = {
     id,
@@ -75,7 +86,9 @@ export const GQLDenyApproval = (props) => {
                   <title>Process Approval - Directory</title>
                 </Helmet>
                 <CardBody>
-                  {approvalInfo ?
+                  {(
+                    approvalInfo && myGcID === approvalInfo.gcIDApprover.gcID
+                  ) ?
                     <Fragment>
                       <Mutation
                         mutation={MODIFY_APPROVALS}
@@ -85,6 +98,11 @@ export const GQLDenyApproval = (props) => {
                         }}
                         onError={(muteError) => {
                           setErrorState(err(muteError));
+                        }}
+                        context={{
+                          headers: {
+                            authorization: `Bearer ${accessToken}`,
+                          },
                         }}
                       >
                         {(modifyApproval, { mloading }) => {
@@ -100,7 +118,10 @@ export const GQLDenyApproval = (props) => {
                                 </h2>
                               </CardTitle>
                               {mutationSuccess ?
-                                'Success'
+                                <Alert color="success">
+                                  Approval has been proccessed.<br />
+                                  <a href={myProfile}>Return to my profile</a>
+                                </Alert>
                                 :
                                 <Form
                                   onSubmit={(e) => {
@@ -157,7 +178,7 @@ export const GQLDenyApproval = (props) => {
                         <h2>No Approval</h2>
                       </CardTitle>
                       <p>Was unable to find approval</p>
-                      <a href="/p/">Return to my profile</a>
+                      <a href={myProfile}>Return to my profile</a>
                     </Fragment>
                   }
                 </CardBody>
@@ -167,21 +188,28 @@ export const GQLDenyApproval = (props) => {
         </Query>
         :
         <Fragment>
-          <h1 className="sr-only">Process Approval</h1>
-          <p>Please login to continue</p>
-          <Button
-            color="primary"
-            type="submit"
-            name="login"
-            onClick={(e) => {
-              e.preventDefault();
-              if (document.getElementById('login-btn')) {
-                document.getElementById('login-btn').click();
-              }
-            }}
-          >
-            Login
-          </Button>
+          <Card style={style.loginCard}>
+            <CardBody>
+              <h1 className="sr-only">Process Approval</h1>
+              <CardTitle>
+                <p>Please login to continue</p>
+              </CardTitle>
+              <Button
+                block
+                color="primary"
+                type="submit"
+                name="login"
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (document.getElementById('login-btn')) {
+                    document.getElementById('login-btn').click();
+                  }
+                }}
+              >
+                Login
+              </Button>
+            </CardBody>
+          </Card>
         </Fragment>
       }
     </Fragment >
@@ -191,13 +219,13 @@ export const GQLDenyApproval = (props) => {
 GQLDenyApproval.defaultProps = {
   id: undefined,
   accessToken: undefined,
-  // myGcID: undefined,
+  myGcID: undefined,
 };
 
 GQLDenyApproval.propTypes = {
   id: PropTypes.string,
   accessToken: PropTypes.string,
-  // myGcID: PropTypes.string,
+  myGcID: PropTypes.string,
 };
 
 export default connect(mapSToP)(LocalizedComponent(GQLDenyApproval));

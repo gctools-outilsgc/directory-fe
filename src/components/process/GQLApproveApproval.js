@@ -7,7 +7,13 @@ import { Query, Mutation } from 'react-apollo';
 import { connect } from 'react-redux';
 import { Helmet } from 'react-helmet';
 
-import { Card, CardBody, CardTitle, Button } from 'reactstrap';
+import {
+  Card,
+  CardBody,
+  CardTitle,
+  Button,
+  Alert
+} from 'reactstrap';
 
 import { GET_APPROVAL_BY_ID, MODIFY_APPROVALS } from '../../gql/profile';
 import ErrorModal, { err } from '../core/ErrorModal';
@@ -16,7 +22,7 @@ const mapSToP = ({ user }) => {
   const props = {};
   if (user) {
     props.accessToken = user.access_token;
-    // props.myGcID = user.profile.sub;
+    props.myGcID = user.profile.sub;
   }
   return props;
 };
@@ -32,10 +38,12 @@ export const GQLApproveApproval = (props) => {
   const {
     id,
     accessToken,
-    // myGcID,
+    myGcID,
   } = props;
 
   const Processing = <Card style={style.card}><CardBody /></Card>;
+
+  const myProfile = `/p/${myGcID}`;
 
   const [errorState, setErrorState] = useState([]);
   const [mutationState, setMutationState] = useState(false);
@@ -59,7 +67,9 @@ export const GQLApproveApproval = (props) => {
                   <title>Process Approval - Directory</title>
                 </Helmet>
                 <CardBody>
-                  {approvalInfo ?
+                  {(
+                    approvalInfo && myGcID === approvalInfo.gcIDApprover.gcID
+                  ) ?
                     <Fragment>
                       <Mutation
                         mutation={MODIFY_APPROVALS}
@@ -68,6 +78,11 @@ export const GQLApproveApproval = (props) => {
                         }}
                         onError={(muteError) => {
                           setErrorState(err(muteError));
+                        }}
+                        context={{
+                          headers: {
+                            authorization: `Bearer ${accessToken}`,
+                          },
                         }}
                       >
                         {(modifyApprovals, { mloading, merror, mdata }) => {
@@ -98,7 +113,13 @@ export const GQLApproveApproval = (props) => {
                               </CardTitle>
                               {
                                 mutationSuccess ?
-                                  'Success' :
+                                  <Alert color="success">
+                                    Approval has been proccessed.<br />
+                                    <a href={myProfile}>
+                                      Return to my profile
+                                    </a>
+                                  </Alert>
+                                  :
                                   <Fragment>
                                     {
                                       errorState.length === 0 ?
@@ -119,7 +140,7 @@ export const GQLApproveApproval = (props) => {
                         <h2>No Approval</h2>
                       </CardTitle>
                       <p>Was unable to find approval</p>
-                      <a href="/p/">Return to my profile</a>
+                      <a href={myProfile}>Return to my profile</a>
                     </Fragment>
                   }
                 </CardBody>
@@ -153,13 +174,13 @@ export const GQLApproveApproval = (props) => {
 GQLApproveApproval.defaultProps = {
   id: undefined,
   accessToken: undefined,
-  // myGcID: undefined,
+  myGcID: undefined,
 };
 
 GQLApproveApproval.propTypes = {
   id: PropTypes.string,
   accessToken: PropTypes.string,
-  // myGcID: PropTypes.string,
+  myGcID: PropTypes.string,
 };
 
 export default connect(mapSToP)(LocalizedComponent(GQLApproveApproval));

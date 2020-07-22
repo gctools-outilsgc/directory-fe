@@ -174,6 +174,12 @@ query getApprovalByID($id: ID!,) {
       name
       titleEn
       titleFr
+      team {
+        owner {
+          name
+          gcID
+        }
+      }
     }
   }
 }

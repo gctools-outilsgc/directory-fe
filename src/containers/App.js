@@ -152,7 +152,10 @@ export class App extends Component {
                   component={Home}
                 />
                 <Route path="/p/:id" component={Profile} />
-                <Route path="/:action:id" component={ProcessApproval} />
+                <Route
+                  path="/:action:id"
+                  component={ProcessApproval}
+                />
                 <Route path="/onboard" component={Onboard} />
                 <Route path="/search" component={Search} />
               </Fragment>
