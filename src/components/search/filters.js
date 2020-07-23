@@ -105,7 +105,7 @@ class Filters extends React.Component {
           onClick={() => { this.onLoadLess(type); }}
           color="link"
         >
-          Load Less
+          {__('Load less')}
         </Button>);
     }
     return (
@@ -113,7 +113,7 @@ class Filters extends React.Component {
         onClick={() => { this.onLoadMore(type); }}
         color="link"
       >
-        Load more
+        {__('Load more')}
       </Button>);
   }
   render() {
@@ -197,16 +197,16 @@ class Filters extends React.Component {
 
     return (
       <div className="filter-section">
-        <h5>Filter</h5>
+        <h5>{__('Filter')}</h5>
         <FormGroup>
-          <Label for="exampleCheckbox">Organization</Label>
+          <Label for="exampleCheckbox">{__('Organization')}</Label>
           <div>
             {filtersListOrgs}
             {this.renderLoadButton(orgsList, 'org')}
           </div>
         </FormGroup>
         <FormGroup>
-          <Label for="exampleCheckbox">Team</Label>
+          <Label for="exampleCheckbox">{__('Team')}</Label>
           <div>
             {filtersListTeams}
             {this.renderLoadButton(teamsList, 'team')}
