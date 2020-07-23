@@ -41,7 +41,7 @@ class ProfileSearch extends React.Component {
       } else {
         this.props.history.push({
           pathname: '/search',
-          state: { detail: resultsSearch.search },
+          state: { detail: this.state.value },
         });
       }
     }
@@ -51,8 +51,8 @@ class ProfileSearch extends React.Component {
     return (
       <Query
         query={gql`
-          query profileSearchQuery($name: String!) {
-            search(partialName: $name) {
+          query profileSearchQuery($name: String!, $number: Int) {
+            search(partialName: $name, number: $number) {
               gcID
               name
               avatar
@@ -63,7 +63,10 @@ class ProfileSearch extends React.Component {
               team{id nameEn nameFr organization{id nameEn nameFr}}
             }          }`}
         skip={this.state.skip}
-        variables={{ name: this.state.value }}
+        variables={{
+          name: this.state.value,
+          number: 3,
+        }}
       >
         {({ data }) => {
           const checkResult = (!data) ? [''] : data;

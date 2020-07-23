@@ -391,3 +391,17 @@ animation: LoadingText 2s ease infinite;
 .search-email{
   vertical-align: -webkit-baseline-middle;
 }
+
+.pagination .page-item.disabled .page-link{
+  border: 1px solid rgba(0,0,0,0.125);
+}
+
+.sort_align{
+  padding-left: 55px;
+}
+
+.showing_results{
+  position: absolute;
+    bottom: 0;
+    right: 0
+}

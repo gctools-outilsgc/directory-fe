@@ -40,3 +40,21 @@ msgstr ""
 
 msgid "No result found"
 msgstr ""
+
+msgid "Next"
+msgstr ""
+
+msgid "Previous"
+msgstr ""
+
+msgid "Showing"
+msgstr ""
+
+msgid "to"
+msgstr ""
+
+msgid "of"
+msgstr ""
+
+msgid "results"
+msgstr ""
