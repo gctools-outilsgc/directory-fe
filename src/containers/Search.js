@@ -20,7 +20,6 @@ class search extends React.Component {
     this.handleAlphabetClick = this.handleAlphabetClick.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.next_save = this.next_save.bind(this);    
-        
   }
 
   componentDidMount() {
@@ -30,11 +29,11 @@ class search extends React.Component {
 
  componentWillReceiveProps(nextProps){
   const { match, location, history } = this.props;
-    
+
   if(nextProps.location.state){
     this.setState({ searchResult: nextProps.location.state.detail });
    }
-}
+  }
 
  sortDescAndRender(event) {
     let searchArr = Object.values(event);
@@ -57,14 +56,11 @@ class search extends React.Component {
   }
 
   next_save(prev_next, pageNumbers) {
-    console.log(pageNumbers)
     if(prev_next >= 1 && prev_next <= pageNumbers[pageNumbers.length-1]){
-      console.log(prev_next)
     this.setState({
       currentPage: Number(prev_next)
     });
     }
-    
   }
 
   handleClick(event) {
@@ -173,11 +169,11 @@ class search extends React.Component {
               </PaginationItem>
             );
           });
-            
+
         }else{
           results =  __('No result found');
-        } 
-            
+        }
+
         const styleClasses = (!data)
           ? 'search-results-none' : 'list-unstyled search-results';
 
@@ -228,11 +224,11 @@ class search extends React.Component {
             <Row>
               <Col xs="12" sm="10">
                 <Pagination style={{display: 'flex', justifyContent: 'center'}} aria-label="Page navigation" id="page-numbers">
-                  <PaginationItem>
-                  <PaginationLink onClick={() =>{this.next_save(currentPage-1,pageNumbers)}} > {__('Previous')} </PaginationLink>
+                  <PaginationItem disabled={currentPage <= 1}>
+                  <PaginationLink onClick={() =>{this.next_save(currentPage-1,pageNumbers)}}  > {__('Previous')} </PaginationLink>
                   </PaginationItem>
                   {renderPageNumbers}
-                  <PaginationItem>
+                  <PaginationItem disabled={currentPage >= pageNumbers[pageNumbers.length-1]}>
                     <PaginationLink onClick={() =>{this.next_save(currentPage+1,pageNumbers)}} >{__('Next')} </PaginationLink>
                   </PaginationItem>
                 </Pagination>
