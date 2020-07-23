@@ -1,11 +1,10 @@
 /* eslint-disable */
-import React from "react";
+import React from 'react';
 import gql from 'graphql-tag';
-import { Query, withApollo } from 'react-apollo';
-import PropTypes from "prop-types";
-import { withRouter } from "react-router";
-import ProfileSearch from "../components/core/ProfileSearch"
-import { Container, Row, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, Col, Form, FormGroup, Input, Label, Pagination, PaginationItem, PaginationLink } from 'reactstrap';
+import { Query } from 'react-apollo';
+import { Container, Row, ListGroupItem, Col, Form, FormGroup,
+  Input, Label, Pagination, PaginationItem, PaginationLink } from 'reactstrap';
+import ProfileSearch from '../components/core/ProfileSearch';
 
 // A simple component that shows the pathname of the current location
 class search extends React.Component {
@@ -15,70 +14,74 @@ class search extends React.Component {
       searchResult: [],
       currentPage: 1,
       todosPerPage: 6,
-      order:''
+      order: '',
     };
     this.handleAlphabetClick = this.handleAlphabetClick.bind(this);
     this.handleClick = this.handleClick.bind(this);
-    this.next_save = this.next_save.bind(this);    
+    this.next_save = this.next_save.bind(this);
   }
 
   componentDidMount() {
-    const { match, location, history } = this.props;
-    this.setState({ searchResult: location.state ? location.state.detail:'' });
- }
-
- componentWillReceiveProps(nextProps){
-  const { match, location, history } = this.props;
-
-  if(nextProps.location.state){
-    this.setState({ searchResult: nextProps.location.state.detail });
-   }
+    const { location } = this.props;
+    // eslint-disable-next-line
+    this.setState({
+      searchResult: location.state ? location.state.detail : '',
+    });
   }
 
- sortDescAndRender(event) {
-    let searchArr = Object.values(event);
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.location.state) {
+      this.setState({ searchResult: nextProps.location.state.detail });
+    }
+  }
+
+  sortDescAndRender(event) {
+    const searchArr = Object.values(event);
     searchArr.sort(function(a, b) {
-      var textA = a.name.toUpperCase();
-      var textB = b.name.toUpperCase();
-        return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+      const textA = a.name.toUpperCase();
+      const textB = b.name.toUpperCase();
+      return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
     });
     return searchArr;
   }
 
   sortAscAndRender(event) {
-    let searchArr = Object.values(event);
+    const searchArr = Object.values(event);
     searchArr.sort(function(a, b) {
-      var textA = a.name.toUpperCase();
-      var textB = b.name.toUpperCase();
+      const textA = a.name.toUpperCase();
+      const textB = b.name.toUpperCase();
       return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
     });
     return searchArr;
   }
 
   next_save(prev_next, pageNumbers) {
-    if(prev_next >= 1 && prev_next <= pageNumbers[pageNumbers.length-1]){
-    this.setState({
-      currentPage: Number(prev_next)
-    });
+    if (prev_next >= 1 && prev_next <= pageNumbers[pageNumbers.length - 1]) {
+      this.setState({
+        currentPage: Number(prev_next),
+      });
     }
   }
 
   handleClick(event) {
     this.setState({
-      currentPage: Number(event.target.id)
+      currentPage: Number(event.target.id),
     });
   }
 
-  handleAlphabetClick(e){
-    this.setState({order:e.target.value});
+  handleAlphabetClick(e) {
+    this.setState({ order:e.target.value });
   }
 
   render() {
     const { currentPage, todosPerPage } = this.state;
     const pageNumbers = [];
+    let numberResults = '';
     let results, renderPageNumbers = [];
+    let showingStart = '';
+    let showingEnd = '';
     return (
-      <Query 
+      <Query
         query={gql`
           query profileSearchQuery($name: String!, $number: Int) {
             search(partialName: $name, number: $number) {
@@ -97,8 +100,8 @@ class search extends React.Component {
           number: 100,
         }}
       >
-      
-      {({ loading, error, data }) => {
+
+        {({ loading, error, data }) => {
         const checkResult = (!data) ? [''] : data;
         const indexOfLastTodo = currentPage * todosPerPage;
         const indexOfFirstTodo = indexOfLastTodo - todosPerPage;
@@ -155,7 +158,7 @@ class search extends React.Component {
         </ListGroupItem>
           ))
        
-          const numberResults = Object.keys(checkResult.search).length;
+          numberResults = Object.keys(checkResult.search).length;
           for (let i = 1; i <= Math.ceil(numberResults / todosPerPage); i++) {
             pageNumbers.push(i);
           }
@@ -170,8 +173,11 @@ class search extends React.Component {
             );
           });
 
-        }else{
-          results =  __('No result found');
+          showingStart = currentPage * todosPerPage - todosPerPage +1;
+          showingEnd = (currentPage * todosPerPage > numberResults ? numberResults : currentPage * todosPerPage);
+
+        } else {
+          results = __('No result found');
         }
 
         const styleClasses = (!data)
@@ -182,25 +188,28 @@ class search extends React.Component {
             <div className="search-bar">
               <ProfileSearch />
             </div>
-            <Row>
-              <Col xs="2" sm="2">
+            <Row style={{ position: 'relative' }}>
+              <Col xs="2" sm="2" className="sort_align">
                 <Form>
                   <FormGroup>
                     <Label for="sort">{__('Sort by')}</Label>
                     <Input type="select" onChange={(e) => this.handleAlphabetClick(e)} name="sort" id="sort">
                       <option>---</option>
                       <option value="desc">{__('Alphabetical')}</option>
-                      <option value="asc">{__('Unalphabetical')}</option>                  
+                      <option value="asc">{__('Unalphabetical')}</option>
                     </Input>
                   </FormGroup>
                 </Form>
-              </Col> 
+              </Col>
+              <Col xs={{ size: 3, offset: 5 }} sm={{ size: 3, offset: 5 }}>
+                <span className="showing_results">{__('Showing')} {showingStart} {__('to')} {showingEnd} {__('of')} {numberResults} {__('results')}</span>
+              </Col>
             </Row>
             <Row>
               <Col xs="12" sm="10">
                 <ul>{results}</ul>
               </Col>
-              <Col className='filter-section'>
+              <Col className="filter-section">
                 <h5>Filter</h5>
                 <Form>
                   <FormGroup>
@@ -223,13 +232,13 @@ class search extends React.Component {
             </Row>
             <Row>
               <Col xs="12" sm="10">
-                <Pagination style={{display: 'flex', justifyContent: 'center'}} aria-label="Page navigation" id="page-numbers">
+                <Pagination style={{ display: 'flex', justifyContent: 'center' }} aria-label="Page navigation" id="page-numbers">
                   <PaginationItem disabled={currentPage <= 1}>
-                  <PaginationLink onClick={() =>{this.next_save(currentPage-1,pageNumbers)}}  > {__('Previous')} </PaginationLink>
+                    <PaginationLink onClick={() => { this.next_save(currentPage - 1, pageNumbers); }} > {__('Previous')} </PaginationLink>
                   </PaginationItem>
                   {renderPageNumbers}
-                  <PaginationItem disabled={currentPage >= pageNumbers[pageNumbers.length-1]}>
-                    <PaginationLink onClick={() =>{this.next_save(currentPage+1,pageNumbers)}} >{__('Next')} </PaginationLink>
+                  <PaginationItem disabled={currentPage >= pageNumbers[pageNumbers.length - 1]}>
+                    <PaginationLink onClick={() => { this.next_save(currentPage + 1, pageNumbers); }} >{__('Next')} </PaginationLink>
                   </PaginationItem>
                 </Pagination>
               </Col>
@@ -242,4 +251,4 @@ class search extends React.Component {
   }
 }
 
-export default withRouter(search);
+export default search;

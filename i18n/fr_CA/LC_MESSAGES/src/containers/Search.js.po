@@ -47,3 +47,15 @@ msgstr "Suivant"
 
 msgid "Previous"
 msgstr "Précédant"
+
+msgid "Showing"
+msgstr "Affiche"
+
+msgid "to"
+msgstr "à"
+
+msgid "of"
+msgstr "de"
+
+msgid "results"
+msgstr "résultas"

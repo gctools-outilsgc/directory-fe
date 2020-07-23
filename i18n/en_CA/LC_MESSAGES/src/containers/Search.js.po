@@ -46,3 +46,15 @@ msgstr ""
 
 msgid "Previous"
 msgstr ""
+
+msgid "Showing"
+msgstr ""
+
+msgid "to"
+msgstr ""
+
+msgid "of"
+msgstr ""
+
+msgid "results"
+msgstr ""
