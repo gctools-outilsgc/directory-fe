@@ -229,11 +229,11 @@ class search extends React.Component {
               <Col xs="12" sm="10">
                 <Pagination style={{display: 'flex', justifyContent: 'center'}} aria-label="Page navigation" id="page-numbers">
                   <PaginationItem>
-                    <PaginationLink onClick={() =>{this.next_save(currentPage-1,pageNumbers)}} > {"<"} </PaginationLink>
+                  <PaginationLink onClick={() =>{this.next_save(currentPage-1,pageNumbers)}} > {__('Previous')} </PaginationLink>
                   </PaginationItem>
                   {renderPageNumbers}
                   <PaginationItem>
-                    <PaginationLink onClick={() =>{this.next_save(currentPage+1,pageNumbers)}} >{">"} </PaginationLink>
+                    <PaginationLink onClick={() =>{this.next_save(currentPage+1,pageNumbers)}} >{__('Next')} </PaginationLink>
                   </PaginationItem>
                 </Pagination>
               </Col>

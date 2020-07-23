@@ -41,3 +41,9 @@ msgstr "non alphabétique"
 
 msgid "No result found"
 msgstr "Aucun résultat trouvé"
+
+msgid "Next"
+msgstr "Suivant"
+
+msgid "Previous"
+msgstr "Précédant"
