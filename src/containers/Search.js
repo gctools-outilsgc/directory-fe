@@ -1,13 +1,11 @@
 /* eslint-disable */
-import React from "react";
+import React from 'react';
 import gql from 'graphql-tag';
-import { Query, withApollo } from 'react-apollo';
-import PropTypes from "prop-types";
-import { withRouter } from "react-router";
-import ProfileSearch from "../components/core/ProfileSearch"
+import { Query } from 'react-apollo';
+import { Container, Row, ListGroupItem, Col, Form, FormGroup,
+  Input, Label, Pagination, PaginationItem, PaginationLink } from 'reactstrap';
+import ProfileSearch from '../components/core/ProfileSearch';
 import Filters from "../components/search/filters"
-
-import { Container, Row, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, Col, Form, FormGroup, Input, Label, Pagination, PaginationItem, PaginationLink, Badge, CustomInput, Button } from 'reactstrap';
 
 // A simple component that shows the pathname of the current location
 class search extends React.Component {
@@ -28,32 +26,34 @@ class search extends React.Component {
   }
 
   componentDidMount() {
-    const { match, location, history } = this.props;
-    this.setState({ searchResult: location.state ? location.state.detail:'' });
- }
+    const { location } = this.props;
+    // eslint-disable-next-line
+    this.setState({
+      searchResult: location.state ? location.state.detail : '',
+    });
+  }
 
- componentWillReceiveProps(nextProps){
-  const { match, location, history } = this.props;
-  if(nextProps.location.state){
-    this.setState({ searchResult: nextProps.location.state.detail });
-   }
-}
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.location.state) {
+      this.setState({ searchResult: nextProps.location.state.detail });
+    }
+  }
 
- sortDescAndRender(event) {
-    let searchArr = Object.values(event);
+  sortDescAndRender(event) {
+    const searchArr = Object.values(event);
     searchArr.sort(function(a, b) {
-      var textA = a.name.toUpperCase();
-      var textB = b.name.toUpperCase();
-        return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+      const textA = a.name.toUpperCase();
+      const textB = b.name.toUpperCase();
+      return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
     });
     return searchArr;
   }
 
   sortAscAndRender(event) {
-    let searchArr = Object.values(event);
+    const searchArr = Object.values(event);
     searchArr.sort(function(a, b) {
-      var textA = a.name.toUpperCase();
-      var textB = b.name.toUpperCase();
+      const textA = a.name.toUpperCase();
+      const textB = b.name.toUpperCase();
       return (textA > textB) ? -1 : (textA < textB) ? 1 : 0;
     });
     return searchArr;
@@ -106,9 +106,12 @@ class search extends React.Component {
     var filters = this.state.filters
     var filtersOrg = filters.org
     var filtersTeam = filters.team
+    let showingStart = '';
+    let showingEnd = '';
+    let numberResults = '';
     
     return (
-      <Query 
+      <Query
         query={gql`
           query profileSearchQuery($name: String!, $number: Int) {
             search(partialName: $name, number: $number) {
@@ -188,7 +191,7 @@ class search extends React.Component {
         </ListGroupItem>
           ))
        
-          const numberResults = Object.keys(checkResult.search).length;
+          numberResults = Object.keys(checkResult.search).length;
           for (let i = 1; i <= Math.ceil(numberResults / todosPerPage); i++) {
             pageNumbers.push(i);
           }
@@ -203,10 +206,13 @@ class search extends React.Component {
             );
           });
 
-        }else{
-          results =  __('No result found');
-        } 
-            
+          showingStart = currentPage * todosPerPage - todosPerPage +1;
+          showingEnd = (currentPage * todosPerPage > numberResults ? numberResults : currentPage * todosPerPage);
+
+        } else {
+          results = __('No result found');
+        }
+
         const styleClasses = (!data)
           ? 'search-results-none' : 'list-unstyled search-results';
 
@@ -215,8 +221,8 @@ class search extends React.Component {
             <div className="search-bar">
               <ProfileSearch />
             </div>
-            <Row>
-              <Col xs="3" sm="2">
+            <Row style={{ position: 'relative' }}>
+              <Col xs="2" sm="2" className="sort_align">
                 <Form>
                   <FormGroup>
                     <Label for="sort">{__('Sort by')}</Label>
@@ -228,6 +234,9 @@ class search extends React.Component {
                   </FormGroup>
                 </Form>
               </Col> 
+              <Col xs={{ size: 3, offset: 5 }} sm={{ size: 3, offset: 5 }}>
+                <span className="showing_results">{__('Showing')} {showingStart} {__('to')} {showingEnd} {__('of')} {numberResults} {__('results')}</span>
+              </Col>
             </Row>
             <Row>
               <Col xs="9" sm="9">
@@ -239,13 +248,13 @@ class search extends React.Component {
             </Row>
             <Row>
               <Col xs="12" sm="10">
-                <Pagination style={{display: 'flex', justifyContent: 'center'}} aria-label="Page navigation" id="page-numbers">
-                  <PaginationItem>
-                    <PaginationLink onClick={() =>{this.next_save(currentPage-1,pageNumbers)}} > {"<"} </PaginationLink>
+                <Pagination style={{ display: 'flex', justifyContent: 'center' }} aria-label="Page navigation" id="page-numbers">
+                  <PaginationItem disabled={currentPage <= 1}>
+                    <PaginationLink onClick={() => { this.next_save(currentPage - 1, pageNumbers); }} > {__('Previous')} </PaginationLink>
                   </PaginationItem>
                   {renderPageNumbers}
-                  <PaginationItem>
-                    <PaginationLink onClick={() =>{this.next_save(currentPage+1,pageNumbers)}} >{">"} </PaginationLink>
+                  <PaginationItem disabled={currentPage >= pageNumbers[pageNumbers.length - 1]}>
+                    <PaginationLink onClick={() => { this.next_save(currentPage + 1, pageNumbers); }} >{__('Next')} </PaginationLink>
                   </PaginationItem>
                 </Pagination>
               </Col>
@@ -258,4 +267,4 @@ class search extends React.Component {
   }
 }
 
-export default withRouter(search);
+export default search;

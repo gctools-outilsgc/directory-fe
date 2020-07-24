@@ -3,24 +3,17 @@ import PropTypes from 'prop-types';
 import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
 
-import classnames from 'classnames';
 import styled from 'styled-components';
 
 import { Query, Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
 
 import {
-  TabContent,
-  TabPane,
-  Nav,
-  NavItem,
-  NavLink,
-  Row,
-  Col,
+  UncontrolledCollapse,
   Button
 } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faUser } from '@fortawesome/free-solid-svg-icons';
 
 import {
   GET_YOUR_TEAM,
@@ -35,14 +28,16 @@ import GQLEditTeamDialog from './GQLEditTeamDialog';
 import MultiUserPicker from '../../core/MultiUserPicker';
 import TransferConfirmation from './TransferConfirmation';
 import I18nTransferToSupervisorDialog from './TransferToSupervisorDialog';
-import TeamAvatar from './TeamAvatar';
 import refetchMutated from '../../../utils/refetchMutated';
 import ErrorModal, { err } from '../../core/ErrorModal';
 
 const RowContainer = styled.div`
-background-color: #F4F8F9;
-height: 430px;
-overflow: hidden;
+background-color: #FFFFFF;
+`;
+
+const AccordionHeader = styled.div`
+background-color: #FAFAFA;
+padding: 10px 0;
 `;
 
 const TeamList = (props) => {
@@ -55,8 +50,8 @@ const TeamList = (props) => {
     profile,
   } = props;
   return (
-    <TabPane tabId={teamId} key={teamId} className="w-100">
-      <div className="border-bottom d-flex p-3 tab-head">
+    <div key={teamId} className="w-100">
+      <div className="d-flex pl-3 pr-3">
         <div className="mr-auto font-weight-bold">
           {__('people')}
         </div>
@@ -103,10 +98,10 @@ const TeamList = (props) => {
           </Mutation>
         </div>
       </div>
-      <div className="vh-100 p-3 member-holder">
+      <div className="p-3">
         <I18nYourTeamMemberList members={members} profile={profile} />
       </div>
-    </TabPane>
+    </div>
   );
 };
 
@@ -346,25 +341,14 @@ class GQLYouTeamsTab extends React.Component {
   constructor(props) {
     super(props);
 
-    this.toggle = this.toggle.bind(this);
     this.state = {
-      activeTab: undefined,
       createDialogOpen: false,
       editDialogOpen: false,
       editTeam: {},
     };
   }
 
-  toggle(tab) {
-    if (this.state.activeTab !== tab) {
-      this.setState({
-        activeTab: tab,
-      });
-    }
-  }
-
   render() {
-    const { activeTab } = this.state;
     return (
       <Query
         query={GET_YOUR_TEAM}
@@ -388,147 +372,150 @@ class GQLYouTeamsTab extends React.Component {
           const defaultMembers = (sortedTeams.length > 0) ?
             sortedTeams[0].members : [];
 
-          const currentTab = activeTab || defaultId;
-
-          const teamList = sortedTeams.map((team) => {
-            const {
-              id,
-              nameEn,
-              nameFr,
-              descriptionEn,
-              descriptionFr,
-            } = team;
-            return (
-              <NavItem key={id} className="border-bottom">
-                <NavLink
-                  href="#!"
-                  onClick={() => { this.toggle(id); }}
-                  className={
-                    classnames({ active: currentTab === id })}
-                >
-                  <div>
-                    <div className="d-flex">
-                      <TeamAvatar
-                        name={
-                          (localizer.lang === 'en_CA') ?
-                            nameEn : nameFr
-                        }
-                      />
-                      <div className="ml-2">
-                        <div className="font-weight-bold">
-                          {(nameEn === '') && 'Default Team'}
-                          {(nameEn !== '') &&
-                            (localizer.lang === 'en_CA') ?
-                            nameEn : nameFr
-                          }
-                        </div>
-                        <small>
-                          {(localizer.lang === 'en_CA') ?
-                            descriptionEn : descriptionFr
-                          }
-                        </small>
-                      </div>
-                    </div>
-                    <small>
-                      {(id !== defaultId) && (
-                        <ul className="list-inline text-primary ml-n2">
-                          <li className="list-inline-item">
-                            <TransferTeamToSupervisorAction
-                              profile={
-                                {
-                                  id: team.id,
-                                  nameEn: team.nameEn,
-                                  nameFr: team.nameFr,
-                                }
-                              }
-                              supervisor={
-                                {
-                                  gcID: userInfo.gcID,
-                                  name: userInfo.name,
-                                }
-                              }
-                            />
-                          </li>
-                          <li className="list-inline-item">
-                            <Button
-                              color="link"
-                              size="small"
-                              onClick={() => {
-                                this.setState({
-                                  editDialogOpen: true,
-                                  editTeam: team,
-                                });
-                              }}
-                            >
-                              {__('edit')}
-                            </Button>
-                          </li>
-                          {nameEn !== '' && (
-                          <li className="list-inline-item">
-                            <DeleteTeamAction
-                              profile={userInfo}
-                              team={team}
-                            />
-                          </li>
-                          )}
-                        </ul>
-                      )}
-                    </small>
-                  </div>
-                </NavLink>
-              </NavItem>
-            );
-          });
-          const tabPanel = sortedTeams.map(({
+          const accordionTeam = sortedTeams.map(({
             id,
             nameEn,
+            nameFr,
+            descriptionEn,
+            descriptionFr,
             members,
           }) => (
-            <TeamList
-              profile={userInfo}
-              teamId={id}
-              teamName={nameEn}
-              key={`teamlist_${id}`}
-              members={members.map(m => Object.assign(
-                {},
-                m,
-                {
-                  title: (localizer.lang === 'en_CA') ?
-                    m.titleEn : m.titleFr,
-                  avatarAltText: `${m.name}'s avatar`,
-                }
-              ))}
-              otherMembers={defaultMembers.map(m => Object.assign(
-                {},
-                m,
-                {
-                  title: (localizer.lang === 'en_CA') ?
-                    m.titleEn : m.titleFr,
-                  avatarAltText: `${m.name}'s avatar`,
-                }
-              ))}
-              refetch={refetch}
-            />
+            <div className="card" key={id}>
+              <AccordionHeader>
+                <Button
+                  id={`test-${id}`}
+                  data-toggle="collapse"
+                  color="link"
+                  block
+                  className="text-left"
+                >
+                  {(nameEn === '') && 'Default Team'}
+                  {(nameEn !== '') &&
+                    (localizer.lang === 'en_CA') ?
+                    nameEn : nameFr
+                  }
+                  <span className="pl-3">
+                    <span className="sr-only">{__('members')}:</span>
+                    <FontAwesomeIcon icon={faUser} />
+                    <span className="pl-1">{members.length}</span>
+                  </span>
+                </Button>
+              </AccordionHeader>
+              <UncontrolledCollapse
+                toggler={`#test-${id}`}
+                data-parent="#teamAccordion"
+                className="border-top"
+              >
+                <small>
+                  {(id !== defaultId) && (
+                    // eslint-disable-next-line max-len
+                    <ul className="list-inline text-primary ml-n2 mb-1 mt-2">
+                      <li className="list-inline-item">
+                        <TransferTeamToSupervisorAction
+                          profile={
+                            {
+                              id,
+                              nameEn,
+                              nameFr,
+                            }
+                          }
+                          supervisor={
+                            {
+                              gcID: userInfo.gcID,
+                              name: userInfo.name,
+                            }
+                          }
+                        />
+                      </li>
+                      <li className="list-inline-item">
+                        <Button
+                          color="link"
+                          size="small"
+                          onClick={() => {
+                            this.setState({
+                              editDialogOpen: true,
+                              editTeam: {
+                                id,
+                                nameEn,
+                                nameFr,
+                                descriptionEn,
+                                descriptionFr,
+                              },
+                            });
+                          }}
+                        >
+                          {__('edit')}
+                        </Button>
+                      </li>
+                      {nameEn !== '' && (
+                      <li className="list-inline-item">
+                        <DeleteTeamAction
+                          profile={userInfo}
+                          team={
+                            {
+                              id,
+                              nameEn,
+                              nameFr,
+                              descriptionEn,
+                              descriptionFr,
+                              members,
+                            }
+                          }
+                        />
+                      </li>
+                      )}
+                    </ul>
+                  )}
+                </small>
+                <small className="pl-3 pb-2">
+                  {(localizer.lang === 'en_CA') ?
+                    descriptionEn : descriptionFr
+                  }
+                </small>
+                <TeamList
+                  profile={userInfo}
+                  teamId={id}
+                  teamName={nameEn}
+                  key={`teamlist_${id}`}
+                  members={members.map(m => Object.assign(
+                    {},
+                    m,
+                    {
+                      title: (localizer.lang === 'en_CA') ?
+                        m.titleEn : m.titleFr,
+                      avatarAltText: `${m.name}'s avatar`,
+                    }
+                  ))}
+                  otherMembers={defaultMembers.map(m => Object.assign(
+                    {},
+                    m,
+                    {
+                      title: (localizer.lang === 'en_CA') ?
+                        m.titleEn : m.titleFr,
+                      avatarAltText: `${m.name}'s avatar`,
+                    }
+                  ))}
+                  refetch={refetch}
+                />
+              </UncontrolledCollapse>
+            </div>
           ));
           return (
             <RowContainer>
-              <Row className="mt-3 your-teams-container">
+              <div className="mt-3">
                 {(userInfo.team) ?
                   <React.Fragment>
-                    <Col className="pr-0">
-                      <div className="border-bottom d-flex p-3">
-                        <div className="mr-auto font-weight-bold">
-                          {__('team')}
-                        </div>
+                    <div className="pr-0">
+                      <div className="d-flex pb-3">
                         <div>
                           <Button
-                            size="small"
+                            color="primary"
                             onClick={() => {
                               this.setState({ createDialogOpen: true });
                             }}
                           >
                             <FontAwesomeIcon icon={faPlus} />
-                            <span className="sr-only">{__('Add team')}</span>
+                            <span className="pl-2">{__('Add team')}</span>
                           </Button>
                           <GQLCreateTeamDialog
                             isOpen={this.state.createDialogOpen}
@@ -543,20 +530,7 @@ class GQLYouTeamsTab extends React.Component {
                           />
                         </div>
                       </div>
-                      <div className="member-holder">
-                        <Nav vertical>
-                          {teamList}
-                        </Nav>
-                      </div>
-                    </Col>
-                    <Col className="pl-0 d-flex">
-                      <TabContent
-                        activeTab={currentTab}
-                        className="d-flex w-100"
-                      >
-                        {tabPanel}
-                      </TabContent>
-                    </Col>
+                    </div>
                     <GQLEditTeamDialog
                       isOpen={this.state.editDialogOpen}
                       onSave={() => {
@@ -568,13 +542,18 @@ class GQLYouTeamsTab extends React.Component {
                       team={this.state.editTeam}
                       gcID={userInfo.gcID}
                     />
+                    <div>
+                      <div className="accordion" id="teamAccordion">
+                        {accordionTeam}
+                      </div>
+                    </div>
                   </React.Fragment>
                 :
                   <div>
                     You have No Org. Please pick an Org.
                   </div>
                 }
-              </Row>
+              </div>
             </RowContainer>
           );
         }}
