@@ -38,7 +38,15 @@ yarn start
 
 ### Developing with Docker
 
-If you do not have these services spun you can create a full end to end environment through Docker
+If you do not have these services spun you can create a full end to end environment through 
+
+`docker-compose` up will deploy and configure to work together the following services:
+- Directory-fe on port 8008
+- Profile service
+- Notification service
+- Search
+- RabbitMQ
+- Account on port 8080
 
 ```
 cd docker-e2e
