@@ -37,3 +37,15 @@
 .fVNeaQ, .tcd-team-avatar {
   vertical-align: top;
 }
+
+.arrow-closed {
+  display: inline-block;
+  transform: rotate(0deg);
+  transition: transform 0.3s linear;
+}
+
+.arrow-closed.open {
+  display: inline-block;
+  transform: rotate(90deg);
+  transition: transform 0.3s linear;
+}

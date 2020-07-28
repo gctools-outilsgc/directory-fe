@@ -13,7 +13,11 @@ import {
   Button
 } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faUser } from '@fortawesome/free-solid-svg-icons';
+import {
+  faPlus,
+  faUser,
+  faAngleRight
+} from '@fortawesome/free-solid-svg-icons';
 
 import {
   GET_YOUR_TEAM,
@@ -388,12 +392,29 @@ class GQLYouTeamsTab extends React.Component {
                   color="link"
                   block
                   className="text-left"
+                  onClick={() => {
+                    const icon = document.getElementById(`icon-${id}`);
+                    if (icon.className === 'arrow-closed') {
+                      icon.className = 'arrow-closed open';
+                    } else {
+                      icon.className = 'arrow-closed';
+                    }
+                  }}
                 >
-                  {(nameEn === '') && 'Default Team'}
-                  {(nameEn !== '') &&
-                    (localizer.lang === 'en_CA') ?
-                    nameEn : nameFr
-                  }
+                  <span id={`icon-${id}`} className="arrow-closed">
+                    <FontAwesomeIcon
+                      id={`icon-${id}`}
+                      icon={faAngleRight}
+                      className="team-arrow-closed"
+                    />
+                  </span>
+                  <span className="pl-3">
+                    {(nameEn === '') && 'Default Team'}
+                    {(nameEn !== '') &&
+                      (localizer.lang === 'en_CA') ?
+                      nameEn : nameFr
+                    }
+                  </span>
                   <span className="pl-3">
                     <span className="sr-only">{__('members')}:</span>
                     <FontAwesomeIcon icon={faUser} />
