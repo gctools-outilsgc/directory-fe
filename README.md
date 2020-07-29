@@ -38,7 +38,7 @@ yarn start
 
 ### Developing with Docker
 
-If you do not have these services spun you can create a full end to end environment through 
+If you do not have these services spun you can create a full end to end environment through docker-compose.
 
 `docker-compose` up will deploy and configure to work together the following services:
 - Directory-fe on port 8008
@@ -52,6 +52,9 @@ If you do not have these services spun you can create a full end to end environm
 cd docker-e2e
 docker-compose up
 ```
+
+You can hook up your `yarn start` dev instance to these local services by copying the environment variables set for the directory-fe container in `docker-e2e/docker-compose.yaml` into the respective variable in `scripts/start.js` as mentioned above.
+
 ## Deploying
 
 ### Deploy with Docker
