@@ -53,7 +53,7 @@ cd docker-e2e
 docker-compose up
 ```
 
-You can hook up your `yarn start` dev instance to these local services by copying the environment variables set for the directory-fe container in `docker-e2e/docker-compose.yaml` into the respective variable in `scripts/start.js` as mentioned above.
+You can hook up your `yarn start` dev instance to these local services by copying the environment variables set for the directory-fe container in `docker-e2e/docker-compose.yaml` into the respective variables in `scripts/start.js` as mentioned above.
 
 ## Deploying
 
