@@ -1,68 +1,119 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Directory Front End
 
-## Available Scripts
+This project is the front-end application for the [GCTools Directory](https://profile.gccollab.ca)
 
-In the project directory, you can run:
+## Motivation
 
-### `npm start`
+The front end app is a stand alone app and requires our [account](https://github.com/gctools-outilsgc/concierge) and [profile as a service](https://github.com/gctools-outilsgc/profile_service) apps in order to fully work. This is intended to work in our micro service architecture as shown here:
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Image of OADW Architecture Concept](https://documentation.beta.gccollab.ca/static/OADW_Architecture-Walkthrough-a6bf66bae45a89a68cadee688d31d43c-71e8e.png)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Installation
 
-### `npm test`
+You need [nodejs](https://nodejs.org/en/), [yarn](https://yarnpkg.com/) and ideally [docker-compose](https://docs.docker.com/compose/install/)
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Install for Dev
+If you have an account and profile service spun up you can make the connections in `scripts/start.js`
 
-### `npm run build`
+```
+# scripts/start.js
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# your dev url
+const BASE_URL = "http://localhost:3000";
+# profile service endpoint
+if (!process.env.REACT_APP_GQL_ENDPOINT)
+  process.env.REACT_APP_GQL_ENDPOINT = 'https://paas.beta.gccollab.ca/';
+# account service endpoint
+if (!process.env.REACT_APP_OIDC_AUTHORITY)
+  process.env.REACT_APP_OIDC_AUTHORITY = 'https://dev.account.gccollab.ca/openid';
+# account client ID
+if (!process.env.REACT_APP_OIDC_CLIENT_ID)
+  process.env.REACT_APP_OIDC_CLIENT_ID = 123;
+```
+After you config the start script with your end points:
+```
+yarn install
+yarn start
+```
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### Developing with Docker
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If you do not have these services spun you can create a full end to end environment through docker-compose.
 
-### `npm run eject`
+`docker-compose` up will deploy and configure to work together the following services:
+- Directory-fe on port 8008
+- Profile service
+- Notification service
+- Search
+- RabbitMQ
+- Account on port 8080
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+cd docker-e2e
+docker-compose up
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+You can hook up your `yarn start` dev instance to these local services by copying the environment variables set for the directory-fe container in `docker-e2e/docker-compose.yaml` into the respective variables in `scripts/start.js` as mentioned above.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Deploying
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Deploy with Docker
+```
+docker build --tag gctools/directory .
+docker run -p 5000:5000 gctools/directory
+```
+## Features
+### Project Structure :file_folder:
 
+```
+|-/config/
+|-/docker-e2e
+|-/docker
+|-/i18n/  # Translations
+|-/kubernetes/
+|-/public/
+|-/scripts/
+|-/src/
+|  |-/assets/
+|  |  |-css # A place for additional styling
+|  |  |-imgs  # Image / graphic assets
+|  |-/components/
+|  |  |-/core/  # Components used in multiple places
+|  |  |-/page_or_feature_specific/ # Create folders for each page
+|  |-/conatiners/ # Top level page containers
+|  |-/gql/ # GraphQL queries and mutations in one place to be leveraged througout the app
+```
+
+### Component Library and Styling :art:
+We leverage the [Aurora Design system](https://design.gccollab.ca/) which is a theme based on [Bootstrap](https://getbootstrap.com/).
+The app comes already packaged with the [Aurora stylesheet](https://www.npmjs.com/package/@gctools-components/aurora-css) and [Reactstrap](https://reactstrap.github.io/components/alerts/) to help you build components quickly.
+
+### Apollo Client and GraphQL
+
+Learn about how to leverage Apollo Client for react to handle [queries](https://www.apollographql.com/docs/react/essentials/queries.html) and [mutations](https://www.apollographql.com/docs/react/essentials/mutations.html).
+
+### I18N :earth_americas:
+
+Localization is set up and configured with this [I18N translation webpack plugin](https://github.com/gctools-outilsgc/gctools-components/tree/master/packages/i18n-translation-webpack-plugin) and it's [React Helper package](https://github.com/gctools-outilsgc/gctools-components/tree/master/packages/react-i18n-translation-webpack).
+
+#### How to use it
+```
+import React from 'react';
+import LocalizedComponent
+  from '@gctools-components/react-i18n-translation-webpack';
+
+class MyComponent extends React.Component {
+  render() {
+    <p>{__('this is translated text')}</p>
+  }
+}
+
+export default LocalizedComponent(MyComponent);
+```
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
