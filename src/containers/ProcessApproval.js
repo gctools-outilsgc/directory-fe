@@ -1,5 +1,4 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
 import { Container, Row } from 'reactstrap';
 import ReactRouterPropTypes from 'react-router-prop-types';
 
@@ -17,7 +16,7 @@ const ProcessApproval = ({ match }) => {
       case 'd':
         return <ConnectedGQLDenyApproval id={match.params.id} />;
       default:
-        return <Redirect to="/" />;
+        return null;
     }
   };
 

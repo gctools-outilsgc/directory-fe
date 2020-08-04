@@ -33,6 +33,8 @@ const mapSToP = ({ user }) => {
 const style = {
   card: {
     width: '100%',
+    maxWidth: '600px',
+    margin: '0 auto',
     padding: '0 15px 10px 15px',
   },
   spinner: {
@@ -40,6 +42,12 @@ const style = {
     maxWidth: '200px',
     margin: '0 auto',
     textAlign: 'center',
+  },
+  loginCard: {
+    width: '100%',
+    maxWidth: '350px',
+    margin: '0 auto',
+    padding: '0 15px 10px 15px',
   },
 };
 
@@ -71,9 +79,11 @@ export const GQLApproveApproval = (props) => {
             const approvalInfo = (!data) ? '' : data.approvals[0];
             return (
               <Card style={style.card}>
-                <h1 className="sr-only">Process Approval</h1>
+                <h1 className="sr-only">{__('Processing Approval')}</h1>
                 <Helmet>
-                  <title>Process Approval - Directory</title>
+                  <title>
+                    {__('Processing Approval')} - {__('Directory')}
+                  </title>
                 </Helmet>
                 <CardBody>
                   {(
@@ -114,18 +124,16 @@ export const GQLApproveApproval = (props) => {
                             <Fragment>
                               <CardTitle className="profile-card-title d-flex">
                                 <h2>
-                                  Approve-
-                                  {approvalInfo.changeType}
-                                  -
-                                  {approvalInfo.gcIDSubmitter.name}
+                                  {__('Processing changes to profile')}
                                 </h2>
                               </CardTitle>
                               {
                                 mutationSuccess ?
                                   <Alert color="success">
-                                    Approval has been proccessed.<br />
+                                    {__('Approval has been proccessed.')}
+                                    <br />
                                     <a href={myProfile}>
-                                      Return to my profile
+                                      {__('Return to my profile')}
                                     </a>
                                   </Alert>
                                   :
@@ -133,7 +141,9 @@ export const GQLApproveApproval = (props) => {
                                     {
                                       errorState.length === 0 ?
                                         <div style={style.spinner}>
-                                          <p className="h2">Loading</p>
+                                          <p className="h4">
+                                            {__('Loading')}
+                                          </p>
                                           <FontAwesomeIcon
                                             icon={faSpinner}
                                             size="3x"
@@ -142,9 +152,10 @@ export const GQLApproveApproval = (props) => {
                                         </div>
                                         :
                                         <Alert color="danger">
-                                          An error has occured.<br />
+                                          {__('An error has occured.')}
+                                          <br />
                                           <a href={myProfile}>
-                                            Return to my profile
+                                            {__('Return to my profile')}
                                           </a>
                                         </Alert>
                                     }
@@ -160,10 +171,16 @@ export const GQLApproveApproval = (props) => {
                     :
                     <Fragment>
                       <CardTitle className="profile-card-title d-flex">
-                        <h2>No Approval</h2>
+                        <h2>
+                          {__('Approval Not Found')}
+                        </h2>
                       </CardTitle>
-                      <p>Was unable to find approval</p>
-                      <a href={myProfile}>Return to my profile</a>
+                      <p>
+                        {__('Was unable to find approval')}
+                      </p>
+                      <a href={myProfile}>
+                        {__('Return to my profile')}
+                      </a>
                     </Fragment>
                   }
                 </CardBody>
@@ -173,21 +190,27 @@ export const GQLApproveApproval = (props) => {
         </Query>
         :
         <Fragment>
-          <h1 className="sr-only">Process Approval</h1>
-          <p>Please login to continue</p>
-          <Button
-            color="primary"
-            type="submit"
-            name="login"
-            onClick={(e) => {
-              e.preventDefault();
-              if (document.getElementById('login-btn')) {
-                document.getElementById('login-btn').click();
-              }
-            }}
-          >
-            Login
-          </Button>
+          <Card style={style.loginCard}>
+            <CardBody>
+              <h1 className="sr-only">{__('Processing Approval')}</h1>
+              <p>
+                {__('Please login to continue')}
+              </p>
+              <Button
+                color="primary"
+                type="submit"
+                name="login"
+                onClick={(e) => {
+                  e.preventDefault();
+                  if (document.getElementById('login-btn')) {
+                    document.getElementById('login-btn').click();
+                  }
+                }}
+              >
+                {__('Log-in')}
+              </Button>
+            </CardBody>
+          </Card>
         </Fragment>
       }
     </Fragment >

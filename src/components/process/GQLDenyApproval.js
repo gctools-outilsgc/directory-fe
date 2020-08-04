@@ -39,7 +39,7 @@ const style = {
   },
   loginCard: {
     width: '100%',
-    maxWidth: '250px',
+    maxWidth: '350px',
     margin: '0 auto',
     padding: '0 15px 10px 15px',
   },
@@ -81,9 +81,11 @@ export const GQLDenyApproval = (props) => {
             const approvalInfo = (!data) ? '' : data.approvals[0];
             return (
               <Card style={style.card}>
-                <h1 className="sr-only">Process Approval</h1>
+                <h1 className="sr-only">{__('Processing Approval')}</h1>
                 <Helmet>
-                  <title>Process Approval - Directory</title>
+                  <title>
+                    {__('Processing Approval')} - {__('Directory')}
+                  </title>
                 </Helmet>
                 <CardBody>
                   {(
@@ -111,16 +113,16 @@ export const GQLDenyApproval = (props) => {
                             <Fragment>
                               <CardTitle className="profile-card-title d-flex">
                                 <h2>
-                                  Deny-
-                                  {approvalInfo.changeType}
-                                  -
-                                  {approvalInfo.gcIDSubmitter.name}
+                                  {__('Deny the Requested Changes')}
                                 </h2>
                               </CardTitle>
                               {mutationSuccess ?
                                 <Alert color="success">
-                                  Approval has been proccessed.<br />
-                                  <a href={myProfile}>Return to my profile</a>
+                                  {__('Approval has been proccessed.')}
+                                  <br />
+                                  <a href={myProfile}>
+                                    {__('Return to my profile')}
+                                  </a>
                                 </Alert>
                                 :
                                 <Form
@@ -138,11 +140,11 @@ export const GQLDenyApproval = (props) => {
                                   }}
                                 >
                                   <p>
-                                    Please provide comments.
+                                    {__('Please provide comments')}
                                   </p>
                                   <FormGroup>
                                     <label htmlFor={`comments-${id}`}>
-                                      Comments
+                                      {__('Comments')}
                                     </label>
                                     <InputCharacterCount
                                       onChange={(e) => {
@@ -164,7 +166,7 @@ export const GQLDenyApproval = (props) => {
                                       name="deny"
                                       value="Denied"
                                     >
-                                      Deny
+                                      {__('Deny')}
                                     </Button>
                                   </div>
                                 </Form>
@@ -178,10 +180,16 @@ export const GQLDenyApproval = (props) => {
                     :
                     <Fragment>
                       <CardTitle className="profile-card-title d-flex">
-                        <h2>No Approval</h2>
+                        <h2>
+                          {__('Approval Not Found')}
+                        </h2>
                       </CardTitle>
-                      <p>Was unable to find approval</p>
-                      <a href={myProfile}>Return to my profile</a>
+                      <p>
+                        {__('Was unable to find approval')}
+                      </p>
+                      <a href={myProfile}>
+                        {__('Return to my profile')}
+                      </a>
                     </Fragment>
                   }
                 </CardBody>
@@ -193,12 +201,11 @@ export const GQLDenyApproval = (props) => {
         <Fragment>
           <Card style={style.loginCard}>
             <CardBody>
-              <h1 className="sr-only">Process Approval</h1>
-              <CardTitle>
-                <p>Please login to continue</p>
-              </CardTitle>
+              <h1 className="sr-only">{__('Processing Approval')}</h1>
+              <p>
+                {__('Please login to continue')}
+              </p>
               <Button
-                block
                 color="primary"
                 type="submit"
                 name="login"
@@ -209,7 +216,7 @@ export const GQLDenyApproval = (props) => {
                   }
                 }}
               >
-                Login
+                {__('Log-in')}
               </Button>
             </CardBody>
           </Card>

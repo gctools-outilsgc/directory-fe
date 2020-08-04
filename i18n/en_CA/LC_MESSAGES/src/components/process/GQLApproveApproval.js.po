@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-02-13 09:45-0500\n"
+"PO-Revision-Date: 2019-02-13 09:43-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr_CA\n"
+"Language-Team: fr_CA <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+msgid "Processing Approval"
+msgstr ""
+
+msgid "Directory"
+msgstr ""
+
+msgid "Processing changes to profile"
+msgstr ""
+
+msgid "Approval has been proccessed."
+msgstr ""
+
+msgid "Return to my profile"
+msgstr ""
+
+msgid "Loading"
+msgstr "Approval is being processed, please wait a moment."
+
+msgid "An error has occured."
+msgstr "An error has occurred. Please try to submit this request again."
+
+msgid "Approval Not Found"
+msgstr ""
+
+msgid "Was unable to find approval"
+msgstr "	
+The requested page does not exist. This can occur when you visit the link after approving/denying the approval, or the user who submitted the approval has revoked it."
+
+msgid "Please login to continue"
+msgstr "This page can only be accessed by site members. Please login to view this page."
+
+msgid "Log-in"
+msgstr ""

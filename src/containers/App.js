@@ -127,7 +127,6 @@ export class App extends Component {
               this.setState({ sidebar: !this.state.sidebar });
               document.cookie = `oadw-gn-min=${this.state.sidebar};`;
             }}
-            notificationURL="http://10.0.0.226:4000/graphql"
             currentApp={
               {
                 id: '3',
@@ -152,12 +151,12 @@ export class App extends Component {
                   component={Home}
                 />
                 <Route path="/p/:id" component={Profile} />
+                <Route path="/onboard" component={Onboard} />
+                <Route path="/search" component={Search} />
                 <Route
                   path="/:action:id"
                   component={ProcessApproval}
                 />
-                <Route path="/onboard" component={Onboard} />
-                <Route path="/search" component={Search} />
               </Fragment>
             </Switch>
           </main>
