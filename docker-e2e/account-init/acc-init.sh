@@ -29,7 +29,7 @@ EOF
 
 python manage.py shell << EOF
 from oidc_provider.models import Client, ResponseType
-c = Client(name='directory', client_type='public', client_id='3', website_url='http://localhost:8008', scope='openid modify_profile email profile', redirect_uris=['http://localhost:8008/#!callback', 'http://localhost:8008/#!silent'], post_logout_redirect_uris=['http://localhost:8008/#!logout'])
+c = Client(name='directory', client_type='public', client_id='3', website_url='http://localhost:8008', scope='openid modify_profile email profile', redirect_uris=['http://localhost:8008/#!callback', 'http://localhost:8008/#!silent', 'http://localhost:3000/#!callback', 'http://localhost:3000/#!silent', 'http://localhost:5000/#!callback', 'http://localhost:5000/#!silent'], post_logout_redirect_uris=['http://localhost:8008/#!logout', 'http://localhost:3000/#!logout', 'http://localhost:5000/#!logout'])
 c.save()
 c.response_types.add(ResponseType.objects.get(value='id_token token'))
 EOF
