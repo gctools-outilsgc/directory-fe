@@ -3,9 +3,10 @@ import React from 'react';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import { Container, Row, ListGroupItem, Col, Form, FormGroup,
-  Input, Label, Pagination, PaginationItem, PaginationLink } from 'reactstrap';
+  Input, Label } from 'reactstrap';
 import ProfileSearch from '../components/core/ProfileSearch';
 import Filters from "../components/search/filters"
+import Paginations from "../components/search/Pagination"
 
 // A simple component that shows the pathname of the current location
 class search extends React.Component {
@@ -19,10 +20,9 @@ class search extends React.Component {
       filters:{org:[],team:[]},
     };
     this.handleAlphabetClick = this.handleAlphabetClick.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-    this.next_save = this.next_save.bind(this);
     this.filterssearch = this.filterssearch.bind(this);
-    this.callbackFunction = this.callbackFunction.bind(this);     
+    this.filtersCallback = this.filtersCallback.bind(this);
+    this.paginationCallback = this.paginationCallback.bind(this);        
   }
 
   componentDidMount() {
@@ -59,20 +59,6 @@ class search extends React.Component {
     return searchArr;
   }
 
-  next_save(prev_next, pageNumbers) {
-    if(prev_next >= 1 && prev_next <= pageNumbers[pageNumbers.length-1]){
-      this.setState({
-        currentPage: Number(prev_next)
-      });
-    }
-  }
-
-  handleClick(event) {
-    this.setState({
-      currentPage: Number(event.target.id)
-    });
-  }
-
   handleAlphabetClick(e){
     this.setState({order:e.target.value});
   }
@@ -91,18 +77,26 @@ class search extends React.Component {
       }else{
         return search
       }
+     
     });
 
+    const updateCurrentPage = Math.ceil(Object.keys(searchResult).length/ this.state.todosPerPage);
+    if(updateCurrentPage < this.state.currentPage){
+        this.setState({currentPage:updateCurrentPage});
+      }
     return searchResult
   }
 
-  callbackFunction(childData) {
+  filtersCallback(childData) {
     this.setState({filters: childData})
-}
+  }
+  paginationCallback(childData) {
+    this.setState({currentPage: childData})
+  }
 
   render() {
     const { currentPage, todosPerPage } = this.state;
-    let results, renderPageNumbers, pageNumbers = [];
+    let results = [];
     var filters = this.state.filters
     var filtersOrg = filters.org
     var filtersTeam = filters.team
@@ -192,19 +186,6 @@ class search extends React.Component {
           ))
        
           numberResults = Object.keys(checkResult.search).length;
-          for (let i = 1; i <= Math.ceil(numberResults / todosPerPage); i++) {
-            pageNumbers.push(i);
-          }
-
-          renderPageNumbers = pageNumbers.map(number => {
-            return (
-              <PaginationItem key={number} className={(this.state.currentPage === number ? 'active ' : '')}>
-                <PaginationLink id={number} onClick={this.handleClick}>
-                  {number}
-                </PaginationLink>  
-              </PaginationItem>
-            );
-          });
 
           showingStart = currentPage * todosPerPage - todosPerPage +1;
           showingEnd = (currentPage * todosPerPage > numberResults ? numberResults : currentPage * todosPerPage);
@@ -243,20 +224,12 @@ class search extends React.Component {
                 <ul>{results}</ul>
               </Col>
               <Col xs="3" sm="3">  
-              <Filters  resultSearch={ checkResult.search } parentCallback = {this.callbackFunction}/>
+              <Filters  resultSearch={ checkResult.search } updateFilters = {this.filtersCallback}/>
               </Col>
             </Row>
             <Row>
               <Col xs="12" sm="10">
-                <Pagination style={{ display: 'flex', justifyContent: 'center' }} aria-label="Page navigation" id="page-numbers">
-                  <PaginationItem disabled={currentPage <= 1}>
-                    <PaginationLink onClick={() => { this.next_save(currentPage - 1, pageNumbers); }} > {__('Previous')} </PaginationLink>
-                  </PaginationItem>
-                  {renderPageNumbers}
-                  <PaginationItem disabled={currentPage >= pageNumbers[pageNumbers.length - 1]}>
-                    <PaginationLink onClick={() => { this.next_save(currentPage + 1, pageNumbers); }} >{__('Next')} </PaginationLink>
-                  </PaginationItem>
-                </Pagination>
+              <Paginations  resultSearch={ checkResult.search } page={this.state.currentPage} paginationCurrentpage = {this.paginationCallback}/>
               </Col>
             </Row>
           </ Container>

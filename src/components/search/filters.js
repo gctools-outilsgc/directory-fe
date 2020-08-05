@@ -90,7 +90,7 @@ class Filters extends React.Component {
   }
 
   sendDate() {
-    this.props.parentCallback(this.state.filters);
+    this.props.updateFilters(this.state.filters);
   }
 
   renderLoadButton(List, type) {
@@ -218,12 +218,12 @@ class Filters extends React.Component {
 }
 
 Filters.propTypes = {
-  parentCallback: PropTypes.func,
+  updateFilters: PropTypes.func,
   resultSearch: PropTypes.shape,
 };
 
 Filters.defaultProps = {
-  parentCallback: () => {},
+  updateFilters: () => {},
   resultSearch: [],
 };
 
