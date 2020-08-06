@@ -3,8 +3,10 @@ import React from 'react';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import { Container, Row, ListGroupItem, Col, Form, FormGroup,
-  Input, Label, Pagination, PaginationItem, PaginationLink } from 'reactstrap';
+  Input, Label } from 'reactstrap';
 import ProfileSearch from '../components/core/ProfileSearch';
+import Filters from "../components/search/filters"
+import Paginations from "../components/search/Pagination"
 
 // A simple component that shows the pathname of the current location
 class search extends React.Component {
@@ -14,11 +16,13 @@ class search extends React.Component {
       searchResult: [],
       currentPage: 1,
       todosPerPage: 6,
-      order: '',
+      order:'',
+      filters:{org:[],team:[]},
     };
     this.handleAlphabetClick = this.handleAlphabetClick.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-    this.next_save = this.next_save.bind(this);
+    this.filterssearch = this.filterssearch.bind(this);
+    this.filtersCallback = this.filtersCallback.bind(this);
+    this.paginationCallback = this.paginationCallback.bind(this);        
   }
 
   componentDidMount() {
@@ -55,31 +59,51 @@ class search extends React.Component {
     return searchArr;
   }
 
-  next_save(prev_next, pageNumbers) {
-    if (prev_next >= 1 && prev_next <= pageNumbers[pageNumbers.length - 1]) {
-      this.setState({
-        currentPage: Number(prev_next),
-      });
-    }
+  handleAlphabetClick(e){
+    this.setState({order:e.target.value});
   }
 
-  handleClick(event) {
-    this.setState({
-      currentPage: Number(event.target.id),
+  filterssearch(search){
+    var filters = this.state.filters
+    var filtersOrg = filters.org
+    var filtersTeam = filters.team
+    var searchResult = search.filter(function(profiles) {
+      if(Object.keys(filtersOrg).length >0 && Object.keys(filtersTeam).length >0 ){
+        return profiles.team.organization.nameEn == filtersOrg && profiles.team.nameEn == filtersTeam;
+      }else if(Object.keys(filtersOrg).length == 0 && Object.keys(filtersTeam).length >0){ 
+        return profiles.team.nameEn == filtersTeam;       
+      }else if(Object.keys(filtersTeam).length ==0 && Object.keys(filtersOrg).length >0){      
+        return profiles.team.organization.nameEn == filtersOrg;       
+      }else{
+        return search
+      }
+     
     });
+
+    const updateCurrentPage = Math.ceil(Object.keys(searchResult).length/ this.state.todosPerPage);
+    if(updateCurrentPage < this.state.currentPage){
+        this.setState({currentPage:updateCurrentPage});
+      }
+    return searchResult
   }
 
-  handleAlphabetClick(e) {
-    this.setState({ order:e.target.value });
+  filtersCallback(childData) {
+    this.setState({filters: childData})
+  }
+  paginationCallback(childData) {
+    this.setState({currentPage: childData})
   }
 
   render() {
     const { currentPage, todosPerPage } = this.state;
-    const pageNumbers = [];
-    let numberResults = '';
-    let results, renderPageNumbers = [];
+    let results = [];
+    var filters = this.state.filters
+    var filtersOrg = filters.org
+    var filtersTeam = filters.team
     let showingStart = '';
     let showingEnd = '';
+    let numberResults = '';
+    
     return (
       <Query
         query={gql`
@@ -100,8 +124,8 @@ class search extends React.Component {
           number: 100,
         }}
       >
-
-        {({ loading, error, data }) => {
+      
+      {({ loading, error, data }) => {
         const checkResult = (!data) ? [''] : data;
         const indexOfLastTodo = currentPage * todosPerPage;
         const indexOfFirstTodo = indexOfLastTodo - todosPerPage;
@@ -111,6 +135,9 @@ class search extends React.Component {
         return <div>Error</div>
 
         if( Object.keys(checkResult).length >0) {
+          if(Object.keys(filtersOrg).length >0 || Object.keys(filtersTeam).length >0 ){
+            checkResult.search = this.filterssearch(checkResult.search)   
+          }
           if(this.state.order == 'desc'){
             checkResult.search = this.sortDescAndRender(checkResult.search)
           }else if(this.state.order == 'asc'){
@@ -159,19 +186,6 @@ class search extends React.Component {
           ))
        
           numberResults = Object.keys(checkResult.search).length;
-          for (let i = 1; i <= Math.ceil(numberResults / todosPerPage); i++) {
-            pageNumbers.push(i);
-          }
-
-          renderPageNumbers = pageNumbers.map(number => {
-            return (
-              <PaginationItem key={number} className={(this.state.currentPage === number ? 'active ' : '')}>
-                <PaginationLink id={number} onClick={this.handleClick}>
-                  {number}
-                </PaginationLink>  
-              </PaginationItem>
-            );
-          });
 
           showingStart = currentPage * todosPerPage - todosPerPage +1;
           showingEnd = (currentPage * todosPerPage > numberResults ? numberResults : currentPage * todosPerPage);
@@ -196,51 +210,26 @@ class search extends React.Component {
                     <Input type="select" onChange={(e) => this.handleAlphabetClick(e)} name="sort" id="sort">
                       <option>---</option>
                       <option value="desc">{__('Alphabetical')}</option>
-                      <option value="asc">{__('Unalphabetical')}</option>
+                      <option value="asc">{__('Unalphabetical')}</option>                  
                     </Input>
                   </FormGroup>
                 </Form>
-              </Col>
+              </Col> 
               <Col xs={{ size: 3, offset: 5 }} sm={{ size: 3, offset: 5 }}>
                 <span className="showing_results">{__('Showing')} {showingStart} {__('to')} {showingEnd} {__('of')} {numberResults} {__('results')}</span>
               </Col>
             </Row>
             <Row>
-              <Col xs="12" sm="10">
+              <Col xs="9" sm="9">
                 <ul>{results}</ul>
               </Col>
-              <Col className="filter-section">
-                <h5>Filter</h5>
-                <Form>
-                  <FormGroup>
-                    <Label check>
-                      <Input type="checkbox" /> Internal
-                    </Label>
-                  </FormGroup>
-                  <FormGroup>
-                    <Label check>
-                      <Input type="checkbox" /> External
-                    </Label>
-                  </FormGroup>
-                  <FormGroup>
-                    <Label check>
-                      <Input type="checkbox" /> Department name
-                    </Label>
-                  </FormGroup>
-                </Form>
+              <Col xs="3" sm="3">  
+              <Filters  resultSearch={ checkResult.search } updateFilters = {this.filtersCallback}/>
               </Col>
             </Row>
             <Row>
               <Col xs="12" sm="10">
-                <Pagination style={{ display: 'flex', justifyContent: 'center' }} aria-label="Page navigation" id="page-numbers">
-                  <PaginationItem disabled={currentPage <= 1}>
-                    <PaginationLink onClick={() => { this.next_save(currentPage - 1, pageNumbers); }} > {__('Previous')} </PaginationLink>
-                  </PaginationItem>
-                  {renderPageNumbers}
-                  <PaginationItem disabled={currentPage >= pageNumbers[pageNumbers.length - 1]}>
-                    <PaginationLink onClick={() => { this.next_save(currentPage + 1, pageNumbers); }} >{__('Next')} </PaginationLink>
-                  </PaginationItem>
-                </Pagination>
+              <Paginations  resultSearch={ checkResult.search } page={this.state.currentPage} paginationCurrentpage = {this.paginationCallback}/>
               </Col>
             </Row>
           </ Container>
