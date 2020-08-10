@@ -154,6 +154,37 @@ query getApprovals($gcIDApprover: gcIDProfileInput!) {
 }
 `;
 
+export const GET_APPROVAL_BY_ID = gql`
+query getApprovalByID($id: ID!,) {
+  approvals(id: $id, status: Pending) {
+    id
+    createdOn
+    status
+    changeType
+    gcIDApprover {
+      gcID
+      name
+    }
+    gcIDSubmitter{
+      gcID
+      name
+    }
+    requestedChange{
+      id
+      name
+      titleEn
+      titleFr
+      team {
+        owner {
+          name
+          gcID
+        }
+      }
+    }
+  }
+}
+`;
+
 export const MODIFY_APPROVALS = gql`
 mutation modifyApproval($id: ID!, $data: ModifyApprovalInput) {
   modifyApproval(id: $id, data: $data) {

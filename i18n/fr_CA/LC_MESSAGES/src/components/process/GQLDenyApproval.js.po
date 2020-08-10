@@ -1,0 +1,50 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-02-13 09:45-0500\n"
+"PO-Revision-Date: 2019-02-13 09:43-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr_CA\n"
+"Language-Team: fr_CA <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+msgid "Processing Approval"
+msgstr "Traitement de l’approbation"
+
+msgid "Directory"
+msgstr "Annuiare"
+
+msgid "Approval has been proccessed."
+msgstr "L’approbation a été traitée."
+
+msgid "Return to my profile"
+msgstr "Retour à mon profil"
+
+msgid "Approval Not Found"
+msgstr "Approbation introuvable"
+
+msgid "Was unable to find approval"
+msgstr "La page demandée n’existe pas. Ceci peut se produire lorsque vous cliquez sur le lien après avoir approuvé/refusé la demande ou lorsque l’utilisateur qui a soumis l’approbation l’a révoquée."
+
+msgid "Please login to continue"
+msgstr "Seuls les membres du site peuvent accéder à cette page. Veuillez ouvrir une session pour faire afficher cette page."
+
+msgid "Log-in"
+msgstr "Se connecter"
+
+msgid "Deny the Requested Changes"
+msgstr "Refuser les changements demandés"
+
+msgid "Please provide comments"
+msgstr "Veuillez fournir vos commentaires pour soumettre le formulaire. (Maximum de 255 mots)"
+
+msgid "Comments"
+msgstr ""
+
+msgid "Deny"
+msgstr "Refuser"

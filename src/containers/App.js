@@ -16,6 +16,7 @@ import Profile from './Profile';
 import Home from './Home';
 import Onboard from './Onboard';
 import Search from './Search';
+import ProcessApproval from './ProcessApproval';
 
 // import ProfileSearch from '../components/core/ProfileSearch';
 import ProgressBanner from '../components/core/ProgressBanner';
@@ -84,7 +85,7 @@ export class App extends Component {
       redirect_uri: process.env.REACT_APP_OIDC_REDIRECT_URI,
       scope: process.env.REACT_APP_OIDC_SCOPE,
       post_logout_redirect_uri:
-      process.env.REACT_APP_OIDC_POST_LOGOUT_REDIRECT_URI,
+        process.env.REACT_APP_OIDC_POST_LOGOUT_REDIRECT_URI,
       silent_redirect_uri: process.env.REACT_APP_OIDC_SILENT_REDIRECT_URI,
     };
 
@@ -152,6 +153,10 @@ export class App extends Component {
                 <Route path="/p/:id" component={Profile} />
                 <Route path="/onboard" component={Onboard} />
                 <Route path="/search" component={Search} />
+                <Route
+                  path="/:action:id"
+                  component={ProcessApproval}
+                />
               </Fragment>
             </Switch>
           </main>
