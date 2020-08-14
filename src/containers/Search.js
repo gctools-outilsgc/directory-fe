@@ -158,7 +158,9 @@ class search extends React.Component {
                   <span className="profile-name"> {a.name}</span>
                 </Col>
                 <Col xs="auto">
-                  <span className="search-email">{a.email}</span>
+                  <span className="search-email">
+                    <a href={`mailto:${a.email}`}>{a.email}</a>
+                  </span>
                 </Col>
               </Row>
               <Row>
@@ -171,14 +173,14 @@ class search extends React.Component {
               </Row>
               <Row>
                 <Col xs="auto">
-                  {a.mobilePhone !== null ? <div><span className="font-weight-bold">{__('Mobile')}: </span>{a.mobilePhone}</div>: ""}
+                  {a.mobilePhone !== null ? <div><span className="font-weight-bold">{__('Mobile')}: </span><a href={`tel:${a.mobilePhone}`}>{a.mobilePhone}</a></div>: ""}
                 </Col>
                 <Col xs="auto">
-                  {a.officePhone !== null ? <div><span className="font-weight-bold">{__('Office')}: </span>{a.officePhone}</div> : ""}
+                  {a.officePhone !== null ? <div><span className="font-weight-bold">{__('Office')}: </span><a href={`tel:${a.officePhone}`}>{a.officePhone}</a></div> : ""}
                 </Col>
               </Row>
               <Row>
-                <div className="search-address">{a.address !== null ? <div><span className="font-weight-bold">{__('Address')}: </span>{a.address.streetAddress+ ', ' +a.address.city}</div> : ""}   </div>          
+                <div className="search-address">{a.address !== null ? <div><span className="font-weight-bold">{__('Address')}: </span><a href={`https://maps.google.com/?q=${a.address.streetAddress}${a.address.city}`} target="_blank" rel="noopener noreferrer">{a.address.streetAddress+ ', ' +a.address.city}</a></div> : ""}   </div>          
               </Row>  
             </Col>
           </Row>
