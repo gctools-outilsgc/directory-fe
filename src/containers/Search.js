@@ -4,6 +4,8 @@ import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import { Container, Row, ListGroupItem, Col, Form, FormGroup,
   Input, Label } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import ProfileSearch from '../components/core/ProfileSearch';
 import Filters from "../components/search/filters"
 import Paginations from "../components/search/Pagination"
@@ -105,6 +107,10 @@ class search extends React.Component {
     let numberResults = '';
     
     return (
+      <Container>
+      <div className="search-bar">
+        <ProfileSearch />
+      </div>
       <Query
         query={gql`
           query profileSearchQuery($name: String!, $number: Int) {
@@ -130,11 +136,16 @@ class search extends React.Component {
         const indexOfLastTodo = currentPage * todosPerPage;
         const indexOfFirstTodo = indexOfLastTodo - todosPerPage;
         if (loading)
-        return <div>Fetching</div>
-        if (error)
-        return <div>Error</div>
-
-        if( Object.keys(checkResult).length >0) {
+        return <Container><div class="d-flex justify-content-center"><FontAwesomeIcon icon={faSpinner} size="3x" spin/></div></Container>
+        if (error) 
+            if (error == "SearchError") {
+              return <Container><div class="d-flex justify-content-center">{(localizer.lang === 'en_CA') ? "Oups, the search encountered a temporary error and could not complete your request. Please try again or contact our helpdesk." : "Oups, la fonction de recherche à rencontrer une erreur temporaire et ne peut completer la requête. S'il vous plaît, veuillez réessayer plus tard ou contacter notre bureau d'aide." }</div></Container>      
+            } else {
+              return <Container><div class="d-flex justify-content-center">{(localizer.lang === 'en_CA') ? "Oups, something went wrong. Please try again or contact our helpdesk." : "Oups, une erreur s'est produite. S'il vous plaît, veuillez réessayer plus tard ou contacter notre bureau d'aide." }</div></Container>
+            }
+        
+        if( Object.keys(checkResult.search).length >0) {
+        console.log('resulkt?')
           if(Object.keys(filtersOrg).length >0 || Object.keys(filtersTeam).length >0 ){
             checkResult.search = this.filterssearch(checkResult.search)   
           }
@@ -191,17 +202,14 @@ class search extends React.Component {
           showingEnd = (currentPage * todosPerPage > numberResults ? numberResults : currentPage * todosPerPage);
 
         } else {
-          results = __('No result found');
+          results = <div className="noResult">{__('No result found')}</div>
         }
 
         const styleClasses = (!data)
           ? 'search-results-none' : 'list-unstyled search-results';
 
         return (
-          <Container>
-            <div className="search-bar">
-              <ProfileSearch />
-            </div>
+          <div>
             <Row style={{ position: 'relative' }}>
               <Col xs="2" sm="2" className="sort_align">
                 <Form>
@@ -232,10 +240,11 @@ class search extends React.Component {
               <Paginations  resultSearch={ checkResult.search } page={this.state.currentPage} paginationCurrentpage = {this.paginationCallback}/>
               </Col>
             </Row>
-          </ Container>
+          </div>
           );
         }}
       </Query>
+      </ Container>
     );
   }
 }
