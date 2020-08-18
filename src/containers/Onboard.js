@@ -27,36 +27,43 @@ const Onboard = (props) => {
   const [loading, setLoading] = useState(true);
   const [mutationState, setMutationState] = useState(false);
   // const [fetchError, setFetchError] = useState(null);
-  // const [items, setItems] = useState([]);
+  const [items, setItems] = useState([]);
 
   // Fetch example =
   // eslint-disable-next-line
   // https://gccollab.ca/services/api/rest/json/?method=get.profile.by.gcid&gcid=GCID
 
+  // Fetch user's information from GCcollab
   useEffect(() => {
     // eslint-disable-next-line
     fetch(`https://gccollab.ca/services/api/rest/json/?method=get.profile.by.gcid&gcid=${myGcID}`)
       .then(res => res.json())
       .then(
         (result) => {
-          // setItems(result.items);
           console.log(result);
-          // Create user object from result
-          /*
-          const testObject = {
-            gcID: myGcID,
-            titleEn: result.jobTitle,
-            titleFr: result.jobTitleFr,
-            officePhone: result.telephone,
-            mobilePhone: result.mobile,
-            streetAddress: result.streetAddress,
-            city: result.city,
-            province: result.province,
-            postalCode: result.postalCode,
-            country: result.country,
-          };
-          */
-          // Set a state to mutate
+          if (results) {
+            // Create user object from result
+            const testObject = {
+              gcID: myGcID,
+              titleEn: result.jobTitle,
+              titleFr: result.jobTitleFr,
+              officePhone: result.telephone,
+              mobilePhone: result.mobile,
+              streetAddress: result.streetAddress,
+              city: result.city,
+              province: result.province,
+              postalCode: result.postalCode,
+              country: result.country,
+            };
+            // set the items to the object
+            setItems(testObject);
+            // If we have items fire the mutation
+            setMutationState(true);
+          } else {
+            console.log('Api did not return');
+            setLoading(false); 
+          }
+          
           // stop loading on mutation complete
         },
         // Note: it's important to handle errors here
@@ -64,7 +71,7 @@ const Onboard = (props) => {
         // exceptions from actual bugs in components.
         (error) => {
           // setFetchError(error);
-          console.log(error);
+          console.log(`Fetch error: ${error}`);
           setLoading(false);
         }
       );
@@ -92,19 +99,14 @@ const Onboard = (props) => {
         }}
       >
         {(modifyProfile, { mloading, merror, mdata }) => {
-          if (mloading) return 'Loading...';
-          if (merror) return 'ERROR';
-          if (!mutationState) {
-            setMutationState(true);
+          if (mloading) return 'Loading populating data...';
+          if (merror) return 'ERROR - also just continue';
+          if (mutationState) {
+            setMutationState(false);
             setTimeout(() => {
-              modifyProfile({
-                variables: {
-                  id,
-                  data: {
-                    // TODO,
-                  },
-                },
-              });
+              modifyProfile(prepareEditProfile({
+                items,
+              }));
             }, 2500);
           }
           <div>
@@ -123,7 +125,6 @@ const Onboard = (props) => {
           >
             Set Loading {fakeProp}
           </Button>
-          {accessToken}
           <div>{myGcID}</div>
         </div> :
         <div className="onboard-container m-auto">
