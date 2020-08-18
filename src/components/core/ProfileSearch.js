@@ -108,7 +108,7 @@ class ProfileSearch extends React.Component {
                   </InputGroupAddon>
                 </InputGroup>
               </label>
-              <ul className={styleClasses}>{results}</ul>
+               <ul className={styleClasses}>{results.length > 0 ? results : __('No result found')}</ul> {/* eslint-disable-line */}
             </div>
           );
         }}

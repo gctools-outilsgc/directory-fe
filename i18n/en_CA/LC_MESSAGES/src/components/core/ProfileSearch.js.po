@@ -22,3 +22,6 @@ msgstr ""
 msgid "Search Profiles"
 msgstr "Search Directory"
 
+#: 67:112 src/components/core/ProfileSearch.js
+msgid "No result found"
+msgstr ""
