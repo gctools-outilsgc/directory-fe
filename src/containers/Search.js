@@ -242,7 +242,7 @@ class search extends React.Component {
             </Row>
             <Row>
               <Col xs="12" sm="10">
-              <Paginations  resultSearch={ checkResult.search } page={this.state.currentPage} paginationCurrentpage = {this.paginationCallback}/>
+              <Paginations  resultSearch={ checkResult.search } page={this.state.currentPage} paginationCurrentpage = {this.paginationCallback} perPage={this.state.todosPerPage} />
               </Col>
             </Row>
           </ Container>

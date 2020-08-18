@@ -9,7 +9,6 @@ class Paginations extends React.Component {
     this.state = {
       searchResult: [],
       currentPage: 1,
-      todosPerPage: 6,
     };
     this.handleClick = this.handleClick.bind(this);
     this.nextSave = this.nextSave.bind(this);
@@ -43,14 +42,15 @@ class Paginations extends React.Component {
     this.props.paginationCurrentpage(this.state.currentPage);
   }
   render() {
-    const { currentPage, todosPerPage } = this.state;
+    const { currentPage } = this.state;
     let renderPageNumbers = [];
     const pageNumbers = [];
     let numberResults = '';
 
     if (this.props.resultSearch) {
       numberResults = Object.keys(this.props.resultSearch).length;
-      for (let i = 1; i <= Math.ceil(numberResults / todosPerPage); i += 1) {
+      // eslint-disable-next-line
+      for (let i = 1; i <= Math.ceil(numberResults / this.props.perPage); i += 1) {
         pageNumbers.push(i);
       }
 
@@ -98,12 +98,14 @@ Paginations.propTypes = {
   paginationCurrentpage: PropTypes.func,
   resultSearch: PropTypes.shape,
   page: PropTypes.string,
+  perPage: PropTypes.number,
 };
 
 Paginations.defaultProps = {
   paginationCurrentpage: () => {},
   resultSearch: [],
   page: '',
+  perPage: 6,
 };
 
 export default Paginations;
