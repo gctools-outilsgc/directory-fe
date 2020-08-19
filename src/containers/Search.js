@@ -20,6 +20,7 @@ class search extends React.Component {
       filters:{org:[],team:[]},
     };
     this.handleAlphabetClick = this.handleAlphabetClick.bind(this);
+    this.handleResultChange = this.handleResultChange.bind(this);
     this.filterssearch = this.filterssearch.bind(this);
     this.filtersCallback = this.filtersCallback.bind(this);
     this.paginationCallback = this.paginationCallback.bind(this);        
@@ -61,6 +62,10 @@ class search extends React.Component {
 
   handleAlphabetClick(e){
     this.setState({order:e.target.value});
+  }
+
+  handleResultChange(e) {
+    this.setState({todosPerPage: e.target.value});
   }
 
   filterssearch(search){
@@ -205,9 +210,9 @@ class search extends React.Component {
               <ProfileSearch />
             </div>
             <Row style={{ position: 'relative' }}>
-              <Col xs="2" sm="2" className="sort_align">
-                <Form>
-                  <FormGroup>
+              <Col xs="4" sm="4" className="sort_align">
+                <Form className="d-flex">
+                  <FormGroup className="mr-2">
                     <Label for="sort">{__('Sort by')}</Label>
                     <Input type="select" onChange={(e) => this.handleAlphabetClick(e)} name="sort" id="sort">
                       <option>---</option>
@@ -215,10 +220,18 @@ class search extends React.Component {
                       <option value="asc">{__('Unalphabetical')}</option>                  
                     </Input>
                   </FormGroup>
+                  <FormGroup>
+                      <Label for="resultsPerPage">{__('Results per page')}</Label>
+                      <Input type="select" onChange={(e) => this.handleResultChange(e)} name="resultsPerPage" id="resultsPerPage">
+                        <option value="6">6</option>
+                        <option value="12">12</option>
+                        <option value="18">18</option>
+                      </Input>
+                    </FormGroup>
                 </Form>
               </Col> 
-              <Col xs={{ size: 3, offset: 5 }} sm={{ size: 3, offset: 5 }}>
-                <span className="showing_results">{__('Showing')} {showingStart} {__('to')} {showingEnd} {__('of')} {numberResults} {__('results')}</span>
+              <Col xs={{ size: 4, offset: 4 }} sm={{ size: 4, offset: 4 }}>
+                <div className="pr-3 showing_results">{__('Showing')} {showingStart} {__('to')} {showingEnd} {__('of')} {numberResults} {__('results')}</div>
               </Col>
             </Row>
             <Row>
@@ -231,7 +244,7 @@ class search extends React.Component {
             </Row>
             <Row>
               <Col xs="12" sm="10">
-              <Paginations  resultSearch={ checkResult.search } page={this.state.currentPage} paginationCurrentpage = {this.paginationCallback}/>
+              <Paginations  resultSearch={ checkResult.search } page={this.state.currentPage} paginationCurrentpage = {this.paginationCallback} perPage={this.state.todosPerPage} />
               </Col>
             </Row>
           </ Container>
