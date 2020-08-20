@@ -139,9 +139,9 @@ class search extends React.Component {
         return <Container><div class="d-flex justify-content-center"><FontAwesomeIcon icon={faSpinner} size="3x" spin/></div></Container>
         if (error) 
             if (error == "SearchError") {
-              return <Container><div class="d-flex justify-content-center">{(localizer.lang === 'en_CA') ? "Oups, the search encountered a temporary error and could not complete your request. Please try again or contact our helpdesk." : "Oups, la fonction de recherche à rencontrer une erreur temporaire et ne peut completer la requête. S'il vous plaît, veuillez réessayer plus tard ou contacter notre bureau d'aide." }</div></Container>      
+              return <Container><div class="d-flex justify-content-center">{(localizer.lang === 'en_CA') ? "Oops, the search encountered a temporary error and could not complete your request. Please try again or contact our helpdesk." : "Oups, la fonction de recherche à rencontrer une erreur temporaire et ne peut completer la requête. S'il vous plaît, veuillez réessayer plus tard ou contacter notre bureau d'aide." }</div></Container>      
             } else {
-              return <Container><div class="d-flex justify-content-center">{(localizer.lang === 'en_CA') ? "Oups, something went wrong. Please try again or contact our helpdesk." : "Oups, une erreur s'est produite. S'il vous plaît, veuillez réessayer plus tard ou contacter notre bureau d'aide." }</div></Container>
+              return <Container><div class="d-flex justify-content-center">{(localizer.lang === 'en_CA') ? "Oops, something went wrong. Please try again or contact our helpdesk." : "Oups, une erreur s'est produite. S'il vous plaît, veuillez réessayer plus tard ou contacter notre bureau d'aide." }</div></Container>
             }
         
         if( Object.keys(checkResult.search).length >0) {
