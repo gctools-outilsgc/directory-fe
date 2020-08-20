@@ -22,3 +22,6 @@ msgstr "Rechercher"
 msgid "Search Profiles"
 msgstr "Recherche sur Annuaire"
 
+#: 67:112 src/components/core/ProfileSearch.js
+msgid "No result found"
+msgstr "Aucun résultat trouvé"
