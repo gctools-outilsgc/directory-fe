@@ -33,55 +33,52 @@ const Onboard = (props) => {
   // eslint-disable-next-line
   // https://gccollab.ca/services/api/rest/json/?method=get.profile.by.gcid&gcid=GCID
 
-  // Fetch user's information from GCcollab
+  // Fetch user's information from
+  // eslint-disable-next-line
+  const apiCall = `https://gccollab.ca/services/api/rest/json/?method=get.profile.by.gcid&gcid=${myGcID}`
   useEffect(() => {
-    // eslint-disable-next-line
-    fetch(`https://gccollab.ca/services/api/rest/json/?method=get.profile.by.gcid&gcid=${myGcID}`)
-      .then(res => res.json())
-      .then(
-        (result) => {
-          console.log(result);
-          if (results) {
-            // Create user object from result
-            const testObject = {
-              gcID: myGcID,
-              titleEn: result.jobTitle,
-              titleFr: result.jobTitleFr,
-              officePhone: result.telephone,
-              mobilePhone: result.mobile,
-              streetAddress: result.streetAddress,
-              city: result.city,
-              province: result.province,
-              postalCode: result.postalCode,
-              country: result.country,
-            };
-            // set the items to the object
-            setItems(testObject);
-            // If we have items fire the mutation
-            setMutationState(true);
-          } else {
-            console.log('Api did not return');
-            setLoading(false); 
+    setTimeout(() => {
+      fetch(apiCall)
+        .then(res => res.json())
+        .then(
+          (result) => {
+            console.log(result);
+            if (result) {
+              // Create user object from result
+              const userObject = {
+                gcID: result.pleioID,
+                titleEn: result.jobTitle,
+                titleFr: result.jobTitleFr,
+                officePhone: result.telephone,
+                mobilePhone: result.mobile,
+                streetAddress: result.streetAddress,
+                city: result.city,
+                province: result.province,
+                postalCode: result.postalCode,
+                country: result.country,
+              };
+              // set the items to the object
+              setItems(userObject);
+              // If we have items fire the mutation
+              setMutationState(true);
+            } else {
+              console.log('Api did not return');
+              setLoading(false);
+            }
+            // stop loading on mutation complete
+          },
+          // Note: it's important to handle errors here
+          // instead of a catch() block so that we don't swallow
+          // exceptions from actual bugs in components.
+          (error) => {
+            // setFetchError(error);
+            console.log(`Fetch error: ${error}`);
+            setLoading(false);
           }
-          
-          // stop loading on mutation complete
-        },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-        (error) => {
-          // setFetchError(error);
-          console.log(`Fetch error: ${error}`);
-          setLoading(false);
-        }
-      );
-  }, []);
+        );
+    }, 2000);
+  }, [apiCall]);
 
-  /*
-  if (fetchError) {
-    return <div>Error: {fetchError.message}</div>;
-  }
-  */
   return (
     <Container className="mt-3">
       <Mutation
@@ -109,9 +106,11 @@ const Onboard = (props) => {
               }));
             }, 2500);
           }
-          <div>
-            {mdata}
-          </div>
+          return (
+            <div>
+              {mdata}
+            </div>
+          );
         }}
       </Mutation>
       {loading ?
