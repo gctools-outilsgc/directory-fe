@@ -2,8 +2,13 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import { Mutation } from 'react-apollo';
-import { Container, Button } from 'reactstrap';
+import { Container, Card, CardBody } from 'reactstrap';
 import { connect } from 'react-redux';
+
+import fetchJsonp from 'fetch-jsonp';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 import { EDIT, prepareEditProfile } from '../gql/profile';
 
@@ -20,13 +25,11 @@ const mapSToP = ({ user }) => {
 
 const Onboard = (props) => {
   const {
-    fakeProp,
     accessToken,
     myGcID,
   } = props;
   const [loading, setLoading] = useState(true);
   const [mutationState, setMutationState] = useState(false);
-  // const [fetchError, setFetchError] = useState(null);
   const [items, setItems] = useState([]);
 
   // Fetch example =
@@ -35,49 +38,57 @@ const Onboard = (props) => {
 
   // Fetch user's information from
   // eslint-disable-next-line
-  const apiCall = `https://gccollab.ca/services/api/rest/json/?method=get.profile.by.gcid&gcid=${myGcID}`
+  const apiCall = `https://gccollab.ca/services/api/rest/jsonp/?method=get.profile.by.gcid&gcid=${myGcID}`
   useEffect(() => {
+    // Set timeout to give users a chance
+    // To see loading / information message
     setTimeout(() => {
-      fetch(apiCall)
-        .then(res => res.json())
-        .then(
-          (result) => {
-            console.log(result);
-            if (result) {
+      // Only fire if no items
+      if (items.length < 1) {
+        fetchJsonp(apiCall)
+          .then((response => response.json()))
+          .then((json) => {
+            if (json.result) {
               // Create user object from result
               const userObject = {
-                gcID: result.pleioID,
-                titleEn: result.jobTitle,
-                titleFr: result.jobTitleFr,
-                officePhone: result.telephone,
-                mobilePhone: result.mobile,
-                streetAddress: result.streetAddress,
-                city: result.city,
-                province: result.province,
-                postalCode: result.postalCode,
-                country: result.country,
+                gcID: json.result.pleioID,
+                titleEn: json.result.jobTitle || '',
+                titleFr: json.result.jobTitleFr || '',
+                officePhone: json.result.telephone || '',
+                mobilePhone: json.result.mobile || '',
+                streetAddress: json.result.streetAddress || '',
+                city: json.result.city || '',
+                province: json.result.province || '',
+                postalCode: json.result.postalCode || '',
+                country: json.result.country || '',
               };
               // set the items to the object
-              setItems(userObject);
+              setItems({
+                gcID: userObject.gcID,
+                titleEn: userObject.titleEn,
+                titleFr: userObject.titleFr,
+                officePhone: userObject.officePhone,
+                mobilePhone: userObject.mobilePhone,
+                streetAddress: userObject.streetAddress,
+                city: userObject.city,
+                province: userObject.province,
+                postalCode: userObject.postalCode,
+                country: userObject.country,
+              });
               // If we have items fire the mutation
               setMutationState(true);
             } else {
-              console.log('Api did not return');
-              setLoading(false);
+              setTimeout(() => {
+                setLoading(false);
+              }, 2000);
             }
-            // stop loading on mutation complete
-          },
-          // Note: it's important to handle errors here
-          // instead of a catch() block so that we don't swallow
-          // exceptions from actual bugs in components.
-          (error) => {
-            // setFetchError(error);
-            console.log(`Fetch error: ${error}`);
+          }).catch((ex) => {
+            console.log('parsing failed', ex);
             setLoading(false);
-          }
-        );
+          });
+      }
     }, 2000);
-  }, [apiCall]);
+  }, [apiCall, items]);
 
   return (
     <Container className="mt-3">
@@ -85,9 +96,11 @@ const Onboard = (props) => {
         mutation={EDIT}
         onCompleted={() => {
           setLoading(false);
+          setMutationState(false);
         }}
         onError={(e) => {
           console.log(e);
+          setMutationState(false);
         }}
         context={{
           headers: {
@@ -99,11 +112,20 @@ const Onboard = (props) => {
           if (mloading) return 'Loading populating data...';
           if (merror) return 'ERROR - also just continue';
           if (mutationState) {
-            setMutationState(false);
             setTimeout(() => {
               modifyProfile(prepareEditProfile({
-                items,
+                gcID: items.gcID,
+                titleEn: items.titleEn,
+                titleFr: items.titleFr,
+                officePhone: items.officePhone,
+                mobilePhone: items.mobilePhone,
+                streetAddress: items.streetAddress,
+                city: items.city,
+                province: items.province,
+                postalCode: items.postalCode,
+                country: items.country,
               }));
+              setMutationState(false);
             }, 2500);
           }
           return (
@@ -114,18 +136,23 @@ const Onboard = (props) => {
         }}
       </Mutation>
       {loading ?
-        <div>
-          Loading -
-          Populating data
-          <Button
-            onClick={() => (
-              setLoading(false)
-            )}
-          >
-            Set Loading {fakeProp}
-          </Button>
-          <div>{myGcID}</div>
-        </div> :
+        <Card className="w-50 text-center mx-auto">
+          <CardBody>
+            <div className="h3 pt-3">
+              {__('One moment')}
+            </div>
+            <div className="h4">
+              {__('Grabbing profile data from GCcollab')}
+            </div>
+            <div className="mt-3 pb-3">
+              <FontAwesomeIcon
+                icon={faSpinner}
+                size="3x"
+                pulse
+              />
+            </div>
+          </CardBody>
+        </Card> :
         <div className="onboard-container m-auto">
           <ConnectedOnboardMod />
         </div>
@@ -135,13 +162,11 @@ const Onboard = (props) => {
 };
 
 Onboard.defaultProps = {
-  fakeProp: 'FakeProp',
   accessToken: undefined,
   myGcID: undefined,
 };
 
 Onboard.propTypes = {
-  fakeProp: PropTypes.string,
   accessToken: PropTypes.string,
   myGcID: PropTypes.string,
 };
