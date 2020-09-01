@@ -368,6 +368,7 @@ animation: LoadingText 2s ease infinite;
 .imgsearch{
   float: left;
   padding-right: 2%;
+
 }
 
 .search-bar{
@@ -390,6 +391,7 @@ animation: LoadingText 2s ease infinite;
   border-top-left-radius: .35rem;
   border-top-right-radius: .35rem;
   padding-left: 3%;
+  display: block;
 }
 
 .filterCheckbox{
@@ -409,12 +411,138 @@ animation: LoadingText 2s ease infinite;
   border: 1px solid rgba(0,0,0,0.125);
 }
 
-.sort_align{
+/* .sort_align{
   padding-left: 55px;
-}
+} */
 
 .showing_results{
-  position: absolute;
+  /* position: absolute; */
     bottom: 0;
-    right: 0
+    /* right: 0 */
+    text-align: end;
+}
+
+.noResult{
+  position: relative;
+    display: block;
+    padding: .75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.125);
+    border-radius: .35rem;
+}
+
+ .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 6px 3px;
+  position: relative;
+  user-select: none;
+}
+
+ .menu-btn {
+  display: none;
+}
+
+#filter-content{
+  width: 100vw;
+  height: 100vh;
+}
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .menu {
+    clear: none;
+    float: right;
+    width: 100vw;
+    height: 100vh;
+  }
+   .menu-icon {
+    display: none;
+  }
+}
+.closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+@media (max-width: 48em) {
+  .menu {
+    position: absolute;
+    right:0px;
+    max-width:75%;
+    top:0;
+    right:0;
+    padding:0;
+    z-index:999;
+    height:100%;
+  }
+
+  .form-filter{
+    position:absolute;
+    bottom:0;
+    margin-bottom:1.5rem;
+  }
+
+  .col-filter{
+    width:33%;
+    padding-top:1rem
+  }
+
+  .showing_results {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.filter-section{
+  min-height:100%;
+  border-radius:unset;
+  height: auto;
+}
+
+.closebtn {
+  font-size: 40px;
+  top: 0;
+  right: 20px;
+  }
+}
+
+#ck-button {
+   background-color:#fff;
+   border-radius:4px;
+   border:1px solid #D0D0D0;
+   overflow:auto;
+   float:left;
+   margin-bottom: 1.5rem;
+   bottom:0;
+}
+
+#ck-button label {
+   float:left;
+   width:6.0em;
+}
+
+#ck-button label span {
+   text-align:center;
+   display:block;
+}
+
+#ck-button label input {
+   position:absolute;
+   top:-20px;
+}
+
+#filter-content.true{
+  transform: translate3d(0vw, 0, 0);
+}
+
+#filter-content.false{
+  transform: translate3d(-100vw, 0, 0);
+
+}
+
+.image-section{
+  margin:auto;
 }
