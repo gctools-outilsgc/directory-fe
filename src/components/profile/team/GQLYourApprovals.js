@@ -15,6 +15,9 @@ import {
   FormGroup
 } from 'reactstrap';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInbox } from '@fortawesome/free-solid-svg-icons';
+
 import { GET_APPROVALS, MODIFY_APPROVALS } from '../../../gql/profile';
 import refetchMutated from '../../../utils/refetchMutated';
 import { UserAvatar } from '../../core/UserAvatar';
@@ -244,7 +247,21 @@ class GQLYourApprovals extends React.Component {
                   requestedChange={apprvl.requestedChange}
                 />
               </div>
-            )) : 'NO APPROVALS';
+            )) : (
+              <div>
+                <div className="p-5 text-center h4 text-muted">
+                  <div>
+                    <FontAwesomeIcon
+                      icon={faInbox}
+                      size="3x"
+                    />
+                  </div>
+                  <div>
+                    {__('No pending approvals')}
+                  </div>
+                </div>
+              </div>
+            );
           return (
             <RowContainer>
               <div>
