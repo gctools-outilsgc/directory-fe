@@ -20,7 +20,7 @@ class search extends React.Component {
       todosPerPage: 6,
       order:'',
       filters:{org:[],team:[]},
-      isChecked: props.isChecked || false,
+      isChecked: props.isChecked || true,
     };
     this.handleAlphabetClick = this.handleAlphabetClick.bind(this);
     this.handleResultChange = this.handleResultChange.bind(this);
@@ -99,7 +99,7 @@ class search extends React.Component {
   filtersCallback(childData) {
     this.setState({filters: childData})
   }
-  
+
   paginationCallback(childData) {
     this.setState({currentPage: childData})
   }
@@ -170,36 +170,36 @@ class search extends React.Component {
           results = currentTodos.map(a => ( 
             <ListGroupItem key={a.gcID}>
           <Row>
-            <Col xs="5" className="image-section">
+            <Col xs="5" md="3" className="image-section">
               <a href={`/p/${a.gcID}`} >
                 <img className="imgsearch" src={a.avatar} alt="Card image cap" />
               </a>
             </Col>
             
-            <Col xs="7">
+            <Col xs="7" md="9">
               <Row>         
                 <Col xs="12">
                   <span className="profile-name"> {a.name}</span>
                 </Col>
                 <Col xs="12">
                   <span className="search-email">
-                    <a href={`mailto:${a.email}`}>{a.email}</a>
+                    <a href={`mailto:${a.email}`}><span>{a.email}</span></a>
                   </span>
                 </Col>
               </Row>
               <Row>
-                <Col xs="12">
+                <Col xs="12" md="6">
                   <span className="font-weight-bold"> {__('Teams')} </span>{a.team.nameEn}
                 </Col>
-                <Col xs="12">
+                <Col xs="12" md="6">
                   <span className="font-weight-bold">{__('Organization')}: </span>{a.team.organization.nameEn}
                 </Col>
               </Row>
               <Row>
-                <Col xs="12">
+                <Col xs="12" md="6">
                   {a.mobilePhone !== null ? <div><span className="font-weight-bold">{__('Mobile')}: </span><a href={`tel:${a.mobilePhone}`}>{a.mobilePhone}</a></div>: ""}
                 </Col>
-                <Col xs="12">
+                <Col xs="12" md="6">
                   {a.officePhone !== null ? <div><span className="font-weight-bold">{__('Office')}: </span><a href={`tel:${a.officePhone}`}>{a.officePhone}</a></div> : ""}
                 </Col>
               </Row>

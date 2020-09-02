@@ -445,10 +445,7 @@ animation: LoadingText 2s ease infinite;
   display: none;
 }
 
-#filter-content{
-  width: 100vw;
-  height: 100vh;
-}
+
 /* 48em = 768px */
 
 @media (min-width: 48em) {
@@ -461,12 +458,18 @@ animation: LoadingText 2s ease infinite;
    .menu-icon {
     display: none;
   }
+#filter-content{
+  width: 100vw;
+  height: 100vh;
+}
+
 }
 .closebtn {
   position: absolute;
   top: 20px;
   right: 45px;
   font-size: 60px;
+  display:none;
 }
 @media (max-width: 48em) {
   .menu {
@@ -506,6 +509,24 @@ animation: LoadingText 2s ease infinite;
   font-size: 40px;
   top: 0;
   right: 20px;
+  display:block;
+  }
+
+  #filter-content.true{
+    transform: translate3d(0vw, 0, 0);
+  }
+  
+  #filter-content.false{
+    transform: translate3d(-100vw, 0, 0);
+  
+  }
+
+  .search-email{
+    display: block;
+    width: 23ch;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }
 
@@ -534,14 +555,7 @@ animation: LoadingText 2s ease infinite;
    top:-20px;
 }
 
-#filter-content.true{
-  transform: translate3d(0vw, 0, 0);
-}
 
-#filter-content.false{
-  transform: translate3d(-100vw, 0, 0);
-
-}
 
 .image-section{
   margin:auto;
