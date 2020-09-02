@@ -9,15 +9,39 @@ class Paginations extends React.Component {
     this.state = {
       searchResult: [],
       currentPage: 1,
+      isMobile: false,
+      windowWidth: 0,
     };
     this.handleClick = this.handleClick.bind(this);
     this.nextSave = this.nextSave.bind(this);
+    // eslint-disable-next-line
+    this.updateDimensions = this.updateDimensions.bind(this);
+  }
+
+  componentDidMount() {
+    this.updateDimensions();
+    window.addEventListener('resize', this.updateDimensions);
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.page !== this.state.currentPage) {
       this.setState({ currentPage: nextProps.page });
     }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateDimensions);
+  }
+
+  throttledHandleWindowResize() {
+    this.setState({ isMobile: window.innerWidth < 480 });
+    console.log(this.state.isMobile);
+  }
+
+  updateDimensions() {
+    // eslint-disable-next-line
+    const windowWidth = typeof window !== 'undefined' ? window.innerWidth : 0;
+    this.setState({ windowWidth });
   }
 
   nextSave(prevNext, pageNumbers) {
@@ -42,11 +66,12 @@ class Paginations extends React.Component {
     this.props.paginationCurrentpage(this.state.currentPage);
   }
   render() {
-    const { currentPage } = this.state;
+    const { currentPage, windowWidth } = this.state;
     let renderPageNumbers = [];
     const pageNumbers = [];
     let numberResults = '';
-
+    let startPage = '';
+    let endPage = '';
     if (this.props.resultSearch) {
       numberResults = Object.keys(this.props.resultSearch).length;
       // eslint-disable-next-line
@@ -54,16 +79,44 @@ class Paginations extends React.Component {
         pageNumbers.push(i);
       }
 
-      renderPageNumbers = pageNumbers.map(number => (
-        <PaginationItem
-          key={number}
-          className={(this.state.currentPage === number ? 'active ' : '')}
-        >
-          <PaginationLink id={number} onClick={this.handleClick}>
-            {number}
-          </PaginationLink>
-        </PaginationItem>
-      ));
+      if (currentPage) {
+        console.log(this.state.windowWidth);
+        if (windowWidth < 600) {
+          if (currentPage < 3) {
+            startPage = 0;
+          } else {
+            startPage = currentPage - 3;
+          }
+          if (currentPage + 2 > numberResults) {
+            endPage = numberResults;
+          } else {
+            endPage = currentPage + 2;
+          }
+
+          // eslint-disable-next-line
+          renderPageNumbers = pageNumbers.slice(startPage,endPage).map(number => (
+            <PaginationItem
+              key={number}
+              className={(this.state.currentPage === number ? 'active ' : '')}
+            >
+              <PaginationLink id={number} onClick={this.handleClick}>
+                {number}
+              </PaginationLink>
+            </PaginationItem>
+          ));
+        } else {
+          renderPageNumbers = pageNumbers.map(number => (
+            <PaginationItem
+              key={number}
+              className={(this.state.currentPage === number ? 'active ' : '')}
+            >
+              <PaginationLink id={number} onClick={this.handleClick}>
+                {number}
+              </PaginationLink>
+            </PaginationItem>
+          ));
+        }
+      }
     }
 
     return (
