@@ -42,3 +42,5 @@ msgstr ""
 msgid "Deny"
 msgstr "Decline"
 
+msgid "No pending approvals"
+msgstr ""

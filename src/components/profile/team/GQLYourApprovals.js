@@ -3,23 +3,20 @@ import PropTypes from 'prop-types';
 import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
 
-import classnames from 'classnames';
 import styled from 'styled-components';
 
 import { Query, Mutation } from 'react-apollo';
 
 import {
-  TabContent,
-  TabPane,
-  Nav,
-  NavItem,
-  NavLink,
   Row,
   Col,
   Button,
   Form,
   FormGroup
 } from 'reactstrap';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInbox } from '@fortawesome/free-solid-svg-icons';
 
 import { GET_APPROVALS, MODIFY_APPROVALS } from '../../../gql/profile';
 import refetchMutated from '../../../utils/refetchMutated';
@@ -28,31 +25,25 @@ import InputCharacterCount from '../../core/InputCharacterCount';
 import ErrorModal, { err } from '../../core/ErrorModal';
 
 const RowContainer = styled.div`
-background-color: #F4F8F9;
-height: 360px;
-overflow: hidden;
+background-color: #FFFFFF;
+border: 1px solid rgba(0,0,0,0.125);
+margin-top: 10px;
+border-radius: 4px;
 `;
 
+const HeaderContainer = styled.div`
+background-color: #FAFAFA;
+padding: 10px 6px;
+`;
 const ApprovalList = (props) => {
   const {
     user,
-    approvalID,
-    toggle,
-    activeTab,
     status,
   } = props;
 
   return (
-    <NavItem className="border-bottom">
-      <NavLink
-        href="#!"
-        className={
-          classnames({
-            active: activeTab === approvalID,
-          })
-        }
-        onClick={() => { toggle(approvalID); }}
-      >
+    <HeaderContainer>
+      <div>
         <div className="d-flex">
           <UserAvatar
             avatar={user ? user.avatar : ''}
@@ -68,8 +59,8 @@ const ApprovalList = (props) => {
             <div>{status}</div>
           </div>
         </div>
-      </NavLink>
-    </NavItem>
+      </div>
+    </HeaderContainer>
   );
 };
 
@@ -79,9 +70,6 @@ ApprovalList.propTypes = {
     name: PropTypes.string,
     titleEn: PropTypes.string,
   }).isRequired,
-  approvalID: PropTypes.string.isRequired,
-  toggle: PropTypes.func.isRequired,
-  activeTab: PropTypes.string.isRequired,
   status: PropTypes.string.isRequired,
 };
 
@@ -97,11 +85,13 @@ const ApprovalPane = (props) => {
   const [denyValue, setDenyValue] = useState('');
   const [errorState, setErrorState] = useState([]);
   return (
-    <TabPane tabId={approval.id}>
-      <div
-        className="vh-100 p-3 member-holder d-flex flex-column"
+    <Row>
+      <Col
+        className="m-3"
+        md="6"
+        sm="12"
       >
-        <div className="mb-auto">
+        <div>
           <div className="mb-2">
             <strong>{approval.user.name} </strong>
             {(changeType === 'Membership') ?
@@ -167,7 +157,7 @@ const ApprovalPane = (props) => {
                   id={`comments-${approval.id}`}
                 />
               </FormGroup>
-              <div className="float-right">
+              <div>
                 <Button
                   disabled={loading}
                   color="primary"
@@ -197,8 +187,8 @@ const ApprovalPane = (props) => {
             </Form>
           )}
         </Mutation>
-      </div>
-    </TabPane>
+      </Col>
+    </Row>
   );
 };
 
@@ -220,23 +210,6 @@ ApprovalPane.propTypes = {
 };
 
 class GQLYourApprovals extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      activeTab: '1',
-    };
-  }
-
-  toggle(tab) {
-    if (this.state.activeTab !== tab) {
-      this.setState({
-        activeTab: tab,
-      });
-    }
-  }
-
   render() {
     return (
       <Query
@@ -253,51 +226,51 @@ class GQLYourApprovals extends React.Component {
           if (loading) return 'Loading...';
           if (error) return `Error!: ${error}`;
           const approvalData = (!data) ? '' : data.approvals;
-          const aList = (approvalData.length > 0)
-            ? approvalData.map(apprvl => (
-              <ApprovalList
-                key={apprvl.id}
-                user={apprvl.gcIDSubmitter}
-                approvalID={apprvl.id}
-                toggle={(e) => { this.toggle(e); }}
-                activeTab={this.state.activeTab}
-                status={apprvl.status}
-              />
-            )) : 'NO APPROVALS';
-
           const aPane = (approvalData.length > 0)
             ? approvalData.map(apprvl => (
-              <ApprovalPane
-                key={apprvl.id}
-                changeType={apprvl.changeType}
-                approval={
-                  {
-                    id: apprvl.id,
-                    user: {
-                      gcID: apprvl.gcIDSubmitter.gcID,
-                      name: apprvl.gcIDSubmitter.name,
-                    },
+              <div key={apprvl.id}>
+                <ApprovalList
+                  user={apprvl.gcIDSubmitter}
+                  status={apprvl.status}
+                />
+                <ApprovalPane
+                  changeType={apprvl.changeType}
+                  approval={
+                    {
+                      id: apprvl.id,
+                      user: {
+                        gcID: apprvl.gcIDSubmitter.gcID,
+                        name: apprvl.gcIDSubmitter.name,
+                      },
+                    }
                   }
-                }
-                requestedChange={apprvl.requestedChange}
-              />
-            )) : '';
+                  requestedChange={apprvl.requestedChange}
+                />
+              </div>
+            )) : (
+              <div>
+                <div className="p-5 text-center h4 text-muted">
+                  <div>
+                    <FontAwesomeIcon
+                      icon={faInbox}
+                      size="3x"
+                    />
+                  </div>
+                  <div>
+                    {__('No pending approvals')}
+                  </div>
+                </div>
+              </div>
+            );
           return (
             <RowContainer>
-              <Row className="mt-3 your-teams-container">
-                <Col sm="4" className="pr-0">
-                  <div className="member-holder">
-                    <Nav vertical>
-                      {aList}
-                    </Nav>
-                  </div>
-                </Col>
-                <Col sm="8" className="pl-0">
-                  <TabContent activeTab={this.state.activeTab}>
+              <div>
+                <div>
+                  <div>
                     {aPane}
-                  </TabContent>
-                </Col>
-              </Row>
+                  </div>
+                </div>
+              </div>
             </RowContainer>
           );
         }}
