@@ -35,7 +35,6 @@ class Paginations extends React.Component {
 
   throttledHandleWindowResize() {
     this.setState({ isMobile: window.innerWidth < 480 });
-    console.log(this.state.isMobile);
   }
 
   updateDimensions() {
@@ -80,7 +79,6 @@ class Paginations extends React.Component {
       }
 
       if (currentPage) {
-        console.log(this.state.windowWidth);
         if (windowWidth < 600) {
           if (currentPage < 3) {
             startPage = 0;

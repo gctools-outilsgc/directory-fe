@@ -20,7 +20,7 @@ class search extends React.Component {
       todosPerPage: 6,
       order:'',
       filters:{org:[],team:[]},
-      isChecked: props.isChecked || true,
+      isChecked: props.isChecked || false,
     };
     this.handleAlphabetClick = this.handleAlphabetClick.bind(this);
     this.handleResultChange = this.handleResultChange.bind(this);
@@ -157,7 +157,6 @@ class search extends React.Component {
             }
         
         if( Object.keys(checkResult.search).length >0) {
-        console.log('resulkt?')
           if(Object.keys(filtersOrg).length >0 || Object.keys(filtersTeam).length >0 ){
             checkResult.search = this.filterssearch(checkResult.search)   
           }
@@ -213,7 +212,6 @@ class search extends React.Component {
           ))
        
           numberResults = Object.keys(checkResult.search).length;
-
           showingStart = currentPage * todosPerPage - todosPerPage +1;
           showingEnd = (currentPage * todosPerPage > numberResults ? numberResults : currentPage * todosPerPage);
 
