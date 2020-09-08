@@ -188,10 +188,24 @@ class search extends React.Component {
               </Row>
               <Row>
                 <Col xs="12" md="6">
-                  <span className="font-weight-bold"> {__('Teams')} </span>{a.team.nameEn}
-                </Col>
-                <Col xs="12" md="6">
-                  <span className="font-weight-bold">{__('Organization')}: </span>{a.team.organization.nameEn}
+                <span className="font-weight-bold"> {__('Teams')} </span>
+                {(localizer.lang === 'en_CA') ? (
+                    a.team ?
+                    a.team.nameEn : ''
+                ) : (
+                    a.team ?
+                    a.team.nameFr : ''
+                )}
+              </Col>
+              <Col xs="12" md="6">
+                <span className="font-weight-bold">{__('Organization')}: </span>
+                {(localizer.lang === 'en_CA') ? (
+                    a.team ?
+                    a.team.organization.nameEn : ''
+                ) : (
+                    a.team ?
+                    a.team.organization.nameFr : ''
+                )}
                 </Col>
               </Row>
               <Row>
