@@ -31,14 +31,15 @@ const Onboard = (props) => {
   const [loading, setLoading] = useState(true);
   const [mutationState, setMutationState] = useState(false);
   const [items, setItems] = useState([]);
+  const [ltest, setLtest] = useState(false);
 
   // Fetch example =
   // eslint-disable-next-line
-  // https://gccollab.ca/services/api/rest/json/?method=get.profile.by.gcid&gcid=GCID
+  // https://gccollab.ca/services/api/rest/jsonp/?method=get.profile.by.gcid&gcid=GCID
 
   // Fetch user's information from
   // eslint-disable-next-line
-  const apiCall = `https://gccollab.ca/services/api/rest/jsonp/?method=get.profile.by.gcid&gcid=${myGcID}`
+  const apiCall = `http://192.168.0.15/services/api/rest/jsonp/?method=get.profile.by.gcid&gcid=${myGcID}`
   useEffect(() => {
     // Set timeout to give users a chance
     // To see loading / information message
@@ -63,6 +64,15 @@ const Onboard = (props) => {
                 country: json.result.country || '',
               };
               // set the items to the object
+              // eslint-disable-next-line
+              if (!/^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/.test(userObject.officePhone)) {
+                // null if it does not match the pattern
+                userObject.officePhone = '';
+              }
+              // eslint-disable-next-line
+              if (!/^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/.test(userObject.mobilePhone)) {
+                userObject.mobilePhone = '';
+              }
               setItems({
                 gcID: userObject.gcID,
                 titleEn: userObject.titleEn,
@@ -97,6 +107,7 @@ const Onboard = (props) => {
         onCompleted={() => {
           setLoading(false);
           setMutationState(false);
+          setLtest(true);
         }}
         onError={(e) => {
           console.log(e);
@@ -114,7 +125,7 @@ const Onboard = (props) => {
           if (mutationState) {
             setTimeout(() => {
               modifyProfile(prepareEditProfile({
-                gcID: items.gcID,
+                gcID: myGcID,
                 titleEn: items.titleEn,
                 titleFr: items.titleFr,
                 officePhone: items.officePhone,
@@ -154,7 +165,7 @@ const Onboard = (props) => {
           </CardBody>
         </Card> :
         <div className="onboard-container m-auto">
-          <ConnectedOnboardMod />
+          {ltest && <ConnectedOnboardMod />}
         </div>
       }
     </Container>
