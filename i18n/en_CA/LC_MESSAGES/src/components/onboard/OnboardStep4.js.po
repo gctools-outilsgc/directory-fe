@@ -26,6 +26,10 @@ msgstr "Let's put a face to that name! A photo will help others recognize you, b
 msgid "Step4D2"
 msgstr "Note: you can upload any image size, it will automatically be resized to fit."
 
+#: 18:14 src/components/onboard/OnboardStep4.js
+msgid "Step4D3"
+msgstr "Image imported from GCcollab."
+
 #: 26:15 src/components/onboard/OnboardStep4.js
 msgid "Back"
 msgstr ""
