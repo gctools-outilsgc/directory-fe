@@ -43,7 +43,16 @@ export class OnboardStep4 extends Component {
             <Col xs="8">
               <p>{__('Step4D1')}</p>
               <p>{__('Step4D2')}</p>
-              <p>{__('Step4D3')}</p>
+              <p>
+                {__('Step4D3')}
+                <a
+                  href="https://gccollab.ca/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GCcollab
+                </a>.
+              </p>
             </Col>
           </Row>
           <Row className="m-2 float-right">

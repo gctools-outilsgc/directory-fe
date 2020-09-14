@@ -28,7 +28,7 @@ msgstr "Remarque : Vous pouvez télécharger n’importe quelle taille d’image
 
 #: 18:14 src/components/onboard/OnboardStep4.js
 msgid "Step4D3"
-msgstr "Image imported from GCcollab."
+msgstr "Votre image d'avatar importée de "
 
 #: 26:15 src/components/onboard/OnboardStep4.js
 msgid "Back"
