@@ -39,9 +39,8 @@ const Onboard = (props) => {
 
   // Fetch user's information from
   // eslint-disable-next-line
-  // const apiCall = `https://gccollab.ca/services/api/rest/jsonp/?method=get.profile.by.gcid&gcid=${myGcID}`
-  // eslint-disable-next-line
-  const apiCall = `http://10.0.0.139/services/api/rest/jsonp/?method=get.profile.by.gcid&gcid=${myGcID}`
+  const apiCall = `https://gccollab.ca/services/api/rest/jsonp/?method=get.profile.by.gcid&gcid=${myGcID}`
+
   useEffect(() => {
     // Set timeout to give users a chance
     // To see loading / information message
