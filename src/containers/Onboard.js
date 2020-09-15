@@ -31,6 +31,7 @@ const Onboard = (props) => {
   const [loading, setLoading] = useState(true);
   const [mutationState, setMutationState] = useState(false);
   const [items, setItems] = useState([]);
+  const [avatarParams, setAvatarParams] = useState([]);
 
   // Fetch example =
   // eslint-disable-next-line
@@ -38,7 +39,9 @@ const Onboard = (props) => {
 
   // Fetch user's information from
   // eslint-disable-next-line
-  const apiCall = `https://gccollab.ca/services/api/rest/jsonp/?method=get.profile.by.gcid&gcid=${myGcID}`
+  // const apiCall = `https://gccollab.ca/services/api/rest/jsonp/?method=get.profile.by.gcid&gcid=${myGcID}`
+  // eslint-disable-next-line
+  const apiCall = `http://10.0.0.139/services/api/rest/jsonp/?method=get.profile.by.gcid&gcid=${myGcID}`
   useEffect(() => {
     // Set timeout to give users a chance
     // To see loading / information message
@@ -74,6 +77,9 @@ const Onboard = (props) => {
                 province: userObject.province,
                 postalCode: userObject.postalCode,
                 country: userObject.country,
+              });
+              setAvatarParams({
+                iconURL: json.result.iconURL,
               });
               // If we have items fire the mutation
               setMutationState(true);
@@ -154,7 +160,7 @@ const Onboard = (props) => {
           </CardBody>
         </Card> :
         <div className="onboard-container m-auto">
-          <ConnectedOnboardMod />
+          <ConnectedOnboardMod avatarParams={avatarParams} />
         </div>
       }
     </Container>
