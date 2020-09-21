@@ -48,10 +48,9 @@ export class OnboardStep2 extends Component {
         mutation={EDIT}
       >
         {modifyProfile => (
-          <div className="basic-form-holder">
-            <h1 className="sr-only">
-                          Hidden Heading?
-            </h1>
+          <div
+            className={this.props.isActive ? 'basic-form-holder' : 'd-none'}
+          >
             <Form
               onSubmit={(e) => {
                 e.preventDefault();
@@ -75,9 +74,9 @@ export class OnboardStep2 extends Component {
             >
               <Row className="pb-2 mb-3 mt-3">
                 <Col sm="12">
-                  <h2 className="h4 mb-2 pb-2 border-bottom text-primary">
+                  <h1 className="h4 mb-2 pb-2 border-bottom text-primary">
                     {__('Step2T1')}
-                  </h2>
+                  </h1>
                   <p>{__('Step2D1')}</p>
                 </Col>
                 <Col md="6">
@@ -207,6 +206,7 @@ export class OnboardStep2 extends Component {
 OnboardStep2.defaultProps = {
   userObject: {},
   nextStep: undefined,
+  isActive: undefined,
 };
 
 OnboardStep2.propTypes = {
@@ -225,5 +225,6 @@ OnboardStep2.propTypes = {
     }),
   }),
   nextStep: PropTypes.func,
+  isActive: PropTypes.bool,
 };
 export default LocalizedComponent(OnboardStep2);

@@ -14,7 +14,7 @@ export class OnboardStep4 extends Component {
       userObject,
     } = this.props;
     return (
-      <div>
+      <div className={this.props.isActive ? '' : 'd-none'}>
         <h1 className="h3 border-bottom mb-2 pb-2">
           {__('Step4T1')}
         </h1>
