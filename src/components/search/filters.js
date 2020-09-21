@@ -104,6 +104,7 @@ class Filters extends React.Component {
         <Button
           onClick={() => { this.onLoadLess(type); }}
           color="link"
+          className="btn-plus"
         >
           {__('Load less')}
         </Button>);
@@ -112,6 +113,7 @@ class Filters extends React.Component {
       <Button
         onClick={() => { this.onLoadMore(type); }}
         color="link"
+        className="btn-plus"
       >
         {__('Load more')}
       </Button>);

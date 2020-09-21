@@ -42,3 +42,5 @@ msgstr "Approuver"
 msgid "Deny"
 msgstr "Refuser"
 
+msgid "No pending approvals"
+msgstr "Aucune approbation en attente"

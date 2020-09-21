@@ -4,6 +4,8 @@ import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import { Container, Row, ListGroupItem, Col, Form, FormGroup,
   Input, Label } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner, faSlidersH } from '@fortawesome/free-solid-svg-icons';
 import ProfileSearch from '../components/core/ProfileSearch';
 import Filters from "../components/search/filters"
 import Paginations from "../components/search/Pagination"
@@ -18,11 +20,14 @@ class search extends React.Component {
       todosPerPage: 6,
       order:'',
       filters:{org:[],team:[]},
+      isChecked: props.isChecked || false,
     };
     this.handleAlphabetClick = this.handleAlphabetClick.bind(this);
+    this.handleResultChange = this.handleResultChange.bind(this);
     this.filterssearch = this.filterssearch.bind(this);
     this.filtersCallback = this.filtersCallback.bind(this);
-    this.paginationCallback = this.paginationCallback.bind(this);        
+    this.paginationCallback = this.paginationCallback.bind(this);
+    this.handleChange = this.handleChange.bind(this);       
   }
 
   componentDidMount() {
@@ -63,6 +68,10 @@ class search extends React.Component {
     this.setState({order:e.target.value});
   }
 
+  handleResultChange(e) {
+    this.setState({todosPerPage: e.target.value});
+  }
+
   filterssearch(search){
     var filters = this.state.filters
     var filtersOrg = filters.org
@@ -90,8 +99,13 @@ class search extends React.Component {
   filtersCallback(childData) {
     this.setState({filters: childData})
   }
+
   paginationCallback(childData) {
     this.setState({currentPage: childData})
+  }
+
+  handleChange() {
+    this.setState({ isChecked: !this.state.isChecked })
   }
 
   render() {
@@ -105,6 +119,10 @@ class search extends React.Component {
     let numberResults = '';
     
     return (
+      <Container>
+      <div className="search-bar">
+        <ProfileSearch />
+      </div>
       <Query
         query={gql`
           query profileSearchQuery($name: String!, $number: Int) {
@@ -130,11 +148,15 @@ class search extends React.Component {
         const indexOfLastTodo = currentPage * todosPerPage;
         const indexOfFirstTodo = indexOfLastTodo - todosPerPage;
         if (loading)
-        return <div>Fetching</div>
-        if (error)
-        return <div>Error</div>
-
-        if( Object.keys(checkResult).length >0) {
+        return <Container><div class="d-flex justify-content-center"><FontAwesomeIcon icon={faSpinner} size="3x" spin/></div></Container>
+        if (error) 
+            if (error == "SearchError") {
+              return <Container><div class="d-flex justify-content-center">{(localizer.lang === 'en_CA') ? "Oops, the search encountered a temporary error and could not complete your request. Please try again or contact our helpdesk." : "Oups, la fonction de recherche à rencontrer une erreur temporaire et ne peut completer la requête. S'il vous plaît, veuillez réessayer plus tard ou contacter notre bureau d'aide." }</div></Container>      
+            } else {
+              return <Container><div class="d-flex justify-content-center">{(localizer.lang === 'en_CA') ? "Oops, something went wrong. Please try again or contact our helpdesk." : "Oups, une erreur s'est produite. S'il vous plaît, veuillez réessayer plus tard ou contacter notre bureau d'aide." }</div></Container>
+            }
+        
+        if( Object.keys(checkResult.search).length >0) {
           if(Object.keys(filtersOrg).length >0 || Object.keys(filtersTeam).length >0 ){
             checkResult.search = this.filterssearch(checkResult.search)   
           }
@@ -147,95 +169,128 @@ class search extends React.Component {
           results = currentTodos.map(a => ( 
             <ListGroupItem key={a.gcID}>
           <Row>
-            <Col xs="auto">
+            <Col xs="5" md="3" className="image-section">
               <a href={`/p/${a.gcID}`} >
                 <img className="imgsearch" src={a.avatar} alt="Card image cap" />
               </a>
             </Col>
-            <Col xs="auto">
+            
+            <Col xs="7" md="9">
               <Row>         
-                <Col xs="auto">
+                <Col xs="12">
                   <span className="profile-name"> {a.name}</span>
                 </Col>
-                <Col xs="auto">
-                  <span className="search-email">{a.email}</span>
+                <Col xs="12">
+                  <span className="search-email">
+                    <a href={`mailto:${a.email}`}><span>{a.email}</span></a>
+                  </span>
                 </Col>
               </Row>
               <Row>
-                <Col xs="auto">
-                  <span className="font-weight-bold"> {__('Teams')} </span>{a.team.nameEn}
-                </Col>
-                <Col xs="auto">
-                  <span className="font-weight-bold">{__('Organization')}: </span>{a.team.organization.nameEn}
+                <Col xs="12" md="6">
+                <span className="font-weight-bold"> {__('Teams')} </span>
+                {(localizer.lang === 'en_CA') ? (
+                    a.team ?
+                    a.team.nameEn : ''
+                ) : (
+                    a.team ?
+                    a.team.nameFr : ''
+                )}
+              </Col>
+              <Col xs="12" md="6">
+                <span className="font-weight-bold">{__('Organization')}: </span>
+                {(localizer.lang === 'en_CA') ? (
+                    a.team ?
+                    a.team.organization.nameEn : ''
+                ) : (
+                    a.team ?
+                    a.team.organization.nameFr : ''
+                )}
                 </Col>
               </Row>
               <Row>
-                <Col xs="auto">
-                  {a.mobilePhone !== null ? <div><span className="font-weight-bold">{__('Mobile')}: </span>{a.mobilePhone}</div>: ""}
+                <Col xs="12" md="6">
+                  {a.mobilePhone !== null ? <div><span className="font-weight-bold">{__('Mobile')}: </span><a href={`tel:${a.mobilePhone}`}>{a.mobilePhone}</a></div>: ""}
                 </Col>
-                <Col xs="auto">
-                  {a.officePhone !== null ? <div><span className="font-weight-bold">{__('Office')}: </span>{a.officePhone}</div> : ""}
+                <Col xs="12" md="6">
+                  {a.officePhone !== null ? <div><span className="font-weight-bold">{__('Office')}: </span><a href={`tel:${a.officePhone}`}>{a.officePhone}</a></div> : ""}
                 </Col>
               </Row>
               <Row>
-                <div className="search-address">{a.address !== null ? <div><span className="font-weight-bold">{__('Address')}: </span>{a.address.streetAddress+ ', ' +a.address.city}</div> : ""}   </div>          
+                <div className="search-address">{a.address !== null ? <div><span className="font-weight-bold">{__('Address')}: </span><a href={`https://maps.google.com/?q=${a.address.streetAddress}${a.address.city}`} target="_blank" rel="noopener noreferrer">{a.address.streetAddress+ ', ' +a.address.city}</a></div> : ""}   </div>          
               </Row>  
             </Col>
+     
           </Row>
         </ListGroupItem>
           ))
        
           numberResults = Object.keys(checkResult.search).length;
-
           showingStart = currentPage * todosPerPage - todosPerPage +1;
           showingEnd = (currentPage * todosPerPage > numberResults ? numberResults : currentPage * todosPerPage);
 
         } else {
-          results = __('No result found');
+          results = <div className="noResult">{__('No result found')}</div>
         }
 
         const styleClasses = (!data)
           ? 'search-results-none' : 'list-unstyled search-results';
 
         return (
-          <Container>
-            <div className="search-bar">
-              <ProfileSearch />
-            </div>
-            <Row style={{ position: 'relative' }}>
-              <Col xs="2" sm="2" className="sort_align">
-                <Form>
-                  <FormGroup>
+          <div>
+              <Row>     
+                <Col sm="4" md="2" className="col-filter">
+                  <FormGroup className="form-filter">
                     <Label for="sort">{__('Sort by')}</Label>
                     <Input type="select" onChange={(e) => this.handleAlphabetClick(e)} name="sort" id="sort">
                       <option>---</option>
                       <option value="desc">{__('Alphabetical')}</option>
                       <option value="asc">{__('Unalphabetical')}</option>                  
                     </Input>
-                  </FormGroup>
-                </Form>
-              </Col> 
-              <Col xs={{ size: 3, offset: 5 }} sm={{ size: 3, offset: 5 }}>
-                <span className="showing_results">{__('Showing')} {showingStart} {__('to')} {showingEnd} {__('of')} {numberResults} {__('results')}</span>
-              </Col>
+                  </FormGroup> 
+                  </Col>
+                  <Col md="2" className="col-filter">
+                   <FormGroup className="form-filter"> 
+                      <Label for="resultsPerPage">{__('Results per page')}</Label>
+                      <Input type="select" onChange={(e) => this.handleResultChange(e)} name="resultsPerPage" id="resultsPerPage">
+                        <option value="6">6</option>
+                        <option value="12">12</option>
+                        <option value="18">18</option>
+                      </Input>
+                   </FormGroup>
+                    </Col>
+                    <Col md="2" className="col-filter">
+                    <div id="ck-button">
+                    <label class="menu-icon" for="menu-btn">
+                    <input class="menu-btn" type="checkbox" value={this.state.isChecked} onChange={this.handleChange} id="menu-btn" />
+                    <span><FontAwesomeIcon icon={faSlidersH}/> Filter</span>
+                  </label></div>
+                  </Col>
             </Row>
             <Row>
-              <Col xs="9" sm="9">
-                <ul>{results}</ul>
+              <Col xl={{ size: 3, offset: 6 }} sm={{ size: 3, offset: 6 }}>
+                <div className="pr-3 showing_results">{__('Showing')} {showingStart} {__('to')} {showingEnd} {__('of')} {numberResults} {__('results')}</div>
               </Col>
-              <Col xs="3" sm="3">  
-              <Filters  resultSearch={ checkResult.search } updateFilters = {this.filtersCallback}/>
+             </Row>
+            <Row>
+              <Col xs="12" xl="9">
+                <ul style={{"padding-left":0}}>{results}</ul>
+              </Col>
+              <Col xs="3" sm="3" id="filter-content"  className={"menu " + this.state.isChecked }> 
+              <a href="javascript:void(0)" class="closebtn" onClick={this.handleChange}>&times;</a>
+              <Filters resultSearch={ checkResult.search } updateFilters = {this.filtersCallback}/>
               </Col>
             </Row>
             <Row>
               <Col xs="12" sm="10">
-              <Paginations  resultSearch={ checkResult.search } page={this.state.currentPage} paginationCurrentpage = {this.paginationCallback}/>
+              <Paginations  resultSearch={ checkResult.search } page={this.state.currentPage} paginationCurrentpage = {this.paginationCallback} perPage={this.state.todosPerPage} />
               </Col>
             </Row>
-          </ Container>
+          </div>
           );
         }}
       </Query>
+      </ Container>
     );
   }
 }

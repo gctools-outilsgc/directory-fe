@@ -58,3 +58,6 @@ msgstr ""
 
 msgid "results"
 msgstr ""
+
+msgid "Results per page"
+msgstr ""
