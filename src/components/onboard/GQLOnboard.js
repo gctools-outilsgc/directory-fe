@@ -36,9 +36,9 @@ export const OnboardMod = (props) => {
   const {
     myGcID,
     accessToken,
+    avatarParams,
   } = props;
   const canSkip = !myGcID;
-
   return (
     <Query
       variables={{ gcID: (String(myGcID)) }}
@@ -69,6 +69,7 @@ export const OnboardMod = (props) => {
                 />
                 <LocalizedOnboardStep4
                   userObject={userInfo}
+                  avatarParams={avatarParams}
                 />
                 <LocalizedOnboardStep5
                   userObject={userInfo}
@@ -78,7 +79,7 @@ export const OnboardMod = (props) => {
                   forwardID={myGcID}
                 />
               </StepWizard>
-            )}
+              )}
           </div>
         );
       }}
@@ -89,11 +90,13 @@ export const OnboardMod = (props) => {
 OnboardMod.defaultProps = {
   myGcID: undefined,
   accessToken: undefined,
+  avatarParams: undefined,
 };
 
 OnboardMod.propTypes = {
   myGcID: PropTypes.string,
   accessToken: PropTypes.string,
+  avatarParams: PropTypes.shape(),
 };
 
 export default connect(mapStateToProps)(OnboardMod);

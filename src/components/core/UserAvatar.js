@@ -38,36 +38,37 @@ export const UserAvatar = (props) => {
           />
         </div>
         {canEdit && (
-        <UploadContainer className="mutate">
-          <Mutation
-            mutation={EDIT}
-          >
-            {uploadAvatar => (
-              <Button
-                onClick={e => e.stopPropagation()}
-              >
-                <label htmlFor="avatarUploadTest" className="mb-0">
-                  {__('Upload')}
-                  <input
-                    type="file"
-                    id="avatarUploadTest"
-                    style={{ display: 'none' }}
-                    onChange={({ target }) => {
-                      uploadAvatar({
-                        variables: {
-                          gcID: myGcID,
-                          data: {
-                            avatar: target.files[0],
+          <UploadContainer className="mutate">
+            <Mutation
+              mutation={EDIT}
+            >
+              {uploadAvatar => (
+                <Button
+                  onClick={e => e.stopPropagation()}
+                >
+                  <label htmlFor="avatarUploadTest" className="mb-0">
+                    {__('Upload')}
+                    <input
+                      type="file"
+                      id="avatarUploadTest"
+                      style={{ display: 'none' }}
+                      onChange={({ target }) => {
+                        uploadAvatar({
+                          variables: {
+                            gcID: myGcID,
+                            data: {
+                              avatar: target.files[0],
+                            },
                           },
-                        },
-                      });
-                    }}
-                  />
-                </label>
-              </Button>
-            )}
-          </Mutation>
-        </UploadContainer>
+                        });
+                        console.log(target.files[0]);
+                      }}
+                    />
+                  </label>
+                </Button>
+              )}
+            </Mutation>
+          </UploadContainer>
         )}
       </div>
     </div>
@@ -76,7 +77,7 @@ export const UserAvatar = (props) => {
 
 UserAvatar.defaultProps = {
   edit: false,
-  name: 'No photo',
+  name: '',
   gcID: '',
   myGcID: '',
   avatar: '',

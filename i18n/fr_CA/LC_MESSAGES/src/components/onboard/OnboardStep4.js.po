@@ -26,6 +26,10 @@ msgstr "Mettons un visage à ce nom! Une photo aidera les autres à vous reconna
 msgid "Step4D2"
 msgstr "Remarque : Vous pouvez télécharger n’importe quelle taille d’image, elle sera automatiquement redimensionnée pour s’adapter à l’interface."
 
+#: 18:14 src/components/onboard/OnboardStep4.js
+msgid "Step4D3"
+msgstr "Votre image d'avatar importée de "
+
 #: 26:15 src/components/onboard/OnboardStep4.js
 msgid "Back"
 msgstr "Retour"
