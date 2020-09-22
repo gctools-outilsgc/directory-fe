@@ -48,7 +48,7 @@ export class OnboardStep5 extends Component {
     const supTest = (!teamTest) ? '' : userObject.team.owner;
 
     return (
-      <div>
+      <div className={this.props.isActive ? '' : 'd-none'}>
         <h1 className="h3 border-bottom mb-2 pb-2">
           {__('Step5T1')}
         </h1>
@@ -189,6 +189,7 @@ OnboardStep5.defaultProps = {
   userObject: {},
   nextStep: undefined,
   previousStep: undefined,
+  isActive: undefined,
 };
 
 OnboardStep5.propTypes = {
@@ -197,6 +198,7 @@ OnboardStep5.propTypes = {
   }),
   nextStep: PropTypes.func,
   previousStep: PropTypes.func,
+  isActive: PropTypes.bool,
 };
 
 export default LocalizedComponent(OnboardStep5);

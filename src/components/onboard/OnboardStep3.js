@@ -61,7 +61,7 @@ export class OnboardStep3 extends Component {
               }));
               this.props.nextStep();
             }}
-            className="basic-form-holder"
+            className={this.props.isActive ? 'basic-form-holder' : 'd-none'}
           >
             <h1 className="mb-2 pb-2 h3 text-primary">
               {__('Step3T1')}
@@ -249,6 +249,7 @@ OnboardStep3.defaultProps = {
   userObject: { address: {} },
   nextStep: undefined,
   previousStep: undefined,
+  isActive: undefined,
 };
 
 OnboardStep3.propTypes = {
@@ -267,6 +268,7 @@ OnboardStep3.propTypes = {
   }),
   nextStep: PropTypes.func,
   previousStep: PropTypes.func,
+  isActive: PropTypes.bool,
 };
 
 export default LocalizedComponent(OnboardStep3);

@@ -10,7 +10,7 @@ import { Button, Row } from 'reactstrap';
 export class OnboardStep1 extends Component {
   render() {
     return (
-      <div>
+      <div className={this.props.isActive ? '' : 'd-none'}>
         <h1 className="h3 mb-2 pb-1">
           {__('Welcome')}
         </h1>
