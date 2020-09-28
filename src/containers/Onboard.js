@@ -31,6 +31,7 @@ const Onboard = (props) => {
   const [loading, setLoading] = useState(true);
   const [mutationState, setMutationState] = useState(false);
   const [items, setItems] = useState([]);
+  const [ltest, setLtest] = useState(false);
   const [avatarParams, setAvatarParams] = useState([]);
 
   // Fetch example =
@@ -65,6 +66,15 @@ const Onboard = (props) => {
                 country: json.result.country || '',
               };
               // set the items to the object
+              // eslint-disable-next-line
+              if (!/^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/.test(userObject.officePhone)) {
+                // null if it does not match the pattern
+                userObject.officePhone = '';
+              }
+              // eslint-disable-next-line
+              if (!/^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/.test(userObject.mobilePhone)) {
+                userObject.mobilePhone = '';
+              }
               setItems({
                 gcID: userObject.gcID,
                 titleEn: userObject.titleEn,
@@ -102,6 +112,7 @@ const Onboard = (props) => {
         onCompleted={() => {
           setLoading(false);
           setMutationState(false);
+          setLtest(true);
         }}
         onError={(e) => {
           console.log(e);
@@ -119,7 +130,7 @@ const Onboard = (props) => {
           if (mutationState) {
             setTimeout(() => {
               modifyProfile(prepareEditProfile({
-                gcID: items.gcID,
+                gcID: myGcID,
                 titleEn: items.titleEn,
                 titleFr: items.titleFr,
                 officePhone: items.officePhone,
@@ -159,7 +170,7 @@ const Onboard = (props) => {
           </CardBody>
         </Card> :
         <div className="onboard-container m-auto">
-          <ConnectedOnboardMod avatarParams={avatarParams} />
+          {ltest && <ConnectedOnboardMod avatarParams={avatarParams} />}
         </div>
       }
     </Container>
