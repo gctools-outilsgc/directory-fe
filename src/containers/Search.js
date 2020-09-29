@@ -128,9 +128,11 @@ class search extends React.Component {
     
     return (
       <Container>
+        <Row>
       <div className="search-bar">
         <ProfileSearch />
       </div>
+      </Row>
       <Query
         query={gql`
           query profileSearchQuery($name: String!, $number: Int) {
@@ -192,8 +194,8 @@ class search extends React.Component {
         return (
           <div>
               <Row>     
-                <Col sm="4" md="2" className="col-filter">
-                  <FormGroup className="form-filter">
+                <Col xs="6" md="2" className="col-filter">
+                  <FormGroup className="form-filter remove-margin">
                     <Label for="sort">{__('Sort by')}</Label>
                     <Input type="select" onChange={(e) => this.handleAlphabetClick(e)} name="sort" id="sort">
                       <option>---</option>
@@ -202,8 +204,8 @@ class search extends React.Component {
                     </Input>
                   </FormGroup> 
                   </Col>
-                  <Col md="2" className="col-filter">
-                   <FormGroup className="form-filter"> 
+                  <Col xs="6" md="2" className="col-filter">
+                   <FormGroup className="form-filter remove-margin"> 
                       <Label for="resultsPerPage">{__('Results per page')}</Label>
                       <Input type="select" onChange={(e) => this.handleResultChange(e)} name="resultsPerPage" id="resultsPerPage">
                         <option value="6">6</option>
@@ -212,7 +214,7 @@ class search extends React.Component {
                       </Input>
                    </FormGroup>
                     </Col>
-                    <Col md="2" className="col-filter">
+                    <Col xs="6" md="2" className="col-filter">
                    <FormGroup className="form-filter"> 
                       <Label for="listview">list view</Label>
                       <Input type="select" onChange={(e) => this.handlelistview(e)} name="listview" id="listview">
@@ -222,7 +224,7 @@ class search extends React.Component {
                       </Input>
                    </FormGroup>
                     </Col>
-                    <Col md="2" className="col-filter">
+                    <Col xs="6" md="2" className="col-filter">
                     <div id="ck-button">
                     <label class="menu-icon" for="menu-btn">
                     <input class="menu-btn" type="checkbox" value={this.state.isChecked} onChange={this.handleChange} id="menu-btn" />
