@@ -13,21 +13,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: 88:19 src/containers/Saarch.js
-msgid "Teams"
-msgstr ""
-
-msgid "Organization"
-msgstr ""
-
-msgid "Mobile"
-msgstr ""
-
-msgid "Office"
-msgstr ""
-
-msgid "Address"
-msgstr ""
+#: 88:19 src/containers/Search.js
 
 msgid "Sort by"
 msgstr ""
@@ -60,4 +46,16 @@ msgid "results"
 msgstr ""
 
 msgid "Results per page"
+msgstr ""
+
+msgid "Manage list"
+msgstr ""
+
+msgid "Default"
+msgstr ""
+
+msgid "Light view"
+msgstr ""
+
+msgid "Minimize"
 msgstr ""

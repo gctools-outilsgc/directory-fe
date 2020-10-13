@@ -62,3 +62,15 @@ msgstr "résultas"
 
 msgid "Results per page"
 msgstr "résultas par page"
+
+msgid "Manage list"
+msgstr "Paramètre de liste"
+
+msgid "Default"
+msgstr "Par default"
+
+msgid "Light view"
+msgstr "Vue réduite"
+
+msgid "Minimize"
+msgstr "Minimiser"

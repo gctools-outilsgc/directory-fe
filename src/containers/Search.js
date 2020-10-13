@@ -128,11 +128,9 @@ class search extends React.Component {
     
     return (
       <Container>
-        <Row>
       <div className="search-bar">
         <ProfileSearch />
       </div>
-      </Row>
       <Query
         query={gql`
           query profileSearchQuery($name: String!, $number: Int) {
@@ -216,11 +214,11 @@ class search extends React.Component {
                     </Col>
                     <Col xs="6" md="2" className="col-filter">
                    <FormGroup className="form-filter"> 
-                      <Label for="listview">list view</Label>
+                      <Label for="listview">{__('Manage list')}</Label>
                       <Input type="select" onChange={(e) => this.handlelistview(e)} name="listview" id="listview">
-                        <option value="long">full</option>
-                        <option value="medium">medium</option>
-                        <option value="short">short</option>
+                        <option value="long">{__('Default')}</option>
+                        <option value="medium">{__('Light view')}</option>
+                        <option value="short">{__('Minimize')}</option>
                       </Input>
                    </FormGroup>
                     </Col>
