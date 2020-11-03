@@ -91,6 +91,12 @@ query profileSearchQuery($name: String!) {
   }
 }`;
 
+export const INTEGRATION = gql`
+query profileIntegrationQuery($email: EmailAddress!, 
+  $source: IntegrationSources!) {
+    integration(email: $email, source: $source)
+}`;
+
 export const GET_YOUR_TEAM_APPROVAL = gql`
 query getYourApproval($gcIDSubmitter: gcIDProfileInput!) {
   approvals(

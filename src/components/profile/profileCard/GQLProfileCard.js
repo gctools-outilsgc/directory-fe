@@ -11,9 +11,11 @@ import { Card, CardBody, CardTitle } from 'reactstrap';
 
 import LocalizedProfileCardDisplay from './ProfileCardDisplay';
 import LocalizedEditProfile from './EditProfile';
+import LocalizedGEDSAudit from './GEDSAudit';
 import Loading from './Loading';
 import GQLYourInfoApprovalStatus from './GQLYourInfoApprovalStatus';
 
+import isGovEmail from '../../../utils/isGovEmail';
 import { GET } from '../../../gql/profile';
 
 const mapStateToProps = ({ user }) => {
@@ -62,6 +64,8 @@ export const GQLProfileCard = (props) => {
         if (loading) return <Loading />;
         if (error) return `Error!: ${error}`;
         const userInfo = (!data) ? '' : data.profiles[0];
+        // Check for a valid GC email
+        const canAudit = isGovEmail(userInfo.email);
         return (
           <Card style={style.card}>
             {userInfo ? (
@@ -74,10 +78,20 @@ export const GQLProfileCard = (props) => {
                   <CardTitle className="profile-card-title d-flex">
                     <h2 className="mr-auto">{__('Profile')}</h2>
                     {canEdit ?
-                      <LocalizedEditProfile
-                        profile={userInfo}
-                        token={accessToken}
-                      /> : ''}
+                      <div className="d-flex">
+                        {
+                          canAudit &&
+                            <LocalizedGEDSAudit
+                              profile={userInfo}
+                              gcID={userInfo.gcID}
+                              email={userInfo.email}
+                            />
+                        }
+                        <LocalizedEditProfile
+                          profile={userInfo}
+                          token={accessToken}
+                        />
+                      </div> : ''}
                   </CardTitle>
                   {canEdit && (
                     <GQLYourInfoApprovalStatus
