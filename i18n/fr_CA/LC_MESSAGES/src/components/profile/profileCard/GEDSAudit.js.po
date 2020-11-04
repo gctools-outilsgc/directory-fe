@@ -1,0 +1,85 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-04-16 13:18-0400\n"
+"PO-Revision-Date: 2019-02-13 10:51-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr_CA\n"
+"Language-Team: fr_CA <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: 28:67 src/components/profile/profileCard/ProfileCardDisplay.js
+msgid "Please select data"
+msgstr ""
+
+msgid "Other"
+msgstr ""
+
+msgid "Other Value"
+msgstr ""
+
+msgid "Your data is the same"
+msgstr ""
+
+msgid "GEDS Audit"
+msgstr ""
+
+msgid "GEDS Audit"
+msgstr ""
+
+msgid "There are differences"
+msgstr ""
+
+msgid "Directory Information"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Job Title - English"
+msgstr ""
+
+msgid "Job Title - French"
+msgstr ""
+
+msgid "Office Phone"
+msgstr ""
+
+msgid "Mobile Phone"
+msgstr ""
+
+msgid "Office Address"
+msgstr ""
+
+msgid "Department"
+msgstr ""
+
+msgid "Department"
+msgstr ""
+
+msgid "auditName"
+msgstr ""
+
+msgid "titleEn"
+msgstr ""
+
+msgid "titleFr"
+msgstr ""
+
+msgid "auditPhone"
+msgstr ""
+
+msgid "auditMobile"
+msgstr ""
+
+msgid "auditAddress"
+msgstr ""
+
+msgid "auditOrg"
+msgstr ""

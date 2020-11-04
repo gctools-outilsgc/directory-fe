@@ -38,7 +38,7 @@ const AuditSelector = (props) => {
           {field}
         </div>
         <small className="text-muted">
-          Please select data
+          {__('Please select data')}
         </small>
         <div>
           <Label htmlFor={`${inputName}-1`}>
@@ -73,12 +73,12 @@ const AuditSelector = (props) => {
               className="mr-1"
               disabled
             />
-            Other
+            {__('Other')}
           </Label>
         </div>
         <div>
           <Label htmlFor={`${inputName}-input`}>
-            Other Input
+            {__('Other Value')}
           </Label>
           <input
             type="text"
@@ -161,7 +161,28 @@ class GEDSAudit extends Component {
       diffs.map(d => (
         <li key={`${d}-key`}>
           <a href={`#${d}-1`}>
-            {d}
+            {
+              (d === 'auditName') &&
+                <span>{__('auditName')}</span>
+            }{
+              (d === 'titleEn') &&
+                <span>{__('titleEn')}</span>
+            }{
+              (d === 'titleFr') &&
+                <span>{__('titleFr')}</span>
+            }{
+              (d === 'auditPhone') &&
+                <span>{__('auditPhone')}</span>
+            }{
+              (d === 'auditMobile') &&
+                <span>{__('auditMobile')}</span>
+            }{
+              (d === 'auditAddress') &&
+                <span>{__('auditAddress')}</span>
+            }{
+              (d === 'auditOrg') &&
+                <span>{__('auditOrg')}</span>
+            }
           </a>
         </li>
       )) : (
@@ -170,7 +191,7 @@ class GEDSAudit extends Component {
             icon={faCheck}
             className="text-success mr-1"
           />
-          Your data is the same
+          {__('Your data is the same')}
         </div>
       );
     return (
@@ -189,7 +210,6 @@ class GEDSAudit extends Component {
                     source: 'GEDS',
                   },
                 });
-                console.log(data);
                 this.setState({
                   // eslint-disable-next-line
                   gName: `${data.integration.en.gn} ${data.integration.en.sn}`,
@@ -207,7 +227,7 @@ class GEDSAudit extends Component {
                 this.toggle();
               }}
             >
-              GEDS AUDIT
+              {__('GEDS Audit')}
             </Button>
             <Modal
               isOpen={this.state.modal}
@@ -215,7 +235,7 @@ class GEDSAudit extends Component {
               className="modal-lg"
             >
               <ModalHeader>
-                GEDS AUDIT
+                {__('GEDS Audit')}
               </ModalHeader>
               <ModalBody>
                 <Row>
@@ -223,7 +243,7 @@ class GEDSAudit extends Component {
                     <Alert color="info">
                       {
                         (diffs.length > 1) &&
-                          <div>There are diffs</div>
+                          <div>{__('There are differences')}</div>
                       }
                       <ul>
                         {diffList}
@@ -235,7 +255,7 @@ class GEDSAudit extends Component {
                     <Form>
                       <div className="border p-2">
                         <div className="font-weight-bold mb-3">
-                          Directory Information
+                          {__('Directory Information')}
                         </div>
                         <div>
                           {
@@ -249,7 +269,7 @@ class GEDSAudit extends Component {
                                 {this.props.profile.name}
                               </div> :
                               <AuditSelector
-                                field="Name"
+                                field={__('Name')}
                                 inputName="name"
                                 gedsValue={this.state.gName}
                                 paasValue={this.props.profile.name}
@@ -272,7 +292,7 @@ class GEDSAudit extends Component {
                                 {this.props.profile.titleEn}
                               </span> :
                               <AuditSelector
-                                field="Job Title - English"
+                                field={__('Job Title - English')}
                                 inputName="titleEn"
                                 gedsValue={this.state.gTitleEn}
                                 paasValue={this.props.profile.titleEn}
@@ -291,7 +311,7 @@ class GEDSAudit extends Component {
                                 {this.props.profile.titleFr}
                               </div> :
                               <AuditSelector
-                                field="Job Title - French"
+                                field={__('Job Title - French')}
                                 inputName="titleFr"
                                 gedsValue={this.state.gTitleFr}
                                 paasValue={this.props.profile.titleFr}
@@ -324,7 +344,7 @@ class GEDSAudit extends Component {
                                 {this.props.profile.officePhone}
                               </div> :
                               <AuditSelector
-                                field="Office Phone"
+                                field={__('Office Phone')}
                                 inputName="auditPhone"
                                 gedsValue={this.state.gOfficePhone}
                                 paasValue={this.props.profile.officePhone}
@@ -343,7 +363,7 @@ class GEDSAudit extends Component {
                                 {this.props.profile.mobilePhone}
                               </div> :
                               <AuditSelector
-                                field="Mobile Phone"
+                                field={__('Mobile Phone')}
                                 inputName="auditMobile"
                                 gedsValue={this.state.gMobilePhone}
                                 paasValue={this.props.profile.mobilePhone}
@@ -362,7 +382,7 @@ class GEDSAudit extends Component {
                                 {formatPAddress}
                               </div> :
                               <AuditSelector
-                                field="Office Address"
+                                field={__('Office Address')}
                                 inputName="auditAddress"
                                 gedsValue={formatGAddress}
                                 paasValue={formatPAddress}
@@ -372,7 +392,7 @@ class GEDSAudit extends Component {
                       </div>
                       <div className="border mt-2 p-2">
                         <div className="font-weight-bold mb-3">
-                          Department
+                          {__('Department')}
                         </div>
                         <div>
                           {
@@ -386,7 +406,7 @@ class GEDSAudit extends Component {
                                 {this.props.profile.team.organization.nameEn}
                               </div> :
                               <AuditSelector
-                                field="Department"
+                                field={__('Department')}
                                 inputName="auditOrg"
                                 gedsValue={this.state.gOrganization}
                                 paasValue={
