@@ -19,7 +19,7 @@ import {
 } from 'reactstrap';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 import { INTEGRATION } from '../../../gql/profile';
 
@@ -98,6 +98,7 @@ class GEDSAudit extends Component {
     super(props);
     this.state = {
       modal: false,
+      loading: false,
       gName: '',
       gTitleEn: '',
       gTitleFr: '',
@@ -198,11 +199,11 @@ class GEDSAudit extends Component {
       <ApolloConsumer>
         {client => (
           <div className="mr-2">
-            {
-              // Check for email pattern
-            }
             <Button
               onClick={async () => {
+                this.setState({
+                  loading: true,
+                });
                 const { data } = await client.query({
                   query: INTEGRATION,
                   variables: {
@@ -225,9 +226,22 @@ class GEDSAudit extends Component {
                   gOrganization: data.integration.en.department,
                 });
                 this.toggle();
+                this.setState({
+                  loading: false,
+                });
               }}
+              disabled={this.state.loading}
             >
-              {__('GEDS Audit')}
+              {
+                (this.state.loading) ?
+                  <FontAwesomeIcon
+                    icon={faSpinner}
+                    spin
+                  /> :
+                  <span>
+                    {__('GEDS Audit')}
+                  </span>
+              }
             </Button>
             <Modal
               isOpen={this.state.modal}
