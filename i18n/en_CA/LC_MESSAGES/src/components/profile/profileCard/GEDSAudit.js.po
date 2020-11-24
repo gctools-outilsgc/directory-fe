@@ -16,7 +16,7 @@ msgstr ""
 
 #: 28:67 src/components/profile/profileCard/ProfileCardDisplay.js
 msgid "Please select data"
-msgstr ""
+msgstr "Please select the correct information"
 
 msgid "Other"
 msgstr ""
@@ -25,7 +25,7 @@ msgid "Other Value"
 msgstr ""
 
 msgid "Your data is the same"
-msgstr ""
+msgstr "You Directory and GEDS information are the same"
 
 msgid "GEDS Audit"
 msgstr ""
@@ -34,7 +34,7 @@ msgid "GEDS Audit"
 msgstr ""
 
 msgid "There are differences"
-msgstr ""
+msgstr "We have found differences in the following information:"
 
 msgid "Directory Information"
 msgstr ""

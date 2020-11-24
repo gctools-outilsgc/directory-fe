@@ -16,7 +16,7 @@ msgstr ""
 
 #: 28:67 src/components/profile/profileCard/ProfileCardDisplay.js
 msgid "Please select data"
-msgstr ""
+msgstr "Veuillez sélectionner les renseignements exacts"
 
 msgid "Other"
 msgstr ""
@@ -25,37 +25,37 @@ msgid "Other Value"
 msgstr ""
 
 msgid "Your data is the same"
-msgstr ""
+msgstr "Votre répertoire et les renseignements du SAGE sont les mêmes"
 
 msgid "GEDS Audit"
-msgstr ""
+msgstr "Vérification du SAGE"
 
 msgid "GEDS Audit"
-msgstr ""
+msgstr "Vérification du SAGE"
 
 msgid "There are differences"
-msgstr ""
+msgstr "Nous avons constaté des différences dans les renseignements suivants :"
 
 msgid "Directory Information"
-msgstr ""
+msgstr "Renseignements du répertoire"
 
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 msgid "Job Title - English"
-msgstr ""
+msgstr "Titre du poste - Anglais"
 
 msgid "Job Title - French"
-msgstr ""
+msgstr "Titre du poste - Français"
 
 msgid "Office Phone"
-msgstr ""
+msgstr "Téléphone"
 
 msgid "Mobile Phone"
-msgstr ""
+msgstr "Cellulaire"
 
 msgid "Office Address"
-msgstr ""
+msgstr "Adresse au travail"
 
 msgid "Department"
 msgstr ""
