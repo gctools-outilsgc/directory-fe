@@ -150,8 +150,6 @@ class GEDSAudit extends Component {
         [name]: value,
       });
     }
-    console.log(`${name} and ${value}`);
-    console.log(this.state);
   }
 
   render() {
@@ -296,9 +294,6 @@ class GEDSAudit extends Component {
                       <ul>
                         {diffList}
                       </ul>
-                      {
-                        // if no diffs
-                      }
                     </Alert>
                     <Mutation
                       mutation={EDIT}
@@ -312,11 +307,25 @@ class GEDSAudit extends Component {
                           },
                         }
                       }
+                      onCompleted={() => {
+                        this.setState({
+                          loading: false,
+                          modal: false,
+                        });
+                      }}
                     >
                       {(modifyProfile, { loading }) => (
                         <Form
                           onSubmit={(e) => {
                             e.preventDefault();
+                            // updating the state
+                            this.handleChange({
+                              target: {
+                                name: 'update',
+                                val: 'update',
+                                id: 'update',
+                              },
+                            });
                             const {
                               auditName, titleEn, titleFr,
                               auditPhone, auditMobile,
@@ -325,12 +334,12 @@ class GEDSAudit extends Component {
                             } = this.state;
                             modifyProfile(prepareEditProfile({
                               gcID: this.props.profile.gcID,
-                              auditName,
+                              name: auditName,
                               email: this.props.profile.email,
                               titleEn,
                               titleFr,
-                              auditPhone,
-                              auditMobile,
+                              officePhone: auditPhone,
+                              mobilePhone: auditMobile,
                               streetAddress,
                               city,
                               province,
@@ -390,7 +399,7 @@ class GEDSAudit extends Component {
                             <div>
                               {
                                 // eslint-disable-next-line
-                                (this.state.gTitleEn === this.props.profile.titleEn) ?
+                                (this.state.gTitleFr === this.props.profile.titleFr) ?
                                   <div className="pb-2">
                                     <FontAwesomeIcon
                                       icon={faCheck}
