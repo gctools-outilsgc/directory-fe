@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import PropTypes from 'prop-types';
 import LocalizedComponent
   from '@gctools-components/react-i18n-translation-webpack';
@@ -32,6 +32,7 @@ const AuditSelector = (props) => {
     changeFunc,
   } = props;
 
+  const [otherSel, setOtherSel] = useState(false);
   return (
     <div className="alert alert-info border-0">
       <FormGroup tag="fieldset" className="mb-0">
@@ -48,7 +49,10 @@ const AuditSelector = (props) => {
               id={`${inputName}-1`}
               name={inputName}
               className="mr-1"
-              onChange={changeFunc}
+              onChange={(e) => {
+                changeFunc(e);
+                setOtherSel(false);
+              }}
               value={gedsValue}
             />
             {gedsValue} - <b>GEDS</b>
@@ -61,36 +65,64 @@ const AuditSelector = (props) => {
               id={`${inputName}-2`}
               name={inputName}
               className="mr-1"
-              onChange={changeFunc}
+              onChange={(e) => {
+                changeFunc(e);
+                setOtherSel(false);
+              }}
               value={paasValue}
             />
             {paasValue} - <b>Directory</b>
           </Label>
         </div>
-        <div>
-          <Label htmlFor={`${inputName}-n`}>
-            <input
-              type="radio"
-              id={`${inputName}-n`}
-              name={inputName}
-              className="mr-1"
-              onChange={changeFunc}
-              value="Other"
-            />
-            {__('Other')}
-          </Label>
-        </div>
-        <div>
-          <Label htmlFor={`${inputName}-input`}>
-            {__('Other Value')}
-          </Label>
-          <input
-            type="text"
-            id={`${inputName}-input`}
-            name={`${inputName}-input`}
-            className="ml-1"
-          />
-        </div>
+        {
+          // Don't show other option for address
+        }
+        {inputName !== 'auditAddress' &&
+          <span>
+            <div>
+              <Label htmlFor={`${inputName}-n`}>
+                <input
+                  type="radio"
+                  id={`${inputName}-n`}
+                  name={inputName}
+                  className="mr-1"
+                  onChange={() => {
+                    setOtherSel(true);
+                  }}
+                  value="Other"
+                />
+                {__('Other')}
+              </Label>
+            </div>
+            {otherSel &&
+              <div>
+                <Label htmlFor={`${inputName}-input`}>
+                  {__('Other Value')}
+                </Label>
+                <input
+                  type="text"
+                  id={`${inputName}-input`}
+                  name={inputName}
+                  className="ml-1"
+                  pattern={
+                    // eslint-disable-next-line
+                    (inputName === 'auditPhone' || inputName === 'auditMobile') &&
+                    '^[+]?[(]?[0-9]{3}[)]?[-s.]?[0-9]{3}[-s.]?[0-9]{4,6}$'
+                  }
+                  onChange={(e) => {
+                    changeFunc({
+                      target: {
+                        name: e.target.name,
+                        value: e.target.value,
+                        id: e.target.id,
+                      },
+                    });
+                  }}
+                />
+              </div>
+            }
+          </span>
+        }
       </FormGroup>
     </div>
   );
