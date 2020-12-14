@@ -19,10 +19,10 @@ msgid "Please select data"
 msgstr "Veuillez sélectionner les renseignements exacts"
 
 msgid "Other"
-msgstr ""
+msgstr "Autre"
 
 msgid "Other Value"
-msgstr ""
+msgstr "Autre"
 
 msgid "Your data is the same"
 msgstr "Votre répertoire et les renseignements du SAGE sont les mêmes"
@@ -32,6 +32,12 @@ msgstr "Vérification du SAGE"
 
 msgid "GEDS Audit"
 msgstr "Vérification du SAGE"
+
+msgid "GEDS"
+msgstr "SAGE"
+
+msgid "Directory"
+msgstr "Annuiare"
 
 msgid "There are differences"
 msgstr "Nous avons constaté des différences dans les renseignements suivants :"
@@ -58,10 +64,10 @@ msgid "Office Address"
 msgstr "Adresse au travail"
 
 msgid "Department"
-msgstr ""
+msgstr "Ministère"
 
 msgid "Department"
-msgstr ""
+msgstr "Ministère"
 
 msgid "auditName"
 msgstr ""
@@ -83,3 +89,6 @@ msgstr ""
 
 msgid "auditOrg"
 msgstr ""
+
+msgid "Save"
+msgstr "Sauvegarder les changements"

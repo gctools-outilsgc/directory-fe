@@ -55,7 +55,7 @@ const AuditSelector = (props) => {
               }}
               value={gedsValue}
             />
-            {gedsValue} - <b>GEDS</b>
+            {gedsValue} - <b>{__('GEDS')}</b>
           </Label>
         </div>
         <div>
@@ -71,7 +71,7 @@ const AuditSelector = (props) => {
               }}
               value={paasValue}
             />
-            {paasValue} - <b>Directory</b>
+            {paasValue} - <b>{__('Directory')}</b>
           </Label>
         </div>
         {
@@ -417,7 +417,9 @@ class GEDSAudit extends Component {
                                       icon={faCheck}
                                       className="text-success mr-1"
                                     />
-                                    {this.props.profile.titleEn}
+                                    <span lang="en">
+                                      {this.props.profile.titleEn}
+                                    </span>
                                   </span> :
                                   <AuditSelector
                                     field={__('Job Title - English')}
@@ -437,7 +439,9 @@ class GEDSAudit extends Component {
                                       icon={faCheck}
                                       className="text-success mr-1"
                                     />
-                                    {this.props.profile.titleFr}
+                                    <span lang="fr">
+                                      {this.props.profile.titleFr}
+                                    </span>
                                   </div> :
                                   <AuditSelector
                                     field={__('Job Title - French')}
@@ -537,8 +541,13 @@ class GEDSAudit extends Component {
                                       className="text-success mr-1"
                                     />
                                     {
-                                      // eslint-disable-next-line
-                                      this.props.profile.team.organization.nameEn
+                                      (localizer.lang === 'en_CA') ? (
+                                        // eslint-disable-next-line
+                                        this.props.profile.team.organization.nameEn
+                                      ) : (
+                                        // eslint-disable-next-line
+                                        this.props.profile.team.organization.nameFr
+                                      )
                                     }
                                   </div> :
                                   <AuditSelector
@@ -562,7 +571,7 @@ class GEDSAudit extends Component {
                               color="primary"
                               disabled={loading}
                             >
-                              Save
+                              {__('Save')}
                             </Button>
                           </div>
                         </Form>

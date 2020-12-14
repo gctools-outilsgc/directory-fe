@@ -33,6 +33,12 @@ msgstr ""
 msgid "GEDS Audit"
 msgstr ""
 
+msgid "GEDS"
+msgstr ""
+
+msgid "Directory"
+msgstr ""
+
 msgid "There are differences"
 msgstr "We have found differences in the following information:"
 
@@ -83,3 +89,6 @@ msgstr "Office Address"
 
 msgid "auditOrg"
 msgstr "Department"
+
+msgid "Save"
+msgstr ""
