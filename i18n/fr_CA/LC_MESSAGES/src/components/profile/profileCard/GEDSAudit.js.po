@@ -1,0 +1,94 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2019-04-16 13:18-0400\n"
+"PO-Revision-Date: 2019-02-13 10:51-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr_CA\n"
+"Language-Team: fr_CA <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: 28:67 src/components/profile/profileCard/ProfileCardDisplay.js
+msgid "Please select data"
+msgstr "Veuillez sélectionner les renseignements exacts"
+
+msgid "Other"
+msgstr "Autre"
+
+msgid "Other Value"
+msgstr "Autre"
+
+msgid "Your data is the same"
+msgstr "Votre répertoire et les renseignements du SAGE sont les mêmes"
+
+msgid "GEDS Audit"
+msgstr "Vérification du SAGE"
+
+msgid "GEDS Audit"
+msgstr "Vérification du SAGE"
+
+msgid "GEDS"
+msgstr "SAGE"
+
+msgid "Directory"
+msgstr "Annuiare"
+
+msgid "There are differences"
+msgstr "Nous avons constaté des différences dans les renseignements suivants :"
+
+msgid "Directory Information"
+msgstr "Renseignements du répertoire"
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "Job Title - English"
+msgstr "Titre du poste - Anglais"
+
+msgid "Job Title - French"
+msgstr "Titre du poste - Français"
+
+msgid "Office Phone"
+msgstr "Téléphone"
+
+msgid "Mobile Phone"
+msgstr "Cellulaire"
+
+msgid "Office Address"
+msgstr "Adresse au travail"
+
+msgid "Department"
+msgstr "Ministère"
+
+msgid "Department"
+msgstr "Ministère"
+
+msgid "auditName"
+msgstr ""
+
+msgid "titleEn"
+msgstr ""
+
+msgid "titleFr"
+msgstr ""
+
+msgid "auditPhone"
+msgstr ""
+
+msgid "auditMobile"
+msgstr ""
+
+msgid "auditAddress"
+msgstr ""
+
+msgid "auditOrg"
+msgstr ""
+
+msgid "Save"
+msgstr "Sauvegarder les changements"
