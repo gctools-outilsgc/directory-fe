@@ -9,6 +9,8 @@ import { faSpinner, faSlidersH } from '@fortawesome/free-solid-svg-icons';
 import ProfileSearch from '../components/core/ProfileSearch';
 import Filters from "../components/search/filters"
 import Paginations from "../components/search/Pagination"
+import DisplayResults from "../components/search/ListViewSearch"
+
 
 // A simple component that shows the pathname of the current location
 class search extends React.Component {
@@ -21,13 +23,15 @@ class search extends React.Component {
       order:'',
       filters:{org:[],team:[]},
       isChecked: props.isChecked || false,
+      listview:"long",
     };
     this.handleAlphabetClick = this.handleAlphabetClick.bind(this);
     this.handleResultChange = this.handleResultChange.bind(this);
     this.filterssearch = this.filterssearch.bind(this);
     this.filtersCallback = this.filtersCallback.bind(this);
     this.paginationCallback = this.paginationCallback.bind(this);
-    this.handleChange = this.handleChange.bind(this);       
+    this.handleChange = this.handleChange.bind(this);
+    this.handlelistview = this.handlelistview.bind(this);       
   }
 
   componentDidMount() {
@@ -70,6 +74,10 @@ class search extends React.Component {
 
   handleResultChange(e) {
     this.setState({todosPerPage: e.target.value});
+  }
+
+  handlelistview(e){
+    this.setState({listview: e.target.value})
   }
 
   filterssearch(search){
@@ -167,62 +175,7 @@ class search extends React.Component {
           }
           const currentTodos = checkResult.search.slice(indexOfFirstTodo, indexOfLastTodo);
           results = currentTodos.map(a => ( 
-            <ListGroupItem key={a.gcID}>
-          <Row>
-            <Col xs="5" md="3" className="image-section">
-              <a href={`/p/${a.gcID}`} >
-                <img className="imgsearch" src={a.avatar} alt="Card image cap" />
-              </a>
-            </Col>
-            
-            <Col xs="7" md="9">
-              <Row>         
-                <Col xs="12">
-                  <span className="profile-name"> {a.name}</span>
-                </Col>
-                <Col xs="12">
-                  <span className="search-email">
-                    <a href={`mailto:${a.email}`}><span>{a.email}</span></a>
-                  </span>
-                </Col>
-              </Row>
-              <Row>
-                <Col xs="12" md="6">
-                <span className="font-weight-bold"> {__('Teams')} </span>
-                {(localizer.lang === 'en_CA') ? (
-                    a.team ?
-                    a.team.nameEn : ''
-                ) : (
-                    a.team ?
-                    a.team.nameFr : ''
-                )}
-              </Col>
-              <Col xs="12" md="6">
-                <span className="font-weight-bold">{__('Organization')}: </span>
-                {(localizer.lang === 'en_CA') ? (
-                    a.team ?
-                    a.team.organization.nameEn : ''
-                ) : (
-                    a.team ?
-                    a.team.organization.nameFr : ''
-                )}
-                </Col>
-              </Row>
-              <Row>
-                <Col xs="12" md="6">
-                  {a.mobilePhone !== null ? <div><span className="font-weight-bold">{__('Mobile')}: </span><a href={`tel:${a.mobilePhone}`}>{a.mobilePhone}</a></div>: ""}
-                </Col>
-                <Col xs="12" md="6">
-                  {a.officePhone !== null ? <div><span className="font-weight-bold">{__('Office')}: </span><a href={`tel:${a.officePhone}`}>{a.officePhone}</a></div> : ""}
-                </Col>
-              </Row>
-              <Row>
-                <div className="search-address">{a.address !== null ? <div><span className="font-weight-bold">{__('Address')}: </span><a href={`https://maps.google.com/?q=${a.address.streetAddress}${a.address.city}`} target="_blank" rel="noopener noreferrer">{a.address.streetAddress+ ', ' +a.address.city}</a></div> : ""}   </div>          
-              </Row>  
-            </Col>
-     
-          </Row>
-        </ListGroupItem>
+            <DisplayResults data={a} viewDisplay={this.state.listview}/> 
           ))
        
           numberResults = Object.keys(checkResult.search).length;
@@ -239,8 +192,8 @@ class search extends React.Component {
         return (
           <div>
               <Row>     
-                <Col sm="4" md="2" className="col-filter">
-                  <FormGroup className="form-filter">
+                <Col xs="6" md="2" className="col-filter">
+                  <FormGroup className="form-filter remove-margin">
                     <Label for="sort">{__('Sort by')}</Label>
                     <Input type="select" onChange={(e) => this.handleAlphabetClick(e)} name="sort" id="sort">
                       <option>---</option>
@@ -249,8 +202,8 @@ class search extends React.Component {
                     </Input>
                   </FormGroup> 
                   </Col>
-                  <Col md="2" className="col-filter">
-                   <FormGroup className="form-filter"> 
+                  <Col xs="6" md="2" className="col-filter">
+                   <FormGroup className="form-filter remove-margin"> 
                       <Label for="resultsPerPage">{__('Results per page')}</Label>
                       <Input type="select" onChange={(e) => this.handleResultChange(e)} name="resultsPerPage" id="resultsPerPage">
                         <option value="6">6</option>
@@ -259,7 +212,17 @@ class search extends React.Component {
                       </Input>
                    </FormGroup>
                     </Col>
-                    <Col md="2" className="col-filter">
+                    <Col xs="6" md="2" className="col-filter">
+                   <FormGroup className="form-filter"> 
+                      <Label for="listview">{__('Manage list')}</Label>
+                      <Input type="select" onChange={(e) => this.handlelistview(e)} name="listview" id="listview">
+                        <option value="long">{__('Default')}</option>
+                        <option value="medium">{__('Light view')}</option>
+                        <option value="short">{__('Minimize')}</option>
+                      </Input>
+                   </FormGroup>
+                    </Col>
+                    <Col xs="6" md="2" className="col-filter">
                     <div id="ck-button">
                     <label class="menu-icon" for="menu-btn">
                     <input class="menu-btn" type="checkbox" value={this.state.isChecked} onChange={this.handleChange} id="menu-btn" />

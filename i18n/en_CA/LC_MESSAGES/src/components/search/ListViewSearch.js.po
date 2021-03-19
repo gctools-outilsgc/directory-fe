@@ -5,7 +5,7 @@ msgstr ""
 "POT-Creation-Date: 2019-02-12 14:19-0400\n"
 "PO-Revision-Date: 2019-02-12 14:19-0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: fr_CA\n"
+"Language: en_CA\n"
 "Language-Team: fr_CA <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
 "MIME-Version: 1.0\n"
@@ -13,49 +13,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
 
-#: 88:19 src/containers/Search.js
-
-msgid "Sort by"
+#: 88:19 src/containers/Saarch.js
+msgid "Teams"
 msgstr ""
 
-msgid "Alphabetical"
+msgid "Organization"
 msgstr ""
 
-msgid "Unalphabetical"
+msgid "Mobile"
 msgstr ""
 
-msgid "No result found"
+msgid "Office"
 msgstr ""
 
-msgid "Next"
-msgstr ""
-
-msgid "Previous"
-msgstr ""
-
-msgid "Showing"
-msgstr ""
-
-msgid "to"
-msgstr ""
-
-msgid "of"
-msgstr ""
-
-msgid "results"
-msgstr ""
-
-msgid "Results per page"
-msgstr ""
-
-msgid "Manage list"
-msgstr ""
-
-msgid "Default"
-msgstr ""
-
-msgid "Light view"
-msgstr ""
-
-msgid "Minimize"
+msgid "Address"
 msgstr ""

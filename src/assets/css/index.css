@@ -477,14 +477,16 @@ animation: LoadingText 2s ease infinite;
   }
 
   .form-filter{
-    position:absolute;
     bottom:0;
     margin-bottom:1.5rem;
   }
 
+  .remove-margin{
+    margin-bottom:5px;
+  }
+
   .col-filter{
     width:33%;
-    padding-top:1rem
   }
 
   .showing_results {
@@ -535,6 +537,7 @@ animation: LoadingText 2s ease infinite;
    float:left;
    margin-bottom: 1.5rem;
    bottom:0;
+   position:absolute;
 }
 
 #ck-button label {
@@ -557,3 +560,4 @@ animation: LoadingText 2s ease infinite;
 .image-section{
   margin:auto;
 }
+
